@@ -11,7 +11,7 @@ import UIKit
 class App {
     
     static var window: UIWindow!
-//    static weak var appCoordinator: AppCoordinator?
+    static weak var appCoordinator: AppCoordinator?
     static var deepLinkURL: URL?
     static var appLoaded = false {
         didSet {

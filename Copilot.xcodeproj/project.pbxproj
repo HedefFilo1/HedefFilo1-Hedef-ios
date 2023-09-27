@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
+		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
+		892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892A8CF12AC4C6860020C1C4 /* Splash.storyboard */; };
+		892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CF32AC4C6D10020C1C4 /* SplashCoordinator.swift */; };
+		892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CF52AC4C6E50020C1C4 /* SplashViewModel.swift */; };
+		892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CF72AC4C7150020C1C4 /* SplashViewController.swift */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -38,6 +44,12 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		892A8CF12AC4C6860020C1C4 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		892A8CF32AC4C6D10020C1C4 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		892A8CF52AC4C6E50020C1C4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		892A8CF72AC4C7150020C1C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +111,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		892A8CF02AC4C6760020C1C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				892A8CF12AC4C6860020C1C4 /* Splash.storyboard */,
+				892A8CF32AC4C6D10020C1C4 /* SplashCoordinator.swift */,
+				892A8CF52AC4C6E50020C1C4 /* SplashViewModel.swift */,
+				892A8CF72AC4C7150020C1C4 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		8989DD922AC493BF0035CD99 = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				89C55DF12AC4A83400C3066A /* Storyboards.swift */,
+				892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */,
+				892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */,
 				8989DDA42AC493BF0035CD99 /* Main.storyboard */,
 				8989DDA22AC493BF0035CD99 /* ViewController.swift */,
+				892A8CF02AC4C6760020C1C4 /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -303,6 +329,7 @@
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
 				8989DDA62AC493BF0035CD99 /* Main.storyboard in Resources */,
+				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +405,7 @@
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
+				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
@@ -385,13 +413,17 @@
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
+				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
+				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
+				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
+				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
