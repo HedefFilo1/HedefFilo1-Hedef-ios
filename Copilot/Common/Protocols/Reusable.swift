@@ -20,4 +20,3 @@ public extension Reusable {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
 }
-

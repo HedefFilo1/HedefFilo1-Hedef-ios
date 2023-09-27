@@ -1,0 +1,11 @@
+excluded:
+- Pods
+- iCarousel.m
+
+# implicitly
+line_length: 210
+large_tuple: 4
+function_body_length: 100
+
+disabled_rules:
+  - trailing_whitespace

@@ -6,9 +6,9 @@
 //
 
 import Foundation
-//import SDWebImage
+// import SDWebImage
 //
-//extension UIImageView {
+// extension UIImageView {
 //    
 //    func loadImageFrom(url: String?) {
 //        guard let url = url else { return}
@@ -16,4 +16,4 @@ import Foundation
 //        self.sd_setImage(with: URL(string: url))
 //    }
 //    
-//}
+// }
