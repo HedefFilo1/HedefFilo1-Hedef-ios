@@ -1,0 +1,59 @@
+//
+//  String+Capitalize.swift
+//  PayCore
+//
+//  Created by Fikri Can Cankurtaran on 21.07.2022.
+//
+
+import Foundation
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+    
+    func applyPatternOnNumbers(pattern: String, replacementCharacter: Character) -> String {
+        var pureNumber = self.replacingOccurrences( of: "[^0-9]", with: "", options: .regularExpression)
+        for index in 0 ..< pattern.count {
+            guard index < pureNumber.count else { return pureNumber }
+            let stringIndex = String.Index(utf16Offset: index, in: pattern)
+            let patternCharacter = pattern[stringIndex]
+            guard patternCharacter != replacementCharacter else { continue }
+            pureNumber.insert(patternCharacter, at: stringIndex)
+        }
+        return pureNumber
+    }
+    
+    func getServerDate() -> String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "dd.MM.yyyy"
+        formmater.timeZone = TimeZone(identifier: "GMT")
+        
+        let date = formmater.date(from: self) ?? Date()
+        
+        let iso8601DateFormatter = ISO8601DateFormatter()
+        iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        let string = iso8601DateFormatter.string(from: date)
+        return string
+    }
+    
+    var pureText: String {
+        let text = self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        return text.components(separatedBy: .whitespaces).joined()
+    }
+}
+
+extension Data {
+    var prettyPrintedJSONString: String { /// NSString gives us a nice sanitized debugDescription
+        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return "could not read json string" }
+        
+        return prettyPrintedString as String
+        
+    }
+}
