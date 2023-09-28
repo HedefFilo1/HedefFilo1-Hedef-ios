@@ -48,18 +48,18 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: SplashCoordinatorDelegate {
     
     func goNextScene() {
-//        guard let window = window else {
-//            return
-//        }
+        guard let window = window else {
+            return
+        }
         
-//        let coordinator = OnboardingCoordinator(with: window)
-//        addChildCoordinator(coordinator)
-//        coordinator.delegate = self
-//        coordinator.start()
+        let coordinator = OnboardingCoordinator(with: window)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
     }
 }
 
-extension AppCoordinator {
+extension AppCoordinator: OnboardingCoordinatorDelegate {
     
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)

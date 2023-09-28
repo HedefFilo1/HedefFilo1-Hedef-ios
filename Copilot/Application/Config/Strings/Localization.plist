@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+Localization.plist
+Copilot
+
+Created by Jamal on 9/28/23.
+Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+
+        <key>welcomeToCopilot</key>
+        <dict>
+            <key>tr</key>
+            <string>COPILOT’a Hoş Geldiniz</string>
+            <key>en</key>
+            <string>Welcome to COPILOT</string>
+        </dict>
+        
+        <key>welcomeMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
+            <key>en</key>
+            <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
+        </dict>
+        
+        <key>carService</key>
+        <dict>
+            <key>tr</key>
+            <string>Araba Servis</string>
+            <key>en</key>
+            <string>Car Service</string>
+        </dict>
+        
+        <key>support</key>
+        <dict>
+            <key>tr</key>
+            <string>Destek</string>
+            <key>en</key>
+            <string>Support</string>
+        </dict>
+        
+        <key>roadAssistance</key>
+        <dict>
+            <key>tr</key>
+            <string>Yol Yardım</string>
+            <key>en</key>
+            <string>Road Assistance</string>
+        </dict>
+        
+        <key>moveForward</key>
+        <dict>
+            <key>tr</key>
+            <string>İlerle</string>
+            <key>en</key>
+            <string>Move Forward</string>
+        </dict>
+        
+        <key>skip</key>
+        <dict>
+            <key>tr</key>
+            <string>Atla</string>
+            <key>en</key>
+            <string>Skip</string>
+        </dict>
+        
+        <key>login</key>
+        <dict>
+            <key>tr</key>
+            <string>Giriş Yap</string>
+            <key>en</key>
+            <string>Login</string>
+        </dict>
+        
+        <key>ifNotMember</key>
+        <dict>
+            <key>tr</key>
+            <string>Üye Değilseniz</string>
+            <key>en</key>
+            <string>If you are not a member</string>
+        </dict>
+        
+        <key>becomeMember</key>
+        <dict>
+            <key>tr</key>
+            <string>Üye Ol</string>
+            <key>en</key>
+            <string>become a member</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+    </dict>
+</plist>

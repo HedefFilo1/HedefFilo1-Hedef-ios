@@ -9,95 +9,17 @@ import Foundation
 import UIKit.UIColor
 
 extension UIColor {
-    /// #222F60
-    static let theme = UIColor(named: "theme") ?? .blue
-    
-    /// #224D7B
-    static let lightTheme = UIColor(named: "lightTheme") ?? .blue
+    /// #E92127
+    static let theme = UIColor(named: "theme") ?? .red
     
     /// #58595B
-    static let lightBodyText = UIColor(named: "lightBodyText") ?? .gray
-    
-    /// #808080
-    static let lightGrayText = UIColor(named: "lightGrayText") ?? .gray
-    
-    /// #737373
-    static let grey500 = UIColor(named: "grey500") ?? .gray
-    
-    /// #A3A3A3
-    static let grey400 = UIColor(named: "grey400") ?? .gray
-    
-    /// #D6D6D6
-    static let grey300 = UIColor(named: "grey300") ?? .gray
+    static let textGrey = UIColor(named: "textGrey") ?? .gray
     
     /// #D2D2D2
-    static let lightGrayBackground = UIColor(named: "lightGrayBackground") ?? .gray
+    static let appLightGrey = UIColor(named: "appLightGrey") ?? .gray
     
-    /// #E4E9F2
-    static let modernBlue50 = UIColor(named: "modernBlue50") ?? .gray
-    
-    /// #EEF3F7
-    static let lightGrayBorder = UIColor(named: "lightGrayBorder") ?? .gray
-    
-    /// #222222
-    static let blackText = UIColor(named: "blackText") ?? .gray
-    
-    /// #101426
-    static let simpleText = UIColor(named: "simpleText") ?? .gray
-    
-    /// #000000
-    static let black = UIColor(named: "black") ?? .black
-    
-    /// #E4F1FF
-    static let primaryBlue50 = UIColor(named: "primaryBlue50") ?? .blue
-    
-    /// #4E8FFF
-    static let primaryBlue500 = UIColor(named: "primaryBlue500") ?? .blue
-    
-    /// #4F80FB
-    static let primaryBlue600 =  UIColor(named: "mainBlue") ?? .mainBlue
-    
-    /// #4F80FB
-    static let mainBlue = UIColor(named: "mainBlue") ?? .gray
-    
-    /// #8F9BB3
-    static let shadow = UIColor(named: "shadow") ?? .gray
-    
-    /// #E8EBF2
-    static let primary50 = UIColor(named: "primary50") ?? .gray
-    
-    /// #A0ADCB
-    static let primary200 = UIColor(named: "primary200") ?? .blue
-    
-    /// #5F73A7
-    static let primary400 = UIColor(named: "primary400") ?? .blue
-    
-    /// #222F60
-    static let primary900 = UIColor(named: "primary900") ?? .gray
-    
-    /// #FBFCFD
-    static let pageBackground = UIColor(named: "pageBackground") ?? .white
-    
-    /// #05D988
-    static let success300 = UIColor(named: "success300") ?? .green
-    
-    /// #E0F9EB
-    static let success50 = UIColor(named: "success50") ?? .green
-    
-    /// #FFF8E0
-    static let warning50 = UIColor(named: "warning50") ?? .yellow
-    
-    /// #FDD348
-    static let warning300 = UIColor(named: "warning300") ?? .yellow
-    
-    /// #FFE9F0
-    static let error50 = UIColor(named: "error50") ?? .green
-    
-    /// ##FFC7D6
-    static let error100 = UIColor(named: "error100") ?? .green
-    
-    /// #FC5977
-    static let error300 = UIColor(named: "error300") ?? .green
+    /// #ED1C24
+    static let appRed = UIColor(named: "appRed") ?? .gray
     
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
