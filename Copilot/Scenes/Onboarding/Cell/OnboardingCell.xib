@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="366" height="503"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-ge-1RA">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-ge-1RA">
                         <rect key="frame" x="0.0" y="0.0" width="366" height="503"/>
                     </imageView>
                 </subviews>
@@ -37,6 +37,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="onboarding1" width="1011" height="1150"/>
+        <image name="onboarding1" width="791" height="901"/>
     </resources>
 </document>

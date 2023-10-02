@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-3m-ycC" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="575.66666666666663" width="327" height="50"/>
+                                        <rect key="frame" x="0.0" y="574" width="327" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="q98-BO-TvB"/>
                                         </constraints>
@@ -138,10 +138,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvU-6Z-Mlt">
-                                        <rect key="frame" x="80.666666666666686" y="688.66666666666663" width="166" height="24"/>
+                                        <rect key="frame" x="80.666666666666686" y="687" width="166" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Üye Değilseniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySX-35-ZF5">
-                                                <rect key="frame" x="0.0" y="1.6666666666667425" width="113" height="21"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666288" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -183,9 +183,10 @@
                                     <constraint firstItem="Gbu-8g-V5Z" firstAttribute="centerY" secondItem="A6e-Wg-ptY" secondAttribute="centerY" id="LdN-XM-zf9"/>
                                     <constraint firstAttribute="trailing" secondItem="kX0-dx-Iqp" secondAttribute="trailing" id="SAA-jD-PlS"/>
                                     <constraint firstItem="A6e-Wg-ptY" firstAttribute="leading" secondItem="DWE-3e-VcI" secondAttribute="trailing" constant="8" id="Sbe-wG-5xk"/>
-                                    <constraint firstItem="kY6-wv-oTk" firstAttribute="top" secondItem="mfa-4K-FZW" secondAttribute="bottom" constant="40" id="TfJ-Ur-Ee3"/>
+                                    <constraint firstItem="kY6-wv-oTk" firstAttribute="top" secondItem="mfa-4K-FZW" secondAttribute="bottom" priority="703" constant="40" id="TfJ-Ur-Ee3"/>
+                                    <constraint firstItem="kY6-wv-oTk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mfa-4K-FZW" secondAttribute="bottom" constant="12" id="Wvv-e1-PiZ"/>
                                     <constraint firstItem="kY6-wv-oTk" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="XIz-O3-vdF"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zvU-6Z-Mlt" secondAttribute="bottom" constant="12" id="aKW-i1-yLY"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zvU-6Z-Mlt" secondAttribute="bottom" constant="20" id="aKW-i1-yLY"/>
                                     <constraint firstItem="mfa-4K-FZW" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="cWH-Pt-Shv"/>
                                     <constraint firstItem="mvn-A2-qE9" firstAttribute="centerX" secondItem="lVE-He-aWP" secondAttribute="centerX" id="cjP-T3-Jax"/>
                                     <constraint firstItem="VLj-6b-9pd" firstAttribute="top" secondItem="lVE-He-aWP" secondAttribute="top" constant="16" id="cnd-Wo-Auf"/>
