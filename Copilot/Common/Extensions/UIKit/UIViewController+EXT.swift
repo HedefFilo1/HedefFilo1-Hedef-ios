@@ -138,7 +138,7 @@ extension UIViewController {
 //                   buttonTitle: String = Strings.okay,
 //                   attributedMessage: NSAttributedString? = nil,
 //                   delegate: ErrorPopupViewControllerDelegate? = nil) {
-//
+
 //        let viewController: ErrorPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
 //        viewController.titleText = errorTitle
 //        viewController.message = message
@@ -147,17 +147,17 @@ extension UIViewController {
 //        viewController.delegate = delegate
 //        self.present(viewController, animated: true)
 //    }
-//
-//    func showError(title: String = Strings.unSuccessful, message: String) {
+
+    func showError(title: String = "", message: String) {
 //        showError(errorTitle: title, message: message)
-//    }
-//
+    }
+
 //    func showSuccess(successTitle: String = Strings.unSuccessful,
 //                     message: String = "",
 //                     buttonTitle: String = Strings.okay,
 //                     attributedMessage: NSAttributedString? = nil,
 //                     delegate: SuccessPopupViewControllerDelegate? = nil) {
-//
+
 //        let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
 //        viewController.titleText = successTitle
 //        viewController.message = message
@@ -166,8 +166,8 @@ extension UIViewController {
 //        viewController.delegate = delegate
 //        self.present(viewController, animated: true)
 //    }
-//
-//    func showSuccess(title: String = Strings.successful, message: String) {
+
+    func showSuccess(title: String = "", message: String) {
 //        showSuccess(successTitle: title, message: message)
-//    }
+    }
 }

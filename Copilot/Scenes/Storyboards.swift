@@ -12,6 +12,7 @@ import Foundation
 enum Storyboard: String {
     case splash
     case onboarding
+    case login
 
     var filename: String {
         return rawValue.capitalizingFirstLetter()

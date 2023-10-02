@@ -66,10 +66,14 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
     }
     
     func goToLogin() {
-//        guard let window = window else { return }
-//        let coordinator = LoginCoordinator(with: window)
-//        addChildCoordinator(coordinator)
-//        coordinator.delegate = self
-//        coordinator.start()
+        guard let window = window else { return }
+        let coordinator = LoginCoordinator(with: window)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
     }
+}
+
+extension AppCoordinator: LoginCoordinatorDelegate {
+    
 }

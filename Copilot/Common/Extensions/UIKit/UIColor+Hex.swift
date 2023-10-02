@@ -21,6 +21,21 @@ extension UIColor {
     /// #ED1C24
     static let appRed = UIColor(named: "appRed") ?? .gray
     
+    /// #EDEDF5
+    static let borderColor = UIColor(named: "borderColor") ?? .gray
+    
+    /// #AAA
+    static let fieldDescription = UIColor(named: "fieldDescription") ?? .gray
+    
+    /// #ECEDF2
+    static let lightBorder = UIColor(named: "lightBorder") ?? .gray
+    
+    /// #F2F2F2
+    static let disabled = UIColor(named: "disabled") ?? .gray
+    
+    /// #CECECE
+    static let textDisabled = UIColor(named: "textDisabled") ?? .gray
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

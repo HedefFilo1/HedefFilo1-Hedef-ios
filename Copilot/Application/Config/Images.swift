@@ -25,4 +25,12 @@ struct Images {
     static var onboarding4: UIImage {
         return UIImage(named: "onboarding4") ?? UIImage()
     }
+    
+    static var passwordMask: UIImage {
+        return UIImage(named: "passwordMask") ?? UIImage()
+    }
+    
+    static var check: UIImage {
+        return UIImage(named: "check") ?? UIImage()
+    }
 }

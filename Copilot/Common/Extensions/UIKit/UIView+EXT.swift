@@ -173,6 +173,13 @@ extension UIView {
     }
     // swiftlint:enable cyclomatic_complexity
 
+    func animate() {
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self = self else { return }
+            self.layoutIfNeeded()
+        }
+    }
+    
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners,
                                 cornerRadii: CGSize(width: radius, height: radius))

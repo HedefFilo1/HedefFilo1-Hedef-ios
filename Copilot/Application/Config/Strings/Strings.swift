@@ -52,6 +52,30 @@ struct Strings {
         return localized(string: "becomeMember")
     }
     
+    static var yourEmailAdress: String {
+        return localized(string: "yourEmailAdress")
+    }
+    
+    static var emailIncorrect: String {
+        return localized(string: "emailIncorrect")
+    }
+    
+    static var loginDescription: String {
+        return localized(string: "loginDescription")
+    }
+    
+    static var password: String {
+        return localized(string: "password")
+    }
+    
+    static var forgotMyPassword: String {
+        return localized(string: "forgotMyPassword")
+    }
+    
+    static var rememberMe: String {
+        return localized(string: "rememberMe")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

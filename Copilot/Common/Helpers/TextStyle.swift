@@ -21,19 +21,49 @@ enum FontTypographyType {
     /// black size(20) Bold(700)
     case blackS20B700
     
+    /// black size(15) Regular(400)
+    case blackS15B400
+    
+    /// black size(16) Medium(500)
+    case blackS16M500
+    
+    /// black size(12) Regular(400)
+    case blackS12R400
+    
     /// textGrey size(12) Regular(400)
     case greyS12B400
     
     /// textGrey size(16) Regular(400)
     case greyS16B400
     
+    /// textGrey size(15) Regular(400)
+    case greyS15B400
+    
     /// theme size(16) Bold(700)
     case themeS16B700
+    
+    /// theme size(20) Bold(700)
+    case themeS20B700
+    
+    /// white size(16) Bold(700)
+    case whiteS16B700
+    
+    /// whitesize(20) Bold(700)
+    case whiteS20B700
 
     var style: (TextStyle, UIColor) {
         switch self {
         case .blackS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .black)
+            
+        case .blackS15B400:
+            return (TextStyle(fontStyle: .regular, size: 15), color: .black)
+            
+        case .blackS16M500:
+            return (TextStyle(fontStyle: .medium, size: 16), color: .black)
+            
+        case .blackS12R400:
+            return (TextStyle(fontStyle: .regular, size: 12), color: .black)
             
         case .greyS12B400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .textGrey)
@@ -41,8 +71,20 @@ enum FontTypographyType {
         case .greyS16B400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .textGrey)
             
+        case .greyS15B400:
+            return (TextStyle(fontStyle: .regular, size: 15), color: .textGrey)
+            
         case .themeS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .theme)
+            
+        case .themeS20B700:
+            return (TextStyle(fontStyle: .bold, size: 20), color: .theme)
+            
+        case .whiteS16B700:
+            return (TextStyle(fontStyle: .bold, size: 16), color: .white)
+            
+        case .whiteS20B700:
+            return (TextStyle(fontStyle: .bold, size: 20), color: .white)
             
         }
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
 		892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892A8CF12AC4C6860020C1C4 /* Splash.storyboard */; };
@@ -35,6 +36,7 @@
 		8989DDA62AC493BF0035CD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA42AC493BF0035CD99 /* Main.storyboard */; };
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
+		89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
 		89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */; };
 		89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */; };
@@ -52,6 +54,14 @@
 		89C55DF02AC4A7CD00C3066A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DEF2AC4A7CD00C3066A /* App.swift */; };
 		89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DF12AC4A83400C3066A /* Storyboards.swift */; };
 		89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C55DF42AC4A91500C3066A /* Color.xcassets */; };
+		89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */; };
+		89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */; };
+		89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */; };
+		89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8012AC72D450098BA67 /* LoginViewController.swift */; };
+		89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8032AC733F50098BA67 /* CPTextField.swift */; };
+		89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */; };
+		89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */; };
+		89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8092AC73BD50098BA67 /* CodeStrings.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +69,7 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		892A8CF12AC4C6860020C1C4 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -80,6 +91,7 @@
 		892A8D182AC4EDB20020C1C4 /* Localization.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Localization.plist; sourceTree = "<group>"; };
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +100,7 @@
 		8989DDA72AC493C00035CD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989DDAA2AC493C00035CD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPCheckBox.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
@@ -105,6 +118,14 @@
 		89C55DEF2AC4A7CD00C3066A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		89C55DF12AC4A83400C3066A /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		89C55DF42AC4A91500C3066A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		89DAB8012AC72D450098BA67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		89DAB8032AC733F50098BA67 /* CPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTextField.swift; sourceTree = "<group>"; };
+		89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPasswordTextField.swift; sourceTree = "<group>"; };
+		89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPEmailTextField.swift; sourceTree = "<group>"; };
+		89DAB8092AC73BD50098BA67 /* CodeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStrings.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +235,7 @@
 		8989DD9D2AC493BF0035CD99 /* Copilot */ = {
 			isa = PBXGroup;
 			children = (
+				894E20DA2AC6A51900F69C27 /* Copilot.entitlements */,
 				89C55DC92AC4A4E000C3066A /* Application */,
 				89C55DCB2AC4A52000C3066A /* Scenes */,
 				89C55DCD2AC4A54200C3066A /* Common */,
@@ -238,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				892A8D1C2AC6052F0020C1C4 /* Images.swift */,
+				89DAB8092AC73BD50098BA67 /* CodeStrings.swift */,
 				892A8D172AC4ED870020C1C4 /* Strings */,
 				8989DDAC2AC493C00035CD99 /* Info.plist */,
 			);
@@ -254,6 +277,7 @@
 				8989DDA22AC493BF0035CD99 /* ViewController.swift */,
 				892A8CF02AC4C6760020C1C4 /* Splash */,
 				892A8CFA2AC4D1310020C1C4 /* Onboarding */,
+				89DAB7F92AC72CFE0098BA67 /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -262,7 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				892A8D0A2AC4E6600020C1C4 /* ScrollTouchHandler.swift */,
+				891D1C942ACAB1A500457C17 /* CPButton.swift */,
 				892A8D0C2AC4E6FF0020C1C4 /* CPLightButton.swift */,
+				89DAB8032AC733F50098BA67 /* CPTextField.swift */,
+				89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */,
+				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
+				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -340,6 +369,25 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		89DAB7F92AC72CFE0098BA67 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */,
+				89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */,
+				89DAB7FE2AC72D280098BA67 /* Login */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		89DAB7FE2AC72D280098BA67 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */,
+				89DAB8012AC72D450098BA67 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,6 +461,7 @@
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
+				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +532,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
+				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
+				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
@@ -495,6 +547,7 @@
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
+				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
@@ -502,12 +555,17 @@
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
+				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
+				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
+				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
+				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
@@ -661,6 +719,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
@@ -693,6 +752,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
@@ -785,6 +845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
@@ -871,6 +932,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88MUA8FE52;

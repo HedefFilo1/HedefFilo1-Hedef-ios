@@ -90,6 +90,158 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>become a member</string>
         </dict>
         
+        <key>yourEmailAdress</key>
+        <dict>
+            <key>tr</key>
+            <string>E-Mail Adresiniz</string>
+            <key>en</key>
+            <string>your email adress</string>
+        </dict>
+        
+        <key>emailIncorrect</key>
+        <dict>
+            <key>tr</key>
+            <string>Mail adresi hatalı</string>
+            <key>en</key>
+            <string>Email address is incorrect</string>
+        </dict>
+        
+        <key>loginDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Giriş yapmak için mail adresinizi ve şifrenizi girebilirsiniz.</string>
+            <key>en</key>
+            <string>You can enter your e-mail address and password to log in.</string>
+        </dict>
+        
+        <key>password</key>
+        <dict>
+            <key>tr</key>
+            <string>Şifre</string>
+            <key>en</key>
+            <string>Password</string>
+        </dict>
+        
+        <key>forgotMyPassword</key>
+        <dict>
+            <key>tr</key>
+            <string>Şifremi Unuttum</string>
+            <key>en</key>
+            <string>I forgot my password</string>
+        </dict>
+        
+        <key>rememberMe</key>
+        <dict>
+            <key>tr</key>
+            <string>Beni Hatırla</string>
+            <key>en</key>
+            <string>Remember me</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
