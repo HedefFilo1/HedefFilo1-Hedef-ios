@@ -72,6 +72,14 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
         coordinator.delegate = self
         coordinator.start()
     }
+    
+    func goToSignup() {
+        guard let window = window else { return }
+        let coordinator = LoginCoordinator(with: window)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.startWithSignup()
+    }
 }
 
 extension AppCoordinator: LoginCoordinatorDelegate {

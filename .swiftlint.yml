@@ -6,6 +6,7 @@ excluded:
 line_length: 210
 large_tuple: 4
 function_body_length: 100
+function_parameter_count: 10
 
 disabled_rules:
   - trailing_whitespace

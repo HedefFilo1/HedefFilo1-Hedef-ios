@@ -33,8 +33,8 @@ class CPEmailTextField: CPTextField {
     
     func addErrorViews() {
         addSubview(imageView)
-        imageView.align()
         imageView.align(toView: contentView, leading: 0, widthAndHeight: 16, topToBottom: 4)
+        imageView.image = Images.errorIcon
         
         addSubview(errorLabel)
         errorLabel.align(toView: imageView, centerY: 0, leadingToTrailing: 8)

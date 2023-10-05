@@ -40,6 +40,11 @@ class LoginCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
     
+    func startWithSignup() {
+        start()
+        goToSignup()
+    }
+    
     override func finish() {
         delegate?.didFinish(from: self)
     }
@@ -52,17 +57,32 @@ extension LoginCoordinator: LoginViewModelCoordinatorDelegate {
     }
     
     func goToForgotPassword() {
-//        let viewController: ForgotPasswordViewController = storyboard.instantiateViewController()
-//        let viewModel = ForgotPasswordViewModel()
-//        viewController.viewModel = viewModel
-//        viewModel.coordinatorDelegate = self
-//        navigationController.pushViewController(viewController, animated: true)
+        //        let viewController: ForgotPasswordViewController = storyboard.instantiateViewController()
+        //        let viewModel = ForgotPasswordViewModel()
+        //        viewController.viewModel = viewModel
+        //        viewModel.coordinatorDelegate = self
+        //        navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToMain() {
-//        let coordinator = MainCoordinator(with: navigationController)
-//        addChildCoordinator(coordinator)
-//        coordinator.delegate = self
-//        coordinator.start()
+        //        let coordinator = MainCoordinator(with: navigationController)
+        //        addChildCoordinator(coordinator)
+        //        coordinator.delegate = self
+        //        coordinator.start()
+    }
+    
+    func goToSignup() {
+        let viewController: SignupViewController = storyboard.instantiateViewController()
+        let viewModel = SignupViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+}
+
+extension LoginCoordinator: SignupViewModelCoordinatorDelegate {
+    func goToLogin() {
+        navigationController.popViewController(animated: true)
     }
 }

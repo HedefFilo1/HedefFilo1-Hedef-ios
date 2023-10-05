@@ -122,6 +122,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Password</string>
         </dict>
         
+        <key>repeatPassword</key>
+        <dict>
+            <key>tr</key>
+            <string>Şifre Tekrar</string>
+            <key>en</key>
+            <string>Repeat Password</string>
+        </dict>
+        
         <key>forgotMyPassword</key>
         <dict>
             <key>tr</key>
@@ -138,92 +146,92 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Remember me</string>
         </dict>
         
-        <key></key>
+        <key>signupDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kayıt olmak için istenilen bilgileri doldurunuz.</string>
             <key>en</key>
-            <string></string>
+            <string>Fill in the requested information to register.</string>
         </dict>
         
-        <key></key>
+        <key>nameSurname</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>İsim Soyisim</string>
             <key>en</key>
-            <string></string>
+            <string>Name surname</string>
         </dict>
         
-        <key></key>
+        <key>phoneNumber</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Telefon Numarası</string>
             <key>en</key>
-            <string></string>
+            <string>Phone number</string>
         </dict>
         
-        <key></key>
+        <key>tcTaxNumber</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>TC Kimlik Numarası /Vergi Kimlik Numarası</string>
             <key>en</key>
-            <string></string>
+            <string>TR Identification Number / Tax Identification Number</string>
+        </dict>
+
+        <key>vehicleLicenseNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Ruhsat Numarası</string>
+            <key>en</key>
+            <string>Vehicle License Number</string>
         </dict>
         
-        <key></key>
+        <key>marketingApprovement</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ürün,hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
             <key>en</key>
-            <string></string>
+            <string>In order to be informed about products, services and campaigns, I allow commercial electronic messages to be sent within the scope of Law No. 6563 and its legislation until I specify otherwise.</string>
         </dict>
         
-        <key></key>
+        <key>areYouMember</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Üye Misiniz?</string>
             <key>en</key>
-            <string></string>
+            <string>Are you a member?</string>
         </dict>
         
-        <key></key>
+        <key>clarificationDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aydınlatma Metni’ni okudum, onaylıyorum.</string>
             <key>en</key>
-            <string></string>
+            <string>I have read the Clarification Text and I approve it.</string>
         </dict>
         
-        <key></key>
+        <key>clarificationText</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aydınlatma Metni’</string>
             <key>en</key>
-            <string></string>
+            <string>Clarification Text</string>
+        </dict>
+
+        <key>consentDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Açık Rıza Metni’ okudum, onaylıyorum.</string>
+            <key>en</key>
+            <string>I have read the Explicit Consent Text and I approve it.</string>
         </dict>
         
-        <key></key>
+        <key>consentText</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Açık Rıza Metni’</string>
             <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
+            <string>Explicit Consent Text</string>
         </dict>
         
         <key></key>

@@ -9,6 +9,7 @@ import Foundation
 
 protocol OnboardingViewModelCoordinatorDelegate: AnyObject {
     func goToNextScene()
+    func goToSignup()
 }
 
 protocol OnboardingViewModelDelegate: AnyObject {
@@ -20,6 +21,7 @@ protocol OnboardingViewModelType: AnyObject {
     var delegate: OnboardingViewModelDelegate? { get set }
     var currentIndex: Int { get set }
     func goToNextScene()
+    func goToSignup()
 }
 
 class OnboardingViewModel: OnboardingViewModelType {
@@ -31,5 +33,9 @@ class OnboardingViewModel: OnboardingViewModelType {
     
     func goToNextScene() {
         coordinatorDelegate?.goToNextScene()
+    }
+    
+    func goToSignup() {
+        coordinatorDelegate?.goToSignup()
     }
 }

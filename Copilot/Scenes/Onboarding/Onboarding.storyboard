@@ -13,7 +13,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="xcM-OV-s2X">
             <objects>
-                <viewController storyboardIdentifier="OnboardingViewController" id="yiX-NX-rU4" customClass="OnboardingViewController" customModule="Nevita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="yiX-NX-rU4" customClass="OnboardingViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cIq-2y-rb0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                                             <constraint firstItem="P2F-Gm-dfI" firstAttribute="centerY" secondItem="ySy-R6-zHS" secondAttribute="centerY" id="uOa-Lg-9Gs"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-gn-cMM" customClass="ScrollTouchHandler" customModule="Nevita" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-gn-cMM" customClass="ScrollTouchHandler" customModule="Copilot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -183,6 +183,9 @@
                                                 <state key="normal" title="Üye Ol">
                                                     <color key="titleColor" name="theme"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapBecomMemberButton" destination="yiX-NX-rU4" eventType="touchUpInside" id="uWf-Qt-eCM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -27,5 +27,9 @@
 		<string>DIN-Medium.ttf</string>
 		<string>DIN-Regular.ttf</string>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

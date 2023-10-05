@@ -68,12 +68,60 @@ struct Strings {
         return localized(string: "password")
     }
     
+    static var repeatPassword: String {
+        return localized(string: "repeatPassword")
+    }
+    
     static var forgotMyPassword: String {
         return localized(string: "forgotMyPassword")
     }
     
     static var rememberMe: String {
         return localized(string: "rememberMe")
+    }
+    
+    static var signupDescription: String {
+        return localized(string: "signupDescription")
+    }
+    
+    static var nameSurname: String {
+        return localized(string: "nameSurname")
+    }
+    
+    static var phoneNumber: String {
+        return localized(string: "phoneNumber")
+    }
+    
+    static var tcTaxNumber: String {
+        return localized(string: "tcTaxNumber")
+    }
+    
+    static var vehicleLicenseNumber: String {
+        return localized(string: "vehicleLicenseNumber")
+    }
+    
+    static var marketingApprovement: String {
+        return localized(string: "marketingApprovement")
+    }
+    
+    static var areYouMember: String {
+        return localized(string: "areYouMember")
+    }
+    
+    static var clarificationDescription: String {
+        return localized(string: "clarificationDescription")
+    }
+    
+    static var clarificationText: String {
+        return localized(string: "clarificationText")
+    }
+    
+    static var consentDescription: String {
+        return localized(string: "consentDescription")
+    }
+    
+    static var consentText: String {
+        return localized(string: "consentText")
     }
     
     static func localized(string: String) -> String {

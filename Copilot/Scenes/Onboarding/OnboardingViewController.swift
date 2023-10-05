@@ -169,6 +169,11 @@ class OnboardingViewController: UIViewController {
             return
         }
     }
+    
+    @IBAction func didTapBecomMemberButton() {
+        viewModel.goToSignup()
+    }
+    
 }
 
 extension OnboardingViewController: UICollectionViewDataSource {

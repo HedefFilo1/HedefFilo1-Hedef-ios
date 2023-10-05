@@ -97,6 +97,10 @@ class LoginViewController: UIViewController {
         viewModel.login(email: emailTextFiled.text ?? "",
                         password: passwordTextFiled.text ?? "")
     }
+    
+    @IBAction func didTapSignup(_ sender: Any) {
+        viewModel.goToSignup()
+    }
 }
 
 extension LoginViewController: LoginViewModelDelegate {

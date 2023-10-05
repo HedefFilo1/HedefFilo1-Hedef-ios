@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
+		890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD22ACE99BC00F053DA /* SignupViewController.swift */; };
+		890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD42ACEB60D00F053DA /* AttributedText.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
@@ -69,6 +72,9 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		890D7CD22ACE99BC00F053DA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		890D7CD42ACEB60D00F053DA /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -160,6 +166,15 @@
 				31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		890D7CCF2ACE997800F053DA /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				890D7CD02ACE99B500F053DA /* SignupViewModel.swift */,
+				890D7CD22ACE99BC00F053DA /* SignupViewController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -355,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				892A8D0E2AC4E80F0020C1C4 /* TextStyle.swift */,
+				890D7CD42ACEB60D00F053DA /* AttributedText.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -375,6 +391,7 @@
 				89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */,
 				89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */,
 				89DAB7FE2AC72D280098BA67 /* Login */,
+				890D7CCF2ACE997800F053DA /* Signup */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -534,6 +551,8 @@
 			files = (
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
+				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
+				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
@@ -557,6 +576,7 @@
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,

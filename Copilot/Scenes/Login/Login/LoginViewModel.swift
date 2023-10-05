@@ -10,6 +10,7 @@ import Foundation
 protocol LoginViewModelCoordinatorDelegate: AnyObject {
     func goToNextScene()
     func goToForgotPassword()
+    func goToSignup()
 }
 
 protocol LoginViewModelDelegate: AnyObject {
@@ -21,6 +22,7 @@ protocol LoginViewModelType: AnyObject {
     func goToNextScene()
     func goToForgotPassword()
     func login(email: String, password: String)
+    func goToSignup()
 }
 
 class LoginViewModel: LoginViewModelType {
@@ -39,5 +41,9 @@ class LoginViewModel: LoginViewModelType {
     
     func login(email: String, password: String) {
         goToNextScene()
+    }
+    
+    func goToSignup() {
+        coordinatorDelegate?.goToSignup()
     }
 }

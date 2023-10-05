@@ -10,6 +10,7 @@ import UIKit
 
 protocol OnboardingCoordinatorDelegate: AnyObject {
     func goToLogin()
+    func goToSignup()
     func didFinish(from coordinator: Coordinator)
 }
 
@@ -52,5 +53,9 @@ extension OnboardingCoordinator: OnboardingViewModelCoordinatorDelegate {
     func goToNextScene() {
         delegate?.goToLogin()
         finish()
+    }
+    
+    func goToSignup() {
+        delegate?.goToSignup()
     }
 }
