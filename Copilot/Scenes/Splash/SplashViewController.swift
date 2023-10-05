@@ -19,6 +19,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.start()
+        navigationController?.navigationBar.isHidden = true
     }
 
     func goToNextPage() {

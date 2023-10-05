@@ -52,7 +52,6 @@ class SignupViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage)
     }
     
     func setupUI() {

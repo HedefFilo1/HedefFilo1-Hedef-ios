@@ -35,7 +35,7 @@ class SplashViewModel: SplashViewModelType {
         // just for test
         var deadline: DispatchTime = .now() + 2
 #if DEV_DEBUG
-        deadline = .now() + 0.3
+        deadline = .now() + 1
 #endif
         DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
             guard let self = self else { return }

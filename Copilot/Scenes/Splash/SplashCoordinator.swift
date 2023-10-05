@@ -39,6 +39,7 @@ class SplashCoordinator: Coordinator {
         viewController.viewModel = viewModel
         
         let navigation = UINavigationController(rootViewController: viewController)
+        navigation.isNavigationBarHidden = true
         window.rootViewController = navigation
         window.makeKeyAndVisible()
     }

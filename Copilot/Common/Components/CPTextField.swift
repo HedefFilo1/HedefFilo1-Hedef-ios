@@ -48,13 +48,13 @@ class CPTextField: UITextField {
         }
     }
     
-    var isRequired = false {
-        didSet {
-            if isRequired {
-                makeRequired()
-            }
-        }
-    }
+//    var isRequired = false {
+//        didSet {
+//            if isRequired {
+//                makeRequired()
+//            }
+//        }
+//    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -95,6 +95,7 @@ class CPTextField: UITextField {
         contentView.addSubviews(views: placeholderLabel)
         placeholderLabel.align(leading: 16, trailing: 16)
         placeholderTopConstraint = placeholderLabel.topAnchor.constraint(equalTo: topAnchor, constant: 19)
+        placeholderLabel.adjustsFontSizeToFitWidth = true
         placeholderTopConstraint.isActive = true
         
     }
@@ -115,16 +116,16 @@ class CPTextField: UITextField {
         placeholderLabel.apply(.greyS15B400)
     }
     
-    private func makeRequired() {
-        let text = placeholderLabel.text ?? ""
-
-        let attributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        
-        let starStr = NSMutableAttributedString(string: "*", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        
-        attributedString.append(starStr)
-        placeholderLabel.attributedText = attributedString
-    }
+//    private func makeRequired() {
+//        let text = placeholderLabel.text ?? ""
+//
+//        let attributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+//
+//        let starStr = NSMutableAttributedString(string: "*", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+//
+//        attributedString.append(starStr)
+//        placeholderLabel.attributedText = attributedString
+//    }
     
     func resetTextField() {
         placeholderTopConstraint.constant = 19
