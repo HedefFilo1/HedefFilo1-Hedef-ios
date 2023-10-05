@@ -124,6 +124,18 @@ struct Strings {
         return localized(string: "consentText")
     }
     
+    static var ok: String {
+        return localized(string: "ok")
+    }
+    
+    static var registrationTitle: String {
+        return localized(string: "registrationTitle")
+    }
+    
+    static var registerationMessage: String {
+        return localized(string: "registerationMessage")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

@@ -11,6 +11,10 @@
 		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
 		890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD22ACE99BC00F053DA /* SignupViewController.swift */; };
 		890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD42ACEB60D00F053DA /* AttributedText.swift */; };
+		890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890D7CD72ACEC52700F053DA /* Popup.storyboard */; };
+		890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */; };
+		890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDB2ACEC80400F053DA /* PopupViewController.swift */; };
+		890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDD2ACEC84600F053DA /* SheetViewController.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
@@ -75,6 +79,10 @@
 		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		890D7CD22ACE99BC00F053DA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		890D7CD42ACEB60D00F053DA /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		890D7CD72ACEC52700F053DA /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopupViewController.swift; sourceTree = "<group>"; };
+		890D7CDB2ACEC80400F053DA /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		890D7CDD2ACEC84600F053DA /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -175,6 +183,17 @@
 				890D7CD22ACE99BC00F053DA /* SignupViewController.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		890D7CD62ACEC51000F053DA /* popup */ = {
+			isa = PBXGroup;
+			children = (
+				890D7CD72ACEC52700F053DA /* Popup.storyboard */,
+				890D7CDD2ACEC84600F053DA /* SheetViewController.swift */,
+				890D7CDB2ACEC80400F053DA /* PopupViewController.swift */,
+				890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */,
+			);
+			path = popup;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -293,6 +312,7 @@
 				892A8CF02AC4C6760020C1C4 /* Splash */,
 				892A8CFA2AC4D1310020C1C4 /* Onboarding */,
 				89DAB7F92AC72CFE0098BA67 /* Login */,
+				890D7CD62ACEC51000F053DA /* popup */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -477,6 +497,7 @@
 				8989DDA62AC493BF0035CD99 /* Main.storyboard in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
+				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
 			);
@@ -561,6 +582,7 @@
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
+				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
@@ -573,6 +595,7 @@
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
+				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
@@ -582,6 +605,7 @@
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
+				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,

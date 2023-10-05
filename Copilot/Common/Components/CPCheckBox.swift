@@ -16,8 +16,7 @@ class CPCheckBox: UIView {
     var isSelected: Bool = false {
         didSet {
             checkView.isHidden = !isSelected
-            let color: UIColor = isSelected ? .white: .lightBorder
-            layer.borderColor = color.cgColor
+            layer.borderWidth = isSelected ? 0: 1
         }
     }
     
@@ -36,6 +35,7 @@ class CPCheckBox: UIView {
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightBorder.cgColor
         backgroundColor = .white
+        clipsToBounds = true
         
         addSubview(checkView)
         checkView.align(all: 0)

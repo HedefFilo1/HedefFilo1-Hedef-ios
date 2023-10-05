@@ -152,22 +152,22 @@ extension UIViewController {
 //        showError(errorTitle: title, message: message)
     }
 
-//    func showSuccess(successTitle: String = Strings.unSuccessful,
-//                     message: String = "",
-//                     buttonTitle: String = Strings.okay,
-//                     attributedMessage: NSAttributedString? = nil,
-//                     delegate: SuccessPopupViewControllerDelegate? = nil) {
+    func showSuccess(successTitle: String,
+                     message: String,
+                     buttonTitle: String = Strings.ok,
+                     attributedMessage: NSAttributedString? = nil,
+                     delegate: SuccessPopupViewControllerDelegate? = nil) {
 
-//        let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
-//        viewController.titleText = successTitle
-//        viewController.message = message
-//        viewController.buttonTitle = buttonTitle
-//        viewController.attributedMessage = attributedMessage
-//        viewController.delegate = delegate
-//        self.present(viewController, animated: true)
-//    }
+        let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
+        viewController.titleText = successTitle
+        viewController.message = message
+        viewController.buttonTitle = buttonTitle
+        viewController.attributedMessage = attributedMessage
+        viewController.delegate = delegate
+        self.present(viewController, animated: true)
+    }
 
-    func showSuccess(title: String = "", message: String) {
-//        showSuccess(successTitle: title, message: message)
+    func showSuccess(title: String, message: String) {
+        showSuccess(successTitle: title, message: message)
     }
 }

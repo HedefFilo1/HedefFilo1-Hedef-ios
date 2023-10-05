@@ -52,7 +52,7 @@ class SignupViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage)
     }
     
     func setupUI() {
@@ -66,6 +66,12 @@ class SignupViewController: UIViewController {
         passwordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         repeatPasswordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         signupButton.isEnabled = false
+        
+        phoneTextField.keyboardType = .phonePad
+        idTextField.keyboardType = .numberPad
+        
+        phoneTextField.delegate = self
+        idTextField.delegate = self
     }
     
     func applyStyle() {
@@ -114,7 +120,7 @@ class SignupViewController: UIViewController {
         let phone = phoneTextField.pureTextCount == 11
         let email = emailTextFiled.validate()
         let tcTax = idTextField.pureTextCount == 11
-        let license = licenseTextField.pureTextCount == 11
+        let license = licenseTextField.pureTextCount > 0
         let password = passwordTextFiled.text ?? ""
         let repeatPass = repeatPasswordTextFiled.pureText
         let passess = (password.count > 0) && (password == repeatPass)
@@ -153,6 +159,13 @@ class SignupViewController: UIViewController {
     
     @IBAction func didTapLogin(_ sender: UIButton) {
         viewModel.goToLogin()
+    }
+}
+
+extension SignupViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.isEmpty { return true }
+        return range.location < 11
     }
 }
 

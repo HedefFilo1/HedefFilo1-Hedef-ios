@@ -14,6 +14,7 @@ protocol SignupViewModelCoordinatorDelegate: AnyObject {
 
 protocol SignupViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
+    func showSuccess(title: String, message: String)
 }
 
 protocol SignupViewModelType: AnyObject {
@@ -38,6 +39,6 @@ class SignupViewModel: SignupViewModelType {
     }
     
     func signup(name: String, phone: String, email: String, id: String, licence: String, password: String) {
-        goToNextScene()
+        delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage)
     }
 }

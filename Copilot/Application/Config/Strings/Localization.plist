@@ -234,28 +234,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Explicit Consent Text</string>
         </dict>
         
-        <key></key>
+        <key>ok</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tamam</string>
             <key>en</key>
-            <string></string>
+            <string>Ok</string>
         </dict>
         
-        <key></key>
+        <key>registrationTitle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kaydınız Oluşturuldu!</string>
             <key>en</key>
-            <string></string>
+            <string>Your Registration has been Created!</string>
         </dict>
         
-        <key></key>
+        <key>registerationMessage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kullanıcı bilgileriniz ile giriş yapabilirsiniz</string>
             <key>en</key>
-            <string></string>
+            <string>You can log in with your user information</string>
         </dict>
         
         <key></key>

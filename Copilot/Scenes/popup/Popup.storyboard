@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Success Popup View Controller-->
+        <scene sceneID="dBc-eW-EBT">
+            <objects>
+                <viewController storyboardIdentifier="SuccessPopupViewController" id="m4o-fr-sKT" customClass="SuccessPopupViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVh-Iz-QbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="jQx-TI-39L">
+                                <rect key="frame" x="32" y="283.33333333333326" width="329" height="285.66666666666674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-hA-VRZ">
+                                        <rect key="frame" x="124.66666666666666" y="24" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tikIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-jL-3CY">
+                                                <rect key="frame" x="24" y="24" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="Exi-bg-MK5"/>
+                                                    <constraint firstAttribute="width" constant="32" id="bro-KB-3x7"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="textSuccess"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="EJr-Kg-mrH"/>
+                                            <constraint firstAttribute="height" constant="80" id="aMp-1s-7W5"/>
+                                            <constraint firstItem="MPj-jL-3CY" firstAttribute="centerY" secondItem="I1H-hA-VRZ" secondAttribute="centerY" id="kFN-Ok-sBf"/>
+                                            <constraint firstItem="MPj-jL-3CY" firstAttribute="centerX" secondItem="I1H-hA-VRZ" secondAttribute="centerX" id="nbc-ub-gvi"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Kullanıcı bilgileriniz ile giriş yapabilirsiniz " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8n-YV-HnX">
+                                        <rect key="frame" x="30" y="153" width="269" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-yO-3tU" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="113" y="217.66666666666669" width="103" height="44"/>
+                                        <color key="backgroundColor" name="theme"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="HtI-Ii-6AV"/>
+                                            <constraint firstAttribute="height" constant="44" id="snL-NV-bvi"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tamam"/>
+                                        <connections>
+                                            <action selector="didTapButton:" destination="m4o-fr-sKT" eventType="touchUpInside" id="6dF-uk-Iib"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaydınız Oluşturuldu!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhS-dk-lnb">
+                                        <rect key="frame" x="16" y="120" width="297" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uhS-dk-lnb" firstAttribute="top" secondItem="I1H-hA-VRZ" secondAttribute="bottom" constant="16" id="7MA-Wg-UbD"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8n-YV-HnX" secondAttribute="trailing" constant="30" id="FrI-Kb-zSh"/>
+                                    <constraint firstItem="I1H-hA-VRZ" firstAttribute="top" secondItem="jQx-TI-39L" secondAttribute="top" constant="24" id="HqU-Bc-mrY"/>
+                                    <constraint firstItem="uhS-dk-lnb" firstAttribute="leading" secondItem="jQx-TI-39L" secondAttribute="leading" constant="16" id="TND-VY-VUg"/>
+                                    <constraint firstItem="ZWq-yO-3tU" firstAttribute="top" secondItem="f8n-YV-HnX" secondAttribute="bottom" constant="24" id="XF5-fE-W2V"/>
+                                    <constraint firstItem="f8n-YV-HnX" firstAttribute="top" secondItem="uhS-dk-lnb" secondAttribute="bottom" constant="12" id="brb-A0-0CF"/>
+                                    <constraint firstAttribute="trailing" secondItem="uhS-dk-lnb" secondAttribute="trailing" constant="16" id="gRt-89-ydD"/>
+                                    <constraint firstItem="f8n-YV-HnX" firstAttribute="leading" secondItem="jQx-TI-39L" secondAttribute="leading" constant="30" id="hTn-pV-luA"/>
+                                    <constraint firstItem="I1H-hA-VRZ" firstAttribute="centerX" secondItem="jQx-TI-39L" secondAttribute="centerX" id="lZo-6h-eTa"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWq-yO-3tU" secondAttribute="bottom" constant="24" id="qY9-6T-8LJ"/>
+                                    <constraint firstItem="ZWq-yO-3tU" firstAttribute="centerX" secondItem="jQx-TI-39L" secondAttribute="centerX" id="zPJ-VF-MNc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F9S-xN-Ds4"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F9S-xN-Ds4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jQx-TI-39L" secondAttribute="bottom" priority="100" constant="14" id="Ew0-xx-MyX"/>
+                            <constraint firstItem="jQx-TI-39L" firstAttribute="centerY" secondItem="jVh-Iz-QbZ" secondAttribute="centerY" id="Jk5-7Q-FYG"/>
+                            <constraint firstItem="F9S-xN-Ds4" firstAttribute="trailing" secondItem="jQx-TI-39L" secondAttribute="trailing" constant="32" id="RjS-Kf-MDX"/>
+                            <constraint firstItem="jQx-TI-39L" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F9S-xN-Ds4" secondAttribute="top" priority="100" constant="1000" id="fwY-gV-n2k"/>
+                            <constraint firstItem="jQx-TI-39L" firstAttribute="leading" secondItem="F9S-xN-Ds4" secondAttribute="leading" constant="32" id="iVm-s8-Yma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="ZWq-yO-3tU" id="l6J-Mh-Ext"/>
+                        <outlet property="contentView" destination="jQx-TI-39L" id="4ff-IN-J0c"/>
+                        <outlet property="greenView" destination="I1H-hA-VRZ" id="8Bw-sD-bOp"/>
+                        <outlet property="messageLabel" destination="f8n-YV-HnX" id="hav-Y3-oTT"/>
+                        <outlet property="titleLabel" destination="uhS-dk-lnb" id="HR4-AW-cte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDt-uz-APP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tikIcon" width="32" height="32"/>
+        <namedColor name="textSuccess">
+            <color red="0.2627450980392157" green="0.62352941176470589" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
