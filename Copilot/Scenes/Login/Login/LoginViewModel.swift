@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginViewModelCoordinatorDelegate: AnyObject {
-    func goToNextScene()
+    func goToMain()
     func goToForgotPassword()
     func goToSignup()
 }
@@ -19,7 +19,7 @@ protocol LoginViewModelDelegate: AnyObject {
 
 protocol LoginViewModelType: AnyObject {
     var delegate: LoginViewModelDelegate? { get set }
-    func goToNextScene()
+    func goToMain()
     func goToForgotPassword()
     func login(email: String, password: String)
     func goToSignup()
@@ -31,8 +31,8 @@ class LoginViewModel: LoginViewModelType {
     weak var coordinatorDelegate: LoginViewModelCoordinatorDelegate?
     weak var delegate: LoginViewModelDelegate?
     
-    func goToNextScene() {
-        coordinatorDelegate?.goToNextScene()
+    func goToMain() {
+        coordinatorDelegate?.goToMain()
     }
     
     func goToForgotPassword() {
@@ -40,7 +40,7 @@ class LoginViewModel: LoginViewModelType {
     }
     
     func login(email: String, password: String) {
-        goToNextScene()
+        goToMain()
     }
     
     func goToSignup() {

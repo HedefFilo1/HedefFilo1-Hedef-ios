@@ -48,6 +48,9 @@ enum FontTypographyType {
     /// theme size(20) Bold(700)
     case themeS20B700
     
+    /// theme size(12) Regular(400)
+    case themeS12R400
+    
     /// white size(16) Bold(700)
     case whiteS16B700
     
@@ -85,6 +88,9 @@ enum FontTypographyType {
             
         case .themeS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .theme)
+        
+        case .themeS12R400:
+            return (TextStyle(fontStyle: .regular, size: 12), color: .theme)
             
         case .whiteS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .white)
@@ -93,6 +99,10 @@ enum FontTypographyType {
             return (TextStyle(fontStyle: .bold, size: 20), color: .white)
             
         }
+    }
+    
+    var font: UIFont {
+        return self.style.0.font
     }
 }
 

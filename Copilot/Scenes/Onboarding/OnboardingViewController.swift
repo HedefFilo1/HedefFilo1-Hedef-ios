@@ -42,7 +42,7 @@ class OnboardingViewController: UIViewController {
         setupUI()
 #if DEV_DEBUG
         // just for test
-//                viewModel.goToNextScene()
+                viewModel.goToNextScene()
 #endif
     }
     

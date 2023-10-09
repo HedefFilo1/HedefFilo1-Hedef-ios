@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Poc-Le-dac">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Servis-->
+        <scene sceneID="gD1-yK-Cx6">
+            <objects>
+                <viewController id="feB-Io-dWL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GiN-rg-D65">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="97x-ae-Tjd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Servis" image="toolIcon" selectedImage="toolSelectedIcon" id="Je3-gx-8nF">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDr-lI-KJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-505"/>
+        </scene>
+        <!--Kaza/Hasar-->
+        <scene sceneID="7b0-SK-sS7">
+            <objects>
+                <viewController id="iPo-e9-6Dx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TK1-be-yqo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mHf-SR-lXo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kaza/Hasar" image="carTabIcon" selectedImage="carTabSelectedIcon" id="Jv0-wW-fpm">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbD-wb-msJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-1163"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="L9u-pZ-ceZ">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="Poc-Le-dac" customClass="MainTabBarController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="vk9-vY-MIq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iPo-e9-6Dx" kind="relationship" relationship="viewControllers" id="3zS-hU-xs3"/>
+                        <segue destination="feB-Io-dWL" kind="relationship" relationship="viewControllers" id="rVk-Xi-ixd"/>
+                        <segue destination="Gry-ei-f83" kind="relationship" relationship="viewControllers" id="lUh-4R-bwb"/>
+                        <segue destination="875-2V-Xqf" kind="relationship" relationship="viewControllers" id="dKS-dz-bsS"/>
+                        <segue destination="cCz-Px-W4Y" kind="relationship" relationship="viewControllers" id="kLz-K7-hbo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPD-xv-MBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1382" y="-336"/>
+        </scene>
+        <!--Anasayfa-->
+        <scene sceneID="VAa-B3-TFy">
+            <objects>
+                <viewController id="Gry-ei-f83" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L0k-CQ-xTh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bsn-rH-RPW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anasayfa" image="homeTab" selectedImage="homeSelectedTab" id="nsn-do-SuW">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Q0-bk-28Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="187"/>
+        </scene>
+        <!--Yardım-->
+        <scene sceneID="w7k-XL-QcV">
+            <objects>
+                <viewController id="875-2V-Xqf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SHt-tO-3tt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EqS-5s-Y1k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yardım" image="helpIcon" selectedImage="helpSelectedIcon" id="apm-ko-IEA">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7k-5b-n3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="864"/>
+        </scene>
+        <!--Daha Fazla-->
+        <scene sceneID="Wva-Zf-ZRw">
+            <objects>
+                <viewController id="cCz-Px-W4Y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEu-ga-bX3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C0u-jY-nbV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Daha Fazla" image="moreTabIcon" selectedImage="moreTabSelectedIcon" id="r24-0F-AfA">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofc-c7-TEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="1563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carTabIcon" width="31" height="29"/>
+        <image name="carTabSelectedIcon" width="31" height="29"/>
+        <image name="helpIcon" width="24.333333969116211" height="24"/>
+        <image name="helpSelectedIcon" width="24.333333969116211" height="24"/>
+        <image name="homeSelectedTab" width="24" height="24"/>
+        <image name="homeTab" width="24" height="24"/>
+        <image name="moreTabIcon" width="24.333333969116211" height="24"/>
+        <image name="moreTabSelectedIcon" width="24" height="24"/>
+        <image name="toolIcon" width="24.333333969116211" height="24"/>
+        <image name="toolSelectedIcon" width="24.333333969116211" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

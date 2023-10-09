@@ -8,7 +8,6 @@
 import Foundation
 
 protocol SignupViewModelCoordinatorDelegate: AnyObject {
-    func goToNextScene()
     func goToLogin()
 }
 
@@ -19,7 +18,6 @@ protocol SignupViewModelDelegate: AnyObject {
 
 protocol SignupViewModelType: AnyObject {
     var delegate: SignupViewModelDelegate? { get set }
-    func goToNextScene()
     func goToLogin()
     func signup(name: String, phone: String, email: String, id: String, licence: String, password: String)
 }
@@ -29,10 +27,6 @@ class SignupViewModel: SignupViewModelType {
     // MARK: - Delegates
     weak var coordinatorDelegate: SignupViewModelCoordinatorDelegate?
     weak var delegate: SignupViewModelDelegate?
-    
-    func goToNextScene() {
-        coordinatorDelegate?.goToNextScene()
-    }
     
     func goToLogin() {
         coordinatorDelegate?.goToLogin()

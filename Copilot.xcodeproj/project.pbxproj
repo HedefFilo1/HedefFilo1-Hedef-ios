@@ -44,6 +44,10 @@
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
 		89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */; };
+		89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B12BB42AD478A8002C70E4 /* Main.storyboard */; };
+		89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */; };
+		89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB82AD47902002C70E4 /* MainTabBarController.swift */; };
+		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
 		89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */; };
 		89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */; };
@@ -115,6 +119,10 @@
 		8989DDAA2AC493C00035CD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPCheckBox.swift; sourceTree = "<group>"; };
+		89B12BB42AD478A8002C70E4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		89B12BB82AD47902002C70E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
@@ -278,6 +286,17 @@
 			path = Copilot;
 			sourceTree = "<group>";
 		};
+		89B12BB32AD4789D002C70E4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				89B12BB42AD478A8002C70E4 /* Main.storyboard */,
+				89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */,
+				89B12BB82AD47902002C70E4 /* MainTabBarController.swift */,
+				89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		89C55DC92AC4A4E000C3066A /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +332,7 @@
 				892A8CFA2AC4D1310020C1C4 /* Onboarding */,
 				89DAB7F92AC72CFE0098BA67 /* Login */,
 				890D7CD62ACEC51000F053DA /* popup */,
+				89B12BB32AD4789D002C70E4 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -492,6 +512,7 @@
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
+				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
 				8989DDA62AC493BF0035CD99 /* Main.storyboard in Resources */,
@@ -572,11 +593,13 @@
 			files = (
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
+				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
+				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
@@ -599,6 +622,7 @@
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
