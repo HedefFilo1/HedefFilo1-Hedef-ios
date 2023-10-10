@@ -258,6 +258,134 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>You can log in with your user information</string>
         </dict>
         
+        <key>forgotPasswordDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni şifreniz mail adresinize gönderilecektir.</string>
+            <key>en</key>
+            <string>Your new password will be sent to your e-mail address.</string>
+        </dict>
+        
+        <key>vknPhoneNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>VKN / Telefon Numarası</string>
+            <key>en</key>
+            <string>TIN / Telephone Number</string>
+        </dict>
+        
+        <key>sendNewPassword</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Şifre Gönder</string>
+            <key>en</key>
+            <string>Send New Password</string>
+        </dict>
+        
+        <key>passwordHasBeenSent</key>
+        <dict>
+            <key>tr</key>
+            <string>Şifreni Gönderildi</string>
+            <key>en</key>
+            <string>Your password has been sent</string>
+        </dict>
+        
+        <key>passwordSentToEmail</key>
+        <dict>
+            <key>tr</key>
+            <string>Şifreniz mail adresinize gönderildi.</string>
+            <key>en</key>
+            <string>Your password has been sent to your e-mail address.</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

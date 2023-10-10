@@ -101,7 +101,7 @@ class SignupViewController: UIViewController {
         signupButton.setTitle(Strings.becomeMember, for: .normal)
         
         isMemberLabel.text = Strings.areYouMember
-        loginButton.setTitle(Strings.login, for: .normal)
+        loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
     }
     
     func setAgreementTexts() {

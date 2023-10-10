@@ -124,7 +124,7 @@ struct Strings {
         return localized(string: "consentText")
     }
     
-    static var ok: String {
+    static var okay: String {
         return localized(string: "ok")
     }
     
@@ -134,6 +134,26 @@ struct Strings {
     
     static var registerationMessage: String {
         return localized(string: "registerationMessage")
+    }
+    
+    static var forgotPasswordDescription: String {
+        return localized(string: "forgotPasswordDescription")
+    }
+    
+    static var vknPhoneNumber: String {
+        return localized(string: "vknPhoneNumber")
+    }
+    
+    static var sendNewPassword: String {
+        return localized(string: "sendNewPassword")
+    }
+    
+    static var passwordHasBeenSent: String {
+        return localized(string: "passwordHasBeenSent")
+    }
+    
+    static var passwordSentToEmail: String {
+        return localized(string: "passwordSentToEmail")
     }
     
     static func localized(string: String) -> String {

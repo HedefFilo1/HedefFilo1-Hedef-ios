@@ -51,7 +51,7 @@
         <scene sceneID="L9u-pZ-ceZ">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="Poc-Le-dac" customClass="MainTabBarController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="vk9-vY-MIq">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vk9-vY-MIq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -37,6 +37,8 @@
 		892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892A8D182AC4EDB20020C1C4 /* Localization.plist */; };
 		892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1A2AC587690020C1C4 /* Strings.swift */; };
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
+		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
+		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -110,6 +112,8 @@
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
+		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +257,15 @@
 				892A8D1A2AC587690020C1C4 /* Strings.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */,
+				896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		8989DD922AC493BF0035CD99 = {
@@ -432,6 +445,7 @@
 				89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */,
 				89DAB7FE2AC72D280098BA67 /* Login */,
 				890D7CCF2ACE997800F053DA /* Signup */,
+				896CB33C2AD5B22E0048025A /* ForgotPassword */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -623,6 +637,7 @@
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
+				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
@@ -637,6 +652,7 @@
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
+				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,

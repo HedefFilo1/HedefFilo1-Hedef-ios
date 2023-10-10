@@ -54,11 +54,11 @@ class LoginCoordinator: Coordinator {
 extension LoginCoordinator: LoginViewModelCoordinatorDelegate {
     
     func goToForgotPassword() {
-        //        let viewController: ForgotPasswordViewController = storyboard.instantiateViewController()
-        //        let viewModel = ForgotPasswordViewModel()
-        //        viewController.viewModel = viewModel
-        //        viewModel.coordinatorDelegate = self
-        //        navigationController.pushViewController(viewController, animated: true)
+        let viewController: ForgotPasswordViewController = storyboard.instantiateViewController()
+        let viewModel = ForgotPasswordViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToMain() {
@@ -83,7 +83,13 @@ extension LoginCoordinator: SignupViewModelCoordinatorDelegate {
         navigationController.popViewController(animated: true)
     }
 }
- 
+
+extension LoginCoordinator: ForgotPasswordVMCoordinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
+    }
+}
+
 extension LoginCoordinator: MainCoordinatorDelegate {
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)

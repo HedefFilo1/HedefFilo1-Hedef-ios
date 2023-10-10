@@ -154,7 +154,7 @@ extension UIViewController {
 
     func showSuccess(successTitle: String,
                      message: String,
-                     buttonTitle: String = Strings.ok,
+                     buttonTitle: String = Strings.okay,
                      attributedMessage: NSAttributedString? = nil,
                      delegate: SuccessPopupViewControllerDelegate? = nil) {
 

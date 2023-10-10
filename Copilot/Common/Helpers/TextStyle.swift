@@ -21,8 +21,14 @@ enum FontTypographyType {
     /// black size(20) Bold(700)
     case blackS20B700
     
+    /// black size(18) Bold(700)
+    case blackS18B700
+    
     /// black size(16) Bold(700)
     case blackS16B700
+    
+    /// black size(16) Regular(400)
+    case blackS16B400
     
     /// black size(15) Regular(400)
     case blackS15B400
@@ -62,8 +68,14 @@ enum FontTypographyType {
         case .blackS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .black)
             
+        case .blackS18B700:
+            return (TextStyle(fontStyle: .bold, size: 18), color: .black)
+            
         case .blackS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .black)
+        
+        case .blackS16B400:
+            return (TextStyle(fontStyle: .regular, size: 16), color: .black)
             
         case .blackS15B400:
             return (TextStyle(fontStyle: .regular, size: 15), color: .black)
