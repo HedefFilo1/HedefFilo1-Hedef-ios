@@ -46,7 +46,11 @@ class CPEmailTextField: CPTextField {
     }
     
     @objc func editingDidEnd() {
-        imageView.isHidden = validate()
+        let valie = validate()
+        imageView.isHidden = valie
         errorLabel.isHidden = imageView.isHidden
+        
+        let color: UIColor = valie ? .borderColor: .theme
+        contentView.layer.borderColor = color.cgColor
     }
 }
