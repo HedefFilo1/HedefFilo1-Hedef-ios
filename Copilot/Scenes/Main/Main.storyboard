@@ -59,7 +59,7 @@
                     <connections>
                         <segue destination="iPo-e9-6Dx" kind="relationship" relationship="viewControllers" id="3zS-hU-xs3"/>
                         <segue destination="feB-Io-dWL" kind="relationship" relationship="viewControllers" id="rVk-Xi-ixd"/>
-                        <segue destination="Gry-ei-f83" kind="relationship" relationship="viewControllers" id="lUh-4R-bwb"/>
+                        <segue destination="4El-IP-rXy" kind="relationship" relationship="viewControllers" id="0bq-a6-Hvx"/>
                         <segue destination="875-2V-Xqf" kind="relationship" relationship="viewControllers" id="dKS-dz-bsS"/>
                         <segue destination="cCz-Px-W4Y" kind="relationship" relationship="viewControllers" id="kLz-K7-hbo"/>
                     </connections>
@@ -68,24 +68,15 @@
             </objects>
             <point key="canvasLocation" x="-1382" y="-336"/>
         </scene>
-        <!--Anasayfa-->
-        <scene sceneID="VAa-B3-TFy">
+        <!--Home-->
+        <scene sceneID="7Oo-ye-gbq">
             <objects>
-                <viewController id="Gry-ei-f83" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L0k-CQ-xTh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Bsn-rH-RPW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Anasayfa" image="homeTab" selectedImage="homeSelectedTab" id="nsn-do-SuW">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Q0-bk-28Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Home" id="4El-IP-rXy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Hnf-kU-TIx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xY3-r2-tLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="187"/>
+            <point key="canvasLocation" x="-340" y="-32"/>
         </scene>
         <!--Yardım-->
         <scene sceneID="w7k-XL-QcV">
@@ -132,8 +123,6 @@
         <image name="carTabSelectedIcon" width="31" height="29"/>
         <image name="helpIcon" width="24.333333969116211" height="24"/>
         <image name="helpSelectedIcon" width="24.333333969116211" height="24"/>
-        <image name="homeSelectedTab" width="24" height="24"/>
-        <image name="homeTab" width="24" height="24"/>
         <image name="moreTabIcon" width="24.333333969116211" height="24"/>
         <image name="moreTabSelectedIcon" width="24" height="24"/>
         <image name="toolIcon" width="24.333333969116211" height="24"/>

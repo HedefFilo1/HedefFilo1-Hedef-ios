@@ -11,6 +11,15 @@ import UIKit.UIColor
 extension UIColor {
     /// #E92127
     static let theme = UIColor(named: "theme") ?? .red
+
+    /// #EA1C24
+    static let secondRed = UIColor(named: "secondRed") ?? .red
+    
+    /// #ED1C24
+    static let appRed = UIColor(named: "appRed") ?? .red
+    
+    /// #FFE8E9
+    static let lightRed = UIColor(named: "lightRed") ?? .gray
     
     /// #58595B
     static let textGrey = UIColor(named: "textGrey") ?? .gray
@@ -18,17 +27,17 @@ extension UIColor {
     /// #D2D2D2
     static let appLightGrey = UIColor(named: "appLightGrey") ?? .gray
     
-    /// #ED1C24
-    static let appRed = UIColor(named: "appRed") ?? .gray
-    
     /// #EDEDF5
     static let borderColor = UIColor(named: "borderColor") ?? .gray
     
-    /// #AAA
-    static let fieldDescription = UIColor(named: "fieldDescription") ?? .gray
-    
     /// #ECEDF2
     static let lightBorder = UIColor(named: "lightBorder") ?? .gray
+    
+    /// #F1F1F4
+    static let whiteBorder = UIColor(named: "whiteBorder") ?? .gray
+    
+    /// #AAA
+    static let fieldDescription = UIColor(named: "fieldDescription") ?? .gray
     
     /// #F2F2F2
     static let disabled = UIColor(named: "disabled") ?? .gray

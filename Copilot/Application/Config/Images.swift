@@ -37,4 +37,8 @@ struct Images {
     static var errorIcon: UIImage {
         return UIImage(named: "errorIcon") ?? UIImage()
     }
+    
+    static var search: UIImage {
+        return UIImage(named: "search") ?? UIImage()
+    }
 }

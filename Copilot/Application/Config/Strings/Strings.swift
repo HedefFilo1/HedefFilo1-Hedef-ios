@@ -156,6 +156,46 @@ struct Strings {
         return localized(string: "passwordSentToEmail")
     }
     
+    static var vehicleInformation: String {
+        return localized(string: "vehicleInformation")
+    }
+    
+    static var rentalPeriod: String {
+        return localized(string: "rentalPeriod")
+    }
+    
+    static var kmLimit: String {
+        return localized(string: "kmLimit")
+    }
+    
+    static var kmUsed: String {
+        return localized(string: "kmUsed")
+    }
+    
+    static var makeChange: String {
+        return localized(string: "makeChange")
+    }
+    
+    static var upcomingAppointment: String {
+        return localized(string: "upcomingAppointment")
+    }
+    
+    static var nearMe: String {
+        return localized(string: "nearMe")
+    }
+    
+    static var tireInformation: String {
+        return localized(string: "tireInformation")
+    }
+    
+    static var petlasTireService: String {
+        return localized(string: "petlasTireService")
+    }
+    
+    static var latestMaintenanceInformation: String {
+        return localized(string: "latestMaintenanceInformation")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

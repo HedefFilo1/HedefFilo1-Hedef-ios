@@ -36,6 +36,12 @@ enum FontTypographyType {
     /// black size(16) Medium(500)
     case blackS16M500
     
+    /// black size(12) Bold(700)
+    case blackS12R700
+    
+    /// black size(12) Medium(500)
+    case blackS12M500
+    
     /// black size(12) Regular(400)
     case blackS12R400
     
@@ -48,6 +54,9 @@ enum FontTypographyType {
     /// textGrey size(15) Regular(400)
     case greyS15B400
     
+    /// textGrey size(12) Medium(500)
+    case greyS12M500
+    
     /// theme size(16) Bold(700)
     case themeS16B700
     
@@ -57,11 +66,17 @@ enum FontTypographyType {
     /// theme size(12) Regular(400)
     case themeS12R400
     
+    /// whitesize(20) Bold(700)
+    case whiteS20B700
+    
     /// white size(16) Bold(700)
     case whiteS16B700
     
-    /// whitesize(20) Bold(700)
-    case whiteS20B700
+    /// white size(16) Regular(400)
+    case whiteS16R400
+    
+    /// white size(12) Bold(700)
+    case whiteS12B700
 
     var style: (TextStyle, UIColor) {
         switch self {
@@ -82,12 +97,21 @@ enum FontTypographyType {
             
         case .blackS16M500:
             return (TextStyle(fontStyle: .medium, size: 16), color: .black)
+        
+        case .blackS12M500:
+            return (TextStyle(fontStyle: .medium, size: 12), color: .black)
+            
+        case .blackS12R700:
+            return (TextStyle(fontStyle: .bold, size: 12), color: .black)
             
         case .blackS12R400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .black)
             
         case .greyS12B400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .textGrey)
+            
+        case .greyS12M500:
+            return (TextStyle(fontStyle: .medium, size: 12), color: .textGrey)
             
         case .greyS16B400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .textGrey)
@@ -104,11 +128,17 @@ enum FontTypographyType {
         case .themeS12R400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .theme)
             
+        case .whiteS20B700:
+            return (TextStyle(fontStyle: .bold, size: 20), color: .white)
+            
         case .whiteS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .white)
             
-        case .whiteS20B700:
-            return (TextStyle(fontStyle: .bold, size: 20), color: .white)
+        case .whiteS16R400:
+            return (TextStyle(fontStyle: .regular, size: 16), color: .white)
+            
+        case .whiteS12B700:
+            return (TextStyle(fontStyle: .bold, size: 12), color: .white)
             
         }
     }

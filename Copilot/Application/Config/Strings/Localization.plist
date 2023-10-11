@@ -298,6 +298,102 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your password has been sent to your e-mail address.</string>
         </dict>
         
+        <key>vehicleInformation</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Bilgileri</string>
+            <key>en</key>
+            <string>Vehicle Information</string>
+        </dict>
+        
+        <key>rentalPeriod</key>
+        <dict>
+            <key>tr</key>
+            <string>Kira Süresi</string>
+            <key>en</key>
+            <string>Rental Period</string>
+        </dict>
+        
+        <key>kmLimit</key>
+        <dict>
+            <key>tr</key>
+            <string>KM Limiti</string>
+            <key>en</key>
+            <string>KM Limit</string>
+        </dict>
+        
+        <key>kmUsed</key>
+        <dict>
+            <key>tr</key>
+            <string>Kullanılan KM</string>
+            <key>en</key>
+            <string>KM used</string>
+        </dict>
+        
+        <key>makeChange</key>
+        <dict>
+            <key>tr</key>
+            <string>Değişiklik Yap</string>
+            <key>en</key>
+            <string>Make Change</string>
+        </dict>
+        
+        <key>upcomingAppointment</key>
+        <dict>
+            <key>tr</key>
+            <string>Yaklaşan Randevu</string>
+            <key>en</key>
+            <string>Upcoming Appointment</string>
+        </dict>
+        
+        <key>nearMe</key>
+        <dict>
+            <key>tr</key>
+            <string>Yakınımdakiler</string>
+            <key>en</key>
+            <string>near me</string>
+        </dict>
+        
+        <key>tireInformation</key>
+        <dict>
+            <key>tr</key>
+            <string>Saklamadaki Lastik Bilgisi</string>
+            <key>en</key>
+            <string>Tire Information in Storage</string>
+        </dict>
+        
+        <key>petlasTireService</key>
+        <dict>
+            <key>tr</key>
+            <string>Petlas Lastik Servisi</string>
+            <key>en</key>
+            <string>Petlas Tire Service</string>
+        </dict>
+        
+        <key>latestMaintenanceInformation</key>
+        <dict>
+            <key>tr</key>
+            <string>En Son Bakım Bilgisi</string>
+            <key>en</key>
+            <string>Latest Maintenance Information</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

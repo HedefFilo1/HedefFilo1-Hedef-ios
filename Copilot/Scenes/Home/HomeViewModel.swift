@@ -1,0 +1,28 @@
+//
+//  HomeViewModel.swift
+//  Copilot
+//
+//  Created by Jamal on 10/10/23.
+//
+
+import Foundation
+
+protocol HomeViewModelCoordinatorDelegate: AnyObject {
+ 
+}
+
+protocol HomeViewModelViewDelegate: AnyObject {
+    
+}
+
+protocol HomeViewModelType: AnyObject {
+    var delegate: HomeViewModelViewDelegate? { get set }
+}
+
+class HomeViewModel: HomeViewModelType {
+    
+    // MARK: - Delegates
+    var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
+    weak var delegate: HomeViewModelViewDelegate?
+
+}

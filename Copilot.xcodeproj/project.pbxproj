@@ -39,6 +39,25 @@
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
+		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
+		896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3442AD5BD830048025A /* HomeCoordinator.swift */; };
+		896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3462AD5BDA50048025A /* HomeViewModel.swift */; };
+		896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3482AD5BDE50048025A /* HomeViewController.swift */; };
+		896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB34C2AD5BED40048025A /* SearchCell.swift */; };
+		896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB34D2AD5BED40048025A /* SearchCell.xib */; };
+		896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */; };
+		896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3532AD5D46D0048025A /* VehicleInfoCell.swift */; };
+		896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3542AD5D46D0048025A /* VehicleInfoCell.xib */; };
+		896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3582AD715CE0048025A /* HomeContentCell.swift */; };
+		896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3592AD715CE0048025A /* HomeContentCell.xib */; };
+		896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB35D2AD718F50048025A /* RandevuCell.swift */; };
+		896CB3602AD718F50048025A /* RandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB35E2AD718F50048025A /* RandevuCell.xib */; };
+		896CB3642AD71D270048025A /* NearMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3622AD71D270048025A /* NearMeCell.swift */; };
+		896CB3652AD71D270048025A /* NearMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3632AD71D270048025A /* NearMeCell.xib */; };
+		896CB3692AD722590048025A /* TireInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB3672AD722590048025A /* TireInfoCell.swift */; };
+		896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3682AD722590048025A /* TireInfoCell.xib */; };
+		896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */; };
+		896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -114,6 +133,25 @@
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		896CB3422AD5BD6D0048025A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		896CB3442AD5BD830048025A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		896CB3462AD5BDA50048025A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		896CB3482AD5BDE50048025A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		896CB34C2AD5BED40048025A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		896CB34D2AD5BED40048025A /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSearchTextField.swift; sourceTree = "<group>"; };
+		896CB3532AD5D46D0048025A /* VehicleInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoCell.swift; sourceTree = "<group>"; };
+		896CB3542AD5D46D0048025A /* VehicleInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoCell.xib; sourceTree = "<group>"; };
+		896CB3582AD715CE0048025A /* HomeContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentCell.swift; sourceTree = "<group>"; };
+		896CB3592AD715CE0048025A /* HomeContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeContentCell.xib; sourceTree = "<group>"; };
+		896CB35D2AD718F50048025A /* RandevuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevuCell.swift; sourceTree = "<group>"; };
+		896CB35E2AD718F50048025A /* RandevuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandevuCell.xib; sourceTree = "<group>"; };
+		896CB3622AD71D270048025A /* NearMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeCell.swift; sourceTree = "<group>"; };
+		896CB3632AD71D270048025A /* NearMeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearMeCell.xib; sourceTree = "<group>"; };
+		896CB3672AD722590048025A /* TireInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireInfoCell.swift; sourceTree = "<group>"; };
+		896CB3682AD722590048025A /* TireInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TireInfoCell.xib; sourceTree = "<group>"; };
+		896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintainInfoCell.swift; sourceTree = "<group>"; };
+		896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintainInfoCell.xib; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -268,6 +306,95 @@
 			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
+		896CB3412AD5BD610048025A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3422AD5BD6D0048025A /* Home.storyboard */,
+				896CB3442AD5BD830048025A /* HomeCoordinator.swift */,
+				896CB3462AD5BDA50048025A /* HomeViewModel.swift */,
+				896CB3482AD5BDE50048025A /* HomeViewController.swift */,
+				896CB34A2AD5BEB10048025A /* Cell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		896CB34A2AD5BEB10048025A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				896CB34B2AD5BEC00048025A /* Search */,
+				896CB3522AD5D4550048025A /* VehicleInfo */,
+				896CB3572AD715B40048025A /* HomeContent */,
+				896CB35C2AD718D90048025A /* Randevu */,
+				896CB3612AD71D040048025A /* NearMe */,
+				896CB3662AD722390048025A /* TireInfo */,
+				896CB36B2AD727230048025A /* MaintainInfo */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		896CB34B2AD5BEC00048025A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				896CB34C2AD5BED40048025A /* SearchCell.swift */,
+				896CB34D2AD5BED40048025A /* SearchCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		896CB3522AD5D4550048025A /* VehicleInfo */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3532AD5D46D0048025A /* VehicleInfoCell.swift */,
+				896CB3542AD5D46D0048025A /* VehicleInfoCell.xib */,
+			);
+			path = VehicleInfo;
+			sourceTree = "<group>";
+		};
+		896CB3572AD715B40048025A /* HomeContent */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3582AD715CE0048025A /* HomeContentCell.swift */,
+				896CB3592AD715CE0048025A /* HomeContentCell.xib */,
+			);
+			path = HomeContent;
+			sourceTree = "<group>";
+		};
+		896CB35C2AD718D90048025A /* Randevu */ = {
+			isa = PBXGroup;
+			children = (
+				896CB35D2AD718F50048025A /* RandevuCell.swift */,
+				896CB35E2AD718F50048025A /* RandevuCell.xib */,
+			);
+			path = Randevu;
+			sourceTree = "<group>";
+		};
+		896CB3612AD71D040048025A /* NearMe */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3622AD71D270048025A /* NearMeCell.swift */,
+				896CB3632AD71D270048025A /* NearMeCell.xib */,
+			);
+			path = NearMe;
+			sourceTree = "<group>";
+		};
+		896CB3662AD722390048025A /* TireInfo */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3672AD722590048025A /* TireInfoCell.swift */,
+				896CB3682AD722590048025A /* TireInfoCell.xib */,
+			);
+			path = TireInfo;
+			sourceTree = "<group>";
+		};
+		896CB36B2AD727230048025A /* MaintainInfo */ = {
+			isa = PBXGroup;
+			children = (
+				896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */,
+				896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */,
+			);
+			path = MaintainInfo;
+			sourceTree = "<group>";
+		};
 		8989DD922AC493BF0035CD99 = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +473,7 @@
 				89DAB7F92AC72CFE0098BA67 /* Login */,
 				890D7CD62ACEC51000F053DA /* popup */,
 				89B12BB32AD4789D002C70E4 /* Main */,
+				896CB3412AD5BD610048025A /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -360,6 +488,7 @@
 				89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */,
 				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
+				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -528,13 +657,21 @@
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
+				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
+				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				8989DDA62AC493BF0035CD99 /* Main.storyboard in Resources */,
+				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
+				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
+				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
+				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
+				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
+				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +746,7 @@
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
+				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
@@ -616,7 +754,9 @@
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
+				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
+				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
@@ -624,10 +764,13 @@
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
+				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
+				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
+				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
@@ -643,18 +786,23 @@
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
+				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
+				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
+				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
+				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
 				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
+				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
@@ -805,7 +953,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -838,7 +986,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -931,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1018,7 +1166,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
