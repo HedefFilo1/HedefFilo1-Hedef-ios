@@ -16,6 +16,8 @@ class MainTabBarController: UITabBarController {
         }
     }
     
+    let tabBarView = TabBarView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,18 +25,46 @@ class MainTabBarController: UITabBarController {
     }
     
     func setupTabBarView() {
-        tabBar.backgroundColor = .white
-        tabBar.boxShadow(xValue: 0, yValue: -15, radius: 25, color: .black, opacity: 0.05)
-
-        tabBar.layer.cornerRadius = 27
-        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        tabBar.tintColor = .theme
-        tabBar.unselectedItemTintColor = .textGrey
         
-        let font = FontTypographyType.themeS12R400.font
-        UITabBarItem.appearance().setTitleTextAttributes([.font: font], for: .normal)
-    }
+        guard var bottomInset = navigationController?.view.safeAreaInsets.bottom else { return }
+        if bottomInset == 0 {
+            bottomInset = 8
+        }
+        let width = view.frame.width
+        let height = 57 + bottomInset
+        let yPoint = view.frame.height - height
+        
+        tabBar.isHidden = true
+        
+        tabBarView.frame = CGRect(x: 0,
+                                  y: yPoint,
+                                  width: width,
+                                  height: height)
+        tabBarView.delegate = self
+        view.addSubview(tabBarView)
+        selectedIndex = 2
 
+#if DEV_DEBUG
+        // just for test
+        selectedIndex = 2
+#endif
+    }
+    
+}
+
+extension MainTabBarController: TabBarViewDelegate {
+    
+    func didTapMenu() {
+        
+    }
+    
+    func didSelect(tab: Int) {
+        if tab == selectedIndex, let navigation = selectedViewController as? UINavigationController {
+            navigation.popToRootViewController(animated: true)
+            return
+        }
+        selectedIndex = tab
+    }
 }
 
 extension MainTabBarController: MainViewModelDelegate {

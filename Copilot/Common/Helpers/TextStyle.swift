@@ -16,7 +16,26 @@ struct TextStyle {
     }
 }
 
+enum FontWeighType  {
+    case r400
+    case m500
+    case b700
+    
+    var style: FontStyle {
+        switch self {
+        case .r400:
+            return .regular
+        case .m500:
+            return .medium
+        case .b700:
+            return .bold
+        }
+    }
+}
+
 enum FontTypographyType {
+    
+    case secondRed(FontWeighType, size: CGFloat)
     
     /// black size(20) Bold(700)
     case blackS20B700
@@ -46,7 +65,7 @@ enum FontTypographyType {
     case blackS12R400
     
     /// textGrey size(12) Regular(400)
-    case greyS12B400
+    case greyS12R400
     
     /// textGrey size(16) Regular(400)
     case greyS16B400
@@ -80,6 +99,10 @@ enum FontTypographyType {
 
     var style: (TextStyle, UIColor) {
         switch self {
+        
+        case .secondRed(let weight, let size):
+            return (TextStyle(fontStyle: weight.style, size: size), color: .secondRed)
+            
         case .blackS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .black)
             
@@ -107,7 +130,7 @@ enum FontTypographyType {
         case .blackS12R400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .black)
             
-        case .greyS12B400:
+        case .greyS12R400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .textGrey)
             
         case .greyS12M500:

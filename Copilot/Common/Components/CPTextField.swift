@@ -143,7 +143,7 @@ extension CPTextField: UITextFieldDelegate {
     
     @objc func didBegin() {
         if let text = text, text.count == 0 {
-            placeholderLabel.apply(.greyS12B400)
+            placeholderLabel.apply(.greyS12R400)
             placeholderTopConstraint.constant = 6
             animate()
         }

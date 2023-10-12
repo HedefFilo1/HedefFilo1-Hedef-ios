@@ -90,7 +90,7 @@ class OnboardingViewController: UIViewController {
         indexViews[viewModel.currentIndex].backgroundColor = .appRed
         
         titleLabel.apply(.blackS20B700)
-        descriptionLabel.apply(.greyS12B400)
+        descriptionLabel.apply(.greyS12R400)
         
         backView.layer.cornerRadius = 10
         backView.layer.borderWidth = 1

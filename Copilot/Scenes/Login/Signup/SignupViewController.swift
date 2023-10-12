@@ -77,10 +77,10 @@ class SignupViewController: UIViewController {
         countryCodeView.layer.cornerRadius = 6
         countryCodeView.layer.borderWidth = 1
         countryCodeView.layer.borderColor = UIColor.textGrey.cgColor
-        countryLabel.apply(.greyS12B400)
+        countryLabel.apply(.greyS12R400)
         descriptionLabel.apply(.blackS16M500)
         
-        marketingLabel.apply(.greyS12B400)
+        marketingLabel.apply(.greyS12R400)
         signupButton.isSmallFontSize = true
         
         isMemberLabel.apply(.greyS16B400)

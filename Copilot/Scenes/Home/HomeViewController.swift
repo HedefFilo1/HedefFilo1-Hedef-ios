@@ -54,6 +54,7 @@ class HomeViewController: UIViewController {
         collectionView.register(cellType: VehicleInfoCell.self)
         collectionView.register(cellType: HomeContentCell.self)
         collectionView.contentInset.top = 12
+        collectionView.contentInset.bottom = 57
     }
     
     private func applyStyles() {

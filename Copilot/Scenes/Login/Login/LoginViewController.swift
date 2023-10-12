@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         
 #if DEV_DEBUG
         // just for test
-//        viewModel.goToMain()
+        viewModel.goToMain()
 #endif
     }
     
@@ -61,10 +61,10 @@ class LoginViewController: UIViewController {
         countryCodeView.layer.cornerRadius = 6
         countryCodeView.layer.borderWidth = 1
         countryCodeView.layer.borderColor = UIColor.textGrey.cgColor
-        countryLabel.apply(.greyS12B400)
+        countryLabel.apply(.greyS12R400)
         descriptionLabel.apply(.blackS16M500)
         
-        rememberLabel.apply(.greyS12B400)
+        rememberLabel.apply(.greyS12R400)
         forgotPasswordButton.apply(.blackS12R400)
         notMemberLabel.apply(.greyS16B400)
         becomeMemberButton.apply(.themeS16B700)

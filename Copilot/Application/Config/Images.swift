@@ -41,4 +41,45 @@ struct Images {
     static var search: UIImage {
         return UIImage(named: "search") ?? UIImage()
     }
+    
+    
+    static var carTabIcon: UIImage {
+        return UIImage(named: "carTabIcon") ?? UIImage()
+    }
+    
+    static var carTabSelectedIcon: UIImage {
+        return UIImage(named: "carTabSelectedIcon") ?? UIImage()
+    }
+    
+    static var helpIcon: UIImage {
+        return UIImage(named: "helpIcon") ?? UIImage()
+    }
+    
+    static var helpSelectedIcon: UIImage {
+        return UIImage(named: "helpSelectedIcon") ?? UIImage()
+    }
+    
+    static var homeSelectedTab: UIImage {
+        return UIImage(named: "homeSelectedTab") ?? UIImage()
+    }
+    
+    static var homeTab: UIImage {
+        return UIImage(named: "homeTab") ?? UIImage()
+    }
+    
+    static var moreTabIcon: UIImage {
+        return UIImage(named: "moreTabIcon") ?? UIImage()
+    }
+    
+    static var moreTabSelectedIcon: UIImage {
+        return UIImage(named: "moreTabSelectedIcon") ?? UIImage()
+    }
+    
+    static var toolIcon: UIImage {
+        return UIImage(named: "toolIcon") ?? UIImage()
+    }
+    
+    static var toolSelectedIcon: UIImage {
+        return UIImage(named: "toolSelectedIcon") ?? UIImage()
+    }
 }
