@@ -42,7 +42,6 @@ struct Images {
         return UIImage(named: "search") ?? UIImage()
     }
     
-    
     static var carTabIcon: UIImage {
         return UIImage(named: "carTabIcon") ?? UIImage()
     }
@@ -81,5 +80,29 @@ struct Images {
     
     static var toolSelectedIcon: UIImage {
         return UIImage(named: "toolSelectedIcon") ?? UIImage()
+    }
+    
+    static var personIcon: UIImage {
+        return UIImage(named: "personIcon") ?? UIImage()
+    }
+    
+    static var carIcon: UIImage {
+        return UIImage(named: "carIcon") ?? UIImage()
+    }
+    
+    static var documentIcon: UIImage {
+        return UIImage(named: "documentIcon") ?? UIImage()
+    }
+    
+    static var listIcon: UIImage {
+        return UIImage(named: "listIcon") ?? UIImage()
+    }
+    
+    static var percentIcon: UIImage {
+        return UIImage(named: "percentIcon") ?? UIImage()
+    }
+    
+    static var settingsIcon: UIImage {
+        return UIImage(named: "settingsIcon") ?? UIImage()
     }
 }

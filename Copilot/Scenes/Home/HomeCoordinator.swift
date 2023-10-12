@@ -41,7 +41,6 @@ class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
     
-    
 }
 
 extension HomeCoordinator {

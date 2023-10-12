@@ -18,6 +18,8 @@ class MainCoordinator: Coordinator {
     let storyboard = UIStoryboard(storyboard: .main)
     weak var delegate: MainCoordinatorDelegate?
     
+    var menuViewController: MenuViewController?
+    
     lazy var viewModel: MainViewModel = {
         let viewModel = MainViewModel()
         viewModel.coordinatorDelegate = self
@@ -44,5 +46,19 @@ extension MainCoordinator: MainViewModelCoordinatorDelegate {
     
     func getBack() {
         finish()
+    }
+    
+    func showMenu() {
+        let viewController: MenuViewController = storyboard.instantiateViewController()
+        viewController.viewModel = MenuViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.present(viewController, animated: true)
+        menuViewController = viewController
+    }
+}
+
+extension MainCoordinator: MenuViewModelCoordinatorDelegate {
+    func hideMenu() {
+        menuViewController?.dismiss(animated: true)
     }
 }

@@ -16,7 +16,7 @@ struct TextStyle {
     }
 }
 
-enum FontWeighType  {
+enum FontWeighType {
     case r400
     case m500
     case b700
@@ -47,7 +47,7 @@ enum FontTypographyType {
     case blackS16B700
     
     /// black size(16) Regular(400)
-    case blackS16B400
+    case blackS16R400
     
     /// black size(15) Regular(400)
     case blackS15B400
@@ -112,7 +112,7 @@ enum FontTypographyType {
         case .blackS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .black)
         
-        case .blackS16B400:
+        case .blackS16R400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .black)
             
         case .blackS15B400:

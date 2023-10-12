@@ -45,7 +45,7 @@ class ForgotPasswordViewController: UIViewController {
         backImageView.image = backImageView.image?.withRenderingMode(.alwaysTemplate)
         backImageView.tintColor = .black
         titleLabel.apply(.blackS18B700)
-        descriptionLabel.apply(.blackS16B400)
+        descriptionLabel.apply(.blackS16R400)
     }
     
     func setTexts() {

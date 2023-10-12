@@ -55,7 +55,7 @@ class MainTabBarController: UITabBarController {
 extension MainTabBarController: TabBarViewDelegate {
     
     func didTapMenu() {
-        
+        viewModel.showMenu()
     }
     
     func didSelect(tab: Int) {

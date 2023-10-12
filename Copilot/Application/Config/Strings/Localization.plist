@@ -378,60 +378,60 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Latest Maintenance Information</string>
         </dict>
         
-        <key></key>
+        <key>profile</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Profil</string>
             <key>en</key>
-            <string></string>
+            <string>Profile</string>
         </dict>
         
-        <key></key>
+        <key>campaigns</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kampanyalar</string>
             <key>en</key>
-            <string></string>
+            <string>Campaigns</string>
         </dict>
         
-        <key></key>
+        <key>documents</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Dokümanlar</string>
             <key>en</key>
-            <string></string>
+            <string>Documents</string>
         </dict>
         
-        <key></key>
+        <key>vehicleHGSPasses</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Araç HGS Geçişleri</string>
             <key>en</key>
-            <string></string>
+            <string>Vehicle HGS Passes</string>
         </dict>
         
-        <key></key>
+        <key>myDemands</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Taleplerim</string>
             <key>en</key>
-            <string></string>
+            <string>My demands</string>
         </dict>
         
-        <key></key>
+        <key>services</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servisler</string>
             <key>en</key>
-            <string></string>
+            <string>Services</string>
         </dict>
         
-        <key></key>
+        <key>settings</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ayarlar</string>
             <key>en</key>
-            <string></string>
+            <string>Settings</string>
         </dict>
         
         <key></key>

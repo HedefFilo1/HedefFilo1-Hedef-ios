@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainViewModelCoordinatorDelegate: AnyObject {
     func getBack()
+    func showMenu()
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -21,6 +22,7 @@ protocol MainViewModelType: AnyObject {
     var coordinatorDelegate: MainViewModelCoordinatorDelegate? { get set }
     var delegate: MainViewModelDelegate? { get set }
     func finish()
+    func showMenu()
 }
 
 class MainViewModel: MainViewModelType {
@@ -30,5 +32,9 @@ class MainViewModel: MainViewModelType {
     
     func finish() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func showMenu() {
+        coordinatorDelegate?.showMenu()
     }
 }

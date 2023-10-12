@@ -196,6 +196,34 @@ struct Strings {
         return localized(string: "latestMaintenanceInformation")
     }
     
+    static var profile: String {
+        return localized(string: "profile")
+    }
+    
+    static var campaigns: String {
+        return localized(string: "campaigns")
+    }
+    
+    static var documents: String {
+        return localized(string: "documents")
+    }
+    
+    static var vehicleHGSPasses: String {
+        return localized(string: "vehicleHGSPasses")
+    }
+    
+    static var myDemands: String {
+        return localized(string: "myDemands")
+    }
+    
+    static var services: String {
+        return localized(string: "services")
+    }
+    
+    static var settings: String {
+        return localized(string: "settings")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {
