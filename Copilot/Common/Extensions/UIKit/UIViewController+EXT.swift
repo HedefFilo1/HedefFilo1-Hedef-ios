@@ -120,15 +120,11 @@ extension UIViewController {
     //        self.present(viewController, animated: true)
     //    }
     
-    func showError(title: String = "", message: String) {
-        //        showError(errorTitle: title, message: message)
-    }
-    
     func showSuccess(successTitle: String,
                      message: String,
                      buttonTitle: String = Strings.okay,
                      attributedMessage: NSAttributedString? = nil,
-                     delegate: SuccessPopupViewControllerDelegate? = nil) {
+                     delegate: MessagePopupViewControllerDelegate? = nil) {
         
         let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
         viewController.titleText = successTitle
@@ -143,7 +139,28 @@ extension UIViewController {
         showSuccess(successTitle: title, message: message)
     }
     
-    func showSuccess(title: String, message: String, delegate: SuccessPopupViewControllerDelegate? = nil) {
+    func showSuccess(title: String, message: String, delegate: MessagePopupViewControllerDelegate? = nil) {
         showSuccess(successTitle: title, message: message, delegate: delegate)
+    }
+    
+    func showError(errorTitle: String,
+                   message: String,
+                   buttonTitle: String = Strings.okay,
+                   attributedMessage: NSAttributedString? = nil,
+                   delegate: MessagePopupViewControllerDelegate? = nil) {
+        
+        let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
+        viewController.titleText = errorTitle
+        viewController.message = message
+        viewController.buttonTitle = buttonTitle
+        viewController.attributedMessage = attributedMessage
+        viewController.color = .theme
+        viewController.icon = UIImage(systemName: "exclamationmark") ?? UIImage()
+        viewController.delegate = delegate
+        self.present(viewController, animated: true)
+    }
+    
+    func showError(title: String, message: String) {
+        showError(errorTitle: title, message: message)
     }
 }

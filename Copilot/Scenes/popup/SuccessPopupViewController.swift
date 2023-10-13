@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol SuccessPopupViewControllerDelegate: AnyObject {
+protocol MessagePopupViewControllerDelegate: AnyObject {
     func didDismiss(_: SuccessPopupViewController?)
 }
 
@@ -19,11 +19,13 @@ class SuccessPopupViewController: PopupViewController {
     var buttonTitle = ""
     
     var attributedMessage: NSAttributedString?
-    
-    weak var delegate: SuccessPopupViewControllerDelegate?
+    var color = UIColor.textSuccess
+    var icon = Images.tikIcon
+    weak var delegate: MessagePopupViewControllerDelegate?
     
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var button: CPButton!
@@ -48,7 +50,10 @@ class SuccessPopupViewController: PopupViewController {
     
     private func applyStyles() {
         contentView.layer.cornerRadius = 10
-        greenView.layer.cornerRadius = 40
+        circleView.layer.cornerRadius = 40
+        circleView.backgroundColor = color
+        iconImageView.image = icon
+        iconImageView.tintColor = .white
         titleLabel.apply(.blackS16B700)
         messageLabel.apply(.greyS16B400)
     }

@@ -94,8 +94,9 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="ZWq-yO-3tU" id="l6J-Mh-Ext"/>
+                        <outlet property="circleView" destination="I1H-hA-VRZ" id="8Bw-sD-bOp"/>
                         <outlet property="contentView" destination="jQx-TI-39L" id="4ff-IN-J0c"/>
-                        <outlet property="greenView" destination="I1H-hA-VRZ" id="8Bw-sD-bOp"/>
+                        <outlet property="iconImageView" destination="MPj-jL-3CY" id="kql-J6-T10"/>
                         <outlet property="messageLabel" destination="f8n-YV-HnX" id="hav-Y3-oTT"/>
                         <outlet property="titleLabel" destination="uhS-dk-lnb" id="HR4-AW-cte"/>
                     </connections>

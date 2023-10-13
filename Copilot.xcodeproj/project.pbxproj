@@ -79,6 +79,7 @@
 		89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */; };
 		89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB82AD47902002C70E4 /* MainTabBarController.swift */; };
 		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
+		89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB3812AD955F5003D5717 /* CPErrorView.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
 		89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */; };
 		89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */; };
@@ -185,6 +186,7 @@
 		89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		89B12BB82AD47902002C70E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		89BDB3812AD955F5003D5717 /* CPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPErrorView.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
+				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
+				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,

@@ -240,6 +240,22 @@ struct Strings {
         return localized(string: "resetPassword")
     }
     
+    static var passwordsShouldBeSame: String {
+        return localized(string: "passwordsShouldBeSame")
+    }
+    
+    static var error: String {
+        return localized(string: "error")
+    }
+    
+    static var clarificationError: String {
+        return localized(string: "clarificationError")
+    }
+    
+    static var consentError: String {
+        return localized(string: "consentError")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

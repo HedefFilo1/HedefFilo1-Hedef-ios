@@ -117,4 +117,8 @@ struct Images {
     static var notificationIcon: UIImage {
         return UIImage(named: "notificationIcon") ?? UIImage()
     }
+    
+    static var tikIcon: UIImage {
+        return UIImage(named: "tikIcon") ?? UIImage()
+    }
 }

@@ -31,9 +31,11 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var clarificationCheckBox: CPCheckBox!
     @IBOutlet weak var clarificationLabel: UILabel!
+    @IBOutlet weak var clarificationErrorView: CPErrorView!
     
     @IBOutlet weak var consentCheckBox: CPCheckBox!
     @IBOutlet weak var consentLabel: UILabel!
+    @IBOutlet weak var consentErrorView: CPErrorView!
     
     @IBOutlet weak var marketingCheckBox: CPCheckBox!
     @IBOutlet weak var marketingLabel: UILabel!
@@ -71,6 +73,9 @@ class SignupViewController: UIViewController {
         
         phoneTextField.delegate = self
         idTextField.delegate = self
+        
+        clarificationErrorView.isHidden = true
+        consentErrorView.isHidden = true
     }
     
     func applyStyle() {
@@ -96,21 +101,26 @@ class SignupViewController: UIViewController {
         licenseTextField.placeholder = Strings.vehicleLicenseNumber
         passwordTextFiled.placeholder = Strings.password
         repeatPasswordTextFiled.placeholder = Strings.repeatPassword
-        setAgreementTexts()
+        setClarificationText()
+        setConsentTexts()
         marketingLabel.text = Strings.marketingApprovement
         signupButton.setTitle(Strings.becomeMember, for: .normal)
         
         isMemberLabel.text = Strings.areYouMember
+        clarificationErrorView.message = Strings.clarificationError
+        consentErrorView.message = Strings.consentError
         loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
     }
     
-    func setAgreementTexts() {
-        let calrification = AttributedText(text: Strings.clarificationDescription, fontSize: 12, style: .regular, textColor: .textGrey)
-        let calrificationUnderlined = AttributedText(text: Strings.clarificationText, fontSize: 12, style: .bold, textColor: .textGrey)
+    func setClarificationText(color: UIColor = .textGrey) {
+        let calrification = AttributedText(text: Strings.clarificationDescription, fontSize: 12, style: .regular, textColor: color)
+        let calrificationUnderlined = AttributedText(text: Strings.clarificationText, fontSize: 12, style: .bold, textColor: color)
         clarificationLabel.attributedText = AttributedText.createUnderlinedString(mainText: calrification, underlinedText: calrificationUnderlined)
-        
-        let consent = AttributedText(text: Strings.consentDescription, fontSize: 12, style: .regular, textColor: .textGrey)
-        let consentUnderlined = AttributedText(text: Strings.consentText, fontSize: 12, style: .bold, textColor: .textGrey)
+    }
+    
+    func setConsentTexts(color: UIColor = .textGrey) {
+        let consent = AttributedText(text: Strings.consentDescription, fontSize: 12, style: .regular, textColor: color)
+        let consentUnderlined = AttributedText(text: Strings.consentText, fontSize: 12, style: .bold, textColor: color)
         consentLabel.attributedText = AttributedText.createUnderlinedString(mainText: consent, underlinedText: consentUnderlined)
     }
     
@@ -121,24 +131,30 @@ class SignupViewController: UIViewController {
         let tcTax = idTextField.pureTextCount == 11
         let license = licenseTextField.pureTextCount > 0
         let password = passwordTextFiled.text ?? ""
-        let repeatPass = repeatPasswordTextFiled.pureText
-        let passess = (password.count > 0) && (password == repeatPass)
-        let clarification = clarificationCheckBox.isSelected
-        let consent = consentCheckBox.isSelected
-        signupButton.isEnabled = name && phone && email && tcTax && license && passess && clarification && consent
+        let repeatPass = repeatPasswordTextFiled.text ?? ""
+        let passess = (password.count > 0) && (repeatPass.count > 0)
+        signupButton.isEnabled = name && phone && email && tcTax && license && passess
     }
     
     @objc func editingChanged(_ textField: UITextField) {
-       setButtonActivation()
+        setButtonActivation()
     }
     
     @IBAction func didTapClarificationCheckBox(_ sender: UIButton) {
         clarificationCheckBox.isSelected = !clarificationCheckBox.isSelected
+        if clarificationCheckBox.isSelected {
+            clarificationErrorView.isHidden = true
+            setClarificationText()
+        }
         setButtonActivation()
     }
     
     @IBAction func didTapConsentCheckBox(_ sender: UIButton) {
         consentCheckBox.isSelected = !consentCheckBox.isSelected
+        if consentCheckBox.isSelected {
+            consentErrorView.isHidden = true
+            setConsentTexts()
+        }
         setButtonActivation()
     }
     
@@ -148,6 +164,31 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
+        
+        let password = passwordTextFiled.text ?? ""
+        let repeatPass = repeatPasswordTextFiled.text
+        if password != repeatPass {
+            showError(title: Strings.error, message: Strings.passwordsShouldBeSame)
+            return
+        }
+        
+        let clarification = clarificationCheckBox.isSelected
+        let consent = consentCheckBox.isSelected
+        clarificationErrorView.isHidden = clarification
+        consentErrorView.isHidden = consent
+        
+        if !clarification {
+            setClarificationText(color: .theme)
+        }
+        
+        if !consent {
+            setConsentTexts(color: .theme)
+        }
+        
+        if !clarification || !consent {
+            return
+        }
+        
         viewModel.signup(name: nameTextField.text ?? "",
                          phone: phoneTextField.text ?? "",
                          email: emailTextFiled.text ?? "",

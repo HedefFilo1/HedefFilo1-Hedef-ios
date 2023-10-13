@@ -233,6 +233,15 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string>Clarification Text</string>
         </dict>
+        
+        <key>clarificationError</key>
+        <dict>
+            <key>tr</key>
+            <string>Aydınlatma Metni Onaylanmalıdır</string>
+            <key>en</key>
+            <string>Clarification Text Must Be Approved</string>
+        </dict>
+        
 
         <key>consentDescription</key>
         <dict>
@@ -248,6 +257,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Açık Rıza Metni’</string>
             <key>en</key>
             <string>Explicit Consent Text</string>
+        </dict>
+        
+        <key>consentError</key>
+        <dict>
+            <key>tr</key>
+            <string>Açık Rıza Metni Onaylanmalı</string>
+            <key>en</key>
+            <string>Explicit Consent Text Must Be Approved</string>
         </dict>
         
         <key>ok</key>
@@ -466,12 +483,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Reset Password</string>
         </dict>
         
-        <key></key>
+        <key>passwordsShouldBeSame</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Şifreler aynı olmalı</string>
             <key>en</key>
-            <string></string>
+            <string>Passwords should be same</string>
         </dict>
         
         <key></key>
@@ -482,12 +499,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
-        <key></key>
+        <key>error</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Hata</string>
             <key>en</key>
-            <string></string>
+            <string>Error</string>
         </dict>
         
         <key></key>

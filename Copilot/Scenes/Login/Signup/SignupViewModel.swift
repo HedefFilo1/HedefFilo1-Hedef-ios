@@ -13,7 +13,7 @@ protocol SignupViewModelCoordinatorDelegate: AnyObject {
 
 protocol SignupViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
-    func showSuccess(title: String, message: String, delegate: SuccessPopupViewControllerDelegate?)
+    func showSuccess(title: String, message: String, delegate: MessagePopupViewControllerDelegate?)
 }
 
 protocol SignupViewModelType: AnyObject {
@@ -37,7 +37,7 @@ class SignupViewModel: SignupViewModelType {
     }
 }
 
-extension SignupViewModel: SuccessPopupViewControllerDelegate {
+extension SignupViewModel: MessagePopupViewControllerDelegate {
     func didDismiss(_: SuccessPopupViewController?) {
         coordinatorDelegate?.goToLogin()
     }
