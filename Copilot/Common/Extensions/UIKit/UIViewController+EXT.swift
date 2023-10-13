@@ -23,7 +23,7 @@ extension UIViewController {
         imageView.align(top: 0, leading: 0, trailing: 14, height: 535)
         view.sendSubviewToBack(imageView)
     }
-
+    
     func setHeader() {
         let header = UIView()
         view.addSubview(header)
@@ -35,12 +35,12 @@ extension UIViewController {
         setSearchView(to: header)
     }
     
-        func setLogo(to header: UIView) {
-            let imageView = UIImageView()
-            imageView.image = Images.whiteLogo
-            header.addSubview(imageView)
-            imageView.align(top: 0, leading: 0, width: 76, height: 44)
-        }
+    func setLogo(to header: UIView) {
+        let imageView = UIImageView()
+        imageView.image = Images.whiteLogo
+        header.addSubview(imageView)
+        imageView.align(top: 0, leading: 0, width: 76, height: 44)
+    }
     
     func setNotificationView(to header: UIView) {
         let imageView = UIImageView()
@@ -55,13 +55,13 @@ extension UIViewController {
         header.addSubview(imageView)
         imageView.align(trailing: 48, widthAndHeight: 24, centerY: 0)
     }
-
+    
     func hideTabbarView() {
         if let tabbar = self.tabBarController as? MainTabBarController {
             tabbar.tabBarView.isHidden = true
         }
     }
-
+    
     func showTabbarView() {
         if let tabbar = self.tabBarController as? MainTabBarController {
             tabbar.tabBarView.isHidden = false
@@ -78,58 +78,58 @@ extension UINavigationController {
 
 // MARK: Popups
 extension UIViewController {
-//
-//    func presentAlert(title: String, message: String, compeletion: @escaping() -> Void = {}) {
-//
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//
-//        alert.addAction(UIAlertAction(title: Strings.okay, style: .destructive, handler: {_ in
-//            compeletion()
-//        }))
-//
-//        present(alert, animated: true, completion: nil)
-//    }
+    //
+    //    func presentAlert(title: String, message: String, compeletion: @escaping() -> Void = {}) {
+    //
+    //        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    //
+    //        alert.addAction(UIAlertAction(title: Strings.okay, style: .destructive, handler: {_ in
+    //            compeletion()
+    //        }))
+    //
+    //        present(alert, animated: true, completion: nil)
+    //    }
     
-//    func presentYesNoAlert(title: String, message: String, compeletion: @escaping() -> Void = {}) {
-//
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//
-//        alert.addAction(UIAlertAction(title: Strings.yes, style: .destructive, handler: {_ in
-//            compeletion()
-//        }))
-//
-//        alert.addAction(UIAlertAction(title: Strings.noText, style: .default, handler: {_ in
-//
-//        }))
-//
-//        present(alert, animated: true, completion: nil)
-//    }
+    //    func presentYesNoAlert(title: String, message: String, compeletion: @escaping() -> Void = {}) {
+    //
+    //        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    //
+    //        alert.addAction(UIAlertAction(title: Strings.yes, style: .destructive, handler: {_ in
+    //            compeletion()
+    //        }))
+    //
+    //        alert.addAction(UIAlertAction(title: Strings.noText, style: .default, handler: {_ in
+    //
+    //        }))
+    //
+    //        present(alert, animated: true, completion: nil)
+    //    }
     
-//    func showError(errorTitle: String = Strings.unSuccessful,
-//                   message: String = "",
-//                   buttonTitle: String = Strings.okay,
-//                   attributedMessage: NSAttributedString? = nil,
-//                   delegate: ErrorPopupViewControllerDelegate? = nil) {
-
-//        let viewController: ErrorPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
-//        viewController.titleText = errorTitle
-//        viewController.message = message
-//        viewController.buttonTitle = buttonTitle
-//        viewController.attributedMessage = attributedMessage
-//        viewController.delegate = delegate
-//        self.present(viewController, animated: true)
-//    }
-
+    //    func showError(errorTitle: String = Strings.unSuccessful,
+    //                   message: String = "",
+    //                   buttonTitle: String = Strings.okay,
+    //                   attributedMessage: NSAttributedString? = nil,
+    //                   delegate: ErrorPopupViewControllerDelegate? = nil) {
+    
+    //        let viewController: ErrorPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
+    //        viewController.titleText = errorTitle
+    //        viewController.message = message
+    //        viewController.buttonTitle = buttonTitle
+    //        viewController.attributedMessage = attributedMessage
+    //        viewController.delegate = delegate
+    //        self.present(viewController, animated: true)
+    //    }
+    
     func showError(title: String = "", message: String) {
-//        showError(errorTitle: title, message: message)
+        //        showError(errorTitle: title, message: message)
     }
-
+    
     func showSuccess(successTitle: String,
                      message: String,
                      buttonTitle: String = Strings.okay,
                      attributedMessage: NSAttributedString? = nil,
                      delegate: SuccessPopupViewControllerDelegate? = nil) {
-
+        
         let viewController: SuccessPopupViewController = UIStoryboard(storyboard: .popup).instantiateViewController()
         viewController.titleText = successTitle
         viewController.message = message
@@ -138,8 +138,12 @@ extension UIViewController {
         viewController.delegate = delegate
         self.present(viewController, animated: true)
     }
-
+    
     func showSuccess(title: String, message: String) {
         showSuccess(successTitle: title, message: message)
+    }
+    
+    func showSuccess(title: String, message: String, delegate: SuccessPopupViewControllerDelegate? = nil) {
+        showSuccess(successTitle: title, message: message, delegate: delegate)
     }
 }

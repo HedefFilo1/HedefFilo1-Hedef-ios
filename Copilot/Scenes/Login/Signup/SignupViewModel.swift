@@ -13,7 +13,7 @@ protocol SignupViewModelCoordinatorDelegate: AnyObject {
 
 protocol SignupViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
-    func showSuccess(title: String, message: String)
+    func showSuccess(title: String, message: String, delegate: SuccessPopupViewControllerDelegate?)
 }
 
 protocol SignupViewModelType: AnyObject {
@@ -33,6 +33,12 @@ class SignupViewModel: SignupViewModelType {
     }
     
     func signup(name: String, phone: String, email: String, id: String, licence: String, password: String) {
-        delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage)
+        delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage, delegate: self)
+    }
+}
+
+extension SignupViewModel: SuccessPopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        coordinatorDelegate?.goToLogin()
     }
 }
