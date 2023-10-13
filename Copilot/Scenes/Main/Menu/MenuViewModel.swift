@@ -10,6 +10,7 @@ import UIKit
 
 protocol MenuViewModelCoordinatorDelegate: AnyObject {
     func hideMenu()
+    func showProfile()
 }
 
 protocol MenuViewModelDelegate: AnyObject {
@@ -21,6 +22,7 @@ protocol MenuViewModelType: AnyObject {
     var coordinatorDelegate: MenuViewModelCoordinatorDelegate? { get set }
     var delegate: MenuViewModelDelegate? { get set }
     func hideMenu()
+    func showProfile()
 }
 
 class MenuViewModel: MenuViewModelType {
@@ -30,5 +32,9 @@ class MenuViewModel: MenuViewModelType {
     
     func hideMenu() {
         coordinatorDelegate?.hideMenu()
+    }
+    
+    func showProfile() {
+        coordinatorDelegate?.showProfile()
     }
 }

@@ -122,4 +122,9 @@ class TabBarView: UIView {
         }
     }
     
+    func deselectLastIndex() {
+        labels[last].apply(.greyS12R400)
+        changeUnSelectedIndexImage(index: last)
+    }
+    
 }

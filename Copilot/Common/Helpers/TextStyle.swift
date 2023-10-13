@@ -37,6 +37,9 @@ enum FontTypographyType {
     
     case secondRed(FontWeighType, size: CGFloat)
     
+    /// black size(24) Bold(700)
+    case blackS24B700
+    
     /// black size(20) Bold(700)
     case blackS20B700
     
@@ -54,6 +57,9 @@ enum FontTypographyType {
     
     /// black size(16) Medium(500)
     case blackS16M500
+   
+    /// black size(14) Medium(500)
+    case blackS14M500
     
     /// black size(12) Bold(700)
     case blackS12R700
@@ -103,6 +109,9 @@ enum FontTypographyType {
         case .secondRed(let weight, let size):
             return (TextStyle(fontStyle: weight.style, size: size), color: .secondRed)
             
+        case .blackS24B700:
+            return (TextStyle(fontStyle: .bold, size: 24), color: .black)
+            
         case .blackS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .black)
             
@@ -112,6 +121,9 @@ enum FontTypographyType {
         case .blackS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .black)
         
+        case .blackS14M500:
+            return (TextStyle(fontStyle: .medium, size: 14), color: .black)
+            
         case .blackS16R400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .black)
             

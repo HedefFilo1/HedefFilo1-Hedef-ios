@@ -90,6 +90,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>become a member</string>
         </dict>
         
+        <key>email</key>
+        <dict>
+            <key>tr</key>
+            <string>E-Posta</string>
+            <key>en</key>
+            <string>Email</string>
+        </dict>
+        
         <key>yourEmailAdress</key>
         <dict>
             <key>tr</key>
@@ -168,6 +176,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Telefon Numarası</string>
             <key>en</key>
             <string>Phone number</string>
+        </dict>
+        
+        <key>mobilePhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Cep Telefonu</string>
+            <key>en</key>
+            <string>Mobile phone</string>
         </dict>
         
         <key>tcTaxNumber</key>
@@ -434,20 +450,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Settings</string>
         </dict>
         
-        <key></key>
+        <key>updateInformation</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bilgileri Güncelle</string>
             <key>en</key>
-            <string></string>
+            <string>Update Information</string>
         </dict>
         
-        <key></key>
+        <key>resetPassword</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Şifre Yenileme</string>
             <key>en</key>
-            <string></string>
+            <string>Reset Password</string>
         </dict>
         
         <key></key>

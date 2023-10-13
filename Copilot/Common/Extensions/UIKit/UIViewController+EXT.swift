@@ -10,91 +10,63 @@ import UIKit
 
 extension UIViewController {
     
-//    func setGradientBackground() {
-//        view.backgroundColor = .clear
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = self.view.bounds
-//        gradientLayer.colors = [UIColor.theme.cgColor, UIColor.lightTheme.cgColor]
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
-//    
-//    func setHeader(title: String, height: CGFloat = 68, addLogo: Bool = false) {
-//        let header = UIView()
-//        header.backgroundColor = .theme
-//        view.addSubview(header)
-//        let guide = view.safeAreaLayoutGuide
-//        header.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
-//        header.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
-//        header.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
-//        header.align(height: height)
-//        header.layer.cornerRadius = 35
-//        header.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-//        
-//        setStatusBarBackground()
-//        setTitleLabel(title: title, to: header)
-//        if addLogo {
-//            setLogo(to: header)
-//            return
-//        }
-//        setBackButton(to: header)
-//    }
+    func setBasicViews() {
+        setRedBackground()
+        setHeader()
+    }
     
-//    func setStatusBarBackground() {
-//        let guide = view.safeAreaLayoutGuide
-//        let top = UIView()
-//        top.backgroundColor = .theme
-//        view.addSubview(top)
-//        top.translatesAutoresizingMaskIntoConstraints = false
-//        top.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        top.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        top.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        top.bottomAnchor.constraint(equalTo: guide.topAnchor, constant: 1).isActive = true
-//    }
-//
-//    func setTitleLabel(title: String, to header: UIView) {
-//        let label = UILabel()
-//        label.text = title
-//        label.textColor = .white
-//        label.textAlignment = .center
-//        label.apply(TextStyle(fontStyle: .brandonMedium, size: 24), color: .white)
-//        header.addSubview(label)
-//        label.align(top: 13, leading: 48, trailing: 30)
-//    }
-//
-//    func setLogo(to header: UIView) {
-//        let imageView = UIImageView()
-//        imageView.image = Images.logoSimple
-//        header.addSubview(imageView)
-//        imageView.align(top: 14, leading: 32, width: 31, height: 30)
-//    }
+    func setRedBackground() {
+        view.backgroundColor = .secondRed
+        let imageView = UIImageView()
+        imageView.image = Images.backgroundPattern
+        view.addSubview(imageView)
+        imageView.align(top: 0, leading: 0, trailing: 14, height: 535)
+        view.sendSubviewToBack(imageView)
+    }
+
+    func setHeader() {
+        let header = UIView()
+        view.addSubview(header)
+        let guide = view.safeAreaLayoutGuide
+        header.topAnchor.constraint(equalTo: guide.topAnchor, constant: 16).isActive = true
+        header.align(height: 44, leadingAndTrailing: 24)
+        setLogo(to: header)
+        setNotificationView(to: header)
+        setSearchView(to: header)
+    }
     
-//    func setBackButton(to header: UIView) {
-//        let imageView = UIImageView()
-//        imageView.image = Images.arrowBackIcon
-//        header.addSubview(imageView)
-//        imageView.align(top: 17, leading: 24, widthAndHeight: 24)
-//
-//        let backButton = UIButton()
-//        header.addSubview(backButton)
-//        backButton.align(toView: imageView, widthAndHeight: 40, centerX: 0, centerY: 0)
-//        backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
-//    }
-//
-//    @objc func didTapBackButton() {
-//        navigationController?.popViewController(animated: true)
-//    }
-//
-//    func hideTabbarView() {
-//        if let tabbar = self.tabBarController as? MainTabBarController {
-//            tabbar.tabBarView.isHidden = true
-//        }
-//    }
-//
-//    func showTabbarView() {
-//        if let tabbar = self.tabBarController as? MainTabBarController {
-//            tabbar.tabBarView.isHidden = false
-//        }
-//    }
+        func setLogo(to header: UIView) {
+            let imageView = UIImageView()
+            imageView.image = Images.whiteLogo
+            header.addSubview(imageView)
+            imageView.align(top: 0, leading: 0, width: 76, height: 44)
+        }
+    
+    func setNotificationView(to header: UIView) {
+        let imageView = UIImageView()
+        imageView.image = Images.notificationIcon
+        header.addSubview(imageView)
+        imageView.align(trailing: 0, widthAndHeight: 24, centerY: 0)
+    }
+    
+    func setSearchView(to header: UIView) {
+        let imageView = UIImageView()
+        imageView.image = Images.search
+        header.addSubview(imageView)
+        imageView.align(trailing: 48, widthAndHeight: 24, centerY: 0)
+    }
+
+    func hideTabbarView() {
+        if let tabbar = self.tabBarController as? MainTabBarController {
+            tabbar.tabBarView.isHidden = true
+        }
+    }
+
+    func showTabbarView() {
+        if let tabbar = self.tabBarController as? MainTabBarController {
+            tabbar.tabBarView.isHidden = false
+        }
+    }
     
 }
 

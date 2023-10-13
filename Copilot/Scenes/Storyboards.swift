@@ -16,6 +16,7 @@ enum Storyboard: String {
     case popup
     case main
     case home
+    case profile
 
     var filename: String {
         return rawValue.capitalizingFirstLetter()

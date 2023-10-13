@@ -56,6 +56,10 @@ struct Strings {
         return localized(string: "yourEmailAdress")
     }
     
+    static var email: String {
+        return localized(string: "email")
+    }
+    
     static var emailIncorrect: String {
         return localized(string: "emailIncorrect")
     }
@@ -90,6 +94,10 @@ struct Strings {
     
     static var phoneNumber: String {
         return localized(string: "phoneNumber")
+    }
+    
+    static var mobilePhone: String {
+        return localized(string: "mobilePhone")
     }
     
     static var tcTaxNumber: String {
@@ -222,6 +230,14 @@ struct Strings {
     
     static var settings: String {
         return localized(string: "settings")
+    }
+    
+    static var updateInformation: String {
+        return localized(string: "updateInformation")
+    }
+    
+    static var resetPassword: String {
+        return localized(string: "resetPassword")
     }
     
     static func localized(string: String) -> String {

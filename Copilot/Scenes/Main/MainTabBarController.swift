@@ -18,10 +18,20 @@ class MainTabBarController: UITabBarController {
     
     let tabBarView = TabBarView()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
+    }
+    
+    func setup() {
+        tabBar.isHidden = true
         setupTabBarView()
+        moreNavigationController.isNavigationBarHidden = true
+        
     }
     
     func setupTabBarView() {
@@ -34,8 +44,6 @@ class MainTabBarController: UITabBarController {
         let height = 57 + bottomInset
         let yPoint = view.frame.height - height
         
-        tabBar.isHidden = true
-        
         tabBarView.frame = CGRect(x: 0,
                                   y: yPoint,
                                   width: width,
@@ -46,8 +54,15 @@ class MainTabBarController: UITabBarController {
 
 #if DEV_DEBUG
         // just for test
-        selectedIndex = 2
+        setSelectedIndex(index: 5)
 #endif
+    }
+    
+    func setSelectedIndex(index: Int) {
+        if index > 4 {
+            tabBarView.deselectLastIndex()
+        }
+        selectedIndex = index
     }
     
 }

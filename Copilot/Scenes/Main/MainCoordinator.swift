@@ -18,6 +18,7 @@ class MainCoordinator: Coordinator {
     let storyboard = UIStoryboard(storyboard: .main)
     weak var delegate: MainCoordinatorDelegate?
     
+    var tabBarController: MainTabBarController?
     var menuViewController: MenuViewController?
     
     lazy var viewModel: MainViewModel = {
@@ -28,12 +29,14 @@ class MainCoordinator: Coordinator {
     
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.isNavigationBarHidden = true
     }
     
     override func start() {
         let viewController: MainTabBarController = storyboard.instantiateViewController()
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
+        tabBarController = viewController
     }
     
     override func finish() {
@@ -60,5 +63,9 @@ extension MainCoordinator: MainViewModelCoordinatorDelegate {
 extension MainCoordinator: MenuViewModelCoordinatorDelegate {
     func hideMenu() {
         menuViewController?.dismiss(animated: true)
+    }
+    
+    func showProfile() {
+        tabBarController?.setSelectedIndex(index: 5)
     }
 }

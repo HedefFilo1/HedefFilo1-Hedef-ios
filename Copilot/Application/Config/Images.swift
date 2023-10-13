@@ -105,4 +105,16 @@ struct Images {
     static var settingsIcon: UIImage {
         return UIImage(named: "settingsIcon") ?? UIImage()
     }
+    
+    static var backgroundPattern: UIImage {
+        return UIImage(named: "backgroundPattern") ?? UIImage()
+    }
+    
+    static var whiteLogo: UIImage {
+        return UIImage(named: "whiteLogo") ?? UIImage()
+    }
+    
+    static var notificationIcon: UIImage {
+        return UIImage(named: "notificationIcon") ?? UIImage()
+    }
 }

@@ -18,6 +18,9 @@ extension UIColor {
     /// #ED1C24
     static let appRed = UIColor(named: "appRed") ?? .red
     
+    /// #EEEEEE
+    static let exactGrey = UIColor(named: "exactGrey") ?? .gray
+    
     /// #FFE8E9
     static let lightRed = UIColor(named: "lightRed") ?? .gray
     
