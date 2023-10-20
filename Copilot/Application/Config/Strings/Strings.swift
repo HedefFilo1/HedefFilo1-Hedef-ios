@@ -256,6 +256,18 @@ struct Strings {
         return localized(string: "consentError")
     }
     
+    static var incorrectInfo: String {
+        return localized(string: "incorrectInfo")
+    }
+    
+    static var loginTryAgainMessage: String {
+        return localized(string: "loginTryAgainMessage")
+    }
+    
+    static var loading: String {
+        return localized(string: "loading")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

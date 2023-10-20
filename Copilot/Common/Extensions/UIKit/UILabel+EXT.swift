@@ -1,6 +1,5 @@
 //
 //  UILabel+EXT.swift
-//  Nevita
 //
 //  Created by Jamal on 6/19/23.
 //

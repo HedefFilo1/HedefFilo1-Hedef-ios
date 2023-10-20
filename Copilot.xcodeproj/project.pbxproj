@@ -63,6 +63,13 @@
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
+		899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5682AE18CD4006D85E4 /* APIService.swift */; };
+		899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5692AE18CD5006D85E4 /* APIRequest.swift */; };
+		899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF56A2AE18CD5006D85E4 /* APIClient.swift */; };
+		899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5702AE18EF5006D85E4 /* Signup.swift */; };
+		899CF5732AE18F47006D85E4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5722AE18F47006D85E4 /* Login.swift */; };
+		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
+		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
 		89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */; };
 		89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A412AD85EC900D3BE80 /* TabBarView.swift */; };
 		89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */; };
@@ -170,6 +177,13 @@
 		8989DDA72AC493C00035CD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989DDAA2AC493C00035CD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899CF5682AE18CD4006D85E4 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		899CF5692AE18CD5006D85E4 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		899CF56A2AE18CD5006D85E4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		899CF5702AE18EF5006D85E4 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		899CF5722AE18F47006D85E4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		89B07A412AD85EC900D3BE80 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -440,12 +454,34 @@
 			isa = PBXGroup;
 			children = (
 				894E20DA2AC6A51900F69C27 /* Copilot.entitlements */,
+				899CF5662AE18CAE006D85E4 /* Network */,
 				89C55DC92AC4A4E000C3066A /* Application */,
 				89C55DCB2AC4A52000C3066A /* Scenes */,
 				89C55DCD2AC4A54200C3066A /* Common */,
 				89C55DF32AC4A89900C3066A /* Supporting Files */,
 			);
 			path = Copilot;
+			sourceTree = "<group>";
+		};
+		899CF5662AE18CAE006D85E4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				899CF56A2AE18CD5006D85E4 /* APIClient.swift */,
+				899CF5692AE18CD5006D85E4 /* APIRequest.swift */,
+				899CF5682AE18CD4006D85E4 /* APIService.swift */,
+				899CF56F2AE18EE5006D85E4 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		899CF56F2AE18EE5006D85E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				899CF5702AE18EF5006D85E4 /* Signup.swift */,
+				899CF5722AE18F47006D85E4 /* Login.swift */,
+				899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		89B07A3E2AD85A3E00D3BE80 /* TabBarView */ = {
@@ -554,6 +590,7 @@
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
 				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
+				899CF5762AE1915E006D85E4 /* Loading.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -824,12 +861,14 @@
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
+				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
+				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
@@ -837,10 +876,12 @@
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
+				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
+				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
@@ -857,6 +898,7 @@
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
 				89B07A472AD86CFC00D3BE80 /* MenuViewController.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
+				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
@@ -870,6 +912,8 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
+				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
+				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,

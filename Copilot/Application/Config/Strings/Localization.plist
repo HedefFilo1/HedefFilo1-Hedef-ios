@@ -491,6 +491,30 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Passwords should be same</string>
         </dict>
         
+        <key>loading</key>
+        <dict>
+            <key>tr</key>
+            <string>Loading...</string>
+            <key>en</key>
+            <string>Loading...</string>
+        </dict>
+        
+        <key>incorrectInfo</key>
+        <dict>
+            <key>tr</key>
+            <string>Girdiğiniz bilgiler hatalı!</string>
+            <key>en</key>
+            <string>The information you entered are incorrect!</string>
+        </dict>
+        
+        <key>loginTryAgainMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen bilgilerinizi kontrol edip tekrar deneyin.</string>
+            <key>en</key>
+            <string>Please check your information and try again.</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

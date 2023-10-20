@@ -1,6 +1,5 @@
 //
 //  UIApplication+EXT.swift
-//  Nevita
 //
 //  Created by Jamal on 6/20/23.
 //

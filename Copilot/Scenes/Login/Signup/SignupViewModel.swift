@@ -33,7 +33,28 @@ class SignupViewModel: SignupViewModelType {
     }
     
     func signup(name: String, phone: String, email: String, id: String, licence: String, password: String) {
-        delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage, delegate: self)
+        
+        Loading.shared.show(title: Strings.loading)
+        
+        APIService.signup(nameSurname: name,
+                          phoneNumber: phone,
+                          email: email,
+                          plateNumber: "",
+                          licenseNumber: licence,
+                          password: password,
+                          taxId: id) { [weak self] model, _ in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            guard model != nil else {
+                self.delegate?.showError(title: Strings.incorrectInfo,
+                                         message: Strings.loginTryAgainMessage)
+                return
+            }
+            
+            self.delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage, delegate: self)
+        }
     }
 }
 

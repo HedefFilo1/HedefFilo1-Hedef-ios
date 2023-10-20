@@ -1,6 +1,5 @@
 //
 //  UIImage+EXT.swift
-//  Nevita
 //
 //  Created by Jamal on 8/23/23.
 //

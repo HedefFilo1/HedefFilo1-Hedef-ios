@@ -13,6 +13,7 @@ protocol ForgotPasswordVMCoordinatorDelegate: AnyObject {
 
 protocol ForgotPasswordViewModelDelegate: AnyObject {
     func showSuccess(title: String, message: String)
+    func showError(title: String, message: String)
 }
 
 protocol ForgotPasswordViewModelType: AnyObject {
@@ -32,7 +33,24 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
     }
     
     func sendPassword(email: String, phone: String) {
-        delegate?.showSuccess(title: Strings.passwordHasBeenSent,
-                              message: Strings.passwordSentToEmail)
+        
+        Loading.shared.show(title: Strings.loading)
+        
+        APIService.forgotPassword(email: email) { [weak self] model, error in
+            
+            Loading.shared.hide()
+            guard let self = self else { return }
+            if let _ = model {
+                self.delegate?.showSuccess(title: Strings.passwordHasBeenSent,
+                                      message: Strings.passwordSentToEmail)
+                return
+            }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.incorrectInfo, message: error.message)
+            }
+        }
+        
+       
     }
 }

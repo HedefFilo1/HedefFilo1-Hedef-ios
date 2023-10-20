@@ -1,6 +1,5 @@
 //
 //  App.swift
-//  Nevita
 //
 //  Created by Jamal on 7/7/23.
 //

@@ -40,7 +40,23 @@ class LoginViewModel: LoginViewModelType {
     }
     
     func login(email: String, password: String) {
-        goToMain()
+//
+        Loading.shared.show(title: Strings.loading)
+        
+        APIService.login(email: email,
+                          password: password) { [weak self] model, _ in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            guard model != nil else {
+                self.delegate?.showError(title: Strings.incorrectInfo,
+                                         message: Strings.loginTryAgainMessage)
+                return
+            }
+            self.goToMain()
+            
+        }
     }
     
     func goToSignup() {

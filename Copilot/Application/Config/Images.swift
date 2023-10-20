@@ -121,4 +121,8 @@ struct Images {
     static var tikIcon: UIImage {
         return UIImage(named: "tikIcon") ?? UIImage()
     }
+    
+    static var loadingSpinner: UIImage {
+        return UIImage(named: "loadingSpinner") ?? UIImage()
+    }
 }
