@@ -57,7 +57,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @objc func editingChanged(_ textField: UITextField) {
         let email = emailTextFiled.validate()
-        let phone = phoneTextField.pureTextCount == 11
+        let phone = phoneTextField.pureTextCount > 0
         sendButton.isEnabled = email && phone
     }
     

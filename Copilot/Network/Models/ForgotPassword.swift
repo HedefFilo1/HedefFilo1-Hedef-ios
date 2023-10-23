@@ -8,11 +8,5 @@
 import Foundation
 
 struct ForgotPassword: Decodable {
-    let result: ForgotPasswordResult
-}
 
-struct ForgotPasswordResult: Decodable {
-    let isSuccess: Bool
-    let responseMessage: String
-    let timeLeftToResubmit: Int
 }

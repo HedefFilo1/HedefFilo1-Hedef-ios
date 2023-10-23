@@ -65,10 +65,12 @@ class APIService {
     }
     
     static func forgotPassword(email: String,
+                               phoneNumber: String,
                                completion: @escaping (ForgotPassword?, APIResponseError?) -> Void) {
         
         let params = [
-            "email": email
+            "email": email,
+            "phoneNumber": phoneNumber
         ]
         
         let req = APIRequest<ForgotPassword>(route: "auth/forgot-password",
