@@ -109,6 +109,7 @@ extension ProfileViewController: UITextFieldDelegate {
         
         if textField == phoneTextField {
             textField.text = textField.text?.applyPatternOnNumbers(pattern: CodeStrings.phonePattern, replacementCharacter: "#")
+            return range.location < 12
         }
         return range.location < 11
     }

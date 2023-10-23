@@ -8,9 +8,5 @@
 import Foundation
 
 struct Login: Decodable {
-    let result: LoginResult
-}
-
-struct LoginResult: Decodable {
-    
+    let token: String
 }

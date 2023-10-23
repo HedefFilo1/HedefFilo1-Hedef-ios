@@ -40,7 +40,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
             
             Loading.shared.hide()
             guard let self = self else { return }
-            if let _ = model {
+            if model != nil {
                 self.delegate?.showSuccess(title: Strings.passwordHasBeenSent,
                                       message: Strings.passwordSentToEmail)
                 return
@@ -50,7 +50,6 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
                 self.delegate?.showError(title: Strings.incorrectInfo, message: error.message)
             }
         }
-        
-       
+               
     }
 }

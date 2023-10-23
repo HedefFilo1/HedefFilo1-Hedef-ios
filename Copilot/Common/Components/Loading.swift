@@ -31,10 +31,11 @@ class Loading {
     func show(presented: Bool = false, title: String, presentingView: UIView? = nil) {
         guard let window = App.window else { return }
         
-//        animationView.image = Images.loadingSpinner
+        animationView.image = Images.loadingSpinner.withRenderingMode(.alwaysTemplate)
+        animationView.tintColor = .theme
         containerView.frame = window.frame
         containerView.center = window.center
-        containerView.backgroundColor = .darkText.withAlphaComponent(0.9)
+        containerView.backgroundColor = .darkText.withAlphaComponent(0.7)
         
         animationView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
         animationView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)

@@ -43,22 +43,16 @@ class APIService {
                       password: String,
                       completion: @escaping (Login?, APIResponseError?) -> Void) {
         
-//        let params = [
-//            "email": email,
-//            "password": password
-//        ] as [String: Any]
-        
         let params = [
-            "email": "yunus.simsiki@solidict.com",
-            "password": "asdf222"
+            "email": email,
+            "password": password
         ] as [String: Any]
-       
         
         let req = APIRequest<Login>(route: "auth/copilot/login",
                                     method: .post,
                                     parameters: params)
         
-        req.identifier = "Sign In"
+        req.identifier = "Login"
         req.log = loggingEnabled
         
         req.completion = { model, error in

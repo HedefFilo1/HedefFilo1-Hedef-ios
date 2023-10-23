@@ -39,15 +39,15 @@ class SignupViewModel: SignupViewModelType {
         APIService.signup(nameSurname: name,
                           phoneNumber: phone,
                           email: email,
-                          plateNumber: "",
+                          plateNumber: "34CTD284",
                           licenseNumber: licence,
                           password: password,
-                          taxId: id) { [weak self] model, _ in
+                          taxId: id) { [weak self] _, error in
             
             Loading.shared.hide()
             guard let self = self else {return}
             
-            guard model != nil else {
+            if error != nil {
                 self.delegate?.showError(title: Strings.incorrectInfo,
                                          message: Strings.loginTryAgainMessage)
                 return

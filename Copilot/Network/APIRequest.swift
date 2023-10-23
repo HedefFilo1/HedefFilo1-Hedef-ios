@@ -8,17 +8,17 @@ import Foundation
 import SystemConfiguration
 
 class Network {
-#if DEV_DEBUG || DEV_RELEASE
-    static let baseUrl: String = "ec2-52-17-162-68.eu-west-1.compute.amazonaws.com"
+#if DEV_DEBUG
+    static let baseUrl: String = "https://copilotapp.hedeffilotest.com:4443/"
 #else
-    static let baseUrl: String = "ec2-52-17-162-68.eu-west-1.compute.amazonaws.com"
+    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
 #endif
     
     static func getBasicHeaders() -> [String: String] {
         return [
-            "accept-language": "tr",
-            "accept": "application/json",
-            "Content-Type": "application/json-patch+json"
+//            "accept-language": "tr",
+            "accept": "*/*",
+            "Content-Type": "application/json"
         ]
     }
 }
@@ -36,19 +36,21 @@ struct APIResponseError {
 
 struct BaseErrorResponse: Decodable {
     //    let code: String
-    let statusCode: Int
+    let status: Int
     let message: String
-    let exception: BaseErrorResponseException
+//    let exception: BaseErrorResponseException
+    let error: String
     
     var errorTitle: String {
-        return exception.message
+        return error
     }
-    
+//
     var errorMessage: String {
-        if let validations = exception.validationErrors, validations.count > 0 {
-            return validations[0].message
-        }
-        return exception.message
+//        if let validations = exception.validationErrors, validations.count > 0 {
+//            return validations[0].message
+//        }
+//        return exception.message
+        return message
     }
 }
 
@@ -272,7 +274,7 @@ class APIRequest<T: Decodable> {
         do {
             let baseErrorResponse = try JSONDecoder().decode(BaseErrorResponse.self, from: data)
             
-            let err = APIResponseError(code: baseErrorResponse.exception.code ?? "",
+            let err = APIResponseError(code: String(baseErrorResponse.status),
                                        title: baseErrorResponse.errorTitle,
                                        message: baseErrorResponse.errorMessage,
                                        baseErrorResponse: baseErrorResponse)

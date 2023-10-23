@@ -8,7 +8,7 @@
 import Foundation
 
 struct Signup: Decodable {
-    let result: SignupResult
+//    let result: SignupResult
 }
 
 struct SignupResult: Decodable {
