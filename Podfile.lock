@@ -1,20 +1,24 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.11)
+  - netfox (1.21.0)
   - SwiftLint (0.52.2)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - netfox
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - netfox
     - SwiftLint
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: ae3ad674f014b44ccda804ffc667e737be0f6606
+PODFILE CHECKSUM: 37a84fe7e126281eeb7a5ba451c397866213de9b
 
 COCOAPODS: 1.11.3

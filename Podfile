@@ -8,5 +8,6 @@ target 'Copilot' do
   # Pods for Copilot
   pod 'SwiftLint'
   pod 'IQKeyboardManagerSwift'
+  pod 'netfox'
 
 end
