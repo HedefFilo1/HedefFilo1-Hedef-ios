@@ -24,7 +24,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     @IBOutlet weak var phoneTextField: CPTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
-    @IBOutlet weak var idTextField: CPTextField!
+    @IBOutlet weak var taxTextField: CPTextField!
+    @IBOutlet weak var plateNumberTextField: CPTextField!
     @IBOutlet weak var licenseTextField: CPTextField!
     @IBOutlet weak var passwordTextFiled: CPPasswordTextField!
     @IBOutlet weak var repeatPasswordTextFiled: CPPasswordTextField!
@@ -33,19 +34,23 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var clarificationLabel: UILabel!
     @IBOutlet weak var clarificationErrorView: CPErrorView!
     
-    @IBOutlet weak var consentCheckBox: CPCheckBox!
-    @IBOutlet weak var consentLabel: UILabel!
-    @IBOutlet weak var consentErrorView: CPErrorView!
-    
     @IBOutlet weak var marketingCheckBox: CPCheckBox!
     @IBOutlet weak var marketingLabel: UILabel!
+    
+    @IBOutlet weak var smsCheckBox: CPCheckBox!
+    @IBOutlet weak var smsLabel: UILabel!
+    
+    @IBOutlet weak var telephoneCheckBox: CPCheckBox!
+    @IBOutlet weak var telephoneLabel: UILabel!
+    
+    @IBOutlet weak var emailCheckBox: CPCheckBox!
+    @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var signupButton: CPButton!
     @IBOutlet weak var isMemberLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
     private var clarfication: Bool = false
-    private var consent: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,20 +67,20 @@ class SignupViewController: UIViewController {
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        idTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        taxTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        plateNumberTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         licenseTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         repeatPasswordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         signupButton.isEnabled = false
         
         phoneTextField.keyboardType = .phonePad
-        idTextField.keyboardType = .numberPad
+        taxTextField.keyboardType = .numberPad
         
         phoneTextField.delegate = self
-        idTextField.delegate = self
+        taxTextField.delegate = self
         
         clarificationErrorView.isHidden = true
-        consentErrorView.isHidden = true
     }
     
     func applyStyle() {
@@ -86,6 +91,9 @@ class SignupViewController: UIViewController {
         descriptionLabel.apply(.blackS16M500)
         
         marketingLabel.apply(.greyS12R400)
+        smsLabel.apply(.greyS12R400)
+        telephoneLabel.apply(.greyS12R400)
+        emailLabel.apply(.greyS12R400)
         signupButton.isSmallFontSize = true
         
         isMemberLabel.apply(.greyS16B400)
@@ -97,18 +105,21 @@ class SignupViewController: UIViewController {
         nameTextField.placeholder = Strings.nameSurname
         phoneTextField.placeholder = Strings.phoneNumber
         emailTextFiled.placeholder = Strings.yourEmailAdress
-        idTextField.placeholder = Strings.tcTaxNumber
+        taxTextField.placeholder = Strings.taxIdNumber
+        plateNumberTextField.placeholder = Strings.plateNumber
         licenseTextField.placeholder = Strings.vehicleLicenseNumber
         passwordTextFiled.placeholder = Strings.password
         repeatPasswordTextFiled.placeholder = Strings.repeatPassword
         setClarificationText()
-        setConsentTexts()
         marketingLabel.text = Strings.marketingApprovement
         signupButton.setTitle(Strings.becomeMember, for: .normal)
         
         isMemberLabel.text = Strings.areYouMember
         clarificationErrorView.message = Strings.clarificationError
-        consentErrorView.message = Strings.consentError
+        smsLabel.text = Strings.sms
+        telephoneLabel.text = Strings.telefon
+        emailLabel.text = Strings.emailPlaceholder
+        
         loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
     }
     
@@ -118,22 +129,16 @@ class SignupViewController: UIViewController {
         clarificationLabel.attributedText = AttributedText.createUnderlinedString(mainText: calrification, underlinedText: calrificationUnderlined)
     }
     
-    func setConsentTexts(color: UIColor = .textGrey) {
-        let consent = AttributedText(text: Strings.consentDescription, fontSize: 12, style: .regular, textColor: color)
-        let consentUnderlined = AttributedText(text: Strings.consentText, fontSize: 12, style: .bold, textColor: color)
-        consentLabel.attributedText = AttributedText.createUnderlinedString(mainText: consent, underlinedText: consentUnderlined)
-    }
-    
     func setButtonActivation() {
         let name = nameTextField.pureTextCount > 0
         let phone = phoneTextField.pureTextCount == 11
         let email = emailTextFiled.validate()
-        let tcTax = idTextField.pureTextCount == 11
+        let tcTax = taxTextField.pureTextCount == 11
+        let plate = plateNumberTextField.pureTextCount > 0
         let license = licenseTextField.pureTextCount > 0
-        let password = passwordTextFiled.text ?? ""
-        let repeatPass = repeatPasswordTextFiled.text ?? ""
-        let passess = (password.count > 0) && (repeatPass.count > 0)
-        signupButton.isEnabled = name && phone && email && tcTax && license && passess
+        let password = passwordTextFiled.pureTextCount > 0
+        let repeatPass = repeatPasswordTextFiled.pureTextCount > 0
+        signupButton.isEnabled = name && phone && email && tcTax && plate && license && password && repeatPass
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -149,18 +154,20 @@ class SignupViewController: UIViewController {
         setButtonActivation()
     }
     
-    @IBAction func didTapConsentCheckBox(_ sender: UIButton) {
-        consentCheckBox.isSelected = !consentCheckBox.isSelected
-        if consentCheckBox.isSelected {
-            consentErrorView.isHidden = true
-            setConsentTexts()
-        }
-        setButtonActivation()
-    }
-    
     @IBAction func didTapMarketingCheckBox(_ sender: UIButton) {
         marketingCheckBox.isSelected = !marketingCheckBox.isSelected
-        
+    }
+    
+    @IBAction func didTapSMSCheckBox(_ sender: UIButton) {
+        smsCheckBox.isSelected = !smsCheckBox.isSelected
+    }
+    
+    @IBAction func didTapTelephoneCheckBox(_ sender: UIButton) {
+        telephoneCheckBox.isSelected = !telephoneCheckBox.isSelected
+    }
+    
+    @IBAction func didTapEmailCheckBox(_ sender: UIButton) {
+        emailCheckBox.isSelected = !emailCheckBox.isSelected
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
@@ -173,26 +180,18 @@ class SignupViewController: UIViewController {
         }
         
         let clarification = clarificationCheckBox.isSelected
-        let consent = consentCheckBox.isSelected
         clarificationErrorView.isHidden = clarification
-        consentErrorView.isHidden = consent
         
         if !clarification {
             setClarificationText(color: .theme)
-        }
-        
-        if !consent {
-            setConsentTexts(color: .theme)
-        }
-        
-        if !clarification || !consent {
             return
         }
         
         viewModel.signup(name: nameTextField.text ?? "",
                          phone: phoneTextField.text ?? "",
                          email: emailTextFiled.text ?? "",
-                         id: idTextField.text ?? "",
+                         taxId: taxTextField.text ?? "",
+                         plateNumber: plateNumberTextField.text ?? "",
                          licence: licenseTextField.text ?? "",
                          password: passwordTextFiled.text ?? "")
     }

@@ -193,6 +193,22 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string>TR Identification Number / Tax Identification Number</string>
         </dict>
+        
+        <key>taxIdNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>Vergi Kimlik Numarası</string>
+            <key>en</key>
+            <string>Tax Identification Number</string>
+        </dict>
+        
+        <key>plateNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>Plaka</string>
+            <key>en</key>
+            <string>Plate Number</string>
+        </dict>
 
         <key>vehicleLicenseNumber</key>
         <dict>
@@ -208,6 +224,30 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Ürün,hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
             <key>en</key>
             <string>In order to be informed about products, services and campaigns, I allow commercial electronic messages to be sent within the scope of Law No. 6563 and its legislation until I specify otherwise.</string>
+        </dict>
+        
+        <key>sms</key>
+        <dict>
+            <key>tr</key>
+            <string>SMS</string>
+            <key>en</key>
+            <string>SMS</string>
+        </dict>
+        
+        <key>telefon</key>
+        <dict>
+            <key>tr</key>
+            <string>Telefon</string>
+            <key>en</key>
+            <string>Telefon</string>
+        </dict>
+        
+        <key>emailPlaceholder</key>
+        <dict>
+            <key>tr</key>
+            <string>Email</string>
+            <key>en</key>
+            <string>Email</string>
         </dict>
         
         <key>areYouMember</key>

@@ -19,7 +19,7 @@ protocol SignupViewModelDelegate: AnyObject {
 protocol SignupViewModelType: AnyObject {
     var delegate: SignupViewModelDelegate? { get set }
     func goToLogin()
-    func signup(name: String, phone: String, email: String, id: String, licence: String, password: String)
+    func signup(name: String, phone: String, email: String, taxId: String, plateNumber: String, licence: String, password: String)
 }
 
 class SignupViewModel: SignupViewModelType {
@@ -32,17 +32,17 @@ class SignupViewModel: SignupViewModelType {
         coordinatorDelegate?.goToLogin()
     }
     
-    func signup(name: String, phone: String, email: String, id: String, licence: String, password: String) {
+    func signup(name: String, phone: String, email: String, taxId: String, plateNumber: String, licence: String, password: String) {
         
         Loading.shared.show(title: Strings.loading)
         
         APIService.signup(nameSurname: name,
                           phoneNumber: phone,
                           email: email,
-                          plateNumber: "34CTD284",
+                          plateNumber: plateNumber,
                           licenseNumber: licence,
                           password: password,
-                          taxId: id) { [weak self] _, error in
+                          taxId: taxId) { [weak self] _, error in
             
             Loading.shared.hide()
             guard let self = self else {return}

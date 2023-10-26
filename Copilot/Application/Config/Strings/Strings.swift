@@ -104,12 +104,32 @@ struct Strings {
         return localized(string: "tcTaxNumber")
     }
     
+    static var taxIdNumber: String {
+        return localized(string: "taxIdNumber")
+    }
+    
+    static var plateNumber: String {
+        return localized(string: "plateNumber")
+    }
+    
     static var vehicleLicenseNumber: String {
         return localized(string: "vehicleLicenseNumber")
     }
     
     static var marketingApprovement: String {
         return localized(string: "marketingApprovement")
+    }
+    
+    static var sms: String {
+        return localized(string: "sms")
+    }
+    
+    static var telefon: String {
+        return localized(string: "telefon")
+    }
+    
+    static var emailPlaceholder: String {
+        return localized(string: "emailPlaceholder")
     }
     
     static var areYouMember: String {
