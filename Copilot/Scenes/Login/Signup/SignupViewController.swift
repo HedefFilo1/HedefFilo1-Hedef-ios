@@ -138,7 +138,8 @@ class SignupViewController: UIViewController {
         let license = licenseTextField.pureTextCount > 0
         let password = passwordTextFiled.pureTextCount > 0
         let repeatPass = repeatPasswordTextFiled.pureTextCount > 0
-        signupButton.isEnabled = name && phone && email && tcTax && plate && license && password && repeatPass
+        let clarification = clarificationCheckBox.isSelected
+        signupButton.isEnabled = name && phone && email && tcTax && plate && license && password && repeatPass && clarification
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -156,18 +157,30 @@ class SignupViewController: UIViewController {
     
     @IBAction func didTapMarketingCheckBox(_ sender: UIButton) {
         marketingCheckBox.isSelected = !marketingCheckBox.isSelected
+        smsCheckBox.isSelected = marketingCheckBox.isSelected
+        telephoneCheckBox.isSelected = marketingCheckBox.isSelected
+        emailCheckBox.isSelected = marketingCheckBox.isSelected
+    }
+    
+    func checkMarketingCheckBox() {
+        if !smsCheckBox.isSelected && !telephoneCheckBox.isSelected && !emailCheckBox.isSelected {
+            marketingCheckBox.isSelected = false
+        }
     }
     
     @IBAction func didTapSMSCheckBox(_ sender: UIButton) {
         smsCheckBox.isSelected = !smsCheckBox.isSelected
+        checkMarketingCheckBox()
     }
     
     @IBAction func didTapTelephoneCheckBox(_ sender: UIButton) {
         telephoneCheckBox.isSelected = !telephoneCheckBox.isSelected
+        checkMarketingCheckBox()
     }
     
     @IBAction func didTapEmailCheckBox(_ sender: UIButton) {
         emailCheckBox.isSelected = !emailCheckBox.isSelected
+        checkMarketingCheckBox()
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
