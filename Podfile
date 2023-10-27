@@ -9,5 +9,5 @@ target 'Copilot' do
   pod 'SwiftLint'
   pod 'IQKeyboardManagerSwift'
   pod 'netfox'
-
+  pod 'Alamofire'
 end

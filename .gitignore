@@ -125,3 +125,4 @@ xcuserdata
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,swiftpackagemanager,cocoapods,carthage
 .DS_Store
+Podfile.lock

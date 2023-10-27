@@ -1,24 +1,28 @@
 PODS:
+  - Alamofire (5.6.4)
   - IQKeyboardManagerSwift (6.5.11)
   - netfox (1.21.0)
   - SwiftLint (0.52.2)
 
 DEPENDENCIES:
+  - Alamofire
   - IQKeyboardManagerSwift
   - netfox
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IQKeyboardManagerSwift
     - netfox
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: 37a84fe7e126281eeb7a5ba451c397866213de9b
+PODFILE CHECKSUM: 0a707e0a73e6cd4ca42e13e5b5bd422b3c25d7b9
 
 COCOAPODS: 1.11.3

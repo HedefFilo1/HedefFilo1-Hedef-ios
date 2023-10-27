@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct VoidResponse<T: Decodable> {
     init() {}
@@ -26,15 +27,12 @@ final class APIClient {
     func handle<T: Decodable> (request: APIRequest<T>) {
         guard let urlRequest = request.urlRequest else { return }
         
-        let task = session.dataTask(with: urlRequest, completionHandler: { [weak self] data, response, error in
-            DispatchQueue.main.async {
-                let httpResponse = response as? HTTPURLResponse
-                self?.handleRespone(request: request, data: data, response: httpResponse, error: error)
+        DispatchQueue.main.async {
+            AF.request(urlRequest).response {[weak self] response in
+                let httpResponse = response.response
+                self?.handleRespone(request: request, data: response.data, response: httpResponse, error: response.error)
             }
-            
-        })
-        
-        task.resume()
+        }
     }
     
     // swiftlint:disable cyclomatic_complexity
@@ -76,9 +74,9 @@ final class APIClient {
         
         request.statusCode = response.statusCode
         
-//        if response.statusCode == 401 {
-//            NotificationCenter.default.post(unauthorizedNotification)
-//        }
+        //        if response.statusCode == 401 {
+        //            NotificationCenter.default.post(unauthorizedNotification)
+        //        }
         
         switch response.statusCode {
         case 200...299:
@@ -109,8 +107,8 @@ final class APIClient {
                     return
                 }
                 // Add this for now
-//                request.finish(nil, error)
-//                App.refreshToken(request: request)
+                //                request.finish(nil, error)
+                //                App.refreshToken(request: request)
                 return
                 
             } else {
