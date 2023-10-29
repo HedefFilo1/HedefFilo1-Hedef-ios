@@ -76,6 +76,7 @@ class SignupViewController: UIViewController {
         
         phoneTextField.keyboardType = .phonePad
         taxTextField.keyboardType = .numberPad
+        licenseTextField.keyboardType = .namePhonePad
         
         phoneTextField.delegate = self
         taxTextField.delegate = self
