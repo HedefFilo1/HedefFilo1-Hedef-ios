@@ -39,8 +39,19 @@ class ProfileCoordinator: Coordinator {
 }
 
 extension ProfileCoordinator: ProfileViewModelCoordinatorDelegate {
+    
     func goToResetPassword() {
-        
+        let viewController: PasswordResetViewController = storyboard.instantiateViewController()
+        let viewModel = PasswordResetViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ProfileCoordinator: PasswordResetViewModelCoordinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
     }
 }
 

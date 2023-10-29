@@ -161,6 +161,11 @@ extension CPTextField: UITextFieldDelegate {
 
 extension CPTextField {
     
+    var textCount: Int {
+        var text = self.text ?? ""
+        return text.count
+    }
+    
     var pureTextCount: Int {
         var text = self.text ?? ""
         text = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)

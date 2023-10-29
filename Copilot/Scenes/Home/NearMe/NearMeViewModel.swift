@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NearMeViewModelCoordinatorDelegate: AnyObject {
- func getBack()
+    func getBack()
 }
 
 protocol NearMeViewModelDelegate: AnyObject {
@@ -29,5 +29,5 @@ class NearMeViewModel: NearMeViewModelType {
     func getBack() {
         coordinatorDelegate?.getBack()
     }
-
+    
 }

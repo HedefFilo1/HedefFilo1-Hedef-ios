@@ -292,6 +292,18 @@ struct Strings {
         return localized(string: "filters")
     }
     
+    static var oldPassword: String {
+        return localized(string: "oldPassword")
+    }
+    
+    static var newPassword: String {
+        return localized(string: "newPassword")
+    }
+    
+    static var repeatPasswordAgain: String {
+        return localized(string: "repeatPasswordAgain")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

@@ -571,28 +571,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Error</string>
         </dict>
         
-        <key></key>
+        <key>oldPassword</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Eski Şifre</string>
             <key>en</key>
-            <string></string>
+            <string>Old Password</string>
         </dict>
         
-        <key></key>
+        <key>newPassword</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yeni Şifre</string>
             <key>en</key>
-            <string></string>
+            <string>New Password</string>
         </dict>
         
-        <key></key>
+        <key>repeatPasswordAgain</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yeni Şifre Tekrar</string>
             <key>en</key>
-            <string></string>
+            <string>Repeat Password Again</string>
         </dict>
         
         <key></key>

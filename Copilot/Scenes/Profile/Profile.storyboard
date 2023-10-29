@@ -195,14 +195,141 @@
             </objects>
             <point key="canvasLocation" x="-138.1679389312977" y="3.5211267605633805"/>
         </scene>
+        <!--Password Reset View Controller-->
+        <scene sceneID="LgZ-W5-fmJ">
+            <objects>
+                <viewController storyboardIdentifier="PasswordResetViewController" id="JyB-De-S2w" customClass="PasswordResetViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blh-Rg-Wkn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-CE-om7">
+                                <rect key="frame" x="0.0" y="143" width="393" height="709"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre Yenileme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-9Q-vi2">
+                                        <rect key="frame" x="142.66666666666666" y="24" width="108" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Euh-b9-LVO">
+                                        <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="QTj-FG-3I5"/>
+                                            <constraint firstAttribute="height" constant="24" id="fLq-Lj-JRp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fen-SC-LV8">
+                                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fGR-t1-1Pk"/>
+                                            <constraint firstAttribute="height" constant="40" id="kIG-ge-tJB"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack:" destination="JyB-De-S2w" eventType="touchUpInside" id="CJF-5U-Hhc"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-kG-ES6" customClass="CPPasswordTextField" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="68.333333333333343" width="345" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="fS0-dR-xOR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLx-IG-clb" customClass="CPPasswordTextField" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="148.33333333333331" width="345" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="dcg-lq-Fgv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-PR-4Tb" customClass="CPPasswordTextField" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="228.33333333333331" width="345" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="cdr-lp-SdG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snx-Vv-Bo4" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="538" width="345" height="56"/>
+                                        <color key="backgroundColor" name="lightBorder"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="uIP-wh-vxd"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Kaydet">
+                                            <color key="titleColor" name="textDisabled"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSave:" destination="JyB-De-S2w" eventType="touchUpInside" id="ObH-r6-skW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="YjS-PR-4Tb" firstAttribute="top" secondItem="MLx-IG-clb" secondAttribute="bottom" constant="24" id="3Ug-nr-p6m"/>
+                                    <constraint firstItem="YjS-PR-4Tb" firstAttribute="leading" secondItem="PMt-CE-om7" secondAttribute="leading" constant="24" id="3vp-8X-ILX"/>
+                                    <constraint firstAttribute="trailing" secondItem="xAL-kG-ES6" secondAttribute="trailing" constant="24" id="5j4-ln-p0c"/>
+                                    <constraint firstAttribute="trailing" secondItem="snx-Vv-Bo4" secondAttribute="trailing" constant="24" id="7Se-mA-26E"/>
+                                    <constraint firstItem="Fen-SC-LV8" firstAttribute="centerY" secondItem="Euh-b9-LVO" secondAttribute="centerY" id="9g3-gB-Lzf"/>
+                                    <constraint firstItem="xAL-kG-ES6" firstAttribute="top" secondItem="hbt-9Q-vi2" secondAttribute="bottom" constant="24" id="B4S-Gb-abu"/>
+                                    <constraint firstItem="hbt-9Q-vi2" firstAttribute="centerX" secondItem="PMt-CE-om7" secondAttribute="centerX" id="G9M-pJ-bkT"/>
+                                    <constraint firstAttribute="trailing" secondItem="YjS-PR-4Tb" secondAttribute="trailing" constant="24" id="Hyt-8r-RO7"/>
+                                    <constraint firstItem="Euh-b9-LVO" firstAttribute="leading" secondItem="PMt-CE-om7" secondAttribute="leading" constant="24" id="K8t-zz-Ilq"/>
+                                    <constraint firstItem="Fen-SC-LV8" firstAttribute="centerX" secondItem="Euh-b9-LVO" secondAttribute="centerX" id="NVl-5F-hyK"/>
+                                    <constraint firstItem="hbt-9Q-vi2" firstAttribute="top" secondItem="PMt-CE-om7" secondAttribute="top" constant="24" id="RUq-tA-BLE"/>
+                                    <constraint firstItem="snx-Vv-Bo4" firstAttribute="leading" secondItem="PMt-CE-om7" secondAttribute="leading" constant="24" id="gaj-J4-bHa"/>
+                                    <constraint firstItem="MLx-IG-clb" firstAttribute="top" secondItem="xAL-kG-ES6" secondAttribute="bottom" constant="24" id="hVX-9S-M2L"/>
+                                    <constraint firstItem="Euh-b9-LVO" firstAttribute="top" secondItem="PMt-CE-om7" secondAttribute="top" constant="24" id="iO3-qd-NRs"/>
+                                    <constraint firstItem="xAL-kG-ES6" firstAttribute="leading" secondItem="PMt-CE-om7" secondAttribute="leading" constant="24" id="nAa-8y-QJU"/>
+                                    <constraint firstItem="MLx-IG-clb" firstAttribute="leading" secondItem="PMt-CE-om7" secondAttribute="leading" constant="24" id="oNN-f6-79h"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLx-IG-clb" secondAttribute="trailing" constant="24" id="yan-gt-xMr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oEJ-pi-lQ3"/>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="oEJ-pi-lQ3" firstAttribute="bottom" secondItem="snx-Vv-Bo4" secondAttribute="bottom" constant="81" id="ATA-8U-9lC"/>
+                            <constraint firstItem="oEJ-pi-lQ3" firstAttribute="trailing" secondItem="PMt-CE-om7" secondAttribute="trailing" id="H4N-V6-3dx"/>
+                            <constraint firstItem="PMt-CE-om7" firstAttribute="top" secondItem="oEJ-pi-lQ3" secondAttribute="top" constant="84" id="Maa-99-lGs"/>
+                            <constraint firstItem="PMt-CE-om7" firstAttribute="leading" secondItem="oEJ-pi-lQ3" secondAttribute="leading" id="NVl-oz-OSO"/>
+                            <constraint firstAttribute="bottom" secondItem="PMt-CE-om7" secondAttribute="bottom" id="dNO-Cb-WEm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backImageView" destination="Euh-b9-LVO" id="DYo-Xy-lN4"/>
+                        <outlet property="contentView" destination="PMt-CE-om7" id="tY5-Ro-sPe"/>
+                        <outlet property="newPasswordTextField" destination="MLx-IG-clb" id="zjL-CQ-HKm"/>
+                        <outlet property="oldPasswordTextField" destination="xAL-kG-ES6" id="Tfm-Ke-GqW"/>
+                        <outlet property="repeatPasswordTextField" destination="YjS-PR-4Tb" id="Fov-Bn-Vb1"/>
+                        <outlet property="saveButton" destination="snx-Vv-Bo4" id="2ua-P5-5nD"/>
+                        <outlet property="titleLabel" destination="hbt-9Q-vi2" id="vSd-wE-8Y0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zt3-Mw-vLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="4"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backIcon" width="24" height="24"/>
         <image name="chevronRight" width="24" height="24"/>
         <namedColor name="disabled">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="exactGrey">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightBorder">
+            <color red="0.92549019607843142" green="0.92941176470588238" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textDisabled">
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textGrey">
             <color red="0.34509803921568627" green="0.34901960784313724" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

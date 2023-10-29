@@ -38,10 +38,6 @@ class NearMeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if App.appLoaded == false {
-            App.appLoaded = true
-        }
-        
     }
     
     func setupUI() {

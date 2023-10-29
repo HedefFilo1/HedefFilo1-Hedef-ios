@@ -65,6 +65,8 @@
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
 		89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */; };
 		89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */; };
+		89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */; };
+		89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */; };
 		899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5682AE18CD4006D85E4 /* APIService.swift */; };
 		899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5692AE18CD5006D85E4 /* APIRequest.swift */; };
 		899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF56A2AE18CD5006D85E4 /* APIClient.swift */; };
@@ -181,6 +183,8 @@
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModel.swift; sourceTree = "<group>"; };
 		89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
+		89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		899CF5682AE18CD4006D85E4 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		899CF5692AE18CD5006D85E4 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		899CF56A2AE18CD5006D85E4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -485,6 +489,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		89941D572AEEF0BA00CEFD0E /* PasswordReset */ = {
+			isa = PBXGroup;
+			children = (
+				89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */,
+				89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */,
+			);
+			path = PasswordReset;
+			sourceTree = "<group>";
+		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +555,7 @@
 				89B07A522AD9361F00D3BE80 /* ProfileCoordinator.swift */,
 				89B07A542AD9362900D3BE80 /* ProfileViewModel.swift */,
 				89B07A562AD9363100D3BE80 /* ProfileViewController.swift */,
+				89941D572AEEF0BA00CEFD0E /* PasswordReset */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -902,6 +916,7 @@
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
+				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
@@ -946,6 +961,7 @@
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
+				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
@@ -1100,7 +1116,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1134,7 +1150,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1228,7 +1244,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1316,7 +1332,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
