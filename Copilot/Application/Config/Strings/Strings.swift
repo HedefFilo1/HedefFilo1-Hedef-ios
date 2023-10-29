@@ -288,6 +288,10 @@ struct Strings {
         return localized(string: "loading")
     }
     
+    static var filters: String {
+        return localized(string: "filters")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

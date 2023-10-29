@@ -51,6 +51,9 @@ extension UIColor {
     /// #439F6E
     static let textSuccess = UIColor(named: "textSuccess") ?? .gray
     
+    /// #25282B
+    static let lightBlack = UIColor(named: "lightBlack") ?? .gray
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

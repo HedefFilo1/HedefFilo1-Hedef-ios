@@ -48,7 +48,6 @@ class HomeViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         collectionView.backgroundColor = .clear
         collectionView.register(cellType: SearchCell.self)
         collectionView.register(cellType: VehicleInfoCell.self)
@@ -84,6 +83,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         case 2:
             let cell: HomeContentCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         
         default:
@@ -120,6 +120,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         24
+    }
+}
+
+extension HomeViewController: HomeContentCellDelegate {
+    func didSelectNearMe() {
+        viewModel.goToNearMe()
     }
 }
 

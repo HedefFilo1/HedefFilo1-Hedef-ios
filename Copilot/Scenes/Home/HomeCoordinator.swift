@@ -41,6 +41,19 @@ class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
     
+    func goToNearMe() {
+        let viewController: NearMeViewController = storyboard.instantiateViewController()
+        let viewModel = NearMeViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
+    }
 }
 
 extension HomeCoordinator {

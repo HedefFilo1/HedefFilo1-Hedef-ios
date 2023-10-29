@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol HomeContentCellDelegate: AnyObject {
+    func didSelectNearMe()
+}
+
 class HomeContentCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegate: HomeContentCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -67,7 +72,9 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        if indexPath.item == 1 {
+            delegate?.didSelectNearMe()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

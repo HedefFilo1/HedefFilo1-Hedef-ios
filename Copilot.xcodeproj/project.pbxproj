@@ -63,6 +63,8 @@
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
+		89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */; };
+		89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */; };
 		899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5682AE18CD4006D85E4 /* APIService.swift */; };
 		899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5692AE18CD5006D85E4 /* APIRequest.swift */; };
 		899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF56A2AE18CD5006D85E4 /* APIClient.swift */; };
@@ -177,6 +179,8 @@
 		8989DDA72AC493C00035CD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989DDAA2AC493C00035CD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModel.swift; sourceTree = "<group>"; };
+		89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		899CF5682AE18CD4006D85E4 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		899CF5692AE18CD5006D85E4 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		899CF56A2AE18CD5006D85E4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -347,9 +351,8 @@
 			children = (
 				896CB3422AD5BD6D0048025A /* Home.storyboard */,
 				896CB3442AD5BD830048025A /* HomeCoordinator.swift */,
-				896CB3462AD5BDA50048025A /* HomeViewModel.swift */,
-				896CB3482AD5BDE50048025A /* HomeViewController.swift */,
-				896CB34A2AD5BEB10048025A /* Cell */,
+				89941D562AEECFD700CEFD0E /* Home */,
+				89941D512AEECFAD00CEFD0E /* NearMe */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -461,6 +464,25 @@
 				89C55DF32AC4A89900C3066A /* Supporting Files */,
 			);
 			path = Copilot;
+			sourceTree = "<group>";
+		};
+		89941D512AEECFAD00CEFD0E /* NearMe */ = {
+			isa = PBXGroup;
+			children = (
+				89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */,
+				89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */,
+			);
+			path = NearMe;
+			sourceTree = "<group>";
+		};
+		89941D562AEECFD700CEFD0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				896CB3462AD5BDA50048025A /* HomeViewModel.swift */,
+				896CB3482AD5BDE50048025A /* HomeViewController.swift */,
+				896CB34A2AD5BEB10048025A /* Cell */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -850,6 +872,7 @@
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
+				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
@@ -882,6 +905,7 @@
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
+				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,

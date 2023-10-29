@@ -555,12 +555,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please check your information and try again.</string>
         </dict>
         
-        <key></key>
+        <key>filters</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Filtrele</string>
             <key>en</key>
-            <string></string>
+            <string>Filters</string>
         </dict>
         
         <key>error</key>
