@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SubFiltersCellDelegate: AnyObject {
+    func didSelectItem()
+}
+
 class SubFiltersCell: UICollectionViewCell, Reusable {
+    
+    weak var delegate: SubFiltersCellDelegate?
     
     var item: Filter? {
         didSet {
@@ -70,6 +76,7 @@ extension SubFiltersCell: UICollectionViewDataSource, UICollectionViewDelegateFl
            let cell = collectionView.cellForItem(at: indexPath) as? FilterCell {
             filter.selected = !filter.selected
             cell.checkBox.isSelected = filter.selected
+            delegate?.didSelectItem()
             return
         }
     }
@@ -86,4 +93,3 @@ extension SubFiltersCell: UICollectionViewDataSource, UICollectionViewDelegateFl
         0
     }
 }
-

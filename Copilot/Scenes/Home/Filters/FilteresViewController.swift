@@ -71,6 +71,24 @@ class FiltersViewController: SheetViewController {
     @IBAction func didTapApply(_ sender: UIButton) {
         viewModel.dismiss()
     }
+    
+    func setButtonActivation() {
+        
+        for filter in viewModel.filters {
+            if filter.selected {
+                applyButton.isEnabled = true
+                return
+            }
+            
+            if let filters = filter.subFilters {
+                for filter in filters where filter.selected {
+                    applyButton.isEnabled = true
+                    return
+                }
+            }
+        }
+        applyButton.isEnabled = false
+    }
 }
 
 extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -86,6 +104,7 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
             let cell: SubFiltersCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.item = filter
             cell.items = subFilters
+            cell.delegate = self
             return cell
         }
         
@@ -100,7 +119,6 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
         if let cell = collectionView.cellForItem(at: indexPath) as? FilterCell {
             filter.selected = !filter.selected
             cell.checkBox.isSelected = filter.selected
-            return
         }
         
         if let cell = collectionView.cellForItem(at: indexPath) as? SubFiltersCell {
@@ -108,6 +126,8 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
             cell.toggle()
             collectionView.performBatchUpdates(nil)
         }
+        
+        setButtonActivation()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -126,6 +146,12 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         0
+    }
+}
+
+extension FiltersViewController: SubFiltersCellDelegate {
+    func didSelectItem() {
+        setButtonActivation()
     }
 }
 
