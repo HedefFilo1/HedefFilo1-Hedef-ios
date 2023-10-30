@@ -18,6 +18,8 @@ class HomeCoordinator: Coordinator {
     let storyboard = UIStoryboard(storyboard: .home)
     weak var delegate: HomeCoordinatorDelegate?
     
+    var filtersViewController: FiltersViewController?
+    
     var homeViewModel: HomeViewModel {
         let viewModel = HomeViewModel()
         viewModel.coordinatorDelegate = self
@@ -53,6 +55,22 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
 extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func presentFilters() {
+        let viewController: FiltersViewController = storyboard.instantiateViewController()
+        let viewModel = FiltersViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewController.viewModel = viewModel
+        filtersViewController = viewController
+        navigationController.present(viewController, animated: true)
+    }
+}
+
+extension HomeCoordinator: FiltersViewModelCoordinatorDelegate {
+    func dismiss() {
+        filtersViewController?.dismiss(animated: true)
     }
 }
 

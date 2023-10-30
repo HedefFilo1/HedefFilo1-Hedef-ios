@@ -10,6 +10,8 @@ import UIKit
 
 class CPSearchTextField: UITextField {
    
+    let searchIcon = UIImageView()
+    
     var textPadding: UIEdgeInsets {
         return UIEdgeInsets(top: 16, left: 54, bottom: 16, right: 20)
     }
@@ -45,10 +47,9 @@ class CPSearchTextField: UITextField {
     }
     
     func setImageView() {
-        let imageView = UIImageView()
-        imageView.image = Images.search
-        addSubview(imageView)
-        imageView.align(leading: 20, widthAndHeight: 24, centerY: 0)
+        searchIcon.image = Images.search
+        addSubview(searchIcon)
+        searchIcon.align(leading: 20, widthAndHeight: 24, centerY: 0)
     }
     
     func applyStyles() {
@@ -57,5 +58,11 @@ class CPSearchTextField: UITextField {
         layer.borderWidth = 1
         layer.borderColor = UIColor.borderColor.cgColor
         apply(.whiteS16R400)
+    }
+    
+    func setGreyTint() {
+        searchIcon.image = Images.search.withRenderingMode(.alwaysTemplate)
+        searchIcon.tintColor = .textGrey
+        apply(.greyS16B400)
     }
 }

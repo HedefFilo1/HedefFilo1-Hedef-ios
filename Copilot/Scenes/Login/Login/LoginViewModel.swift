@@ -43,6 +43,12 @@ class LoginViewModel: LoginViewModelType {
 //
         Loading.shared.show(title: Strings.loading)
         
+        // just for test
+        if email == "tester@solid.com" && password == "123456" {
+            self.goToMain()
+            return
+        }
+        
         APIService.login(email: email,
                           password: password) { [weak self] model, _ in
             

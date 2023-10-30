@@ -82,6 +82,7 @@ class NearMeViewController: UIViewController {
     }
     
     @IBAction func didTapFilter(_ sender: UIButton) {
+        viewModel.presentFilters()
     }
     
     @IBAction func didTapLocation(_ sender: UIButton) {

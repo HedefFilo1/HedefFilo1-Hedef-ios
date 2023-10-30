@@ -68,15 +68,13 @@ class SheetViewController: UIViewController, UIViewControllerTransitioningDelega
             initialPan = view.frame.minY
             return
         }
-        
         if translationY < 0 {
             return
         }
-        
         view.frame.origin.y = initialPan + translationY
         
         if sender.state == .ended {
-            if view.frame.origin.y > UIScreen.main.bounds.height / 2 {
+            if view.frame.origin.y > prsentingFrame.midY {
                 dismiss(animated: true)
             } else {
                 

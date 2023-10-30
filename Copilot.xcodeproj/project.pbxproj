@@ -67,6 +67,9 @@
 		89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */; };
 		89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */; };
 		89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */; };
+		89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */; };
+		89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D612AF010E500CEFD0E /* FilteresViewController.swift */; };
+		89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D642AF0110F00CEFD0E /* FilterCell.swift */; };
 		899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5682AE18CD4006D85E4 /* APIService.swift */; };
 		899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5692AE18CD5006D85E4 /* APIRequest.swift */; };
 		899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF56A2AE18CD5006D85E4 /* APIClient.swift */; };
@@ -116,6 +119,9 @@
 		89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */; };
 		89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */; };
 		89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8092AC73BD50098BA67 /* CodeStrings.swift */; };
+		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
+		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
+		89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07072AF0122A00892B1D /* SubFiltersCell.xib */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +191,9 @@
 		89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
 		89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		89941D612AF010E500CEFD0E /* FilteresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteresViewController.swift; sourceTree = "<group>"; };
+		89941D642AF0110F00CEFD0E /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		899CF5682AE18CD4006D85E4 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		899CF5692AE18CD5006D85E4 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		899CF56A2AE18CD5006D85E4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -234,6 +243,9 @@
 		89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPasswordTextField.swift; sourceTree = "<group>"; };
 		89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPEmailTextField.swift; sourceTree = "<group>"; };
 		89DAB8092AC73BD50098BA67 /* CodeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStrings.swift; sourceTree = "<group>"; };
+		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
+		89DF07072AF0122A00892B1D /* SubFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFiltersCell.xib; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
@@ -357,6 +369,7 @@
 				896CB3442AD5BD830048025A /* HomeCoordinator.swift */,
 				89941D562AEECFD700CEFD0E /* Home */,
 				89941D512AEECFAD00CEFD0E /* NearMe */,
+				89941D5C2AF010BE00CEFD0E /* Filters */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -496,6 +509,34 @@
 				89941D5A2AEEF0FD00CEFD0E /* PasswordResetViewController.swift */,
 			);
 			path = PasswordReset;
+			sourceTree = "<group>";
+		};
+		89941D5C2AF010BE00CEFD0E /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */,
+				89941D612AF010E500CEFD0E /* FilteresViewController.swift */,
+				89941D632AF010EF00CEFD0E /* Cell */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		89941D632AF010EF00CEFD0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89941D682AF0118500CEFD0E /* Filter */,
+				89DF07052AF011C200892B1D /* SubFilters */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89941D682AF0118500CEFD0E /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				89DF07032AF011BC00892B1D /* FilterCell.xib */,
+				89941D642AF0110F00CEFD0E /* FilterCell.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -726,6 +767,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		89DF07052AF011C200892B1D /* SubFilters */ = {
+			isa = PBXGroup;
+			children = (
+				89DF07062AF0122A00892B1D /* SubFiltersCell.swift */,
+				89DF07072AF0122A00892B1D /* SubFiltersCell.xib */,
+			);
+			path = SubFilters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -802,6 +852,7 @@
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
+				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
@@ -810,6 +861,7 @@
 				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
+				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 			);
@@ -884,6 +936,7 @@
 			files = (
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
+				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
@@ -944,6 +997,7 @@
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
+				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
@@ -951,8 +1005,10 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
+				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
+				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
@@ -1116,7 +1172,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1150,7 +1206,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1244,7 +1300,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1332,7 +1388,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

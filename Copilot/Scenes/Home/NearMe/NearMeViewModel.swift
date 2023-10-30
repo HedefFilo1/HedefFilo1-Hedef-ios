@@ -9,6 +9,7 @@ import Foundation
 
 protocol NearMeViewModelCoordinatorDelegate: AnyObject {
     func getBack()
+    func presentFilters()
 }
 
 protocol NearMeViewModelDelegate: AnyObject {
@@ -18,6 +19,7 @@ protocol NearMeViewModelDelegate: AnyObject {
 protocol NearMeViewModelType: AnyObject {
     var delegate: NearMeViewModelDelegate? { get set }
     func getBack()
+    func presentFilters()
 }
 
 class NearMeViewModel: NearMeViewModelType {
@@ -30,4 +32,7 @@ class NearMeViewModel: NearMeViewModelType {
         coordinatorDelegate?.getBack()
     }
     
+    func presentFilters() {
+        coordinatorDelegate?.presentFilters()
+    }
 }
