@@ -16,7 +16,7 @@ class Network {
     
     static func getBasicHeaders() -> [String: String] {
         return [
-//            "accept-language": "tr",
+            "accept-language": "tr",
             "accept": "*/*",
             "Content-Type": "application/json"
         ]

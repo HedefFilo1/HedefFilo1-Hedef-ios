@@ -40,7 +40,7 @@ class LoginViewModel: LoginViewModelType {
     }
     
     func login(email: String, password: String) {
-//
+        //
         Loading.shared.show(title: Strings.loading)
         
         // just for test
@@ -50,14 +50,14 @@ class LoginViewModel: LoginViewModelType {
         }
         
         APIService.login(email: email,
-                          password: password) { [weak self] model, _ in
+                         password: password) { [weak self] model, error in
             
             Loading.shared.hide()
             guard let self = self else {return}
             
-            guard model != nil else {
-                self.delegate?.showError(title: Strings.incorrectInfo,
-                                         message: Strings.loginTryAgainMessage)
+            if let error = error {
+                self.delegate?.showError(title: error.title,
+                                         message: error.message)
                 return
             }
             self.goToMain()

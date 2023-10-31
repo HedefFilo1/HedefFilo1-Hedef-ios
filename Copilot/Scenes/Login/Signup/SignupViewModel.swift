@@ -47,9 +47,9 @@ class SignupViewModel: SignupViewModelType {
             Loading.shared.hide()
             guard let self = self else {return}
             
-            if error != nil {
-                self.delegate?.showError(title: Strings.incorrectInfo,
-                                         message: Strings.loginTryAgainMessage)
+            if let error = error {
+                self.delegate?.showError(title: error.title,
+                                         message: error.message)
                 return
             }
             
