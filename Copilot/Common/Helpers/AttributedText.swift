@@ -15,6 +15,20 @@ struct AttributedText {
     var style: FontStyle = .regular
     var textColor: UIColor = .black
     
+    init(text: String, fontSize: CGFloat, style: FontStyle, textColor: UIColor) {
+        self.text = text
+        self.fontSize = fontSize
+        self.style = style
+        self.textColor = textColor
+    }
+    
+    init(text: String, type: FontTypographyType) {
+        self.text = text
+        fontSize = type.style.0.size
+        style = type.style.0.fontStyle
+        textColor = type.style.1
+    }
+    
     static func createString(texts: [AttributedText]) -> NSMutableAttributedString {
         
         let attr: NSMutableAttributedString = NSMutableAttributedString(string: "")

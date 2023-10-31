@@ -15,6 +15,8 @@
 		890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */; };
 		890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDB2ACEC80400F053DA /* PopupViewController.swift */; };
 		890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDD2ACEC84600F053DA /* SheetViewController.swift */; };
+		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
+		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
@@ -122,6 +124,14 @@
 		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
 		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
 		89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07072AF0122A00892B1D /* SubFiltersCell.xib */; };
+		89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF070B2AF0F18000892B1D /* StandingsViewModel.swift */; };
+		89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF070D2AF0F18A00892B1D /* StandingsViewController.swift */; };
+		89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07112AF0F4DA00892B1D /* StandingCell.swift */; };
+		89DF07142AF0F4DA00892B1D /* StandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07122AF0F4DA00892B1D /* StandingCell.xib */; };
+		89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07162AF0F4FE00892B1D /* StandingItemCell.swift */; };
+		89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07172AF0F4FE00892B1D /* StandingItemCell.xib */; };
+		89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF071B2AF0F8A100892B1D /* PointsView.xib */; };
+		89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF071D2AF0F8B900892B1D /* PointsView.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +146,8 @@
 		890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopupViewController.swift; sourceTree = "<group>"; };
 		890D7CDB2ACEC80400F053DA /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		890D7CDD2ACEC84600F053DA /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
+		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -246,6 +258,14 @@
 		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
 		89DF07072AF0122A00892B1D /* SubFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFiltersCell.xib; sourceTree = "<group>"; };
+		89DF070B2AF0F18000892B1D /* StandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewModel.swift; sourceTree = "<group>"; };
+		89DF070D2AF0F18A00892B1D /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		89DF07112AF0F4DA00892B1D /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
+		89DF07122AF0F4DA00892B1D /* StandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandingCell.xib; sourceTree = "<group>"; };
+		89DF07162AF0F4FE00892B1D /* StandingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingItemCell.swift; sourceTree = "<group>"; };
+		89DF07172AF0F4FE00892B1D /* StandingItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandingItemCell.xib; sourceTree = "<group>"; };
+		89DF071B2AF0F8A100892B1D /* PointsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsView.xib; sourceTree = "<group>"; };
+		89DF071D2AF0F8B900892B1D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +320,15 @@
 				890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */,
 			);
 			path = popup;
+			sourceTree = "<group>";
+		};
+		891B60C92AF1105500D6F09C /* Points */ = {
+			isa = PBXGroup;
+			children = (
+				891B60CA2AF1107300D6F09C /* PointsCell.swift */,
+				891B60CB2AF1107300D6F09C /* PointsCell.xib */,
+			);
+			path = Points;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -370,6 +399,7 @@
 				89941D562AEECFD700CEFD0E /* Home */,
 				89941D512AEECFAD00CEFD0E /* NearMe */,
 				89941D5C2AF010BE00CEFD0E /* Filters */,
+				89DF070A2AF0F16D00892B1D /* Standings */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -384,6 +414,7 @@
 				896CB3612AD71D040048025A /* NearMe */,
 				896CB3662AD722390048025A /* TireInfo */,
 				896CB36B2AD727230048025A /* MaintainInfo */,
+				891B60C92AF1105500D6F09C /* Points */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -658,6 +689,7 @@
 		89C55DCC2AC4A53600C3066A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				89DF071A2AF0F87E00892B1D /* PointsView */,
 				892A8D0A2AC4E6600020C1C4 /* ScrollTouchHandler.swift */,
 				891D1C942ACAB1A500457C17 /* CPButton.swift */,
 				892A8D0C2AC4E6FF0020C1C4 /* CPLightButton.swift */,
@@ -776,6 +808,52 @@
 			path = SubFilters;
 			sourceTree = "<group>";
 		};
+		89DF070A2AF0F16D00892B1D /* Standings */ = {
+			isa = PBXGroup;
+			children = (
+				89DF070B2AF0F18000892B1D /* StandingsViewModel.swift */,
+				89DF070D2AF0F18A00892B1D /* StandingsViewController.swift */,
+				89DF070F2AF0F4B400892B1D /* Cell */,
+			);
+			path = Standings;
+			sourceTree = "<group>";
+		};
+		89DF070F2AF0F4B400892B1D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89DF07102AF0F4C900892B1D /* Standing */,
+				89DF07152AF0F4E000892B1D /* StandingItem */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89DF07102AF0F4C900892B1D /* Standing */ = {
+			isa = PBXGroup;
+			children = (
+				89DF07112AF0F4DA00892B1D /* StandingCell.swift */,
+				89DF07122AF0F4DA00892B1D /* StandingCell.xib */,
+			);
+			path = Standing;
+			sourceTree = "<group>";
+		};
+		89DF07152AF0F4E000892B1D /* StandingItem */ = {
+			isa = PBXGroup;
+			children = (
+				89DF07162AF0F4FE00892B1D /* StandingItemCell.swift */,
+				89DF07172AF0F4FE00892B1D /* StandingItemCell.xib */,
+			);
+			path = StandingItem;
+			sourceTree = "<group>";
+		};
+		89DF071A2AF0F87E00892B1D /* PointsView */ = {
+			isa = PBXGroup;
+			children = (
+				89DF071B2AF0F8A100892B1D /* PointsView.xib */,
+				89DF071D2AF0F8B900892B1D /* PointsView.swift */,
+			);
+			path = PointsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -840,8 +918,10 @@
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
+				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
+				89DF07142AF0F4DA00892B1D /* StandingCell.xib in Resources */,
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
@@ -854,6 +934,8 @@
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
+				89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */,
+				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
@@ -946,6 +1028,7 @@
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,
+				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
@@ -960,6 +1043,7 @@
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
+				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
@@ -968,6 +1052,7 @@
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
+				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
@@ -1007,7 +1092,9 @@
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
+				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
+				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
 				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
@@ -1016,6 +1103,7 @@
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
+				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
@@ -1161,7 +1249,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1195,7 +1283,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1289,7 +1377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1377,7 +1465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

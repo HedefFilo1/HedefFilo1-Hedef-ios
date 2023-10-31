@@ -50,6 +50,14 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func goToStandings() {
+        let viewController: StandingsViewController = storyboard.instantiateViewController()
+        let viewModel = StandingsViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
@@ -66,6 +74,10 @@ extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
         filtersViewController = viewController
         navigationController.present(viewController, animated: true)
     }
+}
+
+extension HomeCoordinator: StandingsViewModelCoordinatorDelegate {
+    
 }
 
 extension HomeCoordinator: FiltersViewModelCoordinatorDelegate {

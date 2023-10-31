@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol HomeContentCellDelegate: AnyObject {
+protocol HomeContentCellDelegate: PointsCellDelegate {
     func didSelectNearMe()
 }
 
@@ -29,6 +29,7 @@ class HomeContentCell: UICollectionViewCell, Reusable {
         collectionView.register(cellType: NearMeCell.self)
         collectionView.register(cellType: TireInfoCell.self)
         collectionView.register(cellType: MaintainInfoCell.self)
+        collectionView.register(cellType: PointsCell.self)
         collectionView.contentInset.top = 24
         collectionView.contentInset.bottom = 32
         applyStyles()
@@ -45,7 +46,7 @@ class HomeContentCell: UICollectionViewCell, Reusable {
 extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -64,6 +65,11 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             
         case 3:
             let cell: MaintainInfoCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+            
+        case 4:
+            let cell: PointsCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = delegate
             return cell
         
         default:
@@ -91,6 +97,9 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             
         case 3:
             height = 112
+        
+        case 4:
+            height = 146
         
         default:
             break

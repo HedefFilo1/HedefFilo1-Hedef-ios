@@ -8,7 +8,8 @@
 import Foundation
 
 protocol HomeViewModelCoordinatorDelegate: AnyObject {
- func goToNearMe()
+    func goToNearMe()
+    func goToStandings()
 }
 
 protocol HomeViewModelViewDelegate: AnyObject {
@@ -18,6 +19,7 @@ protocol HomeViewModelViewDelegate: AnyObject {
 protocol HomeViewModelType: AnyObject {
     var delegate: HomeViewModelViewDelegate? { get set }
     func goToNearMe()
+    func goToStandings()
 }
 
 class HomeViewModel: HomeViewModelType {
@@ -26,7 +28,11 @@ class HomeViewModel: HomeViewModelType {
     var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
     weak var delegate: HomeViewModelViewDelegate?
     
-    func goToNearMe(){
+    func goToNearMe() {
         coordinatorDelegate?.goToNearMe()
+    }
+    
+    func goToStandings() {
+        coordinatorDelegate?.goToStandings()
     }
 }

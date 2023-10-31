@@ -58,8 +58,14 @@ enum FontTypographyType {
     /// black size(16) Medium(500)
     case blackS16M500
    
+    /// black size(14) Bold(700)
+    case blackS14B700
+    
     /// black size(14) Medium(500)
     case blackS14M500
+    
+    /// black size(14) Regular(400)
+    case blackS14R400
     
     /// black size(12) Bold(700)
     case blackS12R700
@@ -72,6 +78,9 @@ enum FontTypographyType {
     
     /// textGrey size(12) Regular(400)
     case greyS12R400
+    
+    /// textGrey size(14) Regular(400)
+    case greyS14R400
     
     /// textGrey size(16) Regular(400)
     case greyS16B400
@@ -87,6 +96,9 @@ enum FontTypographyType {
     
     /// theme size(20) Bold(700)
     case themeS20B700
+    
+    /// theme size(12) Bold(700)
+    case themeS12B700
     
     /// theme size(12) Regular(400)
     case themeS12R400
@@ -121,8 +133,14 @@ enum FontTypographyType {
         case .blackS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .black)
         
+        case .blackS14B700:
+            return (TextStyle(fontStyle: .bold, size: 14), color: .black)
+            
         case .blackS14M500:
             return (TextStyle(fontStyle: .medium, size: 14), color: .black)
+            
+        case .blackS14R400:
+            return (TextStyle(fontStyle: .regular, size: 14), color: .black)
             
         case .blackS16R400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .black)
@@ -147,6 +165,9 @@ enum FontTypographyType {
             
         case .greyS12M500:
             return (TextStyle(fontStyle: .medium, size: 12), color: .textGrey)
+        
+        case .greyS14R400:
+            return (TextStyle(fontStyle: .regular, size: 14), color: .textGrey)
             
         case .greyS16B400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .textGrey)
@@ -159,6 +180,9 @@ enum FontTypographyType {
             
         case .themeS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .theme)
+            
+        case .themeS12B700:
+            return (TextStyle(fontStyle: .bold, size: 12), color: .theme)
         
         case .themeS12R400:
             return (TextStyle(fontStyle: .regular, size: 12), color: .theme)

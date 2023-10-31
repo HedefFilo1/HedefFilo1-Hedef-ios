@@ -36,7 +36,7 @@ struct APIResponseError {
 
 struct BaseErrorResponse: Decodable {
     //    let code: String
-    let status: Int
+//    let status: String?
     let message: String
 //    let exception: BaseErrorResponseException
     let error: String
@@ -274,7 +274,7 @@ class APIRequest<T: Decodable> {
         do {
             let baseErrorResponse = try JSONDecoder().decode(BaseErrorResponse.self, from: data)
             
-            let err = APIResponseError(code: String(baseErrorResponse.status),
+            let err = APIResponseError(code: "",
                                        title: baseErrorResponse.errorTitle,
                                        message: baseErrorResponse.errorMessage,
                                        baseErrorResponse: baseErrorResponse)

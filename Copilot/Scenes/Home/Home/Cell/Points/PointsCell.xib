@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PointsCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="158"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="158"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puan Durumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ou0-LW-dBa">
+                        <rect key="frame" x="0.0" y="0.0" width="174" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRedRight" translatesAutoresizingMaskIntoConstraints="NO" id="rjY-vg-CfF">
+                        <rect key="frame" x="347" y="2.6666666666666661" width="16" height="15.999999999999998"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="uOj-hz-snH"/>
+                            <constraint firstAttribute="height" constant="16" id="vLa-Ws-j8X"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Nasıl Puan Kazanırım" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Fz-YbC">
+                        <rect key="frame" x="182" y="-6.6666666666666679" width="159" height="34.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajW-zG-rFV">
+                        <rect key="frame" x="182" y="-6.6666666666666679" width="181" height="34.333333333333336"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="didTapSeeAll" destination="gTV-IL-0wX" eventType="touchUpInside" id="1KG-T9-6kK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puanın: 420" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtC-hZ-kLM">
+                        <rect key="frame" x="0.0" y="29" width="91.333333333333329" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-O0-F8u" customClass="PointsView" customModule="Copilot" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="50" width="363" height="82"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="82" id="I3b-M0-kcM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zRq-O0-F8u" firstAttribute="top" secondItem="VtC-hZ-kLM" secondAttribute="bottom" id="0O1-wM-Ll7"/>
+                <constraint firstItem="ajW-zG-rFV" firstAttribute="trailing" secondItem="rjY-vg-CfF" secondAttribute="trailing" id="3Np-1o-yct"/>
+                <constraint firstItem="zRq-O0-F8u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5uz-pb-Vvw"/>
+                <constraint firstItem="Ou0-LW-dBa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BRT-oa-vRU"/>
+                <constraint firstItem="dew-Fz-YbC" firstAttribute="leading" secondItem="Ou0-LW-dBa" secondAttribute="trailing" constant="8" id="Etb-LJ-C6A"/>
+                <constraint firstItem="rjY-vg-CfF" firstAttribute="centerY" secondItem="Ou0-LW-dBa" secondAttribute="centerY" id="K4v-9p-2Gi"/>
+                <constraint firstItem="rjY-vg-CfF" firstAttribute="leading" secondItem="dew-Fz-YbC" secondAttribute="trailing" constant="6" id="NfE-zt-kTo"/>
+                <constraint firstItem="ajW-zG-rFV" firstAttribute="bottom" secondItem="dew-Fz-YbC" secondAttribute="bottom" id="Qqo-8Q-PZg"/>
+                <constraint firstItem="Ou0-LW-dBa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="REa-m1-w5K"/>
+                <constraint firstItem="dew-Fz-YbC" firstAttribute="centerY" secondItem="Ou0-LW-dBa" secondAttribute="centerY" id="Zfg-pX-jZf"/>
+                <constraint firstAttribute="trailing" secondItem="rjY-vg-CfF" secondAttribute="trailing" id="d9q-ej-Via"/>
+                <constraint firstItem="ajW-zG-rFV" firstAttribute="top" secondItem="dew-Fz-YbC" secondAttribute="top" id="deQ-5n-JkU"/>
+                <constraint firstAttribute="trailing" secondItem="zRq-O0-F8u" secondAttribute="trailing" id="fJV-ao-ffw"/>
+                <constraint firstItem="ajW-zG-rFV" firstAttribute="leading" secondItem="dew-Fz-YbC" secondAttribute="leading" id="gc3-ru-bI2"/>
+                <constraint firstItem="VtC-hZ-kLM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iAr-Pp-nXO"/>
+                <constraint firstItem="VtC-hZ-kLM" firstAttribute="top" secondItem="Ou0-LW-dBa" secondAttribute="bottom" constant="8" id="jM3-gy-gmP"/>
+            </constraints>
+            <size key="customSize" width="363" height="158"/>
+            <connections>
+                <outlet property="howLabel" destination="dew-Fz-YbC" id="cqI-T3-izX"/>
+                <outlet property="pointsLabel" destination="VtC-hZ-kLM" id="ibL-rn-3Gq"/>
+                <outlet property="pointsView" destination="zRq-O0-F8u" id="wp2-7g-JQJ"/>
+                <outlet property="titleLabel" destination="Ou0-LW-dBa" id="7Mw-bZ-KAJ"/>
+            </connections>
+            <point key="canvasLocation" x="101.5267175572519" y="57.74647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrowRedRight" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
         return viewModel
     }()
     
+    @IBOutlet weak var logoutIcon: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,6 +33,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//        viewModel.goToStandings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,9 +59,15 @@ class HomeViewController: UIViewController {
     
     private func applyStyles() {
         view.backgroundColor = .secondRed
+        logoutIcon.image = logoutIcon.image?.withRenderingMode(.alwaysTemplate)
+        logoutIcon.tintColor = .white
     }
     
     @IBAction func didTapNotificationButton() {
+    }
+    
+    @IBAction func didTapLogoutButton() {
+        App.appCoordinator?.restart()
     }
     
 }
@@ -104,7 +112,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             height = 205
             
         case 2:
-            height = 684
+            height = 684 + 140 + 20
             
         default:
             break
@@ -123,6 +131,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 }
 
 extension HomeViewController: HomeContentCellDelegate {
+    
+    func seeAllPoints() {
+        viewModel.goToStandings()
+    }
+    
     func didSelectNearMe() {
         viewModel.goToNearMe()
     }

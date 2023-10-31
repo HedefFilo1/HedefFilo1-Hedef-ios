@@ -611,60 +611,60 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Search Filter</string>
         </dict>
         
-        <key></key>
+        <key>standings</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Puan Durumu</string>
             <key>en</key>
-            <string></string>
+            <string>Standings</string>
         </dict>
         
-        <key></key>
+        <key>createProccessRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Süreçsel Talep Oluştur</string>
             <key>en</key>
-            <string></string>
+            <string>Create Process Request</string>
         </dict>
         
-        <key></key>
+        <key>fillOutSatisfaction</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Memnuniyet Anketi Doldur</string>
             <key>en</key>
-            <string></string>
+            <string>Fill out a Satisfaction Survey</string>
         </dict>
         
-        <key></key>
+        <key>createServiceRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis Talebi Oluştur</string>
             <key>en</key>
-            <string></string>
+            <string>Create a Service Request</string>
         </dict>
         
-        <key></key>
+        <key>createProductRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ürün Talebi Oluştur</string>
             <key>en</key>
-            <string></string>
+            <string>Create Product Request</string>
         </dict>
         
-        <key></key>
+        <key>yourScore</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Puanın</string>
             <key>en</key>
-            <string></string>
+            <string>Your score</string>
         </dict>
         
-        <key></key>
+        <key>point</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Puan</string>
             <key>en</key>
-            <string></string>
+            <string>Point</string>
         </dict>
         
         <key></key>
