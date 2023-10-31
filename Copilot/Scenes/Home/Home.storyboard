@@ -548,6 +548,102 @@
             </objects>
             <point key="canvasLocation" x="2455.7251908396947" y="-2.1126760563380285"/>
         </scene>
+        <!--Used View Controller-->
+        <scene sceneID="WEu-o8-KC1">
+            <objects>
+                <viewController storyboardIdentifier="KMUsedViewController" id="zEw-9m-uh0" customClass="KMUsedViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5F-qO-dBP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIQ-ra-SKC">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanılan KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrA-05-516">
+                                        <rect key="frame" x="145.66666666666666" y="24" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanılan KM Girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIV-ra-lx9" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="69" width="361" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="9FH-Hg-5dh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="33X-ab-R4k">
+                                        <rect key="frame" x="345" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="2p4-6m-gl2"/>
+                                            <constraint firstAttribute="height" constant="24" id="E0L-Lg-Rqh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-Il-szl">
+                                        <rect key="frame" x="337" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="E5W-BH-SBX"/>
+                                            <constraint firstAttribute="height" constant="40" id="S6r-08-x28"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapClose:" destination="zEw-9m-uh0" eventType="touchUpInside" id="kGt-Ef-BYV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEv-DW-u1J" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="157" width="361" height="56"/>
+                                        <color key="backgroundColor" name="exactGrey"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="uzl-hQ-jL8"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Kaydet">
+                                            <color key="titleColor" name="fieldDescription"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSave:" destination="zEw-9m-uh0" eventType="touchUpInside" id="Jrk-AQ-bVS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xrA-05-516" firstAttribute="centerX" secondItem="mIQ-ra-SKC" secondAttribute="centerX" id="12d-oO-Bkb"/>
+                                    <constraint firstItem="HEv-DW-u1J" firstAttribute="top" secondItem="BIV-ra-lx9" secondAttribute="bottom" constant="32" id="75g-QA-1c2"/>
+                                    <constraint firstItem="28Q-Il-szl" firstAttribute="centerY" secondItem="33X-ab-R4k" secondAttribute="centerY" id="9gn-ta-sRi"/>
+                                    <constraint firstItem="28Q-Il-szl" firstAttribute="centerX" secondItem="33X-ab-R4k" secondAttribute="centerX" id="GFA-v6-HHO"/>
+                                    <constraint firstItem="xrA-05-516" firstAttribute="top" secondItem="mIQ-ra-SKC" secondAttribute="top" constant="24" id="RNG-bc-baA"/>
+                                    <constraint firstAttribute="trailing" secondItem="BIV-ra-lx9" secondAttribute="trailing" constant="16" id="WWu-SS-y7b"/>
+                                    <constraint firstItem="HEv-DW-u1J" firstAttribute="leading" secondItem="mIQ-ra-SKC" secondAttribute="leading" constant="16" id="bAq-xb-Xxc"/>
+                                    <constraint firstAttribute="trailing" secondItem="HEv-DW-u1J" secondAttribute="trailing" constant="16" id="bry-ty-Qb7"/>
+                                    <constraint firstItem="xrA-05-516" firstAttribute="top" secondItem="28Q-Il-szl" secondAttribute="bottom" constant="-32" id="gAB-h6-IyV"/>
+                                    <constraint firstItem="BIV-ra-lx9" firstAttribute="leading" secondItem="mIQ-ra-SKC" secondAttribute="leading" constant="16" id="gu0-pP-KIw"/>
+                                    <constraint firstItem="BIV-ra-lx9" firstAttribute="top" secondItem="xrA-05-516" secondAttribute="bottom" constant="24" id="iAy-7d-czV"/>
+                                    <constraint firstAttribute="trailing" secondItem="33X-ab-R4k" secondAttribute="trailing" constant="24" id="p6U-JF-HTe"/>
+                                    <constraint firstItem="33X-ab-R4k" firstAttribute="top" secondItem="mIQ-ra-SKC" secondAttribute="top" constant="24" id="zgM-Ox-sf0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1G4-9o-4b2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mIQ-ra-SKC" secondAttribute="bottom" id="74V-3v-Tid"/>
+                            <constraint firstItem="mIQ-ra-SKC" firstAttribute="top" secondItem="1G4-9o-4b2" secondAttribute="top" id="KL6-rd-146"/>
+                            <constraint firstItem="mIQ-ra-SKC" firstAttribute="leading" secondItem="d5F-qO-dBP" secondAttribute="leading" id="KYw-bI-rLY"/>
+                            <constraint firstAttribute="trailing" secondItem="mIQ-ra-SKC" secondAttribute="trailing" id="d32-VJ-S53"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="mIQ-ra-SKC" id="drf-dp-ogk"/>
+                        <outlet property="kmTextField" destination="BIV-ra-lx9" id="ZPB-zb-KlF"/>
+                        <outlet property="saveButton" destination="HEv-DW-u1J" id="SBm-r9-YcA"/>
+                        <outlet property="titleLabel" destination="xrA-05-516" id="Ubp-U4-JmN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVc-LI-KiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3222.1374045801526" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>

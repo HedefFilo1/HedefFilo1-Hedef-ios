@@ -19,6 +19,7 @@ class HomeCoordinator: Coordinator {
     weak var delegate: HomeCoordinatorDelegate?
     
     var filtersViewController: FiltersViewController?
+    var kmUsedViewController: KMUsedViewController?
     
     var homeViewModel: HomeViewModel {
         let viewModel = HomeViewModel()
@@ -58,6 +59,16 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func presentKMUsed() {
+        let viewController: KMUsedViewController = storyboard.instantiateViewController()
+        let viewModel = KMUsedViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewController.viewModel = viewModel
+        kmUsedViewController = viewController
+        navigationController.present(viewController, animated: true)
+    }
 }
 
 extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
@@ -83,6 +94,12 @@ extension HomeCoordinator: StandingsViewModelCoordinatorDelegate {
 extension HomeCoordinator: FiltersViewModelCoordinatorDelegate {
     func dismiss() {
         filtersViewController?.dismiss(animated: true)
+    }
+}
+
+extension HomeCoordinator: KMUsedViewModelCoordinatorDelegate {
+    func dismiss(_: KMUsedViewModelType) {
+        kmUsedViewController?.dismiss(animated: true)
     }
 }
 

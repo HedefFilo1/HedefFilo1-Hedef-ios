@@ -403,6 +403,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>KM used</string>
         </dict>
         
+        <key>enterUsedKM</key>
+        <dict>
+            <key>tr</key>
+            <string>Kullanılan KM Girin</string>
+            <key>en</key>
+            <string>Enter used KM</string>
+        </dict>
+        
         <key>makeChange</key>
         <dict>
             <key>tr</key>
@@ -667,12 +675,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Point</string>
         </dict>
         
-        <key></key>
+        <key>save</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kaydet</string>
             <key>en</key>
-            <string></string>
+            <string>Save</string>
         </dict>
         
         <key></key>

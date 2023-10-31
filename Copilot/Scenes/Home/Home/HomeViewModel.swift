@@ -10,6 +10,7 @@ import Foundation
 protocol HomeViewModelCoordinatorDelegate: AnyObject {
     func goToNearMe()
     func goToStandings()
+    func presentKMUsed()
 }
 
 protocol HomeViewModelViewDelegate: AnyObject {
@@ -20,6 +21,7 @@ protocol HomeViewModelType: AnyObject {
     var delegate: HomeViewModelViewDelegate? { get set }
     func goToNearMe()
     func goToStandings()
+    func presentKMUsed()
 }
 
 class HomeViewModel: HomeViewModelType {
@@ -34,5 +36,9 @@ class HomeViewModel: HomeViewModelType {
     
     func goToStandings() {
         coordinatorDelegate?.goToStandings()
+    }
+    
+    func presentKMUsed() {
+        coordinatorDelegate?.presentKMUsed()
     }
 }

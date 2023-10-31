@@ -340,6 +340,14 @@ struct Strings {
         return localized(string: "point")
     }
     
+    static var enterUsedKM: String {
+        return localized(string: "enterUsedKM")
+    }
+    
+    static var save: String {
+        return localized(string: "save")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

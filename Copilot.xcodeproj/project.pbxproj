@@ -17,6 +17,8 @@
 		890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDD2ACEC84600F053DA /* SheetViewController.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
+		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
+		891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60D12AF1206500D6F09C /* KMUsedViewController.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
@@ -148,6 +150,8 @@
 		890D7CDD2ACEC84600F053DA /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
+		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
+		891B60D12AF1206500D6F09C /* KMUsedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewController.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -331,6 +335,15 @@
 			path = Points;
 			sourceTree = "<group>";
 		};
+		891B60CE2AF1204C00D6F09C /* KMUsed */ = {
+			isa = PBXGroup;
+			children = (
+				891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */,
+				891B60D12AF1206500D6F09C /* KMUsedViewController.swift */,
+			);
+			path = KMUsed;
+			sourceTree = "<group>";
+		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +413,7 @@
 				89941D512AEECFAD00CEFD0E /* NearMe */,
 				89941D5C2AF010BE00CEFD0E /* Filters */,
 				89DF070A2AF0F16D00892B1D /* Standings */,
+				891B60CE2AF1204C00D6F09C /* KMUsed */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1077,6 +1091,7 @@
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
+				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
@@ -1091,6 +1106,7 @@
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
+				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
 				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,

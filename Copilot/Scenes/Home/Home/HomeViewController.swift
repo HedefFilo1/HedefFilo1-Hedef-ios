@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        viewModel.goToStandings()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +86,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         case 1:
             let cell: VehicleInfoCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 2:
@@ -127,6 +128,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         24
+    }
+}
+
+extension HomeViewController: VehicleInfoCellDelegate {
+    func didTapKmUsed() {
+        viewModel.presentKMUsed()
     }
 }
 

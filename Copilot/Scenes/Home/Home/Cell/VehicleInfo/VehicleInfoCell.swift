@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol VehicleInfoCellDelegate: AnyObject {
+    func didTapKmUsed()
+}
+
 class VehicleInfoCell: UICollectionViewCell, Reusable {
+    
+    weak var delegate: VehicleInfoCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
@@ -57,5 +63,9 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
         limitLabel.text = Strings.kmLimit
         usedLabel.text = Strings.kmUsed
         changeButton.setTitle(Strings.makeChange, for: .normal)
+    }
+    
+    @IBAction func didTapChangeButton() {
+        delegate?.didTapKmUsed()
     }
 }
