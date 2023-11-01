@@ -50,13 +50,13 @@ class LoginViewModel: LoginViewModelType {
         }
         
         APIService.login(email: email,
-                         password: password) { [weak self] model, error in
+                         password: password) { [weak self] _, error in
             
             Loading.shared.hide()
             guard let self = self else {return}
             
             if let error = error {
-                self.delegate?.showError(title: error.title,
+                self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
                 return
             }

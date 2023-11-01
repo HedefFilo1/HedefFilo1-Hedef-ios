@@ -42,7 +42,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
             guard let self = self else { return }
             
             if let error = error {
-                self.delegate?.showError(title: error.title, message: error.message)
+                self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
             

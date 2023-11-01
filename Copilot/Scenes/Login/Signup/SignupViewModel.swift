@@ -48,7 +48,7 @@ class SignupViewModel: SignupViewModelType {
             guard let self = self else {return}
             
             if let error = error {
-                self.delegate?.showError(title: error.title,
+                self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
                 return
             }

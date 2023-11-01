@@ -268,6 +268,10 @@ struct Strings {
         return localized(string: "error")
     }
     
+    static var errorTitle: String {
+        return localized(string: "errorTitle")
+    }
+    
     static var clarificationError: String {
         return localized(string: "clarificationError")
     }
