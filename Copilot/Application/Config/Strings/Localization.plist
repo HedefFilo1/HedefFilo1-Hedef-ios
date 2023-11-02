@@ -358,7 +358,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>passwordHasBeenSent</key>
         <dict>
             <key>tr</key>
-            <string>Şifreni Gönderildi</string>
+            <string>Şifreniz Gönderildi</string>
             <key>en</key>
             <string>Your password has been sent</string>
         </dict>
