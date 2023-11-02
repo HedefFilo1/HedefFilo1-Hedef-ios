@@ -76,7 +76,10 @@ class SignupViewController: UIViewController {
         
         phoneTextField.keyboardType = .phonePad
         taxTextField.keyboardType = .numberPad
+        plateNumberTextField.keyboardType = .namePhonePad
         licenseTextField.keyboardType = .namePhonePad
+        plateNumberTextField.autocapitalizationType = .allCharacters
+        licenseTextField.autocapitalizationType = .allCharacters
         
         phoneTextField.delegate = self
         taxTextField.delegate = self
@@ -144,14 +147,21 @@ class SignupViewController: UIViewController {
     }
     
     @objc func editingChanged(_ textField: UITextField) {
+        if textField == plateNumberTextField || textField == licenseTextField {
+            textField.text = textField.text?.uppercased()
+        }
         setButtonActivation()
     }
     
     @IBAction func didTapClarificationCheckBox(_ sender: UIButton) {
         clarificationCheckBox.isSelected = !clarificationCheckBox.isSelected
+        
         if clarificationCheckBox.isSelected {
             clarificationErrorView.isHidden = true
             setClarificationText()
+        } else {
+            clarificationErrorView.isHidden = false
+            setClarificationText(color: .theme)
         }
         setButtonActivation()
     }

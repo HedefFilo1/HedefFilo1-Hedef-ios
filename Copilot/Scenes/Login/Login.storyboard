@@ -327,7 +327,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-cI-ygE" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="351.99999999999994" width="327" height="56"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTA-g2-Igc" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="439.99999999999994" width="327" height="56"/>
