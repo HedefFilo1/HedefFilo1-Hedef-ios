@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
     @IBOutlet weak var nameTextField: CPTextField!
     @IBOutlet weak var idTextField: CPTextField!
@@ -52,10 +52,7 @@ class ProfileViewController: UIViewController {
         licenseTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         submitButton.isEnabled = false
         
-        phoneTextField.keyboardType = .phonePad
         idTextField.keyboardType = .numberPad
-        
-        phoneTextField.delegate = self
         idTextField.delegate = self
     }
     
@@ -79,7 +76,7 @@ class ProfileViewController: UIViewController {
     
     func setButtonActivation() {
         let name = nameTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount == 11
+        let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
         let tcTax = idTextField.pureTextCount == 11
         let license = licenseTextField.pureTextCount > 0
@@ -106,11 +103,6 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
-        
-        if textField == phoneTextField {
-            textField.text = textField.text?.applyPatternOnNumbers(pattern: CodeStrings.phonePattern, replacementCharacter: "#")
-            return range.location < 12
-        }
         return range.location < 11
     }
 }

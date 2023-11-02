@@ -22,7 +22,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var nameTextField: CPTextField!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
     @IBOutlet weak var taxTextField: CPTextField!
     @IBOutlet weak var plateNumberTextField: CPTextField!
@@ -81,7 +81,6 @@ class SignupViewController: UIViewController {
         plateNumberTextField.autocapitalizationType = .allCharacters
         licenseTextField.autocapitalizationType = .allCharacters
         
-        phoneTextField.delegate = self
         taxTextField.delegate = self
         
         clarificationErrorView.isHidden = true
@@ -135,7 +134,7 @@ class SignupViewController: UIViewController {
     
     func setButtonActivation() {
         let name = nameTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount == 11
+        let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
         let tcTax = taxTextField.pureTextCount == 11
         let plate = plateNumberTextField.pureTextCount > 0

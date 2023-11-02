@@ -352,6 +352,10 @@ struct Strings {
         return localized(string: "save")
     }
     
+    static var enterValidPhone: String {
+        return localized(string: "enterValidPhone")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

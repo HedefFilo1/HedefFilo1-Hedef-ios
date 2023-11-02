@@ -20,7 +20,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var sendButton: CPButton!
     
     override func viewDidLoad() {
@@ -38,7 +38,6 @@ class ForgotPasswordViewController: UIViewController {
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         sendButton.isEnabled = false
-        phoneTextField.delegate = self
         phoneTextField.keyboardType = .phonePad
     }
     
@@ -58,7 +57,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @objc func editingChanged(_ textField: UITextField) {
         let email = emailTextFiled.validate()
-        let phone = phoneTextField.pureTextCount == 11
+        let phone = phoneTextField.validate()
         sendButton.isEnabled = email && phone
     }
     
@@ -69,13 +68,6 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func didTapBack(_ sender: Any) {
         viewModel.getBack()
-    }
-}
-
-extension ForgotPasswordViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.isEmpty { return true }
-        return range.location < 11
     }
 }
 

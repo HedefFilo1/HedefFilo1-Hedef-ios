@@ -81,6 +81,7 @@
 		899CF5732AE18F47006D85E4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5722AE18F47006D85E4 /* Login.swift */; };
 		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
 		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
+		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
 		89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */; };
 		89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A412AD85EC900D3BE80 /* TabBarView.swift */; };
 		89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */; };
@@ -217,6 +218,7 @@
 		899CF5722AE18F47006D85E4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
 		89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		89B07A412AD85EC900D3BE80 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 				89DAB8032AC733F50098BA67 /* CPTextField.swift */,
 				89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */,
 				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
+				899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */,
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
 				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
@@ -1090,6 +1093,7 @@
 				89B07A472AD86CFC00D3BE80 /* MenuViewController.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
+				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,

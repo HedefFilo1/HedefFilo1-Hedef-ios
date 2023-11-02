@@ -534,9 +534,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>passwordsShouldBeSame</key>
         <dict>
             <key>tr</key>
-            <string>Şifreler aynı olmalı</string>
+            <string>Şifreleriniz birbiriyle eşleşmelidir.</string>
             <key>en</key>
-            <string>Passwords should be same</string>
+            <string>Passwords should match</string>
         </dict>
         
         <key>loading</key>
@@ -691,12 +691,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Save</string>
         </dict>
         
-        <key></key>
+        <key>enterValidPhone</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen geçerli bir telefon numarası giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please enter a valid phone number.</string>
         </dict>
         
         <key></key>
