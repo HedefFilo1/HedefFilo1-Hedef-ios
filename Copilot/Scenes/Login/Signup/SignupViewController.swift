@@ -72,6 +72,8 @@ class SignupViewController: UIViewController {
         licenseTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         repeatPasswordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        passwordTextFiled.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
+        repeatPasswordTextFiled.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
         signupButton.isEnabled = false
         
         phoneTextField.keyboardType = .phonePad
@@ -139,17 +141,45 @@ class SignupViewController: UIViewController {
         let tcTax = taxTextField.pureTextCount == 11
         let plate = plateNumberTextField.pureTextCount > 0
         let license = licenseTextField.pureTextCount > 0
-        let password = passwordTextFiled.pureTextCount > 0
-        let repeatPass = repeatPasswordTextFiled.pureTextCount > 0
+        let pass = passwordTextFiled.text ?? ""
+        let repeatPass = repeatPasswordTextFiled.text ?? ""
+        let passes = pass.count > 0 && repeatPass.count > 0 && pass == repeatPass
         let clarification = clarificationCheckBox.isSelected
-        signupButton.isEnabled = name && phone && email && tcTax && plate && license && password && repeatPass && clarification
+        signupButton.isEnabled = name && phone && email && tcTax && plate && license && passes && clarification
     }
     
     @objc func editingChanged(_ textField: UITextField) {
         if textField == plateNumberTextField || textField == licenseTextField {
             textField.text = textField.text?.uppercased()
         }
+        if textField == repeatPasswordTextFiled {
+            let pass = passwordTextFiled.text ?? ""
+            let repeatPass = repeatPasswordTextFiled.text ?? ""
+            if pass == repeatPass {
+                repeatPasswordTextFiled.hideError()
+            }
+        }
         setButtonActivation()
+    }
+    
+    @objc func editingDidEnd(_ textField: UITextField) {
+        let repeatPass = repeatPasswordTextFiled.text ?? ""
+        if textField == passwordTextFiled, repeatPass.count > 0 {
+            checkPasswords()
+        }
+        if textField == repeatPasswordTextFiled {
+            checkPasswords()
+        }
+    }
+    
+    func checkPasswords() {
+        let pass = passwordTextFiled.text ?? ""
+        let repeatPass = repeatPasswordTextFiled.text ?? ""
+        if pass != repeatPass {
+            repeatPasswordTextFiled.showError(message: Strings.passwordsShouldBeSame)
+        } else {
+            repeatPasswordTextFiled.hideError()
+        }
     }
     
     @IBAction func didTapClarificationCheckBox(_ sender: UIButton) {
@@ -194,14 +224,6 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
-        
-        let password = passwordTextFiled.text ?? ""
-        let repeatPass = repeatPasswordTextFiled.text
-        if password != repeatPass {
-            showError(title: Strings.error, message: Strings.passwordsShouldBeSame)
-            return
-        }
-        
         let clarification = clarificationCheckBox.isSelected
         clarificationErrorView.isHidden = clarification
         

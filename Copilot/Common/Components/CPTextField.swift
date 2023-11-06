@@ -14,7 +14,9 @@ class CPTextField: UITextField {
     private let placeholderLabel = UILabel()
     private var validationLabel: UILabel?
     private var placeholderTopConstraint: NSLayoutConstraint!
-   
+    private lazy var errorView = CPErrorView()
+    private var errorViewAdded = false
+    
     var textPadding: UIEdgeInsets {
         return UIEdgeInsets(top: 25, left: 16, bottom: 12, right: 16)
     }
@@ -27,7 +29,7 @@ class CPTextField: UITextField {
             sendActions(for: .editingChanged)
         }
     }
-
+    
     override var text: String? {
         didSet {
         }
@@ -48,14 +50,6 @@ class CPTextField: UITextField {
         }
     }
     
-//    var isRequired = false {
-//        didSet {
-//            if isRequired {
-//                makeRequired()
-//            }
-//        }
-//    }
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -116,23 +110,12 @@ class CPTextField: UITextField {
         placeholderLabel.apply(.greyS15B400)
     }
     
-//    private func makeRequired() {
-//        let text = placeholderLabel.text ?? ""
-//
-//        let attributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-//
-//        let starStr = NSMutableAttributedString(string: "*", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-//
-//        attributedString.append(starStr)
-//        placeholderLabel.attributedText = attributedString
-//    }
-    
     func resetTextField() {
         placeholderTopConstraint.constant = 19
         placeholderLabel.apply(.greyS15B400)
         animate()
     }
- 
+    
     func clear() {
         text = ""
         sendActions(for: .editingDidEnd)
@@ -152,7 +135,7 @@ extension CPTextField: UITextFieldDelegate {
     @objc func didEnd() {
         text = text?.trimmingCharacters(in: .whitespacesAndNewlines)
         if let text = text, text.count > 0 {
-           // checkValidation()
+            // checkValidation()
         } else {
             resetTextField()
         }
@@ -162,7 +145,7 @@ extension CPTextField: UITextFieldDelegate {
 extension CPTextField {
     
     var textCount: Int {
-        var text = self.text ?? ""
+        let text = self.text ?? ""
         return text.count
     }
     
@@ -178,4 +161,24 @@ extension CPTextField {
         return text.components(separatedBy: .whitespaces).joined()
     }
     
+}
+
+// MARK: handle errorView
+extension CPTextField {
+    
+    func showError(message: String) {
+        if !errorViewAdded {
+            errorView.message = message
+            addSubview(errorView)
+            errorView.align(toView: contentView, leading: 0, trailing: 0, height: 16, topToBottom: 4)
+            errorViewAdded = true
+        }
+        contentView.layer.borderColor = UIColor.theme.cgColor
+        errorView.isHidden = false
+    }
+    
+    func hideError() {
+        errorView.isHidden = true
+        contentView.layer.borderColor = UIColor.borderColor.cgColor
+    }
 }

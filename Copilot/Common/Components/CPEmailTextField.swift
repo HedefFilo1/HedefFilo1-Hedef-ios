@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 class CPEmailTextField: CPTextField {
-    
-    private let imageView = UIImageView()
-    private let errorLabel = UILabel()
 
     var isValidText: Bool {
         return validate()
@@ -29,41 +26,23 @@ class CPEmailTextField: CPTextField {
     
     override func setup() {
         super.setup()
-        addErrorViews()
         keyboardType = .emailAddress
         placeholder = Strings.yourEmailAdress
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
     }
     
-    func addErrorViews() {
-        addSubview(imageView)
-        imageView.align(toView: contentView, leading: 0, widthAndHeight: 16, topToBottom: 4)
-        imageView.image = Images.errorIcon
-        
-        addSubview(errorLabel)
-        errorLabel.align(toView: imageView, centerY: 0, leadingToTrailing: 8)
-        errorLabel.text = errorMessage
-        errorLabel.apply(TextStyle(fontStyle: .regular, size: 12), color: .fieldDescription)
-        
-        imageView.isHidden = true
-        errorLabel.isHidden = true
-    }
-    
     @objc func editingChanged() {
         if validate() {
-            imageView.isHidden = true
-            errorLabel.isHidden = imageView.isHidden
-            contentView.layer.borderColor = UIColor.borderColor.cgColor
+            hideError()
         }
     }
     
     @objc func editingDidEnd() {
-        let valid = validate()
-        imageView.isHidden = valid
-        errorLabel.isHidden = imageView.isHidden
-        
-        let color: UIColor = valid ? .borderColor: .theme
-        contentView.layer.borderColor = color.cgColor
+        if validate() {
+            hideError()
+        } else {
+            showError(message: errorMessage)
+        }
     }
 }
