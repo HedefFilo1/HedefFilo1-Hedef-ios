@@ -19,7 +19,17 @@ protocol SignupViewModelDelegate: AnyObject {
 protocol SignupViewModelType: AnyObject {
     var delegate: SignupViewModelDelegate? { get set }
     func goToLogin()
-    func signup(name: String, phone: String, email: String, taxId: String, plateNumber: String, licence: String, password: String)
+    func signup(name: String,
+                surname: String,
+                phone: String,
+                email: String,
+                taxId: String,
+                plateNumber: String,
+                licence: String,
+                password: String,
+                phonePermission: Bool,
+                smsPermission: Bool,
+                emailPermission: Bool)
 }
 
 class SignupViewModel: SignupViewModelType {
@@ -32,17 +42,32 @@ class SignupViewModel: SignupViewModelType {
         coordinatorDelegate?.goToLogin()
     }
     
-    func signup(name: String, phone: String, email: String, taxId: String, plateNumber: String, licence: String, password: String) {
+    func signup(name: String,
+                surname: String,
+                phone: String,
+                email: String,
+                taxId: String,
+                plateNumber: String,
+                licence: String,
+                password: String,
+                phonePermission: Bool,
+                smsPermission: Bool,
+                emailPermission: Bool) {
         
         Loading.shared.show(title: Strings.loading)
         
-        APIService.signup(nameSurname: name,
-                          phoneNumber: phone,
+        let number = phone.components(separatedBy: .whitespaces).joined()
+        APIService.signup(name: name,
+                          surname: surname,
+                          phoneNumber: number,
                           email: email,
                           plateNumber: plateNumber,
                           licenseNumber: licence,
                           password: password,
-                          taxId: taxId) { [weak self] _, error in
+                          taxId: taxId,
+                          phonePermission: phonePermission,
+                          smsPermission: smsPermission,
+                          emailPermission: emailPermission) { [weak self] _, error in
             
             Loading.shared.hide()
             guard let self = self else {return}

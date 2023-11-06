@@ -9,23 +9,31 @@ class APIService {
     
     static var loggingEnabled = true
     
-    static func signup(nameSurname: String,
+    static func signup(name: String,
+                       surname: String,
                        phoneNumber: String,
                        email: String,
                        plateNumber: String,
                        licenseNumber: String,
                        password: String,
                        taxId: String,
+                       phonePermission: Bool,
+                       smsPermission: Bool,
+                       emailPermission: Bool,
                        completion: @escaping (Signup?, APIResponseError?) -> Void) {
-        
         let params = [
-            "nameSurname": nameSurname,
-             "phoneNumber": phoneNumber,
-             "email": email,
-             "plateNumber": plateNumber,
-             "licenseNumber": licenseNumber,
-             "password": password,
-             "taxId": taxId
+            "name": name,
+            "surname": surname,
+            "phoneNumber": phoneNumber,
+            "email": email,
+            "plateNumber": plateNumber,
+            "licenseNumber": licenseNumber,
+            "password": password,
+            "taxId": taxId,
+            "phonePermission": phonePermission,
+            "smsPermission": smsPermission,
+            "emailPermission": emailPermission
+            
         ] as [String: Any]
         
         let req = APIRequest<Signup>(route: "auth/copilot/signup",

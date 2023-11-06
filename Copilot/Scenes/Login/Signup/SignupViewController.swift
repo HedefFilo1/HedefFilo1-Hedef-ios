@@ -22,6 +22,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var surenameTextField: CPTextField!
     @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
     @IBOutlet weak var taxTextField: CPTextField!
@@ -65,6 +66,7 @@ class SignupViewController: UIViewController {
         applyStyle()
         setTexts()
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        surenameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         taxTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -107,7 +109,8 @@ class SignupViewController: UIViewController {
     
     func setTexts() {
         descriptionLabel.text = Strings.signupDescription
-        nameTextField.placeholder = Strings.nameSurname
+        nameTextField.placeholder = Strings.name
+        surenameTextField.placeholder = Strings.surname
         phoneTextField.placeholder = Strings.phoneNumber
         emailTextFiled.placeholder = Strings.yourEmailAdress
         taxTextField.placeholder = Strings.taxIdNumber
@@ -136,6 +139,7 @@ class SignupViewController: UIViewController {
     
     func setButtonActivation() {
         let name = nameTextField.pureTextCount > 0
+        let surname = surenameTextField.pureTextCount > 0
         let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
         let tcTax = taxTextField.pureTextCount == 11
@@ -145,7 +149,7 @@ class SignupViewController: UIViewController {
         let repeatPass = repeatPasswordTextFiled.text ?? ""
         let passes = pass.count > 0 && repeatPass.count > 0 && pass == repeatPass
         let clarification = clarificationCheckBox.isSelected
-        signupButton.isEnabled = name && phone && email && tcTax && plate && license && passes && clarification
+        signupButton.isEnabled = name && surname && phone && email && tcTax && plate && license && passes && clarification
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -231,14 +235,21 @@ class SignupViewController: UIViewController {
             setClarificationText(color: .theme)
             return
         }
+        let phone = telephoneCheckBox.isSelected
+        let sms = smsCheckBox.isSelected
+        let email = emailCheckBox.isSelected
         
         viewModel.signup(name: nameTextField.text ?? "",
+                         surname: surenameTextField.text ?? "",
                          phone: phoneTextField.text ?? "",
                          email: emailTextFiled.text ?? "",
                          taxId: taxTextField.text ?? "",
                          plateNumber: plateNumberTextField.text ?? "",
                          licence: licenseTextField.text ?? "",
-                         password: passwordTextFiled.text ?? "")
+                         password: passwordTextFiled.text ?? "",
+                         phonePermission: phone,
+                         smsPermission: sms,
+                         emailPermission: email)
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {

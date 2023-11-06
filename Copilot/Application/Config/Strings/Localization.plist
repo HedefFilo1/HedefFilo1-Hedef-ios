@@ -167,7 +167,23 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>tr</key>
             <string>İsim Soyisim</string>
             <key>en</key>
-            <string>Name surname</string>
+            <string>Name Surname</string>
+        </dict>
+        
+        <key>name</key>
+        <dict>
+            <key>tr</key>
+            <string>İsim</string>
+            <key>en</key>
+            <string>Name</string>
+        </dict>
+        
+        <key>surname</key>
+        <dict>
+            <key>tr</key>
+            <string>Soyisim</string>
+            <key>en</key>
+            <string>Surname</string>
         </dict>
         
         <key>phoneNumber</key>

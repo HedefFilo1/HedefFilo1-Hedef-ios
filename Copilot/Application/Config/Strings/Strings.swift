@@ -92,6 +92,14 @@ struct Strings {
         return localized(string: "nameSurname")
     }
     
+    static var name: String {
+        return localized(string: "name")
+    }
+    
+    static var surname: String {
+        return localized(string: "surname")
+    }
+    
     static var phoneNumber: String {
         return localized(string: "phoneNumber")
     }
