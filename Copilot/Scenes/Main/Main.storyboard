@@ -229,7 +229,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDD-sp-SFI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Kampanya">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,7 +244,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="KkK-3o-HP4" secondAttribute="trailing" id="1z7-rv-w0i"/>
                                                     <constraint firstAttribute="bottom" secondItem="KkK-3o-HP4" secondAttribute="bottom" id="5ha-lf-r3B"/>
                                                     <constraint firstAttribute="trailing" secondItem="qDD-sp-SFI" secondAttribute="trailing" id="T6v-R1-JL2"/>
-                                                    <constraint firstAttribute="bottom" secondItem="qDD-sp-SFI" secondAttribute="bottom" id="b3D-ZD-bpe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qDD-sp-SFI" secondAttribute="bottom" constant="6" id="b3D-ZD-bpe"/>
                                                     <constraint firstItem="KkK-3o-HP4" firstAttribute="leading" secondItem="5Ke-qq-QMO" secondAttribute="leading" id="iNM-hb-gAp"/>
                                                     <constraint firstItem="qDD-sp-SFI" firstAttribute="leading" secondItem="5Ke-qq-QMO" secondAttribute="leading" id="j2c-XE-i6c"/>
                                                     <constraint firstItem="qDD-sp-SFI" firstAttribute="top" secondItem="5Ke-qq-QMO" secondAttribute="top" id="jL4-Nc-Vuy"/>
@@ -261,7 +261,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-o8-zFR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Haber">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,7 +276,7 @@
                                                     <constraint firstItem="GN0-o8-zFR" firstAttribute="leading" secondItem="0rH-sz-iFc" secondAttribute="leading" id="Gxu-M9-emg"/>
                                                     <constraint firstAttribute="trailing" secondItem="GN0-o8-zFR" secondAttribute="trailing" id="NZT-vf-82y"/>
                                                     <constraint firstItem="SY9-67-ExV" firstAttribute="leading" secondItem="0rH-sz-iFc" secondAttribute="leading" id="Rl6-D9-rUz"/>
-                                                    <constraint firstAttribute="bottom" secondItem="GN0-o8-zFR" secondAttribute="bottom" id="Tro-PP-les"/>
+                                                    <constraint firstAttribute="bottom" secondItem="GN0-o8-zFR" secondAttribute="bottom" constant="6" id="Tro-PP-les"/>
                                                     <constraint firstAttribute="bottom" secondItem="SY9-67-ExV" secondAttribute="bottom" id="eQy-A6-Z4N"/>
                                                     <constraint firstItem="GN0-o8-zFR" firstAttribute="top" secondItem="0rH-sz-iFc" secondAttribute="top" id="g6q-Tr-sRA"/>
                                                     <constraint firstAttribute="trailing" secondItem="SY9-67-ExV" secondAttribute="trailing" id="xnI-s3-iUw"/>
@@ -293,7 +293,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-xi-CHy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Sponsorluk">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -309,7 +309,7 @@
                                                     <constraint firstItem="QUS-pb-MQM" firstAttribute="leading" secondItem="mMe-Mf-KfC" secondAttribute="leading" id="7UN-1n-b9U"/>
                                                     <constraint firstAttribute="trailing" secondItem="cpo-xi-CHy" secondAttribute="trailing" id="DmD-qN-tBa"/>
                                                     <constraint firstItem="cpo-xi-CHy" firstAttribute="top" secondItem="mMe-Mf-KfC" secondAttribute="top" id="SXi-Gc-D4D"/>
-                                                    <constraint firstAttribute="bottom" secondItem="cpo-xi-CHy" secondAttribute="bottom" id="e2i-OF-p4O"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cpo-xi-CHy" secondAttribute="bottom" constant="6" id="e2i-OF-p4O"/>
                                                     <constraint firstAttribute="bottom" secondItem="QUS-pb-MQM" secondAttribute="bottom" id="i6y-LT-18P"/>
                                                     <constraint firstAttribute="trailing" secondItem="QUS-pb-MQM" secondAttribute="trailing" id="rPD-UC-mic"/>
                                                 </constraints>

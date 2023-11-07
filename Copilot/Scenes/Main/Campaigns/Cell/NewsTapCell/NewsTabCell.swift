@@ -1,5 +1,5 @@
 //
-//  CampaignsTabCell.swift
+//  NewsTabCell.swift
 //  Copilot
 //
 //  Created by Jamal on 11/6/23.
@@ -7,11 +7,7 @@
 
 import UIKit
 
-protocol CampaignsTabCellDelegate: AnyObject {
-    func didSelectItem()
-}
-
-class CampaignsOfferTabCell: UICollectionViewCell, Reusable {
+class NewsTabCell: UICollectionViewCell, Reusable {
     
     weak var delegate: CampaignsTabCellDelegate?
     
@@ -26,12 +22,12 @@ class CampaignsOfferTabCell: UICollectionViewCell, Reusable {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: CampaignsTitleCell.self)
-        collectionView.register(cellType: CampaignOfferCell.self)
+        collectionView.register(cellType: NewsCell.self)
         collectionView.contentInset.bottom = 90
     }
 }
 
-extension CampaignsOfferTabCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NewsTabCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -47,18 +43,19 @@ extension CampaignsOfferTabCell: UICollectionViewDataSource, UICollectionViewDel
             return cell
         }
         
-        let cell: CampaignOfferCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: NewsCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = delegate
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: collectionView.frame.width - 48,
-                      height: indexPath.section == 0 ? 84: 296)
+                      height: indexPath.section == 0 ? 84: 272)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

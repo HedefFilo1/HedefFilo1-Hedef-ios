@@ -51,7 +51,7 @@ class MainTabBarController: UITabBarController {
         tabBarView.delegate = self
         view.addSubview(tabBarView)
         selectedIndex = 2
-
+        
 #if DEV_DEBUG
         // just for test
         setSelectedIndex(index: 6)

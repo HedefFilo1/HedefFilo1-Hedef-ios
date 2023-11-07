@@ -15,6 +15,8 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var continueLabel: UILabel!
     
+    weak var delegate: CampaignsTabCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -42,5 +44,9 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
             mainText: AttributedText(text: text, type: .blackS12R400),
             texts: [AttributedText(text: date, type: .blackS12B700)]
         )
+    }
+    
+    @IBAction func didTapContiune() {
+        delegate?.didSelectItem()
     }
 }

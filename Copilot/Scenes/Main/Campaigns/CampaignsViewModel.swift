@@ -21,7 +21,7 @@ protocol CampaignsViewModelType: AnyObject {
 }
 
 class CampaignsViewModel: CampaignsViewModelType {
-   
+    
     weak var coordinatorDelegate: CampaignsViewModelCoordinatorDelegate?
     weak var delegate: CampaignsViewModelDelegate?
     

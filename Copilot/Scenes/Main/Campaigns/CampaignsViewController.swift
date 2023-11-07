@@ -46,7 +46,10 @@ class CampaignsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: CampaignsOfferTabCell.self)
-//        collectionView.contentInset.bottom = 90
+        collectionView.register(cellType: NewsTabCell.self)
+        collectionView.register(cellType: SponsorshipTabCell.self)
+        
+        //        collectionView.contentInset.bottom = 90
     }
     
     func applyStyle() {
@@ -100,11 +103,11 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
             return cell
             
         case 1:
-            let cell: CampaignsOfferTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: NewsTabCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         case 2:
-            let cell: CampaignsOfferTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: SponsorshipTabCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         default:
