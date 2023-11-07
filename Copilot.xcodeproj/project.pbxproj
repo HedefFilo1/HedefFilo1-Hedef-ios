@@ -46,6 +46,8 @@
 		8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */; };
 		8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC4E2AFA5D7F002F1C68 /* SponsorshipCell.xib */; };
 		8935AC512AFA5D87002F1C68 /* SponsorshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */; };
+		8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */; };
+		8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */; };
 		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
 		893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */; };
 		893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */; };
@@ -196,6 +198,8 @@
 		8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipTabCell.swift; sourceTree = "<group>"; };
 		8935AC4E2AFA5D7F002F1C68 /* SponsorshipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorshipCell.xib; sourceTree = "<group>"; };
 		8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipCell.swift; sourceTree = "<group>"; };
+		8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewModel.swift; sourceTree = "<group>"; };
+		8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
 		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
 		893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewController.swift; sourceTree = "<group>"; };
 		893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsOfferTabCell.swift; sourceTree = "<group>"; };
@@ -445,6 +449,15 @@
 				8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */,
 			);
 			path = Sponsorship;
+			sourceTree = "<group>";
+		};
+		8935AC522AFA6733002F1C68 /* CampaignDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */,
+				8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */,
+			);
+			path = CampaignDetail;
 			sourceTree = "<group>";
 		};
 		893EDF5C2AF924A7004E643E /* Campaigns */ = {
@@ -777,6 +790,7 @@
 				89B07A3E2AD85A3E00D3BE80 /* TabBarView */,
 				89B07A432AD86CE100D3BE80 /* Menu */,
 				893EDF5C2AF924A7004E643E /* Campaigns */,
+				8935AC522AFA6733002F1C68 /* CampaignDetail */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1219,6 +1233,7 @@
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
@@ -1235,6 +1250,7 @@
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
+				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CampaignsViewModelCoordinatorDelegate: AnyObject {
-    
+    func goToCampaignDetail()
 }
 
 protocol CampaignsViewModelDelegate: AnyObject {
@@ -18,11 +18,15 @@ protocol CampaignsViewModelDelegate: AnyObject {
 protocol CampaignsViewModelType: AnyObject {
     var coordinatorDelegate: CampaignsViewModelCoordinatorDelegate? { get set }
     var delegate: CampaignsViewModelDelegate? { get set }
+    func goToCampaignDetail()
 }
 
 class CampaignsViewModel: CampaignsViewModelType {
     
-    weak var coordinatorDelegate: CampaignsViewModelCoordinatorDelegate?
+    var coordinatorDelegate: CampaignsViewModelCoordinatorDelegate?
     weak var delegate: CampaignsViewModelDelegate?
     
+    func goToCampaignDetail() {
+        coordinatorDelegate?.goToCampaignDetail()
+    }
 }

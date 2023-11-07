@@ -380,6 +380,10 @@ struct Strings {
         return localized(string: "campaignValidityDate")
     }
     
+    static var takeAdvantageCampaign: String {
+        return localized(string: "takeAdvantageCampaign")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

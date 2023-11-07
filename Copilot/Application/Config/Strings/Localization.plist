@@ -747,12 +747,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Campaign Validity Date</string>
         </dict>
         
-        <key></key>
+        <key>takeAdvantageCampaign</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kampanyadan Yararlan</string>
             <key>en</key>
-            <string></string>
+            <string>Take Advantage of the Campaign</string>
         </dict>
         
         <key></key>

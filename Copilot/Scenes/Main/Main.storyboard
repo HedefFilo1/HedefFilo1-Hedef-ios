@@ -371,13 +371,111 @@
             </objects>
             <point key="canvasLocation" x="-11" y="247"/>
         </scene>
+        <!--Campaign Detail View Controller-->
+        <scene sceneID="REr-F3-XRZ">
+            <objects>
+                <viewController storyboardIdentifier="CampaignDetailViewController" id="abA-K2-34o" customClass="CampaignDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C29-w2-MGe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SwQ-Q8-ms8">
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="jAZ-kW-KQf"/>
+                                    <constraint firstAttribute="height" constant="24" id="jGZ-W4-5Di"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cov-c3-Qjk">
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="hWb-VT-KQ8"/>
+                                    <constraint firstAttribute="height" constant="40" id="rAA-dB-SgY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapBack:" destination="abA-K2-34o" eventType="touchUpInside" id="7gf-Ue-p1O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum Dolar Sit Amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4U-Gk-o9a">
+                                <rect key="frame" x="90" y="84" width="213" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockCampaignImage" translatesAutoresizingMaskIntoConstraints="NO" id="nrP-Pz-jh9">
+                                <rect key="frame" x="24" y="139" width="344" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="fQT-w4-dEi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw5-DJ-4EO">
+                                <rect key="frame" x="24" y="297" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFV-lA-1T5">
+                                <rect key="frame" x="24" y="326" width="345" height="142.33333333333337"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-wA-hdn" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="16" y="754" width="361" height="56"/>
+                                <color key="backgroundColor" name="theme"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="CH3-Ws-eqJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Kampanyadan Yararlan"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m4k-8y-zco"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MFV-lA-1T5" firstAttribute="leading" secondItem="m4k-8y-zco" secondAttribute="leading" constant="24" id="7eF-o8-5Nx"/>
+                            <constraint firstItem="m4k-8y-zco" firstAttribute="trailing" secondItem="nrP-Pz-jh9" secondAttribute="trailing" constant="25" id="D0M-FX-CsH"/>
+                            <constraint firstItem="nrP-Pz-jh9" firstAttribute="leading" secondItem="m4k-8y-zco" secondAttribute="leading" constant="24" id="FVE-nU-IM2"/>
+                            <constraint firstItem="m4k-8y-zco" firstAttribute="trailing" secondItem="Hw5-DJ-4EO" secondAttribute="trailing" constant="24" id="GxI-2k-l8M"/>
+                            <constraint firstItem="SwQ-Q8-ms8" firstAttribute="top" secondItem="m4k-8y-zco" secondAttribute="top" constant="24" id="Jei-cD-Kme"/>
+                            <constraint firstItem="m4k-8y-zco" firstAttribute="trailing" secondItem="MFV-lA-1T5" secondAttribute="trailing" constant="24" id="JnG-4x-JlN"/>
+                            <constraint firstItem="Hw5-DJ-4EO" firstAttribute="top" secondItem="nrP-Pz-jh9" secondAttribute="bottom" constant="24" id="KDS-NE-c25"/>
+                            <constraint firstItem="SwQ-Q8-ms8" firstAttribute="leading" secondItem="m4k-8y-zco" secondAttribute="leading" constant="24" id="M1z-7S-Qn9"/>
+                            <constraint firstItem="nrP-Pz-jh9" firstAttribute="top" secondItem="cov-c3-Qjk" secondAttribute="bottom" constant="24" id="Pku-6w-mJb"/>
+                            <constraint firstItem="Hw5-DJ-4EO" firstAttribute="leading" secondItem="m4k-8y-zco" secondAttribute="leading" constant="24" id="RCy-3V-fMN"/>
+                            <constraint firstItem="cov-c3-Qjk" firstAttribute="centerX" secondItem="SwQ-Q8-ms8" secondAttribute="centerX" id="TXp-GV-zUM"/>
+                            <constraint firstItem="MFV-lA-1T5" firstAttribute="top" secondItem="Hw5-DJ-4EO" secondAttribute="bottom" constant="8" id="UEJ-pu-FEZ"/>
+                            <constraint firstItem="m4k-8y-zco" firstAttribute="bottom" secondItem="gsi-wA-hdn" secondAttribute="bottom" constant="8" id="bAr-W4-Twx"/>
+                            <constraint firstItem="gsi-wA-hdn" firstAttribute="leading" secondItem="m4k-8y-zco" secondAttribute="leading" constant="16" id="bgE-K8-Za6"/>
+                            <constraint firstItem="Z4U-Gk-o9a" firstAttribute="top" secondItem="m4k-8y-zco" secondAttribute="top" constant="25" id="ew7-kQ-MCA"/>
+                            <constraint firstItem="m4k-8y-zco" firstAttribute="trailing" secondItem="gsi-wA-hdn" secondAttribute="trailing" constant="16" id="lmg-s9-O9z"/>
+                            <constraint firstItem="cov-c3-Qjk" firstAttribute="centerY" secondItem="SwQ-Q8-ms8" secondAttribute="centerY" id="qNZ-Z3-QKk"/>
+                            <constraint firstItem="Z4U-Gk-o9a" firstAttribute="centerX" secondItem="C29-w2-MGe" secondAttribute="centerX" id="tct-DH-QKM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backImageView" destination="SwQ-Q8-ms8" id="RvZ-Sg-diE"/>
+                        <outlet property="benefitButton" destination="gsi-wA-hdn" id="8H7-Jh-q1G"/>
+                        <outlet property="nameLabel" destination="Hw5-DJ-4EO" id="uhX-et-bts"/>
+                        <outlet property="textLabel" destination="MFV-lA-1T5" id="zaa-iD-JNM"/>
+                        <outlet property="titleLabel" destination="Z4U-Gk-o9a" id="E8A-hc-SqZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJq-Ix-3DM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="246"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backIcon" width="24" height="24"/>
         <image name="carTabIcon" width="31" height="29"/>
         <image name="carTabSelectedIcon" width="31" height="29"/>
         <image name="helpIcon" width="24.333333969116211" height="24"/>
         <image name="helpSelectedIcon" width="24.333333969116211" height="24"/>
         <image name="logo" width="254" height="142"/>
+        <image name="mockCampaignImage" width="295" height="120"/>
         <image name="moreTabIcon" width="24.333333969116211" height="24"/>
         <image name="moreTabSelectedIcon" width="24" height="24"/>
         <image name="toolIcon" width="24.333333969116211" height="24"/>

@@ -48,7 +48,7 @@ class MainCoordinator: Coordinator {
 extension MainCoordinator: MainViewModelCoordinatorDelegate {
     
     func getBack() {
-        finish()
+        navigationController.popViewController(animated: true)
     }
     
     func showMenu() {
@@ -79,5 +79,14 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
+    func goToCampaignDetail() {
+        let viewController: CampaignDetailViewController = storyboard.instantiateViewController()
+        viewController.viewModel = CampaignDetailViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension MainCoordinator: CampaignDetailVMCoordinatorDelegate {
     
 }

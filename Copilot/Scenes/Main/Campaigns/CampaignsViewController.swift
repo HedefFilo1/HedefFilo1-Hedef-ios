@@ -100,14 +100,17 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
         switch indexPath.section {
         case 0:
             let cell: CampaignsOfferTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 1:
             let cell: NewsTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 2:
             let cell: SponsorshipTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         default:
@@ -129,6 +132,12 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         0
+    }
+}
+
+extension CampaignsViewController: CampaignsTabCellDelegate {
+    func didSelectItem() {
+        viewModel.goToCampaignDetail()
     }
 }
 
