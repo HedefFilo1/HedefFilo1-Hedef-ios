@@ -382,9 +382,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>passwordSentToEmail</key>
         <dict>
             <key>tr</key>
-            <string>Şifreniz mail adresinize gönderildi.</string>
+            <string>Yeni şifre mail adresinize iletildi! Hesabınıza gönderilen şifre ile giriş yapıp şifrenizi değiştirebilirsiniz.</string>
             <key>en</key>
-            <string>Your password has been sent to your e-mail address.</string>
+            <string>The new password has been sent to your e-mail address! You can log in with the password sent to your account and change your password.</string>
         </dict>
         
         <key>vehicleInformation</key>

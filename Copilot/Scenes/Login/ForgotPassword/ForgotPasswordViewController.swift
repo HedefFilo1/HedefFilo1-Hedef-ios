@@ -51,7 +51,7 @@ class ForgotPasswordViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.forgotMyPassword
         descriptionLabel.text = Strings.forgotPasswordDescription
-        phoneTextField.placeholder = Strings.vknPhoneNumber
+        phoneTextField.placeholder = Strings.phoneNumber
         sendButton.setTitle(Strings.sendNewPassword, for: .normal)
     }
     
