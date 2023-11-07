@@ -41,6 +41,14 @@
 		892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892A8D182AC4EDB20020C1C4 /* Localization.plist */; };
 		892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1A2AC587690020C1C4 /* Strings.swift */; };
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
+		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
+		893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */; };
+		893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */; };
+		893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF642AF92B95004E643E /* CampaignsOfferTabCell.xib */; };
+		893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF682AF92C39004E643E /* CampaignOfferCell.swift */; };
+		893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF692AF92C39004E643E /* CampaignOfferCell.xib */; };
+		893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF6D2AFA55BA004E643E /* CampaignsTitleCell.swift */; };
+		893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF6E2AFA55BA004E643E /* CampaignsTitleCell.xib */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -175,6 +183,14 @@
 		892A8D182AC4EDB20020C1C4 /* Localization.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Localization.plist; sourceTree = "<group>"; };
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
+		893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewController.swift; sourceTree = "<group>"; };
+		893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsOfferTabCell.swift; sourceTree = "<group>"; };
+		893EDF642AF92B95004E643E /* CampaignsOfferTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampaignsOfferTabCell.xib; sourceTree = "<group>"; };
+		893EDF682AF92C39004E643E /* CampaignOfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignOfferCell.swift; sourceTree = "<group>"; };
+		893EDF692AF92C39004E643E /* CampaignOfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampaignOfferCell.xib; sourceTree = "<group>"; };
+		893EDF6D2AFA55BA004E643E /* CampaignsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsTitleCell.swift; sourceTree = "<group>"; };
+		893EDF6E2AFA55BA004E643E /* CampaignsTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampaignsTitleCell.xib; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +411,53 @@
 				892A8D1A2AC587690020C1C4 /* Strings.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		893EDF5C2AF924A7004E643E /* Campaigns */ = {
+			isa = PBXGroup;
+			children = (
+				893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */,
+				893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */,
+				893EDF612AF92A69004E643E /* Cell */,
+			);
+			path = Campaigns;
+			sourceTree = "<group>";
+		};
+		893EDF612AF92A69004E643E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				893EDF6C2AFA55A1004E643E /* CampaignsTitle */,
+				893EDF622AF92B6F004E643E /* CampaignsTab */,
+				893EDF672AF92C2A004E643E /* Campaign */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		893EDF622AF92B6F004E643E /* CampaignsTab */ = {
+			isa = PBXGroup;
+			children = (
+				893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */,
+				893EDF642AF92B95004E643E /* CampaignsOfferTabCell.xib */,
+			);
+			path = CampaignsTab;
+			sourceTree = "<group>";
+		};
+		893EDF672AF92C2A004E643E /* Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				893EDF682AF92C39004E643E /* CampaignOfferCell.swift */,
+				893EDF692AF92C39004E643E /* CampaignOfferCell.xib */,
+			);
+			path = Campaign;
+			sourceTree = "<group>";
+		};
+		893EDF6C2AFA55A1004E643E /* CampaignsTitle */ = {
+			isa = PBXGroup;
+			children = (
+				893EDF6D2AFA55BA004E643E /* CampaignsTitleCell.swift */,
+				893EDF6E2AFA55BA004E643E /* CampaignsTitleCell.xib */,
+			);
+			path = CampaignsTitle;
 			sourceTree = "<group>";
 		};
 		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
@@ -657,6 +720,7 @@
 				89B12BB82AD47902002C70E4 /* MainTabBarController.swift */,
 				89B07A3E2AD85A3E00D3BE80 /* TabBarView */,
 				89B07A432AD86CE100D3BE80 /* Menu */,
+				893EDF5C2AF924A7004E643E /* Campaigns */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -934,6 +998,7 @@
 			files = (
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
+				893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */,
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
 				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
@@ -947,6 +1012,7 @@
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
+				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
@@ -963,6 +1029,7 @@
 				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
+				893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,16 +1120,19 @@
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
+				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
+				893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
+				893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
@@ -1120,7 +1190,9 @@
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
 				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,
+				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
+				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,

@@ -116,8 +116,15 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 0 {
+        switch indexPath.item {
+        case 0:
             viewModel.showProfile()
+            
+        case 1:
+            viewModel.showCampaigns()
+            
+        default:
+            break
         }
         viewModel.hideMenu()
     }

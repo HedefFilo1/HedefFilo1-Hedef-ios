@@ -68,4 +68,16 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
     func showProfile() {
         tabBarController?.setSelectedIndex(index: 5)
     }
+    
+    func showCampaigns() {
+        tabBarController?.setSelectedIndex(index: 6)
+        if let controller = tabBarController?.viewControllers?[6] as? CampaignsViewController {
+            controller.viewModel = CampaignsViewModel()
+            controller.viewModel.coordinatorDelegate = self
+        }
+    }
+}
+
+extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
+    
 }

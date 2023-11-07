@@ -364,6 +364,22 @@ struct Strings {
         return localized(string: "enterValidPhone")
     }
     
+    static var offer: String {
+        return localized(string: "offer")
+    }
+    
+    static var news: String {
+        return localized(string: "news")
+    }
+    
+    static var sponsorship: String {
+        return localized(string: "sponsorship")
+    }
+    
+    static var campaignValidityDate: String {
+        return localized(string: "campaignValidityDate")
+    }
+    
     static func localized(string: String) -> String {
         
         if dictionary.count == 0 {

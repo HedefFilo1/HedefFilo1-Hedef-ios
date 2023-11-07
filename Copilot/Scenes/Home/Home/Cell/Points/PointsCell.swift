@@ -42,7 +42,7 @@ class PointsCell: UICollectionViewCell, Reusable {
     func setPointsLabel(point: Int) {
         let main = AttributedText(text: "\(Strings.yourScore): \(point)",
                                   type: .greyS12R400)
-        let point = AttributedText(text: "\(point)", type: .blackS12R700)
+        let point = AttributedText(text: "\(point)", type: .blackS12B700)
         pointsLabel.attributedText = AttributedText.createMultiplePartString(mainText: main, texts: [point])
     }
     

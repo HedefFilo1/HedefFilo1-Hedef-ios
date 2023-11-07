@@ -11,6 +11,7 @@ import UIKit
 protocol MenuViewModelCoordinatorDelegate: AnyObject {
     func hideMenu()
     func showProfile()
+    func showCampaigns()
 }
 
 protocol MenuViewModelDelegate: AnyObject {
@@ -23,6 +24,7 @@ protocol MenuViewModelType: AnyObject {
     var delegate: MenuViewModelDelegate? { get set }
     func hideMenu()
     func showProfile()
+    func showCampaigns()
 }
 
 class MenuViewModel: MenuViewModelType {
@@ -36,5 +38,9 @@ class MenuViewModel: MenuViewModelType {
     
     func showProfile() {
         coordinatorDelegate?.showProfile()
+    }
+    
+    func showCampaigns() {
+        coordinatorDelegate?.showCampaigns()
     }
 }

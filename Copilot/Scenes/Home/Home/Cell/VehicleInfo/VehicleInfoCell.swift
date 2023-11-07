@@ -46,11 +46,11 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
         modelLabel.apply(.blackS16B700)
         nameLabel.apply(.greyS12R400)
         rentLabel.apply(.greyS12R400)
-        rentValueLabel.apply(.blackS12R700)
+        rentValueLabel.apply(.blackS12B700)
         limitLabel.apply(.greyS12R400)
-        limitValueLabel.apply(.blackS12R700)
+        limitValueLabel.apply(.blackS12B700)
         usedLabel.apply(.greyS12R400)
-        usedValueLabel.apply(.blackS12R700)
+        usedValueLabel.apply(.blackS12B700)
        
         changeButton.layer.cornerRadius = 16
         changeButton.backgroundColor = .appRed

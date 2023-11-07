@@ -715,6 +715,94 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please enter a valid phone number.</string>
         </dict>
         
+        <key>offer</key>
+        <dict>
+            <key>tr</key>
+            <string>Kampanya</string>
+            <key>en</key>
+            <string>Offer</string>
+        </dict>
+        
+        <key>news</key>
+        <dict>
+            <key>tr</key>
+            <string>Haber</string>
+            <key>en</key>
+            <string>News</string>
+        </dict>
+        
+        <key>sponsorship</key>
+        <dict>
+            <key>tr</key>
+            <string>Sponsorluk</string>
+            <key>en</key>
+            <string>Sponsorship</string>
+        </dict>
+        
+        <key>campaignValidityDate</key>
+        <dict>
+            <key>tr</key>
+            <string>Kampanya Geçerlilik Tarihi</string>
+            <key>en</key>
+            <string>Campaign Validity Date</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
