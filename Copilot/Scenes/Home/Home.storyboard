@@ -14,9 +14,8 @@
         <!--Navigation Controller-->
         <scene sceneID="KFL-jK-jsP">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" id="Gqz-5x-yUw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" navigationBarHidden="YES" id="Gqz-5x-yUw" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V8Q-E2-ZLM">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -27,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-816" y="-2"/>
         </scene>
-        <!--Anasayfa-->
+        <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,28 +41,28 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CYg-66-gBc">
-                                <rect key="frame" x="24" y="119" width="76" height="44"/>
+                                <rect key="frame" x="24" y="75" width="76" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="3lW-jT-vDz"/>
                                     <constraint firstAttribute="height" constant="44" id="xKc-Uo-1yV"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-f8-1y9">
-                                <rect key="frame" x="309" y="129" width="24" height="24"/>
+                                <rect key="frame" x="309" y="85" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="86P-ma-bX5"/>
                                     <constraint firstAttribute="width" constant="24" id="PQT-cJ-yV2"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7Ww-8R-pvw">
-                                <rect key="frame" x="345" y="129" width="24" height="24"/>
+                                <rect key="frame" x="345" y="85" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="Uxk-rW-s6C"/>
                                     <constraint firstAttribute="height" constant="24" id="V2k-qw-j60"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-05-lg2">
-                                <rect key="frame" x="337" y="121" width="40" height="40"/>
+                                <rect key="frame" x="337" y="77" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="06O-cM-FAl"/>
                                     <constraint firstAttribute="height" constant="40" id="ymN-Eb-jSr"/>
@@ -81,7 +80,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-tw-7Ly">
-                                <rect key="frame" x="0.0" y="175" width="393" height="594"/>
+                                <rect key="frame" x="0.0" y="131" width="393" height="638"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xlF-eW-SVw">
                                     <size key="itemSize" width="128" height="128"/>
@@ -115,10 +114,6 @@
                             <constraint firstItem="YFa-05-lg2" firstAttribute="centerY" secondItem="7Ww-8R-pvw" secondAttribute="centerY" id="wXx-ic-Cnf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Anasayfa" image="homeTab" selectedImage="homeSelectedTab" id="qdF-uJ-6Mq">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" id="mHt-Bc-Xbk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -652,8 +647,6 @@
         <image name="coffeeIcon" width="20" height="20"/>
         <image name="filterIcon" width="16" height="16"/>
         <image name="gasStationIcon" width="20" height="20"/>
-        <image name="homeSelectedTab" width="24" height="24"/>
-        <image name="homeTab" width="24" height="24"/>
         <image name="logoutIcon" width="24" height="24"/>
         <image name="notificationIcon" width="24" height="24"/>
         <image name="pIcon" width="20" height="20"/>

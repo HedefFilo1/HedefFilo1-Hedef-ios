@@ -15,14 +15,16 @@ protocol LoginViewModelCoordinatorDelegate: AnyObject {
 
 protocol LoginViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
+    func set(email: String, password: String)
 }
 
 protocol LoginViewModelType: AnyObject {
     var delegate: LoginViewModelDelegate? { get set }
     func goToMain()
     func goToForgotPassword()
-    func login(email: String, password: String)
+    func login(email: String, password: String, rememberMe: Bool)
     func goToSignup()
+    func checkRememberMe()
 }
 
 class LoginViewModel: LoginViewModelType {
@@ -39,18 +41,42 @@ class LoginViewModel: LoginViewModelType {
         coordinatorDelegate?.goToForgotPassword()
     }
     
-    func login(email: String, password: String) {
-        //
-        Loading.shared.show(title: Strings.loading)
+    func checkRememberMe() {
+        if let token = Persistence.accessToken, token.count > 3 {
+            self.goToMain()
+            return
+        }
         
+        if let email = Persistence.userEmail, let password = Persistence.password {
+            self.delegate?.set(email: email, password: password)
+            Persistence.userEmail = nil
+            Persistence.password = nil
+            Persistence.accessToken =  nil
+        }
+    }
+    
+    func login(email: String, password: String, rememberMe: Bool) {
         // just for test
         if email == "tester@solid.com" && password == "123456" {
             self.goToMain()
             return
         }
-        
+#if DEV_DEBUG
+        Persistence.rememberMe = rememberMe
+        if rememberMe {
+            Persistence.userEmail = email
+            Persistence.password = password
+            Persistence.accessToken =  "some token"
+        } else {
+            Persistence.userEmail = nil
+            Persistence.password = nil
+            Persistence.accessToken =  nil
+        }
+        goToMain()
+#endif
+        Loading.shared.show(title: Strings.loading)
         APIService.login(email: email,
-                         password: password) { [weak self] _, error in
+                         password: password) { [weak self] model, error in
             
             Loading.shared.hide()
             guard let self = self else {return}
@@ -60,7 +86,20 @@ class LoginViewModel: LoginViewModelType {
                                          message: error.message)
                 return
             }
-            self.goToMain()
+            
+            if let model = model {
+                Persistence.rememberMe = rememberMe
+                if rememberMe {
+                    Persistence.userEmail = email
+                    Persistence.password = password
+                    Persistence.accessToken =  model.token
+                } else {
+                    Persistence.userEmail = nil
+                    Persistence.password = nil
+                    Persistence.accessToken =  nil
+                }
+                self.goToMain()
+            }
             
         }
     }

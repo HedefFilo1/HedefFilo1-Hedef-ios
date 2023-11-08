@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     var viewModel: LoginViewModelType! {
         didSet {
             viewModel.delegate = self
+            print("success login gg h")
         }
     }
     
@@ -32,22 +33,27 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         
 #if DEV_DEBUG
         // just for test
-//        viewModel.goToMain()
-//        viewModel.login(email: "tester@solid.com", password: "123456")
+        //        viewModel.goToMain()
+        //        viewModel.login(email: "tester@solid.com", password: "123456")
 #endif
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.checkRememberMe()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if App.appLoaded == false {
-            App.appLoaded = true
-        }
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        clearInputs()
     }
     
     func setupUI() {
@@ -56,6 +62,8 @@ class LoginViewController: UIViewController {
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         loginButton.isEnabled = false
+        
+        print("success login f1 ")
     }
     
     func applyStyle() {
@@ -69,6 +77,8 @@ class LoginViewController: UIViewController {
         forgotPasswordButton.apply(.blackS12R400)
         notMemberLabel.apply(.greyS16B400)
         becomeMemberButton.apply(.themeS16B700)
+        
+        print("success login f2 ")
     }
     
     func setTexts() {
@@ -96,7 +106,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonAction(_ sender: Any) {
         viewModel.login(email: emailTextFiled.text ?? "",
-                        password: passwordTextFiled.text ?? "")
+                        password: passwordTextFiled.text ?? "",
+                        rememberMe: rememberCheckBox.isSelected)
     }
     
     @IBAction func didTapSignup(_ sender: Any) {
@@ -105,5 +116,15 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewModelDelegate {
+    func set(email: String, password: String) {
+        emailTextFiled.preText = email
+        passwordTextFiled.preText = password
+        rememberCheckBox.isSelected = true
+    }
     
+    func clearInputs() {
+        emailTextFiled.preText = ""
+        passwordTextFiled.preText = ""
+        emailTextFiled.hideError()
+    }
 }

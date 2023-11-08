@@ -67,7 +67,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapLogoutButton() {
-        App.appCoordinator?.restart()
+        App.appCoordinator?.logout()
     }
     
 }

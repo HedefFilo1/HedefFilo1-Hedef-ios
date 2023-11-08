@@ -80,6 +80,11 @@
 		896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3682AD722590048025A /* TireInfoCell.xib */; };
 		896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */; };
 		896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */; };
+		8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB02AFBCC81006057EA /* KeychainWrapper.swift */; };
+		8986FCB62AFBCC82006057EA /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB12AFBCC81006057EA /* KeychainOptions.swift */; };
+		8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB22AFBCC82006057EA /* PersistenceType.swift */; };
+		8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB32AFBCC82006057EA /* Persistence.swift */; };
+		8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -233,6 +238,11 @@
 		896CB3682AD722590048025A /* TireInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TireInfoCell.xib; sourceTree = "<group>"; };
 		896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintainInfoCell.swift; sourceTree = "<group>"; };
 		896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintainInfoCell.xib; sourceTree = "<group>"; };
+		8986FCB02AFBCC81006057EA /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		8986FCB12AFBCC81006057EA /* KeychainOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
+		8986FCB22AFBCC82006057EA /* PersistenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceType.swift; sourceTree = "<group>"; };
+		8986FCB32AFBCC82006057EA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistPropertyWrapper.swift; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -630,6 +640,18 @@
 			path = MaintainInfo;
 			sourceTree = "<group>";
 		};
+		8986FCAF2AFBCC6A006057EA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8986FCB12AFBCC81006057EA /* KeychainOptions.swift */,
+				8986FCB02AFBCC81006057EA /* KeychainWrapper.swift */,
+				8986FCB32AFBCC82006057EA /* Persistence.swift */,
+				8986FCB22AFBCC82006057EA /* PersistenceType.swift */,
+				8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		8989DD922AC493BF0035CD99 = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +935,7 @@
 		89C55DEE2AC4A68C00C3066A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8986FCAF2AFBCC6A006057EA /* Persistence */,
 				892A8D0E2AC4E80F0020C1C4 /* TextStyle.swift */,
 				890D7CD42ACEB60D00F053DA /* AttributedText.swift */,
 			);
@@ -1189,8 +1212,10 @@
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
+				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
+				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
@@ -1207,6 +1232,7 @@
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
+				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
 				893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
@@ -1225,6 +1251,7 @@
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
+				8986FCB62AFBCC82006057EA /* KeychainOptions.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
@@ -1275,6 +1302,7 @@
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
+				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,

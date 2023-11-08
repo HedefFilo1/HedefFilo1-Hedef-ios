@@ -33,16 +33,17 @@ class AppCoordinator: Coordinator {
     
     override func finish() { }
     
-    func restart() {
-        removeAllChildCoordinators()
-        App.appCoordinator = self
-        goToLogin()
+    func logout() {
+        if let coordinator = childCoordinator(type: LoginCoordinator.self) {
+            coordinator.removeAllChildCoordinators()
+        }
+        Persistence.accessToken = nil
+        if let nav = window?.rootViewController as? UINavigationController {
+            for ctrl in nav.viewControllers where ctrl is LoginViewController {
+                nav.popToViewController(ctrl, animated: true)
+            }
+        }
     }
-    
-//    func alert(title: String, message: String) {
-//        guard let window = window else { return }
-//        window.rootViewController?.showError(title: Strings.error, message: message)
-//    }
 }
 
 extension AppCoordinator: SplashCoordinatorDelegate {
