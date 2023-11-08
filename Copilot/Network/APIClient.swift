@@ -26,7 +26,6 @@ final class APIClient {
     
     func handle<T: Decodable> (request: APIRequest<T>) {
         guard let urlRequest = request.urlRequest else { return }
-        
         DispatchQueue.main.async {
             AF.request(urlRequest).response {[weak self] response in
                 let httpResponse = response.response

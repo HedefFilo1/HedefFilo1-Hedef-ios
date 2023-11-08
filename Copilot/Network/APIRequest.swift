@@ -204,6 +204,7 @@ class APIRequest<T: Decodable> {
         if method != .get {
             urlRequest.httpBody = httpBody
         }
+        urlRequest.timeoutInterval = 30
         return urlRequest
     }
     

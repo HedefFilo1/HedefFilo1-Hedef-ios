@@ -142,7 +142,7 @@ class SignupViewController: UIViewController {
         let surname = surenameTextField.pureTextCount > 0
         let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
-        let tcTax = taxTextField.pureTextCount == 11
+        let tcTax = taxTextField.pureTextCount == 10
         let plate = plateNumberTextField.pureTextCount > 0
         let license = licenseTextField.pureTextCount > 0
         let pass = passwordTextFiled.text ?? ""

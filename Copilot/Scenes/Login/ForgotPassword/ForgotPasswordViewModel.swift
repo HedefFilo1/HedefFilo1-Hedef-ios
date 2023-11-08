@@ -36,7 +36,8 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
         
         Loading.shared.show(title: Strings.loading)
         
-        APIService.forgotPassword(email: email, phoneNumber: phone) { [weak self] _, error in
+        let number = phone.components(separatedBy: .whitespaces).joined()
+        APIService.forgotPassword(email: email, phoneNumber: number) { [weak self] _, error in
             
             Loading.shared.hide()
             guard let self = self else { return }
