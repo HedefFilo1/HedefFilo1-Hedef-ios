@@ -21,13 +21,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var nameTextField: CPTextField!
-    @IBOutlet weak var surenameTextField: CPTextField!
+    @IBOutlet weak var nameTextField: CPValidatableTextField!
+    @IBOutlet weak var surenameTextField: CPValidatableTextField!
     @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
-    @IBOutlet weak var taxTextField: CPTextField!
-    @IBOutlet weak var plateNumberTextField: CPTextField!
-    @IBOutlet weak var licenseTextField: CPTextField!
+    @IBOutlet weak var taxTextField: CPValidatableTextField!
+    @IBOutlet weak var plateNumberTextField: CPValidatableTextField!
+    @IBOutlet weak var licenseTextField: CPValidatableTextField!
     @IBOutlet weak var passwordTextFiled: CPPasswordTextField!
     @IBOutlet weak var repeatPasswordTextFiled: CPPasswordTextField!
     
@@ -85,9 +85,21 @@ class SignupViewController: UIViewController {
         plateNumberTextField.autocapitalizationType = .allCharacters
         licenseTextField.autocapitalizationType = .allCharacters
         
-        taxTextField.delegate = self
+        nameTextField.validationDelegate = self
+        surenameTextField.validationDelegate = self
+        taxTextField.validationDelegate = self
+        plateNumberTextField.validationDelegate = self
+        licenseTextField.validationDelegate = self
         
+        taxTextField.delegate = self
+        licenseTextField.delegate = self
         clarificationErrorView.isHidden = true
+        
+        nameTextField.errorMessage = Strings.nameInputError
+        surenameTextField.errorMessage = Strings.surnameInputError
+        taxTextField.errorMessage = Strings.taxInputError
+        plateNumberTextField.errorMessage = Strings.plateNumberInputError
+        licenseTextField.errorMessage = Strings.licenseNumberInputError
     }
     
     func applyStyle() {
@@ -138,13 +150,13 @@ class SignupViewController: UIViewController {
     }
     
     func setButtonActivation() {
-        let name = nameTextField.pureTextCount > 0
-        let surname = surenameTextField.pureTextCount > 0
+        let name = nameTextField.validate()
+        let surname = surenameTextField.validate()
         let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
-        let tcTax = taxTextField.pureTextCount == 10
-        let plate = plateNumberTextField.pureTextCount > 0
-        let license = licenseTextField.pureTextCount > 0
+        let tcTax = taxTextField.validate()
+        let plate = plateNumberTextField.validate()
+        let license = licenseTextField.validate()
         let pass = passwordTextFiled.text ?? ""
         let repeatPass = repeatPasswordTextFiled.text ?? ""
         let passes = pass.count > 0 && repeatPass.count > 0 && pass == repeatPass
@@ -257,9 +269,39 @@ class SignupViewController: UIViewController {
     }
 }
 
-extension SignupViewController: UITextFieldDelegate {
+extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDelegate {
+    
+    func validate(textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            return nameTextField.pureTextCount > 0
+            
+        case surenameTextField:
+            return surenameTextField.pureTextCount > 0
+            
+        case taxTextField:
+            return taxTextField.textCount == 10
+            
+        case plateNumberTextField:
+            return plateNumberTextField.pureTextCount > 0
+            
+        case licenseTextField:
+            let text = licenseTextField.pureText
+            let letters = text.range(of: "^[a-zA-z]*$",
+                        options: .regularExpression) != nil
+            return letters
+            
+        default:
+            return false
+        }
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
+        
+        if textField == licenseTextField {
+            return range.location < 8
+        }
         return range.location < 10
     }
 }

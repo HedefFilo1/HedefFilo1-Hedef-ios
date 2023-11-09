@@ -85,6 +85,8 @@
 		8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB22AFBCC82006057EA /* PersistenceType.swift */; };
 		8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB32AFBCC82006057EA /* Persistence.swift */; };
 		8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */; };
+		8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */; };
+		8986FCBD2AFCC802006057EA /* Strings+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCBC2AFCC802006057EA /* Strings+EXT.swift */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -243,6 +245,8 @@
 		8986FCB22AFBCC82006057EA /* PersistenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceType.swift; sourceTree = "<group>"; };
 		8986FCB32AFBCC82006057EA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistPropertyWrapper.swift; sourceTree = "<group>"; };
+		8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPValidatableTextField.swift; sourceTree = "<group>"; };
+		8986FCBC2AFCC802006057EA /* Strings+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+EXT.swift"; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -439,6 +443,7 @@
 			children = (
 				892A8D182AC4EDB20020C1C4 /* Localization.plist */,
 				892A8D1A2AC587690020C1C4 /* Strings.swift */,
+				8986FCBC2AFCC802006057EA /* Strings+EXT.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				89DAB8032AC733F50098BA67 /* CPTextField.swift */,
 				89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */,
 				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
+				8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */,
 				899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */,
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
@@ -1197,6 +1203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
@@ -1253,6 +1260,7 @@
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
 				8986FCB62AFBCC82006057EA /* KeychainOptions.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
+				8986FCBD2AFCC802006057EA /* Strings+EXT.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,

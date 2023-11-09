@@ -109,9 +109,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>emailIncorrect</key>
         <dict>
             <key>tr</key>
-            <string>Mail adresi hatalı</string>
+            <string>Lütfen geçerli bir e-posta adresi giriniz.</string>
             <key>en</key>
-            <string>Email address is incorrect</string>
+            <string>Please enter a valid email address.</string>
         </dict>
         
         <key>loginDescription</key>
@@ -237,7 +237,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>marketingApprovement</key>
         <dict>
             <key>tr</key>
-            <string>Ürün,hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
+            <string>Ürün, hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
             <key>en</key>
             <string>In order to be informed about products, services and campaigns, I allow commercial electronic messages to be sent within the scope of Law No. 6563 and its legislation until I specify otherwise.</string>
         </dict>
@@ -261,9 +261,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>emailPlaceholder</key>
         <dict>
             <key>tr</key>
-            <string>Email</string>
+            <string>E-Mail</string>
             <key>en</key>
-            <string>Email</string>
+            <string>E-Mail</string>
         </dict>
         
         <key>areYouMember</key>
@@ -382,9 +382,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>passwordSentToEmail</key>
         <dict>
             <key>tr</key>
-            <string>Yeni şifre mail adresinize iletildi! Hesabınıza gönderilen şifre ile giriş yapıp şifrenizi değiştirebilirsiniz.</string>
+            <string>Şifreniz mail adresinize gönderildi.</string>
             <key>en</key>
-            <string>The new password has been sent to your e-mail address! You can log in with the password sent to your account and change your password.</string>
+            <string>Your password has been sent to your e-mail address.</string>
         </dict>
         
         <key>vehicleInformation</key>
@@ -753,6 +753,78 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Kampanyadan Yararlan</string>
             <key>en</key>
             <string>Take Advantage of the Campaign</string>
+        </dict>
+        
+        <key>taxInputError</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen geçerli bir vergi kimlik numarası giriniz.</string>
+            <key>en</key>
+            <string>Please enter a valid tax identification number.</string>
+        </dict>
+        
+        <key>plateNumberInputError</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen geçerli bir plaka giriniz.</string>
+            <key>en</key>
+            <string>Please enter a valid plate number.</string>
+        </dict>
+        
+        <key>licenseNumberInputError</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen geçerli bir araç ruhsat numarası giriniz.</string>
+            <key>en</key>
+            <string>Please enter a valid vehicle license number.</string>
+        </dict>
+        
+        <key>nameInputError</key>
+        <dict>
+            <key>tr</key>
+            <string>Bu alanın doldurulması zorunludur.</string>
+            <key>en</key>
+            <string>This field is required</string>
+        </dict>
+        
+        <key>surnameInputError</key>
+        <dict>
+            <key>tr</key>
+            <string>Bu alanın doldurulması zorunludur.</string>
+            <key>en</key>
+            <string>This field is required</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
         </dict>
         
         <key></key>
