@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     var viewModel: LoginViewModelType! {
         didSet {
             viewModel.delegate = self
-            print("success login gg h")
         }
     }
     
@@ -62,8 +61,6 @@ class LoginViewController: UIViewController {
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         loginButton.isEnabled = false
-        
-        print("success login f1 ")
     }
     
     func applyStyle() {
@@ -77,8 +74,6 @@ class LoginViewController: UIViewController {
         forgotPasswordButton.apply(.blackS12R400)
         notMemberLabel.apply(.greyS16B400)
         becomeMemberButton.apply(.themeS16B700)
-        
-        print("success login f2 ")
     }
     
     func setTexts() {

@@ -93,6 +93,7 @@ class SignupViewController: UIViewController {
         
         taxTextField.delegate = self
         licenseTextField.delegate = self
+        plateNumberTextField.delegate = self
         clarificationErrorView.isHidden = true
         
         nameTextField.errorMessage = Strings.nameInputError
@@ -283,13 +284,14 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
             return taxTextField.textCount == 10
             
         case plateNumberTextField:
-            return plateNumberTextField.pureTextCount > 0
+            let count = plateNumberTextField.pureTextCount
+            return count == 7 || count == 8
             
         case licenseTextField:
             let text = licenseTextField.pureText
-            let letters = text.range(of: "^[a-zA-z]*$",
-                        options: .regularExpression) != nil
-            return letters
+            let letters = String(text.prefix(2))
+            let numbers = text.replacingOccurrences(of: letters, with: "")
+            return numbers.isNumber && letters.isLetterString && text.count == 8
             
         default:
             return false
@@ -299,7 +301,7 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
         
-        if textField == licenseTextField {
+        if textField == licenseTextField || textField == plateNumberTextField {
             return range.location < 8
         }
         return range.location < 10

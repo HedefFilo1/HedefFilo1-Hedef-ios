@@ -22,6 +22,15 @@ extension String {
         self = self.capitalizingFirstLetter()
     }
     
+    var isNumber: Bool {
+        let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+        return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
+    }
+    
+    var isLetterString: Bool {
+        return self.range(of: "^[a-zA-z]*$", options: .regularExpression) != nil
+    }
+    
     func applyPatternOnNumbers(pattern: String, replacementCharacter: Character) -> String {
         var pureNumber = self.replacingOccurrences( of: "[^0-9]", with: "", options: .regularExpression)
         for index in 0 ..< pattern.count {
