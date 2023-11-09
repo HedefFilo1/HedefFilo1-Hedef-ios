@@ -40,10 +40,6 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setupUI()
-#if DEV_DEBUG
-        // just for test
-                viewModel.goToNextScene()
-#endif
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +48,7 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        Persistence.onboardingHasShown = true
         if App.appLoaded == false {
             App.appLoaded = true
         }

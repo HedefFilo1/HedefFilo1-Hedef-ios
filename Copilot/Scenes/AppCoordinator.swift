@@ -52,11 +52,16 @@ extension AppCoordinator: SplashCoordinatorDelegate {
         guard let window = window else {
             return
         }
-        
-        let coordinator = OnboardingCoordinator(with: window)
-        addChildCoordinator(coordinator)
-        coordinator.delegate = self
-        coordinator.start()
+        let hasShown = Persistence.onboardingHasShown ?? false
+        if  hasShown {
+            goToLogin()
+            
+        } else {
+            let coordinator = OnboardingCoordinator(with: window)
+            addChildCoordinator(coordinator)
+            coordinator.delegate = self
+            coordinator.start()
+        }
     }
 }
 

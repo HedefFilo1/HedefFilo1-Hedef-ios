@@ -14,8 +14,8 @@ struct Persistence {
     @Persist(key: "Password", defaultValue: nil, type: .keychain)
     static var password: String?
     
-    @Persist(key: "OnboardingHasShow", defaultValue: nil, type: .userDefaults)
-    static var onboardingHasShow: Bool?
+    @Persist(key: "OnboardingHasShown", defaultValue: nil, type: .userDefaults)
+    static var onboardingHasShown: Bool?
     
     @Persist(key: "UserEmail", defaultValue: nil, type: .userDefaults)
     static var userEmail: String?
