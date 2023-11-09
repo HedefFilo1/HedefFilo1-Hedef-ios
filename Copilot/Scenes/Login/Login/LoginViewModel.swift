@@ -49,9 +49,6 @@ class LoginViewModel: LoginViewModelType {
         
         if let email = Persistence.userEmail, let password = Persistence.password {
             self.delegate?.set(email: email, password: password)
-            Persistence.userEmail = nil
-            Persistence.password = nil
-            Persistence.accessToken =  nil
         }
     }
     
