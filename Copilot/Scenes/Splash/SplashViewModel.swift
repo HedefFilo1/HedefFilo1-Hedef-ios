@@ -49,10 +49,8 @@ class SplashViewModel: SplashViewModelType {
             return
         }
         App.token = token
-        Loading.shared.show(title: Strings.loading)
         APIService.verifyToken { [weak self] _, error in
             
-            Loading.shared.hide()
             guard let self = self else {return}
             
             if error != nil {

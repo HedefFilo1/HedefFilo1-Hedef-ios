@@ -204,7 +204,7 @@ class APIRequest<T: Decodable> {
         if method != .get {
             urlRequest.httpBody = httpBody
         }
-        urlRequest.timeoutInterval = 10
+        urlRequest.timeoutInterval = 30
         return urlRequest
     }
     
@@ -337,9 +337,9 @@ class APIRequest<T: Decodable> {
         string += "\(CodeStrings.url): \(url)\(nextLine)"
         string += "\(CodeStrings.method): \(method.rawValue)\(nextLine)"
         
-        if let token = headers?[CodeStrings.authorization] {
-            string += "\(CodeStrings.token): \(token)\(nextLine)"
-        }
+//        if let token = headers?[CodeStrings.authorization] {
+//            string += "\(CodeStrings.token): \(token)\(nextLine)"
+//        }
         
         if let headers = headers {
             string += "\(CodeStrings.headers): \(headers)\(nextLine)"
