@@ -36,20 +36,20 @@ struct APIResponseError {
 
 struct BaseErrorResponse: Decodable {
     //    let code: String
-//    let status: String?
+    //    let status: String?
     let message: String
-//    let exception: BaseErrorResponseException
+    //    let exception: BaseErrorResponseException
     let error: String
     
     var errorTitle: String {
         return error
     }
-//
+    //
     var errorMessage: String {
-//        if let validations = exception.validationErrors, validations.count > 0 {
-//            return validations[0].message
-//        }
-//        return exception.message
+        //        if let validations = exception.validationErrors, validations.count > 0 {
+        //            return validations[0].message
+        //        }
+        //        return exception.message
         return message
     }
 }
@@ -157,8 +157,8 @@ class APIRequest<T: Decodable> {
     
     func setToken() {
         if hasToken {
-//            let token = Persistence.accessToken ?? ""
-//            self.headers?[CodeStrings.authorization] = "\(CodeStrings.bearer) \(token)"
+            let token = App.token ?? ""
+            self.headers?[CodeStrings.authorization] = "\(CodeStrings.bearer) \(token)"
         }
         urlRequest = createURLRequest()
     }
@@ -204,15 +204,15 @@ class APIRequest<T: Decodable> {
         if method != .get {
             urlRequest.httpBody = httpBody
         }
-        urlRequest.timeoutInterval = 30
+        urlRequest.timeoutInterval = 10
         return urlRequest
     }
     
     func decodeToken(data: Data) {
-//        let response = try? JSONDecoder().decode(ResponseToken.self, from: data)
-//        if let token = response?.result?.token {
-//            Persistence.token = token
-//        }
+        //        let response = try? JSONDecoder().decode(ResponseToken.self, from: data)
+        //        if let token = response?.result?.token {
+        //            Persistence.token = token
+        //        }
     }
     
     func decodeResponse(data: Data) {
@@ -337,9 +337,9 @@ class APIRequest<T: Decodable> {
         string += "\(CodeStrings.url): \(url)\(nextLine)"
         string += "\(CodeStrings.method): \(method.rawValue)\(nextLine)"
         
-        //        if let token = headers?["Authorization"] {
-        //            string += "Token: \(token)\(nextLine)"
-        //        }
+        if let token = headers?[CodeStrings.authorization] {
+            string += "\(CodeStrings.token): \(token)\(nextLine)"
+        }
         
         if let headers = headers {
             string += "\(CodeStrings.headers): \(headers)\(nextLine)"

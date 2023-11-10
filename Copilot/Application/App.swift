@@ -12,6 +12,7 @@ class App {
     static var window: UIWindow!
     static weak var appCoordinator: AppCoordinator?
     static var deepLinkURL: URL?
+    static var token: String?
     static var appLoaded = false {
         didSet {
             if appLoaded, let url = deepLinkURL {

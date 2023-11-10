@@ -23,7 +23,7 @@ protocol SplashViewModelType: AnyObject {
     
     func start()
     func goToNextScene()
-    
+    func verifyToken()
 }
 
 class SplashViewModel: SplashViewModelType {
@@ -39,6 +39,25 @@ class SplashViewModel: SplashViewModelType {
 #endif
         DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
             guard let self = self else { return }
+            self.goToNextScene()
+        }
+    }
+    
+    func verifyToken() {
+        guard let token = Persistence.accessToken, token.count > 3 else {
+            goToNextScene()
+            return
+        }
+        App.token = token
+        Loading.shared.show(title: Strings.loading)
+        APIService.verifyToken { [weak self] _, error in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if error != nil {
+                Persistence.accessToken = nil
+            }
             self.goToNextScene()
         }
     }

@@ -18,8 +18,9 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.start()
+//        viewModel.start()
         navigationController?.navigationBar.isHidden = true
+        viewModel.verifyToken()
     }
 
     func goToNextPage() {

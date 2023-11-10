@@ -32,6 +32,7 @@ extension CodeStrings {
     static let dataIsNilErrorTitle = "unknown:"
     static let dataIsNilErrorMessage = "data is nil"
     
+    static let token = "Token"
     static let tokenIsNotValidErrorTitle = "Unathorized:"
     static let tokenIsNotValidErrorMessage = "Your are not Authorized"
     

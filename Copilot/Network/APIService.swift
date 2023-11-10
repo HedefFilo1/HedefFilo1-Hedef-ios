@@ -9,6 +9,15 @@ class APIService {
     
     static var loggingEnabled = true
     
+    static func verifyToken(completion: @escaping (VerifyToken?, APIResponseError?) -> Void) {
+        
+        let req = APIRequest<VerifyToken>(route: "copilot/vehicle/status", method: .get, hasToken: true)
+        req.identifier = "Verify Token"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
     static func signup(name: String,
                        surname: String,
                        phoneNumber: String,

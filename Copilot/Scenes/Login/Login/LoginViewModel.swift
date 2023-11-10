@@ -85,6 +85,7 @@ class LoginViewModel: LoginViewModelType {
             }
             
             if let model = model {
+                App.token = model.token
                 Persistence.rememberMe = rememberMe
                 if rememberMe {
                     Persistence.userEmail = email
