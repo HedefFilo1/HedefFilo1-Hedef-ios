@@ -38,6 +38,10 @@ class CPValidatableTextField: CPTextField {
     }
     
     @objc func editingDidEnd() {
+        checkValidation()
+    }
+    
+    func checkValidation() {
         if validate() {
             hideError()
         } else {

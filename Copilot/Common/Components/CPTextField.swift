@@ -50,6 +50,8 @@ class CPTextField: UITextField {
         }
     }
     
+    var previousReqiredFields: [CPValidatableTextField]?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -129,6 +131,10 @@ extension CPTextField: UITextFieldDelegate {
             placeholderLabel.apply(.greyS12R400)
             placeholderTopConstraint.constant = 6
             animate()
+        }
+        guard let textFields = previousReqiredFields else { return }
+        for textField in textFields {
+            textField.checkValidation()
         }
     }
     

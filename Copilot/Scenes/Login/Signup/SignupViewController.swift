@@ -22,7 +22,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var nameTextField: CPValidatableTextField!
-    @IBOutlet weak var surenameTextField: CPValidatableTextField!
+    @IBOutlet weak var surnameTextField: CPValidatableTextField!
     @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
     @IBOutlet weak var taxTextField: CPValidatableTextField!
@@ -65,8 +65,18 @@ class SignupViewController: UIViewController {
     func setupUI() {
         applyStyle()
         setTexts()
+        
+        setTextFieldsEvents()
+        setTextFieldsKeyboards()
+        setTextFieldsDelegates()
+        setTextFieldsRelations()
+        signupButton.isEnabled = false
+        clarificationErrorView.isHidden = true
+    }
+    
+    func setTextFieldsEvents() {
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        surenameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        surnameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         emailTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         taxTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -76,17 +86,20 @@ class SignupViewController: UIViewController {
         repeatPasswordTextFiled.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         passwordTextFiled.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
         repeatPasswordTextFiled.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
-        signupButton.isEnabled = false
-        
+    }
+    
+    func setTextFieldsKeyboards() {
         phoneTextField.keyboardType = .phonePad
         taxTextField.keyboardType = .numberPad
         plateNumberTextField.keyboardType = .namePhonePad
         licenseTextField.keyboardType = .namePhonePad
         plateNumberTextField.autocapitalizationType = .allCharacters
         licenseTextField.autocapitalizationType = .allCharacters
-        
+    }
+    
+    func setTextFieldsDelegates() {
         nameTextField.validationDelegate = self
-        surenameTextField.validationDelegate = self
+        surnameTextField.validationDelegate = self
         taxTextField.validationDelegate = self
         plateNumberTextField.validationDelegate = self
         licenseTextField.validationDelegate = self
@@ -94,13 +107,19 @@ class SignupViewController: UIViewController {
         taxTextField.delegate = self
         licenseTextField.delegate = self
         plateNumberTextField.delegate = self
-        clarificationErrorView.isHidden = true
-        
-        nameTextField.errorMessage = Strings.nameInputError
-        surenameTextField.errorMessage = Strings.surnameInputError
-        taxTextField.errorMessage = Strings.taxInputError
-        plateNumberTextField.errorMessage = Strings.plateNumberInputError
-        licenseTextField.errorMessage = Strings.licenseNumberInputError
+    }
+    
+    func setTextFieldsRelations() {
+        var previouses: [CPValidatableTextField] = [nameTextField]
+        surnameTextField.previousReqiredFields = previouses
+        previouses.append(surnameTextField)
+        phoneTextField.previousReqiredFields = previouses
+        emailTextFiled.previousReqiredFields = previouses
+        taxTextField.previousReqiredFields = previouses
+        plateNumberTextField.previousReqiredFields = previouses
+        licenseTextField.previousReqiredFields = previouses
+        passwordTextFiled.previousReqiredFields = previouses
+        repeatPasswordTextFiled.previousReqiredFields = previouses
     }
     
     func applyStyle() {
@@ -123,7 +142,7 @@ class SignupViewController: UIViewController {
     func setTexts() {
         descriptionLabel.text = Strings.signupDescription
         nameTextField.placeholder = Strings.name
-        surenameTextField.placeholder = Strings.surname
+        surnameTextField.placeholder = Strings.surname
         phoneTextField.placeholder = Strings.phoneNumber
         emailTextFiled.placeholder = Strings.yourEmailAdress
         taxTextField.placeholder = Strings.taxIdNumber
@@ -142,6 +161,7 @@ class SignupViewController: UIViewController {
         emailLabel.text = Strings.emailPlaceholder
         
         loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
+        setTextFieldWarnings()
     }
     
     func setClarificationText(color: UIColor = .textGrey) {
@@ -150,9 +170,17 @@ class SignupViewController: UIViewController {
         clarificationLabel.attributedText = AttributedText.createUnderlinedString(mainText: calrification, underlinedText: calrificationUnderlined)
     }
     
+    func setTextFieldWarnings() {
+        nameTextField.errorMessage = Strings.nameInputError
+        surnameTextField.errorMessage = Strings.surnameInputError
+        taxTextField.errorMessage = Strings.taxInputError
+        plateNumberTextField.errorMessage = Strings.plateNumberInputError
+        licenseTextField.errorMessage = Strings.licenseNumberInputError
+    }
+    
     func setButtonActivation() {
         let name = nameTextField.validate()
-        let surname = surenameTextField.validate()
+        let surname = surnameTextField.validate()
         let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
         let tcTax = taxTextField.validate()
@@ -253,7 +281,7 @@ class SignupViewController: UIViewController {
         let email = emailCheckBox.isSelected
         
         viewModel.signup(name: nameTextField.text ?? "",
-                         surname: surenameTextField.text ?? "",
+                         surname: surnameTextField.text ?? "",
                          phone: phoneTextField.text ?? "",
                          email: emailTextFiled.text ?? "",
                          taxId: taxTextField.text ?? "",
@@ -277,8 +305,8 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
         case nameTextField:
             return nameTextField.pureTextCount > 0
             
-        case surenameTextField:
-            return surenameTextField.pureTextCount > 0
+        case surnameTextField:
+            return surnameTextField.pureTextCount > 0
             
         case taxTextField:
             return taxTextField.textCount == 10
