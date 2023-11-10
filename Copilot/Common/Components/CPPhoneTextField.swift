@@ -29,6 +29,20 @@ class CPPhoneTextField: CPEmailTextField {
         super.editingChanged()
         text = text?.applyPatternOnNumbers(pattern: CodeStrings.phonePattern, replacementCharacter: "#")
     }
+    
+    func setMask(text: String) {
+        attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.textGrey])
+    }
+    
+    override func didBegin() {
+        super.didBegin()
+        setMask(text: CodeStrings.phoneMask)
+    }
+    
+    override func didEnd() {
+        super.didEnd()
+        setMask(text: "")
+    }
 }
 
 extension CPPhoneTextField {
