@@ -795,28 +795,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>This field is required</string>
         </dict>
         
-        <key></key>
+        <key>selectYourAvatar</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Avatarını Seç</string>
             <key>en</key>
-            <string></string>
+            <string>Choose Your Avatar</string>
         </dict>
         
-        <key></key>
+        <key>selectAvatarDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Seçtiğin avatar uygulama içerisinde seni temsil edecek ve anasayfa da seçtiğin avatarı göreceksin.</string>
             <key>en</key>
-            <string></string>
+            <string>The avatar you choose will represent you in the application and you will see the avatar you chose on the homepage.</string>
         </dict>
         
-        <key></key>
+        <key>select</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Seç</string>
             <key>en</key>
-            <string></string>
+            <string>Select</string>
         </dict>
         
         <key></key>

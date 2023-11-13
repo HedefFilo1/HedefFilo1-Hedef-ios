@@ -28,4 +28,17 @@ extension Strings {
     static var surnameInputError: String {
         return localized(string: "surnameInputError")
     }
+    
+    static var selectYourAvatar: String {
+        return localized(string: "selectYourAvatar")
+    }
+    
+    static var selectAvatarDescription: String {
+        return localized(string: "selectAvatarDescription")
+    }
+    
+    static var select: String {
+        return localized(string: "select")
+    }
+    
 }

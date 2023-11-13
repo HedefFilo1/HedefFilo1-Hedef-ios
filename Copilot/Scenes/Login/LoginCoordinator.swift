@@ -51,13 +51,22 @@ class LoginCoordinator: Coordinator {
     
 }
 
-extension LoginCoordinator: LoginViewModelCoordinatorDelegate {
+extension LoginCoordinator: LoginViewModelCoordinatorDelegate, AvatarViewModelCoordinatorDelegate {
     
     func goToForgotPassword() {
         let viewController: ForgotPasswordViewController = storyboard.instantiateViewController()
         let viewModel = ForgotPasswordViewModel()
         viewController.viewModel = viewModel
         viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToAvatar(email: String) {
+        let viewController: AvatarViewController = storyboard.instantiateViewController()
+        let viewModel = AvatarViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewModel.email = email
         navigationController.pushViewController(viewController, animated: true)
     }
     

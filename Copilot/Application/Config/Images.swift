@@ -125,4 +125,20 @@ struct Images {
     static var loadingSpinner: UIImage {
         return UIImage(named: "loadingSpinner") ?? UIImage()
     }
+    
+    static var avatar1: UIImage {
+        return UIImage(named: "avatar1") ?? UIImage()
+    }
+    
+    static var avatar2: UIImage {
+        return UIImage(named: "avatar2") ?? UIImage()
+    }
+    
+    static var avatar3: UIImage {
+        return UIImage(named: "avatar3") ?? UIImage()
+    }
+    
+    static var avatar4: UIImage {
+        return UIImage(named: "avatar4") ?? UIImage()
+    }
 }

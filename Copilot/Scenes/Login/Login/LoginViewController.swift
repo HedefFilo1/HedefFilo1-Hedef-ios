@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
         // just for test
         //        viewModel.goToMain()
         //        viewModel.login(email: "tester@solid.com", password: "123456")
+        viewModel.goToNextScene(email: "dsfd@df.co")
 #endif
     }
     

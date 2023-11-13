@@ -9,9 +9,9 @@ import UIKit
 
 extension UIViewController {
     
-    func setBasicViews() {
+    func setBasicViews(addNotfication: Bool = true, addSearch: Bool = true) {
         setRedBackground()
-        setHeader()
+        setHeader(addNotfication: addNotfication, addSearch: addSearch)
     }
     
     func setRedBackground() {
@@ -23,15 +23,20 @@ extension UIViewController {
         view.sendSubviewToBack(imageView)
     }
     
-    func setHeader() {
+    func setHeader(addNotfication: Bool, addSearch: Bool) {
         let header = UIView()
         view.addSubview(header)
         let guide = view.safeAreaLayoutGuide
         header.topAnchor.constraint(equalTo: guide.topAnchor, constant: 16).isActive = true
         header.align(height: 44, leadingAndTrailing: 24)
         setLogo(to: header)
-        setNotificationView(to: header)
-        setSearchView(to: header)
+        if addNotfication {
+            setNotificationView(to: header)
+        }
+        
+        if addSearch {
+            setSearchView(to: header)
+        }
     }
     
     func setLogo(to header: UIView) {

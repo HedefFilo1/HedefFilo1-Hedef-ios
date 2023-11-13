@@ -25,4 +25,7 @@ struct Persistence {
     
     @Persist(key: "Language", defaultValue: nil, type: .userDefaults)
     static var language: String?
+    
+    @Persist(key: "AvatarSelected", defaultValue: nil, type: .userDefaults)
+    static var avatarSelected: String?
 }

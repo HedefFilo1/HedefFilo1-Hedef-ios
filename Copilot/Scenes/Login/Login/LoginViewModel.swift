@@ -8,6 +8,7 @@
 import Foundation
 
 protocol LoginViewModelCoordinatorDelegate: AnyObject {
+    func goToAvatar(email: String)
     func goToMain()
     func goToForgotPassword()
     func goToSignup()
@@ -20,11 +21,11 @@ protocol LoginViewModelDelegate: AnyObject {
 
 protocol LoginViewModelType: AnyObject {
     var delegate: LoginViewModelDelegate? { get set }
-    func goToMain()
     func goToForgotPassword()
     func login(email: String, password: String, rememberMe: Bool)
     func goToSignup()
     func checkRememberMe()
+    func goToNextScene(email: String)
 }
 
 class LoginViewModel: LoginViewModelType {
@@ -55,7 +56,7 @@ class LoginViewModel: LoginViewModelType {
     func login(email: String, password: String, rememberMe: Bool) {
         // just for test
         if email == "tester@solid.com" && password == "123456" {
-            self.goToMain()
+            self.goToNextScene(email: "tester@solid.com")
             return
         }
 #if DEV_DEBUG
@@ -69,7 +70,7 @@ class LoginViewModel: LoginViewModelType {
             Persistence.password = nil
             Persistence.accessToken =  nil
         }
-        goToMain()
+        goToNextScene(email: email)
 #endif
         Loading.shared.show(title: Strings.loading)
         APIService.login(email: email,
@@ -96,9 +97,17 @@ class LoginViewModel: LoginViewModelType {
                     Persistence.password = nil
                     Persistence.accessToken =  nil
                 }
-                self.goToMain()
+                self.goToNextScene(email: email)
             }
             
+        }
+    }
+    
+    func goToNextScene(email: String) {
+        if let selected = Persistence.avatarSelected, email == selected {
+            goToMain()
+        } else {
+            coordinatorDelegate?.goToAvatar(email: email)
         }
     }
     
