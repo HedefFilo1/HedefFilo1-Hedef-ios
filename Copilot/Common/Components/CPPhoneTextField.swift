@@ -10,10 +10,6 @@ import UIKit
 
 class CPPhoneTextField: CPEmailTextField {
     
-    override var errorMessage: String {
-        return Strings.enterValidPhone
-    }
-    
     override func validate() -> Bool {
         return pureTextCount == 11
     }
@@ -22,6 +18,7 @@ class CPPhoneTextField: CPEmailTextField {
         super.setup()
         keyboardType = .phonePad
         placeholder = Strings.phoneNumber
+        errorMessage = Strings.enterValidPhone
         delegate = self
     }
     

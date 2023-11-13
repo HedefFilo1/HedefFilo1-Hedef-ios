@@ -116,10 +116,15 @@ class SignupViewController: UIViewController {
         surnameTextField.previousReqiredFields = previouses
         previouses.append(surnameTextField)
         phoneTextField.previousReqiredFields = previouses
+        previouses.append(phoneTextField)
         emailTextFiled.previousReqiredFields = previouses
+        previouses.append(emailTextFiled)
         taxTextField.previousReqiredFields = previouses
+        previouses.append(taxTextField)
         plateNumberTextField.previousReqiredFields = previouses
+        previouses.append(plateNumberTextField)
         licenseTextField.previousReqiredFields = previouses
+        previouses.append(licenseTextField)
         passwordTextFiled.previousReqiredFields = previouses
         repeatPasswordTextFiled.previousReqiredFields = previouses
     }

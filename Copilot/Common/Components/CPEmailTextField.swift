@@ -8,17 +8,9 @@
 import Foundation
 import UIKit
 
-class CPEmailTextField: CPTextField {
-
-    var isValidText: Bool {
-        return validate()
-    }
+class CPEmailTextField: CPValidatableTextField {
     
-    var errorMessage: String {
-        return Strings.emailIncorrect
-    }
-    
-    func validate() -> Bool {
+    override func validate() -> Bool {
         let emailFormat = CodeStrings.emailFormat
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: text)
@@ -28,21 +20,6 @@ class CPEmailTextField: CPTextField {
         super.setup()
         keyboardType = .emailAddress
         placeholder = Strings.yourEmailAdress
-        addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
-    }
-    
-    @objc func editingChanged() {
-        if validate() {
-            hideError()
-        }
-    }
-    
-    @objc func editingDidEnd() {
-        if validate() {
-            hideError()
-        } else {
-            showError(message: errorMessage)
-        }
+        errorMessage = Strings.emailIncorrect
     }
 }

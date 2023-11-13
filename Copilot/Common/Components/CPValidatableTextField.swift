@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CPValidatableTextFieldDelegate: AnyObject {
-    func validate(textField: UITextField)-> Bool
+    func validate(textField: UITextField) -> Bool
 }
 
 class CPValidatableTextField: CPTextField {
