@@ -31,7 +31,7 @@ class CPPhoneTextField: CPEmailTextField {
     }
     
     func setMask(text: String) {
-        attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.textGrey])
+        attributedPlaceholder = NSAttributedString(string: text, attributes: [.foregroundColor: UIColor.fieldDescription])
     }
     
     override func didBegin() {

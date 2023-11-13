@@ -104,6 +104,8 @@ class SignupViewController: UIViewController {
         plateNumberTextField.validationDelegate = self
         licenseTextField.validationDelegate = self
         
+        nameTextField.delegate = self
+        surnameTextField.delegate = self
         taxTextField.delegate = self
         licenseTextField.delegate = self
         plateNumberTextField.delegate = self
@@ -328,6 +330,13 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
+        
+        if textField == nameTextField || textField == surnameTextField {
+            let allowedCharacters = CharacterSet.alphanumerics
+            let unwantedStr = string.trimmingCharacters(in: allowedCharacters)
+            return unwantedStr.count == 0
+            
+        }
         
         if textField == licenseTextField || textField == plateNumberTextField {
             return range.location < 8
