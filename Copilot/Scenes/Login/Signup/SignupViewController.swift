@@ -325,6 +325,13 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
         case licenseTextField:
             let text = licenseTextField.pureText
             let letters = String(text.prefix(2))
+            if letters.isLetterString, letters.count == 2 {
+                textField.keyboardType = .numberPad
+                textField.reloadInputViews()
+            } else {
+                textField.keyboardType = .namePhonePad
+                textField.reloadInputViews()
+            }
             let numbers = text.replacingOccurrences(of: letters, with: "")
             return numbers.isNumber && letters.isLetterString && text.count == 8
             
@@ -337,7 +344,7 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
         if string.isEmpty { return true }
         
         if textField == nameTextField || textField == surnameTextField {
-            let allowedCharacters = CharacterSet.alphanumerics
+            let allowedCharacters = CharacterSet.letters
             let unwantedStr = string.trimmingCharacters(in: allowedCharacters)
             return unwantedStr.count == 0
             
