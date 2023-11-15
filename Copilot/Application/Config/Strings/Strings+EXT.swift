@@ -60,4 +60,25 @@ extension Strings {
     static var specialCharacter: String {
         return localized(string: "specialCharacter")
     }
+    
+    static var download: String {
+        return localized(string: "download")
+    }
+    
+    static var delete: String {
+        return localized(string: "delete")
+    }
+    
+    static var yourDocuments: String {
+        return localized(string: "yourDocuments")
+    }
+    
+    static var documentsSavedInCopilot: String {
+        return localized(string: "documentsSavedInCopilot")
+    }
+    
+    static var uploadDocument: String {
+        return localized(string: "uploadDocument")
+    }
+    
 }

@@ -76,6 +76,14 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
             controller.viewModel.coordinatorDelegate = self
         }
     }
+    
+    func showDocuments() {
+        tabBarController?.setSelectedIndex(index: 7)
+        if let controller = tabBarController?.viewControllers?[7] as? DocumentsViewController {
+            controller.viewModel = DocumentsViewModel()
+            controller.viewModel.coordinatorDelegate = self
+        }
+    }
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
@@ -85,6 +93,10 @@ extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
+}
+
+extension MainCoordinator: DocumentsViewModelCoordinatorDelegate {
+    
 }
 
 extension MainCoordinator: CampaignDetailVMCoordinatorDelegate {

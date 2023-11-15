@@ -859,44 +859,44 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>*Special Character</string>
         </dict>
         
-        <key></key>
+        <key>download</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>İndir</string>
             <key>en</key>
-            <string></string>
+            <string>Download</string>
         </dict>
         
-        <key></key>
+        <key>delete</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Sil</string>
             <key>en</key>
-            <string></string>
+            <string>Delete</string>
         </dict>
         
-        <key></key>
+        <key>yourDocuments</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Dokümanlarınız</string>
             <key>en</key>
-            <string></string>
+            <string>Your Documents</string>
         </dict>
         
-        <key></key>
+        <key>documentsSavedInCopilot</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Copilot’ta Kayıtlı Dokümanlarınız</string>
             <key>en</key>
-            <string></string>
+            <string>Your Documents Saved in Copilot</string>
         </dict>
         
-        <key></key>
+        <key>uploadDocument</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Doküman Yükle</string>
             <key>en</key>
-            <string></string>
+            <string>Upload Document</string>
         </dict>
         
         <key></key>

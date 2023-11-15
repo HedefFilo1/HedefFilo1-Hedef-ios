@@ -123,6 +123,9 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 1:
             viewModel.showCampaigns()
             
+        case 2:
+            viewModel.showDocuments()
+            
         default:
             break
         }
