@@ -47,7 +47,7 @@
                                     <constraint firstItem="RGW-aV-kNc" firstAttribute="centerY" secondItem="4vS-K0-ITO" secondAttribute="centerY" id="n9d-AV-a9T"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-iF-LNN" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-iF-LNN" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="304" height="85"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

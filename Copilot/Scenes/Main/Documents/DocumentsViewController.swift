@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
 
 class DocumentsViewController: UIViewController {
     
@@ -80,11 +82,6 @@ class DocumentsViewController: UIViewController {
         borderViews[tag].backgroundColor = .theme
         collectionView.scrollToItem(at: IndexPath(row: 0, section: tag), at: .centeredHorizontally, animated: true)
     }
-
-    @IBAction func didTapUpload() {
-        
-    }
-    
 }
 
 extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -154,6 +151,12 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
     
     func didTapDownload() {
         
+    }
+    
+    func didTapUpload() {
+//        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.item], asCopy: false)
+//        documentPicker.modalPresentationStyle = .formSheet
+//        present(documentPicker, animated: true, completion: nil)
     }
 }
 
