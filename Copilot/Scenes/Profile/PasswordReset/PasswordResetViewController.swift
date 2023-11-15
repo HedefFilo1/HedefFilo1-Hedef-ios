@@ -53,6 +53,8 @@ class PasswordResetViewController: UIViewController {
         oldPasswordTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         newPasswordTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         repeatPasswordTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        newPasswordTextField.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
+        repeatPasswordTextField.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
     }
     
     func applyStyle() {
@@ -90,6 +92,26 @@ class PasswordResetViewController: UIViewController {
         
     }
     
+    @objc func editingDidEnd(_ textField: UITextField) {
+        let repeatPass = repeatPasswordTextField.text ?? ""
+        if textField == newPasswordTextField, repeatPass.count > 0 {
+            checkPasswords()
+        }
+        if textField == repeatPasswordTextField {
+            checkPasswords()
+        }
+    }
+    
+    func checkPasswords() {
+        let pass = newPasswordTextField.text ?? ""
+        let repeatPass = repeatPasswordTextField.text ?? ""
+        if pass != repeatPass {
+            repeatPasswordTextField.showError(message: Strings.passwordsShouldBeSame)
+        } else {
+            repeatPasswordTextField.hideError()
+        }
+    }
+    
     @objc func editingChanged(_ textField: UITextField) {
         let new = newPasswordTextField.text ?? ""
         let old = oldPasswordTextField.textCount > 0
@@ -97,6 +119,10 @@ class PasswordResetViewController: UIViewController {
         let same = new == repeatPass
         if textField == newPasswordTextField {
             checkRules()
+        }
+        
+        if textField == repeatPasswordTextField {
+            checkPasswords()
         }
         saveButton.isEnabled = viewModel.allRules && old && same
     }
