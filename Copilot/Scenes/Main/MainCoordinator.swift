@@ -95,8 +95,13 @@ extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
     }
 }
 
-extension MainCoordinator: DocumentsViewModelCoordinatorDelegate {
-    
+extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewModelCoordinatorDelegate {
+    func goToDocument() {
+        let viewController: DocumentViewController = storyboard.instantiateViewController()
+        viewController.viewModel = DocumentViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension MainCoordinator: CampaignDetailVMCoordinatorDelegate {

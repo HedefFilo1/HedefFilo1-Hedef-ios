@@ -170,6 +170,8 @@
 		89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045862B04D2F000745E73 /* DocumentsViewController.swift */; };
 		89E0458B2B04D3EB00745E73 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045892B04D3EB00745E73 /* DocumentCell.swift */; };
 		89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E0458A2B04D3EB00745E73 /* DocumentCell.xib */; };
+		89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0458E2B04F51500745E73 /* DocmentViewModel.swift */; };
+		89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045902B04F51C00745E73 /* DocmentViewController.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -342,6 +344,8 @@
 		89E045862B04D2F000745E73 /* DocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		89E045892B04D3EB00745E73 /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		89E0458A2B04D3EB00745E73 /* DocumentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentCell.xib; sourceTree = "<group>"; };
+		89E0458E2B04F51500745E73 /* DocmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocmentViewModel.swift; sourceTree = "<group>"; };
+		89E045902B04F51C00745E73 /* DocmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocmentViewController.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
@@ -840,6 +844,7 @@
 				893EDF5C2AF924A7004E643E /* Campaigns */,
 				8935AC522AFA6733002F1C68 /* CampaignDetail */,
 				89E045832B04D2C800745E73 /* Documents */,
+				89E0458D2B04F50100745E73 /* Docment */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1096,6 +1101,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		89E0458D2B04F50100745E73 /* Docment */ = {
+			isa = PBXGroup;
+			children = (
+				89E0458E2B04F51500745E73 /* DocmentViewModel.swift */,
+				89E045902B04F51C00745E73 /* DocmentViewController.swift */,
+			);
+			path = Docment;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1339,6 +1353,7 @@
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
+				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
 				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
 				8935AC512AFA5D87002F1C68 /* SponsorshipCell.swift in Sources */,
@@ -1358,6 +1373,7 @@
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
+				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
@@ -1529,7 +1545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1563,7 +1579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1657,7 +1673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -1745,7 +1761,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

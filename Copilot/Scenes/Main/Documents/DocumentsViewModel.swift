@@ -13,6 +13,7 @@ struct Document {
 }
 
 protocol DocumentsViewModelCoordinatorDelegate: AnyObject {
+    func goToDocument()
 }
 
 protocol DocumentsViewModelDelegate: AnyObject {
@@ -23,6 +24,7 @@ protocol DocumentsViewModelType: AnyObject {
     var coordinatorDelegate: DocumentsViewModelCoordinatorDelegate? { get set }
     var delegate: DocumentsViewModelDelegate? { get set }
     var documents: [Document]? { get set }
+    func goToDocument()
 }
 
 class DocumentsViewModel: DocumentsViewModelType {
@@ -36,4 +38,8 @@ class DocumentsViewModel: DocumentsViewModelType {
         Document(title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
         Document(title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
     ]
+    
+    func goToDocument() {
+        coordinatorDelegate?.goToDocument()
+    }
 }
