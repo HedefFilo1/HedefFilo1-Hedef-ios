@@ -819,6 +819,102 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Select</string>
         </dict>
         
+        <key>min8Characters</key>
+        <dict>
+            <key>tr</key>
+            <string>*Min 8 Karakter</string>
+            <key>en</key>
+            <string>*Min 8 Characters</string>
+        </dict>
+        
+        <key>uppercaseLetter</key>
+        <dict>
+            <key>tr</key>
+            <string>*Büyük Harf</string>
+            <key>en</key>
+            <string>*Uppercase letter</string>
+        </dict>
+        
+        <key>lowerCase</key>
+        <dict>
+            <key>tr</key>
+            <string>*Küçük Harf</string>
+            <key>en</key>
+            <string>*Lower case</string>
+        </dict>
+        
+        <key>number</key>
+        <dict>
+            <key>tr</key>
+            <string>*Sayı</string>
+            <key>en</key>
+            <string>*Number</string>
+        </dict>
+        
+        <key>specialCharacter</key>
+        <dict>
+            <key>tr</key>
+            <string>*Özel Karakter</string>
+            <key>en</key>
+            <string>*Special Character</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

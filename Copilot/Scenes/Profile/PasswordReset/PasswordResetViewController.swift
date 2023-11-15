@@ -22,6 +22,11 @@ class PasswordResetViewController: UIViewController {
     @IBOutlet weak var oldPasswordTextField: CPPasswordTextField!
     @IBOutlet weak var newPasswordTextField: CPPasswordTextField!
     @IBOutlet weak var repeatPasswordTextField: CPPasswordTextField!
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var uppercaseLabel: UILabel!
+    @IBOutlet weak var lowercaseLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var specialLabel: UILabel!
     @IBOutlet weak var saveButton: CPButton!
     
     override func viewDidLoad() {
@@ -57,6 +62,11 @@ class PasswordResetViewController: UIViewController {
         backImageView.image = backImageView.image?.withRenderingMode(.alwaysTemplate)
         backImageView.tintColor = .lightBlack
         titleLabel.apply(.blackS20B700)
+        minLabel.apply(.greyS12R400)
+        uppercaseLabel.apply(.greyS12R400)
+        lowercaseLabel.apply(.greyS12R400)
+        numberLabel.apply(.greyS12R400)
+        specialLabel.apply(.greyS12R400)
     }
     
     func setTexts() {
@@ -64,6 +74,12 @@ class PasswordResetViewController: UIViewController {
         oldPasswordTextField.placeholder = Strings.oldPassword
         newPasswordTextField.placeholder = Strings.newPassword
         repeatPasswordTextField.placeholder = Strings.repeatPasswordAgain
+        minLabel.text = Strings.min8Characters
+        uppercaseLabel.text = Strings.uppercaseLetter
+        lowercaseLabel.text = Strings.lowerCase
+        numberLabel.text = Strings.number
+        specialLabel.text = Strings.specialCharacter
+        saveButton.setTitle(Strings.save, for: .normal)
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {
@@ -75,10 +91,24 @@ class PasswordResetViewController: UIViewController {
     }
     
     @objc func editingChanged(_ textField: UITextField) {
-        let new = newPasswordTextField.textCount > 0
+        let new = newPasswordTextField.text ?? ""
         let old = oldPasswordTextField.textCount > 0
-        let repeatPass = repeatPasswordTextField.textCount > 0
-        saveButton.isEnabled = new && old && repeatPass
+        let repeatPass = repeatPasswordTextField.text ?? ""
+        let same = new == repeatPass
+        if textField == newPasswordTextField {
+            checkRules()
+        }
+        saveButton.isEnabled = viewModel.allRules && old && same
+    }
+    
+    func checkRules() {
+        let new = newPasswordTextField.text ?? ""
+        viewModel.check(password: new)
+        minLabel.textColor = viewModel.min8Rule ? .textSuccess: .theme
+        uppercaseLabel.textColor = viewModel.uppercaseRule ? .textSuccess: .theme
+        lowercaseLabel.textColor = viewModel.lowercaseRule ? .textSuccess: .theme
+        numberLabel.textColor = viewModel.numberRule ? .textSuccess: .theme
+        specialLabel.textColor = viewModel.specialRule ? .textSuccess: .theme
     }
 }
 

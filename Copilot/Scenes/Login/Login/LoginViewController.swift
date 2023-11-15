@@ -37,8 +37,8 @@ class LoginViewController: UIViewController {
 #if DEV_DEBUG
         // just for test
         //        viewModel.goToMain()
-        //        viewModel.login(email: "tester@solid.com", password: "123456")
-//        viewModel.goToNextScene(email: "dsfd@df.co")
+//        viewModel.login(email: "tester@solid.com", password: "123456")
+        viewModel.goToNextScene(email: "dsfd@df.co")
 #endif
     }
     

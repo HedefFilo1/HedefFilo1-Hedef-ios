@@ -41,4 +41,23 @@ extension Strings {
         return localized(string: "select")
     }
     
+    static var min8Characters: String {
+        return localized(string: "min8Characters")
+    }
+    
+    static var uppercaseLetter: String {
+        return localized(string: "uppercaseLetter")
+    }
+    
+    static var lowerCase: String {
+        return localized(string: "lowerCase")
+    }
+    
+    static var number: String {
+        return localized(string: "number")
+    }
+    
+    static var specialCharacter: String {
+        return localized(string: "specialCharacter")
+    }
 }
