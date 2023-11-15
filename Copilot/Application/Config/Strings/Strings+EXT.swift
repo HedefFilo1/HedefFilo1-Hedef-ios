@@ -81,4 +81,8 @@ extension Strings {
         return localized(string: "uploadDocument")
     }
     
+    static var necessaryDocuments: String {
+        return localized(string: "necessaryDocuments")
+    }
+    
 }

@@ -18,13 +18,13 @@ class DocumentsViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var yourDocsButton: UIButton!
+    @IBOutlet weak var neccessaryButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var uploadImageView: UIImageView!
-    @IBOutlet weak var uploadLabel: UILabel!
-    @IBOutlet weak var uploadButton: CPLightButton!
+    @IBOutlet var borderViews: [UIView]!
     
-    private var selectedIndex: Int?
+    private var selectedNecessaryItem: NecessaryDocument?
+    private var currentTab = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -40,13 +40,14 @@ class DocumentsViewController: UIViewController {
     }
     
     func setupUI() {
-        setBasicViews(addNotfication: false, addSearch: false)
+        setBasicViews()
         applyStyle()
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: DocumentCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: 24, left: 24, bottom: 12, right: 24)
+        collectionView.register(cellType: YourDocumentsTabCell.self)
+        collectionView.register(cellType: NecessaryDocumentsTabCell.self)
+        collectionView.register(cellType: DocumentsTabCell.self)
     }
     
     func applyStyle() {
@@ -54,17 +55,30 @@ class DocumentsViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
-        descriptionLabel.apply(.greyS14R400)
-        uploadLabel.apply(.themeS16B700)
-        uploadImageView.image = uploadImageView.image?.withRenderingMode(.alwaysTemplate)
-        uploadImageView.tintColor = .theme
-        uploadButton.backgroundColor = .clear
+        
+        yourDocsButton.apply(.blackS18R400)
+        neccessaryButton.apply(.blackS18R400)
+        for view in borderViews {
+            view.backgroundColor = .disabled
+        }
+        borderViews[0].backgroundColor = .theme
     }
     
     func setTexts() {
         titleLabel.text = Strings.yourDocuments
-        descriptionLabel.text = Strings.documentsSavedInCopilot
-        uploadLabel.text = Strings.uploadDocument
+        yourDocsButton.setTitle(Strings.yourDocuments, for: .normal)
+        neccessaryButton.setTitle(Strings.necessaryDocuments, for: .normal)
+    }
+    
+    @IBAction func didTab(_ sender: UIView) {
+        let tag = sender.tag
+        if tag == currentTab {
+            return
+        }
+        borderViews[currentTab].backgroundColor = .disabled
+        currentTab = tag
+        borderViews[tag].backgroundColor = .theme
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: tag), at: .centeredHorizontally, animated: true)
     }
 
     @IBAction func didTapUpload() {
@@ -76,27 +90,47 @@ class DocumentsViewController: UIViewController {
 extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: DocumentCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.delegate = self
-        cell.item = viewModel.documents?[indexPath.item]
-        return cell
+        switch indexPath.section {
+        case 0:
+            let cell: YourDocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.items = viewModel.documents
+            cell.delegate = self
+            return cell
+            
+        case 1:
+            let cell: NecessaryDocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.items = viewModel.neccessarItems
+            cell.delegate = self
+            return cell
+            
+        case 2:
+            let cell: DocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.items = viewModel.necessaryDocuments
+            cell.selectedNecessaryItem = selectedNecessaryItem
+            cell.delegate = self
+            return cell
+            
+        default:
+            let cell: DocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 48, height: 75)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        16
+        0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -108,13 +142,33 @@ extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewD
     }
 }
 
-extension DocumentsViewController: DocumentCellDelegate {
-    func didTapDelete() {
-        
+extension DocumentsViewController: YourDocumentsTabDelegate {
+    func didSelectDocumentItem() {
+        viewModel.goToDocument()
+    }
+    
+    func didTapDelete(item: Document) {
+        viewModel.delete(document: item)
+        collectionView.reloadData()
     }
     
     func didTapDownload() {
         
+    }
+}
+
+extension DocumentsViewController: NecessaryDocumentsTabDelegate {
+    func didSelectNeccessary(item: NecessaryDocument) {
+        selectedNecessaryItem = item
+        collectionView.reloadSections(IndexSet(integer: 2))
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .centeredHorizontally, animated: true)
+    }
+}
+
+extension DocumentsViewController: DocumentsTabDelegate {
+    
+    func didTabBack() {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 1), at: .centeredHorizontally, animated: true)
     }
 }
 

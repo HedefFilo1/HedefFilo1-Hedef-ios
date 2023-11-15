@@ -48,8 +48,6 @@ class CampaignsViewController: UIViewController {
         collectionView.register(cellType: CampaignsOfferTabCell.self)
         collectionView.register(cellType: NewsTabCell.self)
         collectionView.register(cellType: SponsorshipTabCell.self)
-        
-        //        collectionView.contentInset.bottom = 90
     }
     
     func applyStyle() {

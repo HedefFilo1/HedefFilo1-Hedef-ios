@@ -902,17 +902,17 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key></key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Araç İade Teslim Dökümanları</string>
             <key>en</key>
             <string></string>
         </dict>
         
-        <key></key>
+        <key>necessaryDocuments</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Gerekli Dokümanlar</string>
             <key>en</key>
-            <string></string>
+            <string>Necessary Documents</string>
         </dict>
         
         <key></key>
