@@ -344,7 +344,8 @@ extension SignupViewController: CPValidatableTextFieldDelegate, UITextFieldDeleg
         if string.isEmpty { return true }
         
         if textField == nameTextField || textField == surnameTextField {
-            let allowedCharacters = CharacterSet.letters
+            var allowedCharacters = CharacterSet.letters
+            allowedCharacters.insert(" ")
             let unwantedStr = string.trimmingCharacters(in: allowedCharacters)
             return unwantedStr.count == 0
             

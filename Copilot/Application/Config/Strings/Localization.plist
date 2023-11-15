@@ -237,7 +237,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>marketingApprovement</key>
         <dict>
             <key>tr</key>
-            <string>Ürün, hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
+            <string>Ürün, hizmet ve kampanyalardan haberdar olmak için 6563 sayılı kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
             <key>en</key>
             <string>In order to be informed about products, services and campaigns, I allow commercial electronic messages to be sent within the scope of Law No. 6563 and its legislation until I specify otherwise.</string>
         </dict>
