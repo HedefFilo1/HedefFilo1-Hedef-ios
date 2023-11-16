@@ -264,7 +264,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vv8-d3-Sst">
-                                                                <rect key="frame" x="0.0" y="236" width="345" height="112"/>
+                                                                <rect key="frame" x="0.0" y="240" width="345" height="112"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Min 8 Karakter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZg-Qo-S6F">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="16"/>
@@ -302,7 +302,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snx-Vv-Bo4" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="378" width="345" height="56"/>
+                                                                <rect key="frame" x="0.0" y="382" width="345" height="56"/>
                                                                 <color key="backgroundColor" name="lightBorder"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="56" id="uIP-wh-vxd"/>
@@ -329,7 +329,7 @@
                                                             <constraint firstItem="xAL-kG-ES6" firstAttribute="top" secondItem="b8C-nu-TFq" secondAttribute="top" id="N81-a9-u6u"/>
                                                             <constraint firstItem="snx-Vv-Bo4" firstAttribute="top" secondItem="Vv8-d3-Sst" secondAttribute="bottom" constant="30" id="U2W-yt-eIp"/>
                                                             <constraint firstItem="snx-Vv-Bo4" firstAttribute="leading" secondItem="b8C-nu-TFq" secondAttribute="leading" id="Wwk-f3-YLB"/>
-                                                            <constraint firstItem="Vv8-d3-Sst" firstAttribute="top" secondItem="YjS-PR-4Tb" secondAttribute="bottom" constant="20" id="bKC-g4-nHN"/>
+                                                            <constraint firstItem="Vv8-d3-Sst" firstAttribute="top" secondItem="YjS-PR-4Tb" secondAttribute="bottom" constant="24" id="bKC-g4-nHN"/>
                                                             <constraint firstItem="MLx-IG-clb" firstAttribute="top" secondItem="xAL-kG-ES6" secondAttribute="bottom" constant="24" id="fdo-r6-SvL"/>
                                                             <constraint firstItem="MLx-IG-clb" firstAttribute="leading" secondItem="b8C-nu-TFq" secondAttribute="leading" id="huj-R9-6Qj"/>
                                                             <constraint firstAttribute="trailing" secondItem="Vv8-d3-Sst" secondAttribute="trailing" id="yyp-Yf-6YK"/>

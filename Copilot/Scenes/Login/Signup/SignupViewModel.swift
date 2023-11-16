@@ -18,6 +18,13 @@ protocol SignupViewModelDelegate: AnyObject {
 
 protocol SignupViewModelType: AnyObject {
     var delegate: SignupViewModelDelegate? { get set }
+    var min8Rule: Bool { get set }
+    var uppercaseRule: Bool { get set }
+    var lowercaseRule: Bool { get set }
+    var numberRule: Bool { get set }
+    var specialRule: Bool { get set }
+    var allRules: Bool { get }
+    func check(password: String)
     func goToLogin()
     func signup(name: String,
                 surname: String,
@@ -38,8 +45,27 @@ class SignupViewModel: SignupViewModelType {
     weak var coordinatorDelegate: SignupViewModelCoordinatorDelegate?
     weak var delegate: SignupViewModelDelegate?
     
+    var min8Rule: Bool = false
+    var uppercaseRule: Bool = false
+    var lowercaseRule: Bool = false
+    var numberRule: Bool = false
+    var specialRule: Bool = false
+    var otpId = ""
+    
+    var allRules: Bool {
+        return min8Rule && uppercaseRule && lowercaseRule && numberRule && specialRule
+    }
+    
     func goToLogin() {
         coordinatorDelegate?.goToLogin()
+    }
+    
+    func check(password: String) {
+        min8Rule = password.count > 7
+        uppercaseRule = password.rangeOfCharacter(from: .uppercaseLetters) != nil
+        lowercaseRule = password.rangeOfCharacter(from: .lowercaseLetters) != nil
+        numberRule = password.rangeOfCharacter(from: .decimalDigits) != nil
+        specialRule = password.rangeOfCharacter(from: .punctuationCharacters) != nil
     }
     
     func signup(name: String,

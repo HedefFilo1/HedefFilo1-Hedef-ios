@@ -247,10 +247,10 @@
                                 <rect key="frame" x="0.0" y="59" width="375" height="1237"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-BU-c5L">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1362"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5L-eP-IH2">
-                                                <rect key="frame" x="24" y="0.0" width="327" height="1362"/>
+                                                <rect key="frame" x="24" y="0.0" width="327" height="1500"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CnK-YN-elp">
                                                         <rect key="frame" x="106.66666666666666" y="16" width="114" height="64"/>
@@ -354,105 +354,8 @@
                                                             <constraint firstAttribute="height" constant="760" id="O50-bG-UVb"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N67-rw-Uub" customClass="CPCheckBox" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1060.6666666666667" width="20" height="20"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="CiO-V4-LLs"/>
-                                                            <constraint firstAttribute="width" constant="20" id="wFt-iA-Uce"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aydınlatma Metni’ni okudum, onaylıyorum." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJp-yj-8W3">
-                                                        <rect key="frame" x="28" y="1063.6666666666667" width="299" height="14.333333333333258"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-fl-JaS" customClass="CPErrorView" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="28" y="1078" width="299" height="26"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="26" id="zRF-ju-KFo"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-8c-MB2">
-                                                        <rect key="frame" x="0.0" y="1059.6666666666667" width="328" height="22"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="22" id="xqO-4P-BpG"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <connections>
-                                                            <action selector="didTapClarificationCheckBox:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="tpG-U7-L2N"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-tR-amd" customClass="CPCheckBox" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1105.6666666666667" width="20" height="20"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="vgq-dO-hXM"/>
-                                                            <constraint firstAttribute="height" constant="20" id="zQn-w0-isy"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-YE-qJJ">
-                                                        <rect key="frame" x="28" y="1105.6666666666667" width="299" height="57.333333333333258"/>
-                                                        <string key="text"> Ürün,hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-hJ-SEc">
-                                                        <rect key="frame" x="0.0" y="1105.6666666666667" width="327" height="57.333333333333258"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <connections>
-                                                            <action selector="didTapMarketingCheckBox:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="UqO-wI-RCt"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-24-4hw" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1247" width="327" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="4TE-lv-PbA"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Üye Ol">
-                                                            <color key="titleColor" name="textDisabled"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="signupButtonAction:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="rhv-ex-bcf"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyG-AG-hcW">
-                                                        <rect key="frame" x="82" y="1318" width="163" height="24"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Üye Misiniz?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl3-mX-hyc">
-                                                                <rect key="frame" x="0.0" y="2" width="95" height="20.333333333333332"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jp-GV-v36">
-                                                                <rect key="frame" x="99" y="-4" width="64" height="32"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="Giriş Yap">
-                                                                    <color key="titleColor" name="theme"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="didTapLogin:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="kxV-yH-Aam"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstItem="yl3-mX-hyc" firstAttribute="leading" secondItem="WyG-AG-hcW" secondAttribute="leading" id="EJf-m9-8ma"/>
-                                                            <constraint firstItem="0Jp-GV-v36" firstAttribute="leading" secondItem="yl3-mX-hyc" secondAttribute="trailing" constant="4" id="Hkk-Ju-qlr"/>
-                                                            <constraint firstItem="yl3-mX-hyc" firstAttribute="centerY" secondItem="WyG-AG-hcW" secondAttribute="centerY" id="JXV-rf-oqW"/>
-                                                            <constraint firstAttribute="height" constant="24" id="Y5m-t8-dOM"/>
-                                                            <constraint firstAttribute="trailing" secondItem="0Jp-GV-v36" secondAttribute="trailing" id="c2N-g3-Hx4"/>
-                                                            <constraint firstItem="0Jp-GV-v36" firstAttribute="centerY" secondItem="yl3-mX-hyc" secondAttribute="centerY" id="npO-ua-BHQ"/>
-                                                        </constraints>
-                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PMl-IP-yaX">
-                                                        <rect key="frame" x="0.0" y="1187" width="327" height="20"/>
+                                                        <rect key="frame" x="0.0" y="1323" width="327" height="20"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-fx-crM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="20"/>
@@ -570,6 +473,141 @@
                                                             <constraint firstAttribute="height" constant="20" id="cfJ-2H-rX6"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N67-rw-Uub" customClass="CPCheckBox" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1196.6666666666667" width="20" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="CiO-V4-LLs"/>
+                                                            <constraint firstAttribute="width" constant="20" id="wFt-iA-Uce"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aydınlatma Metni’ni okudum, onaylıyorum." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJp-yj-8W3">
+                                                        <rect key="frame" x="28" y="1199.6666666666667" width="299" height="14.333333333333258"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-fl-JaS" customClass="CPErrorView" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="28" y="1214" width="299" height="26"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="26" id="zRF-ju-KFo"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-8c-MB2">
+                                                        <rect key="frame" x="0.0" y="1195.6666666666667" width="328" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="xqO-4P-BpG"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="didTapClarificationCheckBox:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="tpG-U7-L2N"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-tR-amd" customClass="CPCheckBox" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1241.6666666666667" width="20" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="vgq-dO-hXM"/>
+                                                            <constraint firstAttribute="height" constant="20" id="zQn-w0-isy"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-YE-qJJ">
+                                                        <rect key="frame" x="28" y="1241.6666666666667" width="299" height="57.333333333333258"/>
+                                                        <string key="text"> Ürün,hizmet ve kampanyalardan haberdar olmak için 6563 sayılı Kanun ve mevzuatı kapsamında aksi tarafımca belirtilene kadar ticari elektronik ileti gönderilmesine izin veriyorum.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-hJ-SEc">
+                                                        <rect key="frame" x="0.0" y="1241.6666666666667" width="327" height="57.333333333333258"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="didTapMarketingCheckBox:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="UqO-wI-RCt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-24-4hw" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1383" width="327" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="4TE-lv-PbA"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Üye Ol">
+                                                            <color key="titleColor" name="textDisabled"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="signupButtonAction:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="rhv-ex-bcf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyG-AG-hcW">
+                                                        <rect key="frame" x="82" y="1456" width="163" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Üye Misiniz?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl3-mX-hyc">
+                                                                <rect key="frame" x="0.0" y="2" width="95" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jp-GV-v36">
+                                                                <rect key="frame" x="99" y="-4" width="64" height="32"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Giriş Yap">
+                                                                    <color key="titleColor" name="theme"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapLogin:" destination="Gvo-3u-EZ9" eventType="touchUpInside" id="kxV-yH-Aam"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="yl3-mX-hyc" firstAttribute="leading" secondItem="WyG-AG-hcW" secondAttribute="leading" id="EJf-m9-8ma"/>
+                                                            <constraint firstItem="0Jp-GV-v36" firstAttribute="leading" secondItem="yl3-mX-hyc" secondAttribute="trailing" constant="4" id="Hkk-Ju-qlr"/>
+                                                            <constraint firstItem="yl3-mX-hyc" firstAttribute="centerY" secondItem="WyG-AG-hcW" secondAttribute="centerY" id="JXV-rf-oqW"/>
+                                                            <constraint firstAttribute="height" constant="24" id="Y5m-t8-dOM"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0Jp-GV-v36" secondAttribute="trailing" id="c2N-g3-Hx4"/>
+                                                            <constraint firstItem="0Jp-GV-v36" firstAttribute="centerY" secondItem="yl3-mX-hyc" secondAttribute="centerY" id="npO-ua-BHQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-tg-r0n">
+                                                        <rect key="frame" x="0.0" y="1060.6666666666667" width="327" height="112"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Min 8 Karakter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Y-3Q-euN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Büyük Harf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-ws-rzv">
+                                                                <rect key="frame" x="0.0" y="24" width="327" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Küçük Harf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSU-Lv-QPY">
+                                                                <rect key="frame" x="0.0" y="48" width="327" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Sayı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMe-77-7Le">
+                                                                <rect key="frame" x="0.0" y="72" width="327" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Özel Karakter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PL-ag-jno">
+                                                                <rect key="frame" x="0.0" y="96" width="327" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="112" id="zum-NO-aFo"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -586,7 +624,9 @@
                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WyG-AG-hcW" secondAttribute="bottom" constant="20" id="HJA-H3-4TK"/>
                                                     <constraint firstItem="jJp-yj-8W3" firstAttribute="centerY" secondItem="N67-rw-Uub" secondAttribute="centerY" id="K7S-CQ-p3K"/>
                                                     <constraint firstAttribute="trailing" secondItem="0Pc-j4-B3a" secondAttribute="trailing" id="Nbr-Bd-wxt"/>
+                                                    <constraint firstItem="vOO-tg-r0n" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="Qrr-Kb-vlJ"/>
                                                     <constraint firstItem="Lyz-mE-eUu" firstAttribute="top" secondItem="0Pc-j4-B3a" secondAttribute="bottom" constant="40" id="Rqo-lK-ePD"/>
+                                                    <constraint firstItem="vOO-tg-r0n" firstAttribute="top" secondItem="Lyz-mE-eUu" secondAttribute="bottom" constant="24" id="Tav-Tq-pcg"/>
                                                     <constraint firstItem="SmT-24-4hw" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="V5e-3N-1cd"/>
                                                     <constraint firstItem="WyG-AG-hcW" firstAttribute="centerX" secondItem="W5L-eP-IH2" secondAttribute="centerX" id="VWm-vI-wTo"/>
                                                     <constraint firstItem="ZAe-hJ-SEc" firstAttribute="centerY" secondItem="5rB-YE-qJJ" secondAttribute="centerY" id="WI0-ux-yV6"/>
@@ -597,11 +637,12 @@
                                                     <constraint firstItem="GF9-8c-MB2" firstAttribute="centerY" secondItem="jJp-yj-8W3" secondAttribute="centerY" id="d8h-YP-kva"/>
                                                     <constraint firstItem="azc-Nb-Zit" firstAttribute="top" secondItem="CnK-YN-elp" secondAttribute="bottom" constant="40" id="eOZ-nd-Kdw"/>
                                                     <constraint firstAttribute="trailing" secondItem="5rB-YE-qJJ" secondAttribute="trailing" id="fJF-Sa-m7p"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vOO-tg-r0n" secondAttribute="trailing" id="fmb-ox-8mD"/>
                                                     <constraint firstAttribute="trailing" secondItem="SmT-24-4hw" secondAttribute="trailing" id="gOJ-Wz-Kde"/>
                                                     <constraint firstItem="N67-rw-Uub" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="hVq-eE-ow5"/>
                                                     <constraint firstItem="dT3-tR-amd" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="j4J-Ie-acu"/>
                                                     <constraint firstItem="WyG-AG-hcW" firstAttribute="top" secondItem="SmT-24-4hw" secondAttribute="bottom" priority="700" constant="64" id="joO-tC-QeU"/>
-                                                    <constraint firstItem="N67-rw-Uub" firstAttribute="top" secondItem="Lyz-mE-eUu" secondAttribute="bottom" constant="24" id="l5L-gX-BNf"/>
+                                                    <constraint firstItem="N67-rw-Uub" firstAttribute="top" secondItem="vOO-tg-r0n" secondAttribute="bottom" constant="24" id="l5L-gX-BNf"/>
                                                     <constraint firstItem="CnK-YN-elp" firstAttribute="centerX" secondItem="W5L-eP-IH2" secondAttribute="centerX" id="omX-h0-Jxd"/>
                                                     <constraint firstItem="jWP-fl-JaS" firstAttribute="top" secondItem="jJp-yj-8W3" secondAttribute="bottom" id="sbn-4P-Jbo"/>
                                                     <constraint firstItem="jJp-yj-8W3" firstAttribute="leading" secondItem="N67-rw-Uub" secondAttribute="trailing" constant="8" id="ua4-Sb-Mvf"/>
@@ -620,7 +661,7 @@
                                         <constraints>
                                             <constraint firstItem="W5L-eP-IH2" firstAttribute="leading" secondItem="dn6-BU-c5L" secondAttribute="leading" constant="24" id="4lR-MM-ChQ"/>
                                             <constraint firstItem="W5L-eP-IH2" firstAttribute="top" secondItem="dn6-BU-c5L" secondAttribute="top" id="Z9s-N5-m61"/>
-                                            <constraint firstAttribute="height" constant="1362" id="ZM0-Z4-iBe"/>
+                                            <constraint firstAttribute="height" constant="1500" id="ZM0-Z4-iBe"/>
                                             <constraint firstAttribute="trailing" secondItem="W5L-eP-IH2" secondAttribute="trailing" constant="24" id="q2U-pZ-1Ur"/>
                                             <constraint firstAttribute="bottom" secondItem="W5L-eP-IH2" secondAttribute="bottom" id="xep-26-PYO"/>
                                         </constraints>
@@ -659,9 +700,12 @@
                         <outlet property="isMemberLabel" destination="yl3-mX-hyc" id="HzZ-Bh-ZhV"/>
                         <outlet property="licenseTextField" destination="mTA-g2-Igc" id="hPX-sz-ifN"/>
                         <outlet property="loginButton" destination="0Jp-GV-v36" id="tiE-dV-SE9"/>
+                        <outlet property="lowercaseLabel" destination="CSU-Lv-QPY" id="fQJ-ob-3Hb"/>
                         <outlet property="marketingCheckBox" destination="dT3-tR-amd" id="WDF-ck-BoU"/>
                         <outlet property="marketingLabel" destination="5rB-YE-qJJ" id="h6A-9c-Gat"/>
+                        <outlet property="minLabel" destination="h2Y-3Q-euN" id="W9O-ZU-1OS"/>
                         <outlet property="nameTextField" destination="xxc-OS-M8u" id="o6a-nE-MyS"/>
+                        <outlet property="numberLabel" destination="HMe-77-7Le" id="wMj-wG-wN2"/>
                         <outlet property="passwordTextFiled" destination="rdK-86-1H7" id="YtR-99-NWw"/>
                         <outlet property="phoneTextField" destination="5Jx-vG-Axo" id="RI4-Im-uyR"/>
                         <outlet property="plateNumberTextField" destination="kgA-cI-ygE" id="w6q-uX-BBv"/>
@@ -669,10 +713,12 @@
                         <outlet property="signupButton" destination="SmT-24-4hw" id="pI3-sT-58n"/>
                         <outlet property="smsCheckBox" destination="Dks-9G-EkS" id="3jh-l1-ZP2"/>
                         <outlet property="smsLabel" destination="RWZ-Wj-W1W" id="e3l-cr-edB"/>
+                        <outlet property="specialLabel" destination="1PL-ag-jno" id="XZ8-a9-VR8"/>
                         <outlet property="surnameTextField" destination="EMB-XS-nJF" id="1yc-C8-gQX"/>
                         <outlet property="taxTextField" destination="nGD-ss-EJ5" id="6Bc-cZ-RRj"/>
                         <outlet property="telephoneCheckBox" destination="OX0-nq-wwX" id="BeP-6M-kzx"/>
                         <outlet property="telephoneLabel" destination="YYD-xa-X16" id="21R-Id-P5d"/>
+                        <outlet property="uppercaseLabel" destination="AyB-ws-rzv" id="zrL-nn-gFZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4a-Nf-Vqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

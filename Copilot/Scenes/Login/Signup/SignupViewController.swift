@@ -51,6 +51,12 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var isMemberLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var uppercaseLabel: UILabel!
+    @IBOutlet weak var lowercaseLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var specialLabel: UILabel!
+    
     private var clarfication: Bool = false
     
     override func viewDidLoad() {
@@ -144,6 +150,12 @@ class SignupViewController: UIViewController {
         
         isMemberLabel.apply(.greyS16B400)
         loginButton.apply(.themeS16B700)
+        
+        minLabel.apply(.greyS12R400)
+        uppercaseLabel.apply(.greyS12R400)
+        lowercaseLabel.apply(.greyS12R400)
+        numberLabel.apply(.greyS12R400)
+        specialLabel.apply(.greyS12R400)
     }
     
     func setTexts() {
@@ -169,6 +181,12 @@ class SignupViewController: UIViewController {
         
         loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
         setTextFieldWarnings()
+        
+        minLabel.text = Strings.min8Characters
+        uppercaseLabel.text = Strings.uppercaseLetter
+        lowercaseLabel.text = Strings.lowerCase
+        numberLabel.text = Strings.number
+        specialLabel.text = Strings.specialCharacter
     }
     
     func setClarificationText(color: UIColor = .textGrey) {
@@ -211,6 +229,10 @@ class SignupViewController: UIViewController {
                 repeatPasswordTextFiled.hideError()
             }
         }
+        
+        if textField == passwordTextFiled {
+            checkRules()
+        }
         setButtonActivation()
     }
     
@@ -232,6 +254,16 @@ class SignupViewController: UIViewController {
         } else {
             repeatPasswordTextFiled.hideError()
         }
+    }
+    
+    func checkRules() {
+        let new = passwordTextFiled.text ?? ""
+        viewModel.check(password: new)
+        minLabel.textColor = viewModel.min8Rule ? .textSuccess: .theme
+        uppercaseLabel.textColor = viewModel.uppercaseRule ? .textSuccess: .theme
+        lowercaseLabel.textColor = viewModel.lowercaseRule ? .textSuccess: .theme
+        numberLabel.textColor = viewModel.numberRule ? .textSuccess: .theme
+        specialLabel.textColor = viewModel.specialRule ? .textSuccess: .theme
     }
     
     @IBAction func didTapClarificationCheckBox(_ sender: UIButton) {
