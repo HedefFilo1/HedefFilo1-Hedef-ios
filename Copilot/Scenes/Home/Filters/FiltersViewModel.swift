@@ -45,7 +45,7 @@ class FiltersViewModel: FiltersViewModelType {
         Filter(tilte: "Benzin İstasyonu", subFilters: [
             Filter(tilte: "Yemek Kartı Geçenler", subFilters: nil),
             Filter(tilte: "Starbucks Bulunanlar", subFilters: nil),
-            Filter(tilte: "Kahve Dünyası Bulunanlar", subFilters: nil),
+            Filter(tilte: "Kahve Dünyası Bulunanlar", subFilters: nil)
         ]),
         Filter(tilte: "Karakol", subFilters: nil),
         Filter(tilte: "Hastane", subFilters: nil),

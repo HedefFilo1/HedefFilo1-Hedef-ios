@@ -8,6 +8,66 @@
 import Foundation
 
 extension Strings {
+    
+    static var standings: String {
+        return localized(string: "standings")
+    }
+    
+    static var createProccessRequest: String {
+        return localized(string: "createProccessRequest")
+    }
+    
+    static var fillOutSatisfaction: String {
+        return localized(string: "fillOutSatisfaction")
+    }
+    
+    static var createServiceRequest: String {
+        return localized(string: "createServiceRequest")
+    }
+    
+    static var createProductRequest: String {
+        return localized(string: "createProductRequest")
+    }
+    
+    static var yourScore: String {
+        return localized(string: "yourScore")
+    }
+    
+    static var point: String {
+        return localized(string: "point")
+    }
+    
+    static var enterUsedKM: String {
+        return localized(string: "enterUsedKM")
+    }
+    
+    static var save: String {
+        return localized(string: "save")
+    }
+    
+    static var enterValidPhone: String {
+        return localized(string: "enterValidPhone")
+    }
+    
+    static var offer: String {
+        return localized(string: "offer")
+    }
+    
+    static var news: String {
+        return localized(string: "news")
+    }
+    
+    static var sponsorship: String {
+        return localized(string: "sponsorship")
+    }
+    
+    static var campaignValidityDate: String {
+        return localized(string: "campaignValidityDate")
+    }
+    
+    static var takeAdvantageCampaign: String {
+        return localized(string: "takeAdvantageCampaign")
+    }
    
     static var taxInputError: String {
         return localized(string: "taxInputError")

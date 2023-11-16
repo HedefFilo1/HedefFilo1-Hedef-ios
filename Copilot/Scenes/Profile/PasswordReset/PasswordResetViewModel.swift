@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PasswordResetViewModelCoordinatorDelegate: AnyObject {
+protocol PasswordResetVMCoordinatorDelegate: AnyObject {
     func getBack()
 }
 
@@ -30,7 +30,7 @@ protocol PasswordResetViewModelType: AnyObject {
 class PasswordResetViewModel: PasswordResetViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: PasswordResetViewModelCoordinatorDelegate?
+    var coordinatorDelegate: PasswordResetVMCoordinatorDelegate?
     weak var delegate: PasswordResetViewModelDelegate?
     
     var min8Rule: Bool = false

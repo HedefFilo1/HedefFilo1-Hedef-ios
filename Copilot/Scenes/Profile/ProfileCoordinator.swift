@@ -49,7 +49,7 @@ extension ProfileCoordinator: ProfileViewModelCoordinatorDelegate {
     }
 }
 
-extension ProfileCoordinator: PasswordResetViewModelCoordinatorDelegate {
+extension ProfileCoordinator: PasswordResetVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
