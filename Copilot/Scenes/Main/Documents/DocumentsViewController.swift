@@ -169,7 +169,6 @@ extension DocumentsViewController: NecessaryDocumentsTabDelegate {
 }
 
 extension DocumentsViewController: DocumentsTabDelegate {
-    
     func didTabBack() {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 1), at: .centeredHorizontally, animated: true)
     }

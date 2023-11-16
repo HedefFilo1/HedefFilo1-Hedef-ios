@@ -121,7 +121,7 @@ class PasswordResetViewController: UIViewController {
             checkRules()
         }
         
-        if textField == repeatPasswordTextField {
+        if textField == newPasswordTextField || textField == repeatPasswordTextField {
             checkPasswords()
         }
         saveButton.isEnabled = viewModel.allRules && old && same
