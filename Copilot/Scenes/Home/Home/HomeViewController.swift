@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        viewModel.getVehicle()
+        viewModel.getVehicle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
