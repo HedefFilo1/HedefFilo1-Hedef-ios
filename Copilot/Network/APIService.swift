@@ -129,4 +129,12 @@ class APIService {
         req.start()
     }
     
+    static func getVehicle(completion: @escaping (GetVehicle?, APIResponseError?) -> Void) {
+        let req = APIRequest<GetVehicle>(route: "copilot/vehicle", method: .get, hasToken: true)
+        req.identifier = "Get Vehicle"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
 }

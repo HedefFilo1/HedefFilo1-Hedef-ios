@@ -157,4 +157,12 @@ extension Strings {
         return localized(string: "searchService")
     }
     
+    static var months: String {
+        return localized(string: "months")
+    }
+    
+    static var ckm: String {
+        return localized(string: "km")
+    }
+    
 }

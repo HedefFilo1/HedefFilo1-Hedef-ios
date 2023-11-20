@@ -15,6 +15,19 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     
     weak var delegate: VehicleInfoCellDelegate?
     
+    var vehicle: GetVehicle? {
+        didSet {
+            modelLabel.text = vehicle?.model ?? "model"
+            nameLabel.text = vehicle?.make ?? "Brand"
+            let rent = vehicle?.leaseDuration ?? "0"
+            rentValueLabel.text = rent + " " + Strings.months
+            let distance = vehicle?.leaseDistanceLimit ?? "0"
+            limitValueLabel.text = distance + " " + Strings.ckm
+            let last = vehicle?.lastKnownDistance ?? "0"
+            usedValueLabel.text = last + " " + Strings.ckm
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!

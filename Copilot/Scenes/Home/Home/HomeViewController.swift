@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getVehicle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +87,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 1:
             let cell: VehicleInfoCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.vehicle = viewModel.vehicle
             return cell
             
         case 2:
@@ -150,5 +152,7 @@ extension HomeViewController: HomeContentCellDelegate {
 }
 
 extension HomeViewController: HomeViewModelViewDelegate {
-    
+    func setVehicle() {
+        collectionView.reloadData()
+    }
 }

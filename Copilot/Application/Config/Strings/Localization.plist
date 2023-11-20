@@ -947,20 +947,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
-        <key></key>
+        <key>months</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ay</string>
             <key>en</key>
-            <string></string>
+            <string>Months</string>
         </dict>
         
-        <key></key>
+        <key>km</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>KM</string>
             <key>en</key>
-            <string></string>
+            <string>KM</string>
         </dict>
         
         <key></key>
