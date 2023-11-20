@@ -137,4 +137,21 @@ class APIService {
         req.start()
     }
     
+    static func setVehicleDistance(distance: Double,
+                                   completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let params = [
+            "distance": distance
+        ]
+        
+        let req = APIRequest<Success>(route: "copilot/vehicle/distance",
+                                      method: .patch,
+                                      parameters: params,
+                                      hasToken: true)
+        
+        req.identifier = "Set Vehicle Distance"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
 }

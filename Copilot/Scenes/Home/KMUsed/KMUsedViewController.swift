@@ -24,6 +24,7 @@ class KMUsedViewController: SheetViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var kmTextField: CPTextField!
     @IBOutlet weak var saveButton: CPButton!
+    @IBOutlet weak var loadingContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,10 @@ class KMUsedViewController: SheetViewController {
     }
     
     @IBAction func didTapSave(_ sender: UIButton) {
-        viewModel.dismiss()
+        if let distance = Double(kmTextField.pureText) {
+            Loading.shared.show(presentingView: loadingContainer)
+            viewModel.setDistance(distance: distance)
+        }
     }
 }
 

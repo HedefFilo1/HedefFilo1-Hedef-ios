@@ -50,9 +50,7 @@ class Loading {
         label.apply(TextStyle(fontStyle: .regular, size: 14), color: .darkText)
         containerView.addSubview(label)
         containerView.addSubview(animationView)
-        animationView.center = CGPoint(x: containerView.bounds.width / 2,
-                                       y: containerView.bounds.height / 2)
-        label.center = CGPoint(x: animationView.center.x, y: animationView.center.y + 54)
+     
         if let presentingView = presentingView {
             presentingView.addSubview(containerView)
         } else
@@ -64,6 +62,15 @@ class Loading {
         } else {
             window.rootViewController?.view.addSubview(containerView)
         }
+        
+        if let superview = containerView.superview {
+            containerView.frame = superview.frame
+            containerView.center = superview.center
+        }
+        
+        animationView.center = CGPoint(x: containerView.bounds.width / 2,
+                                       y: containerView.bounds.height / 2)
+        label.center = CGPoint(x: animationView.center.x, y: animationView.center.y + 54)
         
         animationView.rotate()
 

@@ -600,6 +600,13 @@
                                             <action selector="didTapSave:" destination="zEw-9m-uh0" eventType="touchUpInside" id="Jrk-AQ-bVS"/>
                                         </connections>
                                     </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26G-wz-brI">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="255"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="255" id="fzn-G5-2Bs"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -607,6 +614,7 @@
                                     <constraint firstItem="HEv-DW-u1J" firstAttribute="top" secondItem="BIV-ra-lx9" secondAttribute="bottom" constant="32" id="75g-QA-1c2"/>
                                     <constraint firstItem="28Q-Il-szl" firstAttribute="centerY" secondItem="33X-ab-R4k" secondAttribute="centerY" id="9gn-ta-sRi"/>
                                     <constraint firstItem="28Q-Il-szl" firstAttribute="centerX" secondItem="33X-ab-R4k" secondAttribute="centerX" id="GFA-v6-HHO"/>
+                                    <constraint firstItem="26G-wz-brI" firstAttribute="leading" secondItem="mIQ-ra-SKC" secondAttribute="leading" id="Iq8-kD-ymF"/>
                                     <constraint firstItem="xrA-05-516" firstAttribute="top" secondItem="mIQ-ra-SKC" secondAttribute="top" constant="24" id="RNG-bc-baA"/>
                                     <constraint firstAttribute="trailing" secondItem="BIV-ra-lx9" secondAttribute="trailing" constant="16" id="WWu-SS-y7b"/>
                                     <constraint firstItem="HEv-DW-u1J" firstAttribute="leading" secondItem="mIQ-ra-SKC" secondAttribute="leading" constant="16" id="bAq-xb-Xxc"/>
@@ -614,7 +622,9 @@
                                     <constraint firstItem="xrA-05-516" firstAttribute="top" secondItem="28Q-Il-szl" secondAttribute="bottom" constant="-32" id="gAB-h6-IyV"/>
                                     <constraint firstItem="BIV-ra-lx9" firstAttribute="leading" secondItem="mIQ-ra-SKC" secondAttribute="leading" constant="16" id="gu0-pP-KIw"/>
                                     <constraint firstItem="BIV-ra-lx9" firstAttribute="top" secondItem="xrA-05-516" secondAttribute="bottom" constant="24" id="iAy-7d-czV"/>
+                                    <constraint firstAttribute="trailing" secondItem="26G-wz-brI" secondAttribute="trailing" id="oGt-hW-NW0"/>
                                     <constraint firstAttribute="trailing" secondItem="33X-ab-R4k" secondAttribute="trailing" constant="24" id="p6U-JF-HTe"/>
+                                    <constraint firstItem="26G-wz-brI" firstAttribute="top" secondItem="mIQ-ra-SKC" secondAttribute="top" id="rsQ-nz-lYq"/>
                                     <constraint firstItem="33X-ab-R4k" firstAttribute="top" secondItem="mIQ-ra-SKC" secondAttribute="top" constant="24" id="zgM-Ox-sf0"/>
                                 </constraints>
                             </view>
@@ -631,6 +641,7 @@
                     <connections>
                         <outlet property="contentView" destination="mIQ-ra-SKC" id="drf-dp-ogk"/>
                         <outlet property="kmTextField" destination="BIV-ra-lx9" id="ZPB-zb-KlF"/>
+                        <outlet property="loadingContainer" destination="26G-wz-brI" id="Nur-XJ-UBc"/>
                         <outlet property="saveButton" destination="HEv-DW-u1J" id="SBm-r9-YcA"/>
                         <outlet property="titleLabel" destination="xrA-05-516" id="Ubp-U4-JmN"/>
                     </connections>
