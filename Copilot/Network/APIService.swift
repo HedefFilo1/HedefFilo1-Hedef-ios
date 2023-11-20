@@ -99,5 +99,14 @@ class APIService {
         req.completion = completion
         req.start()
     }
+
+    static func getProfile(completion: @escaping (GetProfile?, APIResponseError?) -> Void) {
+        
+        let req = APIRequest<GetProfile>(route: "copilot/profile", method: .get, hasToken: true)
+        req.identifier = "Verify Token"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
     
 }

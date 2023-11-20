@@ -28,7 +28,7 @@ class Loading {
         }
     }
     
-    func show(presented: Bool = false, title: String, presentingView: UIView? = nil) {
+    func show(presented: Bool = false, title: String = Strings.loading, presentingView: UIView? = nil) {
         guard let window = App.window else { return }
         
         animationView.image = Images.loadingSpinner.withRenderingMode(.alwaysTemplate)
@@ -76,12 +76,15 @@ class Loading {
     
     private func getCurrentController(window: UIWindow) -> UIViewController? {
         if let nav = window.rootViewController as? UINavigationController,
-           let viewController = nav.visibleViewController {
-            
-            if let tabbar = viewController as? UITabBarController,
-               let selected = tabbar.selectedViewController as? UINavigationController,
-                let current = selected.visibleViewController {
-                return current
+           let viewController = nav.topViewController {
+//            let top = nav.topViewController
+            if let tabbar = viewController as? UITabBarController {
+                if let selected = tabbar.selectedViewController as? UINavigationController,
+                   let current = selected.visibleViewController {
+                    return current
+                }
+                
+                return tabbar.selectedViewController
             }
             
             return viewController

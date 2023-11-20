@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,5 +109,15 @@ extension ProfileViewController: UITextFieldDelegate {
 }
 
 extension ProfileViewController: ProfileViewModelDelegate {
-    
+    func setProfile() {
+        if let profile = viewModel.profile {
+            phoneTextField.preText = profile.phoneNumber
+            emailTextFiled.preText = profile.email
+            let name = profile.name ?? ""
+            let surname = profile.surname ?? ""
+            nameTextField.preText = name + " " + surname
+            idTextField.preText = profile.taxId
+            licenseTextField.preText = profile.licenseNumber
+        }
+    }
 }
