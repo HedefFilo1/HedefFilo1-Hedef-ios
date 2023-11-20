@@ -99,11 +99,31 @@ class APIService {
         req.completion = completion
         req.start()
     }
-
+    
     static func getProfile(completion: @escaping (GetProfile?, APIResponseError?) -> Void) {
         
         let req = APIRequest<GetProfile>(route: "copilot/profile", method: .get, hasToken: true)
-        req.identifier = "Verify Token"
+        req.identifier = "Get Token"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
+    static func setPassword(old: String,
+                            new: String,
+                            completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let params = [
+            "oldPassword": old,
+            "newPassword": new
+        ]
+        
+        let req = APIRequest<Success>(route: "user/password",
+                                      method: .patch,
+                                      parameters: params,
+                                      hasToken: true)
+        
+        req.identifier = "Set Password"
         req.log = loggingEnabled
         req.completion = completion
         req.start()

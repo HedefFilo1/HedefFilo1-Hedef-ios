@@ -89,7 +89,8 @@ class PasswordResetViewController: UIViewController {
     }
     
     @IBAction func didTapSave(_ sender: UIButton) {
-        
+        viewModel.setPassword(old: oldPasswordTextField.pureText,
+                              new: newPasswordTextField.pureText)
     }
     
     @objc func editingDidEnd(_ textField: UITextField) {

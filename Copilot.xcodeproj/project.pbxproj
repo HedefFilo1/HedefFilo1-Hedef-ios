@@ -69,6 +69,7 @@
 		894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC8E2B07A68600D369E9 /* SearchHeaderCell.swift */; };
 		894CEC912B07A68600D369E9 /* SearchHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894CEC8F2B07A68600D369E9 /* SearchHeaderCell.xib */; };
 		894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC922B0B707900D369E9 /* GetProfile.swift */; };
+		894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC942B0B7B0F00D369E9 /* Success.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -264,6 +265,7 @@
 		894CEC8E2B07A68600D369E9 /* SearchHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderCell.swift; sourceTree = "<group>"; };
 		894CEC8F2B07A68600D369E9 /* SearchHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderCell.xib; sourceTree = "<group>"; };
 		894CEC922B0B707900D369E9 /* GetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfile.swift; sourceTree = "<group>"; };
+		894CEC942B0B7B0F00D369E9 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -885,6 +887,7 @@
 				899CF5722AE18F47006D85E4 /* Login.swift */,
 				899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */,
 				894CEC922B0B707900D369E9 /* GetProfile.swift */,
+				894CEC942B0B7B0F00D369E9 /* Success.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1520,6 +1523,7 @@
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
+				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
