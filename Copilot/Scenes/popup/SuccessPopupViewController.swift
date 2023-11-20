@@ -55,7 +55,7 @@ class SuccessPopupViewController: PopupViewController {
         iconImageView.image = icon
         iconImageView.tintColor = .white
         titleLabel.apply(.blackS16B700)
-        messageLabel.apply(.greyS16B400)
+        messageLabel.apply(.greyS16R400)
     }
     
     func setTexts() {

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PastSearchCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Giq-b7-oSD">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="1"/>
+                        <color key="backgroundColor" name="borderColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8ia-Tx-8Sa"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="dXS-lM-VrP">
+                        <rect key="frame" x="0.0" y="19" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Etv-Di-6fW"/>
+                            <constraint firstAttribute="height" constant="24" id="ZfE-do-7TJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kış Lastiği Kılavuzu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-B1-eTV">
+                        <rect key="frame" x="34" y="20.666666666666668" width="226" height="21.000000000000004"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sCm-B1-eTV" secondAttribute="trailing" id="CXt-Of-h5T"/>
+                <constraint firstItem="Giq-b7-oSD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JtR-LP-MWT"/>
+                <constraint firstItem="sCm-B1-eTV" firstAttribute="leading" secondItem="dXS-lM-VrP" secondAttribute="trailing" constant="10" id="Ll5-8o-gfY"/>
+                <constraint firstAttribute="trailing" secondItem="Giq-b7-oSD" secondAttribute="trailing" id="Xk2-J5-6nk"/>
+                <constraint firstItem="Giq-b7-oSD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ctl-sL-VBu"/>
+                <constraint firstItem="sCm-B1-eTV" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="e5b-7k-cIe"/>
+                <constraint firstItem="dXS-lM-VrP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rwT-p1-Mz7"/>
+                <constraint firstItem="dXS-lM-VrP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="zOC-x0-EZ3"/>
+            </constraints>
+            <size key="customSize" width="260" height="62"/>
+            <connections>
+                <outlet property="searchImageView" destination="dXS-lM-VrP" id="zoS-w8-yTN"/>
+                <outlet property="titleLabel" destination="sCm-B1-eTV" id="Gii-Hq-QJE"/>
+            </connections>
+            <point key="canvasLocation" x="35.114503816793892" y="23.943661971830988"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="search" width="24" height="24"/>
+        <namedColor name="borderColor">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -35,6 +35,8 @@ enum FontWeighType {
 
 enum FontTypographyType {
     
+    case custom(UIColor, FontStyle, CGFloat)
+    
     case secondRed(FontWeighType, size: CGFloat)
     
     /// black size(24) Bold(700)
@@ -79,20 +81,23 @@ enum FontTypographyType {
     /// black size(12) Regular(400)
     case blackS12R400
     
-    /// textGrey size(12) Regular(400)
-    case greyS12R400
-    
     /// textGrey size(14) Regular(400)
     case greyS14R400
     
     /// textGrey size(16) Regular(400)
-    case greyS16B400
+    case greyS16R400
     
     /// textGrey size(15) Regular(400)
     case greyS15B400
     
+    /// textGrey size(12) B(700)
+    case greyS12B700
+    
     /// textGrey size(12) Medium(500)
     case greyS12M500
+    
+    /// textGrey size(12) Regular(400)
+    case greyS12R400
     
     /// theme size(16) Bold(700)
     case themeS16B700
@@ -120,6 +125,9 @@ enum FontTypographyType {
 
     var style: (TextStyle, UIColor) {
         switch self {
+            
+        case .custom(let color, let type, let size):
+            return (TextStyle(fontStyle: type, size: size), color: color)
         
         case .secondRed(let weight, let size):
             return (TextStyle(fontStyle: weight.style, size: size), color: .secondRed)
@@ -171,11 +179,14 @@ enum FontTypographyType {
             
         case .greyS12M500:
             return (TextStyle(fontStyle: .medium, size: 12), color: .textGrey)
+            
+        case .greyS12B700:
+            return (TextStyle(fontStyle: .bold, size: 12), color: .textGrey)
         
         case .greyS14R400:
             return (TextStyle(fontStyle: .regular, size: 14), color: .textGrey)
             
-        case .greyS16B400:
+        case .greyS16R400:
             return (TextStyle(fontStyle: .regular, size: 16), color: .textGrey)
             
         case .greyS15B400:
@@ -250,6 +261,7 @@ extension UITextField {
     func setRightPadding(_ amount: CGFloat = 10) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: bounds.size.height))
         rightView = paddingView
+        paddingView.backgroundColor = .yellow
         rightViewMode = .always
     }
 }

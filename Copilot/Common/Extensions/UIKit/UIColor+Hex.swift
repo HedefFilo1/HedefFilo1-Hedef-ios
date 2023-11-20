@@ -11,18 +11,18 @@ import UIKit.UIColor
 extension UIColor {
     /// #E92127
     static let theme = UIColor(named: "theme") ?? .red
-
+    
     /// #EA1C24
     static let secondRed = UIColor(named: "secondRed") ?? .red
     
     /// #ED1C24
     static let appRed = UIColor(named: "appRed") ?? .red
     
-    /// #EEEEEE
-    static let exactGrey = UIColor(named: "exactGrey") ?? .gray
-    
     /// #FFE8E9
     static let lightRed = UIColor(named: "lightRed") ?? .gray
+    
+    /// #EEEEEE
+    static let exactGrey = UIColor(named: "exactGrey") ?? .gray
     
     /// #58595B
     static let textGrey = UIColor(named: "textGrey") ?? .gray
@@ -35,6 +35,9 @@ extension UIColor {
     
     /// #ECEDF2
     static let lightBorder = UIColor(named: "lightBorder") ?? .gray
+    
+    /// #9D99AC
+    static let fieldsTitle = UIColor(named: "fieldsTitle") ?? .gray
     
     /// #F1F1F4
     static let whiteBorder = UIColor(named: "whiteBorder") ?? .gray
@@ -53,6 +56,9 @@ extension UIColor {
     
     /// #25282B
     static let lightBlack = UIColor(named: "lightBlack") ?? .gray
+    
+    /// #212121
+    static let fieldsText = UIColor(named: "fieldsText") ?? .black
     
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -74,7 +80,7 @@ extension UIColor {
         let blueValue = CGFloat(blue) / 255
         self.init(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(alpha) / 255)
     }
-
+    
     var hexString: String {
         if let components = self.cgColor.components {
             let red = components[0]

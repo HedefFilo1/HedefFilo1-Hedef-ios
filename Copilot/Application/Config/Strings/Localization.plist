@@ -915,12 +915,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Necessary Documents</string>
         </dict>
         
-        <key></key>
+        <key>pastSearches</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geçmiş Aramalar</string>
             <key>en</key>
-            <string></string>
+            <string>Past Searches</string>
+        </dict>
+        
+        <key>help</key>
+        <dict>
+            <key>tr</key>
+            <string>Yardım</string>
+            <key>en</key>
+            <string>Help</string>
+        </dict>
+        
+        <key>searchService</key>
+        <dict>
+            <key>tr</key>
+            <string>Servis İsmi veya Aradığınızı Yazın</string>
+            <key>en</key>
+            <string>Type the Service Name or What You Are Looking for</string>
         </dict>
         
         <key></key>

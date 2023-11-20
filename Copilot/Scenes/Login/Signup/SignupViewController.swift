@@ -138,7 +138,7 @@ class SignupViewController: UIViewController {
         emailLabel.apply(.greyS12R400)
         signupButton.isSmallFontSize = true
         
-        isMemberLabel.apply(.greyS16B400)
+        isMemberLabel.apply(.greyS16R400)
         loginButton.apply(.themeS16B700)
         
         minLabel.apply(.greyS12R400)

@@ -60,7 +60,7 @@ class FiltersViewController: SheetViewController {
         applyButton.setTitle(Strings.apply, for: .normal)
         searchTextField.attributedPlaceholder = NSAttributedString(string: Strings.searchFilter, attributes: [
             .foregroundColor: UIColor.textGrey,
-            .font: FontTypographyType.greyS16B400.font
+            .font: FontTypographyType.greyS16R400.font
         ])
     }
     

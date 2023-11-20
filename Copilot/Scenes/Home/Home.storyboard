@@ -639,6 +639,106 @@
             </objects>
             <point key="canvasLocation" x="3222.1374045801526" y="-2.1126760563380285"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="NfN-pu-Yib">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="Dg5-sg-b5F" customClass="SearchViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfh-Yr-KOe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tso-Pe-Rrp" customClass="CPSearchTextField" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="16" y="75" width="301" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="lPU-Yf-AmU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWC-Yo-MRY">
+                                <rect key="frame" x="281" y="75" width="36" height="56"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-cH-hIz">
+                                        <rect key="frame" x="0.0" y="16" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="7Sd-jT-cOe"/>
+                                            <constraint firstAttribute="height" constant="24" id="udH-pt-SXT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v61-HY-dXW">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapClear" destination="Dg5-sg-b5F" eventType="touchUpInside" id="TWO-yh-8f7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="u0f-cH-hIz" firstAttribute="leading" secondItem="NWC-Yo-MRY" secondAttribute="leading" id="1Jb-BE-AUL"/>
+                                    <constraint firstItem="v61-HY-dXW" firstAttribute="leading" secondItem="NWC-Yo-MRY" secondAttribute="leading" id="KqI-xh-CPZ"/>
+                                    <constraint firstItem="v61-HY-dXW" firstAttribute="top" secondItem="NWC-Yo-MRY" secondAttribute="top" id="UH7-pE-LNE"/>
+                                    <constraint firstAttribute="bottom" secondItem="v61-HY-dXW" secondAttribute="bottom" id="Ubd-cv-GLs"/>
+                                    <constraint firstAttribute="width" constant="36" id="iXH-l9-SXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="v61-HY-dXW" secondAttribute="trailing" id="jh2-hp-DbI"/>
+                                    <constraint firstItem="u0f-cH-hIz" firstAttribute="centerY" secondItem="NWC-Yo-MRY" secondAttribute="centerY" id="xf0-Mz-tOC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wr-kn-LNA">
+                                <rect key="frame" x="333" y="75" width="44" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="URC-3N-xpH"/>
+                                    <constraint firstAttribute="height" constant="56" id="pbg-hc-QDP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="lightBlack"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCancel" destination="Dg5-sg-b5F" eventType="touchUpInside" id="eFO-8Y-06x"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-zq-8Ch">
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="743-ei-pGI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IpT-fN-G0C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2wr-kn-LNA" firstAttribute="top" secondItem="IpT-fN-G0C" secondAttribute="top" constant="16" id="0Db-YL-g1y"/>
+                            <constraint firstItem="NWC-Yo-MRY" firstAttribute="top" secondItem="tso-Pe-Rrp" secondAttribute="top" id="2Wc-8v-JH3"/>
+                            <constraint firstItem="NWC-Yo-MRY" firstAttribute="trailing" secondItem="tso-Pe-Rrp" secondAttribute="trailing" id="H8y-7O-cJZ"/>
+                            <constraint firstItem="tso-Pe-Rrp" firstAttribute="top" secondItem="IpT-fN-G0C" secondAttribute="top" constant="16" id="WyK-n0-eVw"/>
+                            <constraint firstItem="NWC-Yo-MRY" firstAttribute="bottom" secondItem="tso-Pe-Rrp" secondAttribute="bottom" id="Zwm-DV-Z64"/>
+                            <constraint firstItem="FgC-zq-8Ch" firstAttribute="top" secondItem="tso-Pe-Rrp" secondAttribute="bottom" constant="12" id="e5r-XY-G92"/>
+                            <constraint firstItem="tso-Pe-Rrp" firstAttribute="leading" secondItem="IpT-fN-G0C" secondAttribute="leading" constant="16" id="g97-ZK-Brq"/>
+                            <constraint firstItem="IpT-fN-G0C" firstAttribute="trailing" secondItem="FgC-zq-8Ch" secondAttribute="trailing" id="mYb-lW-K6i"/>
+                            <constraint firstItem="FgC-zq-8Ch" firstAttribute="leading" secondItem="IpT-fN-G0C" secondAttribute="leading" id="pHB-yt-jqM"/>
+                            <constraint firstItem="IpT-fN-G0C" firstAttribute="bottom" secondItem="FgC-zq-8Ch" secondAttribute="bottom" id="qlI-R9-oND"/>
+                            <constraint firstItem="IpT-fN-G0C" firstAttribute="trailing" secondItem="2wr-kn-LNA" secondAttribute="trailing" constant="16" id="svA-8K-pdy"/>
+                            <constraint firstItem="2wr-kn-LNA" firstAttribute="leading" secondItem="tso-Pe-Rrp" secondAttribute="trailing" constant="16" id="wVo-R8-DRt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="2wr-kn-LNA" id="glk-d5-9PS"/>
+                        <outlet property="clearView" destination="NWC-Yo-MRY" id="Wqj-91-1Rh"/>
+                        <outlet property="collectionView" destination="FgC-zq-8Ch" id="Mb9-OX-dPY"/>
+                        <outlet property="searchTextField" destination="tso-Pe-Rrp" id="UQw-lX-oSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRM-FH-iJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4006.8702290076335" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>
@@ -658,6 +758,9 @@
         </namedColor>
         <namedColor name="fieldDescription">
             <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightBlack">
+            <color red="0.14509803921568629" green="0.15686274509803921" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondRed">
             <color red="0.91764705882352937" green="0.10980392156862745" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

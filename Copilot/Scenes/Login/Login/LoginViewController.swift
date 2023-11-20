@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         
         rememberLabel.apply(.greyS12R400)
         forgotPasswordButton.apply(.blackS12R400)
-        notMemberLabel.apply(.greyS16B400)
+        notMemberLabel.apply(.greyS16R400)
         becomeMemberButton.apply(.themeS16B700)
     }
     

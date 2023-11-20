@@ -145,4 +145,16 @@ extension Strings {
         return localized(string: "necessaryDocuments")
     }
     
+    static var pastSearches: String {
+        return localized(string: "pastSearches")
+    }
+    
+    static var help: String {
+        return localized(string: "help")
+    }
+    
+    static var searchService: String {
+        return localized(string: "searchService")
+    }
+    
 }

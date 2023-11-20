@@ -69,9 +69,17 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
         kmUsedViewController = viewController
         navigationController.present(viewController, animated: true)
     }
+    
+    func goToSearch() {
+        let viewController: SearchViewController = storyboard.instantiateViewController()
+        let viewModel = SearchViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
-extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
+extension HomeCoordinator: NearMeViewModelCoordinatorDelegate, SearchViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }

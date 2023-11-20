@@ -92,8 +92,8 @@ class OnboardingViewController: UIViewController {
         backView.layer.cornerRadius = 10
         backView.layer.borderWidth = 1
         backView.layer.borderColor = UIColor.textGrey.cgColor
-        skipButton.apply(.greyS16B400)
-        notMemberLabel.apply(.greyS16B400)
+        skipButton.apply(.greyS16R400)
+        notMemberLabel.apply(.greyS16R400)
         becomeMemberButton.apply(.themeS16B700)
     }
     

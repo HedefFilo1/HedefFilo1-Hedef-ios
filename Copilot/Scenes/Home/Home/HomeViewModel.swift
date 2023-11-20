@@ -11,6 +11,7 @@ protocol HomeViewModelCoordinatorDelegate: AnyObject {
     func goToNearMe()
     func goToStandings()
     func presentKMUsed()
+    func goToSearch()
 }
 
 protocol HomeViewModelViewDelegate: AnyObject {
@@ -22,6 +23,7 @@ protocol HomeViewModelType: AnyObject {
     func goToNearMe()
     func goToStandings()
     func presentKMUsed()
+    func goToSearch()
 }
 
 class HomeViewModel: HomeViewModelType {
@@ -40,5 +42,9 @@ class HomeViewModel: HomeViewModelType {
     
     func presentKMUsed() {
         coordinatorDelegate?.presentKMUsed()
+    }
+    
+    func goToSearch() {
+        coordinatorDelegate?.goToSearch()
     }
 }
