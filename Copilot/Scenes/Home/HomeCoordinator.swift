@@ -106,8 +106,12 @@ extension HomeCoordinator: FiltersViewModelCoordinatorDelegate {
 }
 
 extension HomeCoordinator: KMUsedViewModelCoordinatorDelegate {
-    func dismiss(_: KMUsedViewModelType) {
-        kmUsedViewController?.dismiss(animated: true)
+    func dismiss(_: KMUsedViewModelType, distanceUpdated: Bool) {
+        kmUsedViewController?.dismiss(animated: true) {[weak self]  in
+            if distanceUpdated {
+                self?.homeViewModel.getVehicle()
+            }
+        }
     }
 }
 
