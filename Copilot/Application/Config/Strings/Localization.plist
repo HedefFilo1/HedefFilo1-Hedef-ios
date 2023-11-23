@@ -979,6 +979,134 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
+        <key>vehicleInfoDetails</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracın Sözleşme Bilgileri</string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key>vehicleUsedKm</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracın Kullanılan KM’si</string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key>goToVehicleRequests</key>
+        <dict>
+            <key>tr</key>
+            <string>Araçla İlgili Taleplere Git</string>
+            <key>en</key>
+            <string>Go to Vehicle Related Requests</string>
+        </dict>
+        
+        <key>goToVehicleGuide</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Rehberine Git</string>
+            <key>en</key>
+            <string>Go to Vehicle Guide</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

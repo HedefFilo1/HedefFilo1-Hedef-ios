@@ -105,6 +105,9 @@ enum FontTypographyType {
     /// theme size(20) Bold(700)
     case themeS20B700
     
+    /// theme size(14) Bold(700)
+    case themeS14B700
+    
     /// theme size(12) Bold(700)
     case themeS12B700
     
@@ -197,6 +200,9 @@ enum FontTypographyType {
             
         case .themeS20B700:
             return (TextStyle(fontStyle: .bold, size: 20), color: .theme)
+            
+        case .themeS14B700:
+            return (TextStyle(fontStyle: .bold, size: 14), color: .theme)
             
         case .themeS12B700:
             return (TextStyle(fontStyle: .bold, size: 12), color: .theme)

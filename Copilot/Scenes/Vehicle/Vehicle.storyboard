@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gjF-V1-FHA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vehicle Info View Controller-->
+        <scene sceneID="uvK-Jv-s6L">
+            <objects>
+                <viewController storyboardIdentifier="VehicleInfoViewController" id="gjF-V1-FHA" userLabel="Vehicle Info View Controller" customClass="VehicleInfoViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4Y-vI-6Wh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atB-ww-1B9">
+                                <rect key="frame" x="0.0" y="143" width="393" height="709"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokümanlarınız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-R6-Szj">
+                                        <rect key="frame" x="138" y="24" width="117.33333333333331" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-nE-Pqh">
+                                        <rect key="frame" x="0.0" y="56.333333333333314" width="393" height="618.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G2U-FC-mrW">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="a1n-R6-Szj" firstAttribute="centerX" secondItem="atB-ww-1B9" secondAttribute="centerX" id="9hf-ff-q5p"/>
+                                    <constraint firstItem="RPX-nE-Pqh" firstAttribute="leading" secondItem="atB-ww-1B9" secondAttribute="leading" id="DTG-yx-zZ2"/>
+                                    <constraint firstItem="a1n-R6-Szj" firstAttribute="top" secondItem="atB-ww-1B9" secondAttribute="top" constant="24" id="H74-P5-giz"/>
+                                    <constraint firstAttribute="trailing" secondItem="RPX-nE-Pqh" secondAttribute="trailing" id="MKd-Xx-ohA"/>
+                                    <constraint firstItem="RPX-nE-Pqh" firstAttribute="top" secondItem="a1n-R6-Szj" secondAttribute="bottom" constant="12" id="xLO-MT-Owg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ttx-yZ-8AB"/>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="ttx-yZ-8AB" firstAttribute="bottom" secondItem="RPX-nE-Pqh" secondAttribute="bottom" id="DVA-VN-jE8"/>
+                            <constraint firstAttribute="bottom" secondItem="atB-ww-1B9" secondAttribute="bottom" id="ZEc-hb-Vid"/>
+                            <constraint firstItem="atB-ww-1B9" firstAttribute="top" secondItem="ttx-yZ-8AB" secondAttribute="top" constant="84" id="ePB-Na-gPA"/>
+                            <constraint firstItem="atB-ww-1B9" firstAttribute="leading" secondItem="ttx-yZ-8AB" secondAttribute="leading" id="fO0-5k-Emh"/>
+                            <constraint firstItem="ttx-yZ-8AB" firstAttribute="trailing" secondItem="atB-ww-1B9" secondAttribute="trailing" id="pdG-ES-gan"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="RPX-nE-Pqh" id="Qba-Ih-fZH"/>
+                        <outlet property="contentView" destination="atB-ww-1B9" id="Y9p-OI-VNB"/>
+                        <outlet property="titleLabel" destination="a1n-R6-Szj" id="h5J-vF-Uer"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CV-qU-eAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-115" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

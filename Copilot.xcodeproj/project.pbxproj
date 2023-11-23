@@ -43,6 +43,16 @@
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
+		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
+		8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E62B0F9F6900CD0CA7 /* VehicleCoordinator.swift */; };
+		8934D4EA2B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E92B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift */; };
+		8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4EB2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift */; };
+		8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4EE2B0F9FE800CD0CA7 /* VehicleCell.swift */; };
+		8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4EF2B0F9FE800CD0CA7 /* VehicleCell.xib */; };
+		8934D4F62B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4F42B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift */; };
+		8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4F52B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib */; };
+		8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4F92B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift */; };
+		8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */; };
 		8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC462AFA5B30002F1C68 /* NewsCell.xib */; };
 		8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */; };
 		8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */; };
@@ -242,6 +252,16 @@
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
+		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
+		8934D4E62B0F9F6900CD0CA7 /* VehicleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCoordinator.swift; sourceTree = "<group>"; };
+		8934D4E92B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoViewModel.swift; sourceTree = "<group>"; };
+		8934D4EB2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoViewController.swift; sourceTree = "<group>"; };
+		8934D4EE2B0F9FE800CD0CA7 /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		8934D4EF2B0F9FE800CD0CA7 /* VehicleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
+		8934D4F42B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoItemCell.swift; sourceTree = "<group>"; };
+		8934D4F52B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoItemCell.xib; sourceTree = "<group>"; };
+		8934D4F92B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoButtonsCell.swift; sourceTree = "<group>"; };
+		8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoButtonsCell.xib; sourceTree = "<group>"; };
 		8935AC462AFA5B30002F1C68 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorshipTabCell.xib; sourceTree = "<group>"; };
 		8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipTabCell.swift; sourceTree = "<group>"; };
@@ -536,6 +556,63 @@
 				8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */,
 			);
 			path = DocumentPopup;
+			sourceTree = "<group>";
+		};
+		8934D4E32B0F9F2600CD0CA7 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */,
+				8934D4E62B0F9F6900CD0CA7 /* VehicleCoordinator.swift */,
+				8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4E92B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift */,
+				8934D4EB2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift */,
+				8934D4ED2B0F9FCA00CD0CA7 /* Cell */,
+			);
+			path = VehicleInfo;
+			sourceTree = "<group>";
+		};
+		8934D4ED2B0F9FCA00CD0CA7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4F22B0FA25600CD0CA7 /* VehicleInfoCell */,
+				8934D4F32B0FA80E00CD0CA7 /* VehicleInfoItem */,
+				8934D4F82B0FAE3400CD0CA7 /* VehicleInfoButtons */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8934D4F22B0FA25600CD0CA7 /* VehicleInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4EE2B0F9FE800CD0CA7 /* VehicleCell.swift */,
+				8934D4EF2B0F9FE800CD0CA7 /* VehicleCell.xib */,
+			);
+			path = VehicleInfoCell;
+			sourceTree = "<group>";
+		};
+		8934D4F32B0FA80E00CD0CA7 /* VehicleInfoItem */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4F42B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift */,
+				8934D4F52B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib */,
+			);
+			path = VehicleInfoItem;
+			sourceTree = "<group>";
+		};
+		8934D4F82B0FAE3400CD0CA7 /* VehicleInfoButtons */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4F92B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift */,
+				8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */,
+			);
+			path = VehicleInfoButtons;
 			sourceTree = "<group>";
 		};
 		8935AC482AFA5D03002F1C68 /* SponsorshipTab */ = {
@@ -1022,6 +1099,7 @@
 				89B12BB32AD4789D002C70E4 /* Main */,
 				896CB3412AD5BD610048025A /* Home */,
 				89B07A4F2AD9351700D3BE80 /* Profile */,
+				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1378,7 +1456,10 @@
 				89AD0EE42B0502AA0097B823 /* DocumentsTabTitleCell.xib in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
 				89D535292B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib in Resources */,
+				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
+				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
+				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
 				89AD0EE92B05302D0097B823 /* UploadCell.xib in Resources */,
@@ -1413,6 +1494,7 @@
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
 				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
+				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				89D5352E2B04FEA800715AD4 /* NecessaryItemCell.xib in Resources */,
@@ -1494,6 +1576,7 @@
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
+				8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
@@ -1502,8 +1585,10 @@
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,
+				8934D4EA2B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift in Sources */,
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
+				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
@@ -1590,6 +1675,7 @@
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
+				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
@@ -1597,6 +1683,7 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
+				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
 				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
@@ -1610,6 +1697,7 @@
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
+				8934D4F62B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
 				894CEC862B0790A400D369E9 /* PastSearchCell.swift in Sources */,
 				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,

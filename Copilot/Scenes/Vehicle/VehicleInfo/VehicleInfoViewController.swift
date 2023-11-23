@@ -1,18 +1,16 @@
 //
-//  DocumentsViewController.swift
+//  VehicleInfoViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 11/15/23.
+//  Created by Jamal on 11/23/23.
 //
 
 import Foundation
 import UIKit
-import MobileCoreServices
-import UniformTypeIdentifiers
 
-class DocumentsViewController: UIViewController {
+class VehicleInfoViewController: UIViewController {
     
-    var viewModel: DocumentsViewModel! {
+    var viewModel: VehicleInfoViewModel! {
         didSet {
             viewModel.delegate = self
         }
@@ -41,9 +39,10 @@ class DocumentsViewController: UIViewController {
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: YourDocumentsTabCell.self)
-        collectionView.register(cellType: NecessaryDocumentsTabCell.self)
-        collectionView.register(cellType: DocumentsTabCell.self)
+        collectionView.register(cellType: VehicleCell.self)
+        collectionView.register(cellType: VehicleInfoItemCell.self)
+        collectionView.register(cellType: VehicleInfoButtonsCell.self)
+        collectionView.contentInset.bottom = 60
     }
     
     func applyStyle() {
@@ -54,33 +53,68 @@ class DocumentsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.yourDocuments
+        titleLabel.text = Strings.vehicleInformation
     }
 }
 
-extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 1 {
+            return 4
+        }
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: YourDocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.items = viewModel.documents
-        cell.delegate = self
-        return cell
+        
+        switch indexPath.section {
+        case 0:
+            let cell: VehicleCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+            
+        case 1:
+            let cell: VehicleInfoItemCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.titleLabel.text = viewModel.documents?[indexPath.item].title
+            return cell
+            
+        case 2:
+            let cell: VehicleInfoButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        var height: CGFloat = 0
+        switch indexPath.section {
+        case 0:
+            height = 315
+            
+        case 1:
+            height = 50
+            
+        case 2:
+            height = 172
+            
+        default:
+            break
+        }
+        return CGSize(width: collectionView.frame.width - 48, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        if section == 1 {
+            return 16
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -88,31 +122,13 @@ extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.goToDocument()
+        if indexPath.section == 1 {
+            viewModel.goToDocument()
+        }
     }
 }
 
-extension DocumentsViewController: YourDocumentsTabDelegate {
-    func didSelectDocumentItem() {
-        viewModel.goToDocument()
-    }
-    
-    func didTapDelete(item: Document) {
-        viewModel.presentDocumentPopup(document: item)
-    }
-    
-    func didTapDownload() {
-        
-    }
-    
-    func didTapUpload() {
-        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.item], asCopy: false)
-        //        documentPicker.modalPresentationStyle = .formSheet
-        //        present(documentPicker, animated: true, completion: nil)
-    }
-}
-
-extension DocumentsViewController: DocumentsViewModelDelegate {
+extension VehicleInfoViewController: VehicleInfoViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

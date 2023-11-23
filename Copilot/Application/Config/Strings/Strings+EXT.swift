@@ -172,4 +172,21 @@ extension Strings {
     static var docDeleteTitle: String {
         return localized(string: "docDeleteTitle")
     }
+    
+    static var vehicleInfoDetails: String {
+        return localized(string: "vehicleInfoDetails")
+    }
+    
+    static var vehicleUsedKm: String {
+        return localized(string: "vehicleUsedKm")
+    }
+    
+    static var goToVehicleRequests: String {
+        return localized(string: "goToVehicleRequests")
+    }
+    
+    static var goToVehicleGuide: String {
+        return localized(string: "goToVehicleGuide")
+    }
+    
 }

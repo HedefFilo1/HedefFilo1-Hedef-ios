@@ -91,6 +91,18 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
             controller.viewModel.coordinatorDelegate = self
         }
     }
+    
+    func showVehicleInfo() {
+        tabBarController?.setSelectedIndex(index: 8)
+        if let controller = tabBarController?.viewControllers?[8] as? VehicleInfoViewController {
+            controller.viewModel = VehicleInfoViewModel()
+//            controller.viewModel.coordinatorDelegate = self
+        }
+//        let coordinator = Vehcoo(with: window)
+//        coordinator.delegate = self
+//        coordinator.start()
+//        addChildCoordinator(coordinator)
+    }
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
