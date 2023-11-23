@@ -165,4 +165,11 @@ extension Strings {
         return localized(string: "km")
     }
     
+    static var cancel: String {
+        return localized(string: "cancel")
+    }
+    
+    static var docDeleteTitle: String {
+        return localized(string: "docDeleteTitle")
+    }
 }

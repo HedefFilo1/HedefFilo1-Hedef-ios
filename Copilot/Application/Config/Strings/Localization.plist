@@ -963,18 +963,18 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>KM</string>
         </dict>
         
-        <key></key>
+        <key>cancel</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Vazgeç</string>
             <key>en</key>
-            <string></string>
+            <string>Cancel</string>
         </dict>
         
-        <key></key>
+        <key>docDeleteTitle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Silme İşlemini gerçekleştirmek istediğinize emin misiniz?</string>
             <key>en</key>
             <string></string>
         </dict>

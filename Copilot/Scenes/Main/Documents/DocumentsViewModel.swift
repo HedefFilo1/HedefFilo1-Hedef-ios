@@ -19,10 +19,12 @@ struct NecessaryDocument {
 
 protocol DocumentsViewModelCoordinatorDelegate: AnyObject {
     func goToDocument()
+    func presentDocumentPopup(document: Document)
+    
 }
 
 protocol DocumentsViewModelDelegate: AnyObject {
-    
+    func reloadData()
 }
 
 protocol DocumentsViewModelType: AnyObject {
@@ -30,7 +32,6 @@ protocol DocumentsViewModelType: AnyObject {
     var delegate: DocumentsViewModelDelegate? { get set }
     var documents: [Document]? { get set }
     var necessaryDocuments: [Document]? { get set }
-    var neccessarItems: [NecessaryDocument]? { get set }
     func delete(document: Document)
     func goToDocument()
 }
@@ -52,16 +53,13 @@ class DocumentsViewModel: DocumentsViewModelType {
         Document(id: 6, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
     ]
     
-    var neccessarItems: [NecessaryDocument]? = [
-        NecessaryDocument(title: "Araç İade Teslim Dökümanları"),
-        NecessaryDocument(title: "Yurt Dışı Çıkış İşlemleri Dökümanları"),
-        NecessaryDocument(title: "Lorem Ipsum Dökümanları"),
-        NecessaryDocument(title: "Lorem Ipsum Dökümanları")
-    ]
+    func presentDocumentPopup(document: Document) {
+        coordinatorDelegate?.presentDocumentPopup(document: document)
+    }
     
     func delete(document: Document) {
         documents?.removeAll(where: { $0.id == document.id })
-        necessaryDocuments?.removeAll(where: { $0.id == document.id })
+        delegate?.reloadData()
     }
     
     func goToDocument() {

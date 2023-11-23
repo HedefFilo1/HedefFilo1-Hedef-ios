@@ -41,6 +41,8 @@
 		892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892A8D182AC4EDB20020C1C4 /* Localization.plist */; };
 		892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1A2AC587690020C1C4 /* Strings.swift */; };
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
+		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
+		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC462AFA5B30002F1C68 /* NewsCell.xib */; };
 		8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */; };
 		8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */; };
@@ -238,6 +240,8 @@
 		892A8D182AC4EDB20020C1C4 /* Localization.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Localization.plist; sourceTree = "<group>"; };
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
+		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8935AC462AFA5B30002F1C68 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorshipTabCell.xib; sourceTree = "<group>"; };
 		8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipTabCell.swift; sourceTree = "<group>"; };
@@ -523,6 +527,15 @@
 				8986FCBC2AFCC802006057EA /* Strings+EXT.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */,
+				8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */,
+			);
+			path = DocumentPopup;
 			sourceTree = "<group>";
 		};
 		8935AC482AFA5D03002F1C68 /* SponsorshipTab */ = {
@@ -967,6 +980,7 @@
 				8935AC522AFA6733002F1C68 /* CampaignDetail */,
 				89E045832B04D2C800745E73 /* Documents */,
 				89E0458D2B04F50100745E73 /* Docment */,
+				8934D4DE2B0F913500CD0CA7 /* DocumentPopup */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1572,11 +1586,13 @@
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
+				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
+				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,

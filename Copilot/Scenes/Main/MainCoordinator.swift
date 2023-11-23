@@ -20,9 +20,16 @@ class MainCoordinator: Coordinator {
     
     var tabBarController: MainTabBarController?
     var menuViewController: MenuViewController?
+    var documentPopupViewController: DocumentPopupViewController?
     
     lazy var viewModel: MainViewModel = {
         let viewModel = MainViewModel()
+        viewModel.coordinatorDelegate = self
+        return viewModel
+    }()
+    
+    lazy var documentsViewModel: DocumentsViewModel = {
+        let viewModel = DocumentsViewModel()
         viewModel.coordinatorDelegate = self
         return viewModel
     }()
@@ -80,7 +87,7 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
     func showDocuments() {
         tabBarController?.setSelectedIndex(index: 7)
         if let controller = tabBarController?.viewControllers?[7] as? DocumentsViewController {
-            controller.viewModel = DocumentsViewModel()
+            controller.viewModel = documentsViewModel
             controller.viewModel.coordinatorDelegate = self
         }
     }
@@ -101,6 +108,28 @@ extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewMo
         viewController.viewModel = DocumentViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func presentDocumentPopup(document: Document) {
+        let viewController: DocumentPopupViewController = storyboard.instantiateViewController()
+        let viewModel = DocumentPopupViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewController.viewModel = viewModel
+        viewModel.document = document
+        documentPopupViewController = viewController
+        navigationController.present(viewController, animated: true)
+    }
+}
+
+extension MainCoordinator: DocumentPopupVMCoordinatorDelegate {
+    
+    func dismiss(_: DocumentPopupViewModelType, deletedDocument: Document?) {
+        documentPopupViewController?.dismiss(animated: true) {[weak self]  in
+            if let doc = deletedDocument {
+                self?.documentsViewModel.delete(document: doc)
+            }
+        }
     }
 }
 

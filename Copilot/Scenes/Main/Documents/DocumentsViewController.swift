@@ -20,13 +20,7 @@ class DocumentsViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var yourDocsButton: UIButton!
-    @IBOutlet weak var neccessaryButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet var borderViews: [UIView]!
-    
-    private var selectedNecessaryItem: NecessaryDocument?
-    private var currentTab = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -57,37 +51,17 @@ class DocumentsViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
-        
-        yourDocsButton.apply(.blackS18R400)
-        neccessaryButton.apply(.blackS18R400)
-        for view in borderViews {
-            view.backgroundColor = .disabled
-        }
-        borderViews[0].backgroundColor = .theme
     }
     
     func setTexts() {
         titleLabel.text = Strings.yourDocuments
-        yourDocsButton.setTitle(Strings.yourDocuments, for: .normal)
-        neccessaryButton.setTitle(Strings.necessaryDocuments, for: .normal)
-    }
-    
-    @IBAction func didTab(_ sender: UIView) {
-        let tag = sender.tag
-        if tag == currentTab {
-            return
-        }
-        borderViews[currentTab].backgroundColor = .disabled
-        currentTab = tag
-        borderViews[tag].backgroundColor = .theme
-        collectionView.scrollToItem(at: IndexPath(row: 0, section: tag), at: .centeredHorizontally, animated: true)
     }
 }
 
 extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -95,31 +69,10 @@ extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        switch indexPath.section {
-        case 0:
             let cell: YourDocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.items = viewModel.documents
             cell.delegate = self
             return cell
-            
-        case 1:
-            let cell: NecessaryDocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.items = viewModel.neccessarItems
-            cell.delegate = self
-            return cell
-            
-        case 2:
-            let cell: DocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.items = viewModel.necessaryDocuments
-            cell.selectedNecessaryItem = selectedNecessaryItem
-            cell.delegate = self
-            return cell
-            
-        default:
-            let cell: DocumentsTabCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -145,8 +98,7 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
     }
     
     func didTapDelete(item: Document) {
-        viewModel.delete(document: item)
-        collectionView.reloadData()
+        viewModel.presentDocumentPopup(document: item)
     }
     
     func didTapDownload() {
@@ -160,20 +112,8 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
     }
 }
 
-extension DocumentsViewController: NecessaryDocumentsTabDelegate {
-    func didSelectNeccessary(item: NecessaryDocument) {
-        selectedNecessaryItem = item
-        collectionView.reloadSections(IndexSet(integer: 2))
-        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .centeredHorizontally, animated: true)
-    }
-}
-
-extension DocumentsViewController: DocumentsTabDelegate {
-    func didTabBack() {
-        collectionView.scrollToItem(at: IndexPath(row: 0, section: 1), at: .centeredHorizontally, animated: true)
-    }
-}
-
 extension DocumentsViewController: DocumentsViewModelDelegate {
-    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }
