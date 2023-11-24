@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol VehicleInfoButtonsCellDelegate: AnyObject {
+    func didTapGuide()
+    func didTapRequests()
+}
+
 class VehicleInfoButtonsCell: UICollectionViewCell, Reusable {
     
+    weak var delegate: VehicleInfoButtonsCellDelegate?
     @IBOutlet weak var goLabel: UILabel!
     @IBOutlet weak var goButton: CPButton!
     
@@ -34,10 +40,10 @@ class VehicleInfoButtonsCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapGuide() {
-        
+        delegate?.didTapGuide()
     }
     
     @IBAction func didTapRequests() {
-        
+        delegate?.didTapRequests()
     }
 }

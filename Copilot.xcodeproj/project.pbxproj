@@ -53,6 +53,12 @@
 		8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4F52B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib */; };
 		8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4F92B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift */; };
 		8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */; };
+		8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4FE2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift */; };
+		8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5002B0FFE1000CD0CA7 /* VehicleGuideViewController.swift */; };
+		8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5032B0FFE7F00CD0CA7 /* VehicleGuideCell.swift */; };
+		8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D5042B0FFE7F00CD0CA7 /* VehicleGuideCell.xib */; };
+		8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5092B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift */; };
+		8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */; };
 		8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC462AFA5B30002F1C68 /* NewsCell.xib */; };
 		8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */; };
 		8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */; };
@@ -262,6 +268,12 @@
 		8934D4F52B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoItemCell.xib; sourceTree = "<group>"; };
 		8934D4F92B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoButtonsCell.swift; sourceTree = "<group>"; };
 		8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoButtonsCell.xib; sourceTree = "<group>"; };
+		8934D4FE2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleGuideViewModel.swift; sourceTree = "<group>"; };
+		8934D5002B0FFE1000CD0CA7 /* VehicleGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleGuideViewController.swift; sourceTree = "<group>"; };
+		8934D5032B0FFE7F00CD0CA7 /* VehicleGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleGuideCell.swift; sourceTree = "<group>"; };
+		8934D5042B0FFE7F00CD0CA7 /* VehicleGuideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleGuideCell.xib; sourceTree = "<group>"; };
+		8934D5092B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDescriptionCell.swift; sourceTree = "<group>"; };
+		8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleDescriptionCell.xib; sourceTree = "<group>"; };
 		8935AC462AFA5B30002F1C68 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorshipTabCell.xib; sourceTree = "<group>"; };
 		8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipTabCell.swift; sourceTree = "<group>"; };
@@ -564,6 +576,7 @@
 				8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */,
 				8934D4E62B0F9F6900CD0CA7 /* VehicleCoordinator.swift */,
 				8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */,
+				8934D4FD2B0FFDE900CD0CA7 /* VehicleGuide */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -613,6 +626,43 @@
 				8934D4FA2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib */,
 			);
 			path = VehicleInfoButtons;
+			sourceTree = "<group>";
+		};
+		8934D4FD2B0FFDE900CD0CA7 /* VehicleGuide */ = {
+			isa = PBXGroup;
+			children = (
+				8934D4FE2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift */,
+				8934D5002B0FFE1000CD0CA7 /* VehicleGuideViewController.swift */,
+				8934D5022B0FFE6100CD0CA7 /* Cell */,
+			);
+			path = VehicleGuide;
+			sourceTree = "<group>";
+		};
+		8934D5022B0FFE6100CD0CA7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8934D5072B0FFF0900CD0CA7 /* VehicleGuide */,
+				8934D5082B0FFF2000CD0CA7 /* VehicleDescription */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8934D5072B0FFF0900CD0CA7 /* VehicleGuide */ = {
+			isa = PBXGroup;
+			children = (
+				8934D5032B0FFE7F00CD0CA7 /* VehicleGuideCell.swift */,
+				8934D5042B0FFE7F00CD0CA7 /* VehicleGuideCell.xib */,
+			);
+			path = VehicleGuide;
+			sourceTree = "<group>";
+		};
+		8934D5082B0FFF2000CD0CA7 /* VehicleDescription */ = {
+			isa = PBXGroup;
+			children = (
+				8934D5092B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift */,
+				8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */,
+			);
+			path = VehicleDescription;
 			sourceTree = "<group>";
 		};
 		8935AC482AFA5D03002F1C68 /* SponsorshipTab */ = {
@@ -1476,10 +1526,12 @@
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
 				89AD0EDF2B05025F0097B823 /* DocumentsTabCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
+				8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */,
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
+				8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
@@ -1592,6 +1644,7 @@
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
+				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
@@ -1627,6 +1680,7 @@
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
+				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
@@ -1661,6 +1715,7 @@
 				89B07A472AD86CFC00D3BE80 /* MenuViewController.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
+				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
@@ -1690,6 +1745,7 @@
 				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89D535312B05023300715AD4 /* DocumentsTabCell.swift in Sources */,
+				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* GetVehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
 				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,

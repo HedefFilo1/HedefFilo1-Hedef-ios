@@ -1,24 +1,21 @@
 //
-//  VehicleInfoViewController.swift
+//  VehicleGuideViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 11/23/23.
+//  Created by Jamal on 11/24/23.
 //
 
 import Foundation
 import UIKit
 
-class VehicleInfoViewController: UIViewController {
+class VehicleGuideViewController: UIViewController {
     
-    lazy var viewModel: VehicleInfoViewModelType = {
-        let viewModel = VehicleInfoViewModel()
-        let coordinator = VehicleCoordinator(with: self.navigationController!)
-        viewModel.coordinatorDelegate = coordinator
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: VehicleGuideViewModel! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -36,39 +33,36 @@ class VehicleInfoViewController: UIViewController {
     }
     
     func setupUI() {
-        setBasicViews()
         applyStyle()
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(cellType: VehicleGuideCell.self)
         collectionView.register(cellType: VehicleCell.self)
-        collectionView.register(cellType: VehicleInfoItemCell.self)
-        collectionView.register(cellType: VehicleInfoButtonsCell.self)
-        collectionView.contentInset.bottom = 60
+        collectionView.register(cellType: VehicleDescriptionCell.self)
+        collectionView.contentInset.bottom = 70
     }
     
     func applyStyle() {
-        contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 40
-        contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        titleLabel.apply(.blackS24B700)
+        titleLabel.apply(.blackS18B700)
     }
     
     func setTexts() {
-        titleLabel.text = Strings.vehicleInformation
+        titleLabel.text = Strings.vehicleGuide
+    }
+    
+    @IBAction func didTapBack() {
+        viewModel.getBack()
     }
 }
 
-extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension VehicleGuideViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 1 {
-            return 4
-        }
         return 1
     }
     
@@ -76,17 +70,15 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
         
         switch indexPath.section {
         case 0:
-            let cell: VehicleCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: VehicleGuideCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         case 1:
-            let cell: VehicleInfoItemCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.titleLabel.text = viewModel.documents?[indexPath.item].title
+            let cell: VehicleCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         case 2:
-            let cell: VehicleInfoButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = self
+            let cell: VehicleDescriptionCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         default:
@@ -98,13 +90,13 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
         var height: CGFloat = 0
         switch indexPath.section {
         case 0:
-            height = 315
+            height = 46
             
         case 1:
-            height = 50
+            height = 310
             
         case 2:
-            height = 172
+            height = 1310
             
         default:
             break
@@ -113,10 +105,6 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if section == 1 {
-            return 16
-        }
-        
         return 0
     }
     
@@ -125,25 +113,9 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            viewModel.goToDocument()
-        }
     }
 }
 
-extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate {
+extension VehicleGuideViewController: VehicleGuideViewModelDelegate {
     
-    func didTapGuide() {
-        viewModel.goToVehicleGuide()
-    }
-    
-    func didTapRequests() {
-        
-    }
-}
-
-extension VehicleInfoViewController: VehicleInfoViewModelDelegate {
-    func reloadData() {
-        collectionView.reloadData()
-    }
 }

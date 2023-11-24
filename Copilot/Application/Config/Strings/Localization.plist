@@ -1011,12 +1011,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Go to Vehicle Guide</string>
         </dict>
         
-        <key></key>
+        <key>vehicleGuide</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Araç Rehberi</string>
             <key>en</key>
-            <string></string>
+            <string>Vehicle Guide</string>
         </dict>
         
         <key></key>

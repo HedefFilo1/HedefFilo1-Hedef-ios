@@ -189,4 +189,7 @@ extension Strings {
         return localized(string: "goToVehicleGuide")
     }
     
+    static var vehicleGuide: String {
+        return localized(string: "vehicleGuide")
+    }
 }
