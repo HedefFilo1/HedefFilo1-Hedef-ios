@@ -59,6 +59,10 @@
 		8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D5042B0FFE7F00CD0CA7 /* VehicleGuideCell.xib */; };
 		8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5092B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift */; };
 		8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */; };
+		8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D50E2B10FD7300CD0CA7 /* HGSViewModel.swift */; };
+		8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5102B10FD7D00CD0CA7 /* HGSViewController.swift */; };
+		8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D5132B10FE0900CD0CA7 /* HGSCell.swift */; };
+		8934D5162B10FE0900CD0CA7 /* HGSCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8934D5142B10FE0900CD0CA7 /* HGSCell.xib */; };
 		8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC462AFA5B30002F1C68 /* NewsCell.xib */; };
 		8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */; };
 		8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */; };
@@ -274,6 +278,10 @@
 		8934D5042B0FFE7F00CD0CA7 /* VehicleGuideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleGuideCell.xib; sourceTree = "<group>"; };
 		8934D5092B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDescriptionCell.swift; sourceTree = "<group>"; };
 		8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleDescriptionCell.xib; sourceTree = "<group>"; };
+		8934D50E2B10FD7300CD0CA7 /* HGSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSViewModel.swift; sourceTree = "<group>"; };
+		8934D5102B10FD7D00CD0CA7 /* HGSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSViewController.swift; sourceTree = "<group>"; };
+		8934D5132B10FE0900CD0CA7 /* HGSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSCell.swift; sourceTree = "<group>"; };
+		8934D5142B10FE0900CD0CA7 /* HGSCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGSCell.xib; sourceTree = "<group>"; };
 		8935AC462AFA5B30002F1C68 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8935AC492AFA5D39002F1C68 /* SponsorshipTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorshipTabCell.xib; sourceTree = "<group>"; };
 		8935AC4B2AFA5D48002F1C68 /* SponsorshipTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipTabCell.swift; sourceTree = "<group>"; };
@@ -577,6 +585,7 @@
 				8934D4E62B0F9F6900CD0CA7 /* VehicleCoordinator.swift */,
 				8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */,
 				8934D4FD2B0FFDE900CD0CA7 /* VehicleGuide */,
+				8934D50D2B10FD4E00CD0CA7 /* HGS */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -663,6 +672,25 @@
 				8934D50A2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib */,
 			);
 			path = VehicleDescription;
+			sourceTree = "<group>";
+		};
+		8934D50D2B10FD4E00CD0CA7 /* HGS */ = {
+			isa = PBXGroup;
+			children = (
+				8934D50E2B10FD7300CD0CA7 /* HGSViewModel.swift */,
+				8934D5102B10FD7D00CD0CA7 /* HGSViewController.swift */,
+				8934D5122B10FDFD00CD0CA7 /* Cell */,
+			);
+			path = HGS;
+			sourceTree = "<group>";
+		};
+		8934D5122B10FDFD00CD0CA7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8934D5132B10FE0900CD0CA7 /* HGSCell.swift */,
+				8934D5142B10FE0900CD0CA7 /* HGSCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8935AC482AFA5D03002F1C68 /* SponsorshipTab */ = {
@@ -1495,6 +1523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8934D5162B10FE0900CD0CA7 /* HGSCell.xib in Resources */,
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
 				894CEC8C2B07933600D369E9 /* GuideCell.xib in Resources */,
 				89C686952B0260C900011897 /* AvatarCell.xib in Resources */,
@@ -1651,6 +1680,7 @@
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
+				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
@@ -1697,6 +1727,7 @@
 				8986FCBD2AFCC802006057EA /* Strings+EXT.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,
+				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
@@ -1764,6 +1795,7 @@
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
+				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
 				89AD0EE32B0502AA0097B823 /* DocumentsTabTitleCell.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,

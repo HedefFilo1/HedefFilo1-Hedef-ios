@@ -192,4 +192,12 @@ extension Strings {
     static var vehicleGuide: String {
         return localized(string: "vehicleGuide")
     }
+    
+    static var entrance: String {
+        return localized(string: "entrance")
+    }
+    
+    static var exit: String {
+        return localized(string: "exit")
+    }
 }

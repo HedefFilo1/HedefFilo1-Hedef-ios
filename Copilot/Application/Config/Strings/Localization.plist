@@ -1019,20 +1019,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Vehicle Guide</string>
         </dict>
         
-        <key></key>
+        <key>entrance</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Giriş</string>
             <key>en</key>
-            <string></string>
+            <string>Entrance</string>
         </dict>
         
-        <key></key>
+        <key>exit</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Çıkış</string>
             <key>en</key>
-            <string></string>
+            <string>Exit</string>
         </dict>
         
         <key></key>

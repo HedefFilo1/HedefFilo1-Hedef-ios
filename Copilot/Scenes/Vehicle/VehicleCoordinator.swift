@@ -47,6 +47,12 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
     }
 }
 
+extension VehicleCoordinator: HGSViewModelCoordinatorDelegate {
+    func goToHGSDetail() {
+        
+    }
+}
+
 extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate, VehicleGuideViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)

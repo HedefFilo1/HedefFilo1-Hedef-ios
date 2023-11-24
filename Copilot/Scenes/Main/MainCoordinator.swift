@@ -102,6 +102,10 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
 ////            addChildCoordinator(coordinator)
 ////        }
     }
+    
+    func showVehicleHGS() {
+        tabBarController?.setSelectedIndex(index: 9)
+    }
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {

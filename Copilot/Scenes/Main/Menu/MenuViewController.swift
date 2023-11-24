@@ -129,6 +129,9 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 3:
             viewModel.showVehicleInfo()
             
+        case 4:
+            viewModel.showVehicleHGS()
+            
         default:
             break
         }
