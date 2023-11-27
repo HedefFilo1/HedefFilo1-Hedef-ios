@@ -55,6 +55,10 @@ class ProfileViewController: UIViewController {
         
         idTextField.keyboardType = .numberPad
         idTextField.delegate = self
+        
+        nameTextField.isEnabled = false
+        idTextField.isEnabled = false
+        licenseTextField.isEnabled = false
     }
     
     func applyStyle() {
