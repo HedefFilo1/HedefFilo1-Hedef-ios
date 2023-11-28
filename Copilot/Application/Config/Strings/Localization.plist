@@ -1035,12 +1035,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Exit</string>
         </dict>
         
-        <key></key>
+        <key>passwordUpdated</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Şifreniz Güncellendi</string>
             <key>en</key>
-            <string></string>
+            <string>Your Password Has Been Updated</string>
         </dict>
         
         <key></key>

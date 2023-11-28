@@ -8,6 +8,7 @@
 import Foundation
 
 struct GetVehicle: Decodable {
+    let plateNumber: String?
     let make: String
     let model: String
     let leaseDuration: String

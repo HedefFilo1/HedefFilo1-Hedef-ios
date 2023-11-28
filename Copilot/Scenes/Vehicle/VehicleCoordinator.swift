@@ -49,11 +49,14 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
 
 extension VehicleCoordinator: HGSViewModelCoordinatorDelegate {
     func goToHGSDetail() {
-        
+        let viewController: HGSDetailViewController = storyboard.instantiateViewController()
+        viewController.viewModel = HGSDetailViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
-extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate, VehicleGuideViewModelCoordinatorDelegate {
+extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate, VehicleGuideViewModelCoordinatorDelegate, HGSDetailViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }

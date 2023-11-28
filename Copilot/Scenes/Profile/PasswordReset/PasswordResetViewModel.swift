@@ -12,7 +12,7 @@ protocol PasswordResetVMCoordinatorDelegate: AnyObject {
 }
 
 protocol PasswordResetViewModelDelegate: AnyObject {
-    func showSuccess(title: String, message: String)
+    func showSuccess(title: String, message: String, delegate: MessagePopupViewControllerDelegate?)
     func showError(title: String, message: String)
 }
 
@@ -65,7 +65,8 @@ class PasswordResetViewModel: PasswordResetViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
-            self.getBack()
+            
+            self.delegate?.showSuccess(title: Strings.passwordUpdated, message: "", delegate: self)
         }
     }
     
@@ -73,4 +74,10 @@ class PasswordResetViewModel: PasswordResetViewModelType {
         coordinatorDelegate?.getBack()
     }
     
+}
+
+extension PasswordResetViewModel: MessagePopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        getBack()
+    }
 }

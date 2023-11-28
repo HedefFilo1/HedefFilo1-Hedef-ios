@@ -17,7 +17,11 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     
     var vehicle: GetVehicle? {
         didSet {
+            
             modelLabel.text = vehicle?.model ?? "model"
+            if let plate = vehicle?.plateNumber {
+                modelLabel.text = plate
+            }
             nameLabel.text = vehicle?.make ?? "Brand"
             let rent = vehicle?.leaseDuration ?? "0"
             rentValueLabel.text = rent + " " + Strings.months

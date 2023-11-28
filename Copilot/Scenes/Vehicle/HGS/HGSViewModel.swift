@@ -22,7 +22,7 @@ protocol HGSViewModelType: AnyObject {
 
 class HGSViewModel: HGSViewModelType {
     
-    weak var coordinatorDelegate: HGSViewModelCoordinatorDelegate?
+    var coordinatorDelegate: HGSViewModelCoordinatorDelegate?
     weak var delegate: HGSViewModelDelegate?
     
     func goToHGSDetail() {

@@ -200,4 +200,8 @@ extension Strings {
     static var exit: String {
         return localized(string: "exit")
     }
+    
+    static var passwordUpdated: String {
+        return localized(string: "passwordUpdated")
+    }
 }

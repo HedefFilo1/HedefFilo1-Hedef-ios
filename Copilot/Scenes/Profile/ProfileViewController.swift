@@ -73,19 +73,16 @@ class ProfileViewController: UIViewController {
         phoneTextField.placeholder = Strings.mobilePhone
         emailTextFiled.placeholder = Strings.email
         nameTextField.placeholder = Strings.nameSurname
-        idTextField.placeholder = Strings.tcTaxNumber
+        idTextField.placeholder = Strings.taxIdNumber
         licenseTextField.placeholder = Strings.vehicleLicenseNumber
         passwordLabel.text = Strings.resetPassword
         submitButton.setTitle(Strings.updateInformation, for: .normal)
     }
     
     func setButtonActivation() {
-        let name = nameTextField.pureTextCount > 0
         let phone = phoneTextField.validate()
         let email = emailTextFiled.validate()
-        let tcTax = idTextField.pureTextCount == 11
-        let license = licenseTextField.pureTextCount > 0
-        submitButton.isEnabled = name && phone && email && tcTax && license
+        submitButton.isEnabled = phone && email
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -122,6 +119,7 @@ extension ProfileViewController: ProfileViewModelDelegate {
             nameTextField.preText = name + " " + surname
             idTextField.preText = profile.taxId
             licenseTextField.preText = profile.licenseNumber
+            setButtonActivation()
         }
     }
 }

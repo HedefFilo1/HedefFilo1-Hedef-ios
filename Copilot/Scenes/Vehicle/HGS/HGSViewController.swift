@@ -70,6 +70,7 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HGSCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -86,6 +87,12 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension HGSViewController: HGSCellDelegate {
+    func didTapDetail() {
+        viewModel.goToHGSDetail()
     }
 }
 

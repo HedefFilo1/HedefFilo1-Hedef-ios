@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol HGSCellDelegate: AnyObject {
+    func didTapDetail()
+}
+
 class HGSCell: UICollectionViewCell, Reusable {
     
-    weak var delegate: DocumentCellDelegate?
+    weak var delegate: HGSCellDelegate?
     @IBOutlet weak var enteranceLabel: UILabel!
     @IBOutlet weak var exitLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -45,5 +49,9 @@ class HGSCell: UICollectionViewCell, Reusable {
         let exit = [AttributedText(text: Strings.exit, type: .blackS16R400),
                         AttributedText(text: text, type: .blackS16B700)]
         exitLabel.attributedText = AttributedText.createString(texts: exit)
+    }
+    
+    @IBAction func didTapDetail() {
+        delegate?.didTapDetail()
     }
 }
