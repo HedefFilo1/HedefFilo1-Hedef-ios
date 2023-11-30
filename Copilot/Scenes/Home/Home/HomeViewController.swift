@@ -94,6 +94,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             let cell: HomeContentCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             cell.appointment = viewModel.appointment
+            cell.tire = viewModel.tire
             return cell
         
         default:
@@ -164,6 +165,10 @@ extension HomeViewController: HomeViewModelViewDelegate {
     }
     
     func setAppointment() {
+        collectionView.reloadData()
+    }
+    
+    func setTire() {
         collectionView.reloadData()
     }
 }

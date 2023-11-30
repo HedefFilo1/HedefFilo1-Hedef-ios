@@ -94,6 +94,7 @@
 		894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC942B0B7B0F00D369E9 /* Success.swift */; };
 		894CEC972B0B7FFA00D369E9 /* GetVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC962B0B7FFA00D369E9 /* GetVehicle.swift */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
+		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -317,6 +318,7 @@
 		894CEC962B0B7FFA00D369E9 /* GetVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVehicle.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		896CB3422AD5BD6D0048025A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -1067,6 +1069,7 @@
 				894CEC942B0B7B0F00D369E9 /* Success.swift */,
 				894CEC962B0B7FFA00D369E9 /* GetVehicle.swift */,
 				895ADBC02B177E08004C9A4C /* Case.swift */,
+				895ADBC22B18C055004C9A4C /* Tire.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1788,6 +1791,7 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
+				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
 				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,

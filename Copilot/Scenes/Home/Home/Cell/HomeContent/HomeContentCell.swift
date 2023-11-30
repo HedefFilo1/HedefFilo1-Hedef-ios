@@ -18,6 +18,7 @@ class HomeContentCell: UICollectionViewCell, Reusable {
     weak var delegate: HomeContentCellDelegate?
     
     var appointment: Case?
+    var tire: Tire?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -64,6 +65,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             
         case 2:
             let cell: TireInfoCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.tire = tire
             return cell
             
         case 3:

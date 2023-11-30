@@ -72,9 +72,9 @@
             </constraints>
             <size key="customSize" width="344" height="222"/>
             <connections>
+                <outlet property="addressLabel" destination="Yr3-uA-Kel" id="9u9-mb-k8H"/>
                 <outlet property="imageContainer" destination="mVx-Nz-aOX" id="OLB-7j-Pjn"/>
-                <outlet property="serviceLabel" destination="KDN-RR-Zg1" id="H71-aw-Z1r"/>
-                <outlet property="serviceNameLabel" destination="Yr3-uA-Kel" id="9u9-mb-k8H"/>
+                <outlet property="nameLabel" destination="KDN-RR-Zg1" id="H71-aw-Z1r"/>
                 <outlet property="titleLabel" destination="1W6-PV-kzw" id="5bt-ef-nBE"/>
             </connections>
             <point key="canvasLocation" x="161.83206106870227" y="82.394366197183103"/>

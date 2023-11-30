@@ -17,6 +17,7 @@ protocol HomeViewModelCoordinatorDelegate: AnyObject {
 protocol HomeViewModelViewDelegate: AnyObject {
     func setVehicle()
     func setAppointment()
+    func setTire()
     func showError(title: String, message: String)
     func showSuccess(title: String, message: String)
 }
@@ -25,6 +26,7 @@ protocol HomeViewModelType: AnyObject {
     var delegate: HomeViewModelViewDelegate? { get set }
     var vehicle: GetVehicle? { get set}
     var appointment: Case? { get set}
+    var tire: Tire? { get set }
     func getVehicle(shoudGetCase: Bool)
     func goToNearMe()
     func goToStandings()
@@ -39,14 +41,13 @@ class HomeViewModel: HomeViewModelType {
     weak var delegate: HomeViewModelViewDelegate?
     var vehicle: GetVehicle?
     var appointment: Case?
+    var tire: Tire?
     
     func getVehicle(shoudGetCase: Bool) {
         Loading.shared.show()
         APIService.getVehicle { [weak self] model, error in
             Loading.shared.hide()
-            print("yes dis")
-            guard let self = self else {return}
-            print("yes dis2342342")
+            guard let self = self else { return }
             
             if let model = model {
                 self.vehicle = model
@@ -67,17 +68,35 @@ class HomeViewModel: HomeViewModelType {
         Loading.shared.show()
         APIService.getCase { [weak self] model, error in
             Loading.shared.hide()
-            guard let self = self else {return}
+            guard let self = self else { return }
             
-            if let model = model?[0] {
-                self.appointment = model
+            if let model = model, model.count > 0 {
+                self.appointment = model[0]
                 self.delegate?.setAppointment()
             } else
             
             if let error = error {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
-                return
+            }
+            self.getTire()
+        }
+    }
+    
+    func getTire() {
+        Loading.shared.show()
+        APIService.getTire { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model, model.count > 0 {
+                self.tire = model[0]
+                self.delegate?.setTire()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
             }
         }
     }

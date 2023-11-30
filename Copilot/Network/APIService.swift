@@ -163,4 +163,13 @@ class APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getTire(completion: @escaping ([Tire]?, APIResponseError?) -> Void) {
+        
+        let req = APIRequest<[Tire]>(route: "copilot/tire", method: .get, hasToken: true)
+        req.identifier = "Get Tire"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
 }
