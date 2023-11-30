@@ -17,6 +17,8 @@ class HomeContentCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: HomeContentCellDelegate?
     
+    var appointment: Case?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -53,6 +55,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         switch indexPath.item {
         case 0:
             let cell: RandevuCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.appointment = appointment
             return cell
             
         case 1:

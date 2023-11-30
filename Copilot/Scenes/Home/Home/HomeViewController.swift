@@ -12,9 +12,9 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     lazy var viewModel: HomeViewModelType = {
-        let viewModel = HomeViewModel()
         let coordinator = HomeCoordinator(with: self.navigationController!)
-        viewModel.coordinatorDelegate = coordinator
+        let viewModel = coordinator.homeViewModel
+//        viewModel.coordinatorDelegate = coordinator
         viewModel.delegate = self
         return viewModel
     }()
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getVehicle()
+        viewModel.getVehicle(shoudGetCase: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +93,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 2:
             let cell: HomeContentCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.appointment = viewModel.appointment
             return cell
         
         default:
@@ -136,7 +137,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 extension HomeViewController: VehicleInfoCellDelegate {
     func didTapKmUsed() {
-        viewModel.presentKMUsed()
+        viewModel.presentKMUsed(delegate: self)
     }
 }
 
@@ -151,8 +152,18 @@ extension HomeViewController: HomeContentCellDelegate {
     }
 }
 
+extension HomeViewController: KMUsedViewControllerDelegate {
+    func reloadDistance() {
+        viewModel.getVehicle(shoudGetCase: false)
+    }
+}
+
 extension HomeViewController: HomeViewModelViewDelegate {
     func setVehicle() {
+        collectionView.reloadData()
+    }
+    
+    func setAppointment() {
         collectionView.reloadData()
     }
 }

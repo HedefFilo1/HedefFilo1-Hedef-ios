@@ -38,6 +38,7 @@ class HGSDetailViewController: UIViewController {
     func applyStyle() {
         backImageView.image = backImageView.image?.withRenderingMode(.alwaysTemplate)
         backImageView.tintColor = .lightBlack
+        titleLabel.apply(.blackS18B700)
         for label in fieldLabels {
             label.apply(.greyS14R400)
         }

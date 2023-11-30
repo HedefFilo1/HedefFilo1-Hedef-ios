@@ -154,4 +154,13 @@ class APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getCase(completion: @escaping ([Case]?, APIResponseError?) -> Void) {
+        
+        let req = APIRequest<[Case]>(route: "copilot/case", method: .get, hasToken: true)
+        req.identifier = "Get Case"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
 }

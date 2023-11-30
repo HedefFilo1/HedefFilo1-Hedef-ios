@@ -9,6 +9,14 @@ import UIKit
 
 class RandevuCell: UICollectionViewCell, Reusable {
     
+    var appointment: Case? {
+        didSet {
+            if let appointment = appointment {
+                randevuLabel.text = appointment.supplierName
+                dateLabel.text = appointment.appointmentDate
+            }
+        }
+    }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageContainer: UIView!

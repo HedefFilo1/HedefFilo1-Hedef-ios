@@ -60,13 +60,14 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func presentKMUsed() {
+    func presentKMUsed(delegate: KMUsedViewControllerDelegate) {
         let viewController: KMUsedViewController = storyboard.instantiateViewController()
         let viewModel = KMUsedViewModel()
         viewController.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
         kmUsedViewController = viewController
+        viewController.delegate = delegate
         navigationController.present(viewController, animated: true)
     }
     
@@ -106,12 +107,8 @@ extension HomeCoordinator: FiltersViewModelCoordinatorDelegate {
 }
 
 extension HomeCoordinator: KMUsedViewModelCoordinatorDelegate {
-    func dismiss(_: KMUsedViewModelType, distanceUpdated: Bool) {
-        kmUsedViewController?.dismiss(animated: true) {[weak self]  in
-            if distanceUpdated {
-                self?.homeViewModel.getVehicle()
-            }
-        }
+    func dismiss(_: KMUsedViewModelType) {
+        kmUsedViewController?.dismiss(animated: true)
     }
 }
 

@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol KMUsedViewControllerDelegate: AnyObject {
+    func reloadDistance()
+}
+
 class KMUsedViewController: SheetViewController {
     
     var viewModel: KMUsedViewModelType! {
@@ -15,7 +19,7 @@ class KMUsedViewController: SheetViewController {
             viewModel.delegate = self
         }
     }
-    
+    weak var delegate: KMUsedViewControllerDelegate?
     override var presentationHeight: CGFloat {
         return 214
     }
@@ -72,5 +76,9 @@ class KMUsedViewController: SheetViewController {
 }
 
 extension KMUsedViewController: KMUsedViewModelDelegate {
-    
+    func setDistance() {
+        dismiss(animated: true) { [weak self] in
+            self?.delegate?.reloadDistance()
+        }
+    }
 }

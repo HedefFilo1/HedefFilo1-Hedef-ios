@@ -8,12 +8,13 @@
 import Foundation
 
 protocol KMUsedViewModelCoordinatorDelegate: AnyObject {
-    func dismiss(_: KMUsedViewModelType, distanceUpdated: Bool)
+    func dismiss(_: KMUsedViewModelType)
 }
 
 protocol KMUsedViewModelDelegate: AnyObject {
     func showSuccess(title: String, message: String)
     func showError(title: String, message: String)
+    func setDistance()
 }
 
 protocol KMUsedViewModelType: AnyObject {
@@ -41,12 +42,12 @@ class KMUsedViewModel: KMUsedViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
-            self.coordinatorDelegate?.dismiss(self, distanceUpdated: true)
+            self.delegate?.setDistance()
         }
     }
     
     func dismiss() {
-        coordinatorDelegate?.dismiss(self, distanceUpdated: false)
+        coordinatorDelegate?.dismiss(self)
     }
     
 }
