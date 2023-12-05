@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var phoneTextField: CPPhoneTextField!
     @IBOutlet weak var emailTextFiled: CPEmailTextField!
     @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var surnameTextField: CPTextField!
     @IBOutlet weak var idTextField: CPTextField!
     @IBOutlet weak var licenseTextField: CPTextField!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -57,6 +58,7 @@ class ProfileViewController: UIViewController {
         idTextField.delegate = self
         
         nameTextField.isEnabled = false
+        surnameTextField.isEnabled = false
         idTextField.isEnabled = false
         licenseTextField.isEnabled = false
     }
@@ -72,7 +74,8 @@ class ProfileViewController: UIViewController {
     func setTexts() {
         phoneTextField.placeholder = Strings.mobilePhone
         emailTextFiled.placeholder = Strings.email
-        nameTextField.placeholder = Strings.nameSurname
+        nameTextField.placeholder = Strings.name
+        surnameTextField.placeholder = Strings.surname
         idTextField.placeholder = Strings.taxIdNumber
         licenseTextField.placeholder = Strings.vehicleLicenseNumber
         passwordLabel.text = Strings.resetPassword
@@ -116,7 +119,8 @@ extension ProfileViewController: ProfileViewModelDelegate {
             emailTextFiled.preText = profile.email
             let name = profile.name ?? ""
             let surname = profile.surname ?? ""
-            nameTextField.preText = name + " " + surname
+            nameTextField.preText = name
+            surnameTextField.preText = surname
             idTextField.preText = profile.taxId
             licenseTextField.preText = profile.licenseNumber
             setButtonActivation()

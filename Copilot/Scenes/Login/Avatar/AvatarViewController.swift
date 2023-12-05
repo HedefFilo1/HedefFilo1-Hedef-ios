@@ -63,7 +63,9 @@ class AvatarViewController: UIViewController {
     }
     
     @IBAction func didTapSelect() {
-        viewModel.selectAvatar()
+        if let index = selectedIndex, let name = viewModel.avatars?[index].image {
+            viewModel.selectAvatar(name: name)
+        }
     }
 }
 

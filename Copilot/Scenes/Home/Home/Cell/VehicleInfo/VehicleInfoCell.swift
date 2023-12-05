@@ -29,6 +29,10 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
             limitValueLabel.text = distance + " " + Strings.ckm
             let last = vehicle?.lastKnownDistance ?? "0"
             usedValueLabel.text = last + " " + Strings.ckm
+            
+            if let name = Persistence.avatarName {
+                imageView.image = UIImage(named: name)
+            }
         }
     }
     

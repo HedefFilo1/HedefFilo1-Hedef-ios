@@ -28,4 +28,7 @@ struct Persistence {
     
     @Persist(key: "AvatarSelected", defaultValue: nil, type: .userDefaults)
     static var avatarSelected: String?
+    
+    @Persist(key: "AvatarName", defaultValue: nil, type: .userDefaults)
+    static var avatarName: String?
 }

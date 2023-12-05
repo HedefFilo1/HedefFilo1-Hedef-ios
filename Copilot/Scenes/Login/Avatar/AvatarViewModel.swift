@@ -25,7 +25,7 @@ protocol AvatarViewModelType: AnyObject {
     var delegate: AvatarViewModelDelegate? { get set }
     var avatars: [Avatar]? { get set }
     var email: String { get set }
-    func selectAvatar()
+    func selectAvatar(name: String)
     func goToMain()
 }
 
@@ -42,8 +42,9 @@ class AvatarViewModel: AvatarViewModelType {
         Avatar(image: "avatar4")
     ]
     
-    func selectAvatar() {
+    func selectAvatar(name: String) {
         Persistence.avatarSelected = email
+        Persistence.avatarName = name
         coordinatorDelegate?.goToMain()
     }
     

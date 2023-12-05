@@ -57,12 +57,24 @@ class HomeContentCell: UICollectionViewCell, Reusable {
 
 extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return appointment == nil ? 0: 1
+        }
+        
+        if section == 2 {
+            return tire == nil ? 0: 1
+        }
+        
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.item {
+        switch indexPath.section {
         case 0:
             let cell: RandevuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.appointment = appointment
@@ -99,7 +111,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var height: CGFloat = 0
-        switch indexPath.item {
+        switch indexPath.section {
         case 0:
             height = 116
             
@@ -121,11 +133,15 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         return CGSize(width: collectionView.frame.width - 48, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: 3, height: 32)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         32
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        32
     }
 }
