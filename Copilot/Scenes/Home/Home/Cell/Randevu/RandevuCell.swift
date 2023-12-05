@@ -11,10 +11,9 @@ class RandevuCell: UICollectionViewCell, Reusable {
     
     var appointment: Case? {
         didSet {
-            if let appointment = appointment {
-                randevuLabel.text = appointment.supplierName
-                dateLabel.text = appointment.appointmentDate
-            }
+                randevuLabel.text = appointment?.supplierName ?? "Name"
+                dateLabel.text = appointment?.displayDate
+            
         }
     }
     @IBOutlet weak var titleLabel: UILabel!

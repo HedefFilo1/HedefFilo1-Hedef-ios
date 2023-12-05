@@ -17,8 +17,17 @@ class HomeContentCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: HomeContentCellDelegate?
     
-    var appointment: Case?
-    var tire: Tire?
+    var appointment: Case? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    var tire: Tire? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -76,7 +85,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             let cell: PointsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = delegate
             return cell
-        
+            
         default:
             return UICollectionViewCell()
         }
@@ -92,7 +101,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         var height: CGFloat = 0
         switch indexPath.item {
         case 0:
-           height = 116
+            height = 116
             
         case 1:
             height = 200
@@ -102,10 +111,10 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             
         case 3:
             height = 112
-        
+            
         case 4:
             height = 146
-        
+            
         default:
             break
         }
