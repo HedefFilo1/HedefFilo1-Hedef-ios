@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol FiltersViewControllerDelegate: AnyObject {
+    func didApply(filters: [Filter])
+}
+
 class FiltersViewController: SheetViewController {
     
     var viewModel: FiltersViewModelType! {
@@ -21,6 +25,8 @@ class FiltersViewController: SheetViewController {
         return UIScreen.main.bounds.height - 120 - top
     }
     
+    weak var delegate: FiltersViewControllerDelegate?
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchTextField: CPSearchTextField!
@@ -30,7 +36,6 @@ class FiltersViewController: SheetViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,7 +74,14 @@ class FiltersViewController: SheetViewController {
     }
     
     @IBAction func didTapApply(_ sender: UIButton) {
-        viewModel.dismiss()
+        
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            let filters = self.viewModel.filters.filter({
+                return $0.selected
+            })
+            self.delegate?.didApply(filters: filters)
+        }
     }
     
     func setButtonActivation() {

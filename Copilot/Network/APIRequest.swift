@@ -205,6 +205,9 @@ class APIRequest<T: Decodable> {
             urlRequest.httpBody = httpBody
         }
         urlRequest.timeoutInterval = 30
+#if DEV_DEBUG
+        urlRequest.timeoutInterval = 5
+#endif
         return urlRequest
     }
     

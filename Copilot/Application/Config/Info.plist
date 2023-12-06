@@ -31,5 +31,7 @@
 	</dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow to see Nearby Locations in your current Location.</string>
 </dict>
 </plist>

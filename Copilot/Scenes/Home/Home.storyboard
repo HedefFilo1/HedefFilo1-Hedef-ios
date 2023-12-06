@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -241,10 +240,10 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="dVP-LM-T0e"/>
                                         </constraints>
                                     </stackView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-NP-M7w">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-lR-SUC">
                                         <rect key="frame" x="0.0" y="112" width="393" height="605"/>
-                                        <standardMapConfiguration key="preferredConfiguration"/>
-                                    </mapView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EL3-Uo-s1n">
                                         <rect key="frame" x="227" y="64" width="112" height="32"/>
                                         <subviews>
@@ -313,8 +312,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="CRV-hL-69d" firstAttribute="centerX" secondItem="9DB-0U-wtY" secondAttribute="centerX" id="5oa-5n-g7I"/>
-                                    <constraint firstItem="hMd-NP-M7w" firstAttribute="leading" secondItem="rFL-cv-ljS" secondAttribute="leading" id="Bze-Ka-c6B"/>
-                                    <constraint firstAttribute="bottom" secondItem="hMd-NP-M7w" secondAttribute="bottom" id="DPu-b0-eGY"/>
+                                    <constraint firstItem="Ehw-lR-SUC" firstAttribute="leading" secondItem="rFL-cv-ljS" secondAttribute="leading" id="Bo4-0M-mGa"/>
                                     <constraint firstItem="fk0-qN-BH7" firstAttribute="bottom" secondItem="sMR-V4-pYe" secondAttribute="bottom" id="Dh4-WI-xua"/>
                                     <constraint firstItem="9Nd-JH-A1s" firstAttribute="top" secondItem="9DB-0U-wtY" secondAttribute="bottom" constant="16" id="GsI-vx-9Ih"/>
                                     <constraint firstItem="9DB-0U-wtY" firstAttribute="top" secondItem="rFL-cv-ljS" secondAttribute="top" constant="24" id="GwC-TP-90u"/>
@@ -322,15 +320,16 @@
                                     <constraint firstItem="fk0-qN-BH7" firstAttribute="trailing" secondItem="sMR-V4-pYe" secondAttribute="trailing" id="P0p-cg-TSN"/>
                                     <constraint firstAttribute="trailing" secondItem="EL3-Uo-s1n" secondAttribute="trailing" priority="700" constant="54" id="RbJ-Yj-5Fc"/>
                                     <constraint firstAttribute="trailing" secondItem="sMR-V4-pYe" secondAttribute="trailing" constant="38" id="SLs-9G-EYB"/>
-                                    <constraint firstAttribute="trailing" secondItem="hMd-NP-M7w" secondAttribute="trailing" id="YXU-j3-4Bn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ehw-lR-SUC" secondAttribute="trailing" id="WNj-v7-7qb"/>
+                                    <constraint firstItem="Ehw-lR-SUC" firstAttribute="top" secondItem="9Nd-JH-A1s" secondAttribute="bottom" constant="16" id="aH6-3G-LSA"/>
                                     <constraint firstItem="EL3-Uo-s1n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Nd-JH-A1s" secondAttribute="trailing" constant="8" id="bQW-3m-rqp"/>
                                     <constraint firstItem="CRV-hL-69d" firstAttribute="centerY" secondItem="9DB-0U-wtY" secondAttribute="centerY" id="bcL-Xq-mEM"/>
                                     <constraint firstItem="fk0-qN-BH7" firstAttribute="leading" secondItem="sMR-V4-pYe" secondAttribute="leading" id="cQf-QK-ese"/>
-                                    <constraint firstItem="hMd-NP-M7w" firstAttribute="top" secondItem="9Nd-JH-A1s" secondAttribute="bottom" constant="16" id="ijo-jK-NGF"/>
                                     <constraint firstItem="EL3-Uo-s1n" firstAttribute="leading" secondItem="9Nd-JH-A1s" secondAttribute="trailing" priority="700" constant="30" id="iv6-hi-jI2"/>
                                     <constraint firstItem="aYf-2B-AVU" firstAttribute="top" secondItem="rFL-cv-ljS" secondAttribute="top" constant="24" id="jYo-EW-RQ9"/>
                                     <constraint firstItem="EL3-Uo-s1n" firstAttribute="centerY" secondItem="9Nd-JH-A1s" secondAttribute="centerY" id="m3h-0B-nIk"/>
                                     <constraint firstItem="aYf-2B-AVU" firstAttribute="centerX" secondItem="rFL-cv-ljS" secondAttribute="centerX" id="nuI-8T-hgr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ehw-lR-SUC" secondAttribute="bottom" id="xKq-m3-dIG"/>
                                     <constraint firstItem="fk0-qN-BH7" firstAttribute="top" secondItem="sMR-V4-pYe" secondAttribute="top" id="yqb-l2-SO4"/>
                                     <constraint firstItem="9DB-0U-wtY" firstAttribute="leading" secondItem="rFL-cv-ljS" secondAttribute="leading" constant="24" id="zNF-Df-hUJ"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EL3-Uo-s1n" secondAttribute="trailing" constant="8" id="zhC-rR-Kfh"/>
@@ -352,7 +351,7 @@
                         <outlet property="contentView" destination="rFL-cv-ljS" id="F8u-9t-Ngf"/>
                         <outlet property="filterButtonView" destination="EL3-Uo-s1n" id="2fV-ov-wCh"/>
                         <outlet property="filterLabel" destination="Fcy-XJ-vyD" id="Vqd-p5-OAR"/>
-                        <outlet property="mapView" destination="hMd-NP-M7w" id="dg5-og-LEE"/>
+                        <outlet property="mapContainerView" destination="Ehw-lR-SUC" id="TNl-Mk-q3j"/>
                         <outlet property="titleLabel" destination="aYf-2B-AVU" id="k0W-Xo-fe6"/>
                         <outletCollection property="iconViews" destination="vDX-PE-sjR" collectionClass="NSMutableArray" id="PpA-XH-T4S"/>
                         <outletCollection property="iconViews" destination="eRd-od-IR3" collectionClass="NSMutableArray" id="hJZ-da-Th2"/>

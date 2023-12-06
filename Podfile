@@ -10,4 +10,5 @@ target 'Copilot' do
   pod 'IQKeyboardManagerSwift'
   pod 'netfox'
   pod 'Alamofire'
+  pod 'GoogleMaps', '8.3.1'
 end

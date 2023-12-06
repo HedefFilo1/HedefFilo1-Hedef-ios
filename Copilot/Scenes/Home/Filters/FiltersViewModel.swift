@@ -8,12 +8,14 @@
 import Foundation
 
 class Filter {
+    let id: Int
     let tilte: String
     let subFilters: [Filter]?
     var selected = false
     var showSubFilters = false
     
-    init(tilte: String, subFilters: [Filter]?) {
+    init(id: Int, tilte: String, subFilters: [Filter]?) {
+        self.id = id
         self.tilte = tilte
         self.subFilters = subFilters
     }
@@ -40,19 +42,19 @@ class FiltersViewModel: FiltersViewModelType {
     weak var delegate: FiltersViewModelDelegate?
     
     var filters: [Filter] = [
-        Filter(tilte: "İspark", subFilters: nil),
-        Filter(tilte: "Özel Otoparklar", subFilters: nil),
-        Filter(tilte: "Benzin İstasyonu", subFilters: [
-            Filter(tilte: "Yemek Kartı Geçenler", subFilters: nil),
-            Filter(tilte: "Starbucks Bulunanlar", subFilters: nil),
-            Filter(tilte: "Kahve Dünyası Bulunanlar", subFilters: nil)
-        ]),
-        Filter(tilte: "Karakol", subFilters: nil),
-        Filter(tilte: "Hastane", subFilters: nil),
-        Filter(tilte: "İtfaiye", subFilters: nil),
-        Filter(tilte: "Trafik Bilgisi", subFilters: nil),
-        Filter(tilte: "Bankalar", subFilters: nil),
-        Filter(tilte: "Gişeler", subFilters: nil)
+//        Filter(tilte: "İspark", subFilters: nil),
+//        Filter(tilte: "Özel Otoparklar", subFilters: nil),
+//        Filter(tilte: "Benzin İstasyonu", subFilters: [
+//            Filter(tilte: "Yemek Kartı Geçenler", subFilters: nil),
+//            Filter(tilte: "Starbucks Bulunanlar", subFilters: nil),
+//            Filter(tilte: "Kahve Dünyası Bulunanlar", subFilters: nil)
+//        ]),
+//        Filter(tilte: "Karakol", subFilters: nil),
+//        Filter(tilte: "Hastane", subFilters: nil),
+//        Filter(tilte: "İtfaiye", subFilters: nil),
+//        Filter(tilte: "Trafik Bilgisi", subFilters: nil),
+//        Filter(tilte: "Bankalar", subFilters: nil),
+        Filter(id: 111, tilte: "Servisler", subFilters: nil)
     ]
     
     func dismiss() {

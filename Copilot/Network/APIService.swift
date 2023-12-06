@@ -172,4 +172,13 @@ class APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getSupplier(mark: String, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
+        let route = "copilot/supplier?mark=\(mark)"
+        let req = APIRequest<[Supplier]>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Suppiler"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
 }

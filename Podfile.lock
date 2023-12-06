@@ -1,11 +1,17 @@
 PODS:
   - Alamofire (5.6.4)
+  - GoogleMaps (8.3.1):
+    - GoogleMaps/Maps (= 8.3.1)
+  - GoogleMaps/Base (8.3.1)
+  - GoogleMaps/Maps (8.3.1):
+    - GoogleMaps/Base
   - IQKeyboardManagerSwift (6.5.11)
   - netfox (1.21.0)
   - SwiftLint (0.52.2)
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMaps (= 8.3.1)
   - IQKeyboardManagerSwift
   - netfox
   - SwiftLint
@@ -13,16 +19,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
     - IQKeyboardManagerSwift
     - netfox
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  GoogleMaps: b47b67bd63d708477d6ff457da2d695c0d8ceb5f
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: 0a707e0a73e6cd4ca42e13e5b5bd422b3c25d7b9
+PODFILE CHECKSUM: 774cfce5f695a4776cd2930337ab44cf617550ce
 
 COCOAPODS: 1.11.3

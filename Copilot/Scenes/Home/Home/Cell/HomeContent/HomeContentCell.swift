@@ -104,7 +104,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 1 {
+        if indexPath.section == 1 {
             delegate?.didSelectNearMe()
         }
     }

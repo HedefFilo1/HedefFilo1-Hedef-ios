@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import MapKit
+import GoogleMaps
 
 class NearMeViewController: UIViewController {
     
@@ -20,20 +20,18 @@ class NearMeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet var iconViews: [UIView]!
     @IBOutlet weak var filterButtonView: UIView!
     @IBOutlet weak var filterLabel: UILabel!
     
+    private let locationManager = CLLocationManager()
+    private lazy var mapView = GMSMapView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        GMSServices.provideAPIKey(CodeStrings.GMSServiceAPIKey)
         setupUI()
-        
-#if DEV_DEBUG
-        // just for test
-//        viewModel.goToMain()
-#endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +42,7 @@ class NearMeViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-        setMap()
+        setupMap()
     }
     
     func applyStyle() {
@@ -54,8 +52,8 @@ class NearMeViewController: UIViewController {
         backImageView.image = backImageView.image?.withRenderingMode(.alwaysTemplate)
         backImageView.tintColor = .lightBlack
         titleLabel.apply(.blackS20B700)
-        mapView.layer.cornerRadius = 40
-        mapView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        mapContainerView.layer.cornerRadius = 40
+        mapContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         for view in iconViews {
             view.layer.cornerRadius = 10
@@ -72,9 +70,34 @@ class NearMeViewController: UIViewController {
         filterLabel.text = Strings.filters
     }
     
-    func setMap() {
-        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.95123211862574, longitude: 29.291049396735445), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-         mapView.setRegion(region, animated: true)
+    func setupMap() {
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        mapView.frame = view.frame
+        if let current = locationManager.location?.coordinate {
+            mapView.camera = GMSCameraPosition.camera(withLatitude: current.latitude, longitude: current.longitude, zoom: 11)
+        }
+        mapContainerView.addSubview(mapView)
+        mapContainerView.clipsToBounds = true
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
+    }
+    
+    func showSuppliersOnMap() {
+        guard let suppliers = viewModel.suppliers else { return }
+        for data in suppliers {
+            guard let lat = data.latitude, let lon = data.longitude else { return }
+            let location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            let marker = GMSMarker()
+            marker.position = location
+            marker.snippet = data.name
+            marker.map = mapView
+            marker.appearAnimation = .fadeIn
+        }
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {
@@ -87,6 +110,14 @@ class NearMeViewController: UIViewController {
     
     @IBAction func didTapLocation(_ sender: UIButton) {
         
+    }
+}
+
+extension NearMeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.first != nil {
+            locationManager.stopUpdatingLocation()
+        }
     }
 }
 

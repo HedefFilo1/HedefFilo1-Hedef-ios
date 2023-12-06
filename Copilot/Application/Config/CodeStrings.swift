@@ -15,6 +15,8 @@ struct CodeStrings {
     static let phonePattern = "#### ### ## ##"
     static let error = "Error"
     static let phoneMask = "0555 555 55 55"
+    
+    static let GMSServiceAPIKey = "AIzaSyD4qUo185FsJScEIoM34rO9juJPSvqZ2-E"
 }
 
 // MAKR: Network

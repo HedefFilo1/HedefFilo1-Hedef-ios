@@ -135,6 +135,7 @@
 		89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */; };
 		89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D612AF010E500CEFD0E /* FilteresViewController.swift */; };
 		89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D642AF0110F00CEFD0E /* FilterCell.swift */; };
+		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5682AE18CD4006D85E4 /* APIService.swift */; };
 		899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5692AE18CD5006D85E4 /* APIRequest.swift */; };
 		899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF56A2AE18CD5006D85E4 /* APIClient.swift */; };
@@ -361,6 +362,7 @@
 		89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 		89941D612AF010E500CEFD0E /* FilteresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteresViewController.swift; sourceTree = "<group>"; };
 		89941D642AF0110F00CEFD0E /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899CF5682AE18CD4006D85E4 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		899CF5692AE18CD5006D85E4 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		899CF56A2AE18CD5006D85E4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -1070,6 +1072,7 @@
 				894CEC962B0B7FFA00D369E9 /* GetVehicle.swift */,
 				895ADBC02B177E08004C9A4C /* Case.swift */,
 				895ADBC22B18C055004C9A4C /* Tire.swift */,
+				899BF5B32B2087150058123C /* Supplier.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1495,6 +1498,7 @@
 				8989DD992AC493BF0035CD99 /* Resources */,
 				766A77620FFA6C9D82F1FF96 /* [CP] Embed Pods Frameworks */,
 				89F6ADE82AC4ABB000994F18 /* SwiftLint Run Script */,
+				16BC4544DF2AA93E4F5E22F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1606,6 +1610,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16BC4544DF2AA93E4F5E22F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copilot/Pods-Copilot-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copilot/Pods-Copilot-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copilot/Pods-Copilot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		766A77620FFA6C9D82F1FF96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1670,6 +1691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,

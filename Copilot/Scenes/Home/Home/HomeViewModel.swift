@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewModelCoordinatorDelegate: AnyObject {
-    func goToNearMe()
+    func goToNearMe(mark: String)
     func goToStandings()
     func presentKMUsed(delegate: KMUsedViewControllerDelegate)
     func goToSearch()
@@ -42,6 +42,7 @@ class HomeViewModel: HomeViewModelType {
     var vehicle: GetVehicle?
     var appointment: Case?
     var tire: Tire?
+    var mark: String = ""
     
     func getVehicle(shoudGetCase: Bool) {
         Loading.shared.show()
@@ -51,6 +52,7 @@ class HomeViewModel: HomeViewModelType {
             
             if let model = model {
                 self.vehicle = model
+                self.mark = model.make
                 self.delegate?.setVehicle()
             } else
             
@@ -102,7 +104,7 @@ class HomeViewModel: HomeViewModelType {
     }
     
     func goToNearMe() {
-        coordinatorDelegate?.goToNearMe()
+        coordinatorDelegate?.goToNearMe(mark: mark)
     }
     
     func goToStandings() {

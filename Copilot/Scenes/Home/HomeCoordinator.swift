@@ -44,11 +44,12 @@ class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
     
-    func goToNearMe() {
+    func goToNearMe(mark: String) {
         let viewController: NearMeViewController = storyboard.instantiateViewController()
         let viewModel = NearMeViewModel()
         viewController.viewModel = viewModel
         viewModel.coordinatorDelegate = self
+        viewModel.mark = mark
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -85,13 +86,14 @@ extension HomeCoordinator: NearMeViewModelCoordinatorDelegate, SearchViewModelCo
         navigationController.popViewController(animated: true)
     }
     
-    func presentFilters() {
+    func presentFilters(delegate: FiltersViewControllerDelegate) {
         let viewController: FiltersViewController = storyboard.instantiateViewController()
         let viewModel = FiltersViewModel()
         viewController.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
         filtersViewController = viewController
+        viewController.delegate = delegate
         navigationController.present(viewController, animated: true)
     }
 }
