@@ -1043,20 +1043,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your Password Has Been Updated</string>
         </dict>
         
-        <key></key>
+        <key>map</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Map</string>
             <key>en</key>
-            <string></string>
+            <string>Map</string>
         </dict>
         
-        <key></key>
+        <key>googleMap</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Google Map</string>
             <key>en</key>
-            <string></string>
+            <string>Google Map</string>
         </dict>
         
         <key></key>

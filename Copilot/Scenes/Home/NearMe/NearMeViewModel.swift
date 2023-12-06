@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 protocol NearMeViewModelCoordinatorDelegate: AnyObject {
     func getBack()
@@ -21,7 +22,10 @@ protocol NearMeViewModelType: AnyObject {
     var delegate: NearMeViewModelDelegate? { get set }
     var mark: String { get set }
     var suppliers: [Supplier]? { get set }
+    var userLocation: CLLocation { get set }
     func getSuppliers()
+    func openGoogleMap(latitude: Double, longitude: Double)
+    func openAppleMap(latitude: Double, longitude: Double)
     func getBack()
     func presentFilters()
 }
@@ -33,6 +37,7 @@ class NearMeViewModel: NearMeViewModelType {
     weak var delegate: NearMeViewModelDelegate?
     var mark: String = ""
     var suppliers: [Supplier]?
+    var userLocation: CLLocation = CLLocation()
     
     func getSuppliers() {
         Loading.shared.show()
@@ -52,6 +57,18 @@ class NearMeViewModel: NearMeViewModelType {
                                          message: error.message)
             }
         }
+    }
+    
+    func openGoogleMap(latitude: Double, longitude: Double) {
+        if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
+            UIApplication.shared.open(urlDestination)
+        }
+    }
+
+    func openAppleMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
     
     func getBack() {

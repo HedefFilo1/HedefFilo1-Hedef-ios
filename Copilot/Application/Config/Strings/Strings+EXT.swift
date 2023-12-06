@@ -204,4 +204,12 @@ extension Strings {
     static var passwordUpdated: String {
         return localized(string: "passwordUpdated")
     }
+    
+    static var map: String {
+        return localized(string: "map")
+    }
+    
+    static var googleMap: String {
+        return localized(string: "googleMap")
+    }
 }

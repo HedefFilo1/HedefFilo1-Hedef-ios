@@ -32,6 +32,10 @@ class NearMeViewController: UIViewController {
         super.viewDidLoad()
         GMSServices.provideAPIKey(CodeStrings.GMSServiceAPIKey)
         setupUI()
+        
+#if DEV_DEBUG
+        viewModel.getSuppliers()
+#endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,8 +82,9 @@ class NearMeViewController: UIViewController {
         locationManager.startUpdatingLocation()
         
         mapView.frame = view.frame
+        mapView.delegate = self
         if let current = locationManager.location?.coordinate {
-            mapView.camera = GMSCameraPosition.camera(withLatitude: current.latitude, longitude: current.longitude, zoom: 11)
+            mapView.camera = GMSCameraPosition.camera(withLatitude: current.latitude, longitude: current.longitude, zoom: 14)
         }
         mapContainerView.addSubview(mapView)
         mapContainerView.clipsToBounds = true
@@ -90,13 +95,15 @@ class NearMeViewController: UIViewController {
     func showSuppliersOnMap() {
         guard let suppliers = viewModel.suppliers else { return }
         for data in suppliers {
-            guard let lat = data.latitude, let lon = data.longitude else { return }
-            let location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            let marker = GMSMarker()
-            marker.position = location
-            marker.snippet = data.name
-            marker.map = mapView
-            marker.appearAnimation = .fadeIn
+            if let lat = data.latitude, let lon = data.longitude {
+                let location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                let marker = GMSMarker()
+                marker.position = location
+                marker.snippet = data.name
+                marker.title = data.name
+                marker.map = mapView
+                marker.appearAnimation = .fadeIn
+            }
         }
     }
     
@@ -109,14 +116,53 @@ class NearMeViewController: UIViewController {
     }
     
     @IBAction func didTapLocation(_ sender: UIButton) {
-        
+        showUserLocation()
     }
 }
 
 extension NearMeViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if locations.first != nil {
-            locationManager.stopUpdatingLocation()
+        guard let location = locations.first else {
+            return
+        }
+        viewModel.userLocation = location
+        showUserLocation()
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func showUserLocation() {
+        let location = viewModel.userLocation
+        let camera = GMSCameraPosition(target: location.coordinate, zoom: 14)
+        mapView.animate(to: camera)
+    }
+}
+
+extension NearMeViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        showActionSheet(lat: marker.position.latitude, lon: marker.position.longitude)
+        return false
+    }
+    
+    func showActionSheet(lat: Double, lon: Double) {
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let firstAction: UIAlertAction = UIAlertAction(title: Strings.map, style: .default) { [weak self] _ in
+            self?.viewModel.openAppleMap(latitude: lat, longitude: lon)
+        }
+        
+        let secondAction: UIAlertAction = UIAlertAction(title: Strings.googleMap, style: .default) { [weak self] _ in
+            self?.viewModel.openGoogleMap(latitude: lat, longitude: lon)
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel)
+        
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        
+        present(actionSheetController, animated: true) {
+            print("option menu presented")
         }
     }
 }
