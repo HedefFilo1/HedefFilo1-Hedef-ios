@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetVehicle: Decodable {
+struct Vehicle: Decodable {
     let plateNumber: String?
     let make: String
     let model: String

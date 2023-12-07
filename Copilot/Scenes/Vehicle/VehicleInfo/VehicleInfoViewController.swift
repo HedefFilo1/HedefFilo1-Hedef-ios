@@ -77,6 +77,7 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
         switch indexPath.section {
         case 0:
             let cell: VehicleCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.vehicle = App.vehicle
             return cell
             
         case 1:

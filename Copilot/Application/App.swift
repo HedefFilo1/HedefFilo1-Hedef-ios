@@ -13,6 +13,8 @@ class App {
     static weak var appCoordinator: AppCoordinator?
     static var deepLinkURL: URL?
     static var token: String?
+    static var vehicle: Vehicle?
+    
     static var appLoaded = false {
         didSet {
             if appLoaded, let url = deepLinkURL {

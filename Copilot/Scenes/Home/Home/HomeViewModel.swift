@@ -24,7 +24,7 @@ protocol HomeViewModelViewDelegate: AnyObject {
 
 protocol HomeViewModelType: AnyObject {
     var delegate: HomeViewModelViewDelegate? { get set }
-    var vehicle: GetVehicle? { get set}
+    var vehicle: Vehicle? { get set}
     var appointment: Case? { get set}
     var tire: Tire? { get set }
     func getVehicle(shoudGetCase: Bool)
@@ -39,7 +39,7 @@ class HomeViewModel: HomeViewModelType {
     // MARK: - Delegates
     var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
     weak var delegate: HomeViewModelViewDelegate?
-    var vehicle: GetVehicle?
+    var vehicle: Vehicle?
     var appointment: Case?
     var tire: Tire?
     var mark: String = ""
@@ -52,6 +52,7 @@ class HomeViewModel: HomeViewModelType {
             
             if let model = model {
                 self.vehicle = model
+                App.vehicle = model
                 self.mark = model.make
                 self.delegate?.setVehicle()
             } else
@@ -87,7 +88,7 @@ class HomeViewModel: HomeViewModelType {
     
     func getTire() {
         Loading.shared.show()
-        APIService.getTire { [weak self] model, error in
+        APIService.getTire { [weak self] model, _ in
             Loading.shared.hide()
             guard let self = self else { return }
             

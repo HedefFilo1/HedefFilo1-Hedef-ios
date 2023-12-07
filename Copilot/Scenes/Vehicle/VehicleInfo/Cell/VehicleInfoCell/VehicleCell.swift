@@ -9,9 +9,12 @@ import UIKit
 
 class VehicleCell: UICollectionViewCell, Reusable {
     
-    var vehicle: GetVehicle? {
+    var vehicle: Vehicle? {
         didSet {
             modelLabel.text = vehicle?.model ?? "model"
+            if let plate = vehicle?.plateNumber {
+                modelLabel.text = plate
+            }
             nameLabel.text = vehicle?.make ?? "Brand"
             let rent = vehicle?.leaseDuration ?? "0"
             rentValueLabel.text = rent + " " + Strings.months
@@ -19,6 +22,10 @@ class VehicleCell: UICollectionViewCell, Reusable {
             limitValueLabel.text = distance + " " + Strings.ckm
             let last = vehicle?.lastKnownDistance ?? "0"
             usedValueLabel.text = last + " " + Strings.ckm
+            
+            if let name = Persistence.avatarName {
+                imageView.image = UIImage(named: name)
+            }
         }
     }
     

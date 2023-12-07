@@ -15,7 +15,7 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     
     weak var delegate: VehicleInfoCellDelegate?
     
-    var vehicle: GetVehicle? {
+    var vehicle: Vehicle? {
         didSet {
             
             modelLabel.text = vehicle?.model ?? "model"
