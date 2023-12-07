@@ -17,6 +17,8 @@ struct CodeStrings {
     static let phoneMask = "0555 555 55 55"
     
     static let GMSServiceAPIKey = "AIzaSyD4qUo185FsJScEIoM34rO9juJPSvqZ2-E"
+//    static let googlePlacesAPIKey = "AIzaSyByiNsyzjZ0wpUUpfc5e1Yer7TcRM8j190"
+    static let googlePlacesAPIKey = "AIzaSyBfH6ZJs4Efbri9v4MxhbTBX6W_RAtDsWY"
 }
 
 // MAKR: Network

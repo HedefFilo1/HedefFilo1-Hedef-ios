@@ -17,6 +17,7 @@ protocol HGSDetailViewModelDelegate: AnyObject {
 protocol HGSDetailViewModelType: AnyObject {
     var coordinatorDelegate: HGSDetailViewModelCoordinatorDelegate? { get set }
     var delegate: HGSDetailViewModelDelegate? { get set }
+    var transition: Transition? { get set }
     func getBack()
 }
 
@@ -24,6 +25,7 @@ class HGSDetailViewModel: HGSDetailViewModelType {
     
     weak var coordinatorDelegate: HGSDetailViewModelCoordinatorDelegate?
     weak var delegate: HGSDetailViewModelDelegate?
+    var transition: Transition?
     
     func getBack() {
         coordinatorDelegate?.getBack()

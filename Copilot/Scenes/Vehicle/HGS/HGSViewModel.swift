@@ -7,25 +7,47 @@
 
 import Foundation
 protocol HGSViewModelCoordinatorDelegate: AnyObject {
-    func goToHGSDetail()
+    func goToHGSDetail(transition: Transition)
 }
 
 protocol HGSViewModelDelegate: AnyObject {
-    
+    func showError(title: String, message: String)
+    func reloadData()
 }
 
 protocol HGSViewModelType: AnyObject {
     var coordinatorDelegate: HGSViewModelCoordinatorDelegate? { get set }
     var delegate: HGSViewModelDelegate? { get set }
-    func goToHGSDetail()
+    var transitons: [Transition]? { get set }
+    func getTransitions()
+    func goToHGSDetail(transition: Transition)
 }
 
 class HGSViewModel: HGSViewModelType {
     
     var coordinatorDelegate: HGSViewModelCoordinatorDelegate?
     weak var delegate: HGSViewModelDelegate?
+    var transitons: [Transition]?
     
-    func goToHGSDetail() {
-        coordinatorDelegate?.goToHGSDetail()
+    func goToHGSDetail(transition: Transition) {
+        coordinatorDelegate?.goToHGSDetail(transition: transition)
+    }
+    
+    func getTransitions() {
+        Loading.shared.show()
+        APIService.getTransitions { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.transitons = model
+                self.delegate?.reloadData()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
     }
 }

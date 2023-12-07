@@ -88,8 +88,8 @@ class APIRequest<T: Decodable> {
     
     var identifier: String?
     
-    let baseURL: String
-    let route: String
+    var baseURL: String
+    var route: String
     var hasToken = false
     
     var url: String {

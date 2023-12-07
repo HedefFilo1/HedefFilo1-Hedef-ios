@@ -8,10 +8,21 @@
 import UIKit
 
 protocol HGSCellDelegate: AnyObject {
-    func didTapDetail()
+    func didTapDetail(transition: Transition)
 }
 
 class HGSCell: UICollectionViewCell, Reusable {
+    
+    var item: Transition? {
+        didSet {
+            if let item = item {
+                setEntranceLabel(text: item.entryPoint ?? "")
+                setExitLabel(text: item.exitPoint)
+                dateLabel.text = item.exitDisplayDate
+                amountLabel.text = item.displayToll
+            }
+        }
+    }
     
     weak var delegate: HGSCellDelegate?
     @IBOutlet weak var enteranceLabel: UILabel!
@@ -26,8 +37,8 @@ class HGSCell: UICollectionViewCell, Reusable {
     }
     private func setupUI() {
         applyStyles()
-        setEntranceLabel(text: "İstanbul")
-        setExitLabel(text: "İzmit")
+        setEntranceLabel(text: " İstanbul")
+        setExitLabel(text: " İzmit")
     }
     
     private func applyStyles() {
@@ -40,18 +51,20 @@ class HGSCell: UICollectionViewCell, Reusable {
     }
     
     func setEntranceLabel(text: String) {
-        let entrance = [AttributedText(text: Strings.entrance, type: .blackS16R400),
+        let entrance = [AttributedText(text: "\(Strings.entrance): ", type: .blackS16R400),
                         AttributedText(text: text, type: .blackS16B700)]
         enteranceLabel.attributedText = AttributedText.createString(texts: entrance)
     }
     
     func setExitLabel(text: String) {
-        let exit = [AttributedText(text: Strings.exit, type: .blackS16R400),
+        let exit = [AttributedText(text: "\(Strings.exit): ", type: .blackS16R400),
                         AttributedText(text: text, type: .blackS16B700)]
         exitLabel.attributedText = AttributedText.createString(texts: exit)
     }
     
     @IBAction func didTapDetail() {
-        delegate?.didTapDetail()
+        if let item = item {
+            delegate?.didTapDetail(transition: item)
+        }
     }
 }

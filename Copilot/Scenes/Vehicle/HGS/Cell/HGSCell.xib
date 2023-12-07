@@ -21,14 +21,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-b8-jp5">
                         <rect key="frame" x="16" y="16" width="332" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş: İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPg-9t-aoP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Giriş: İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPg-9t-aoP">
                                 <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış: İzmit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-Fx-JFY">
-                                <rect key="frame" x="119.33333333333334" y="0.0" width="82.333333333333343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış: İzmit İzmit İzmit İzmit İzmit İzmit İzmit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-Fx-JFY">
+                                <rect key="frame" x="119.33333333333336" y="0.0" width="212.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,6 +94,7 @@
                             <constraint firstItem="PLH-2e-X38" firstAttribute="leading" secondItem="Kam-b8-jp5" secondAttribute="leading" id="myg-Pe-AAp"/>
                             <constraint firstItem="MMp-du-H2J" firstAttribute="centerY" secondItem="djb-tc-edJ" secondAttribute="centerY" id="mz5-DO-cWb"/>
                             <constraint firstItem="djb-tc-edJ" firstAttribute="top" secondItem="PLH-2e-X38" secondAttribute="bottom" constant="8" id="ngs-Wt-3U9"/>
+                            <constraint firstAttribute="trailing" secondItem="BNn-Fx-JFY" secondAttribute="trailing" id="r71-Fy-ff0"/>
                             <constraint firstItem="djb-tc-edJ" firstAttribute="leading" secondItem="Kam-b8-jp5" secondAttribute="leading" id="uaz-jZ-7te"/>
                             <constraint firstItem="BNn-Fx-JFY" firstAttribute="leading" secondItem="DPg-9t-aoP" secondAttribute="trailing" constant="16" id="yd3-A3-cR3"/>
                         </constraints>

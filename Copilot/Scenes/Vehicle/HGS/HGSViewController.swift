@@ -29,6 +29,7 @@ class HGSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getTransitions()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,11 +66,12 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return viewModel.transitons?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HGSCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.item = viewModel.transitons?[indexPath.item]
         cell.delegate = self
         return cell
     }
@@ -91,11 +93,13 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
 }
 
 extension HGSViewController: HGSCellDelegate {
-    func didTapDetail() {
-        viewModel.goToHGSDetail()
+    func didTapDetail(transition: Transition) {
+        viewModel.goToHGSDetail(transition: transition)
     }
 }
 
 extension HGSViewController: HGSViewModelDelegate {
-    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }

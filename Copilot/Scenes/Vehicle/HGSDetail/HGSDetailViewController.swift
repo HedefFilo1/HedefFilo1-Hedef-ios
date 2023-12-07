@@ -24,6 +24,7 @@ class HGSDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setTransition()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +59,21 @@ class HGSDetailViewController: UIViewController {
     
     @IBAction func didTapDowndload(_ sender: UIButton) {
 
+    }
+    
+    func setTransition() {
+        if let item = viewModel.transition {
+            valueLabels[0].text = item.entryPoint
+            valueLabels[1].text = item.exitPoint
+            valueLabels[2].text = item.exitJustDisplayDate
+            valueLabels[3].text = item.exitHourDisplayDate
+            
+            valueLabels[5].text = item.entryJustDisplayDate
+            valueLabels[6].text = item.entryHourDisplayDate
+            valueLabels[7].text = item.exitJustDisplayDate
+            valueLabels[8].text = item.exitHourDisplayDate
+            valueLabels[9].text = item.displayToll
+        }
     }
 }
 

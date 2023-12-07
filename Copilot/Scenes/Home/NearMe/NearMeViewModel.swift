@@ -24,6 +24,7 @@ protocol NearMeViewModelType: AnyObject {
     var suppliers: [Supplier]? { get set }
     var userLocation: CLLocation { get set }
     func getSuppliers()
+    func getPlaces()
     func openGoogleMap(latitude: Double, longitude: Double)
     func openAppleMap(latitude: Double, longitude: Double)
     func getBack()
@@ -59,12 +60,33 @@ class NearMeViewModel: NearMeViewModelType {
         }
     }
     
+    func getPlaces() {
+//        let searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+        let searchedTypes = ["bakery"]
+        Loading.shared.show()
+        APIService.getPlaces(lat: userLocation.coordinate.latitude,
+                             lon: userLocation.coordinate.latitude,
+                             types: searchedTypes) { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                print(model)
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: "can't load google",
+                                         message: error.message)
+            }
+        }
+    }
+    
     func openGoogleMap(latitude: Double, longitude: Double) {
         if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
             UIApplication.shared.open(urlDestination)
         }
     }
-
+    
     func openAppleMap(latitude: Double, longitude: Double) {
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))

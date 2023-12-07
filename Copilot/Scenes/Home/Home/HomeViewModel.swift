@@ -94,12 +94,12 @@ class HomeViewModel: HomeViewModelType {
             if let model = model, model.count > 0 {
                 self.tire = model[0]
                 self.delegate?.setTire()
-            } else
-            
-            if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
             }
+            
+//            else if let error = error {
+//                self.delegate?.showError(title: Strings.errorTitle,
+//                                         message: error.message)
+//            }
         }
     }
     

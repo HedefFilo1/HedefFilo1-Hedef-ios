@@ -34,7 +34,8 @@ class NearMeViewController: UIViewController {
         setupUI()
         
 #if DEV_DEBUG
-        viewModel.getSuppliers()
+//        viewModel.getSuppliers()
+        
 #endif
     }
     
@@ -129,6 +130,7 @@ extension NearMeViewController: CLLocationManagerDelegate {
         viewModel.userLocation = location
         showUserLocation()
         locationManager.stopUpdatingLocation()
+//        viewModel.getPlaces()
     }
     
     func showUserLocation() {
