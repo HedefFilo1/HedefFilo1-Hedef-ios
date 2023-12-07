@@ -5,14 +5,11 @@
 //
 
 import Foundation
-// import SDWebImage
-//
-// extension UIImageView {
-//    
-//    func loadImageFrom(url: String?) {
-//        guard let url = url else { return}
-////        self.image = nil
-//        self.sd_setImage(with: URL(string: url))
-//    }
-//    
-// }
+import SDWebImage
+
+extension UIImageView {
+    func loadImageFrom(url: String?) {
+        guard let url = url else { return }
+        sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "AppIcon"))
+    }
+}

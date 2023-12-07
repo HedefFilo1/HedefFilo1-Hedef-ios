@@ -9,6 +9,12 @@ import UIKit
 
 class SponsorshipTabCell: UICollectionViewCell, Reusable {
     
+    var items: [Campaign]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     weak var delegate: CampaignsTabCellDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,7 +39,7 @@ extension SponsorshipTabCell: UICollectionViewDataSource, UICollectionViewDelega
         return 2
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1: 3
+        return section == 0 ? 1: (items?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,6 +51,7 @@ extension SponsorshipTabCell: UICollectionViewDataSource, UICollectionViewDelega
         
         let cell: SponsorshipCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.delegate = delegate
+        cell.item = items?[indexPath.item]
         if indexPath.item == 1 {
             cell.isRightToLeft = true
         }
@@ -52,7 +59,9 @@ extension SponsorshipTabCell: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem()
+        if let item = items?[indexPath.item] {
+            delegate?.didSelectItem(campaign: item)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

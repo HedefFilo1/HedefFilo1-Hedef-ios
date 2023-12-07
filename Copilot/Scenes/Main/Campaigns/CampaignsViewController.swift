@@ -33,6 +33,7 @@ class CampaignsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getCampaign()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -99,15 +100,18 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
         case 0:
             let cell: CampaignsOfferTabCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.items = viewModel.campaigns
             return cell
             
         case 1:
             let cell: NewsTabCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.items = viewModel.news
             return cell
             
         case 2:
             let cell: SponsorshipTabCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.items = viewModel.sponserships
             cell.delegate = self
             return cell
             
@@ -134,11 +138,13 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
 }
 
 extension CampaignsViewController: CampaignsTabCellDelegate {
-    func didSelectItem() {
-        viewModel.goToCampaignDetail()
+    func didSelectItem(campaign: Campaign) {
+        viewModel.goToCampaignDetail(campaign: campaign)
     }
 }
 
 extension CampaignsViewController: CampaignsViewModelDelegate {
-    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }

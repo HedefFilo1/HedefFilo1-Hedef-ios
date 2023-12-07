@@ -433,6 +433,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Kampanyadan Yararlan"/>
+                                <connections>
+                                    <action selector="didTapSelect:" destination="abA-K2-34o" eventType="touchUpInside" id="aGE-zG-0UD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m4k-8y-zco"/>
@@ -461,6 +464,7 @@
                     <connections>
                         <outlet property="backImageView" destination="SwQ-Q8-ms8" id="RvZ-Sg-diE"/>
                         <outlet property="benefitButton" destination="gsi-wA-hdn" id="8H7-Jh-q1G"/>
+                        <outlet property="imageView" destination="nrP-Pz-jh9" id="Ck0-MT-aas"/>
                         <outlet property="nameLabel" destination="Hw5-DJ-4EO" id="uhX-et-bts"/>
                         <outlet property="textLabel" destination="MFV-lA-1T5" id="zaa-iD-JNM"/>
                         <outlet property="titleLabel" destination="Z4U-Gk-o9a" id="E8A-hc-SqZ"/>

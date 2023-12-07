@@ -193,7 +193,25 @@ class APIService {
         req.start()
     }
     
-    static func getPlaces(lat: Double, lon: Double, types:[String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
+    static func getCampaigns(completion: @escaping ([Campaign]?, APIResponseError?) -> Void) {
+        let route = "campaign"
+        let req = APIRequest<[Campaign]>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Campaign"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
+    static func getCampaignDetail(id: Int, completion: @escaping (Success?, APIResponseError?) -> Void) {
+        let route = "campaign/\(id)/select"
+        let req = APIRequest<Success>(route: route, method: .post, hasToken: true)
+        req.identifier = "Get Campaign Detail"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
+    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
         //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
         //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
         //        route += "&types=\(typesString)"

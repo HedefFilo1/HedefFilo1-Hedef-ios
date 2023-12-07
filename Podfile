@@ -11,4 +11,5 @@ target 'Copilot' do
   pod 'netfox'
   pod 'Alamofire'
   pod 'GoogleMaps', '8.3.1'
+  pod 'SDWebImage'
 end

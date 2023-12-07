@@ -7,6 +7,9 @@ PODS:
     - GoogleMaps/Base
   - IQKeyboardManagerSwift (6.5.11)
   - netfox (1.21.0)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
   - SwiftLint (0.52.2)
 
 DEPENDENCIES:
@@ -14,6 +17,7 @@ DEPENDENCIES:
   - GoogleMaps (= 8.3.1)
   - IQKeyboardManagerSwift
   - netfox
+  - SDWebImage
   - SwiftLint
 
 SPEC REPOS:
@@ -22,6 +26,7 @@ SPEC REPOS:
     - GoogleMaps
     - IQKeyboardManagerSwift
     - netfox
+    - SDWebImage
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -29,8 +34,9 @@ SPEC CHECKSUMS:
   GoogleMaps: b47b67bd63d708477d6ff457da2d695c0d8ceb5f
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
 
-PODFILE CHECKSUM: 774cfce5f695a4776cd2930337ab44cf617550ce
+PODFILE CHECKSUM: 306cc52ec6258d6568dde1be8036602f412d8ba1
 
 COCOAPODS: 1.11.3

@@ -109,9 +109,10 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
-    func goToCampaignDetail() {
+    func goToCampaignDetail(campaign: Campaign) {
         let viewController: CampaignDetailViewController = storyboard.instantiateViewController()
         viewController.viewModel = CampaignDetailViewModel()
+        viewController.viewModel.campaign = campaign
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -8,10 +8,16 @@
 import UIKit
 
 protocol CampaignsTabCellDelegate: AnyObject {
-    func didSelectItem()
+    func didSelectItem(campaign: Campaign)
 }
 
 class CampaignsOfferTabCell: UICollectionViewCell, Reusable {
+    
+    var items: [Campaign]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     weak var delegate: CampaignsTabCellDelegate?
     
@@ -37,7 +43,7 @@ extension CampaignsOfferTabCell: UICollectionViewDataSource, UICollectionViewDel
         return 2
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1: 2
+        return section == 0 ? 1: (items?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,6 +55,7 @@ extension CampaignsOfferTabCell: UICollectionViewDataSource, UICollectionViewDel
         
         let cell: CampaignOfferCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.delegate = delegate
+        cell.item = items?[indexPath.item]
         return cell
     }
     
@@ -58,7 +65,7 @@ extension CampaignsOfferTabCell: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: collectionView.frame.width - 48,
-                      height: indexPath.section == 0 ? 84: 296)
+                      height: indexPath.section == 0 ? 84: 256)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

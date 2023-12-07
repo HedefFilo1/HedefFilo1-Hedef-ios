@@ -9,6 +9,14 @@ import UIKit
 
 class SponsorshipCell: UICollectionViewCell, Reusable {
     
+    var item: Campaign? {
+        didSet {
+            imageView.loadImageFrom(url: item?.imageUrlTr)
+            titleLabel.text = item?.titleTr
+            textLabel.text = item?.contentTr
+        }
+    }
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

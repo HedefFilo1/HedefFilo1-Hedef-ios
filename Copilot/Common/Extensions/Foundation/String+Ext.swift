@@ -56,6 +56,19 @@ extension String {
         return string
     }
     
+    func displayDate(format: String = "yyyy-MM-dd'T'HH:mm:ss", convertFormat: String = "dd.MM.yyyy") -> String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = format
+        // 2023-12-06T09:00:00.000Z
+        if let date = formmater.date(from: self) {
+            formmater.dateFormat = convertFormat
+            formmater.locale = Locale(identifier: "tr_TR")
+            return formmater.string(from: date)
+        }
+        return ""
+        
+    }
+    
     var pureText: String {
         let text = self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         return text.components(separatedBy: .whitespaces).joined()

@@ -9,6 +9,14 @@ import UIKit
 
 class CampaignOfferCell: UICollectionViewCell, Reusable {
     
+    var item: Campaign? {
+        didSet {
+            imageView.loadImageFrom(url: item?.imageUrlTr)
+            titleLabel.text = item?.titleTr
+            textLabel.text = item?.contentTr
+            setDateLabel(date: item?.displayExpireDate ?? "")
+        }
+    }
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
@@ -47,6 +55,8 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapContiune() {
-        delegate?.didSelectItem()
+        if let item = item {
+            delegate?.didSelectItem(campaign: item)
+        }
     }
 }

@@ -25,45 +25,45 @@
                                 <rect key="frame" x="16" y="16" width="285" height="299"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum Dolar Sit Amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-Uu-qCA">
-                                        <rect key="frame" x="0.0" y="132" width="285" height="21"/>
+                                        <rect key="frame" x="0.0" y="136" width="285" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockCampaignImage" translatesAutoresizingMaskIntoConstraints="NO" id="7so-Wp-N0H">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="116"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="7so-Wp-N0H" secondAttribute="height" multiplier="295:120" id="7QG-Tj-LTf"/>
+                                            <constraint firstAttribute="height" constant="120" id="OeB-DX-zel"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-VK-Dy7">
-                                        <rect key="frame" x="0.0" y="157" width="285" height="61"/>
+                                        <rect key="frame" x="0.0" y="161" width="285" height="61"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kampanya Geçerlilik Tarihi: 31.12.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-bu-zTU">
-                                        <rect key="frame" x="0.0" y="226" width="285" height="21"/>
+                                        <rect key="frame" x="0.0" y="230" width="285" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Devamını Oku" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-LW-U7b" userLabel="Devamını Oku">
-                                        <rect key="frame" x="0.0" y="255" width="105.33333333333333" height="34"/>
+                                        <rect key="frame" x="0.0" y="265" width="105.33333333333333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRedRight" translatesAutoresizingMaskIntoConstraints="NO" id="mvS-6o-pJp">
-                                        <rect key="frame" x="111.33333333333333" y="266" width="16" height="16"/>
+                                        <rect key="frame" x="111.33333333333333" y="276" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="QQU-gb-fbC"/>
                                             <constraint firstAttribute="width" constant="16" id="uKU-Ka-fat"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-bb-RZ3">
-                                        <rect key="frame" x="0.0" y="255" width="127.33333333333333" height="34"/>
+                                        <rect key="frame" x="0.0" y="265" width="127.33333333333333" height="34"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
                                             <action selector="didTapContiune" destination="gTV-IL-0wX" eventType="touchUpInside" id="scZ-A8-xr4"/>
@@ -72,11 +72,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8t0-LW-U7b" secondAttribute="bottom" id="3uR-w0-esn"/>
                                     <constraint firstItem="7tk-Uu-qCA" firstAttribute="top" secondItem="7so-Wp-N0H" secondAttribute="bottom" constant="16" id="7HV-qN-Qlv"/>
                                     <constraint firstItem="NKg-bb-RZ3" firstAttribute="top" secondItem="8t0-LW-U7b" secondAttribute="top" id="ABg-Mc-HoK"/>
                                     <constraint firstItem="LL2-VK-Dy7" firstAttribute="leading" secondItem="FNP-7Y-m3L" secondAttribute="leading" id="AcF-no-1Xz"/>
                                     <constraint firstItem="7so-Wp-N0H" firstAttribute="leading" secondItem="FNP-7Y-m3L" secondAttribute="leading" id="CDt-Ww-QBH"/>
-                                    <constraint firstItem="8t0-LW-U7b" firstAttribute="top" secondItem="2Ow-bu-zTU" secondAttribute="bottom" constant="8" id="Rru-IL-xo5"/>
+                                    <constraint firstItem="8t0-LW-U7b" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Ow-bu-zTU" secondAttribute="bottom" constant="8" id="Rru-IL-xo5"/>
                                     <constraint firstItem="8t0-LW-U7b" firstAttribute="leading" secondItem="FNP-7Y-m3L" secondAttribute="leading" id="TXp-15-IZw"/>
                                     <constraint firstItem="2Ow-bu-zTU" firstAttribute="top" secondItem="LL2-VK-Dy7" secondAttribute="bottom" constant="8" id="U4W-hj-ScN"/>
                                     <constraint firstAttribute="trailing" secondItem="2Ow-bu-zTU" secondAttribute="trailing" id="VYo-YQ-sRJ"/>

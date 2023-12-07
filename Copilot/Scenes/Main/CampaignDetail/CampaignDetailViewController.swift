@@ -17,6 +17,7 @@ class CampaignDetailViewController: UIViewController {
     }
     
     @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
@@ -25,6 +26,7 @@ class CampaignDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setCampaign()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,8 +54,18 @@ class CampaignDetailViewController: UIViewController {
     @IBAction func didTapBack(_ sender: UIButton) {
         viewModel.getBack()
     }
+    
+    @IBAction func didTapSelect(_ sender: UIButton) {
+        viewModel.selectCampaign()
+    }
 }
 
 extension CampaignDetailViewController: CampaignDetailViewModelDelegate {
     
+    func setCampaign() {
+        imageView.loadImageFrom(url: viewModel.campaign?.imageUrlTr)
+        titleLabel.text = viewModel.campaign?.titleTr
+        nameLabel.text = viewModel.campaign?.titleTr
+        textLabel.text = viewModel.campaign?.contentTr
+    }
 }

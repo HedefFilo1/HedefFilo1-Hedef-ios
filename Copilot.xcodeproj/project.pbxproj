@@ -203,6 +203,7 @@
 		89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */; };
 		89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */; };
 		89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8092AC73BD50098BA67 /* CodeStrings.swift */; };
+		89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCE86F2B21E03100AB1114 /* Campaign.swift */; };
 		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
 		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
 		89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07072AF0122A00892B1D /* SubFiltersCell.xib */; };
@@ -432,6 +433,7 @@
 		89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPasswordTextField.swift; sourceTree = "<group>"; };
 		89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPEmailTextField.swift; sourceTree = "<group>"; };
 		89DAB8092AC73BD50098BA67 /* CodeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStrings.swift; sourceTree = "<group>"; };
+		89DCE86F2B21E03100AB1114 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
 		89DF07072AF0122A00892B1D /* SubFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFiltersCell.xib; sourceTree = "<group>"; };
@@ -1079,6 +1081,7 @@
 				899BF5B32B2087150058123C /* Supplier.swift */,
 				899BF5B52B20C1640058123C /* Transition.swift */,
 				899BF5B72B20E3A80058123C /* Places.swift */,
+				89DCE86F2B21E03100AB1114 /* Campaign.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1750,6 +1753,7 @@
 				89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */,
 				893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */,
 				89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */,
+				89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */,
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,

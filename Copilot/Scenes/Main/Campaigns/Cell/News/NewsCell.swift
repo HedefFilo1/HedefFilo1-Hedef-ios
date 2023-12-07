@@ -8,6 +8,14 @@
 import UIKit
 
 class NewsCell: UICollectionViewCell, Reusable {
+ 
+    var item: Campaign? {
+        didSet {
+            imageView.loadImageFrom(url: item?.imageUrlTr)
+            titleLabel.text = item?.titleTr
+            textLabel.text = item?.contentTr
+        }
+    }
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -35,8 +43,10 @@ class NewsCell: UICollectionViewCell, Reusable {
         textLabel.apply(.greyS12R400)
         continueLabel.apply(.themeS12B700)
     }
-
+    
     @IBAction func didTapContiune() {
-        delegate?.didSelectItem()
+        if let item = item {
+            delegate?.didSelectItem(campaign: item)
+        }
     }
 }
