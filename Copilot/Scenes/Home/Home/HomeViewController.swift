@@ -118,6 +118,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 2:
             height = 684 + 140 + 20
             
+            if viewModel.appointment == nil {
+                height -= 116 + 32
+            }
+            
+            if viewModel.tire == nil {
+                height -= 104 + 32
+            }
+            
         default:
             break
         }

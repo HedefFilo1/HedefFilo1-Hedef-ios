@@ -134,7 +134,15 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: 3, height: 32)
+        var height: CGFloat = 32
+        if section == 0, appointment == nil {
+            height = 0
+        }
+        
+        if section == 2, tire == nil {
+            height = 0
+        }
+        return CGSize(width: 3, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

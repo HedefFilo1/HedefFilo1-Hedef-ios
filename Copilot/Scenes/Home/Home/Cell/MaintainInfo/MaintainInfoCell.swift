@@ -36,6 +36,6 @@ class MaintainInfoCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireInformation
+        titleLabel.text = Strings.latestMaintenanceInformation
     }
 }
