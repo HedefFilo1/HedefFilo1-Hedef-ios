@@ -81,6 +81,8 @@
 		893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF722AFA5A92004E643E /* NewsTabCell.swift */; };
 		893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF742AFA5A97004E643E /* NewsTabCell.xib */; };
 		893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF772AFA5B0B004E643E /* NewsCell.swift */; };
+		894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */; };
+		894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894C45302B2789FF004356C8 /* HGSEmptyCell.xib */; };
 		894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC7B2B0660C900D369E9 /* SignupViewController+Validation.swift */; };
 		894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC7E2B078F8300D369E9 /* SearchViewModel.swift */; };
 		894CEC812B078F9300D369E9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC802B078F9300D369E9 /* SearchViewController.swift */; };
@@ -308,6 +310,8 @@
 		893EDF722AFA5A92004E643E /* NewsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTabCell.swift; sourceTree = "<group>"; };
 		893EDF742AFA5A97004E643E /* NewsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTabCell.xib; sourceTree = "<group>"; };
 		893EDF772AFA5B0B004E643E /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSEmptyCell.swift; sourceTree = "<group>"; };
+		894C45302B2789FF004356C8 /* HGSEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGSEmptyCell.xib; sourceTree = "<group>"; };
 		894CEC7B2B0660C900D369E9 /* SignupViewController+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController+Validation.swift"; sourceTree = "<group>"; };
 		894CEC7E2B078F8300D369E9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		894CEC802B078F9300D369E9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -704,6 +708,7 @@
 		8934D5122B10FDFD00CD0CA7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				894C452E2B2789ED004356C8 /* Empty */,
 				8934D5132B10FE0900CD0CA7 /* HGSCell.swift */,
 				8934D5142B10FE0900CD0CA7 /* HGSCell.xib */,
 			);
@@ -804,6 +809,15 @@
 				893EDF772AFA5B0B004E643E /* NewsCell.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		894C452E2B2789ED004356C8 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */,
+				894C45302B2789FF004356C8 /* HGSEmptyCell.xib */,
+			);
+			path = Empty;
 			sourceTree = "<group>";
 		};
 		894CEC7D2B078F5D00D369E9 /* Search */ = {
@@ -1568,6 +1582,7 @@
 				89AD0EE42B0502AA0097B823 /* DocumentsTabTitleCell.xib in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
 				89D535292B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib in Resources */,
+				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
@@ -1808,6 +1823,7 @@
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
+				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
@@ -2003,7 +2019,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2037,7 +2053,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2131,7 +2147,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2219,7 +2235,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

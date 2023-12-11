@@ -75,6 +75,7 @@ extension VehicleGuideViewController: UICollectionViewDataSource, UICollectionVi
             
         case 1:
             let cell: VehicleCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.vehicle = App.vehicle
             return cell
             
         case 2:

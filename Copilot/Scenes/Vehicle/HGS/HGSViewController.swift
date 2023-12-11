@@ -42,6 +42,7 @@ class HGSViewController: UIViewController {
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(cellType: HGSEmptyCell.self)
         collectionView.register(cellType: HGSCell.self)
         collectionView.contentInset.bottom = 70
     }
@@ -62,14 +63,24 @@ class HGSViewController: UIViewController {
 extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.transitons?.count ?? 0
+        let count = viewModel.transitons?.count ?? 0
+        if section == 0 {
+            return (count == 0 && viewModel.transitons != nil) ? 1: 0
+        }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 0 {
+            let cell: HGSEmptyCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+        }
+        
         let cell: HGSCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.item = viewModel.transitons?[indexPath.item]
         cell.delegate = self
@@ -77,7 +88,7 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 48, height: 102)
+        return CGSize(width: collectionView.frame.width - 48, height: indexPath.section == 0 ? 150: 102)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
