@@ -475,6 +475,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Latest Maintenance Information</string>
         </dict>
         
+        <key>periodicMaintenance</key>
+        <dict>
+            <key>tr</key>
+            <string>Periyodik Bakım</string>
+            <key>en</key>
+            <string>Periodic maintenance</string>
+        </dict>
+        
         <key>profile</key>
         <dict>
             <key>tr</key>

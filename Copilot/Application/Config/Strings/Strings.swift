@@ -232,6 +232,10 @@ struct Strings {
         return localized(string: "latestMaintenanceInformation")
     }
     
+    static var periodicMaintenance: String {
+        return localized(string: "periodicMaintenance")
+    }
+    
     static var profile: String {
         return localized(string: "profile")
     }

@@ -37,5 +37,6 @@ class MaintainInfoCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         titleLabel.text = Strings.latestMaintenanceInformation
+        oilLabel.text = Strings.periodicMaintenance
     }
 }
