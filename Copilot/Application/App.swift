@@ -14,6 +14,7 @@ class App {
     static var deepLinkURL: URL?
     static var token: String?
     static var vehicle: Vehicle?
+    static var contentStrings: [ContentString]?
     
     static var appLoaded = false {
         didSet {
@@ -68,4 +69,11 @@ extension App {
         }
     }
     
+}
+
+// MARK: String
+extension App {
+    static func getString(key: String) -> String? {
+        return contentStrings?.filter({$0.strKey == key && $0.lang == CodeStrings.trKey}).first?.strValue
+    }
 }

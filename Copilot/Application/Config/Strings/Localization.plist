@@ -1115,20 +1115,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
-        <key></key>
+        <key>noHGS</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>HGS İşleminiz Bulunmamaktadır.</string>
             <key>en</key>
-            <string></string>
+            <string>You do not have an HGS transaction.</string>
         </dict>
         
-        <key></key>
+        <key>hgsEmpty</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>90 gün içerisinde HGS işleminiz bulunmamaktadır.</string>
             <key>en</key>
-            <string></string>
+            <string>You have not had an HGS transaction within 90 days.</string>
         </dict>
         
     </dict>

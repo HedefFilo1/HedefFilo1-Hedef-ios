@@ -158,8 +158,8 @@ extension UIViewController {
         viewController.message = message
         viewController.buttonTitle = buttonTitle
         viewController.attributedMessage = attributedMessage
-        viewController.color = .theme
-        viewController.icon = UIImage(systemName: "exclamationmark") ?? UIImage()
+        viewController.color = .lightRed
+        viewController.icon = Images.redCloseIcon
         viewController.delegate = delegate
         self.present(viewController, animated: true)
     }

@@ -212,4 +212,12 @@ extension Strings {
     static var googleMap: String {
         return localized(string: "googleMap")
     }
+    
+    static var noHGS: String {
+        return localized(string: "noHGS")
+    }
+    
+    static var hgsEmpty: String {
+        return localized(string: "hgsEmpty")
+    }
 }

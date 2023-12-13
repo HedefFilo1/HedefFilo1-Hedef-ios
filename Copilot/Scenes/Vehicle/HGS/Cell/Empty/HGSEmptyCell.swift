@@ -14,6 +14,7 @@ class HGSEmptyCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         label.apply(.blackS14R400)
+        label.text = App.getString(key: CodeStrings.hgsEmpty) ?? Strings.hgsEmpty
     }
 
 }

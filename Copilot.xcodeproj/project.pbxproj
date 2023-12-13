@@ -231,6 +231,7 @@
 		89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */; };
 		89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */; };
 		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
+		89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC32B29C0E30081DD85 /* ContentString.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 		89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */; };
 		89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */; };
@@ -466,6 +467,7 @@
 		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
+		89F23BC32B29C0E30081DD85 /* ContentString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentString.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewController.swift; sourceTree = "<group>"; };
 		89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewModel.swift; sourceTree = "<group>"; };
@@ -1103,6 +1105,7 @@
 				899BF5B52B20C1640058123C /* Transition.swift */,
 				899BF5B72B20E3A80058123C /* Places.swift */,
 				89DCE86F2B21E03100AB1114 /* Campaign.swift */,
+				89F23BC32B29C0E30081DD85 /* ContentString.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1850,6 +1853,7 @@
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
+				89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
 				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,

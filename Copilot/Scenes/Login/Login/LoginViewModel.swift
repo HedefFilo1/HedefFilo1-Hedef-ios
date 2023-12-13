@@ -97,10 +97,25 @@ class LoginViewModel: LoginViewModelType {
                     Persistence.password = nil
                     Persistence.accessToken =  nil
                 }
-                self.goToNextScene(email: email)
+                self.loadStrings(email: email)
             }
             
         }
+    }
+    
+    func loadStrings(email: String) {
+        Loading.shared.show(title: Strings.loading)
+        APIService.getStrings { [weak self] model, _ in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let model = model {
+                App.contentStrings = model
+            }
+            self.goToNextScene(email: email)
+        }
+        
     }
     
     func goToNextScene(email: String) {

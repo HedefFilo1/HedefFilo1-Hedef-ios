@@ -141,4 +141,8 @@ struct Images {
     static var avatar4: UIImage {
         return UIImage(named: "avatar4") ?? UIImage()
     }
+    
+    static var redCloseIcon: UIImage {
+        return UIImage(named: "redCloseIcon") ?? UIImage()
+    }
 }

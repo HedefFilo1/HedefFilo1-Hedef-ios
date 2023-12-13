@@ -11,6 +11,15 @@ class APIService {
     
     static var loggingEnabled = true
     
+    static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
+        let route = "content-string"
+        let req = APIRequest<[ContentString]>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Strings"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
     static func verifyToken(completion: @escaping (VerifyToken?, APIResponseError?) -> Void) {
         
         let req = APIRequest<VerifyToken>(route: "copilot/vehicle/status", method: .get, hasToken: true)

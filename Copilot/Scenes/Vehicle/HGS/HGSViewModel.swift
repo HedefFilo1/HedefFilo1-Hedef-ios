@@ -41,6 +41,11 @@ class HGSViewModel: HGSViewModelType {
             
             if let model = model {
                 self.transitons = model
+                if model.count == 0 {
+                    let message = App.getString(key: CodeStrings.hgsEmpty) ?? Strings.hgsEmpty
+                    self.delegate?.showError(title: Strings.noHGS,
+                                             message: message)
+                }
                 self.delegate?.reloadData()
             } else
             

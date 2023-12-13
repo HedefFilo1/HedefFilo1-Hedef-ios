@@ -10,6 +10,8 @@ struct CodeStrings {
     
     static let trTr = "tr-TR"
     static let enUS = "en-US"
+    static let trKey = "tr"
+    static let enKey = "en"
     
     static let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     static let phonePattern = "#### ### ## ##"
@@ -19,6 +21,8 @@ struct CodeStrings {
     static let GMSServiceAPIKey = "AIzaSyD4qUo185FsJScEIoM34rO9juJPSvqZ2-E"
 //    static let googlePlacesAPIKey = "AIzaSyByiNsyzjZ0wpUUpfc5e1Yer7TcRM8j190"
     static let googlePlacesAPIKey = "AIzaSyBfH6ZJs4Efbri9v4MxhbTBX6W_RAtDsWY"
+    
+    static let hgsEmpty = "copilotapp.message.hgs_empty"
 }
 
 // MAKR: Network
