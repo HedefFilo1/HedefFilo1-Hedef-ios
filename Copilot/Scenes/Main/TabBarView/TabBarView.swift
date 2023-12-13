@@ -73,7 +73,8 @@ class TabBarView: UIView {
     }
     
     @IBAction func didTabMenu(_ sender: UIView) {
-        delegate?.didTapMenu()
+        delegate?.didSelect(tab: 4)
+        changeTab(index: 4)
     }
     
     func changeTab(index: Int) {
@@ -98,6 +99,9 @@ class TabBarView: UIView {
         case 3:
             imagesViews[3].image = Images.helpIcon
             
+        case 4:
+            imagesViews[4].image = Images.moreTabIcon
+            
         default:
             break
         }
@@ -116,6 +120,9 @@ class TabBarView: UIView {
             
         case 3:
             imagesViews[3].image = Images.helpSelectedIcon
+            
+        case 4:
+            imagesViews[4].image = Images.moreTabSelectedIcon
             
         default:
             break

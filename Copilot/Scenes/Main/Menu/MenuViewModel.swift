@@ -35,7 +35,7 @@ protocol MenuViewModelType: AnyObject {
 
 class MenuViewModel: MenuViewModelType {
    
-    weak var coordinatorDelegate: MenuViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: MenuViewModelCoordinatorDelegate? = MainCoordinator.current
     weak var delegate: MenuViewModelDelegate?
     
     func hideMenu() {

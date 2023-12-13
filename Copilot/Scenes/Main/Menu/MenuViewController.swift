@@ -10,12 +10,11 @@ import UIKit
 
 class MenuViewController: PopupViewController {
     
-    // MARK: - Properties
-    var viewModel: MenuViewModel! {
-        didSet {
-            viewModel.delegate = self
-        }
-    }
+    lazy var viewModel: MenuViewModelType = {
+        let viewModel = MenuViewModel()
+        viewModel.delegate = self
+        return viewModel
+    }()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -108,7 +107,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 32, height: 48)
+        return CGSize(width: collectionView.frame.width - 80, height: 48)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
