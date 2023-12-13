@@ -11,8 +11,8 @@ class RandevuCell: UICollectionViewCell, Reusable {
     
     var appointment: Case? {
         didSet {
-                randevuLabel.text = appointment?.supplierName ?? "Name"
-                dateLabel.text = appointment?.displayDate
+            randevuLabel.text = appointment?.title
+            dateLabel.text = appointment?.displayDate
             
         }
     }
@@ -31,7 +31,7 @@ class RandevuCell: UICollectionViewCell, Reusable {
         applyStyles()
         setTexts()
     }
-
+    
     private func applyStyles() {
         titleLabel.apply(.blackS20B700)
         containerView.layer.cornerRadius = 15

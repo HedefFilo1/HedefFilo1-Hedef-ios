@@ -23,6 +23,10 @@ struct CodeStrings {
     static let googlePlacesAPIKey = "AIzaSyBfH6ZJs4Efbri9v4MxhbTBX6W_RAtDsWY"
     
     static let hgsEmpty = "copilotapp.message.hgs_empty"
+    static let maintenaceKey = "copilotapp.upcoming_appointment_recordtype_Maintenance"
+    static let mechanicalFailurKey = "copilotapp.upcoming_appointment_recordtype_MechanicalFailure"
+    static let damageKey = "copilotapp.upcoming_appointment_recordtype_Damage"
+    static let tireChangeKey = "copilotapp.upcoming_appointment_recordtype_TireChange"
 }
 
 // MAKR: Network

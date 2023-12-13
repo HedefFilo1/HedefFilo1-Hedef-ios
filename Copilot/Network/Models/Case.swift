@@ -6,12 +6,52 @@
 //
 
 import Foundation
+
+enum CaseRecordType: String {
+    case maintenance
+    case mechanicalFailure
+    case damage
+    case tireChange
+}
+
 struct Case: Decodable {
     let caseNumber: String
     let supplierName: String
     let appointmentDate: String
     let recordType: String
     let status: String
+    
+    var caseRecordType: CaseRecordType {
+        let record = recordType.lowercased()
+        if record.contains(CaseRecordType.maintenance.rawValue) {
+            return .maintenance
+        }
+        if record.contains(CaseRecordType.mechanicalFailure.rawValue) {
+            return .mechanicalFailure
+        }
+        if record.contains(CaseRecordType.damage.rawValue.lowercased()) {
+            return .damage
+        }
+        if record.contains(CaseRecordType.tireChange.rawValue) {
+            return .maintenance
+        }
+        return .maintenance
+    }
+    
+    var title: String {
+        var str: String?
+        switch caseRecordType {
+        case .maintenance:
+            str = App.getString(key: CodeStrings.maintenaceKey)
+        case .mechanicalFailure:
+            str = App.getString(key: CodeStrings.mechanicalFailurKey)
+        case .damage:
+            str = App.getString(key: CodeStrings.damageKey)
+        case .tireChange:
+            str = App.getString(key: CodeStrings.tireChangeKey)
+        }
+        return str ?? "unknow"
+    }
     
     var displayDate: String {
         let formmater = DateFormatter()
