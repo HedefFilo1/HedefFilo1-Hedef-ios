@@ -27,6 +27,7 @@ struct CodeStrings {
     static let mechanicalFailurKey = "copilotapp.upcoming_appointment_recordtype_MechanicalFailure"
     static let damageKey = "copilotapp.upcoming_appointment_recordtype_Damage"
     static let tireChangeKey = "copilotapp.upcoming_appointment_recordtype_TireChange"
+    static let vehicleGuidPdfUrl = "https://drive.google.com/file/d/1tXaArVnsTV42WKIX-25Uei-B49TrwcGI/view?usp=sharing"
 }
 
 // MAKR: Network

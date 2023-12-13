@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 import PDFKit
 
 class PdfViewerViewController: UIViewController {
@@ -17,8 +18,9 @@ class PdfViewerViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var pdfView: PDFView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,13 +29,12 @@ class PdfViewerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getDocument()
         loadDocument()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
     
     func setupUI() {
@@ -50,44 +51,30 @@ class PdfViewerViewController: UIViewController {
     }
     
     @IBAction func didTapBack() {
-        //        viewModel.getBack()
-        presentShare()
+        viewModel.getBack()
     }
 }
 
 extension PdfViewerViewController: PdfViewerViewModelDelegate {
     
     func loadDocument() {
-        let string = "https://www.clickdimensions.com/links/TestPDFfile.pdf"
+        let string = CodeStrings.vehicleGuidPdfUrl
         guard let url = URL(string: string) else {
             return
         }
-        
-        //        pdfView.isHidden = true
-        //        pdfView.removeFromSuperview()
-        //        var webView = UIWebView()
-        //        view.addSubview(webView)
-        //        webView.align(all: 20)
-        //        webView.loadRequest(URLRequest(url: url))
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let document = PDFDocument(url: url) {
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
-                    self.pdfView.displayMode = .singlePageContinuous
-                    self.pdfView.autoScales = true
-                    self.pdfView.displayDirection = .vertical
-                    self.pdfView.document = document
-                    
-                }
-            }
-        }
+        let webView = UIWebView()
+        container.addSubview(webView)
+        webView.frame = container.bounds
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        webView.backgroundColor = .gray
+        webView.clipsToBounds = true
+        webView.delegate = self
+        webView.loadRequest(URLRequest(url: url))
     }
-    
-    @objc private func presentShare() {
-        guard let pdfDocument = self.pdfView.document?.dataRepresentation() else { return }
-        
-        let activity = UIActivityViewController(activityItems: [pdfDocument], applicationActivities: nil)
-        present(activity, animated: true)
+}
+
+extension PdfViewerViewController: UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        loadingLabel.isHidden = true
     }
 }

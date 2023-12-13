@@ -611,20 +611,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OP-l7-wBK" customClass="PDFView">
-                                <rect key="frame" x="12" y="117" width="369" height="701"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OP-l7-wBK">
+                                <rect key="frame" x="0.0" y="117" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB2-zk-whu">
+                                <rect key="frame" x="159.33333333333334" y="415.66666666666669" width="74.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vbh-GC-R3d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vbh-GC-R3d" firstAttribute="trailing" secondItem="0OP-l7-wBK" secondAttribute="trailing" constant="12" id="BcI-r4-08O"/>
+                            <constraint firstItem="vbh-GC-R3d" firstAttribute="trailing" secondItem="0OP-l7-wBK" secondAttribute="trailing" id="BcI-r4-08O"/>
                             <constraint firstItem="j2g-1C-6FZ" firstAttribute="centerY" secondItem="Lm9-sV-VjJ" secondAttribute="centerY" id="CQe-Lh-49n"/>
-                            <constraint firstItem="vbh-GC-R3d" firstAttribute="bottom" secondItem="0OP-l7-wBK" secondAttribute="bottom" id="D9A-dG-Wnc"/>
+                            <constraint firstItem="vbh-GC-R3d" firstAttribute="bottom" secondItem="0OP-l7-wBK" secondAttribute="bottom" constant="35" id="D9A-dG-Wnc"/>
+                            <constraint firstItem="zB2-zk-whu" firstAttribute="centerY" secondItem="rdj-Fb-Ptu" secondAttribute="centerY" id="DDI-Xc-Y2a"/>
                             <constraint firstItem="Lm9-sV-VjJ" firstAttribute="top" secondItem="vbh-GC-R3d" secondAttribute="top" constant="24" id="LlU-de-Eak"/>
                             <constraint firstItem="0YA-M1-mMp" firstAttribute="top" secondItem="vbh-GC-R3d" secondAttribute="top" constant="25" id="NNc-ak-Vod"/>
-                            <constraint firstItem="0OP-l7-wBK" firstAttribute="leading" secondItem="vbh-GC-R3d" secondAttribute="leading" constant="12" id="myR-Na-hG3"/>
+                            <constraint firstItem="zB2-zk-whu" firstAttribute="centerX" secondItem="rdj-Fb-Ptu" secondAttribute="centerX" id="iv2-WF-rbA"/>
+                            <constraint firstItem="0OP-l7-wBK" firstAttribute="leading" secondItem="vbh-GC-R3d" secondAttribute="leading" id="myR-Na-hG3"/>
                             <constraint firstItem="j2g-1C-6FZ" firstAttribute="centerX" secondItem="Lm9-sV-VjJ" secondAttribute="centerX" id="spr-f9-1gM"/>
                             <constraint firstItem="0OP-l7-wBK" firstAttribute="top" secondItem="0YA-M1-mMp" secondAttribute="bottom" constant="12" id="wDI-0S-hEN"/>
                             <constraint firstItem="0YA-M1-mMp" firstAttribute="centerX" secondItem="rdj-Fb-Ptu" secondAttribute="centerX" id="z4c-S3-KeL"/>
@@ -632,7 +640,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pdfView" destination="0OP-l7-wBK" id="MUq-un-fxm"/>
+                        <outlet property="container" destination="0OP-l7-wBK" id="EQu-FP-D4s"/>
+                        <outlet property="loadingLabel" destination="zB2-zk-whu" id="jRw-o1-lwy"/>
                         <outlet property="titleLabel" destination="0YA-M1-mMp" id="Yy5-Ng-ytT"/>
                     </connections>
                 </viewController>
