@@ -228,6 +228,9 @@
 		89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */; };
 		89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */; };
 		89E045A42B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045A32B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift */; };
+		89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */; };
+		89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */; };
+		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 		89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */; };
 		89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */; };
@@ -460,6 +463,9 @@
 		89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDocumentsTabCell.swift; sourceTree = "<group>"; };
 		89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourDocumentsTabCell.xib; sourceTree = "<group>"; };
 		89E045A32B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecessaryDocumentsTabCell.swift; sourceTree = "<group>"; };
+		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
+		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
+		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewController.swift; sourceTree = "<group>"; };
 		89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewModel.swift; sourceTree = "<group>"; };
@@ -607,6 +613,7 @@
 				8934D4FD2B0FFDE900CD0CA7 /* VehicleGuide */,
 				8934D50D2B10FD4E00CD0CA7 /* HGS */,
 				89F7AAB42B15DF4A00858D2E /* HGSDetail */,
+				89F23BBC2B299FC60081DD85 /* PdfViewer */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -1207,6 +1214,7 @@
 				892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */,
 				892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */,
 				8989DDA22AC493BF0035CD99 /* ViewController.swift */,
+				89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */,
 				892A8CF02AC4C6760020C1C4 /* Splash */,
 				892A8CFA2AC4D1310020C1C4 /* Onboarding */,
 				89DAB7F92AC72CFE0098BA67 /* Login */,
@@ -1499,6 +1507,15 @@
 			path = NecessaryDocumentsTab;
 			sourceTree = "<group>";
 		};
+		89F23BBC2B299FC60081DD85 /* PdfViewer */ = {
+			isa = PBXGroup;
+			children = (
+				89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */,
+				89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */,
+			);
+			path = PdfViewer;
+			sourceTree = "<group>";
+		};
 		89F7AAB42B15DF4A00858D2E /* HGSDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1787,6 +1804,7 @@
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
+				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
 				8986FCB62AFBCC82006057EA /* KeychainOptions.swift in Sources */,
@@ -1828,6 +1846,7 @@
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
+				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
@@ -1866,6 +1885,7 @@
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
+				89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,

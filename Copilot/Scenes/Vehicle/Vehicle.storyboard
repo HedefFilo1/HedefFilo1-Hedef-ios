@@ -579,6 +579,67 @@
             </objects>
             <point key="canvasLocation" x="817.55725190839689" y="874.64788732394368"/>
         </scene>
+        <!--Pdf Viewer View Controller-->
+        <scene sceneID="5rg-q1-17F">
+            <objects>
+                <viewController storyboardIdentifier="PdfViewerViewController" id="36K-GW-lJL" customClass="PdfViewerViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdj-Fb-Ptu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lm9-sV-VjJ">
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Fnh-eP-hYZ"/>
+                                    <constraint firstAttribute="height" constant="24" id="zbP-WA-HN1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-1C-6FZ">
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="95d-Z0-q0u"/>
+                                    <constraint firstAttribute="height" constant="40" id="a6u-Xg-MrC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapBack" destination="36K-GW-lJL" eventType="touchUpInside" id="oz9-1E-ZhY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Araç Rehberi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YA-M1-mMp">
+                                <rect key="frame" x="147.66666666666666" y="84" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OP-l7-wBK" customClass="PDFView">
+                                <rect key="frame" x="12" y="117" width="369" height="701"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vbh-GC-R3d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vbh-GC-R3d" firstAttribute="trailing" secondItem="0OP-l7-wBK" secondAttribute="trailing" constant="12" id="BcI-r4-08O"/>
+                            <constraint firstItem="j2g-1C-6FZ" firstAttribute="centerY" secondItem="Lm9-sV-VjJ" secondAttribute="centerY" id="CQe-Lh-49n"/>
+                            <constraint firstItem="vbh-GC-R3d" firstAttribute="bottom" secondItem="0OP-l7-wBK" secondAttribute="bottom" id="D9A-dG-Wnc"/>
+                            <constraint firstItem="Lm9-sV-VjJ" firstAttribute="top" secondItem="vbh-GC-R3d" secondAttribute="top" constant="24" id="LlU-de-Eak"/>
+                            <constraint firstItem="0YA-M1-mMp" firstAttribute="top" secondItem="vbh-GC-R3d" secondAttribute="top" constant="25" id="NNc-ak-Vod"/>
+                            <constraint firstItem="0OP-l7-wBK" firstAttribute="leading" secondItem="vbh-GC-R3d" secondAttribute="leading" constant="12" id="myR-Na-hG3"/>
+                            <constraint firstItem="j2g-1C-6FZ" firstAttribute="centerX" secondItem="Lm9-sV-VjJ" secondAttribute="centerX" id="spr-f9-1gM"/>
+                            <constraint firstItem="0OP-l7-wBK" firstAttribute="top" secondItem="0YA-M1-mMp" secondAttribute="bottom" constant="12" id="wDI-0S-hEN"/>
+                            <constraint firstItem="0YA-M1-mMp" firstAttribute="centerX" secondItem="rdj-Fb-Ptu" secondAttribute="centerX" id="z4c-S3-KeL"/>
+                            <constraint firstItem="Lm9-sV-VjJ" firstAttribute="leading" secondItem="vbh-GC-R3d" secondAttribute="leading" constant="24" id="zAW-m1-erA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pdfView" destination="0OP-l7-wBK" id="MUq-un-fxm"/>
+                        <outlet property="titleLabel" destination="0YA-M1-mMp" id="Yy5-Ng-ytT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlb-Pj-jPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453" y="156"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>

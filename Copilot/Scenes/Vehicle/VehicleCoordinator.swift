@@ -40,8 +40,12 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
     }
     
     func goToVehicleGuide() {
-        let viewController: VehicleGuideViewController = storyboard.instantiateViewController()
-        viewController.viewModel = VehicleGuideViewModel()
+        //        let viewController: VehicleGuideViewController = storyboard.instantiateViewController()
+        //        viewController.viewModel = VehicleGuideViewModel()
+        //        viewController.viewModel.coordinatorDelegate = self
+        //        navigationController.pushViewController(viewController, animated: true)
+        let viewController: PdfViewerViewController = storyboard.instantiateViewController()
+        viewController.viewModel = PdfViewerViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -57,7 +61,10 @@ extension VehicleCoordinator: HGSViewModelCoordinatorDelegate {
     }
 }
 
-extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate, VehicleGuideViewModelCoordinatorDelegate, HGSDetailViewModelCoordinatorDelegate {
+extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate,
+                              VehicleGuideViewModelCoordinatorDelegate,
+                              HGSDetailViewModelCoordinatorDelegate,
+                              PdfViewerViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }

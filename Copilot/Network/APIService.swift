@@ -211,6 +211,15 @@ class APIService {
         req.start()
     }
     
+    static func getDocuments(completion: @escaping (Success?, APIResponseError?) -> Void) {
+        let route = "copilot/document"
+        let req = APIRequest<Success>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Documents"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
     static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
         //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
         //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
