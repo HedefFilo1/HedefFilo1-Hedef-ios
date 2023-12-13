@@ -25,6 +25,10 @@ class MenuViewController: PopupViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+#if DEV_DEBUG
+        viewModel.showDocuments()
+#endif
     }
     
     override func viewWillAppear(_ animated: Bool) {

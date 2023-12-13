@@ -29,12 +29,28 @@ class PdfViewerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadDocument()
+        if viewModel.document != nil {
+            loadingLabel.isHidden = true
+            viewModel.getDocument()
+        } else {
+            loadDocument()
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideTabbarView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showTabbarView()
     }
     
     func setupUI() {
@@ -48,6 +64,9 @@ class PdfViewerViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.vehicleGuide
+        if let title = viewModel.document?.name {
+            titleLabel.text = title
+        }
     }
     
     @IBAction func didTapBack() {
@@ -62,20 +81,34 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         guard let url = URL(string: string) else {
             return
         }
-        //we have thread issue on WKWebview for loading pdf thats why we use UIWebView
-        let webView = UIWebView()
+        let webView = WKWebView()
         container.addSubview(webView)
         webView.frame = container.bounds
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.backgroundColor = .gray
         webView.clipsToBounds = true
-        webView.delegate = self
-        webView.loadRequest(URLRequest(url: url))
+        webView.load(URLRequest(url: url))
     }
-}
-
-extension PdfViewerViewController: UIWebViewDelegate {
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        loadingLabel.isHidden = true
+    
+    func setDocument() {
+        guard let content = viewModel.conetent,
+        let data = Data(base64Encoded: content.content) else {
+            loadingLabel.isHidden = false
+            loadingLabel.text = "No Data for document."
+            return
+        }
+        let pdfView = PDFView()
+        container.addSubview(pdfView)
+        pdfView.frame = container.bounds
+        pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        pdfView.backgroundColor = .gray
+        pdfView.clipsToBounds = true
+        pdfView.autoScales = true
+        pdfView.displayDirection = .vertical
+        
+        let document = PDFDocument(data: data)
+        //        pdfView.displayMode = .singlePageContinuous
+        
+        pdfView.document = document
     }
 }

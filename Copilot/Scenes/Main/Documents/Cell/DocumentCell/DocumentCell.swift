@@ -8,16 +8,16 @@
 import UIKit
 
 protocol DocumentCellDelegate: AnyObject {
-    func didTapDelete(item: MockDocument)
+    func didTapDelete(item: Document)
     func didTapDownload()
 }
 
 class DocumentCell: UICollectionViewCell, Reusable {
     
-    var item: MockDocument? {
+    var item: Document? {
         didSet {
-            titleLabel.text = item?.title
-            dateLabel.text = item?.date
+            titleLabel.text = item?.name
+            dateLabel.text = item?.type
         }
     }
     weak var delegate: DocumentCellDelegate?

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DocumentPopupVMCoordinatorDelegate: AnyObject {
-    func dismiss(_: DocumentPopupViewModelType, deletedDocument: MockDocument?)
+    func dismiss(_: DocumentPopupViewModelType, deletedDocument: Document?)
 }
 
 protocol DocumentPopupViewModelDelegate: AnyObject {
@@ -18,7 +18,7 @@ protocol DocumentPopupViewModelDelegate: AnyObject {
 
 protocol DocumentPopupViewModelType: AnyObject {
     var delegate: DocumentPopupViewModelDelegate? { get set }
-    var document: MockDocument? { get set }
+    var document: Document? { get set }
     func dismiss()
     func deleteAndDismiss()
 }
@@ -28,7 +28,7 @@ class DocumentPopupViewModel: DocumentPopupViewModelType {
     // MARK: - Delegates
     var coordinatorDelegate: DocumentPopupVMCoordinatorDelegate?
     weak var delegate: DocumentPopupViewModelDelegate?
-    var document: MockDocument?
+    var document: Document?
     
     func dismiss() {
         coordinatorDelegate?.dismiss(self, deletedDocument: nil)

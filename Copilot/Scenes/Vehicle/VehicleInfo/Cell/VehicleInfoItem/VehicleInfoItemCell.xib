@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Özet Araç Sözleşmesi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d31-OP-HgC">
-                        <rect key="frame" x="16" y="57.666666666666657" width="166" height="21"/>
+                        <rect key="frame" x="16" y="57.666666666666657" width="220.33333333333334" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -68,6 +68,7 @@
             <constraints>
                 <constraint firstItem="d31-OP-HgC" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="I4n-rI-IX2"/>
                 <constraint firstItem="2ga-yC-cHd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="L2D-34-6vj"/>
+                <constraint firstItem="2ga-yC-cHd" firstAttribute="leading" secondItem="d31-OP-HgC" secondAttribute="trailing" constant="4" id="jNj-kS-Xul"/>
                 <constraint firstItem="d31-OP-HgC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="kSa-lt-gHp"/>
                 <constraint firstAttribute="trailing" secondItem="2ga-yC-cHd" secondAttribute="trailing" constant="8" id="nWV-Cp-y6g"/>
             </constraints>

@@ -18,51 +18,58 @@ struct NecessaryDocument {
 }
 
 protocol DocumentsViewModelCoordinatorDelegate: AnyObject {
-    func goToDocument()
-    func presentDocumentPopup(document: MockDocument)
+    func goToDocument(document: Document)
+    func presentDocumentPopup(document: Document)
     
 }
 
-protocol DocumentsViewModelDelegate: AnyObject {
+protocol DocumentsViewModelDelegate: BaseViewModelDelegate {
     func reloadData()
 }
 
 protocol DocumentsViewModelType: AnyObject {
     var coordinatorDelegate: DocumentsViewModelCoordinatorDelegate? { get set }
     var delegate: DocumentsViewModelDelegate? { get set }
-    var documents: [MockDocument]? { get set }
-    var necessaryDocuments: [MockDocument]? { get set }
-    func delete(document: MockDocument)
-    func goToDocument()
+    var documents: [Document]? { get set }
+    func delete(document: Document)
+    func getDocuments()
+    func goToDocument(document: Document)
 }
 
 class DocumentsViewModel: DocumentsViewModelType {
     
     weak var coordinatorDelegate: DocumentsViewModelCoordinatorDelegate?
     weak var delegate: DocumentsViewModelDelegate?
+    var documents: [Document]?
     
-    var documents: [MockDocument]? = [
-        MockDocument(id: 1, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        MockDocument(id: 2, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        MockDocument(id: 3, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
-    ]
+    func getDocuments() {
+        Loading.shared.show()
+        APIService.getDocuments { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.documents = model
+                self.delegate?.reloadData()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
+    }
     
-    var necessaryDocuments: [MockDocument]? = [
-        MockDocument(id: 4, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        MockDocument(id: 5, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        MockDocument(id: 6, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
-    ]
-    
-    func presentDocumentPopup(document: MockDocument) {
+    func presentDocumentPopup(document: Document) {
         coordinatorDelegate?.presentDocumentPopup(document: document)
     }
     
-    func delete(document: MockDocument) {
+    func delete(document: Document) {
         documents?.removeAll(where: { $0.id == document.id })
         delegate?.reloadData()
     }
     
-    func goToDocument() {
-        coordinatorDelegate?.goToDocument()
+    func goToDocument(document: Document) {
+        coordinatorDelegate?.goToDocument(document: document)
     }
 }

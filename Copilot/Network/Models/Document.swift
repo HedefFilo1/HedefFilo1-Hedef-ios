@@ -12,3 +12,8 @@ struct Document: Decodable {
     let name: String
     let type: String?
 }
+
+struct DocumentContent: Decodable {
+    let name: String
+    let content: String
+}

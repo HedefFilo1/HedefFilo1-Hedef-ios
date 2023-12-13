@@ -148,11 +148,6 @@
 		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
 		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
 		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
-		89AD0EDF2B05025F0097B823 /* DocumentsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89AD0EDE2B05025F0097B823 /* DocumentsTabCell.xib */; };
-		89AD0EE32B0502AA0097B823 /* DocumentsTabTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD0EE12B0502AA0097B823 /* DocumentsTabTitleCell.swift */; };
-		89AD0EE42B0502AA0097B823 /* DocumentsTabTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89AD0EE22B0502AA0097B823 /* DocumentsTabTitleCell.xib */; };
-		89AD0EE82B05302D0097B823 /* UploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD0EE62B05302D0097B823 /* UploadCell.swift */; };
-		89AD0EE92B05302D0097B823 /* UploadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89AD0EE72B05302D0097B823 /* UploadCell.xib */; };
 		89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */; };
 		89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A412AD85EC900D3BE80 /* TabBarView.swift */; };
 		89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */; };
@@ -193,10 +188,6 @@
 		89C686942B0260C900011897 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686922B0260C900011897 /* AvatarCell.swift */; };
 		89C686952B0260C900011897 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C686932B0260C900011897 /* AvatarCell.xib */; };
 		89C686972B02616D00011897 /* CPRadioBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686962B02616D00011897 /* CPRadioBox.swift */; };
-		89D535292B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D535282B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib */; };
-		89D5352D2B04FEA800715AD4 /* NecessaryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D5352B2B04FEA800715AD4 /* NecessaryItemCell.swift */; };
-		89D5352E2B04FEA800715AD4 /* NecessaryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D5352C2B04FEA800715AD4 /* NecessaryItemCell.xib */; };
-		89D535312B05023300715AD4 /* DocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D535302B05023300715AD4 /* DocumentsTabCell.swift */; };
 		89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */; };
 		89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */; };
 		89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */; };
@@ -227,7 +218,6 @@
 		89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E045942B04FA3F00745E73 /* DocumentPageTitleCell.xib */; };
 		89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */; };
 		89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */; };
-		89E045A42B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045A32B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift */; };
 		89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */; };
 		89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */; };
 		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
@@ -385,11 +375,6 @@
 		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
-		89AD0EDE2B05025F0097B823 /* DocumentsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentsTabCell.xib; sourceTree = "<group>"; };
-		89AD0EE12B0502AA0097B823 /* DocumentsTabTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsTabTitleCell.swift; sourceTree = "<group>"; };
-		89AD0EE22B0502AA0097B823 /* DocumentsTabTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentsTabTitleCell.xib; sourceTree = "<group>"; };
-		89AD0EE62B05302D0097B823 /* UploadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCell.swift; sourceTree = "<group>"; };
-		89AD0EE72B05302D0097B823 /* UploadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadCell.xib; sourceTree = "<group>"; };
 		89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		89B07A412AD85EC900D3BE80 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -430,10 +415,6 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
-		89D535282B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NecessaryDocumentsTabCell.xib; sourceTree = "<group>"; };
-		89D5352B2B04FEA800715AD4 /* NecessaryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NecessaryItemCell.swift; sourceTree = "<group>"; };
-		89D5352C2B04FEA800715AD4 /* NecessaryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NecessaryItemCell.xib; sourceTree = "<group>"; };
-		89D535302B05023300715AD4 /* DocumentsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTabCell.swift; sourceTree = "<group>"; };
 		89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -464,7 +445,6 @@
 		89E045942B04FA3F00745E73 /* DocumentPageTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentPageTitleCell.xib; sourceTree = "<group>"; };
 		89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDocumentsTabCell.swift; sourceTree = "<group>"; };
 		89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourDocumentsTabCell.xib; sourceTree = "<group>"; };
-		89E045A32B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecessaryDocumentsTabCell.swift; sourceTree = "<group>"; };
 		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -1113,24 +1093,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		89AD0EE02B05028C0097B823 /* DocumentsTabTitle */ = {
-			isa = PBXGroup;
-			children = (
-				89AD0EE12B0502AA0097B823 /* DocumentsTabTitleCell.swift */,
-				89AD0EE22B0502AA0097B823 /* DocumentsTabTitleCell.xib */,
-			);
-			path = DocumentsTabTitle;
-			sourceTree = "<group>";
-		};
-		89AD0EE52B05300F0097B823 /* Upload */ = {
-			isa = PBXGroup;
-			children = (
-				89AD0EE62B05302D0097B823 /* UploadCell.swift */,
-				89AD0EE72B05302D0097B823 /* UploadCell.xib */,
-			);
-			path = Upload;
-			sourceTree = "<group>";
-		};
 		89B07A3E2AD85A3E00D3BE80 /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1348,24 +1310,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		89D5352A2B04FE6C00715AD4 /* NecessaryItem */ = {
-			isa = PBXGroup;
-			children = (
-				89D5352B2B04FEA800715AD4 /* NecessaryItemCell.swift */,
-				89D5352C2B04FEA800715AD4 /* NecessaryItemCell.xib */,
-			);
-			path = NecessaryItem;
-			sourceTree = "<group>";
-		};
-		89D5352F2B05020100715AD4 /* DocumentsTab */ = {
-			isa = PBXGroup;
-			children = (
-				89AD0EDE2B05025F0097B823 /* DocumentsTabCell.xib */,
-				89D535302B05023300715AD4 /* DocumentsTabCell.swift */,
-			);
-			path = DocumentsTab;
-			sourceTree = "<group>";
-		};
 		89DAB7F92AC72CFE0098BA67 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1459,11 +1403,6 @@
 				89E045972B04FA4400745E73 /* DocumentPageTitleCell */,
 				89E045922B04FA1700745E73 /* DocumentCell */,
 				89E045982B04FAC000745E73 /* YourDocumentsTab */,
-				89AD0EE52B05300F0097B823 /* Upload */,
-				89E045A22B04FDE200745E73 /* NecessaryDocumentsTab */,
-				89D5352A2B04FE6C00715AD4 /* NecessaryItem */,
-				89D5352F2B05020100715AD4 /* DocumentsTab */,
-				89AD0EE02B05028C0097B823 /* DocumentsTabTitle */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1502,15 +1441,6 @@
 				89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */,
 			);
 			path = YourDocumentsTab;
-			sourceTree = "<group>";
-		};
-		89E045A22B04FDE200745E73 /* NecessaryDocumentsTab */ = {
-			isa = PBXGroup;
-			children = (
-				89D535282B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib */,
-				89E045A32B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift */,
-			);
-			path = NecessaryDocumentsTab;
 			sourceTree = "<group>";
 		};
 		89F23BBC2B299FC60081DD85 /* PdfViewer */ = {
@@ -1602,9 +1532,7 @@
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
 				89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */,
 				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
-				89AD0EE42B0502AA0097B823 /* DocumentsTabTitleCell.xib in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
-				89D535292B04FE4A00715AD4 /* NecessaryDocumentsTabCell.xib in Resources */,
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
@@ -1612,7 +1540,6 @@
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
-				89AD0EE92B05302D0097B823 /* UploadCell.xib in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
 				89DF07142AF0F4DA00892B1D /* StandingCell.xib in Resources */,
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
@@ -1624,7 +1551,6 @@
 				89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
-				89AD0EDF2B05025F0097B823 /* DocumentsTabCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
 				8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */,
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
@@ -1649,7 +1575,6 @@
 				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
-				89D5352E2B04FEA800715AD4 /* NecessaryItemCell.xib in Resources */,
 				893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1782,7 +1707,6 @@
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
-				89AD0EE82B05302D0097B823 /* UploadCell.swift in Sources */,
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
@@ -1831,7 +1755,6 @@
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
-				89D5352D2B04FEA800715AD4 /* NecessaryItemCell.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
@@ -1876,7 +1799,6 @@
 				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,
-				89D535312B05023300715AD4 /* DocumentsTabCell.swift in Sources */,
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
@@ -1889,7 +1811,6 @@
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
 				894CEC862B0790A400D369E9 /* PastSearchCell.swift in Sources */,
 				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,
-				89E045A42B04FDEB00745E73 /* NecessaryDocumentsTabCell.swift in Sources */,
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
@@ -1899,7 +1820,6 @@
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
 				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
-				89AD0EE32B0502AA0097B823 /* DocumentsTabTitleCell.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,

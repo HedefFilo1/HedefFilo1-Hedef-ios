@@ -123,14 +123,19 @@ extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
 }
 
 extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewModelCoordinatorDelegate {
-    func goToDocument() {
-        let viewController: DocumentViewController = storyboard.instantiateViewController()
-        viewController.viewModel = DocumentViewModel()
+    func goToDocument(document: Document) {
+//        let viewController: DocumentViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = DocumentViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
+        let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        viewController.viewModel = PdfViewerViewModel()
+        viewController.viewModel.document = document
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func presentDocumentPopup(document: MockDocument) {
+    func presentDocumentPopup(document: Document) {
         let viewController: DocumentPopupViewController = storyboard.instantiateViewController()
         let viewModel = DocumentPopupViewModel()
         viewController.viewModel = viewModel
@@ -142,9 +147,13 @@ extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewMo
     }
 }
 
+extension MainCoordinator: PdfViewerViewModelCoordinatorDelegate {
+    
+}
+
 extension MainCoordinator: DocumentPopupVMCoordinatorDelegate {
     
-    func dismiss(_: DocumentPopupViewModelType, deletedDocument: MockDocument?) {
+    func dismiss(_: DocumentPopupViewModelType, deletedDocument: Document?) {
         documentPopupViewController?.dismiss(animated: true) {[weak self]  in
             if let doc = deletedDocument {
                 self?.documentsViewModel.delete(document: doc)

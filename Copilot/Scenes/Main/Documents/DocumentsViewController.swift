@@ -29,6 +29,7 @@ class DocumentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getDocuments()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,8 +43,6 @@ class DocumentsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: YourDocumentsTabCell.self)
-        collectionView.register(cellType: NecessaryDocumentsTabCell.self)
-        collectionView.register(cellType: DocumentsTabCell.self)
     }
     
     func applyStyle() {
@@ -88,16 +87,15 @@ extension DocumentsViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.goToDocument()
     }
 }
 
 extension DocumentsViewController: YourDocumentsTabDelegate {
-    func didSelectDocumentItem() {
-        viewModel.goToDocument()
+    func didSelectDocumentItem(document: Document) {
+        viewModel.goToDocument(document: document)
     }
     
-    func didTapDelete(item: MockDocument) {
+    func didTapDelete(item: Document) {
         viewModel.presentDocumentPopup(document: item)
     }
     

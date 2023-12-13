@@ -8,13 +8,12 @@
 import UIKit
 
 protocol YourDocumentsTabDelegate: DocumentCellDelegate {
-    func didSelectDocumentItem()
-    func didTapUpload()
+    func didSelectDocumentItem(document: Document)
 }
 
 class YourDocumentsTabCell: UICollectionViewCell, Reusable {
     
-    var items: [MockDocument]? {
+    var items: [Document]? {
         didSet {
             collectionView.reloadData()
         }
@@ -33,7 +32,6 @@ class YourDocumentsTabCell: UICollectionViewCell, Reusable {
         collectionView.dataSource = self
         collectionView.register(cellType: DocumentPageTitleCell.self)
         collectionView.register(cellType: DocumentCell.self)
-        collectionView.register(cellType: UploadCell.self)
         collectionView.contentInset.bottom = 90
     }
 }
@@ -41,7 +39,7 @@ class YourDocumentsTabCell: UICollectionViewCell, Reusable {
 extension YourDocumentsTabCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,15 +57,10 @@ extension YourDocumentsTabCell: UICollectionViewDataSource, UICollectionViewDele
             return cell
         }
         
-        if indexPath.section == 1 {
-            let cell: DocumentCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = delegate
-            cell.item = items?[indexPath.item]
-            return cell
-        }
-        
-        let cell: UploadCell = collectionView.dequeueReusableCell(for: indexPath)
-        return cell   
+        let cell: DocumentCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = delegate
+        cell.item = items?[indexPath.item]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -108,11 +101,8 @@ extension YourDocumentsTabCell: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            delegate?.didSelectDocumentItem()
-        }
-        if indexPath.section == 2 {
-            delegate?.didTapUpload()
+        if indexPath.section == 1, let document = items?[indexPath.item] {
+            delegate?.didSelectDocumentItem(document: document)
         }
     }
 }
