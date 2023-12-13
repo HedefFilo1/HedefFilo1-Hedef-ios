@@ -130,7 +130,7 @@ extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewMo
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func presentDocumentPopup(document: Document) {
+    func presentDocumentPopup(document: MockDocument) {
         let viewController: DocumentPopupViewController = storyboard.instantiateViewController()
         let viewModel = DocumentPopupViewModel()
         viewController.viewModel = viewModel
@@ -144,7 +144,7 @@ extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewMo
 
 extension MainCoordinator: DocumentPopupVMCoordinatorDelegate {
     
-    func dismiss(_: DocumentPopupViewModelType, deletedDocument: Document?) {
+    func dismiss(_: DocumentPopupViewModelType, deletedDocument: MockDocument?) {
         documentPopupViewController?.dismiss(animated: true) {[weak self]  in
             if let doc = deletedDocument {
                 self?.documentsViewModel.delete(document: doc)

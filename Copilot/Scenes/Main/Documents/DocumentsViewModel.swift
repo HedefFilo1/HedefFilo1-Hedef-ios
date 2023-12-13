@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Document {
+struct MockDocument {
     let id: Int
     let title: String
     let date: String
@@ -19,7 +19,7 @@ struct NecessaryDocument {
 
 protocol DocumentsViewModelCoordinatorDelegate: AnyObject {
     func goToDocument()
-    func presentDocumentPopup(document: Document)
+    func presentDocumentPopup(document: MockDocument)
     
 }
 
@@ -30,9 +30,9 @@ protocol DocumentsViewModelDelegate: AnyObject {
 protocol DocumentsViewModelType: AnyObject {
     var coordinatorDelegate: DocumentsViewModelCoordinatorDelegate? { get set }
     var delegate: DocumentsViewModelDelegate? { get set }
-    var documents: [Document]? { get set }
-    var necessaryDocuments: [Document]? { get set }
-    func delete(document: Document)
+    var documents: [MockDocument]? { get set }
+    var necessaryDocuments: [MockDocument]? { get set }
+    func delete(document: MockDocument)
     func goToDocument()
 }
 
@@ -41,23 +41,23 @@ class DocumentsViewModel: DocumentsViewModelType {
     weak var coordinatorDelegate: DocumentsViewModelCoordinatorDelegate?
     weak var delegate: DocumentsViewModelDelegate?
     
-    var documents: [Document]? = [
-        Document(id: 1, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        Document(id: 2, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        Document(id: 3, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
+    var documents: [MockDocument]? = [
+        MockDocument(id: 1, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
+        MockDocument(id: 2, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
+        MockDocument(id: 3, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
     ]
     
-    var necessaryDocuments: [Document]? = [
-        Document(id: 4, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        Document(id: 5, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
-        Document(id: 6, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
+    var necessaryDocuments: [MockDocument]? = [
+        MockDocument(id: 4, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
+        MockDocument(id: 5, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022"),
+        MockDocument(id: 6, title: "Lorem Ipsum Dolar Sit Amet", date: "07.04.2022")
     ]
     
-    func presentDocumentPopup(document: Document) {
+    func presentDocumentPopup(document: MockDocument) {
         coordinatorDelegate?.presentDocumentPopup(document: document)
     }
     
-    func delete(document: Document) {
+    func delete(document: MockDocument) {
         documents?.removeAll(where: { $0.id == document.id })
         delegate?.reloadData()
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol PdfViewerViewModelCoordinatorDelegate: AnyObject {
     func getBack()
 }
@@ -20,7 +19,6 @@ protocol PdfViewerViewModelType: AnyObject {
     var coordinatorDelegate: PdfViewerViewModelCoordinatorDelegate? { get set }
     var delegate: PdfViewerViewModelDelegate? { get set }
     func getBack()
-    func getDocument()
 }
 
 class PdfViewerViewModel: PdfViewerViewModelType {
@@ -30,22 +28,5 @@ class PdfViewerViewModel: PdfViewerViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
-    }
-    
-    func getDocument() {
-        Loading.shared.show()
-        APIService.getDocuments { [weak self] model, error in
-            Loading.shared.hide()
-            guard let self = self else { return }
-            
-            if let model = model {
-                print(model)
-            } else
-            
-            if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
-            }
-        }
     }
 }

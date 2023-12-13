@@ -8,13 +8,13 @@
 import UIKit
 
 protocol DocumentCellDelegate: AnyObject {
-    func didTapDelete(item: Document)
+    func didTapDelete(item: MockDocument)
     func didTapDownload()
 }
 
 class DocumentCell: UICollectionViewCell, Reusable {
     
-    var item: Document? {
+    var item: MockDocument? {
         didSet {
             titleLabel.text = item?.title
             dateLabel.text = item?.date

@@ -62,6 +62,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         guard let url = URL(string: string) else {
             return
         }
+        //we have thread issue on WKWebview for loading pdf thats why we use UIWebView
         let webView = UIWebView()
         container.addSubview(webView)
         webView.frame = container.bounds

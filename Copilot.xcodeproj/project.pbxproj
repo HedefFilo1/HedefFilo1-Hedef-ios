@@ -232,6 +232,7 @@
 		89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */; };
 		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
 		89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC32B29C0E30081DD85 /* ContentString.swift */; };
+		89F23BC62B29EC220081DD85 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC52B29EC220081DD85 /* Document.swift */; };
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 		89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */; };
 		89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */; };
@@ -468,6 +469,7 @@
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		89F23BC32B29C0E30081DD85 /* ContentString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentString.swift; sourceTree = "<group>"; };
+		89F23BC52B29EC220081DD85 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewController.swift; sourceTree = "<group>"; };
 		89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewModel.swift; sourceTree = "<group>"; };
@@ -1106,6 +1108,7 @@
 				899BF5B72B20E3A80058123C /* Places.swift */,
 				89DCE86F2B21E03100AB1114 /* Campaign.swift */,
 				89F23BC32B29C0E30081DD85 /* ContentString.swift */,
+				89F23BC52B29EC220081DD85 /* Document.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1814,6 +1817,7 @@
 				894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */,
 				89C686942B0260C900011897 /* AvatarCell.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
+				89F23BC62B29EC220081DD85 /* Document.swift in Sources */,
 				8986FCBD2AFCC802006057EA /* Strings+EXT.swift in Sources */,
 				895ADBC12B177E08004C9A4C /* Case.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
@@ -2043,7 +2047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2077,7 +2081,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2171,7 +2175,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2259,7 +2263,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

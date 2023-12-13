@@ -13,7 +13,7 @@ protocol DocumentsTabDelegate: DocumentsTabTitleCellDelegate, DocumentCellDelega
 
 class DocumentsTabCell: UICollectionViewCell, Reusable {
     
-    var items: [Document]?
+    var items: [MockDocument]?
     var selectedNecessaryItem: NecessaryDocument? {
         didSet {
             collectionView.reloadData()

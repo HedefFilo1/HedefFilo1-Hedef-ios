@@ -13,7 +13,7 @@ protocol VehicleInfoViewModelCoordinatorDelegate: AnyObject {
     
 }
 
-protocol VehicleInfoViewModelDelegate: AnyObject {
+protocol VehicleInfoViewModelDelegate: BaseViewModelDelegate {
     func reloadData()
 }
 
@@ -22,6 +22,7 @@ protocol VehicleInfoViewModelType: AnyObject {
     var delegate: VehicleInfoViewModelDelegate? { get set }
     var documents: [Document]? { get set }
     func goToDocument()
+    func getDocuments()
     func goToVehicleGuide()
 }
 
@@ -30,12 +31,7 @@ class VehicleInfoViewModel: VehicleInfoViewModelType {
     var coordinatorDelegate: VehicleInfoViewModelCoordinatorDelegate?
     weak var delegate: VehicleInfoViewModelDelegate?
     
-    var documents: [Document]? = [
-        Document(id: 0, title: "Özet Araç Sözleşmesi", date: ""),
-        Document(id: 2, title: "Araç Sözleşmesi", date: ""),
-        Document(id: 3, title: "Sigorta Belgesi", date: ""),
-        Document(id: 4, title: "Kasko Belgesi", date: "")
-    ]
+    var documents: [Document]?
     
     func goToDocument() {
         coordinatorDelegate?.goToDocument()
@@ -43,5 +39,23 @@ class VehicleInfoViewModel: VehicleInfoViewModelType {
     
     func goToVehicleGuide() {
         coordinatorDelegate?.goToVehicleGuide()
+    }
+    
+    func getDocuments() {
+        Loading.shared.show()
+        APIService.getDocuments { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.documents = model
+                self.delegate?.reloadData()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
     }
 }

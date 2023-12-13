@@ -29,6 +29,7 @@ class VehicleInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getDocuments()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,7 +68,7 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 4
+            return viewModel.documents?.count ?? 0
         }
         return 1
     }
@@ -82,7 +83,7 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
             
         case 1:
             let cell: VehicleInfoItemCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.titleLabel.text = viewModel.documents?[indexPath.item].title
+            cell.titleLabel.text = viewModel.documents?[indexPath.item].name
             return cell
             
         case 2:

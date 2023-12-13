@@ -97,7 +97,7 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
         viewModel.goToDocument()
     }
     
-    func didTapDelete(item: Document) {
+    func didTapDelete(item: MockDocument) {
         viewModel.presentDocumentPopup(document: item)
     }
     

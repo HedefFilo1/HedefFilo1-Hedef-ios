@@ -14,7 +14,7 @@ protocol YourDocumentsTabDelegate: DocumentCellDelegate {
 
 class YourDocumentsTabCell: UICollectionViewCell, Reusable {
     
-    var items: [Document]? {
+    var items: [MockDocument]? {
         didSet {
             collectionView.reloadData()
         }

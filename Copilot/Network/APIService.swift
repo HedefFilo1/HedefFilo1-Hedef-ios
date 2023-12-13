@@ -220,9 +220,9 @@ class APIService {
         req.start()
     }
     
-    static func getDocuments(completion: @escaping (Success?, APIResponseError?) -> Void) {
+    static func getDocuments(completion: @escaping ([Document]?, APIResponseError?) -> Void) {
         let route = "copilot/document"
-        let req = APIRequest<Success>(route: route, method: .get, hasToken: true)
+        let req = APIRequest<[Document]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Documents"
         req.log = loggingEnabled
         req.completion = completion
