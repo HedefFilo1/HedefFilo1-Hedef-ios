@@ -129,8 +129,8 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            viewModel.goToDocument()
+        if indexPath.section == 1, let item =  viewModel.documents?[indexPath.item] {
+            viewModel.goToDocument(document: item)
         }
     }
 }

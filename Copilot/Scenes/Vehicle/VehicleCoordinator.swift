@@ -32,9 +32,15 @@ class VehicleCoordinator: Coordinator {
 }
 
 extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
-    func goToDocument() {
-        let viewController: DocumentViewController = UIStoryboard(storyboard: .main).instantiateViewController()
-        viewController.viewModel = DocumentViewModel()
+    func goToDocument(document: Document) {
+//        let viewController: DocumentViewController = UIStoryboard(storyboard: .main).instantiateViewController()
+//        viewController.viewModel = DocumentViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
+        
+        let viewController: PdfViewerViewController = storyboard.instantiateViewController()
+        viewController.viewModel = PdfViewerViewModel()
+        viewController.viewModel.document = document
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

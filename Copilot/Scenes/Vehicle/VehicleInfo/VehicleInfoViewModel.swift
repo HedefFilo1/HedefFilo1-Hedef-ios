@@ -8,7 +8,7 @@
 import Foundation
 
 protocol VehicleInfoViewModelCoordinatorDelegate: AnyObject {
-    func goToDocument()
+    func goToDocument(document: Document)
     func goToVehicleGuide()
     
 }
@@ -22,7 +22,7 @@ protocol VehicleInfoViewModelType: AnyObject {
     var coordinatorDelegate: VehicleInfoViewModelCoordinatorDelegate? { get set }
     var delegate: VehicleInfoViewModelDelegate? { get set }
     var documents: [Document]? { get set }
-    func goToDocument()
+    func goToDocument(document: Document)
     func getDocuments()
     func getDocument(document: Document)
     func goToVehicleGuide()
@@ -35,8 +35,8 @@ class VehicleInfoViewModel: VehicleInfoViewModelType {
     
     var documents: [Document]?
     
-    func goToDocument() {
-        coordinatorDelegate?.goToDocument()
+    func goToDocument(document: Document) {
+        coordinatorDelegate?.goToDocument(document: document)
     }
     
     func goToVehicleGuide() {
