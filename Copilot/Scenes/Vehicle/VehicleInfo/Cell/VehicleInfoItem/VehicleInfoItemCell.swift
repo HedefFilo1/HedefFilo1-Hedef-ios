@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol VehicleInfoItemCellDelegate: AnyObject {
+    func didTapDownload(document: Document)
+}
+
 class VehicleInfoItemCell: UICollectionViewCell, Reusable {
     
+    var item: Document?
+    weak var delegate: VehicleInfoItemCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var downloadLabel: UILabel!
     
@@ -35,6 +41,8 @@ class VehicleInfoItemCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapDownload() {
-        
+        if let item = item {
+            delegate?.didTapDownload(document: item)
+        }
     }
 }

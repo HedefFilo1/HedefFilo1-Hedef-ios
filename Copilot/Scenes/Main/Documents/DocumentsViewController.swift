@@ -99,19 +99,18 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
         viewModel.presentDocumentPopup(document: item)
     }
     
-    func didTapDownload() {
-        
-    }
-    
-    func didTapUpload() {
-        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.item], asCopy: false)
-        //        documentPicker.modalPresentationStyle = .formSheet
-        //        present(documentPicker, animated: true, completion: nil)
+    func didTapDownload(item: Document) {
+        viewModel.getDocument(document: item)
     }
 }
 
 extension DocumentsViewController: DocumentsViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
+    }
+    
+    func showShareView(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
 }

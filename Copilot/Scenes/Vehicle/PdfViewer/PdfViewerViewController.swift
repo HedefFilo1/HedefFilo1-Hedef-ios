@@ -107,8 +107,6 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         pdfView.displayDirection = .vertical
         
         let document = PDFDocument(data: data)
-        //        pdfView.displayMode = .singlePageContinuous
-        
         pdfView.document = document
     }
 }

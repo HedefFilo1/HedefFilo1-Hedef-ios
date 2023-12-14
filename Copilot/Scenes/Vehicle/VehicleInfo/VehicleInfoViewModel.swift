@@ -15,6 +15,7 @@ protocol VehicleInfoViewModelCoordinatorDelegate: AnyObject {
 
 protocol VehicleInfoViewModelDelegate: BaseViewModelDelegate {
     func reloadData()
+    func showShareView(url: URL)
 }
 
 protocol VehicleInfoViewModelType: AnyObject {
@@ -23,6 +24,7 @@ protocol VehicleInfoViewModelType: AnyObject {
     var documents: [Document]? { get set }
     func goToDocument()
     func getDocuments()
+    func getDocument(document: Document)
     func goToVehicleGuide()
 }
 
@@ -57,5 +59,16 @@ class VehicleInfoViewModel: VehicleInfoViewModelType {
                                          message: error.message)
             }
         }
+    }
+}
+
+extension VehicleInfoViewModel: DocumentDownloader {
+    
+    func showShareView(url: URL) {
+        delegate?.showShareView(url: url)
+    }
+    
+    func showError(title: String, message: String) {
+        delegate?.showError(title: title, message: message)
     }
 }

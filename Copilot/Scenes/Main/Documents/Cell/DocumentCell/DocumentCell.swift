@@ -9,7 +9,7 @@ import UIKit
 
 protocol DocumentCellDelegate: AnyObject {
     func didTapDelete(item: Document)
-    func didTapDownload()
+    func didTapDownload(item: Document)
 }
 
 class DocumentCell: UICollectionViewCell, Reusable {
@@ -58,6 +58,8 @@ class DocumentCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapDownload() {
-        delegate?.didTapDownload()
+        if let item = item {
+            delegate?.didTapDownload(item: item)
+        }
     }
 }

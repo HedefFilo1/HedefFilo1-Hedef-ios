@@ -84,6 +84,8 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
         case 1:
             let cell: VehicleInfoItemCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.titleLabel.text = viewModel.documents?[indexPath.item].name
+            cell.item = viewModel.documents?[indexPath.item]
+            cell.delegate = self
             return cell
             
         case 2:
@@ -133,7 +135,7 @@ extension VehicleInfoViewController: UICollectionViewDataSource, UICollectionVie
     }
 }
 
-extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate {
+extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate, VehicleInfoItemCellDelegate {
     
     func didTapGuide() {
         viewModel.goToVehicleGuide()
@@ -142,10 +144,19 @@ extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate {
     func didTapRequests() {
         
     }
+    
+    func didTapDownload(document: Document) {
+        viewModel.getDocument(document: document)
+    }
 }
 
 extension VehicleInfoViewController: VehicleInfoViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
+    }
+    
+    func showShareView(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
 }

@@ -90,7 +90,9 @@ class Loading {
                    let current = selected.visibleViewController {
                     return current
                 }
-                
+                if let nav = tabbar.selectedViewController as? UINavigationController {
+                    return nav.topViewController
+                }
                 return tabbar.selectedViewController
             }
             
