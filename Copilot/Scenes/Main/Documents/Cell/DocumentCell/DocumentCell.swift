@@ -17,13 +17,10 @@ class DocumentCell: UICollectionViewCell, Reusable {
     var item: Document? {
         didSet {
             titleLabel.text = item?.name
-            dateLabel.text = item?.type
         }
     }
     weak var delegate: DocumentCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var deleteLabel: UILabel!
     @IBOutlet weak var downloadLabel: UILabel!
     
     override func awakeFromNib() {
@@ -41,20 +38,11 @@ class DocumentCell: UICollectionViewCell, Reusable {
         layer.borderWidth = 1
         layer.borderColor = UIColor.borderColor.cgColor
         titleLabel.apply(.blackS14B700)
-        dateLabel.apply(.greyS14R400)
-        deleteLabel.apply(.themeS12B700)
         downloadLabel.apply(.themeS12B700)
     }
     
     func setTexts() {
-        deleteLabel.text = Strings.delete
         downloadLabel.text = Strings.download
-    }
-    
-    @IBAction func didTapDelete() {
-        if let item = item {
-            delegate?.didTapDelete(item: item)
-        }
     }
     
     @IBAction func didTapDownload() {

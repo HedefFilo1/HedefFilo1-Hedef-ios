@@ -71,7 +71,7 @@ extension YourDocumentsTabCell: UICollectionViewDataSource, UICollectionViewDele
             height = 54
             
         case 1:
-            height = 75
+            height = 60
             
         case 2:
             height = 50
