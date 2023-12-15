@@ -18,6 +18,7 @@ protocol HomeViewModelViewDelegate: AnyObject {
     func setVehicle()
     func setAppointment()
     func setTire()
+    func setLastMaintenance()
     func showError(title: String, message: String)
     func showSuccess(title: String, message: String)
 }
@@ -27,6 +28,7 @@ protocol HomeViewModelType: AnyObject {
     var vehicle: Vehicle? { get set}
     var appointment: Case? { get set}
     var tire: Tire? { get set }
+    var last: MaintenanceLast? { get set }
     func getVehicle(shoudGetCase: Bool)
     func goToNearMe()
     func goToStandings()
@@ -42,6 +44,7 @@ class HomeViewModel: HomeViewModelType {
     var vehicle: Vehicle?
     var appointment: Case?
     var tire: Tire?
+    var last: MaintenanceLast?
     var mark: String = ""
     
     func getVehicle(shoudGetCase: Bool) {
@@ -97,10 +100,19 @@ class HomeViewModel: HomeViewModelType {
                 self.delegate?.setTire()
             }
             
-//            else if let error = error {
-//                self.delegate?.showError(title: Strings.errorTitle,
-//                                         message: error.message)
-//            }
+            self.getLastMaintenance()
+        }
+    }
+    
+    func getLastMaintenance() {
+        Loading.shared.show()
+        APIService.getLastMaintenance { [weak self] model, _ in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            if let model = model {
+                self.last = model
+                self.delegate?.setLastMaintenance()
+            }
         }
     }
     

@@ -26,13 +26,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-Jl-syl">
                         <rect key="frame" x="0.0" y="37" width="364" height="181"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yağ Değişimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Sa-9JS">
-                                <rect key="frame" x="16" y="16" width="98" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Yağ Değişimi Yağ Değişimi Yağ Değişimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Sa-9JS">
+                                <rect key="frame" x="16" y="16" width="242" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMC OTOMOTİV SAN.VE TİC.A.Ş." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-BV-Ryt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMC OTOMOTİV SAN.VE TİC.A.Ş." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-BV-Ryt">
                                 <rect key="frame" x="16" y="41" width="332" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -54,6 +54,7 @@
                             <constraint firstItem="R7x-BV-Ryt" firstAttribute="top" secondItem="LbY-Sa-9JS" secondAttribute="bottom" constant="4" id="E6O-ar-OLE"/>
                             <constraint firstItem="LbY-Sa-9JS" firstAttribute="leading" secondItem="G0K-Jl-syl" secondAttribute="leading" constant="16" id="UNR-lu-tbp"/>
                             <constraint firstItem="LbY-Sa-9JS" firstAttribute="top" secondItem="G0K-Jl-syl" secondAttribute="top" constant="16" id="ty0-XV-fQd"/>
+                            <constraint firstItem="jQn-XL-mmH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LbY-Sa-9JS" secondAttribute="trailing" constant="4" id="uFz-4W-4sz"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -71,8 +72,8 @@
             <connections>
                 <outlet property="containerView" destination="G0K-Jl-syl" id="aDD-7U-fk9"/>
                 <outlet property="dateLabel" destination="jQn-XL-mmH" id="Zno-cJ-ukj"/>
-                <outlet property="oilLabel" destination="LbY-Sa-9JS" id="fPN-O4-psb"/>
-                <outlet property="secondLabel" destination="R7x-BV-Ryt" id="dgL-AE-YBt"/>
+                <outlet property="partLabel" destination="LbY-Sa-9JS" id="fPN-O4-psb"/>
+                <outlet property="serviceLabel" destination="R7x-BV-Ryt" id="dgL-AE-YBt"/>
                 <outlet property="titleLabel" destination="Z7V-jH-sUq" id="d7C-q3-en8"/>
             </connections>
             <point key="canvasLocation" x="137.40458015267174" y="78.873239436619727"/>

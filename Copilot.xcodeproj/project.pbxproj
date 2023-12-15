@@ -41,6 +41,7 @@
 		892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892A8D182AC4EDB20020C1C4 /* Localization.plist */; };
 		892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1A2AC587690020C1C4 /* Strings.swift */; };
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
+		892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B23832B2C40680000E6E1 /* MaintenanceLast.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -265,6 +266,7 @@
 		892A8D182AC4EDB20020C1C4 /* Localization.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Localization.plist; sourceTree = "<group>"; };
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		892B23832B2C40680000E6E1 /* MaintenanceLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceLast.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1089,6 +1091,7 @@
 				89DCE86F2B21E03100AB1114 /* Campaign.swift */,
 				89F23BC32B29C0E30081DD85 /* ContentString.swift */,
 				89F23BC52B29EC220081DD85 /* Document.swift */,
+				892B23832B2C40680000E6E1 /* MaintenanceLast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1678,6 +1681,7 @@
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
+				892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,

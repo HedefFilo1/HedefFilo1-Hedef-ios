@@ -95,6 +95,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.delegate = self
             cell.appointment = viewModel.appointment
             cell.tire = viewModel.tire
+            cell.last = viewModel.last
             return cell
         
         default:
@@ -124,6 +125,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             if viewModel.tire == nil {
                 height -= 104 + 32
+            }
+            
+            if viewModel.last == nil {
+                height -= 112 + 32
             }
             
         default:
@@ -177,6 +182,10 @@ extension HomeViewController: HomeViewModelViewDelegate {
     }
     
     func setTire() {
+        collectionView.reloadData()
+    }
+    
+    func setLastMaintenance() {
         collectionView.reloadData()
     }
 }

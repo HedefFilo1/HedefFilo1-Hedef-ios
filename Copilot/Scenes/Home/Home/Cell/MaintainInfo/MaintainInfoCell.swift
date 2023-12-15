@@ -9,10 +9,18 @@ import UIKit
 
 class MaintainInfoCell: UICollectionViewCell, Reusable {
     
+    var last: MaintenanceLast? {
+        didSet {
+            serviceLabel.text = last?.serviceName
+            partLabel.text = last?.part
+            dateLabel.text = last?.displayDate
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var oilLabel: UILabel!
-    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var partLabel: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
@@ -30,13 +38,13 @@ class MaintainInfoCell: UICollectionViewCell, Reusable {
         containerView.layer.cornerRadius = 15
         containerView.layer.borderWidth = 1
         containerView.layer.borderColor = UIColor.borderColor.cgColor
-        oilLabel.apply(.blackS16B700)
-        secondLabel.apply(.greyS12M500)
+        partLabel.apply(.blackS16B700)
+        serviceLabel.apply(.greyS12M500)
         dateLabel.apply(.blackS12M500)
     }
     
     func setTexts() {
         titleLabel.text = Strings.latestMaintenanceInformation
-        oilLabel.text = Strings.periodicMaintenance
+        partLabel.text = Strings.periodicMaintenance
     }
 }

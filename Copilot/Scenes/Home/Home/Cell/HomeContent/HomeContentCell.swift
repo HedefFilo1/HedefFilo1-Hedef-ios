@@ -29,6 +29,12 @@ class HomeContentCell: UICollectionViewCell, Reusable {
         }
     }
     
+    var last: MaintenanceLast? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -70,6 +76,10 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             return tire == nil ? 0: 1
         }
         
+        if section == 3 {
+            return last == nil ? 0: 1
+        }
+        
         return 1
     }
     
@@ -91,6 +101,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
             
         case 3:
             let cell: MaintainInfoCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.last = last
             return cell
             
         case 4:
@@ -140,6 +151,10 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         }
         
         if section == 2, tire == nil {
+            height = 0
+        }
+        
+        if section == 3, last == nil {
             height = 0
         }
         return CGSize(width: 3, height: height)
