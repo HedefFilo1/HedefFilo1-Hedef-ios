@@ -16,12 +16,10 @@ class VehicleCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     let storyboard = UIStoryboard(storyboard: .vehicle)
-    weak var mainCoordinator: MainCoordinator?
     weak var delegate: VehicleCoordinatorDelegate?
     
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
-        mainCoordinator = MainCoordinator.current
     }
     
     override func start() {
@@ -69,7 +67,7 @@ extension VehicleCoordinator: HGSViewModelCoordinatorDelegate {
     }
     
     func getBackToMenu() {
-        mainCoordinator?.tabBarController?.selectedIndex = 4
+       
     }
 }
 
