@@ -29,11 +29,11 @@ class HGSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getTransitions()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        viewModel.getTransitions()
     }
     
     func setupUI() {
