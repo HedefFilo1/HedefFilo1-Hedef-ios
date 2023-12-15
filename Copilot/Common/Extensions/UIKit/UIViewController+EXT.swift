@@ -72,6 +72,12 @@ extension UIViewController {
         }
     }
     
+    func select(tab: Int) {
+        if let tabbar = self.tabBarController as? MainTabBarController {
+            tabbar.tabBarView.select(tab: tab)
+        }
+    }
+    
 }
 
 extension UINavigationController {
@@ -167,4 +173,8 @@ extension UIViewController {
     func showError(title: String, message: String) {
         showError(errorTitle: title, message: message)
     }
+    
+//    func showError(title: String, message: String, delegate: MessagePopupViewControllerDelegate? = nil) {
+//        showError(errorTitle: title, message: message, delegate: delegate)
+//    }
 }

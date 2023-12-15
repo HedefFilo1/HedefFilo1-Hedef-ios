@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="-258" y="-160"/>
         </scene>
-        <!--Item-->
+        <!--MenuViewController-->
         <scene sceneID="dET-Mi-mdD">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="kWM-W7-WRp" customClass="MenuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="kWM-W7-WRp" userLabel="MenuViewController" customClass="MenuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szk-DV-SVe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="Th9-pc-vZ7" firstAttribute="top" secondItem="szk-DV-SVe" secondAttribute="top" id="sg9-hh-07e"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fGL-2E-k3S"/>
+                    <tabBarItem key="tabBarItem" title="Menu" id="fGL-2E-k3S"/>
                     <connections>
                         <outlet property="collectionView" destination="5eD-wX-ZNM" id="70I-ys-JRG"/>
                     </connections>

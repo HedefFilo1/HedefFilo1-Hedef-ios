@@ -27,7 +27,7 @@ class MenuViewController: PopupViewController {
         setupUI()
         
 #if DEV_DEBUG
-        viewModel.showDocuments()
+//        viewModel.showDocuments()
 #endif
     }
     

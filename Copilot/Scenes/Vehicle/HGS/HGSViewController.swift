@@ -110,7 +110,17 @@ extension HGSViewController: HGSCellDelegate {
 }
 
 extension HGSViewController: HGSViewModelDelegate {
+    func showError(title: String, message: String, delegate: MessagePopupViewControllerDelegate?) {
+        showError(errorTitle: title, message: message, delegate: self)
+    }
+    
     func reloadData() {
         collectionView.reloadData()
+    }
+}
+
+extension HGSViewController: MessagePopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        select(tab: 4)
     }
 }

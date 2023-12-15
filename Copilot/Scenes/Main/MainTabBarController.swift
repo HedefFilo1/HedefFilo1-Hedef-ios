@@ -31,7 +31,6 @@ class MainTabBarController: UITabBarController {
         tabBar.isHidden = true
         setupTabBarView()
         moreNavigationController.isNavigationBarHidden = true
-        
     }
     
     func setupTabBarView() {

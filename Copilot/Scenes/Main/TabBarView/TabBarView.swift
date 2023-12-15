@@ -66,10 +66,14 @@ class TabBarView: UIView {
         }
     }
     
+    func select(tab: Int) {
+        delegate?.didSelect(tab: tab)
+        changeTab(index: tab)
+    }
+    
     @IBAction func didTab(_ sender: UIView) {
         let tag = sender.tag
-        delegate?.didSelect(tab: tag)
-        changeTab(index: tag)
+        select(tab: tag)
     }
     
     @IBAction func didTabMenu(_ sender: UIView) {

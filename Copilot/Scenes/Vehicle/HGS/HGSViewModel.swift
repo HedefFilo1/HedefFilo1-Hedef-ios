@@ -8,10 +8,11 @@
 import Foundation
 protocol HGSViewModelCoordinatorDelegate: AnyObject {
     func goToHGSDetail(transition: Transition)
+    func getBackToMenu()
 }
 
 protocol HGSViewModelDelegate: AnyObject {
-    func showError(title: String, message: String)
+    func showError(title: String, message: String, delegate: MessagePopupViewControllerDelegate?)
     func reloadData()
 }
 
@@ -44,15 +45,22 @@ class HGSViewModel: HGSViewModelType {
                 if model.count == 0 {
                     let message = App.getString(key: CodeStrings.hgsEmpty) ?? Strings.hgsEmpty
                     self.delegate?.showError(title: Strings.noHGS,
-                                             message: message)
+                                             message: message, delegate: self)
                 }
                 self.delegate?.reloadData()
             } else
             
             if let error = error {
                 self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
+                                         message: error.message, delegate: nil)
             }
         }
     }
+}
+
+extension HGSViewModel: MessagePopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        coordinatorDelegate?.getBackToMenu()
+    }
+    
 }
