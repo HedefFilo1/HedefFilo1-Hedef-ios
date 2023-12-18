@@ -73,6 +73,15 @@ extension String {
         let text = self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         return text.components(separatedBy: .whitespaces).joined()
     }
+    
+    func formatNumberToThousand() -> String {
+        let int = Int(self) ?? 0
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.groupingSeparator = "."
+        let formattedNumber = numberFormatter.string(from: NSNumber(value: int))
+        return formattedNumber ?? ""
+    }
 }
 
 extension Data {

@@ -24,9 +24,9 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
             nameLabel.text = "\(brand) \(model)"
             let rent = vehicle?.leaseDuration ?? "0"
             rentValueLabel.text = rent + " " + Strings.months
-            let distance = vehicle?.leaseDistanceLimit ?? "0"
+            let distance = vehicle?.leaseDistanceLimit.formatNumberToThousand() ?? "0"
             limitValueLabel.text = distance + " " + Strings.ckm
-            let last = vehicle?.lastKnownDistance ?? "0"
+            let last = vehicle?.lastKnownDistance.formatNumberToThousand() ?? "0"
             usedValueLabel.text = last + " " + Strings.ckm
             
             if let name = Persistence.avatarName {

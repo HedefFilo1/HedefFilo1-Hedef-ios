@@ -14,4 +14,25 @@ struct Vehicle: Decodable {
     let leaseDuration: String
     let leaseDistanceLimit: String
     let lastKnownDistance: String
+    
+    var name: String {
+        let brand = make
+        let model = model
+        return "\(brand) \(model)"
+    }
+    var lastKM: String {
+        let number = lastKnownDistance.formatNumberToThousand()
+        return "\(number) \(Strings.ckm)"
+    }
+    
+    var leaseKM: String {
+        let number = leaseDistanceLimit.formatNumberToThousand()
+        return "\(number) \(Strings.ckm)"
+    }
+    
+    var duration: String {
+        let number = leaseDuration ?? "0"
+        return "\(number) \(Strings.months)"
+    }
+
 }
