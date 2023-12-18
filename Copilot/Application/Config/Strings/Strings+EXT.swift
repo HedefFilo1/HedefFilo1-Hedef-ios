@@ -220,4 +220,8 @@ extension Strings {
     static var hgsEmpty: String {
         return localized(string: "hgsEmpty")
     }
+    
+    static var profileUpdatedSuccessfully: String {
+        return localized(string: "profileUpdatedSuccessfully")
+    }
 }

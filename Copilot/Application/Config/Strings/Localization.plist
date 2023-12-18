@@ -1067,12 +1067,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Google Map</string>
         </dict>
         
-        <key></key>
+        <key>profileUpdatedSuccessfully</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Profil başarıyla güncellendi</string>
             <key>en</key>
-            <string></string>
+            <string>Profile updated successfully</string>
         </dict>
         
         <key></key>

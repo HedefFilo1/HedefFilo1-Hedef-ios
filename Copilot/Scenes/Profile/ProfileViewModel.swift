@@ -52,7 +52,7 @@ class ProfileViewModel: ProfileViewModelType {
     }
     
     func submit(name: String, phone: String, email: String, id: String, licence: String) {
-        delegate?.showSuccess(title: "Successful", message: "Your profile updated.")
+        delegate?.showSuccess(title: "", message: Strings.profileUpdatedSuccessfully)
     }
     
     func goToResetPassword() {
