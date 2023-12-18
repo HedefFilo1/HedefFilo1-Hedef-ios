@@ -14,6 +14,7 @@ struct CodeStrings {
     static let enKey = "en"
     
     static let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    static let patternCharacter: Character = "#"
     static let phonePattern = "#### ### ## ##"
     static let error = "Error"
     static let phoneMask = "0555 555 55 55"
@@ -28,6 +29,7 @@ struct CodeStrings {
     static let damageKey = "copilotapp.upcoming_appointment_recordtype_Damage"
     static let tireChangeKey = "copilotapp.upcoming_appointment_recordtype_TireChange"
     static let vehicleGuidPdfUrl = "https://drive.google.com/file/d/1tXaArVnsTV42WKIX-25Uei-B49TrwcGI/view?usp=sharing"
+    static let plateNumberPattern = "## ### ###"
 }
 
 // MAKR: Network

@@ -11,7 +11,7 @@ class VehicleCell: UICollectionViewCell, Reusable {
     
     var vehicle: Vehicle? {
         didSet {
-            plateNumberLabel.text = vehicle?.plateNumber
+            plateNumberLabel.text = vehicle?.number
             let brand = vehicle?.make ?? "Brand"
             let model = vehicle?.model ?? ""
             nameLabel.text = "\(brand) \(model)"

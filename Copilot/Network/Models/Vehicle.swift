@@ -15,6 +15,11 @@ struct Vehicle: Decodable {
     let leaseDistanceLimit: String
     let lastKnownDistance: String
     
+    var number: String {
+        var number = plateNumber
+        return number?.applyPattern(pattern: CodeStrings.plateNumberPattern, replacementCharacter: CodeStrings.patternCharacter) ?? ""
+    }
+    
     var name: String {
         let brand = make
         let model = model
