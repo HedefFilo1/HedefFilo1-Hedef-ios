@@ -88,7 +88,7 @@ extension HGSViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 48, height: indexPath.section == 0 ? 150: 102)
+        return CGSize(width: collectionView.frame.width - 48, height: indexPath.section == 0 ? 150: 125)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
