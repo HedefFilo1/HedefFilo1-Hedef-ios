@@ -18,11 +18,10 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     var vehicle: Vehicle? {
         didSet {
             
-            modelLabel.text = vehicle?.model ?? "model"
-            if let plate = vehicle?.plateNumber {
-                modelLabel.text = plate
-            }
-            nameLabel.text = vehicle?.make ?? "Brand"
+            plateNumberLabel.text = vehicle?.plateNumber
+            let brand = vehicle?.make ?? "Brand"
+            let model = vehicle?.model ?? ""
+            nameLabel.text = "\(brand) \(model)"
             let rent = vehicle?.leaseDuration ?? "0"
             rentValueLabel.text = rent + " " + Strings.months
             let distance = vehicle?.leaseDistanceLimit ?? "0"
@@ -39,7 +38,7 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var plateNumberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rentLabel: UILabel!
     @IBOutlet weak var rentValueLabel: UILabel!
@@ -64,7 +63,7 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
         containerView.layer.cornerRadius = 15
         containerView.backgroundColor = .white
         containerView.boxShadow(xValue: 0, yValue: 20, radius: 35, color: .black, opacity: 0.1)
-        modelLabel.apply(.blackS16B700)
+        plateNumberLabel.apply(.blackS16B700)
         nameLabel.apply(.greyS12R400)
         rentLabel.apply(.greyS12R400)
         rentValueLabel.apply(.blackS12B700)

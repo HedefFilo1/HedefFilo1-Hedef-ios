@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -151,8 +149,8 @@
                 <outlet property="imageView" destination="IlN-bf-qxU" id="OUX-CI-xMP"/>
                 <outlet property="limitLabel" destination="yjB-zE-qwb" id="BMQ-UR-zaS"/>
                 <outlet property="limitValueLabel" destination="1cp-d4-irZ" id="eNz-Po-GFx"/>
-                <outlet property="modelLabel" destination="LSO-2K-Dcl" id="vEE-98-cg2"/>
                 <outlet property="nameLabel" destination="YOE-QP-qGq" id="A7t-Tr-F8s"/>
+                <outlet property="plateNumberLabel" destination="LSO-2K-Dcl" id="vEE-98-cg2"/>
                 <outlet property="rentLabel" destination="Blj-Ae-h0W" id="cao-QP-FFY"/>
                 <outlet property="rentValueLabel" destination="vVA-ab-fIr" id="YqZ-aS-J5F"/>
                 <outlet property="titleLabel" destination="yNX-pZ-hme" id="DT3-dS-wMo"/>
