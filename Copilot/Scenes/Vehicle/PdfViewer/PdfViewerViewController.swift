@@ -21,6 +21,8 @@ class PdfViewerViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var downloadView: UIView!
+    @IBOutlet weak var downloadLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -60,6 +62,7 @@ class PdfViewerViewController: UIViewController {
     
     func applyStyle() {
         titleLabel.apply(.blackS18B700)
+        downloadLabel.apply(.themeS16B700)
     }
     
     func setTexts() {
@@ -72,10 +75,19 @@ class PdfViewerViewController: UIViewController {
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
+    
+    @IBAction func didTapDowndload(_ sender: UIButton) {
+        viewModel.downloadDoc()
+    }
 }
 
 extension PdfViewerViewController: PdfViewerViewModelDelegate {
     
+    func showShareView(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+
     func loadDocument() {
         let string = CodeStrings.vehicleGuidPdfUrl
         guard let url = URL(string: string) else {
@@ -85,9 +97,10 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         container.addSubview(webView)
         webView.frame = container.bounds
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        webView.backgroundColor = .gray
+//        webView.backgroundColor = .gray
         webView.clipsToBounds = true
         webView.load(URLRequest(url: url))
+        downloadView.isHidden = true
     }
     
     func setDocument() {
@@ -101,7 +114,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         container.addSubview(pdfView)
         pdfView.frame = container.bounds
         pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        pdfView.backgroundColor = .gray
+//        pdfView.backgroundColor = .gray
         pdfView.clipsToBounds = true
         pdfView.autoScales = true
         pdfView.displayDirection = .vertical

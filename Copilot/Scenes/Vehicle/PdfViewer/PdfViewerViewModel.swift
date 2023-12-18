@@ -12,6 +12,7 @@ protocol PdfViewerViewModelCoordinatorDelegate: AnyObject {
 }
 
 protocol PdfViewerViewModelDelegate: BaseViewModelDelegate {
+    func showShareView(url: URL)
     func setDocument()
 }
 
@@ -22,6 +23,7 @@ protocol PdfViewerViewModelType: AnyObject {
     var conetent: DocumentContent? { get set }
     func getBack()
     func getDocument()
+    func downloadDoc()
 }
 
 class PdfViewerViewModel: PdfViewerViewModelType {
@@ -56,5 +58,22 @@ class PdfViewerViewModel: PdfViewerViewModelType {
                 self.delegate?.setDocument()
             }
         }
+    }
+    
+    func downloadDoc() {
+        if let content = conetent {
+            saveBase64StringToPDF(document: content)
+        }
+    }
+}
+
+extension PdfViewerViewModel: DocumentDownloader {
+    
+    func showShareView(url: URL) {
+        delegate?.showShareView(url: url)
+    }
+    
+    func showError(title: String, message: String) {
+        delegate?.showError(title: title, message: message)
     }
 }
