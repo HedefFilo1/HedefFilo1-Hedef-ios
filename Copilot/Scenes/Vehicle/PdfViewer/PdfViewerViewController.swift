@@ -77,7 +77,11 @@ class PdfViewerViewController: UIViewController {
     }
     
     @IBAction func didTapDowndload(_ sender: UIButton) {
-        viewModel.downloadDoc()
+        if viewModel.document == nil, let url = URL(string: CodeStrings.vehicleGuidPdfUrl) {
+            showShareView(url: url)
+        } else {
+            viewModel.downloadDoc()
+        }
     }
 }
 
@@ -100,7 +104,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
 //        webView.backgroundColor = .gray
         webView.clipsToBounds = true
         webView.load(URLRequest(url: url))
-        downloadView.isHidden = true
+        
     }
     
     func setDocument() {

@@ -20,7 +20,7 @@ struct CodeStrings {
     static let phoneMask = "0555 555 55 55"
     
     static let GMSServiceAPIKey = "AIzaSyD4qUo185FsJScEIoM34rO9juJPSvqZ2-E"
-//    static let googlePlacesAPIKey = "AIzaSyByiNsyzjZ0wpUUpfc5e1Yer7TcRM8j190"
+    //    static let googlePlacesAPIKey = "AIzaSyByiNsyzjZ0wpUUpfc5e1Yer7TcRM8j190"
     static let googlePlacesAPIKey = "AIzaSyBfH6ZJs4Efbri9v4MxhbTBX6W_RAtDsWY"
     
     static let hgsEmpty = "copilotapp.message.hgs_empty"
@@ -28,7 +28,16 @@ struct CodeStrings {
     static let mechanicalFailurKey = "copilotapp.upcoming_appointment_recordtype_MechanicalFailure"
     static let damageKey = "copilotapp.upcoming_appointment_recordtype_Damage"
     static let tireChangeKey = "copilotapp.upcoming_appointment_recordtype_TireChange"
-    static let vehicleGuidPdfUrl = "https://drive.google.com/file/d/1tXaArVnsTV42WKIX-25Uei-B49TrwcGI/view?usp=sharing"
+    
+    static var vehicleGuidPdfUrl: String {
+        let url = App.getString(key: CodeStrings.vehicleGuideKey)
+        if let url = url, url.count > 0 {
+            return url
+        } else {
+            return "https://drive.google.com/file/d/1tXaArVnsTV42WKIX-25Uei-B49TrwcGI/view?usp=sharing"
+        }
+    }
+    static let vehicleGuideKey = "copilotapp.vehicle_guide_pdf_url"
     static let plateNumberPattern = "## ### ###"
 }
 
@@ -68,11 +77,11 @@ extension CodeStrings {
     static let decodingResponseValueNotFoundCode = "-113"
     static let decodingResponseValueNotFoundTitle = "Decoding Response: -113"
     static let decodingResponseValueNotFoundMessage = "Value not found"
-
+    
     static let decodingResponseTypeMismatchCode = "-114"
     static let decodingResponseTypeMismatchTitle = "Decoding Response: -114"
     static let decodingResponseTypeMismatchMessage = "Type mismatch"
-   
+    
     static let decodingResponseUnknownResponseCode = "-115"
     static let decodingResponseUnknownResponseTitle = "Decoding Response: -115"
     

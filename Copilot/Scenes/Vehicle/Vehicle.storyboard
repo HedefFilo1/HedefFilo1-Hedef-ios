@@ -643,7 +643,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvT-xI-Cfu">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvT-xI-Cfu">
                                         <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="44"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
@@ -688,7 +688,7 @@
                     <connections>
                         <outlet property="container" destination="0OP-l7-wBK" id="EQu-FP-D4s"/>
                         <outlet property="downloadLabel" destination="gw5-xl-Gqa" id="605-m9-FsI"/>
-                        <outlet property="downloadView" destination="OvT-xI-Cfu" id="3FE-QR-sjr"/>
+                        <outlet property="downloadView" destination="E58-7o-r1V" id="PQm-RO-O3Z"/>
                         <outlet property="loadingLabel" destination="zB2-zk-whu" id="jRw-o1-lwy"/>
                         <outlet property="titleLabel" destination="0YA-M1-mMp" id="Yy5-Ng-ytT"/>
                     </connections>
