@@ -256,5 +256,20 @@ extension Strings {
     static var pastServiceTransactions: String {
         return localized(string: "pastServiceTransactions")
     }
-
+    
+    static var tireOperations: String {
+        return localized(string: "tireOperations")
+    }
+    
+    static var requestNewTire: String {
+        return localized(string: "requestNewTire")
+    }
+    
+    static var tireDamageAppointment: String {
+        return localized(string: "tireDamageAppointment")
+    }
+    
+    static var tireChangeAppointment: String {
+        return localized(string: "tireChangeAppointment")
+    }
 }

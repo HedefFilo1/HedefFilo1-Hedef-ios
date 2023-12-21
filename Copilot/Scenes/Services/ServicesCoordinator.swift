@@ -31,6 +31,17 @@ class ServicesCoordinator: Coordinator {
     }
 }
 
-extension ServicesCoordinator {
-    
+extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
+    func goToLastikOperations() {
+        let viewController: LastikOperationsViewController = storyboard.instantiateViewController()
+        viewController.viewModel = LastikOperationsViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
+    }
 }

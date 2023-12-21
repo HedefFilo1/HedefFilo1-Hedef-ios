@@ -22,6 +22,8 @@
 		891BFB6B2B348BB3009BD793 /* CPGreyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6A2B348BB3009BD793 /* CPGreyButton.swift */; };
 		891BFB6E2B349667009BD793 /* ServiceTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */; };
 		891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */; };
+		891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */; };
+		891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
@@ -265,6 +267,8 @@
 		891BFB6A2B348BB3009BD793 /* CPGreyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPGreyButton.swift; sourceTree = "<group>"; };
 		891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTabViewController.swift; sourceTree = "<group>"; };
 		891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTabViewModel.swift; sourceTree = "<group>"; };
+		891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewController.swift; sourceTree = "<group>"; };
+		891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewModel.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -584,6 +588,15 @@
 				891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */,
 			);
 			path = ServiceTab;
+			sourceTree = "<group>";
+		};
+		891BFB712B34C51B009BD793 /* LastikOperations */ = {
+			isa = PBXGroup;
+			children = (
+				891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */,
+				891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */,
+			);
+			path = LastikOperations;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -1160,6 +1173,7 @@
 				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
+				891BFB712B34C51B009BD793 /* LastikOperations */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1793,6 +1807,7 @@
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
+				891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
@@ -1943,6 +1958,7 @@
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
+				891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				8934D4F62B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,

@@ -1147,5 +1147,62 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Past Service Transactions</string>
         </dict>
         
+        <key>tireOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik İşlemleri</string>
+            <key>en</key>
+            <string>Tire Operations</string>
+        </dict>
+       
+        
+        <key>requestNewTire</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Lastik Talep Et</string>
+            <key>en</key>
+            <string>Request New Tires</string>
+        </dict>
+        
+        <key>tireDamageAppointment</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik Hasarı Randevusu Al</string>
+            <key>en</key>
+            <string>Make a Tire Damage Appointment</string>
+        </dict>
+        
+        <key>tireChangeAppointment</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik Değişimi Randevusu Al</string>
+            <key>en</key>
+            <string>Make a Tire Change Appointment</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
     </dict>
 </plist>

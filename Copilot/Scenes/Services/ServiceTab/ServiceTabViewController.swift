@@ -10,11 +10,13 @@ import UIKit
 
 class ServiceTabViewController: UIViewController {
     
-    var viewModel: ServiceTabViewModelType! {
-        didSet {
-            viewModel.delegate = self
-        }
-    }
+    lazy var viewModel: ServiceTabViewModelType = {
+        let viewModel = ServiceTabViewModel()
+        let coordinator = ServicesCoordinator(with: self.navigationController!)
+        viewModel.coordinatorDelegate = coordinator
+        viewModel.delegate = self
+        return viewModel
+    }()
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -69,14 +71,13 @@ class ServiceTabViewController: UIViewController {
     }
     
     @IBAction func didTapLastikButton() {
-        
+        viewModel.goToLastikOperations()
     }
     
     @IBAction func didTapPastServicesButton() {
         
     }
 }
-
 
 extension ServiceTabViewController: ServiceTabViewModelDelegate {
     
