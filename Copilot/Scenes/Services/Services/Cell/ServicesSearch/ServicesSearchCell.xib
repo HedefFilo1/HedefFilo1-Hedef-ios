@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServicesSearchCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="99"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5On-dJ-yrI">
+                        <rect key="frame" x="237" y="24.666666666666671" width="83" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djG-RF-urn">
+                                <rect key="frame" x="16" y="14.333333333333332" width="51" height="20.999999999999996"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-rA-KjR">
+                                <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aA2-rA-KjR" firstAttribute="top" secondItem="5On-dJ-yrI" secondAttribute="top" id="6UB-B6-vke"/>
+                            <constraint firstAttribute="trailing" secondItem="djG-RF-urn" secondAttribute="trailing" constant="16" id="Qq6-eB-9ho"/>
+                            <constraint firstAttribute="trailing" secondItem="aA2-rA-KjR" secondAttribute="trailing" id="Tx9-44-sLz"/>
+                            <constraint firstItem="djG-RF-urn" firstAttribute="centerY" secondItem="5On-dJ-yrI" secondAttribute="centerY" id="a5q-hg-mjG"/>
+                            <constraint firstItem="aA2-rA-KjR" firstAttribute="leading" secondItem="5On-dJ-yrI" secondAttribute="leading" id="bE1-aj-f9x"/>
+                            <constraint firstAttribute="bottom" secondItem="aA2-rA-KjR" secondAttribute="bottom" id="dH4-6r-otT"/>
+                            <constraint firstItem="djG-RF-urn" firstAttribute="leading" secondItem="5On-dJ-yrI" secondAttribute="leading" constant="16" id="o1b-Ef-9GO"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-PU-RHX" customClass="CPSearchTextField" customModule="Copilot" customModuleProvider="target">
+                        <rect key="frame" x="16" y="24.666666666666671" width="213" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="B1w-Sk-bLY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5On-dJ-yrI" secondAttribute="trailing" constant="16" id="Gg3-nv-dXy"/>
+                <constraint firstItem="5On-dJ-yrI" firstAttribute="top" secondItem="h8P-PU-RHX" secondAttribute="top" id="Mug-5D-K4f"/>
+                <constraint firstItem="h8P-PU-RHX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="SAn-SJ-y8C"/>
+                <constraint firstItem="h8P-PU-RHX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="aY0-r8-zJ7"/>
+                <constraint firstItem="5On-dJ-yrI" firstAttribute="leading" secondItem="h8P-PU-RHX" secondAttribute="trailing" constant="8" id="sdf-lG-44E"/>
+                <constraint firstItem="5On-dJ-yrI" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wi2-Ch-YDK"/>
+                <constraint firstItem="5On-dJ-yrI" firstAttribute="bottom" secondItem="h8P-PU-RHX" secondAttribute="bottom" id="zaI-ym-jDH"/>
+            </constraints>
+            <size key="customSize" width="336" height="99"/>
+            <connections>
+                <outlet property="filterLabel" destination="djG-RF-urn" id="tuU-GX-iEY"/>
+                <outlet property="filterView" destination="5On-dJ-yrI" id="faL-4O-dGw"/>
+                <outlet property="searchTextField" destination="h8P-PU-RHX" id="Xw8-Ws-Caz"/>
+            </connections>
+            <point key="canvasLocation" x="99.236641221374043" y="36.971830985915496"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

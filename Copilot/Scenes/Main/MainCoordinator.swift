@@ -110,6 +110,10 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
     func showVehicleHGS() {
         tabBarController?.setSelectedIndex(index: 9)
     }
+    
+    func showServices() {
+        tabBarController?.setSelectedIndex(index: 10)
+    }
 }
 
 extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {

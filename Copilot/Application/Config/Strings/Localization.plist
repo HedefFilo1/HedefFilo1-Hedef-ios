@@ -947,12 +947,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Type the Service Name or What You Are Looking for</string>
         </dict>
         
-        <key></key>
+        <key>servicesFound</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis Bulundu</string>
             <key>en</key>
-            <string></string>
+            <string>Services Found</string>
         </dict>
         
         <key>months</key>
@@ -1075,46 +1075,6 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Profile updated successfully</string>
         </dict>
         
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
         <key>noHGS</key>
         <dict>
             <key>tr</key>
@@ -1129,6 +1089,46 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>90 gün içerisinde HGS işleminiz bulunmamaktadır.</string>
             <key>en</key>
             <string>You have not had an HGS transaction within 90 days.</string>
+        </dict>
+        
+        <key>contractedServices</key>
+        <dict>
+            <key>tr</key>
+            <string>Hedef Filo Anlaşmalı Servisler</string>
+            <key>en</key>
+            <string>Hedef Filo's Contracted Services</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
         </dict>
         
     </dict>

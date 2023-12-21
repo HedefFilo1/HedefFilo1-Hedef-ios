@@ -149,6 +149,21 @@
 		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
 		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
 		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
+		89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A908B22B31A6DB00BC7727 /* Services.storyboard */; };
+		89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */; };
+		89A908B82B31A70200BC7727 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B72B31A70200BC7727 /* ServicesViewController.swift */; };
+		89A908BA2B31A70B00BC7727 /* ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B92B31A70B00BC7727 /* ServicesViewModel.swift */; };
+		89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908BB2B31A75400BC7727 /* HeaderCell.swift */; };
+		89A908BE2B31A75400BC7727 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908BC2B31A75400BC7727 /* HeaderCell.xib */; };
+		89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908C02B31A92B00BC7727 /* ContentCell.swift */; };
+		89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908C12B31A92B00BC7727 /* ContentCell.xib */; };
+		89A908CB2B31ABA400BC7727 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */; };
+		89A908CC2B31ABA400BC7727 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */; };
+		89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */; };
+		89A908D12B31ADF600BC7727 /* ServicesItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */; };
+		89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */; };
+		89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */; };
+		89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */; };
 		89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */; };
 		89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A412AD85EC900D3BE80 /* TabBarView.swift */; };
 		89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */; };
@@ -377,6 +392,21 @@
 		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
+		89A908B22B31A6DB00BC7727 /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
+		89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCoordinator.swift; sourceTree = "<group>"; };
+		89A908B72B31A70200BC7727 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		89A908B92B31A70B00BC7727 /* ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewModel.swift; sourceTree = "<group>"; };
+		89A908BB2B31A75400BC7727 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		89A908BC2B31A75400BC7727 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		89A908C02B31A92B00BC7727 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		89A908C12B31A92B00BC7727 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
+		89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
+		89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemsCell.swift; sourceTree = "<group>"; };
+		89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemsCell.xib; sourceTree = "<group>"; };
+		89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemCell.swift; sourceTree = "<group>"; };
+		89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemCell.xib; sourceTree = "<group>"; };
+		89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderParluxLayout.swift; sourceTree = "<group>"; };
 		89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		89B07A412AD85EC900D3BE80 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		89B07A442AD86CF200D3BE80 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -527,6 +557,18 @@
 				891B60D12AF1206500D6F09C /* KMUsedViewController.swift */,
 			);
 			path = KMUsed;
+			sourceTree = "<group>";
+		};
+		891BFB692B347012009BD793 /* ParluxViews */ = {
+			isa = PBXGroup;
+			children = (
+				89A908BB2B31A75400BC7727 /* HeaderCell.swift */,
+				89A908BC2B31A75400BC7727 /* HeaderCell.xib */,
+				89A908C02B31A92B00BC7727 /* ContentCell.swift */,
+				89A908C12B31A92B00BC7727 /* ContentCell.xib */,
+				89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */,
+			);
+			path = ParluxViews;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -1096,6 +1138,63 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		89A908B12B31A6C400BC7727 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
+				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
+				89A908B62B31A6F300BC7727 /* Services */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		89A908B62B31A6F300BC7727 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89A908B72B31A70200BC7727 /* ServicesViewController.swift */,
+				89A908B92B31A70B00BC7727 /* ServicesViewModel.swift */,
+				89A908BF2B31A75900BC7727 /* Cell */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		89A908BF2B31A75900BC7727 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89A908C82B31AB8000BC7727 /* ServicesSearch */,
+				89A908CD2B31ADD100BC7727 /* ServicesItems */,
+				89A908D22B31AE9A00BC7727 /* ServicesItem */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89A908C82B31AB8000BC7727 /* ServicesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */,
+				89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */,
+			);
+			path = ServicesSearch;
+			sourceTree = "<group>";
+		};
+		89A908CD2B31ADD100BC7727 /* ServicesItems */ = {
+			isa = PBXGroup;
+			children = (
+				89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */,
+				89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */,
+			);
+			path = ServicesItems;
+			sourceTree = "<group>";
+		};
+		89A908D22B31AE9A00BC7727 /* ServicesItem */ = {
+			isa = PBXGroup;
+			children = (
+				89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */,
+				89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */,
+			);
+			path = ServicesItem;
+			sourceTree = "<group>";
+		};
 		89B07A3E2AD85A3E00D3BE80 /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1194,6 +1293,7 @@
 				896CB3412AD5BD610048025A /* Home */,
 				89B07A4F2AD9351700D3BE80 /* Profile */,
 				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
+				89A908B12B31A6C400BC7727 /* Services */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1215,6 +1315,7 @@
 				899CF5762AE1915E006D85E4 /* Loading.swift */,
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
 				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
+				891BFB692B347012009BD793 /* ParluxViews */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1536,13 +1637,18 @@
 				89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */,
 				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
+				89A908BE2B31A75400BC7727 /* HeaderCell.xib in Resources */,
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
+				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
+				89A908CC2B31ABA400BC7727 /* ServicesSearchCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
+				89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
+				89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
 				89DF07142AF0F4DA00892B1D /* StandingCell.xib in Resources */,
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
@@ -1568,6 +1674,7 @@
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
+				89A908D12B31ADF600BC7727 /* ServicesItemsCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
@@ -1723,6 +1830,7 @@
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
+				89A908CB2B31ABA400BC7727 /* ServicesSearchCell.swift in Sources */,
 				89E0458B2B04D3EB00745E73 /* DocumentCell.swift in Sources */,
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
@@ -1732,11 +1840,14 @@
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
+				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
+				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
+				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
@@ -1756,9 +1867,11 @@
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
+				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
+				89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
@@ -1793,6 +1906,7 @@
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
+				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
@@ -1821,12 +1935,14 @@
 				89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
+				89A908BA2B31A70B00BC7727 /* ServicesViewModel.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
 				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
+				89A908B82B31A70200BC7727 /* ServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
@@ -1971,7 +2087,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2005,7 +2121,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2099,7 +2215,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2187,7 +2303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

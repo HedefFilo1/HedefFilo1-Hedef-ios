@@ -224,4 +224,13 @@ extension Strings {
     static var profileUpdatedSuccessfully: String {
         return localized(string: "profileUpdatedSuccessfully")
     }
+    
+    static var contractedServices: String {
+        return localized(string: "contractedServices")
+    }
+   
+    static var servicesFound: String {
+        return localized(string: "servicesFound")
+    }
+
 }
