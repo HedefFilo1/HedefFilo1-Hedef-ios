@@ -7,24 +7,24 @@
 
 import Foundation
 
-protocol ServicesViewModelCoordinatorDelegate: AnyObject {
+protocol VehicleServicesVMCoordinatorDelegate: AnyObject {
 
 }
 
-protocol ServicesViewModelDelegate: BaseViewModelDelegate {
+protocol VehicleServicesViewModelDelegate: BaseViewModelDelegate {
     func reloadData()
 }
 
-protocol ServicesViewModelType: AnyObject {
-    var coordinatorDelegate: ServicesViewModelCoordinatorDelegate? { get set }
-    var delegate: ServicesViewModelDelegate? { get set }
+protocol VehicleServicesViewModelType: AnyObject {
+    var coordinatorDelegate: VehicleServicesVMCoordinatorDelegate? { get set }
+    var delegate: VehicleServicesViewModelDelegate? { get set }
     var services: [Supplier]? { get set }
     func getServices()
 }
 
-class ServicesViewModel: ServicesViewModelType {
-    weak var coordinatorDelegate: ServicesViewModelCoordinatorDelegate?
-    weak var delegate: ServicesViewModelDelegate?
+class VehicleServicesViewModel: VehicleServicesViewModelType {
+    weak var coordinatorDelegate: VehicleServicesVMCoordinatorDelegate?
+    weak var delegate: VehicleServicesViewModelDelegate?
     var services: [Supplier]?
     
     func getServices() {
@@ -35,8 +35,7 @@ class ServicesViewModel: ServicesViewModelType {
             guard let self = self else { return }
             
             if let model = model {
-                let fder = Array(model.dropLast(1))
-                self.services = fder
+                self.services = model
                 self.delegate?.reloadData()
             } else
             

@@ -31,6 +31,6 @@ class ServicesCoordinator: Coordinator {
     }
 }
 
-extension ServicesCoordinator: ServicesViewModelCoordinatorDelegate {
+extension ServicesCoordinator {
     
 }

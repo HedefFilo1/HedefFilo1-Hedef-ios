@@ -1099,36 +1099,52 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Hedef Filo's Contracted Services</string>
         </dict>
         
-        <key></key>
+        <key>service</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis</string>
             <key>en</key>
-            <string></string>
+            <string>Service</string>
         </dict>
         
-        <key></key>
+        <key>selectService</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen servis talep ettiğiniz konuyu seçin.</string>
             <key>en</key>
-            <string></string>
+            <string>Please select the Service that you want.</string>
         </dict>
         
-        <key></key>
+        <key>care</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakım</string>
             <key>en</key>
-            <string></string>
+            <string>Care</string>
         </dict>
         
-        <key></key>
+        <key>fault</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza</string>
             <key>en</key>
-            <string></string>
+            <string>Fault</string>
+        </dict>
+        
+        <key>lastik</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik</string>
+            <key>en</key>
+            <string>Lastik</string>
+        </dict>
+        
+        <key>pastServiceTransactions</key>
+        <dict>
+            <key>tr</key>
+            <string>Geçmiş Servis İşlemleri</string>
+            <key>en</key>
+            <string>Past Service Transactions</string>
         </dict>
         
     </dict>

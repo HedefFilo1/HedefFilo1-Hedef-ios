@@ -53,7 +53,7 @@ class MainTabBarController: UITabBarController {
         
 #if DEV_DEBUG
         // just for test
-        setSelectedIndex(index: 10)
+        setSelectedIndex(index: 1)
 #endif
     }
     

@@ -697,6 +697,67 @@
             </objects>
             <point key="canvasLocation" x="1453" y="156"/>
         </scene>
+        <!--Services View Controller-->
+        <scene sceneID="7Ky-Fl-2Yf">
+            <objects>
+                <viewController restorationIdentifier="VehicleServicesViewController" storyboardIdentifier="VehicleServicesViewController" id="atY-3W-Fmp" userLabel="Services View Controller" customClass="VehicleServicesViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EvJ-W7-e53">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-rx-84q">
+                                <rect key="frame" x="0.0" y="143" width="393" height="709"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hedef Filo Anlaşmalı Servisler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lz-hA-hn5">
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Srx-wE-uuL">
+                                        <rect key="frame" x="0.0" y="57" width="393" height="618"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJY-cL-SoQ">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9lz-hA-hn5" firstAttribute="top" secondItem="Lwc-rx-84q" secondAttribute="top" constant="24" id="FlX-Le-nJZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Srx-wE-uuL" secondAttribute="trailing" id="GW9-P6-hgR"/>
+                                    <constraint firstAttribute="trailing" secondItem="9lz-hA-hn5" secondAttribute="trailing" constant="16" id="HvJ-43-nC1"/>
+                                    <constraint firstItem="Srx-wE-uuL" firstAttribute="top" secondItem="9lz-hA-hn5" secondAttribute="bottom" constant="12" id="KGb-0d-1XZ"/>
+                                    <constraint firstItem="Srx-wE-uuL" firstAttribute="leading" secondItem="Lwc-rx-84q" secondAttribute="leading" id="gxV-xS-ecG"/>
+                                    <constraint firstItem="9lz-hA-hn5" firstAttribute="leading" secondItem="Lwc-rx-84q" secondAttribute="leading" constant="16" id="qz5-Iq-QAA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fbL-3p-pmV"/>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="fbL-3p-pmV" firstAttribute="trailing" secondItem="Lwc-rx-84q" secondAttribute="trailing" id="0Ky-eM-TSQ"/>
+                            <constraint firstItem="Lwc-rx-84q" firstAttribute="top" secondItem="fbL-3p-pmV" secondAttribute="top" constant="84" id="7MR-Ag-id3"/>
+                            <constraint firstAttribute="bottom" secondItem="Lwc-rx-84q" secondAttribute="bottom" id="Kw5-Sp-vnn"/>
+                            <constraint firstItem="Lwc-rx-84q" firstAttribute="leading" secondItem="fbL-3p-pmV" secondAttribute="leading" id="PDh-Jy-gSe"/>
+                            <constraint firstItem="fbL-3p-pmV" firstAttribute="bottom" secondItem="Srx-wE-uuL" secondAttribute="bottom" id="lhr-lC-orE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="NVs-YE-Prp"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Srx-wE-uuL" id="iCW-XP-PrL"/>
+                        <outlet property="contentView" destination="Lwc-rx-84q" id="Abc-5V-Rxg"/>
+                        <outlet property="titleLabel" destination="9lz-hA-hn5" id="Slx-3g-2Lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLC-fT-KtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="1633"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>

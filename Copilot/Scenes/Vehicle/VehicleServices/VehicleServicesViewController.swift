@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class ServicesViewController: UIViewController {
+class VehicleServicesViewController: UIViewController {
 
-    lazy var viewModel: ServicesViewModelType = {
-        let viewModel = ServicesViewModel()
-        let coordinator = ServicesCoordinator(with: self.navigationController!)
+    lazy var viewModel: VehicleServicesViewModelType = {
+        let viewModel = VehicleServicesViewModel()
+        let coordinator = VehicleCoordinator(with: self.navigationController!)
         viewModel.coordinatorDelegate = coordinator
         viewModel.delegate = self
         return viewModel
@@ -60,7 +60,7 @@ class ServicesViewController: UIViewController {
     }
 }
 
-extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension VehicleServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -105,7 +105,7 @@ extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
-extension ServicesViewController: ServicesViewModelDelegate {
+extension VehicleServicesViewController: VehicleServicesViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

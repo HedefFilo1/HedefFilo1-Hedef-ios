@@ -232,5 +232,29 @@ extension Strings {
     static var servicesFound: String {
         return localized(string: "servicesFound")
     }
+    
+    static var selectService: String {
+        return localized(string: "selectService")
+    }
+    
+    static var service: String {
+        return localized(string: "service")
+    }
+    
+    static var care: String {
+        return localized(string: "care")
+    }
+    
+    static var fault: String {
+        return localized(string: "fault")
+    }
+    
+    static var lastik: String {
+        return localized(string: "lastik")
+    }
+    
+    static var pastServiceTransactions: String {
+        return localized(string: "pastServiceTransactions")
+    }
 
 }

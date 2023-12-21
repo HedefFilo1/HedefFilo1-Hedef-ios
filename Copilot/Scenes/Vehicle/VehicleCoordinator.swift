@@ -79,3 +79,7 @@ extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate,
         navigationController.popViewController(animated: true)
     }
 }
+
+extension VehicleCoordinator: VehicleServicesVMCoordinatorDelegate {
+    
+}

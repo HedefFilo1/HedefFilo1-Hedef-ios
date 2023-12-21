@@ -10,25 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Servis-->
-        <scene sceneID="gD1-yK-Cx6">
-            <objects>
-                <viewController id="feB-Io-dWL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GiN-rg-D65">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="97x-ae-Tjd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Servis" image="toolIcon" selectedImage="toolSelectedIcon" id="Je3-gx-8nF">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JDr-lI-KJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="552" y="-1163"/>
-        </scene>
         <!--Kaza/Hasar-->
         <scene sceneID="7b0-SK-sS7">
             <objects>
@@ -46,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbD-wb-msJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="-1163"/>
+            <point key="canvasLocation" x="-396" y="-1201"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="L9u-pZ-ceZ">
@@ -59,7 +40,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="iPo-e9-6Dx" kind="relationship" relationship="viewControllers" id="3zS-hU-xs3"/>
-                        <segue destination="feB-Io-dWL" kind="relationship" relationship="viewControllers" id="rVk-Xi-ixd"/>
+                        <segue destination="qkY-eX-3wq" kind="relationship" relationship="viewControllers" id="4S1-fg-aKb"/>
                         <segue destination="4El-IP-rXy" kind="relationship" relationship="viewControllers" id="0bq-a6-Hvx"/>
                         <segue destination="875-2V-Xqf" kind="relationship" relationship="viewControllers" id="dKS-dz-bsS"/>
                         <segue destination="kWM-W7-WRp" kind="relationship" relationship="viewControllers" id="RZS-IB-Ph5"/>
@@ -84,6 +65,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xY3-r2-tLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-261" y="-337"/>
+        </scene>
+        <!--Services-->
+        <scene sceneID="9C0-MV-EXP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Services" id="qkY-eX-3wq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YHn-YN-plm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iha-QX-ayi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="-423"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dJC-Mj-Csy">
@@ -536,10 +527,10 @@
             </objects>
             <point key="canvasLocation" x="-282" y="1604"/>
         </scene>
-        <!--Services-->
+        <!--VehicleServicesViewController-->
         <scene sceneID="UuA-QA-bCp">
             <objects>
-                <viewControllerPlaceholder storyboardName="Services" id="f9b-kO-mwp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Vehicle" referencedIdentifier="VehicleServicesViewController" id="f9b-kO-mwp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Iga-ym-asi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voS-g1-Yvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -789,8 +780,6 @@
         <image name="helpSelectedIcon" width="24.333333969116211" height="24"/>
         <image name="logo" width="254" height="142"/>
         <image name="mockCampaignImage" width="295" height="120"/>
-        <image name="toolIcon" width="24.333333969116211" height="24"/>
-        <image name="toolSelectedIcon" width="24.333333969116211" height="24"/>
         <namedColor name="borderColor">
             <color red="0.92941176470588238" green="0.92941176470588238" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
