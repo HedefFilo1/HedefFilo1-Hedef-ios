@@ -14,7 +14,11 @@ protocol HomeCoordinatorDelegate: AnyObject {
 
 class HomeCoordinator: Coordinator {
     
-    let navigationController: UINavigationController
+    lazy var navigationController: UINavigationController = {
+        let navVC = UINavigationController()
+        return navVC
+    }()
+    
     let storyboard = UIStoryboard(storyboard: .home)
     weak var delegate: HomeCoordinatorDelegate?
     
@@ -27,13 +31,11 @@ class HomeCoordinator: Coordinator {
         return viewModel
     }
     
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
     // MARK: - Coordinator
     override func start() {
-        
+        let viewController: HomeViewController = storyboard.instantiateViewController()
+        viewController.viewModel = homeViewModel
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     override func finish() {

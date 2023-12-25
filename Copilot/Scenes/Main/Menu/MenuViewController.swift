@@ -10,11 +10,11 @@ import UIKit
 
 class MenuViewController: PopupViewController {
     
-    lazy var viewModel: MenuViewModelType = {
-        let viewModel = MenuViewModel()
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: MenuViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,6 +25,7 @@ class MenuViewController: PopupViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        navigationController?.navigationBar.isHidden = true
         
 #if DEV_DEBUG
 //        viewModel.showDocuments()
@@ -45,6 +46,7 @@ class MenuViewController: PopupViewController {
     }
     
     private func setupUI() {
+        
         setupCollectionView()
         applyStyles()
     }
@@ -141,7 +143,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         default:
             break
         }
-        viewModel.hideMenu()
+//        viewModel.hideMenu()
     }
 }
 

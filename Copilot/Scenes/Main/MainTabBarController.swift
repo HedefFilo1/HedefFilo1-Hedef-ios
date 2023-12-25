@@ -27,6 +27,11 @@ class MainTabBarController: UITabBarController {
         setup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     func setup() {
         tabBar.isHidden = true
         setupTabBarView()
@@ -35,7 +40,7 @@ class MainTabBarController: UITabBarController {
     
     func setupTabBarView() {
         
-        guard var bottomInset = navigationController?.view.safeAreaInsets.bottom else { return }
+        var bottomInset = App.window.safeAreaInsets.bottom
         if bottomInset == 0 {
             bottomInset = 8
         }
@@ -49,11 +54,11 @@ class MainTabBarController: UITabBarController {
                                   height: height)
         tabBarView.delegate = self
         view.addSubview(tabBarView)
-        selectedIndex = 2
+//        selectedIndex = 2
         
 #if DEV_DEBUG
         // just for test
-        setSelectedIndex(index: 1)
+//        setSelectedIndex(index: 1)
 #endif
     }
     
@@ -67,10 +72,6 @@ class MainTabBarController: UITabBarController {
 }
 
 extension MainTabBarController: TabBarViewDelegate {
-    
-    func didTapMenu() {
-        viewModel.showMenu()
-    }
     
     func didSelect(tab: Int) {
         if tab == selectedIndex, let navigation = selectedViewController as? UINavigationController {

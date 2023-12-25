@@ -34,7 +34,7 @@ protocol NearMeViewModelType: AnyObject {
 class NearMeViewModel: NearMeViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: NearMeViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: NearMeViewModelCoordinatorDelegate?
     weak var delegate: NearMeViewModelDelegate?
     var mark: String = ""
     var suppliers: [Supplier]?

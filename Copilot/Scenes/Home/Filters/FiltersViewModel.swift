@@ -38,7 +38,7 @@ protocol FiltersViewModelType: AnyObject {
 class FiltersViewModel: FiltersViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: FiltersViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: FiltersViewModelCoordinatorDelegate?
     weak var delegate: FiltersViewModelDelegate?
     
     var filters: [Filter] = [

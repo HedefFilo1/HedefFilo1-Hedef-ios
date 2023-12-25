@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol MenuViewModelCoordinatorDelegate: AnyObject {
-    func hideMenu()
+//    func hideMenu()
     func showProfile()
     func showCampaigns()
     func showDocuments()
@@ -41,7 +41,7 @@ class MenuViewModel: MenuViewModelType {
     weak var delegate: MenuViewModelDelegate?
     
     func hideMenu() {
-        coordinatorDelegate?.hideMenu()
+//        coordinatorDelegate?.hideMenu()
     }
     
     func showProfile() {

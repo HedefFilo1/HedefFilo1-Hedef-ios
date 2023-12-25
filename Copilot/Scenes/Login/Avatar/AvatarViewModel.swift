@@ -13,7 +13,7 @@ struct Avatar {
 }
 
 protocol AvatarViewModelCoordinatorDelegate: AnyObject {
-    func goToMain()
+    func loginDidFinish()
 }
 
 protocol AvatarViewModelDelegate: AnyObject {
@@ -26,7 +26,7 @@ protocol AvatarViewModelType: AnyObject {
     var avatars: [Avatar]? { get set }
     var email: String { get set }
     func selectAvatar(name: String)
-    func goToMain()
+    func loginDidFinish()
 }
 
 class AvatarViewModel: AvatarViewModelType {
@@ -45,10 +45,10 @@ class AvatarViewModel: AvatarViewModelType {
     func selectAvatar(name: String) {
         Persistence.avatarSelected = email
         Persistence.avatarName = name
-        coordinatorDelegate?.goToMain()
+        coordinatorDelegate?.loginDidFinish()
     }
     
-    func goToMain() {
-        coordinatorDelegate?.goToMain()
+    func loginDidFinish() {
+        coordinatorDelegate?.loginDidFinish()
     }
 }

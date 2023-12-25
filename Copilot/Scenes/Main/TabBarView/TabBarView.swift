@@ -10,7 +10,6 @@ import UIKit
 
 protocol TabBarViewDelegate: AnyObject {
     func didSelect(tab: Int)
-    func didTapMenu()
 }
 
 class TabBarView: UIView {

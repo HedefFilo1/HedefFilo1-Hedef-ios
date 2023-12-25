@@ -27,7 +27,7 @@ protocol KMUsedViewModelType: AnyObject {
 class KMUsedViewModel: KMUsedViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: KMUsedViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: KMUsedViewModelCoordinatorDelegate?
     weak var delegate: KMUsedViewModelDelegate?
     
     var distance: Double = 0

@@ -9,7 +9,7 @@ import Foundation
 
 protocol LoginViewModelCoordinatorDelegate: AnyObject {
     func goToAvatar(email: String)
-    func goToMain()
+    func loginDidFinish()
     func goToForgotPassword()
     func goToSignup()
 }
@@ -34,8 +34,8 @@ class LoginViewModel: LoginViewModelType {
     weak var coordinatorDelegate: LoginViewModelCoordinatorDelegate?
     weak var delegate: LoginViewModelDelegate?
     
-    func goToMain() {
-        coordinatorDelegate?.goToMain()
+    func loginDidFinish() {
+        coordinatorDelegate?.loginDidFinish()
     }
     
     func goToForgotPassword() {
@@ -44,7 +44,7 @@ class LoginViewModel: LoginViewModelType {
     
     func checkRememberMe() {
         if let token = Persistence.accessToken, token.count > 3 {
-            self.goToMain()
+            self.loginDidFinish()
             return
         }
         
@@ -120,7 +120,7 @@ class LoginViewModel: LoginViewModelType {
     
     func goToNextScene(email: String) {
         if let selected = Persistence.avatarSelected, email == selected {
-            goToMain()
+            loginDidFinish()
         } else {
             coordinatorDelegate?.goToAvatar(email: email)
         }

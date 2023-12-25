@@ -28,7 +28,7 @@ protocol ProfileViewModelType: AnyObject {
 class ProfileViewModel: ProfileViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: ProfileViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: ProfileViewModelCoordinatorDelegate?
     weak var delegate: ProfileViewModelDelegate?
     var profile: GetProfile?
     

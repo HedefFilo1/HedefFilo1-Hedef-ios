@@ -9,7 +9,7 @@ import Foundation
 
 class Coordinator: NSObject {
 
-    var childCoordinators: [Coordinator] = []
+    private(set) var childCoordinators: [Coordinator] = []
 
     func start() {
         preconditionFailure("This method needs to be overriden by its subclass.")

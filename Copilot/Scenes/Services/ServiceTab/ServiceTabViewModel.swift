@@ -24,7 +24,7 @@ protocol ServiceTabViewModelType: AnyObject {
 
 class ServiceTabViewModel: ServiceTabViewModelType {
     
-    var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate?
     weak var delegate: ServiceTabViewModelDelegate?
     
     func goToLastikOperations() {

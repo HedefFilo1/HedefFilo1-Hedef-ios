@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol LoginCoordinatorDelegate: AnyObject {
-    func didFinish(from coordinator: Coordinator)
+    func loginDidFinish(from coordinator: Coordinator)
 }
 
 class LoginCoordinator: Coordinator {
@@ -35,8 +35,8 @@ class LoginCoordinator: Coordinator {
     override func start() {
         let viewController: LoginViewController = storyboard.instantiateViewController()
         viewController.viewModel = loginViewModel
-        navigationController.viewControllers = [viewController]
         window.rootViewController = navigationController
+        navigationController.setViewControllers([viewController], animated: true)
         window.makeKeyAndVisible()
     }
     
@@ -46,7 +46,7 @@ class LoginCoordinator: Coordinator {
     }
     
     override func finish() {
-        delegate?.didFinish(from: self)
+        delegate?.loginDidFinish(from: self)
     }
     
 }
@@ -70,19 +70,16 @@ extension LoginCoordinator: LoginViewModelCoordinatorDelegate, AvatarViewModelCo
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToMain() {
-        let coordinator = MainCoordinator(with: navigationController)
-        addChildCoordinator(coordinator)
-        coordinator.delegate = self
-        coordinator.start()
-    }
-    
     func goToSignup() {
         let viewController: SignupViewController = storyboard.instantiateViewController()
         let viewModel = SignupViewModel()
         viewController.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func loginDidFinish() {
+        delegate?.loginDidFinish(from: self)
     }
     
 }

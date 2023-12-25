@@ -26,7 +26,7 @@ protocol DocumentPopupViewModelType: AnyObject {
 class DocumentPopupViewModel: DocumentPopupViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: DocumentPopupVMCoordinatorDelegate?
+    weak var coordinatorDelegate: DocumentPopupVMCoordinatorDelegate?
     weak var delegate: DocumentPopupViewModelDelegate?
     var document: Document?
     

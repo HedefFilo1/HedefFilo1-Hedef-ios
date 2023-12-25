@@ -10,14 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    // MARK: - Properties
-    lazy var viewModel: HomeViewModelType = {
-        let coordinator = HomeCoordinator(with: self.navigationController!)
-        let viewModel = coordinator.homeViewModel
-//        viewModel.coordinatorDelegate = coordinator
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: HomeViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     @IBOutlet weak var logoutIcon: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -29,7 +26,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getVehicle(shoudGetCase: true)
+//        viewModel.getVehicle(shoudGetCase: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

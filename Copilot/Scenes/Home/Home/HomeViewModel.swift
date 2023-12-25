@@ -39,7 +39,7 @@ protocol HomeViewModelType: AnyObject {
 class HomeViewModel: HomeViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
     weak var delegate: HomeViewModelViewDelegate?
     var vehicle: Vehicle?
     var appointment: Case?

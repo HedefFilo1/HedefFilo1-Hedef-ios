@@ -32,7 +32,7 @@ protocol PasswordResetViewModelType: AnyObject {
 class PasswordResetViewModel: PasswordResetViewModelType {
     
     // MARK: - Delegates
-    var coordinatorDelegate: PasswordResetVMCoordinatorDelegate?
+    weak var coordinatorDelegate: PasswordResetVMCoordinatorDelegate?
     weak var delegate: PasswordResetViewModelDelegate?
     
     var min8Rule: Bool = false

@@ -24,7 +24,7 @@ protocol LastikOperationsViewModelType: AnyObject {
 
 class LastikOperationsViewModel: LastikOperationsViewModelType {
     
-    var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate?
+    weak var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate?
     weak var delegate: LastikOperationsViewModelDelegate?
     
     func getBack() {

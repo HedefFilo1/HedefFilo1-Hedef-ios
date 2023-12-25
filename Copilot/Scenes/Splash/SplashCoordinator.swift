@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 protocol SplashCoordinatorDelegate: AnyObject {
-    func didFinish(from coordinator: Coordinator)
-    func goNextScene()
-    func goToLogin()
+    func splashDidFinish(from coordinator: Coordinator)
 }
 
 class SplashCoordinator: Coordinator {
@@ -45,8 +43,7 @@ class SplashCoordinator: Coordinator {
     }
     
     override func finish() {
-        delegate?.goNextScene()
-        delegate?.didFinish(from: self)
+        delegate?.splashDidFinish(from: self)
     }
     
 }

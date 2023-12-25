@@ -14,7 +14,11 @@ protocol ProfileCoordinatorDelegate: AnyObject {
 
 class ProfileCoordinator: Coordinator {
     
-    let navigationController: UINavigationController
+    lazy var navigationController: UINavigationController = {
+        let navVC = UINavigationController()
+        return navVC
+    }()
+    
     let storyboard = UIStoryboard(storyboard: .profile)
     weak var delegate: ProfileCoordinatorDelegate?
     
@@ -24,12 +28,10 @@ class ProfileCoordinator: Coordinator {
         return viewModel
     }
     
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
     override func start() {
-        
+        let viewController: ProfileViewController = storyboard.instantiateViewController()
+        viewController.viewModel = profileViewModel
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     override func finish() {

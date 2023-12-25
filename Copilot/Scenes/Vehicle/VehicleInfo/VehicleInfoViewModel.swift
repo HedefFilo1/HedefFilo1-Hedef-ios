@@ -30,7 +30,7 @@ protocol VehicleInfoViewModelType: AnyObject {
 
 class VehicleInfoViewModel: VehicleInfoViewModelType {
     
-    var coordinatorDelegate: VehicleInfoViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: VehicleInfoViewModelCoordinatorDelegate?
     weak var delegate: VehicleInfoViewModelDelegate?
     
     var documents: [Document]?

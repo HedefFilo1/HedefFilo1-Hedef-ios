@@ -24,7 +24,7 @@ class AppCoordinator: Coordinator {
         }
         window.overrideUserInterfaceStyle = .light
         App.appCoordinator = self
-        
+
         let coordinator = SplashCoordinator(with: window)
         coordinator.delegate = self
         coordinator.start()
@@ -33,28 +33,39 @@ class AppCoordinator: Coordinator {
     
     override func finish() { }
     
+    func restart() {
+//        goToLogin()
+        goToMain()
+    }
+    
     func logout() {
-        if let coordinator = childCoordinator(type: LoginCoordinator.self) {
-            coordinator.removeAllChildCoordinators()
-        }
+        removeAllChildCoordinators()
         Persistence.accessToken = nil
-        if let nav = window?.rootViewController as? UINavigationController {
-            for ctrl in nav.viewControllers where ctrl is LoginViewController {
-                nav.popToViewController(ctrl, animated: true)
-            }
+//        restart()
+        goToLogin()
+
+    }
+    
+    func goToMain() {
+        guard let window = window else {
+            return
         }
+        let coordinator = MainCoordinator(with: window)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
     }
 }
 
 extension AppCoordinator: SplashCoordinatorDelegate {
     
-    func goNextScene() {
+    func splashDidFinish(from coordinator: Coordinator) {
         guard let window = window else {
             return
         }
         let hasShown = Persistence.onboardingHasShown ?? false
         if  hasShown {
-            goToLogin()
+            restart()
             
         } else {
             let coordinator = OnboardingCoordinator(with: window)
@@ -65,10 +76,11 @@ extension AppCoordinator: SplashCoordinatorDelegate {
     }
 }
 
-extension AppCoordinator: OnboardingCoordinatorDelegate {
+extension AppCoordinator: OnboardingCoordinatorDelegate, MainCoordinatorDelegate {
     
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
+        restart()
     }
     
     func goToLogin() {
@@ -89,5 +101,8 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
 }
 
 extension AppCoordinator: LoginCoordinatorDelegate {
-    
+    func loginDidFinish(from coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
+        goToMain()
+    }
 }

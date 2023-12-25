@@ -26,7 +26,7 @@ protocol HGSViewModelType: AnyObject {
 
 class HGSViewModel: HGSViewModelType {
     
-    var coordinatorDelegate: HGSViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: HGSViewModelCoordinatorDelegate?
     weak var delegate: HGSViewModelDelegate?
     var transitons: [Transition]?
     

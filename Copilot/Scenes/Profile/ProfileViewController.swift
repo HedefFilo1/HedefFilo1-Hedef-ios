@@ -10,13 +10,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    lazy var viewModel: ProfileViewModelType = {
-        let viewModel = ProfileViewModel()
-        let coordinator = ProfileCoordinator(with: self.navigationController!)
-        viewModel.coordinatorDelegate = coordinator
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: ProfileViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
