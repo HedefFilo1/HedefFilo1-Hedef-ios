@@ -1,5 +1,5 @@
 //
-//  LastikRandevuViewController.swift
+//  LastikRandevuConfirmationAcceptionViewModel.swift
 //  Copilot
 //
 //  Created by Jamal on 12/25/23.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikRandevuViewController: UIViewController {
+class LastikRandevuConfirmationViewController: UIViewController {
     
-    var viewModel: LastikRandevuViewModelType! {
+    var viewModel: LastikRandevuConfirmationViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -18,9 +18,10 @@ class LastikRandevuViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var pointsView: LastikPointsView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var oneIssueButton: CPLightButton!
-    @IBOutlet weak var moreIssuesButton: CPLightButton!
+    @IBOutlet weak var yesButton: CPLightButton!
+    @IBOutlet weak var noButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,6 +40,7 @@ class LastikRandevuViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
+        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {
@@ -46,29 +48,29 @@ class LastikRandevuViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
-        descriptionLabel.apply(.greyS12R400)
+        descriptionLabel.apply(.blackS20B700)
     }
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.randevuDescription
-        oneIssueButton.setTitle(Strings.oneTireIssue, for: .normal)
-        moreIssuesButton.setTitle(Strings.moreTireIssues, for: .normal)
+        descriptionLabel.text = Strings.lastikRandevuAcceptionText
+        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
+        noButton.setTitle(Strings.noDontAccept, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTaOneIssue() {
-        viewModel.goToLastikRandevuConfirmation()
+    @IBAction func didTapYes() {
+//        viewModel.lastikFromManger()
     }
     
-    @IBAction func didTaMoreIssues() {
-        viewModel.goToLastikRandevuConfirmation()
+    @IBAction func didTapNo() {
+        
     }
 }
 
-extension LastikRandevuViewController: LastikRandevuViewModelDelegate {
+extension LastikRandevuConfirmationViewController: LastikRandevuConfirmationViewModelDelegate {
     
 }

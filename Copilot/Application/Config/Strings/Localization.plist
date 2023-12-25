@@ -1286,28 +1286,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>I Have More Than One Problems With Tire</string>
         </dict>
         
-        <key></key>
+        <key>lastikRandevuAcceptionText</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracınız en yakın servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?</string>
             <key>en</key>
-            <string></string>
+            <string>Your vehicle will be sent to the nearest service via a paid tow truck. Do you confirm?</string>
         </dict>
         
-        <key></key>
+        <key>yesAndAccept</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Evet, Onaylıyorum</string>
             <key>en</key>
-            <string></string>
+            <string>Yes I accept</string>
         </dict>
         
-        <key></key>
+        <key>noDontAccept</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Hayır, Onaylamıyorum</string>
             <key>en</key>
-            <string></string>
+            <string>No, I don't accept</string>
         </dict>
         
         <key></key>

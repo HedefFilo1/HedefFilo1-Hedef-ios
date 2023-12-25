@@ -325,4 +325,15 @@ extension Strings {
         return localized(string: "moreTireIssues")
     }
     
+    static var lastikRandevuAcceptionText: String {
+        return localized(string: "lastikRandevuAcceptionText")
+    }
+    
+    static var yesAndAccept: String {
+        return localized(string: "yesAndAccept")
+    }
+    
+    static var noDontAccept: String {
+        return localized(string: "noDontAccept")
+    }
 }

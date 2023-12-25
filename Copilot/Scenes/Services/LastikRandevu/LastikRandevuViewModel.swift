@@ -9,7 +9,7 @@ import Foundation
 
 protocol LastikRandevuVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func lastikFromManger()
+    func goToLastikRandevuConfirmation()
 }
 
 protocol LastikRandevuViewModelDelegate: AnyObject {
@@ -21,7 +21,7 @@ protocol LastikRandevuViewModelType: AnyObject {
     var delegate: LastikRandevuViewModelDelegate? { get set }
     
     func getBack()
-    func lastikFromManger()
+    func goToLastikRandevuConfirmation()
 }
 
 class LastikRandevuViewModel: LastikRandevuViewModelType {
@@ -33,7 +33,7 @@ class LastikRandevuViewModel: LastikRandevuViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func lastikFromManger() {
-        coordinatorDelegate?.lastikFromManger()
+    func goToLastikRandevuConfirmation() {
+        coordinatorDelegate?.goToLastikRandevuConfirmation()
     }
 }

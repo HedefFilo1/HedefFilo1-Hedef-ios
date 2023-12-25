@@ -145,4 +145,8 @@ struct Images {
     static var redCloseIcon: UIImage {
         return UIImage(named: "redCloseIcon") ?? UIImage()
     }
+    
+    static var lastikPoints: UIImage {
+        return UIImage(named: "lastikPoints2") ?? UIImage()
+    }
 }
