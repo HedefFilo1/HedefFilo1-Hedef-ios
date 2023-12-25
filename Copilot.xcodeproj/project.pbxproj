@@ -16,6 +16,8 @@
 		890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDB2ACEC80400F053DA /* PopupViewController.swift */; };
 		890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDD2ACEC84600F053DA /* SheetViewController.swift */; };
 		89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */; };
+		89108A9E2B39E01100C8F400 /* NewLastikRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */; };
+		89108AA02B39E01700C8F400 /* NewLastikRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
@@ -262,6 +264,8 @@
 		890D7CDB2ACEC80400F053DA /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		890D7CDD2ACEC84600F053DA /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLastikRequestViewModel.swift; sourceTree = "<group>"; };
+		89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLastikRequestViewController.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
@@ -551,6 +555,15 @@
 				890D7CD92ACEC7D600F053DA /* SuccessPopupViewController.swift */,
 			);
 			path = popup;
+			sourceTree = "<group>";
+		};
+		89108A9C2B39DF7600C8F400 /* NewLastikRequest */ = {
+			isa = PBXGroup;
+			children = (
+				89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */,
+				89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */,
+			);
+			path = NewLastikRequest;
 			sourceTree = "<group>";
 		};
 		891B60C92AF1105500D6F09C /* Points */ = {
@@ -1176,6 +1189,7 @@
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
 				891BFB712B34C51B009BD793 /* LastikOperations */,
+				89108A9C2B39DF7600C8F400 /* NewLastikRequest */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1876,6 +1890,7 @@
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
+				89108A9E2B39E01100C8F400 /* NewLastikRequestViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
@@ -1905,6 +1920,7 @@
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
+				89108AA02B39E01700C8F400 /* NewLastikRequestViewController.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,

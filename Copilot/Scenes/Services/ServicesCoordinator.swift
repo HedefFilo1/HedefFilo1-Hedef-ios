@@ -45,7 +45,18 @@ extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
+    func goToRequestNewLastik() {
+        let viewController: NewLastikRequestViewController = storyboard.instantiateViewController()
+        viewController.viewModel = NewLastikRequestViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }
+}
+
+extension ServicesCoordinator: NewLastikRequestVMCoordinatorDelegate {
+    
 }

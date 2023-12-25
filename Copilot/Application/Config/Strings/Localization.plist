@@ -1180,6 +1180,32 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Make a Tire Change Appointment</string>
         </dict>
         
+        <key>notHaveRightToTire</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik hakkınız bulunmamaktadır.</string>
+            <key>en</key>
+            <string>You do not have the right to a tire.</string>
+        </dict>
+        
+        <key>requestFromMangerText</key>
+        <dict>
+            <key>tr</key>
+            <string>Dilerseniz Filo Yöneticinizden lastik değişimi
+                talep edebilirsiniz.</string>
+            <key>en</key>
+            <string>If you wish, tire change can be requested from your Fleet Manager.
+                you can request.</string>
+        </dict>
+        
+        <key>requestFromManger</key>
+        <dict>
+            <key>tr</key>
+            <string>Yöneticiden Lastik Talep Et</string>
+            <key>en</key>
+            <string>Request Tires from Manager</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

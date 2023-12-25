@@ -272,4 +272,17 @@ extension Strings {
     static var tireChangeAppointment: String {
         return localized(string: "tireChangeAppointment")
     }
+    
+    static var notHaveRightToTire: String {
+        return localized(string: "notHaveRightToTire")
+    }
+    
+    static var requestFromMangerText: String {
+        return localized(string: "requestFromMangerText")
+    }
+    
+    static var requestFromManger: String {
+        return localized(string: "requestFromManger")
+    }
+    
 }

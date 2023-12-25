@@ -1,16 +1,16 @@
 //
-//  LastikOperationsViewController.swift
+//  NewLastikRequestViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 12/21/23.
+//  Created by Jamal on 12/25/23.
 //
 
 import Foundation
 import UIKit
 
-class LastikOperationsViewController: UIViewController {
+class NewLastikRequestViewController: UIViewController {
     
-    var viewModel: LastikOperationsViewModelType! {
+    var viewModel: NewLastikRequestViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -18,9 +18,9 @@ class LastikOperationsViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var requestNewButton: CPLightButton!
-    @IBOutlet weak var randevuButton: CPLightButton!
-    @IBOutlet weak var changeButton: CPLightButton!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var requestButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -46,13 +46,16 @@ class LastikOperationsViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
+        messageLabel.apply(.blackS16B700)
+        descriptionLabel.apply(.blackS14R400)
     }
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        requestNewButton.setTitle(Strings.requestNewTire, for: .normal)
-        randevuButton.setTitle(Strings.tireDamageAppointment, for: .normal)
-        changeButton.setTitle(Strings.tireChangeAppointment, for: .normal)
+        messageLabel.text = Strings.notHaveRightToTire
+        descriptionLabel.text = Strings.requestFromMangerText
+        requestButton.setTitle(Strings.requestFromManger, for: .normal)
+        
     }
     
     @IBAction func didTapBack() {
@@ -60,18 +63,10 @@ class LastikOperationsViewController: UIViewController {
     }
     
     @IBAction func didTapRequestNew() {
-        viewModel.goToRequestNewLastik()
-    }
-    
-    @IBAction func didTapRandevu() {
-        
-    }
-    
-    @IBAction func didTapChange() {
         
     }
 }
 
-extension LastikOperationsViewController: LastikOperationsViewModelDelegate {
+extension NewLastikRequestViewController: NewLastikRequestViewModelDelegate {
     
 }
