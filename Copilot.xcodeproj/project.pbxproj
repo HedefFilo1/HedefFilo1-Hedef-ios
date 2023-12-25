@@ -22,6 +22,11 @@
 		8917F5422B39E52E00681AD3 /* LastikFromMangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */; };
 		8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */; };
 		8917F5472B39EC2900681AD3 /* RequestLastikResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */; };
+		8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5482B39F91A00681AD3 /* CPPointButton.swift */; };
+		8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8917F54B2B39FBB600681AD3 /* LastikPointsView.xib */; };
+		8917F54E2B39FBBD00681AD3 /* LastikPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F54D2B39FBBD00681AD3 /* LastikPointsView.swift */; };
+		8917F5532B39FEAE00681AD3 /* LastikRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5522B39FEAE00681AD3 /* LastikRandevuViewController.swift */; };
+		8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
@@ -274,6 +279,11 @@
 		8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikFromMangerViewController.swift; sourceTree = "<group>"; };
 		8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewModel.swift; sourceTree = "<group>"; };
 		8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewController.swift; sourceTree = "<group>"; };
+		8917F5482B39F91A00681AD3 /* CPPointButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPointButton.swift; sourceTree = "<group>"; };
+		8917F54B2B39FBB600681AD3 /* LastikPointsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LastikPointsView.xib; sourceTree = "<group>"; };
+		8917F54D2B39FBBD00681AD3 /* LastikPointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastikPointsView.swift; sourceTree = "<group>"; };
+		8917F5522B39FEAE00681AD3 /* LastikRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuViewController.swift; sourceTree = "<group>"; };
+		8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuViewModel.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
@@ -590,6 +600,24 @@
 				8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */,
 			);
 			path = RequestLastikResult;
+			sourceTree = "<group>";
+		};
+		8917F54A2B39FB9B00681AD3 /* LastikPointsView */ = {
+			isa = PBXGroup;
+			children = (
+				8917F54D2B39FBBD00681AD3 /* LastikPointsView.swift */,
+				8917F54B2B39FBB600681AD3 /* LastikPointsView.xib */,
+			);
+			path = LastikPointsView;
+			sourceTree = "<group>";
+		};
+		8917F54F2B39FE6200681AD3 /* LastikRandevu */ = {
+			isa = PBXGroup;
+			children = (
+				8917F5522B39FEAE00681AD3 /* LastikRandevuViewController.swift */,
+				8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */,
+			);
+			path = LastikRandevu;
 			sourceTree = "<group>";
 		};
 		891B60C92AF1105500D6F09C /* Points */ = {
@@ -1218,6 +1246,7 @@
 				89108A9C2B39DF7600C8F400 /* NewLastikRequest */,
 				8917F53E2B39E50600681AD3 /* LastikFromManger */,
 				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
+				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1376,6 +1405,8 @@
 		89C55DCC2AC4A53600C3066A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8917F5482B39F91A00681AD3 /* CPPointButton.swift */,
+				8917F54A2B39FB9B00681AD3 /* LastikPointsView */,
 				89DF071A2AF0F87E00892B1D /* PointsView */,
 				892A8D0A2AC4E6600020C1C4 /* ScrollTouchHandler.swift */,
 				891D1C942ACAB1A500457C17 /* CPButton.swift */,
@@ -1760,6 +1791,7 @@
 				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
 				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
+				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */,
 			);
@@ -1867,6 +1899,7 @@
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */,
+				8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,
@@ -1900,6 +1933,7 @@
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
+				8917F5532B39FEAE00681AD3 /* LastikRandevuViewController.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
 				89C686902B025C1E00011897 /* AvatarViewModel.swift in Sources */,
 				89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */,
@@ -1964,6 +1998,7 @@
 				8935AC512AFA5D87002F1C68 /* SponsorshipCell.swift in Sources */,
 				89B07A472AD86CFC00D3BE80 /* MenuViewController.swift in Sources */,
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
+				8917F54E2B39FBBD00681AD3 /* LastikPointsView.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
@@ -2001,6 +2036,7 @@
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
 				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
 				8917F5402B39E52500681AD3 /* LastikFromMangerViewModel.swift in Sources */,
+				8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,

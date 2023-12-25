@@ -52,6 +52,13 @@ extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
         navigationController.pushViewController(viewController, animated: true)
     }
     
+    func goToLastikRandevu() {
+        let viewController: LastikRandevuViewController = storyboard.instantiateViewController()
+        viewController.viewModel = LastikRandevuViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -83,4 +90,8 @@ extension ServicesCoordinator: RequestLastikResultVMCoordinatorDelegate {
     func goToRequests() {
         
     }
+}
+
+extension ServicesCoordinator: LastikRandevuVMCoordinatorDelegate {
+    
 }

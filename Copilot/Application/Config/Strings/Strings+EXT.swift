@@ -312,5 +312,17 @@ extension Strings {
     static var returnToHomePage: String {
         return localized(string: "returnToHomePage")
     }
-
+    
+    static var randevuDescription: String {
+        return localized(string: "randevuDescription")
+    }
+    
+    static var oneTireIssue: String {
+        return localized(string: "oneTireIssue")
+    }
+    
+    static var moreTireIssues: String {
+        return localized(string: "moreTireIssues")
+    }
+    
 }

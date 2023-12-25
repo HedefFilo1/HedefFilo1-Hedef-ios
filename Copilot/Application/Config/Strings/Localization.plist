@@ -1262,28 +1262,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Return to Home Page</string>
         </dict>
         
-        <key></key>
+        <key>randevuDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bu adım lastiklerin hava basıncı kaybı veya yarılması sonucu oluşan arızaların tamiri veya benzeri işlemleri kapsar.</string>
             <key>en</key>
-            <string></string>
+            <string>This step covers the repair of malfunctions caused by loss of air pressure or cracking of tires or similar operations.</string>
         </dict>
         
-        <key></key>
+        <key>oneTireIssue</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tek Lastiğimde Sorun Var</string>
             <key>en</key>
-            <string></string>
+            <string>I Have a Problem with One Tire</string>
         </dict>
         
-        <key></key>
+        <key>moreTireIssues</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Birden Fazla Lastiğimde Sorun Var</string>
             <key>en</key>
-            <string></string>
+            <string>I Have More Than One Problems With Tire</string>
         </dict>
         
         <key></key>
