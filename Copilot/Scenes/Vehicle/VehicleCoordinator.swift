@@ -14,16 +14,33 @@ protocol VehicleCoordinatorDelegate: AnyObject {
 
 class VehicleCoordinator: Coordinator {
     
-    let navigationController: UINavigationController
+    lazy var navigationController: UINavigationController = {
+        let navVC = UINavigationController()
+        return navVC
+    }()
+    
     let storyboard = UIStoryboard(storyboard: .vehicle)
     weak var delegate: VehicleCoordinatorDelegate?
     
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    override func start() {
+        let viewController: VehicleInfoViewController = storyboard.instantiateViewController()
+        viewController.viewModel = VehicleInfoViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
-    override func start() {
-        
+    func startWithHGS() {
+        let viewController: HGSViewController = storyboard.instantiateViewController()
+        viewController.viewModel = HGSViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.setViewControllers([viewController], animated: true)
+    }
+    
+    func startWithServices() {
+        let viewController: VehicleServicesViewController = storyboard.instantiateViewController()
+        viewController.viewModel = VehicleServicesViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     override func finish() {
@@ -33,10 +50,6 @@ class VehicleCoordinator: Coordinator {
 
 extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
     func goToDocument(document: Document) {
-//        let viewController: DocumentViewController = UIStoryboard(storyboard: .main).instantiateViewController()
-//        viewController.viewModel = DocumentViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
-//        navigationController.pushViewController(viewController, animated: true)
         
         let viewController: PdfViewerViewController = storyboard.instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()

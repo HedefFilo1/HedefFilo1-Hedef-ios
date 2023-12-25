@@ -10,25 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kaza/Hasar-->
-        <scene sceneID="7b0-SK-sS7">
-            <objects>
-                <viewController id="iPo-e9-6Dx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TK1-be-yqo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mHf-SR-lXo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Kaza/Hasar" image="carTabIcon" selectedImage="carTabSelectedIcon" id="Jv0-wW-fpm">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sbD-wb-msJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-396" y="-1201"/>
-        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="L9u-pZ-ceZ">
             <objects>
@@ -41,37 +22,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPD-xv-MBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1382" y="-336"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="7Oo-ye-gbq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="4El-IP-rXy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Hnf-kU-TIx"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xY3-r2-tLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-261" y="-337"/>
-        </scene>
-        <!--Services-->
-        <scene sceneID="9C0-MV-EXP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Services" id="qkY-eX-3wq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YHn-YN-plm"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iha-QX-ayi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-248" y="-423"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="dJC-Mj-Csy">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="eaM-tD-eg3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AAe-Fb-JLB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5bO-yv-INh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-258" y="-160"/>
+            <point key="canvasLocation" x="-1648" y="246"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="dET-Mi-mdD">
@@ -140,26 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P82-7d-L06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2036" y="397"/>
-        </scene>
-        <!--Yardım-->
-        <scene sceneID="w7k-XL-QcV">
-            <objects>
-                <viewController id="875-2V-Xqf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SHt-tO-3tt">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="EqS-5s-Y1k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Yardım" image="helpIcon" selectedImage="helpSelectedIcon" id="apm-ko-IEA">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="4"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b7k-5b-n3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1321" y="-1163"/>
+            <point key="canvasLocation" x="-801" y="246"/>
         </scene>
         <!--Item-->
         <scene sceneID="x4U-hy-Rcc">
@@ -494,36 +426,6 @@
             </objects>
             <point key="canvasLocation" x="-11" y="1079"/>
         </scene>
-        <!--Vehicle-->
-        <scene sceneID="D8K-wt-Mh5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Vehicle" id="qzU-EL-1WW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Jhf-bc-8Er"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vDa-Qd-3X0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-282" y="1525"/>
-        </scene>
-        <!--HGSViewController-->
-        <scene sceneID="asV-Yf-pnc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Vehicle" referencedIdentifier="HGSViewController" id="FSt-0a-0wt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AOm-gK-KSF"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3zY-yw-rwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-282" y="1604"/>
-        </scene>
-        <!--VehicleServicesViewController-->
-        <scene sceneID="UuA-QA-bCp">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Vehicle" referencedIdentifier="VehicleServicesViewController" id="f9b-kO-mwp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Iga-ym-asi"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="voS-g1-Yvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-289" y="1681"/>
-        </scene>
         <!--Document View Controller-->
         <scene sceneID="Z1Q-qu-SXj">
             <objects>
@@ -759,12 +661,8 @@
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>
-        <image name="carTabIcon" width="31" height="29"/>
-        <image name="carTabSelectedIcon" width="31" height="29"/>
         <image name="closeIcon" width="24" height="24"/>
         <image name="downloadIcon" width="16" height="16"/>
-        <image name="helpIcon" width="24.333333969116211" height="24"/>
-        <image name="helpSelectedIcon" width="24.333333969116211" height="24"/>
         <image name="logo" width="254" height="142"/>
         <image name="mockCampaignImage" width="295" height="120"/>
         <namedColor name="borderColor">

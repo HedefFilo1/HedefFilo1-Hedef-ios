@@ -36,6 +36,27 @@ class MainCoordinator: Coordinator {
         return coordinator
     }()
     
+    lazy var vehicleCoordinator: VehicleCoordinator = {
+        let coordinator = VehicleCoordinator()
+        coordinator.delegate = self
+        coordinator.start()
+        return coordinator
+    }()
+    
+    lazy var hgsCoordinator: VehicleCoordinator = {
+        let coordinator = VehicleCoordinator()
+        coordinator.delegate = self
+        coordinator.startWithHGS()
+        return coordinator
+    }()
+    
+    lazy var vehicleServicesCoordinator: VehicleCoordinator = {
+        let coordinator = VehicleCoordinator()
+        coordinator.delegate = self
+        coordinator.startWithServices()
+        return coordinator
+    }()
+    
     lazy var mainViewModel: MainViewModel = {
         let viewModel = MainViewModel()
         viewModel.coordinatorDelegate = self
@@ -82,6 +103,15 @@ class MainCoordinator: Coordinator {
         return navigation
     }()
     
+    lazy var documentsViewController: UINavigationController = {
+        let navigation = UINavigationController()
+        let viewController: DocumentsViewController = storyboard.instantiateViewController()
+        viewController.viewModel = DocumentsViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigation.setViewControllers([viewController], animated: true)
+        return navigation
+    }()
+    
     init(with window: UIWindow) {
         self.window = window
     }
@@ -98,32 +128,33 @@ class MainCoordinator: Coordinator {
             menuViewController,
             profileCoordinator.navigationController,
             campaignsViewController,
+            documentsViewController,
+            vehicleCoordinator.navigationController,
+            hgsCoordinator.navigationController,
+            vehicleServicesCoordinator.navigationController
             
-            //            marketCoordinator.rootNavigationController,
-            //            homeCoordinator.rootNavigationController,
-            //            servicesCoordinator.rootNavigationController
         ]
         addChildCoordinator(homeCoordinator)
         addChildCoordinator(profileCoordinator)
         tabbarController.selectedIndex = 2
+        
+#if DEV_DEBUG
+        // just for test
+        tabbarController.selectedIndex = 2
+#endif
         self.tabBarController = tabbarController
         window.rootViewController = tabbarController
         window.makeKeyAndVisible()
     }
-    
-    //    override func start() {
-    //        let viewController: MainTabBarController = storyboard.instantiateViewController()
-    //        viewController.viewModel = viewModel
-    //        navigationController.pushViewController(viewController, animated: true)
-    //        tabBarController = viewController
-    //    }
     
     override func finish() {
         delegate?.didFinish(from: self)
     }
 }
 
-extension MainCoordinator: HomeCoordinatorDelegate, ProfileCoordinatorDelegate {
+extension MainCoordinator: HomeCoordinatorDelegate,
+                           ProfileCoordinatorDelegate,
+                           VehicleCoordinatorDelegate {
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
         finish()
@@ -142,29 +173,14 @@ extension MainCoordinator: MenuViewModelCoordinatorDelegate {
     
     func showCampaigns() {
         tabBarController?.setSelectedIndex(index: 6)
-        if let controller = tabBarController?.viewControllers?[6] as? CampaignsViewController {
-            controller.viewModel = CampaignsViewModel()
-            controller.viewModel.coordinatorDelegate = self
-        }
     }
     
     func showDocuments() {
         tabBarController?.setSelectedIndex(index: 7)
-        if let controller = tabBarController?.viewControllers?[7] as? DocumentsViewController {
-            controller.viewModel = documentsViewModel
-            controller.viewModel.coordinatorDelegate = self
-        }
     }
     
     func showVehicleInfo() {
         tabBarController?.setSelectedIndex(index: 8)
-        //        if let navigation = tabBarController?.viewControllers?[8] as? UINavigationController,
-        ////        let controller = navigation.viewControllers[0] as? VehicleInfoViewController {
-        ////            controller.viewModel = VehicleInfoViewModel()
-        ////            let coordinator = VehicleCoordinator(with: navigationController)
-        ////            controller.viewModel.coordinatorDelegate = coordinator
-        ////            addChildCoordinator(coordinator)
-        ////        }
     }
     
     func showVehicleHGS() {
@@ -188,15 +204,11 @@ extension MainCoordinator: CampaignsViewModelCoordinatorDelegate {
 
 extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewModelCoordinatorDelegate {
     func goToDocument(document: Document) {
-        //        let viewController: DocumentViewController = storyboard.instantiateViewController()
-        //        viewController.viewModel = DocumentViewModel()
-        //        viewController.viewModel.coordinatorDelegate = self
-        //        navigationController.pushViewController(viewController, animated: true)
         let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()
         viewController.viewModel.document = document
         viewController.viewModel.coordinatorDelegate = self
-        //        navigationController.pushViewController(viewController, animated: true)
+        documentsViewController.pushViewController(viewController, animated: true)
     }
     
     func presentDocumentPopup(document: Document) {
@@ -207,7 +219,7 @@ extension MainCoordinator: DocumentsViewModelCoordinatorDelegate, DocumentViewMo
         viewController.viewModel = viewModel
         viewModel.document = document
         documentPopupViewController = viewController
-        //        navigationController.present(viewController, animated: true)
+        documentsViewController.present(viewController, animated: true)
     }
 }
 

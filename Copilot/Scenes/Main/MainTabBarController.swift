@@ -54,12 +54,6 @@ class MainTabBarController: UITabBarController {
                                   height: height)
         tabBarView.delegate = self
         view.addSubview(tabBarView)
-//        selectedIndex = 2
-        
-#if DEV_DEBUG
-        // just for test
-//        setSelectedIndex(index: 1)
-#endif
     }
     
     func setSelectedIndex(index: Int) {

@@ -10,13 +10,11 @@ import UIKit
 
 class VehicleInfoViewController: UIViewController {
     
-    lazy var viewModel: VehicleInfoViewModelType = {
-        let viewModel = VehicleInfoViewModel()
-        let coordinator = VehicleCoordinator(with: self.navigationController!)
-        viewModel.coordinatorDelegate = coordinator
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: VehicleInfoViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
