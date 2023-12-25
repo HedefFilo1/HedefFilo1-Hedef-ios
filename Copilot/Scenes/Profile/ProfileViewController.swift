@@ -35,10 +35,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getProfile()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        showTabbarView()
     }
     
     func setupUI() {

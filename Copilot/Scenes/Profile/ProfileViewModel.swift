@@ -19,6 +19,7 @@ protocol ProfileViewModelDelegate: AnyObject {
 
 protocol ProfileViewModelType: AnyObject {
     var delegate: ProfileViewModelDelegate? { get set }
+    var coordinatorDelegate: ProfileViewModelCoordinatorDelegate? { get set }
     var profile: GetProfile? { get set}
     func getProfile()
     func goToResetPassword()

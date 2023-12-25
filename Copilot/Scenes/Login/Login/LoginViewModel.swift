@@ -60,17 +60,19 @@ class LoginViewModel: LoginViewModelType {
             return
         }
 #if DEV_DEBUG
-        Persistence.rememberMe = rememberMe
-        if rememberMe {
-            Persistence.userEmail = email
-            Persistence.password = password
-            Persistence.accessToken =  "some token"
-        } else {
-            Persistence.userEmail = nil
-            Persistence.password = nil
-            Persistence.accessToken =  nil
-        }
-        goToNextScene(email: email)
+//        Persistence.rememberMe = rememberMe
+//        if rememberMe {
+//            Persistence.userEmail = email
+//            Persistence.password = password
+//            Persistence.accessToken =  "some token"
+//        } else {
+//            Persistence.userEmail = nil
+//            Persistence.password = nil
+//            Persistence.accessToken =  nil
+//        }
+//        goToNextScene(email: email)
+        
+//        if 
 #endif
         Loading.shared.show(title: Strings.loading)
         APIService.login(email: email,

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CampaignDetailVMCoordinatorDelegate: AnyObject {
-    func getBack()
+    func getBack(_: CampaignDetailViewModelType)
 }
 
 protocol CampaignDetailViewModelDelegate: AnyObject {
@@ -46,6 +46,6 @@ class CampaignDetailViewModel: CampaignDetailViewModelType {
     }
     
     func getBack() {
-        coordinatorDelegate?.getBack()
+        coordinatorDelegate?.getBack(self)
     }
 }

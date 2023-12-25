@@ -34,6 +34,7 @@ class MenuViewController: PopupViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        showTabbarView()
     }
     
     override func viewDidAppear(_ animated: Bool) {

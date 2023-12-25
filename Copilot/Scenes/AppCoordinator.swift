@@ -34,8 +34,8 @@ class AppCoordinator: Coordinator {
     override func finish() { }
     
     func restart() {
-//        goToLogin()
-        goToMain()
+        goToLogin()
+//        goToMain()
     }
     
     func logout() {

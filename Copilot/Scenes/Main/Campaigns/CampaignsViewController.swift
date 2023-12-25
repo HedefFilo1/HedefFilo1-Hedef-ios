@@ -34,10 +34,12 @@ class CampaignsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getCampaign()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        showTabbarView()
     }
     
     func setupUI() {

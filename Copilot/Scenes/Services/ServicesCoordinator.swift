@@ -14,16 +14,20 @@ protocol ServicesCoordinatorDelegate: AnyObject {
 
 class ServicesCoordinator: Coordinator {
     
-    let navigationController: UINavigationController
+    lazy var navigationController: UINavigationController = {
+        let navVC = UINavigationController()
+        return navVC
+    }()
+    
     let storyboard = UIStoryboard(storyboard: .services)
     weak var delegate: ServicesCoordinatorDelegate?
     
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
     override func start() {
-        
+        let viewController: ServiceTabViewController = storyboard.instantiateViewController()
+        viewController.viewModel = ServiceTabViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.navigationBar.isHidden = true
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     override func finish() {

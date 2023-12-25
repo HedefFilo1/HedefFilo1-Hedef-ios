@@ -14,33 +14,33 @@ protocol VehicleCoordinatorDelegate: AnyObject {
 
 class VehicleCoordinator: Coordinator {
     
-    lazy var navigationController: UINavigationController = {
-        let navVC = UINavigationController()
-        return navVC
-    }()
-    
+    let navigationController: UINavigationController 
     let storyboard = UIStoryboard(storyboard: .vehicle)
     weak var delegate: VehicleCoordinatorDelegate?
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
     
     override func start() {
         let viewController: VehicleInfoViewController = storyboard.instantiateViewController()
         viewController.viewModel = VehicleInfoViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func startWithHGS() {
         let viewController: HGSViewController = storyboard.instantiateViewController()
         viewController.viewModel = HGSViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func startWithServices() {
         let viewController: VehicleServicesViewController = storyboard.instantiateViewController()
         viewController.viewModel = VehicleServicesViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     override func finish() {
@@ -59,10 +59,6 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
     }
     
     func goToVehicleGuide() {
-        //        let viewController: VehicleGuideViewController = storyboard.instantiateViewController()
-        //        viewController.viewModel = VehicleGuideViewModel()
-        //        viewController.viewModel.coordinatorDelegate = self
-        //        navigationController.pushViewController(viewController, animated: true)
         let viewController: PdfViewerViewController = storyboard.instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()
         viewController.viewModel.coordinatorDelegate = self

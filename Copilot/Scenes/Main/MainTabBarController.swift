@@ -29,12 +29,13 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        setupTabBarView()
         
     }
     
     func setup() {
         tabBar.isHidden = true
-        setupTabBarView()
+        
         moreNavigationController.isNavigationBarHidden = true
     }
     
@@ -54,6 +55,8 @@ class MainTabBarController: UITabBarController {
                                   height: height)
         tabBarView.delegate = self
         view.addSubview(tabBarView)
+//        tabBarView.layer.zPosition = 11111
+        view.bringSubviewToFront(tabBarView)
     }
     
     func setSelectedIndex(index: Int) {

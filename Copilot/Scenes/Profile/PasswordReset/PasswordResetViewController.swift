@@ -33,6 +33,7 @@ class PasswordResetViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        hideTabbarView()
         
 #if DEV_DEBUG
         // just for test

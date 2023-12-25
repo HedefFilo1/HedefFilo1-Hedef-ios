@@ -27,6 +27,7 @@ class CampaignDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setCampaign()
+        hideTabbarView()
     }
     
     override func viewDidAppear(_ animated: Bool) {

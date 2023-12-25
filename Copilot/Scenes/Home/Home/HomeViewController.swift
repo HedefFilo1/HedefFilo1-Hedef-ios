@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        viewModel.getVehicle(shoudGetCase: true)
+        viewModel.getVehicle(shoudGetCase: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

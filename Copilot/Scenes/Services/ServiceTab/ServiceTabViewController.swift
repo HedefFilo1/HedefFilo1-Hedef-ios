@@ -10,13 +10,11 @@ import UIKit
 
 class ServiceTabViewController: UIViewController {
     
-    lazy var viewModel: ServiceTabViewModelType = {
-        let viewModel = ServiceTabViewModel()
-        let coordinator = ServicesCoordinator(with: self.navigationController!)
-        viewModel.coordinatorDelegate = coordinator
-        viewModel.delegate = self
-        return viewModel
-    }()
+    var viewModel: ServiceTabViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
