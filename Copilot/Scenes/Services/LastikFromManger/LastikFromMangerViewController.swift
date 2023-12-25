@@ -1,5 +1,5 @@
 //
-//  NewLastikRequestViewController.swift
+//  LastikFromMangerViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 12/25/23.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class NewLastikRequestViewController: UIViewController {
+class LastikFromMangerViewController: UIViewController {
     
-    var viewModel: NewLastikRequestViewModelType! {
+    var viewModel: LastikFromMangerViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -18,9 +18,9 @@ class NewLastikRequestViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var requestButton: CPLightButton!
+    @IBOutlet weak var summerButton: CPLightButton!
+    @IBOutlet weak var winterButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -46,27 +46,29 @@ class NewLastikRequestViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
-        messageLabel.apply(.blackS16B700)
         descriptionLabel.apply(.blackS14R400)
     }
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        messageLabel.text = Strings.notHaveRightToTire
-        descriptionLabel.text = Strings.requestFromMangerText
-        requestButton.setTitle(Strings.requestFromManger, for: .normal)
-        
+        descriptionLabel.text = Strings.requestLastkFromMangerText
+        summerButton.setTitle(Strings.submitSummerTireRequest, for: .normal)
+        winterButton.setTitle(Strings.submitWinterTireRequest, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTapRequestNew() {
-        viewModel.lastikFromManger()
+    @IBAction func didTapSummer() {
+        viewModel.goToRequestLastikResult()
+    }
+    
+    @IBAction func didTapWinter() {
+        viewModel.goToRequestLastikResult()
     }
 }
 
-extension NewLastikRequestViewController: NewLastikRequestViewModelDelegate {
+extension LastikFromMangerViewController: LastikFromMangerViewModelDelegate {
     
 }

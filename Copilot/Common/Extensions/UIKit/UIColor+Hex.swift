@@ -60,6 +60,9 @@ extension UIColor {
     /// #212121
     static let fieldsText = UIColor(named: "fieldsText") ?? .black
     
+    /// #FFF4DF
+    static let lightYellow = UIColor(named: "lightYellow") ?? .black
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

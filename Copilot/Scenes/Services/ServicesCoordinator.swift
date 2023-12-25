@@ -58,5 +58,29 @@ extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: NewLastikRequestVMCoordinatorDelegate {
+    func lastikFromManger() {
+        let viewController: LastikFromMangerViewController = storyboard.instantiateViewController()
+        viewController.viewModel = LastikFromMangerViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ServicesCoordinator: LastikFromMangerVMCoordinatorDelegate {
+    func goToRequestLastikResult() {
+        let viewController: RequestLastikResultViewController = storyboard.instantiateViewController()
+        viewController.viewModel = RequestLastikResultViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ServicesCoordinator: RequestLastikResultVMCoordinatorDelegate {
+    func getBackToHome() {
+        navigationController.popToRootViewController(animated: true)
+    }
     
+    func goToRequests() {
+        
+    }
 }

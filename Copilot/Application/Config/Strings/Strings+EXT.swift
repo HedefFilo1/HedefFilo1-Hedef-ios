@@ -285,4 +285,32 @@ extension Strings {
         return localized(string: "requestFromManger")
     }
     
+    static var requestLastkFromMangerText: String {
+        return localized(string: "requestLastkFromMangerText")
+    }
+    
+    static var submitSummerTireRequest: String {
+        return localized(string: "submitSummerTireRequest")
+    }
+    
+    static var submitWinterTireRequest: String {
+        return localized(string: "submitWinterTireRequest")
+    }
+    
+    static var winterTireRequestReceived: String {
+        return localized(string: "winterTireRequestReceived")
+    }
+    
+    static var requestLastikResultText: String {
+        return localized(string: "requestLastikResultText")
+    }
+    
+    static var goToRequests: String {
+        return localized(string: "goToRequests")
+    }
+    
+    static var returnToHomePage: String {
+        return localized(string: "returnToHomePage")
+    }
+
 }

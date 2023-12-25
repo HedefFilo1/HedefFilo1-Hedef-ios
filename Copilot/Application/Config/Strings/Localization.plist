@@ -1206,6 +1206,126 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Request Tires from Manager</string>
         </dict>
         
+        <key>requestLastkFromMangerText</key>
+        <dict>
+            <key>tr</key>
+            <string>Bu adım daha önce kış lastiği hakkı kullanmadığınız durumlar için yeni kış lastiği montajını, araç kilometresine veya lastikteki yıpranmaya bağlı olarak yeni lastik verilmesi işlemlerini kapsar.</string>
+            <key>en</key>
+            <string>This step includes the installation of new winter tires for situations where you have not used your right to winter tires before, and the issuance of new tires depending on vehicle mileage or wear on the tire.</string>
+        </dict>
+        
+        <key>submitSummerTireRequest</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Yaz Lastiği Talebi Gönder</string>
+            <key>en</key>
+            <string>Submit New Summer Tire Request</string>
+        </dict>
+        
+        <key>submitWinterTireRequest</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Kış Lastiği Talebi Gönder</string>
+            <key>en</key>
+            <string>Submit New Winter Tire Request</string>
+        </dict>
+        
+        <key>winterTireRequestReceived</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Kış Lastiği Talebiniz Alındı</string>
+            <key>en</key>
+            <string>Your New Winter Tire Request Has Been Received</string>
+        </dict>
+        
+        <key>requestLastikResultText</key>
+        <dict>
+            <key>tr</key>
+            <string>Talep sonucuna göre tarafınıza bilgi verilecektir</string>
+            <key>en</key>
+            <string>You will be informed according to the result of your request.</string>
+        </dict>
+        
+        <key>goToRequests</key>
+        <dict>
+            <key>tr</key>
+            <string>Taleplere Git</string>
+            <key>en</key>
+            <string>Go To Requests</string>
+        </dict>
+
+        <key>returnToHomePage</key>
+        <dict>
+            <key>tr</key>
+            <string>Anasayfaya Dön</string>
+            <key>en</key>
+            <string>Return to Home Page</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
