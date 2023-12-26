@@ -1,16 +1,16 @@
 //
-//  LastikRandevuConfirmationAcceptionViewModel.swift
+//  LastikConfirmInfoViewModel.swift
 //  Copilot
 //
-//  Created by Jamal on 12/25/23.
+//  Created by Jamal on 12/26/23.
 //
 
 import Foundation
 import UIKit
 
-class LastikRandevuConfirmationViewController: UIViewController {
+class LastikConfirmInfoViewController: UIViewController {
     
-    var viewModel: LastikRandevuConfirmationViewModelType! {
+    var viewModel: LastikConfirmInfoViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -20,8 +20,7 @@ class LastikRandevuConfirmationViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pointsView: LastikPointsView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var yesButton: CPLightButton!
-    @IBOutlet weak var noButton: CPLightButton!
+    @IBOutlet weak var serviceButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -53,24 +52,19 @@ class LastikRandevuConfirmationViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.lastikRandevuAcceptionText
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        descriptionLabel.text = Strings.lastikConfirmInfoText
+        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTapYes() {
-        viewModel.goToLastikConfirmInfo()
-    }
-    
-    @IBAction func didTapNo() {
-        viewModel.goToLastikConfirmInfo()
+    @IBAction func didTapService() {
+//        viewModel.lastikFromManger()
     }
 }
 
-extension LastikRandevuConfirmationViewController: LastikRandevuConfirmationVMDelegate {
+extension LastikConfirmInfoViewController: LastikConfirmInfoViewModelDelegate {
     
 }

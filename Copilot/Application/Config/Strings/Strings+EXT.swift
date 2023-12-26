@@ -336,4 +336,12 @@ extension Strings {
     static var noDontAccept: String {
         return localized(string: "noDontAccept")
     }
+    
+    static var lastikConfirmInfoText: String {
+        return localized(string: "lastikConfirmInfoText")
+    }
+    
+    static var proceedServiceSelection: String {
+        return localized(string: "proceedServiceSelection")
+    }
 }

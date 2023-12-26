@@ -7,33 +7,33 @@
 
 import Foundation
 
-protocol LastikRandevuConfirmationVMCoordinatorDelegate: AnyObject {
+protocol LastikRandevuConfirmationVMCrdintrDlgt: AnyObject {
     func getBack()
-    func lastikFromManger()
+    func goToLastikConfirmInfo()
 }
 
-protocol LastikRandevuConfirmationViewModelDelegate: AnyObject {
+protocol LastikRandevuConfirmationVMDelegate: AnyObject {
     
 }
 
 protocol LastikRandevuConfirmationViewModelType: AnyObject {
-    var coordinatorDelegate: LastikRandevuConfirmationVMCoordinatorDelegate? { get set }
-    var delegate: LastikRandevuConfirmationViewModelDelegate? { get set }
+    var coordinatorDelegate: LastikRandevuConfirmationVMCrdintrDlgt? { get set }
+    var delegate: LastikRandevuConfirmationVMDelegate? { get set }
     
     func getBack()
-    func lastikFromManger()
+    func goToLastikConfirmInfo()
 }
 
 class LastikRandevuConfirmationViewModel: LastikRandevuConfirmationViewModelType {
     
-    weak var coordinatorDelegate: LastikRandevuConfirmationVMCoordinatorDelegate?
-    weak var delegate: LastikRandevuConfirmationViewModelDelegate?
+    weak var coordinatorDelegate: LastikRandevuConfirmationVMCrdintrDlgt?
+    weak var delegate: LastikRandevuConfirmationVMDelegate?
     
     func getBack() {
         coordinatorDelegate?.getBack()
     }
     
-    func lastikFromManger() {
-        coordinatorDelegate?.lastikFromManger()
+    func goToLastikConfirmInfo() {
+        coordinatorDelegate?.goToLastikConfirmInfo()
     }
 }

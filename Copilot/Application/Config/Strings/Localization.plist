@@ -1310,20 +1310,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>No, I don't accept</string>
         </dict>
         
-        <key></key>
+        <key>lastikConfirmInfoText</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Size en uygun servisler listelenecektir. Lütfen aracınızı listeden seçeceğiniz servise götürünüz.</string>
             <key>en</key>
-            <string></string>
+            <string>The services most suitable for you will be listed. Please take your vehicle to the service you choose from the list.</string>
         </dict>
         
-        <key></key>
+        <key>proceedServiceSelection</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis Seçimi İle İlerle</string>
             <key>en</key>
-            <string></string>
+            <string>Proceed with Service Selection</string>
         </dict>
         
         <key></key>

@@ -29,6 +29,8 @@
 		8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */; };
 		8917F5582B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5572B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift */; };
 		8917F55A2B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5592B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift */; };
+		8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */; };
+		8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
@@ -288,6 +290,8 @@
 		8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuViewModel.swift; sourceTree = "<group>"; };
 		8917F5572B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuConfirmationViewModel.swift; sourceTree = "<group>"; };
 		8917F5592B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuConfirmationViewController.swift; sourceTree = "<group>"; };
+		8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewController.swift; sourceTree = "<group>"; };
+		8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewModel.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
@@ -631,6 +635,15 @@
 				8917F5592B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift */,
 			);
 			path = LastikRandevuConfirmation;
+			sourceTree = "<group>";
+		};
+		8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */,
+				8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */,
+			);
+			path = LastikConfirmInfo;
 			sourceTree = "<group>";
 		};
 		891B60C92AF1105500D6F09C /* Points */ = {
@@ -1261,6 +1274,7 @@
 				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
 				8917F5562B3A04CA00681AD3 /* LastikRandevuConfirmation */,
+				8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1924,6 +1938,7 @@
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
+				8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
@@ -2054,6 +2069,7 @@
 				8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,
+				8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift in Sources */,
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
