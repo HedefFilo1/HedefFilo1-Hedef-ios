@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VehicleServicesItemCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPs-vD-365">
+                        <rect key="frame" x="16" y="16" width="333" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Bosch Servis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBh-Ql-r4t">
+                                <rect key="frame" x="0.0" y="0.0" width="197.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc1-Nm-PDM">
+                                <rect key="frame" x="201.66666666666663" y="0.0" width="131.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahalle - Levent - İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai0-aM-JCU">
+                                <rect key="frame" x="0.0" y="29" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çalışma saati: 09:00-17:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xea-Tk-j2R">
+                                <rect key="frame" x="0.0" y="64" width="204.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnl-tm-DEO">
+                                <rect key="frame" x="309" y="61" width="24" height="24"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="randevuIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-IE-tEZ">
+                                        <rect key="frame" x="5.6666666666666856" y="5.6666666666666714" width="13" height="13"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="Lxw-cN-mp1"/>
+                                            <constraint firstAttribute="width" constant="13" id="NIU-Hw-h9K"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="27j-1R-Q2d"/>
+                                    <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerY" secondItem="Tnl-tm-DEO" secondAttribute="centerY" id="Gjb-2l-jCK"/>
+                                    <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerX" secondItem="Tnl-tm-DEO" secondAttribute="centerX" id="mZe-U5-61x"/>
+                                    <constraint firstAttribute="height" constant="24" id="vZS-Sj-s5n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tnl-tm-DEO" secondAttribute="bottom" id="DqB-th-V5J"/>
+                            <constraint firstItem="Ai0-aM-JCU" firstAttribute="top" secondItem="fBh-Ql-r4t" secondAttribute="bottom" constant="8" id="LeN-Xa-swf"/>
+                            <constraint firstAttribute="trailing" secondItem="Tnl-tm-DEO" secondAttribute="trailing" id="RQ7-v5-C38"/>
+                            <constraint firstAttribute="bottom" secondItem="xea-Tk-j2R" secondAttribute="bottom" id="ZUe-YS-NVX"/>
+                            <constraint firstItem="Qc1-Nm-PDM" firstAttribute="centerY" secondItem="fBh-Ql-r4t" secondAttribute="centerY" id="alP-Li-dFy"/>
+                            <constraint firstItem="Qc1-Nm-PDM" firstAttribute="leading" secondItem="fBh-Ql-r4t" secondAttribute="trailing" constant="4" id="bAX-ot-Dbi"/>
+                            <constraint firstAttribute="trailing" secondItem="Qc1-Nm-PDM" secondAttribute="trailing" id="dBH-Kn-Ubv"/>
+                            <constraint firstItem="fBh-Ql-r4t" firstAttribute="leading" secondItem="FPs-vD-365" secondAttribute="leading" id="fZl-S4-C6C"/>
+                            <constraint firstAttribute="trailing" secondItem="Ai0-aM-JCU" secondAttribute="trailing" id="geG-6y-9uw"/>
+                            <constraint firstItem="Ai0-aM-JCU" firstAttribute="leading" secondItem="FPs-vD-365" secondAttribute="leading" id="iXm-Zu-mqk"/>
+                            <constraint firstItem="xea-Tk-j2R" firstAttribute="leading" secondItem="FPs-vD-365" secondAttribute="leading" id="lvt-F0-r94"/>
+                            <constraint firstItem="fBh-Ql-r4t" firstAttribute="top" secondItem="FPs-vD-365" secondAttribute="top" id="vCZ-7q-k5v"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FPs-vD-365" secondAttribute="trailing" constant="16" id="2I5-OO-TxU"/>
+                <constraint firstItem="FPs-vD-365" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="UhZ-HS-cHS"/>
+                <constraint firstAttribute="bottom" secondItem="FPs-vD-365" secondAttribute="bottom" constant="16" id="ciu-PC-vra"/>
+                <constraint firstItem="FPs-vD-365" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="h87-mc-WO0"/>
+            </constraints>
+            <size key="customSize" width="365" height="117"/>
+            <connections>
+                <outlet property="addressLabel" destination="Ai0-aM-JCU" id="dbo-vK-XFm"/>
+                <outlet property="dateLabel" destination="Qc1-Nm-PDM" id="XNq-o5-c0S"/>
+                <outlet property="iconView" destination="Tnl-tm-DEO" id="Y3q-ud-jKO"/>
+                <outlet property="nameLabel" destination="fBh-Ql-r4t" id="XlX-3k-B1Z"/>
+                <outlet property="numberLabel" destination="Qc1-Nm-PDM" id="omQ-23-m8y"/>
+            </connections>
+            <point key="canvasLocation" x="121.37404580152672" y="42.605633802816904"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="randevuIcon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

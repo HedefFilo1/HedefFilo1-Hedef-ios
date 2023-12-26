@@ -113,5 +113,14 @@ extension ServicesCoordinator: LastikRandevuConfirmationVMCrdintrDlgt {
 }
 
 extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
+    func goToServices() {
+        let viewController: ServicesViewController = storyboard.instantiateViewController()
+        viewController.viewModel = ServicesViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
     
 }

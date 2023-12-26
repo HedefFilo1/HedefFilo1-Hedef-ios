@@ -2,15 +2,15 @@
 //  ServicesViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 12/19/23.
+//  Created by Jamal on 12/26/23.
 //
 
 import Foundation
 import UIKit
 
-class VehicleServicesViewController: UIViewController {
+class ServicesViewController: UIViewController {
 
-    var viewModel: VehicleServicesViewModelType! {
+    var viewModel: ServicesViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -36,13 +36,13 @@ class VehicleServicesViewController: UIViewController {
     }
     
     func setupUI() {
-        setBasicViews()
         applyStyle()
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: VehicleServicesSearchCell.self)
-        collectionView.register(cellType: VehicleServicesItemsCell.self)
+        collectionView.register(cellType: ServicesSearchCell.self)
+        collectionView.register(cellType: ServicesItemsCell.self)
+        collectionView.contentInset.bottom = 12
         collectionView.contentInset.bottom = 70
     }
     
@@ -54,11 +54,11 @@ class VehicleServicesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.contractedServices
+        titleLabel.text = Strings.services
     }
 }
 
-extension VehicleServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -71,11 +71,11 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.item == 0 {
-            let cell: VehicleServicesSearchCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: ServicesSearchCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
         }
         
-        let cell: VehicleServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: ServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.items = viewModel.services
         return cell
     }
@@ -103,7 +103,7 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
     }
 }
 
-extension VehicleServicesViewController: VehicleServicesViewModelDelegate {
+extension ServicesViewController: ServicesViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

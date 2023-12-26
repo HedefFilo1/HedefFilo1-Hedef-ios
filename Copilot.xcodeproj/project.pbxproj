@@ -29,8 +29,8 @@
 		8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */; };
 		8917F5582B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5572B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift */; };
 		8917F55A2B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5592B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift */; };
-		8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */; };
-		8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */; };
+		8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */; };
+		8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
@@ -181,7 +181,6 @@
 		89A908CB2B31ABA400BC7727 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */; };
 		89A908CC2B31ABA400BC7727 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */; };
 		89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */; };
-		89A908D12B31ADF600BC7727 /* ServicesItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */; };
 		89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */; };
 		89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */; };
 		89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */; };
@@ -225,6 +224,12 @@
 		89C686942B0260C900011897 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686922B0260C900011897 /* AvatarCell.swift */; };
 		89C686952B0260C900011897 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C686932B0260C900011897 /* AvatarCell.xib */; };
 		89C686972B02616D00011897 /* CPRadioBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686962B02616D00011897 /* CPRadioBox.swift */; };
+		89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE07FE2B3AE2DC00C76433 /* ServicesViewController.swift */; };
+		89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE08002B3AE2E400C76433 /* ServicesViewModel.swift */; };
+		89CE08032B3AE3A300C76433 /* VehicleServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE08022B3AE3A300C76433 /* VehicleServicesSearchCell.swift */; };
+		89CE08052B3AE3AC00C76433 /* VehicleServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CE08042B3AE3AC00C76433 /* VehicleServicesSearchCell.xib */; };
+		89CE08092B3AE40100C76433 /* VehicleServicesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE08082B3AE40100C76433 /* VehicleServicesItemsCell.swift */; };
+		89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CE080A2B3AE40600C76433 /* VehicleServicesItemsCell.xib */; };
 		89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */; };
 		89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */; };
 		89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */; };
@@ -255,6 +260,9 @@
 		89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E045942B04FA3F00745E73 /* DocumentPageTitleCell.xib */; };
 		89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */; };
 		89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */; };
+		89E29B592B3AE4B300CCABAD /* ServicesItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E29B582B3AE4B300CCABAD /* ServicesItemsCell.xib */; };
+		89E29B5C2B3AE52900CCABAD /* VehicleServicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E29B5B2B3AE52900CCABAD /* VehicleServicesItemCell.swift */; };
+		89E29B5E2B3AE53000CCABAD /* VehicleServicesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E29B5D2B3AE53000CCABAD /* VehicleServicesItemCell.xib */; };
 		89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */; };
 		89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */; };
 		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
@@ -290,8 +298,8 @@
 		8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuViewModel.swift; sourceTree = "<group>"; };
 		8917F5572B3A04E500681AD3 /* LastikRandevuConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuConfirmationViewModel.swift; sourceTree = "<group>"; };
 		8917F5592B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuConfirmationViewController.swift; sourceTree = "<group>"; };
-		8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewController.swift; sourceTree = "<group>"; };
-		8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewModel.swift; sourceTree = "<group>"; };
+		8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewModel.swift; sourceTree = "<group>"; };
+		8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewController.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
@@ -445,7 +453,6 @@
 		89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
 		89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemsCell.swift; sourceTree = "<group>"; };
-		89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemsCell.xib; sourceTree = "<group>"; };
 		89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemCell.swift; sourceTree = "<group>"; };
 		89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemCell.xib; sourceTree = "<group>"; };
 		89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderParluxLayout.swift; sourceTree = "<group>"; };
@@ -489,6 +496,12 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
+		89CE07FE2B3AE2DC00C76433 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		89CE08002B3AE2E400C76433 /* ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewModel.swift; sourceTree = "<group>"; };
+		89CE08022B3AE3A300C76433 /* VehicleServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesSearchCell.swift; sourceTree = "<group>"; };
+		89CE08042B3AE3AC00C76433 /* VehicleServicesSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleServicesSearchCell.xib; sourceTree = "<group>"; };
+		89CE08082B3AE40100C76433 /* VehicleServicesItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesItemsCell.swift; sourceTree = "<group>"; };
+		89CE080A2B3AE40600C76433 /* VehicleServicesItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleServicesItemsCell.xib; sourceTree = "<group>"; };
 		89DAB7FA2AC72D0E0098BA67 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		89DAB7FC2AC72D240098BA67 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		89DAB7FF2AC72D3D0098BA67 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -519,6 +532,9 @@
 		89E045942B04FA3F00745E73 /* DocumentPageTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentPageTitleCell.xib; sourceTree = "<group>"; };
 		89E045992B04FAD200745E73 /* YourDocumentsTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDocumentsTabCell.swift; sourceTree = "<group>"; };
 		89E0459A2B04FAD200745E73 /* YourDocumentsTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourDocumentsTabCell.xib; sourceTree = "<group>"; };
+		89E29B582B3AE4B300CCABAD /* ServicesItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesItemsCell.xib; sourceTree = "<group>"; };
+		89E29B5B2B3AE52900CCABAD /* VehicleServicesItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesItemCell.swift; sourceTree = "<group>"; };
+		89E29B5D2B3AE53000CCABAD /* VehicleServicesItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleServicesItemCell.xib; sourceTree = "<group>"; };
 		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -640,8 +656,8 @@
 		8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */ = {
 			isa = PBXGroup;
 			children = (
-				8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift */,
-				8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift */,
+				8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */,
+				8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */,
 			);
 			path = LastikConfirmInfo;
 			sourceTree = "<group>";
@@ -1275,6 +1291,7 @@
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
 				8917F5562B3A04CA00681AD3 /* LastikRandevuConfirmation */,
 				8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */,
+				89CE07FD2B3AE2CC00C76433 /* Services */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1302,8 +1319,8 @@
 		89A908C82B31AB8000BC7727 /* ServicesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */,
-				89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */,
+				89CE08022B3AE3A300C76433 /* VehicleServicesSearchCell.swift */,
+				89CE08042B3AE3AC00C76433 /* VehicleServicesSearchCell.xib */,
 			);
 			path = ServicesSearch;
 			sourceTree = "<group>";
@@ -1311,8 +1328,8 @@
 		89A908CD2B31ADD100BC7727 /* ServicesItems */ = {
 			isa = PBXGroup;
 			children = (
-				89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */,
-				89A908CF2B31ADF600BC7727 /* ServicesItemsCell.xib */,
+				89CE08082B3AE40100C76433 /* VehicleServicesItemsCell.swift */,
+				89CE080A2B3AE40600C76433 /* VehicleServicesItemsCell.xib */,
 			);
 			path = ServicesItems;
 			sourceTree = "<group>";
@@ -1320,8 +1337,8 @@
 		89A908D22B31AE9A00BC7727 /* ServicesItem */ = {
 			isa = PBXGroup;
 			children = (
-				89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */,
-				89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */,
+				89E29B5B2B3AE52900CCABAD /* VehicleServicesItemCell.swift */,
+				89E29B5D2B3AE53000CCABAD /* VehicleServicesItemCell.xib */,
 			);
 			path = ServicesItem;
 			sourceTree = "<group>";
@@ -1549,6 +1566,44 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		89CE07FD2B3AE2CC00C76433 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89CE07FE2B3AE2DC00C76433 /* ServicesViewController.swift */,
+				89CE08002B3AE2E400C76433 /* ServicesViewModel.swift */,
+				89CE08062B3AE3C900C76433 /* Cell */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		89CE08062B3AE3C900C76433 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89CE08072B3AE3DA00C76433 /* Searach */,
+				89CE080C2B3AE44F00C76433 /* Items */,
+				89E29B5A2B3AE51400CCABAD /* Item */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89CE08072B3AE3DA00C76433 /* Searach */ = {
+			isa = PBXGroup;
+			children = (
+				89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */,
+				89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */,
+			);
+			path = Searach;
+			sourceTree = "<group>";
+		};
+		89CE080C2B3AE44F00C76433 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				89E29B582B3AE4B300CCABAD /* ServicesItemsCell.xib */,
+				89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		89DAB7F92AC72CFE0098BA67 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1682,6 +1737,15 @@
 			path = YourDocumentsTab;
 			sourceTree = "<group>";
 		};
+		89E29B5A2B3AE51400CCABAD /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */,
+				89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		89F23BBC2B299FC60081DD85 /* PdfViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1776,6 +1840,7 @@
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
+				89E29B592B3AE4B300CCABAD /* ServicesItemsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
@@ -1797,10 +1862,12 @@
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
 				8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */,
+				89E29B5E2B3AE53000CCABAD /* VehicleServicesItemCell.xib in Resources */,
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
+				89CE08052B3AE3AC00C76433 /* VehicleServicesSearchCell.xib in Resources */,
 				8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
@@ -1808,8 +1875,8 @@
 				89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */,
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
+				89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
-				89A908D12B31ADF600BC7727 /* ServicesItemsCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
@@ -1938,7 +2005,7 @@
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
-				8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewController.swift in Sources */,
+				8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
@@ -1955,6 +2022,7 @@
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				894CEC812B078F9300D369E9 /* SearchViewController.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
+				89CE08032B3AE3A300C76433 /* VehicleServicesSearchCell.swift in Sources */,
 				89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */,
 				893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
@@ -1991,6 +2059,7 @@
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
+				89CE08092B3AE40100C76433 /* VehicleServicesItemsCell.swift in Sources */,
 				89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
@@ -2015,12 +2084,14 @@
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
+				89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */,
 				89108AA02B39E01700C8F400 /* NewLastikRequestViewController.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
 				89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
+				89E29B5C2B3AE52900CCABAD /* VehicleServicesItemCell.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
 				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
@@ -2034,6 +2105,7 @@
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
+				89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
@@ -2069,7 +2141,7 @@
 				8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,
-				8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewModel.swift in Sources */,
+				8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift in Sources */,
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
