@@ -82,21 +82,34 @@ class Loading {
     }
     
     private func getCurrentController(window: UIWindow) -> UIViewController? {
-        if let nav = window.rootViewController as? UINavigationController,
-           let viewController = nav.topViewController {
-//            let top = nav.topViewController
-            if let tabbar = viewController as? UITabBarController {
-                if let selected = tabbar.selectedViewController as? UINavigationController,
-                   let current = selected.visibleViewController {
-                    return current
-                }
-                if let nav = tabbar.selectedViewController as? UINavigationController {
-                    return nav.topViewController
-                }
-                return tabbar.selectedViewController
+//        if let nav = window.rootViewController as? UINavigationController,
+//           let viewController = nav.topViewController {
+////            let top = nav.topViewController
+//            if let tabbar = viewController as? UITabBarController {
+//                if let selected = tabbar.selectedViewController as? UINavigationController,
+//                   let current = selected.visibleViewController {
+//                    return current
+//                }
+//                if let nav = tabbar.selectedViewController as? UINavigationController {
+//                    return nav.topViewController
+//                }
+//                return tabbar.selectedViewController
+//            }
+//
+//            return viewController
+//        }
+        
+        if let tabbar = window.rootViewController as? UITabBarController {
+            if let selected = tabbar.selectedViewController as? UINavigationController,
+               let current = selected.visibleViewController {
+                return current
             }
             
-            return viewController
+            return tabbar.selectedViewController
+        }
+        
+        if let nav = window.rootViewController as? UINavigationController {
+            return nav.topViewController
         }
         
         return nil

@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ServicesSearchCell: UICollectionViewCell, Reusable {
+protocol ServicesSearchCellDelegate: AnyObject {
+    func didChangeSearch(text: String)
+}
 
+class ServicesSearchCell: UICollectionViewCell, Reusable {
+    weak var delegate: ServicesSearchCellDelegate?
 //    @IBOutlet weak var sortLabel: UILabel!
     @IBOutlet weak var filterLabel: UILabel!
 //    @IBOutlet weak var sortView: UIView!
@@ -21,6 +25,7 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
     }
 
     func setup() {
+        searchTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         applyStyles()
     }
     
@@ -37,5 +42,10 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
         filterLabel.apply(.blackS14B700)
         searchTextField.setTint(color: .fieldsTitle)
         searchTextField.apply(.blackS14R400)
+    }
+    
+    @objc func editingChanged() {
+        let text = searchTextField.text ?? ""
+        delegate?.didChangeSearch(text: text)
     }
 }

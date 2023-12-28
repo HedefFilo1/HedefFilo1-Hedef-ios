@@ -19,6 +19,8 @@ protocol VehicleServicesViewModelType: AnyObject {
     var coordinatorDelegate: VehicleServicesVMCoordinatorDelegate? { get set }
     var delegate: VehicleServicesViewModelDelegate? { get set }
     var services: [Supplier]? { get set }
+    var filteredServices: [Supplier]? { get set }
+    var searchText: String { get set }
     func getServices()
 }
 
@@ -26,6 +28,23 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
     weak var coordinatorDelegate: VehicleServicesVMCoordinatorDelegate?
     weak var delegate: VehicleServicesViewModelDelegate?
     var services: [Supplier]?
+    
+    var searchText: String = "" {
+        didSet {
+            if searchText.count == 0 {
+                filteredServices = services
+                return
+            }
+            
+            let result = services?.filter {
+                $0.name.lowercased().contains(searchText.lowercased())
+            }
+            
+            filteredServices = result
+        }
+    }
+    
+    var filteredServices: [Supplier]?
     
     func getServices() {
         let mark = App.vehicle?.make ?? ""
@@ -36,6 +55,7 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
             
             if let model = model {
                 self.services = model
+                self.filteredServices = model
                 self.delegate?.reloadData()
             } else
             

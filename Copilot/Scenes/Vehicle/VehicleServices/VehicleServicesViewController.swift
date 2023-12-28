@@ -19,6 +19,8 @@ class VehicleServicesViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    private var filtering = false
+    private var searchText = ""
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -61,27 +63,28 @@ class VehicleServicesViewController: UIViewController {
 extension VehicleServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 0 {
+        if indexPath.section == 0 {
             let cell: VehicleServicesSearchCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         }
         
         let cell: VehicleServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.items = viewModel.services
+        cell.items = viewModel.filteredServices
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item == 0 {
+        if indexPath.section == 0 {
             return CGSize(width: collectionView.frame.width, height: 74)
         } else {
             
@@ -100,6 +103,23 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
+    func didChangeSearch(text: String) {
+        searchText = text
+        if filtering {
+            return
+        }
+        filtering = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) {
+            self.viewModel.searchText = self.searchText
+            self.collectionView.reloadSections(IndexSet(integer: 1))
+            self.filtering = false
+        }
+        
     }
 }
 
