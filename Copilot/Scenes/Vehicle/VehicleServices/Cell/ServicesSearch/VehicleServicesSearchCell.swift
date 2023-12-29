@@ -8,6 +8,7 @@
 import UIKit
 
 protocol VehicleServicesSearchCellDelegate: AnyObject {
+    func didTapFilter()
     func didChangeSearch(text: String)
 }
 
@@ -48,5 +49,9 @@ class VehicleServicesSearchCell: UICollectionViewCell, Reusable {
     @objc func editingChanged() {
         let text = searchTextField.text ?? ""
         delegate?.didChangeSearch(text: text)
+    }
+    
+    @IBAction func didTapFilter() {
+        delegate?.didTapFilter()
     }
 }

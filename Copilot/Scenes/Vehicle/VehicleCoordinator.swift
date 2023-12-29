@@ -90,5 +90,10 @@ extension VehicleCoordinator: DocumentViewModelCoordinatorDelegate,
 }
 
 extension VehicleCoordinator: VehicleServicesVMCoordinatorDelegate {
-    
+    func presentFilters() {
+        let controller: ServiceFilterViewController = storyboard.instantiateViewController()
+        let viewModel = ServiceFilterViewModel()
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
+    }
 }

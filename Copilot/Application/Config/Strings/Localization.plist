@@ -595,6 +595,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Filters</string>
         </dict>
         
+        <key>filter</key>
+        <dict>
+            <key>tr</key>
+            <string>Filtre</string>
+            <key>en</key>
+            <string>Filter</string>
+        </dict>
+        
         <key>error</key>
         <dict>
             <key>tr</key>
@@ -1324,6 +1332,78 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Servis Seçimi İle İlerle</string>
             <key>en</key>
             <string>Proceed with Service Selection</string>
+        </dict>
+        
+        <key>province</key>
+        <dict>
+            <key>tr</key>
+            <string>İl</string>
+            <key>en</key>
+            <string>Province</string>
+        </dict>
+        
+        <key>district</key>
+        <dict>
+            <key>tr</key>
+            <string>İlçe</string>
+            <key>en</key>
+            <string>District</string>
+        </dict>
+        
+        <key>choose</key>
+        <dict>
+            <key>tr</key>
+            <string>Seçiniz</string>
+            <key>en</key>
+            <string>Choose</string>
+        </dict>
+      
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
         </dict>
         
         <key></key>

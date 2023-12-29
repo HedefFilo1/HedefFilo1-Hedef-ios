@@ -149,4 +149,8 @@ struct Images {
     static var lastikPoints: UIImage {
         return UIImage(named: "lastikPoints2") ?? UIImage()
     }
+    
+    static var chevronBlackDown: UIImage {
+        return UIImage(named: "chevronBlackDown") ?? UIImage()
+    }
 }

@@ -238,6 +238,9 @@
 		89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */; };
 		89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */; };
 		89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8092AC73BD50098BA67 /* CodeStrings.swift */; };
+		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
+		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
+		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
 		89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCE86F2B21E03100AB1114 /* Campaign.swift */; };
 		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
 		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
@@ -510,6 +513,9 @@
 		89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPasswordTextField.swift; sourceTree = "<group>"; };
 		89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPEmailTextField.swift; sourceTree = "<group>"; };
 		89DAB8092AC73BD50098BA67 /* CodeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStrings.swift; sourceTree = "<group>"; };
+		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
+		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
+		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
 		89DCE86F2B21E03100AB1114 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
@@ -782,6 +788,7 @@
 				89F7AAB42B15DF4A00858D2E /* HGSDetail */,
 				89A908B62B31A6F300BC7727 /* VehicleServices */,
 				89F23BBC2B299FC60081DD85 /* PdfViewer */,
+				89DC31292B3E852400791C3B /* ServiceFilter */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -1468,6 +1475,7 @@
 				896CB3502AD5BF7C0048025A /* CPSearchTextField.swift */,
 				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
 				891BFB692B347012009BD793 /* ParluxViews */,
+				89DC31272B3E812D00791C3B /* CPDropDownList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1624,6 +1632,15 @@
 				89DAB8012AC72D450098BA67 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		89DC31292B3E852400791C3B /* ServiceFilter */ = {
+			isa = PBXGroup;
+			children = (
+				89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */,
+				89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */,
+			);
+			path = ServiceFilter;
 			sourceTree = "<group>";
 		};
 		89DF07052AF011C200892B1D /* SubFilters */ = {
@@ -2004,6 +2021,7 @@
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
+				89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
@@ -2121,12 +2139,14 @@
 				89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */,
 				891BFB6E2B349667009BD793 /* ServiceTabViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
+				89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
 				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
+				89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */,
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,

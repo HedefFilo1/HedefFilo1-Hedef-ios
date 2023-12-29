@@ -344,4 +344,20 @@ extension Strings {
     static var proceedServiceSelection: String {
         return localized(string: "proceedServiceSelection")
     }
+    
+    static var province: String {
+        return localized(string: "province")
+    }
+    
+    static var district: String {
+        return localized(string: "district")
+    }
+    
+    static var filter: String {
+        return localized(string: "filter")
+    }
+    
+    static var choose: String {
+        return localized(string: "choose")
+    }
 }

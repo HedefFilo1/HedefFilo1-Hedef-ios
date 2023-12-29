@@ -119,7 +119,10 @@ extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
             self.collectionView.reloadSections(IndexSet(integer: 1))
             self.filtering = false
         }
-        
+    }
+    
+    func didTapFilter() {
+        viewModel.presentFilters()
     }
 }
 

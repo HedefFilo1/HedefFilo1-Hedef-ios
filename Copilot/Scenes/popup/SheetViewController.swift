@@ -45,8 +45,8 @@ class SheetViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     func setup() {
-        view.backgroundColor = .clear
-        addBottomView()
+//        view.backgroundColor = .clear
+//        addBottomView()
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didDragView))
         view.addGestureRecognizer(panGesture)

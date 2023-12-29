@@ -8,7 +8,7 @@
 import Foundation
 
 protocol VehicleServicesVMCoordinatorDelegate: AnyObject {
-
+    func presentFilters()
 }
 
 protocol VehicleServicesViewModelDelegate: BaseViewModelDelegate {
@@ -22,6 +22,7 @@ protocol VehicleServicesViewModelType: AnyObject {
     var filteredServices: [Supplier]? { get set }
     var searchText: String { get set }
     func getServices()
+    func presentFilters()
 }
 
 class VehicleServicesViewModel: VehicleServicesViewModelType {
@@ -64,5 +65,9 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
                                          message: error.message)
             }
         }
+    }
+    
+    func presentFilters() {
+        coordinatorDelegate?.presentFilters()
     }
 }
