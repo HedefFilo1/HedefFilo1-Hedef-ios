@@ -84,6 +84,7 @@ extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDe
         
         let cell: ServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.items = viewModel.filteredServices
+        cell.delegate = self
         return cell
     }
     
@@ -128,6 +129,12 @@ extension ServicesViewController: ServicesSearchCellDelegate {
     
     func didTapFilter() {
         viewModel.presentFilters()
+    }
+}
+
+extension ServicesViewController: ServicesItemsCellDelegate {
+    func didSelect(item: Supplier) {
+        viewModel.goToServiceDetail(service: item)
     }
 }
 

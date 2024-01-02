@@ -1358,60 +1358,60 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Choose</string>
         </dict>
       
-        <key></key>
+        <key>selectTimeToRepair</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string> Lastik tamir randevusu almak için lütfen tarih ve saat  seçiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please select a date and time to make a tire repair appointment.</string>
         </dict>
         
-        <key></key>
+        <key>showOnMap</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Haritada Aç</string>
             <key>en</key>
-            <string></string>
+            <string>Show on the Map</string>
         </dict>
         
-        <key></key>
+        <key>selectAppointmentDay</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Randevu Günü Seçiniz</string>
             <key>en</key>
-            <string></string>
+            <string>Select Appointment Day</string>
         </dict>
         
-        <key></key>
+        <key>oneAppointment15Days</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yalnızca önümüzdeki 15 gün için randevu alabilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>You can only make an appointment for the next 15 days.</string>
         </dict>
         
-        <key></key>
+        <key>selectDay</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Gün Seçiniz</string>
             <key>en</key>
-            <string></string>
+            <string>Select Day</string>
         </dict>
         
-        <key></key>
+        <key>selectTime</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Saat Seçiniz</string>
             <key>en</key>
-            <string></string>
+            <string>Select Time</string>
         </dict>
         
-        <key></key>
+        <key>devamEt</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Devam Et</string>
             <key>en</key>
-            <string></string>
+            <string>Continue</string>
         </dict>
         
         <key></key>

@@ -360,4 +360,32 @@ extension Strings {
     static var choose: String {
         return localized(string: "choose")
     }
+    
+    static var selectTimeToRepair: String {
+        return localized(string: "selectTimeToRepair")
+    }
+    
+    static var selectAppointmentDay: String {
+        return localized(string: "selectAppointmentDay")
+    }
+    
+    static var oneAppointment15Days: String {
+        return localized(string: "oneAppointment15Days")
+    }
+    
+    static var selectDay: String {
+        return localized(string: "selectDay")
+    }
+    
+    static var selectTime: String {
+        return localized(string: "selectTime")
+    }
+    
+    static var showOnMap: String {
+        return localized(string: "showOnMap")
+    }
+    
+    static var devamEt: String {
+        return localized(string: "devamEt")
+    }
 }

@@ -128,4 +128,12 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         controller.viewModel = viewModel
         navigationController.present(controller, animated: true)
     }
+    
+    func goToServiceDetail(service: Supplier) {
+        let controller: ServiceDetailViewController = storyboard.instantiateViewController()
+        let viewModel = ServiceDetailViewModel()
+        viewModel.service = service
+        controller.viewModel = viewModel
+        navigationController.pushViewController(controller, animated: true)
+    }
 }

@@ -153,4 +153,8 @@ struct Images {
     static var chevronBlackDown: UIImage {
         return UIImage(named: "chevronBlackDown") ?? UIImage()
     }
+    
+    static var calendarIcon: UIImage {
+        return UIImage(named: "calendarIcon") ?? UIImage()
+    }
 }

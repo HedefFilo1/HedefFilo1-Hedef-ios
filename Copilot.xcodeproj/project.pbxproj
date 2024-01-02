@@ -41,6 +41,10 @@
 		891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */; };
 		891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
+		891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78302B4440BE008FC722 /* CPDateChooseView.swift */; };
+		891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78322B4443CC008FC722 /* CPTimeChooseView.swift */; };
+		891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78352B445C13008FC722 /* ServiceDetailViewController.swift */; };
+		891D78382B445C3F008FC722 /* ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78372B445C3F008FC722 /* ServiceDetailViewModel.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
 		892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892A8CF12AC4C6860020C1C4 /* Splash.storyboard */; };
@@ -313,6 +317,10 @@
 		891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewController.swift; sourceTree = "<group>"; };
 		891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewModel.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
+		891D78302B4440BE008FC722 /* CPDateChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDateChooseView.swift; sourceTree = "<group>"; };
+		891D78322B4443CC008FC722 /* CPTimeChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTimeChooseView.swift; sourceTree = "<group>"; };
+		891D78352B445C13008FC722 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
+		891D78372B445C3F008FC722 /* ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewModel.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		892A8CF12AC4C6860020C1C4 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -714,6 +722,15 @@
 				891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */,
 			);
 			path = LastikOperations;
+			sourceTree = "<group>";
+		};
+		891D78342B445BF9008FC722 /* ServiceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				891D78352B445C13008FC722 /* ServiceDetailViewController.swift */,
+				891D78372B445C3F008FC722 /* ServiceDetailViewModel.swift */,
+			);
+			path = ServiceDetail;
 			sourceTree = "<group>";
 		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
@@ -1299,6 +1316,7 @@
 				8917F5562B3A04CA00681AD3 /* LastikRandevuConfirmation */,
 				8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */,
 				89CE07FD2B3AE2CC00C76433 /* Services */,
+				891D78342B445BF9008FC722 /* ServiceDetail */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1476,6 +1494,8 @@
 				89BDB3812AD955F5003D5717 /* CPErrorView.swift */,
 				891BFB692B347012009BD793 /* ParluxViews */,
 				89DC31272B3E812D00791C3B /* CPDropDownList.swift */,
+				891D78302B4440BE008FC722 /* CPDateChooseView.swift */,
+				891D78322B4443CC008FC722 /* CPTimeChooseView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1996,6 +2016,7 @@
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
+				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */,
 				891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
@@ -2144,6 +2165,7 @@
 				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
+				891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */,
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
 				89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */,
@@ -2179,6 +2201,7 @@
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
+				891D78382B445C3F008FC722 /* ServiceDetailViewModel.swift in Sources */,
 				89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
@@ -2191,6 +2214,7 @@
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
+				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,

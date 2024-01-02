@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ServicesItemsCellDelegate: AnyObject {
+    func didSelect(item: Supplier)
+}
+
 class ServicesItemsCell: UICollectionViewCell, Reusable {
     
     var items: [Supplier]? {
@@ -16,6 +20,7 @@ class ServicesItemsCell: UICollectionViewCell, Reusable {
             collectionView.reloadData()
         }
     }
+    weak var delegate: ServicesItemsCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -58,6 +63,9 @@ extension ServicesItemsCell: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = items?[indexPath.item] {
+            delegate?.didSelect(item: item)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

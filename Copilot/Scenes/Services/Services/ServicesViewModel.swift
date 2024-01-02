@@ -10,6 +10,7 @@ import Foundation
 protocol ServicesVMCoordinatorDelegate: AnyObject {
     func presentFilters()
     func getBack()
+    func goToServiceDetail(service: Supplier)
 }
 
 protocol ServicesViewModelDelegate: BaseViewModelDelegate {
@@ -25,6 +26,7 @@ protocol ServicesViewModelType: AnyObject {
     func getServices()
     func presentFilters()
     func getBack()
+    func goToServiceDetail(service: Supplier)
 }
 
 class ServicesViewModel: ServicesViewModelType {
@@ -75,5 +77,9 @@ class ServicesViewModel: ServicesViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToServiceDetail(service: Supplier) {
+        coordinatorDelegate?.goToServiceDetail(service: service)
     }
 }
