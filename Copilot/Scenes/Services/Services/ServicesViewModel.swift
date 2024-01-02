@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ServicesVMCoordinatorDelegate: AnyObject {
-
+    func presentFilters()
+    func getBack()
 }
 
 protocol ServicesViewModelDelegate: BaseViewModelDelegate {
@@ -22,6 +23,8 @@ protocol ServicesViewModelType: AnyObject {
     var filteredServices: [Supplier]? { get set }
     var searchText: String { get set }
     func getServices()
+    func presentFilters()
+    func getBack()
 }
 
 class ServicesViewModel: ServicesViewModelType {
@@ -55,6 +58,7 @@ class ServicesViewModel: ServicesViewModelType {
             
             if let model = model {
                 self.services = model
+                self.filteredServices = model
                 self.delegate?.reloadData()
             } else
             
@@ -63,5 +67,13 @@ class ServicesViewModel: ServicesViewModelType {
                                          message: error.message)
             }
         }
+    }
+    
+    func presentFilters() {
+        coordinatorDelegate?.presentFilters()
+    }
+    
+    func getBack() {
+        coordinatorDelegate?.getBack()
     }
 }

@@ -93,7 +93,7 @@
             <size key="customSize" width="365" height="117"/>
             <connections>
                 <outlet property="addressLabel" destination="Ai0-aM-JCU" id="dbo-vK-XFm"/>
-                <outlet property="dateLabel" destination="Qc1-Nm-PDM" id="XNq-o5-c0S"/>
+                <outlet property="dateLabel" destination="xea-Tk-j2R" id="NLL-Km-z1o"/>
                 <outlet property="iconView" destination="Tnl-tm-DEO" id="Y3q-ud-jKO"/>
                 <outlet property="nameLabel" destination="fBh-Ql-r4t" id="XlX-3k-B1Z"/>
                 <outlet property="numberLabel" destination="Qc1-Nm-PDM" id="omQ-23-m8y"/>

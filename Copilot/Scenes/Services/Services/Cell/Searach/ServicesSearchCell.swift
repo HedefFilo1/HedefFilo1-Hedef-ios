@@ -9,6 +9,7 @@ import UIKit
 
 protocol ServicesSearchCellDelegate: AnyObject {
     func didChangeSearch(text: String)
+    func didTapFilter()
 }
 
 class ServicesSearchCell: UICollectionViewCell, Reusable {
@@ -47,5 +48,9 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
     @objc func editingChanged() {
         let text = searchTextField.text ?? ""
         delegate?.didChangeSearch(text: text)
+    }
+    
+    @IBAction func didTapFilter() {
+        delegate?.didTapFilter()
     }
 }

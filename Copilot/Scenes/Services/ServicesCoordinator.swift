@@ -103,7 +103,7 @@ extension ServicesCoordinator: LastikRandevuVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: LastikRandevuConfirmationVMCrdintrDlgt {
-   
+    
     func goToLastikConfirmInfo() {
         let viewController: LastikConfirmInfoViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikConfirmInfoViewModel()
@@ -122,5 +122,10 @@ extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
-    
+    func presentFilters() {
+        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        let viewModel = ServiceFilterViewModel()
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
+    }
 }

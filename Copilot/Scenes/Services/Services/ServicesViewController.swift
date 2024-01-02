@@ -58,6 +58,10 @@ class ServicesViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.services
     }
+    
+    @IBAction func didTapBack() {
+        viewModel.getBack()
+    }
 }
 
 extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
@@ -120,6 +124,10 @@ extension ServicesViewController: ServicesSearchCellDelegate {
             self.filtering = false
         }
         
+    }
+    
+    func didTapFilter() {
+        viewModel.presentFilters()
     }
 }
 
