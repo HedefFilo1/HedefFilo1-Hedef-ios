@@ -50,6 +50,7 @@ class ServiceDetailViewController: UIViewController {
         applyStyle()
         setTexts()
         continueButton.isEnabled = false
+        dateChooseView.delegate = self
         timeChooseView.delegate = self
     }
     
@@ -63,6 +64,7 @@ class ServiceDetailViewController: UIViewController {
         mapButtonView.layer.cornerRadius = 10
         mapButtonView.layer.borderWidth = 1
         mapButtonView.layer.borderColor = UIColor.theme.cgColor
+        mapButtonLabel.apply(.themeS12B700)
         selectRandevuLabel.apply(.blackS14B700)
         randevuDescriptionLabel.apply(.greyS12R400)
         selectDayLabel.apply(.blackS12B700)
@@ -90,13 +92,24 @@ class ServiceDetailViewController: UIViewController {
     }
 }
 
-extension ServiceDetailViewController: CPTimeChooseViewDelegate {
+extension ServiceDetailViewController: CPTimeChooseViewDelegate,
+                                       CPDateChooseViewDelegate,
+                                       CalendarViewControllerDelegate {
+    
+    func didTap(_: CPDateChooseView) {
+        viewModel.presentCalendar(delegate: self)
+    }
+    
     func didTap(_: CPTimeChooseView) {
         
     }
     
     func superViewForDropDown(in cpTimeChooseView: CPTimeNumberChooseView) -> UIView? {
         return view
+    }
+    
+    func didSelect(date: Date) {
+        dateChooseView.date = date.description
     }
 }
 

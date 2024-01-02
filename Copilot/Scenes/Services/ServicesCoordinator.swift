@@ -134,6 +134,16 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         let viewModel = ServiceDetailViewModel()
         viewModel.service = service
         controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        let controller: CalendarViewController = storyboard.instantiateViewController()
+        let viewModel = CalendarViewModel()
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
     }
 }

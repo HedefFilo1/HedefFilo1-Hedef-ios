@@ -12,4 +12,5 @@ target 'Copilot' do
   pod 'Alamofire'
   pod 'GoogleMaps', '8.3.1'
   pod 'SDWebImage'
+  pod 'FSCalendar'
 end

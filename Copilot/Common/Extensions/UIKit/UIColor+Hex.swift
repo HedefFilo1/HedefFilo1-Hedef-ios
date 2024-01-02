@@ -30,6 +30,9 @@ extension UIColor {
     /// #D2D2D2
     static let appLightGrey = UIColor(named: "appLightGrey") ?? .gray
     
+    /// #9E9EB0
+    static let textLightGrey = UIColor(named: "textLightGrey") ?? .gray
+    
     /// #EDEDF5
     static let borderColor = UIColor(named: "borderColor") ?? .gray
     

@@ -8,6 +8,7 @@
 import Foundation
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
+    func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
 protocol ServiceDetailViewModelDelegate: BaseViewModelDelegate {
@@ -19,6 +20,7 @@ protocol ServiceDetailViewModelType: AnyObject {
     var delegate: ServiceDetailViewModelDelegate? { get set }
     var service: Supplier? { get set }
     func getBack()
+    func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
 class ServiceDetailViewModel: ServiceDetailViewModelType {
@@ -29,5 +31,9 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        coordinatorDelegate?.presentCalendar(delegate: delegate)
     }
 }

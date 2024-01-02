@@ -51,8 +51,10 @@ class CPDateChooseView: UIView {
         label.align(toView: icon, trailingToLeading: 4)
         icon.image = Images.calendarIcon
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
-        addGestureRecognizer(tap)
+        let button = UIButton()
+        button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
+        addSubview(button)
+        button.align(all: 0)
     }
     
     @objc func didTap() {
