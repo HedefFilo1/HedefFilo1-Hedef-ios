@@ -1637,9 +1637,16 @@ talep edebilirsiniz.</string>
                                             <action selector="didTapApply:" destination="pvk-e1-Ch5" eventType="touchUpInside" id="2qq-MW-jrO"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVR-Oc-Muq">
+                                        <rect key="frame" x="16" y="61" width="361" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="U2A-qM-D69"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waW-2U-nqW" customClass="FSCalendar">
                                         <rect key="frame" x="16" y="61" width="361" height="305"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="305" id="qnu-jC-Qw1"/>
                                         </constraints>
@@ -1660,11 +1667,14 @@ talep edebilirsiniz.</string>
                                 <constraints>
                                     <constraint firstItem="zgL-5c-iNW" firstAttribute="leading" secondItem="Tmg-4L-nE6" secondAttribute="leading" constant="16" id="07j-je-q79"/>
                                     <constraint firstAttribute="trailing" secondItem="mov-Xd-qTp" secondAttribute="trailing" constant="24" id="0gu-jo-hAB"/>
+                                    <constraint firstItem="tVR-Oc-Muq" firstAttribute="top" secondItem="waW-2U-nqW" secondAttribute="top" id="2OY-xD-v9h"/>
                                     <constraint firstItem="zOq-55-vKJ" firstAttribute="top" secondItem="Tmg-4L-nE6" secondAttribute="top" constant="24" id="2wy-E3-4jZ"/>
                                     <constraint firstAttribute="trailing" secondItem="waW-2U-nqW" secondAttribute="trailing" constant="16" id="PvI-Ov-U4q"/>
                                     <constraint firstItem="waW-2U-nqW" firstAttribute="leading" secondItem="Tmg-4L-nE6" secondAttribute="leading" constant="16" id="SB3-IJ-LlK"/>
+                                    <constraint firstItem="tVR-Oc-Muq" firstAttribute="trailing" secondItem="waW-2U-nqW" secondAttribute="trailing" id="VnU-4D-H7A"/>
                                     <constraint firstItem="zgL-5c-iNW" firstAttribute="top" secondItem="waW-2U-nqW" secondAttribute="bottom" constant="16" id="XBy-JN-Won"/>
                                     <constraint firstItem="mov-Xd-qTp" firstAttribute="centerY" secondItem="zOq-55-vKJ" secondAttribute="centerY" id="aUd-IU-0P7"/>
+                                    <constraint firstItem="tVR-Oc-Muq" firstAttribute="leading" secondItem="waW-2U-nqW" secondAttribute="leading" id="coP-Jc-qdx"/>
                                     <constraint firstItem="Lcb-GS-XDf" firstAttribute="centerY" secondItem="mov-Xd-qTp" secondAttribute="centerY" id="f1M-ou-3Ul"/>
                                     <constraint firstAttribute="trailing" secondItem="zOq-55-vKJ" secondAttribute="trailing" constant="16" id="kCn-5q-XJk"/>
                                     <constraint firstAttribute="trailing" secondItem="zgL-5c-iNW" secondAttribute="trailing" constant="16" id="lGE-EF-xsm"/>

@@ -10,6 +10,7 @@ import UIKit
 
 protocol CPTimeNumberChooseViewDelegate: AnyObject {
     func didTap(_: CPTimeChooseView)
+    func didSelect(_: CPTimeNumberChooseView, number: String)
     func superViewForDropDown(in cpTimeChooseView: CPTimeNumberChooseView) -> UIView?
 }
 
@@ -25,6 +26,7 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
     
     var parentView: UIView?
     
+    var selectedNumber: String?
     var numbers = ["01", "01", "1", "1"]
     let textField = UITextField()
     let icon = UIImageView()
@@ -153,6 +155,8 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         textField.text = numbers[indexPath.item]
+        selectedNumber = numbers[indexPath.item]
+        delegate?.didSelect(self, number: numbers[indexPath.item])
         closeList()
     }
     
@@ -199,6 +203,10 @@ class CPTimeChooseView: UIView {
             hourView.delegate = delegate
             minuteView.delegate = delegate
         }
+    }
+    
+    var timeSelected: Bool {
+        return hourView.selectedNumber != nil && minuteView.selectedNumber != nil
     }
     
     let dotslabel = UILabel()

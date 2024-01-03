@@ -16,9 +16,13 @@ class CPDateChooseView: UIView {
     
     weak var delegate: CPDateChooseViewDelegate?
     
-    var date: String = "" {
+    var date: Date? {
         didSet {
-            label.text = date
+            guard let date = date else { return }
+            let formmater = DateFormatter()
+            formmater.dateFormat = "d MMMM EEEE"
+            formmater.locale = Locale(identifier: "tr_TR")
+            label.text = formmater.string(from: date)
         }
     }
     

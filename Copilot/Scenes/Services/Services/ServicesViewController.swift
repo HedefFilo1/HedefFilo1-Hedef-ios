@@ -29,7 +29,18 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+#if DEV_DEBUG
+        if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
+            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
+//            class Fss:  CalendarViewControllerDelegate {
+//                func didSelect(date: Date) {
+//                    
+//                }
+//            }
+//            coordintor.presentCalendar(delegate: Fss())
+        }
         
+#endif
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -25,7 +25,7 @@ class CalendarViewController: SheetViewController {
         return 445
     }
     
-    weak var delegate: CalendarViewControllerDelegate?
+    var delegate: CalendarViewControllerDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
@@ -71,7 +71,9 @@ class CalendarViewController: SheetViewController {
         calendar.appearance.selectionColor = .theme
         calendar.appearance.todayColor = .theme
         calendar.appearance.caseOptions = .weekdayUsesUpperCase
-//        calendar.appearance.headerTitleFont = FontStyle.poppinsMedium.asUIFont(size: 15)
+        calendar.calendarHeaderView.backgroundColor = .lightRed
+        calendar.backgroundColor = .white
+        calendar.boxShadow(xValue: 0, yValue: 20, radius: 4, color: .black, opacity: 0.08)
     }
     
     func applyStyle() {
@@ -91,7 +93,7 @@ class CalendarViewController: SheetViewController {
         if let date = calendar.selectedDate {
             delegate?.didSelect(date: date)
         }
-       dismiss(animated: true)
+        dismiss(animated: true)
     }
 }
 
@@ -99,7 +101,6 @@ extension CalendarViewController: FSCalendarDelegate,
                                   FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         selectedDate = date
-//        dismiss(animated: true)
     }
 }
 

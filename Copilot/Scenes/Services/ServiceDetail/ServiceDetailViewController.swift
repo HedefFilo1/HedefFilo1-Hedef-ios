@@ -83,12 +83,18 @@ class ServiceDetailViewController: UIViewController {
         continueButton.setTitle(Strings.devamEt, for: .normal)
     }
     
+    func setButtonActivation() {
+        let date = dateChooseView.date != nil
+        let time = timeChooseView.timeSelected
+        continueButton.isEnabled = date && time
+    }
+    
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
     @IBAction func didContinue() {
-        viewModel.getBack()
+//        viewModel.getBack()
     }
 }
 
@@ -104,12 +110,17 @@ extension ServiceDetailViewController: CPTimeChooseViewDelegate,
         
     }
     
+    func didSelect(_: CPTimeNumberChooseView, number: String) {
+        setButtonActivation()
+    }
+    
     func superViewForDropDown(in cpTimeChooseView: CPTimeNumberChooseView) -> UIView? {
         return view
     }
     
     func didSelect(date: Date) {
-        dateChooseView.date = date.description
+        dateChooseView.date = date
+        setButtonActivation()
     }
 }
 
