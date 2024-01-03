@@ -160,5 +160,16 @@ extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
+    func goToConfirmedRandevu(randevu: MockRandevu) {
+        let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
+        let viewModel = ConfirmedRandevuViewModel()
+        viewModel.randevu = randevu
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension ServicesCoordinator: ConfirmedRandevuVMCoordinatorDelegate {
     
 }

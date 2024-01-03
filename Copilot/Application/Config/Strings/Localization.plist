@@ -1453,21 +1453,21 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string>Randevu Request Confirmation</string>
         </dict>
-        
-        <key></key>
+    
+        <key>randevuRequestSuccessMessage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lastik Değişim Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
-            <string></string>
+            <string>Your Tire Change Randevu Request has been Successfully Received.</string>
         </dict>
         
-        <key></key>
+        <key>randevuRequestSuccessDescriptin</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Onaylanan randevu tarihiniz size ayrıca iletilecektir</string>
             <key>en</key>
-            <string></string>
+            <string>Your confirmed randevu date will be communicated to you separately.</string>
         </dict>
         
         <key></key>

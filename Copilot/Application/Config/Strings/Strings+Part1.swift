@@ -408,5 +408,4 @@ extension Strings {
     static var randevuRequestConfirmation: String {
         return localized(string: "randevuRequestConfirmation")
     }
-
 }

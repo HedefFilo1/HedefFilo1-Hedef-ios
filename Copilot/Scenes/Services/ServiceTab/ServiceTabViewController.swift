@@ -34,13 +34,7 @@ class ServiceTabViewController: UIViewController {
         
 #if DEV_DEBUG
         if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
-//            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
-            class Fss:  CalendarViewControllerDelegate {
-                func didSelect(date: Date) {
-                    
-                }
-            }
-            coordintor.presentCalendar(delegate: Fss())
+            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
         }
         
 #endif

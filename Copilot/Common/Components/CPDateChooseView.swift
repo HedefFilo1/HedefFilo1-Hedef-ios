@@ -51,7 +51,7 @@ class CPDateChooseView: UIView {
         addSubview(label)
         label.align(leading: 16, centerY: 0)
         label.apply(.custom(.fieldsText, .regular, 16))
-        label.text = "06 Ocak 2023 Cuma"
+        label.text = Strings.selectDay
         
         addSubview(icon)
         icon.align(trailing: 20, widthAndHeight: 24, centerY: 0)

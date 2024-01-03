@@ -15,6 +15,7 @@ struct MockRandevu {
 
 protocol ServiceRandevuVMCoordinatorDelegate: AnyObject {
     func getBack()
+    func goToConfirmedRandevu(randevu: MockRandevu)
 }
 
 protocol ServiceRandevuViewModelDelegate: BaseViewModelDelegate {
@@ -26,6 +27,7 @@ protocol ServiceRandevuViewModelType: AnyObject {
     var delegate: ServiceRandevuViewModelDelegate? { get set }
     var randevu: MockRandevu? { get set }
     func getBack()
+    func goToConfirmedRandevu()
 }
 
 class ServiceRandevuViewModel: ServiceRandevuViewModelType {
@@ -36,5 +38,11 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToConfirmedRandevu() {
+        if let randevu = randevu {
+            coordinatorDelegate?.goToConfirmedRandevu(randevu: randevu)
+        }
     }
 }
