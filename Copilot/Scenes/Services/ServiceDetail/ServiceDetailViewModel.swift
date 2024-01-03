@@ -9,6 +9,7 @@ import Foundation
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
+    func goToServiceRandevu(randevu: MockRandevu)
 }
 
 protocol ServiceDetailViewModelDelegate: BaseViewModelDelegate {
@@ -21,6 +22,7 @@ protocol ServiceDetailViewModelType: AnyObject {
     var service: Supplier? { get set }
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
+    func goToServiceRandevu(date: String, time: String)
 }
 
 class ServiceDetailViewModel: ServiceDetailViewModelType {
@@ -35,5 +37,12 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     
     func presentCalendar(delegate: CalendarViewControllerDelegate) {
         coordinatorDelegate?.presentCalendar(delegate: delegate)
+    }
+    
+    func goToServiceRandevu(date: String, time: String) {
+        if let service = service {
+            let model = MockRandevu(supplier: service, date: date, time: time)
+            coordinatorDelegate?.goToServiceRandevu(randevu: model)
+        }
     }
 }

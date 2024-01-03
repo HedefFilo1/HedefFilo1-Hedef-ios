@@ -1414,6 +1414,102 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Continue</string>
         </dict>
         
+        <key>randevuConfirmation</key>
+        <dict>
+            <key>tr</key>
+            <string>Randevu Onayı</string>
+            <key>en</key>
+            <string>Randevu Confirmation</string>
+        </dict>
+        
+        <key>pleaseConfirmRandevu</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen lastik tamir randevu bilgilerinizi onaylayınız.</string>
+            <key>en</key>
+            <string>Please confirm your tire repair Randevu information.</string>
+        </dict>
+        
+        <key>editRandevu</key>
+        <dict>
+            <key>tr</key>
+            <string>Randevuyu Düzenle</string>
+            <key>en</key>
+            <string>Edit Randevu</string>
+        </dict>
+        
+        <key>confirmRandevu</key>
+        <dict>
+            <key>tr</key>
+            <string>Randevuyu Onayla</string>
+            <key>en</key>
+            <string>Confirm Randevu</string>
+        </dict>
+        
+        <key>randevuRequestConfirmation</key>
+        <dict>
+            <key>tr</key>
+            <string>Randevu Talebi Onayı</string>
+            <key>en</key>
+            <string>Randevu Request Confirmation</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

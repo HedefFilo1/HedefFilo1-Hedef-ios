@@ -94,7 +94,8 @@ class ServiceDetailViewController: UIViewController {
     }
     
     @IBAction func didContinue() {
-//        viewModel.getBack()
+        let time = timeChooseView.selecteTimeString ?? ""
+        viewModel.goToServiceRandevu(date: dateChooseView.stringDate, time: time)
     }
 }
 

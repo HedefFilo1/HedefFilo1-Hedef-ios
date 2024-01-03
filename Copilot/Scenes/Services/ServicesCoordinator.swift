@@ -140,6 +140,16 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
+   
+    func goToServiceRandevu(randevu: MockRandevu) {
+        let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
+        let viewModel = ServiceRandevuViewModel()
+        viewModel.randevu = randevu
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
     func presentCalendar(delegate: CalendarViewControllerDelegate) {
         let controller: CalendarViewController = storyboard.instantiateViewController()
         let viewModel = CalendarViewModel()
@@ -147,4 +157,8 @@ extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
         controller.delegate = delegate
         navigationController.present(controller, animated: true)
     }
+}
+
+extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
+    
 }

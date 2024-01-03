@@ -16,6 +16,9 @@ class CPDateChooseView: UIView {
     
     weak var delegate: CPDateChooseViewDelegate?
     
+    var stringDate: String {
+        return label.text ?? ""
+    }
     var date: Date? {
         didSet {
             guard let date = date else { return }

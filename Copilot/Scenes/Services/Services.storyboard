@@ -1264,7 +1264,7 @@ talep edebilirsiniz.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-O7-0Pj">
-                                        <rect key="frame" x="0.0" y="102.33333333333331" width="393" height="656.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="102.66666666666669" width="393" height="656.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I7o-fw-SV0">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1294,7 +1294,7 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik tamir randevusu almak için lütfen servis seçiniz." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-nf-tcT">
-                                        <rect key="frame" x="16" y="70" width="351" height="20.333333333333329"/>
+                                        <rect key="frame" x="16" y="70" width="351" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1339,10 +1339,10 @@ talep edebilirsiniz.</string>
             </objects>
             <point key="canvasLocation" x="175" y="2593"/>
         </scene>
-        <!--Services View Controller-->
+        <!--ServiceDetailViewController-->
         <scene sceneID="KRe-PS-Kz7">
             <objects>
-                <viewController storyboardIdentifier="ServiceDetailViewController" id="jyu-ES-ljG" userLabel="Services View Controller" customClass="ServiceDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceDetailViewController" id="jyu-ES-ljG" userLabel="ServiceDetailViewController" customClass="ServiceDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cr9-WO-gEX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1394,7 +1394,7 @@ talep edebilirsiniz.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD6-3a-J9W">
-                                                        <rect key="frame" x="0.0" y="101" width="131.33333333333334" height="21"/>
+                                                        <rect key="frame" x="0.0" y="101" width="131.66666666666666" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1412,7 +1412,7 @@ talep edebilirsiniz.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juq-gu-OGZ">
-                                                        <rect key="frame" x="0.0" y="211" width="142.66666666666666" height="32"/>
+                                                        <rect key="frame" x="0.0" y="211" width="143" height="32"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openMapIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GFb-ut-VXQ">
                                                                 <rect key="frame" x="16" y="8" width="16" height="16"/>
@@ -1422,7 +1422,7 @@ talep edebilirsiniz.</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haritada Aç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-ab-wLD">
-                                                                <rect key="frame" x="38.000000000000007" y="5.6666666666666856" width="88.666666666666686" height="21"/>
+                                                                <rect key="frame" x="38" y="5.6666666666666856" width="89" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1451,7 +1451,7 @@ talep edebilirsiniz.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gün Seçiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d7-lS-3ih">
-                                                        <rect key="frame" x="0.0" y="333" width="81.333333333333329" height="18"/>
+                                                        <rect key="frame" x="0.0" y="333" width="81.666666666666671" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1703,6 +1703,204 @@ talep edebilirsiniz.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmI-fv-wk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1785" y="2592"/>
+        </scene>
+        <!--ServiceRandevuViewController-->
+        <scene sceneID="S9V-of-z8g">
+            <objects>
+                <viewController storyboardIdentifier="ServiceRandevuViewController" id="IMl-P4-4nv" userLabel="ServiceRandevuViewController" customClass="ServiceRandevuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcx-X5-MEB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6N-uK-Ocy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Onayı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nja-gQ-mA3">
+                                        <rect key="frame" x="16" y="25" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2d0-o3-ScR">
+                                        <rect key="frame" x="24" y="23.666666666666671" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="cVR-ue-eDz"/>
+                                            <constraint firstAttribute="height" constant="24" id="s42-Kr-BPL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-xn-4jN">
+                                        <rect key="frame" x="16" y="15.666666666666671" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MDf-Dq-yeQ"/>
+                                            <constraint firstAttribute="width" constant="40" id="mYa-JV-8ur"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack" destination="Wut-2n-xiz" eventType="touchUpInside" id="Crx-1K-MZK"/>
+                                            <action selector="didTapBack" destination="IMl-P4-4nv" eventType="touchUpInside" id="jim-Q3-m9g"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen lastik tamir randevu bilgilerinizi onaylayınız." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bzm-2q-PZg">
+                                        <rect key="frame" x="16" y="70" width="351" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByH-f9-raC">
+                                        <rect key="frame" x="16" y="264.66666666666669" width="361" height="229.66666666666669"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-rL-KEk">
+                                                <rect key="frame" x="16" y="16" width="329" height="197.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Talebi Onayı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-ju-pE1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBu-Ki-tvT">
+                                                        <rect key="frame" x="0.0" y="37" width="329" height="1"/>
+                                                        <color key="backgroundColor" name="exactGrey"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="pZx-ET-vct"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6zD-ky-UkA">
+                                                        <rect key="frame" x="0.0" y="54" width="329" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Hedef Mahallesi Filo Sokak 12/45 Üsküdar /İstanbul" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-0m-kGW">
+                                                        <rect key="frame" x="0.0" y="83" width="329" height="40.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-0a-pbK">
+                                                        <rect key="frame" x="0.0" y="131.66666666666663" width="329" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Mart 2023 Cumartesi 10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-mX-doP">
+                                                        <rect key="frame" x="0.0" y="176.66666666666669" width="329" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="TwG-0m-kGW" firstAttribute="top" secondItem="6zD-ky-UkA" secondAttribute="bottom" constant="8" id="2Ml-Xs-6an"/>
+                                                    <constraint firstItem="6zD-ky-UkA" firstAttribute="top" secondItem="lBu-Ki-tvT" secondAttribute="bottom" constant="16" id="3DZ-Lu-tKt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lBu-Ki-tvT" secondAttribute="trailing" id="6cB-kg-tSa"/>
+                                                    <constraint firstItem="XuN-0a-pbK" firstAttribute="top" secondItem="TwG-0m-kGW" secondAttribute="bottom" constant="8" id="A2g-UF-NWx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LTe-mX-doP" secondAttribute="trailing" id="FYg-85-fDU"/>
+                                                    <constraint firstItem="LTe-mX-doP" firstAttribute="top" secondItem="XuN-0a-pbK" secondAttribute="bottom" constant="24" id="Hua-Ov-TLW"/>
+                                                    <constraint firstItem="7Sa-ju-pE1" firstAttribute="top" secondItem="C3e-rL-KEk" secondAttribute="top" id="Ikg-ye-Ra1"/>
+                                                    <constraint firstItem="TwG-0m-kGW" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="IwV-oD-CMX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XuN-0a-pbK" secondAttribute="trailing" id="QnX-D1-PKL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LTe-mX-doP" secondAttribute="bottom" id="RnC-sY-KNZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6zD-ky-UkA" secondAttribute="trailing" id="Tb8-fL-atu"/>
+                                                    <constraint firstItem="lBu-Ki-tvT" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="TfY-UY-Sby"/>
+                                                    <constraint firstItem="6zD-ky-UkA" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="VIw-Fn-Pyr"/>
+                                                    <constraint firstItem="XuN-0a-pbK" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="WaE-tz-L7O"/>
+                                                    <constraint firstItem="LTe-mX-doP" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="d1F-J5-VZH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TwG-0m-kGW" secondAttribute="trailing" id="k3t-23-vgx"/>
+                                                    <constraint firstItem="lBu-Ki-tvT" firstAttribute="top" secondItem="7Sa-ju-pE1" secondAttribute="bottom" constant="16" id="lNF-8N-sNv"/>
+                                                    <constraint firstItem="7Sa-ju-pE1" firstAttribute="leading" secondItem="C3e-rL-KEk" secondAttribute="leading" id="qYd-Yz-aB1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7Sa-ju-pE1" secondAttribute="trailing" id="t2x-bm-v66"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="C3e-rL-KEk" secondAttribute="trailing" constant="16" id="B7Q-ly-U7v"/>
+                                            <constraint firstItem="C3e-rL-KEk" firstAttribute="top" secondItem="ByH-f9-raC" secondAttribute="top" constant="16" id="BLH-2x-Xcd"/>
+                                            <constraint firstItem="C3e-rL-KEk" firstAttribute="leading" secondItem="ByH-f9-raC" secondAttribute="leading" constant="16" id="Jui-ih-BW8"/>
+                                            <constraint firstAttribute="bottom" secondItem="C3e-rL-KEk" secondAttribute="bottom" constant="16" id="ead-W3-6Fg"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-4L-5rQ" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="623" width="361" height="56"/>
+                                        <color key="backgroundColor" name="theme"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Sv7-eh-Gww"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Randevuyu Onayla"/>
+                                        <connections>
+                                            <action selector="didTapConfirm" destination="IMl-P4-4nv" eventType="touchUpInside" id="oVB-DP-m5z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-4r-5vm" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="551" width="361" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="7OQ-fu-SU1"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Randevuyu Düzenle">
+                                            <color key="titleColor" name="theme"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapEdit" destination="IMl-P4-4nv" eventType="touchUpInside" id="MRa-d4-mjD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ByH-f9-raC" secondAttribute="trailing" constant="16" id="0gw-sT-oWr"/>
+                                    <constraint firstItem="ByH-f9-raC" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="16" id="190-gx-LAD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bzm-2q-PZg" secondAttribute="trailing" constant="26" id="1n9-z2-bGo"/>
+                                    <constraint firstItem="2d0-o3-ScR" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="24" id="8gw-2m-5B7"/>
+                                    <constraint firstItem="Ffh-4r-5vm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ByH-f9-raC" secondAttribute="bottom" constant="8" id="DsA-U8-3Qn"/>
+                                    <constraint firstItem="Ffh-4r-5vm" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="16" id="ILl-IU-jBh"/>
+                                    <constraint firstItem="Bzm-2q-PZg" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="16" id="Mde-yu-rpE"/>
+                                    <constraint firstItem="G4I-xn-4jN" firstAttribute="centerX" secondItem="2d0-o3-ScR" secondAttribute="centerX" id="NCB-YQ-mbR"/>
+                                    <constraint firstItem="2d0-o3-ScR" firstAttribute="centerY" secondItem="Nja-gQ-mA3" secondAttribute="centerY" id="WUd-1n-kvE"/>
+                                    <constraint firstItem="G4I-xn-4jN" firstAttribute="centerY" secondItem="2d0-o3-ScR" secondAttribute="centerY" id="cCD-m1-HtY"/>
+                                    <constraint firstItem="dx0-4L-5rQ" firstAttribute="top" secondItem="Ffh-4r-5vm" secondAttribute="bottom" constant="16" id="cRg-sk-dpq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nja-gQ-mA3" secondAttribute="trailing" constant="16" id="cSF-lV-Whr"/>
+                                    <constraint firstItem="ByH-f9-raC" firstAttribute="centerY" secondItem="s6N-uK-Ocy" secondAttribute="centerY" priority="100" id="dhn-VK-CnE"/>
+                                    <constraint firstItem="Bzm-2q-PZg" firstAttribute="top" secondItem="Nja-gQ-mA3" secondAttribute="bottom" constant="24" id="hhV-oT-yeW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ffh-4r-5vm" secondAttribute="trailing" constant="16" id="iBQ-pQ-LHV"/>
+                                    <constraint firstItem="ByH-f9-raC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Bzm-2q-PZg" secondAttribute="bottom" constant="8" id="jCb-mQ-xVe"/>
+                                    <constraint firstAttribute="trailing" secondItem="dx0-4L-5rQ" secondAttribute="trailing" constant="16" id="jgZ-2Q-KIq"/>
+                                    <constraint firstAttribute="bottom" secondItem="dx0-4L-5rQ" secondAttribute="bottom" constant="80" id="m5c-yJ-g2u"/>
+                                    <constraint firstItem="Nja-gQ-mA3" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="16" id="uMP-wv-GrB"/>
+                                    <constraint firstItem="dx0-4L-5rQ" firstAttribute="leading" secondItem="s6N-uK-Ocy" secondAttribute="leading" constant="16" id="wKM-VE-Zwi"/>
+                                    <constraint firstItem="Nja-gQ-mA3" firstAttribute="top" secondItem="s6N-uK-Ocy" secondAttribute="top" constant="25" id="xN4-qE-u41"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8AH-VJ-pdq"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s6N-uK-Ocy" firstAttribute="top" secondItem="8AH-VJ-pdq" secondAttribute="top" id="Epj-IK-wST"/>
+                            <constraint firstItem="s6N-uK-Ocy" firstAttribute="leading" secondItem="8AH-VJ-pdq" secondAttribute="leading" id="L9B-gL-RyA"/>
+                            <constraint firstItem="8AH-VJ-pdq" firstAttribute="bottom" secondItem="s6N-uK-Ocy" secondAttribute="bottom" id="aW5-vL-zPD"/>
+                            <constraint firstItem="8AH-VJ-pdq" firstAttribute="trailing" secondItem="s6N-uK-Ocy" secondAttribute="trailing" id="b1D-L2-ww0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Qlh-FE-6mU"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="TwG-0m-kGW" id="TKt-mi-7CM"/>
+                        <outlet property="confirmButton" destination="dx0-4L-5rQ" id="nqY-IC-rfl"/>
+                        <outlet property="confirmationLabel" destination="7Sa-ju-pE1" id="0WL-T1-GPl"/>
+                        <outlet property="dateLabel" destination="LTe-mX-doP" id="NvT-Xz-Gyy"/>
+                        <outlet property="desciptionLabel" destination="Bzm-2q-PZg" id="lW3-4M-wTh"/>
+                        <outlet property="editButton" destination="Ffh-4r-5vm" id="Qt8-VY-e0i"/>
+                        <outlet property="phoneLabel" destination="XuN-0a-pbK" id="z2u-Ck-Q9I"/>
+                        <outlet property="randveuView" destination="ByH-f9-raC" id="dUv-14-zKG"/>
+                        <outlet property="supplierNameLabel" destination="6zD-ky-UkA" id="las-Rg-QJL"/>
+                        <outlet property="titleLabel" destination="Nja-gQ-mA3" id="V1y-vg-bCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXz-bF-11A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="3285"/>
         </scene>
     </scenes>
     <resources>

@@ -388,4 +388,25 @@ extension Strings {
     static var devamEt: String {
         return localized(string: "devamEt")
     }
+    
+    static var randevuConfirmation: String {
+        return localized(string: "randevuConfirmation")
+    }
+    
+    static var pleaseConfirmRandevu: String {
+        return localized(string: "pleaseConfirmRandevu")
+    }
+    
+    static var editRandevu: String {
+        return localized(string: "editRandevu")
+    }
+    
+    static var confirmRandevu: String {
+        return localized(string: "confirmRandevu")
+    }
+    
+    static var randevuRequestConfirmation: String {
+        return localized(string: "randevuRequestConfirmation")
+    }
+
 }
