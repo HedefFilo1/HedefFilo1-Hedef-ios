@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class VehicleServicesViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class VehicleServicesViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    private let locationManager = CLLocationManager()
     private var filtering = false
     private var searchText = ""
     
@@ -34,7 +36,6 @@ class VehicleServicesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getServices()
     }
     
     func setupUI() {
@@ -46,6 +47,11 @@ class VehicleServicesViewController: UIViewController {
         collectionView.register(cellType: VehicleServicesSearchCell.self)
         collectionView.register(cellType: VehicleServicesItemsCell.self)
         collectionView.contentInset.bottom = 70
+        
+        locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager.requestWhenInUseAuthorization()
+                locationManager.startUpdatingLocation()
     }
     
     func applyStyle() {
@@ -123,6 +129,16 @@ extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
     
     func didTapFilter() {
         viewModel.presentFilters()
+    }
+}
+
+extension VehicleServicesViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+            return
+        }
+        viewModel.getServices(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        locationManager.stopUpdatingLocation()
     }
 }
 

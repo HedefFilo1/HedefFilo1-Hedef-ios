@@ -21,7 +21,7 @@ protocol VehicleServicesViewModelType: AnyObject {
     var services: [Supplier]? { get set }
     var filteredServices: [Supplier]? { get set }
     var searchText: String { get set }
-    func getServices()
+    func getServices(lat: Double?, lon: Double?)
     func presentFilters()
 }
 
@@ -47,10 +47,10 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
     
     var filteredServices: [Supplier]?
     
-    func getServices() {
+    func getServices(lat: Double?, lon: Double?) {
         let mark = App.vehicle?.make ?? ""
         Loading.shared.show()
-        APIService.getSupplier(mark: mark) { [weak self] model, error in
+        APIService.getSupplier(mark: mark, lat: lat, lon: lon) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
