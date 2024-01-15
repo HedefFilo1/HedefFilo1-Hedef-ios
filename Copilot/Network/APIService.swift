@@ -184,8 +184,11 @@ class APIService {
         req.start()
     }
     
-    static func getSupplier(mark: String, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
-        let route = "copilot/supplier?mark=\(mark)"
+    static func getSupplier(mark: String, lat: Double? = nil , lon: Double? = nil, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
+        var route = "copilot/supplier?mark=\(mark)"
+        if let lat, let lon {
+            route += "&lat=\(lat)&lon=\(lon)"
+        }
         let req = APIRequest<[Supplier]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Suppiler"
         req.log = loggingEnabled
