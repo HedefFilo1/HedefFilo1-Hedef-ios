@@ -11,6 +11,7 @@ protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToRequestNewLastik()
     func goToLastikRandevu()
+    func goToServiceDetail(service: Supplier, randevu: String?)
 }
 
 protocol LastikOperationsViewModelDelegate: AnyObject {
@@ -25,6 +26,7 @@ protocol LastikOperationsViewModelType: AnyObject {
     func getBack()
     func goToRequestNewLastik()
     func goToLastikRandevu()
+    func goToServiceDetail(service: Supplier, randevu: String)
 }
 
 class LastikOperationsViewModel: LastikOperationsViewModelType {
@@ -44,5 +46,9 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     
     func goToLastikRandevu() {
         coordinatorDelegate?.goToLastikRandevu()
+    }
+    
+    func goToServiceDetail(service: Supplier, randevu: String) {
+        coordinatorDelegate?.goToServiceDetail(service: service, randevu: randevu)
     }
 }

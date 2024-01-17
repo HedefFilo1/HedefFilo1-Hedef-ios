@@ -24,6 +24,7 @@ protocol ServiceDetailViewModelType: AnyObject {
     var coordinatorDelegate: ServiceDetailVMCoordinatorDelegate? { get set }
     var delegate: ServiceDetailViewModelDelegate? { get set }
     var service: Supplier? { get set }
+    var randevu: String? { get set }
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
     func goToServiceRandevu(date: String, time: String)
@@ -36,6 +37,7 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     weak var delegate: ServiceDetailViewModelDelegate?
     
     var service: Supplier?
+    var randevu: String?
     
     func getBack() {
         coordinatorDelegate?.getBack()

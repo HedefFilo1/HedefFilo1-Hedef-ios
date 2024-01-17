@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRj-Jq-Ukx">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -10,37 +10,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Services View Controller-->
+        <!--ServiceTabViewController-->
         <scene sceneID="4db-BU-aVY">
             <objects>
-                <viewController storyboardIdentifier="ServiceTabViewController" id="QRj-Jq-Ukx" userLabel="Services View Controller" customClass="ServiceTabViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceTabViewController" id="QRj-Jq-Ukx" userLabel="ServiceTabViewController" customClass="ServiceTabViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIU-qq-FQm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXv-XU-044">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-Hj-eNb">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0k-ln-vpt">
-                                        <rect key="frame" x="0.0" y="53" width="320" height="431"/>
+                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glQ-Gy-Ry2">
-                                                <rect key="frame" x="24" y="31" width="272" height="330"/>
+                                                <rect key="frame" x="24" y="90" width="345" height="382"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen servis talep ettiğiniz konuyu seçin." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-is-zhe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-3C-4cB" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="57" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="57" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="hfg-zE-IPQ"/>
                                                         </constraints>
@@ -53,7 +53,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDg-tM-NFw" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="133" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="133" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="9Fe-Od-BJS"/>
                                                         </constraints>
@@ -65,8 +65,27 @@
                                                             <action selector="didTapFaultButton" destination="QRj-Jq-Ukx" eventType="touchUpInside" id="kl7-F5-8Av"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9du-B2-g7h">
+                                                        <rect key="frame" x="0.0" y="209" width="345" height="27"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Talebi Alındı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-ln-Y0A">
+                                                                <rect key="frame" x="0.0" y="2" width="345" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <color key="textColor" name="white"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="theme"/>
+                                                        <constraints>
+                                                            <constraint firstItem="qgn-ln-Y0A" firstAttribute="leading" secondItem="9du-B2-g7h" secondAttribute="leading" id="Jhl-Be-uR4"/>
+                                                            <constraint firstItem="qgn-ln-Y0A" firstAttribute="top" secondItem="9du-B2-g7h" secondAttribute="top" constant="2" id="PNo-Zv-Dot"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qgn-ln-Y0A" secondAttribute="trailing" id="eez-A4-e9n"/>
+                                                            <constraint firstAttribute="height" constant="27" id="hgB-rd-ETx"/>
+                                                        </constraints>
+                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dny-US-DA3" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="209" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="229" width="345" height="52"/>
+                                                        <color key="backgroundColor" name="white"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="BR7-AJ-Qlr"/>
                                                         </constraints>
@@ -79,14 +98,14 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZc-4Z-gsE">
-                                                        <rect key="frame" x="0.0" y="269" width="272" height="1"/>
+                                                        <rect key="frame" x="0.0" y="305" width="345" height="1"/>
                                                         <color key="backgroundColor" name="exactGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Pal-i5-L2Q"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfs-8u-DVZ" customClass="CPGreyButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="278" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="330" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="SDg-1c-KVe"/>
                                                         </constraints>
@@ -105,15 +124,18 @@
                                                     <constraint firstItem="RZc-4Z-gsE" firstAttribute="top" relation="lessThanOrEqual" secondItem="dny-US-DA3" secondAttribute="bottom" priority="210" constant="24" id="21O-AR-2Yw"/>
                                                     <constraint firstAttribute="trailing" secondItem="dny-US-DA3" secondAttribute="trailing" id="2wS-Bl-nDb"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="top" relation="lessThanOrEqual" secondItem="rL5-is-zhe" secondAttribute="bottom" priority="211" constant="36" id="3Fx-tu-siE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9du-B2-g7h" secondAttribute="trailing" id="5vx-Wg-Dlo"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rL5-is-zhe" secondAttribute="bottom" constant="8" id="6fD-N3-vWy"/>
                                                     <constraint firstItem="RZc-4Z-gsE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dny-US-DA3" secondAttribute="bottom" constant="8" id="Amj-sb-uBc"/>
                                                     <constraint firstItem="rL5-is-zhe" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="DOO-DT-0pf"/>
                                                     <constraint firstItem="WDg-tM-NFw" firstAttribute="top" secondItem="O0K-3C-4cB" secondAttribute="bottom" constant="24" id="HU5-UD-pXN"/>
                                                     <constraint firstAttribute="bottom" secondItem="Vfs-8u-DVZ" secondAttribute="bottom" id="HsU-KF-Yri"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vfs-8u-DVZ" secondAttribute="trailing" id="JOd-mt-pqe"/>
+                                                    <constraint firstItem="9du-B2-g7h" firstAttribute="top" secondItem="WDg-tM-NFw" secondAttribute="bottom" constant="24" id="JxI-1o-Z4Q"/>
                                                     <constraint firstAttribute="trailing" secondItem="rL5-is-zhe" secondAttribute="trailing" id="LJk-XO-lYs"/>
                                                     <constraint firstItem="Vfs-8u-DVZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="RZc-4Z-gsE" secondAttribute="bottom" priority="200" constant="24" id="LqB-wa-toH"/>
-                                                    <constraint firstItem="dny-US-DA3" firstAttribute="top" secondItem="WDg-tM-NFw" secondAttribute="bottom" constant="24" id="T15-kk-Gp6"/>
+                                                    <constraint firstItem="dny-US-DA3" firstAttribute="top" secondItem="9du-B2-g7h" secondAttribute="bottom" constant="-7" id="QYZ-p1-QeX"/>
+                                                    <constraint firstItem="9du-B2-g7h" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="T5E-MV-daL"/>
                                                     <constraint firstAttribute="trailing" secondItem="WDg-tM-NFw" secondAttribute="trailing" id="XUf-bG-fsO"/>
                                                     <constraint firstItem="WDg-tM-NFw" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="a77-25-OHo"/>
                                                     <constraint firstItem="Vfs-8u-DVZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RZc-4Z-gsE" secondAttribute="bottom" constant="8" id="bFT-fw-929"/>
@@ -166,6 +188,8 @@
                         <outlet property="faultButton" destination="WDg-tM-NFw" id="0Nu-hN-Bbg"/>
                         <outlet property="lastikButton" destination="dny-US-DA3" id="pcF-RI-hlY"/>
                         <outlet property="pastServicesButton" destination="Vfs-8u-DVZ" id="f0P-0J-Izf"/>
+                        <outlet property="randevuLabel" destination="qgn-ln-Y0A" id="HMS-j8-q1i"/>
+                        <outlet property="randevuView" destination="9du-B2-g7h" id="Cns-E4-7n1"/>
                         <outlet property="titleLabel" destination="Qw5-Hj-eNb" id="ptv-5o-LRA"/>
                     </connections>
                 </viewController>
@@ -178,27 +202,27 @@
             <objects>
                 <viewController storyboardIdentifier="LastikOperationsViewController" id="Wut-2n-xiz" userLabel="Lastik Operations View Controller" customClass="LastikOperationsViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c0V-lk-6xd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-6n-fjZ">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-Xg-XiM">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-AQ-Xy5">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Xug-Dv-NBL"/>
                                             <constraint firstAttribute="height" constant="24" id="b4u-dP-MKn"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-gc-U0d">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QDS-MW-o9O"/>
                                             <constraint firstAttribute="width" constant="40" id="qbB-AI-ZhN"/>
@@ -209,10 +233,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEI-sG-K87">
-                                        <rect key="frame" x="0.0" y="53" width="320" height="431"/>
+                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-iu-rlS">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="622"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x2O-MX-cao">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -273,27 +297,27 @@
             <objects>
                 <viewController storyboardIdentifier="NewLastikRequestViewController" id="oPy-hz-d0t" userLabel="NewLastikRequestViewController" customClass="NewLastikRequestViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4j4-uP-GnA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qit-D0-pVF">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-ta-nhQ">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-RX-OmC">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="SuN-j0-ZYN"/>
                                             <constraint firstAttribute="width" constant="24" id="mLu-Bt-mPX"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m23-vL-5pT">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="IVx-i4-54N"/>
                                             <constraint firstAttribute="height" constant="40" id="Ndc-JA-vLc"/>
@@ -304,19 +328,19 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojT-u3-VsN">
-                                        <rect key="frame" x="0.0" y="53" width="320" height="431"/>
+                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dL5-rs-YQp">
-                                                <rect key="frame" x="24" y="122" width="272" height="187"/>
+                                                <rect key="frame" x="24" y="190" width="345" height="166.66666666666663"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik hakkınız bulunmamaktadır." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-jh-v2U">
-                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRC-Wq-4iB">
-                                                        <rect key="frame" x="0.0" y="29" width="272" height="61"/>
+                                                        <rect key="frame" x="0.0" y="28.999999999999996" width="345" height="40.666666666666657"/>
                                                         <string key="text">Dilerseniz Filo Yöneticinizden lastik değişimi
 talep edebilirsiniz.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -324,7 +348,7 @@ talep edebilirsiniz.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqY-1G-qVf" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="135" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="114.66666666666669" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="Vjh-ZC-liq"/>
                                                         </constraints>
@@ -406,27 +430,27 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="LastikFromMangerViewController" id="nxF-No-IcS" userLabel="LastikFromMangerViewController" customClass="LastikFromMangerViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWA-4e-KU7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siW-8w-NuY">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8y-zk-1bG">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8XE-vX-lNo">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="YH8-f3-5gM"/>
                                             <constraint firstAttribute="height" constant="24" id="prq-WA-jtG"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkM-ej-kdI">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="AdM-Bj-J3x"/>
                                             <constraint firstAttribute="width" constant="40" id="qBb-IC-izu"/>
@@ -437,20 +461,20 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-IW-yAQ">
-                                        <rect key="frame" x="0.0" y="53" width="320" height="431"/>
+                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-cr-w6k">
-                                                <rect key="frame" x="24" y="29" width="272" height="332"/>
+                                                <rect key="frame" x="24" y="155.33333333333329" width="345" height="311.66666666666674"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G1-cV-ysT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="122"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="101.66666666666667"/>
                                                         <string key="text">Bu adım daha önce kış lastiği hakkı kullanmadığınız durumlar için yeni kış lastiği montajını, araç kilometresine veya lastikteki yıpranmaya bağlı olarak yeni lastik verilmesi işlemlerini kapsar.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJu-YR-hjG" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="202" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="181.66666666666669" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="OdF-p1-Tkb"/>
                                                         </constraints>
@@ -463,7 +487,7 @@ talep edebilirsiniz.</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ju-rf-UHo" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="280" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="259.66666666666669" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="UwC-BA-b5r"/>
                                                         </constraints>
@@ -545,20 +569,20 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="RequestLastikResultViewController" id="NpC-kY-XVd" userLabel="RequestLastikResultViewController" customClass="RequestLastikResultViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="snN-Bg-fBr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWX-3Q-iNf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-fW-ZsC">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ol3-qq-FyA">
-                                                <rect key="frame" x="24" y="26.5" width="272" height="460.5"/>
+                                                <rect key="frame" x="24" y="218" width="345" height="460"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-eC-eg5">
-                                                        <rect key="frame" x="96" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="132.66666666666666" y="0.0" width="80" height="80"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock24Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jl0-et-oaG">
                                                                 <rect key="frame" x="20" y="20" width="40" height="40"/>
@@ -577,19 +601,19 @@ talep edebilirsiniz.</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Kış Lastiği Talebiniz Alındı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3B-Hv-bGz">
-                                                        <rect key="frame" x="0.0" y="104" width="272" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="104" width="345" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talep sonucuna göre tarafınıza bilgi verilecektir" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLK-dy-Xqe">
-                                                        <rect key="frame" x="0.0" y="140.5" width="272" height="41"/>
+                                                        <rect key="frame" x="0.0" y="140.33333333333331" width="345" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80B-t2-jO9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="340.5" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="340" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="Byn-YL-i5v"/>
                                                         </constraints>
@@ -602,7 +626,7 @@ talep edebilirsiniz.</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-Rn-hNp" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="408.5" width="272" height="52"/>
+                                                        <rect key="frame" x="0.0" y="408" width="345" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="Hbw-bO-Pdi"/>
                                                         </constraints>
@@ -635,14 +659,14 @@ talep edebilirsiniz.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="m9e-Me-vc4">
-                                                <rect key="frame" x="272" y="24" width="24" height="24"/>
+                                                <rect key="frame" x="345" y="24" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Sji-IV-l1h"/>
                                                     <constraint firstAttribute="width" constant="24" id="WB2-5j-hB6"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-vY-s9l">
-                                                <rect key="frame" x="264" y="16" width="40" height="40"/>
+                                                <rect key="frame" x="337" y="16" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Ek0-rH-lsC"/>
                                                     <constraint firstAttribute="height" constant="40" id="vp5-uf-3Pt"/>
@@ -702,27 +726,27 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="LastikRandevuViewController" id="fdf-hZ-eAv" userLabel="LastikRandevuViewController" customClass="LastikRandevuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q4A-wc-n55">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcz-Oz-Dfp">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-tw-edv">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-9S-S9Q">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="VUy-1u-i9x"/>
                                             <constraint firstAttribute="height" constant="24" id="xX5-YE-6c8"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWW-1x-fFL">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Zln-YX-zHg"/>
                                             <constraint firstAttribute="width" constant="40" id="rHY-YF-8Mj"/>
@@ -733,19 +757,19 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laJ-dP-so9">
-                                        <rect key="frame" x="0.0" y="62.5" width="320" height="421.5"/>
+                                        <rect key="frame" x="0.0" y="62.666666666666686" width="393" height="612.33333333333326"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTv-uJ-Q5F">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="421.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="612.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98X-4F-3Lj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaS-iH-0Wd">
-                                                                <rect key="frame" x="24" y="0.0" width="272" height="400"/>
+                                                                <rect key="frame" x="24" y="0.0" width="345" height="400"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibo-Cg-rSZ" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="-1.5" y="48" width="275" height="55"/>
+                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="jor-yd-eHv"/>
@@ -753,13 +777,13 @@ talep edebilirsiniz.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu adım lastiklerin hava basıncı kaybı veya yarılması sonucu oluşan arızaların tamiri veya benzeri işlemleri kapsar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-8U-2qe">
-                                                                        <rect key="frame" x="0.0" y="158" width="272" height="81.5"/>
+                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="61"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSJ-Yd-TEp" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="294.5" width="272" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="274" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="0M0-uQ-xLt"/>
                                                                         </constraints>
@@ -773,7 +797,7 @@ talep edebilirsiniz.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNj-1E-WPo" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="370.5" width="272" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="350" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="5fy-OG-PhE"/>
                                                                         </constraints>
@@ -874,27 +898,27 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="LastikRandevuConfirmationViewController" id="zrG-ae-485" userLabel="LastikRandevuConfirmationViewController" customClass="LastikRandevuConfirmationViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aHd-hG-EYI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpU-Mw-USg">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-5G-wpX">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="44z-dL-pdb">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="P2G-Tw-PcU"/>
                                             <constraint firstAttribute="height" constant="24" id="vyJ-H9-4mM"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5V-eU-6kH">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="eAJ-LR-aYh"/>
                                             <constraint firstAttribute="width" constant="40" id="vAa-Cf-Vl1"/>
@@ -905,19 +929,19 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaJ-oj-Hib">
-                                        <rect key="frame" x="0.0" y="62.5" width="320" height="421.5"/>
+                                        <rect key="frame" x="0.0" y="62.666666666666686" width="393" height="612.33333333333326"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hk-4W-5Hh">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="421.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="612.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daq-nL-ybj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnI-1C-AK7">
-                                                                <rect key="frame" x="24" y="0.0" width="272" height="400"/>
+                                                                <rect key="frame" x="24" y="0.0" width="345" height="400"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Br0-wJ-jIn" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="-1.5" y="48" width="275" height="55"/>
+                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="6qe-Ts-5iX"/>
@@ -925,13 +949,13 @@ talep edebilirsiniz.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aracınız en yakın servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE5-bV-TeR">
-                                                                        <rect key="frame" x="0.0" y="158" width="272" height="61"/>
+                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="40.666666666666657"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOO-Ie-c7O" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="274" width="272" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="253.66666666666663" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="Vhg-8A-sfs"/>
                                                                         </constraints>
@@ -945,7 +969,7 @@ talep edebilirsiniz.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-iG-9Su" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="350" width="272" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="329.66666666666674" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="E7c-fZ-22y"/>
                                                                         </constraints>
@@ -1047,27 +1071,27 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="LastikConfirmInfoViewController" id="9hs-Hd-Vip" userLabel="LastikConfirmInfoViewController" customClass="LastikConfirmInfoViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUD-x9-mZz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atr-pP-cEd">
-                                <rect key="frame" x="0.0" y="84" width="320" height="484"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhX-jU-dKJ">
-                                        <rect key="frame" x="16" y="24" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="84w-Wy-ZaC">
-                                        <rect key="frame" x="24" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="h5N-Ny-hcT"/>
                                             <constraint firstAttribute="width" constant="24" id="pr1-ll-UT1"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-wQ-Cn0">
-                                        <rect key="frame" x="16" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="HfP-H3-9Qj"/>
                                             <constraint firstAttribute="height" constant="40" id="vdo-GL-cP5"/>
@@ -1078,19 +1102,19 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUo-s6-BdE">
-                                        <rect key="frame" x="0.0" y="62.5" width="320" height="421.5"/>
+                                        <rect key="frame" x="0.0" y="62.666666666666686" width="393" height="612.33333333333326"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsg-x6-Zxc">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="421.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="612.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-cW-xPQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6e-OY-e4u">
-                                                                <rect key="frame" x="24" y="0.0" width="272" height="370"/>
+                                                                <rect key="frame" x="24" y="0.0" width="345" height="370"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-DE-3Vn" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="-1.5" y="48" width="275" height="55"/>
+                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="2Pm-Kw-VLY"/>
@@ -1098,13 +1122,13 @@ talep edebilirsiniz.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size en uygun servisler listelenecektir. Lütfen aracınızı listeden seçeceğiniz servise götürünüz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGV-TE-LpU">
-                                                                        <rect key="frame" x="0.0" y="158" width="272" height="81.5"/>
+                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="61"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syN-Ry-bTn" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="291.5" width="272" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="271" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="Btw-3R-bhh"/>
                                                                         </constraints>
@@ -1202,20 +1226,20 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="ServicesViewController" id="3wM-56-mPU" userLabel="Services View Controller" customClass="ServicesViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="guE-gU-RJt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW3-KC-Gcx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servisler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-Xq-KhK">
-                                        <rect key="frame" x="16" y="25" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="25" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-O7-0Pj">
-                                        <rect key="frame" x="0.0" y="102.5" width="320" height="465.5"/>
+                                        <rect key="frame" x="0.0" y="102.66666666666669" width="393" height="656.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I7o-fw-SV0">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1226,14 +1250,14 @@ talep edebilirsiniz.</string>
                                         <cells/>
                                     </collectionView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="crT-CY-DIH">
-                                        <rect key="frame" x="24" y="23.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="23.666666666666671" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="LZd-yE-fSM"/>
                                             <constraint firstAttribute="height" constant="24" id="y4Y-CW-Uul"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cb-co-K7N">
-                                        <rect key="frame" x="16" y="15.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="15.666666666666671" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0tS-UN-CGP"/>
                                             <constraint firstAttribute="width" constant="40" id="q1M-Yh-vG9"/>
@@ -1245,7 +1269,7 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik tamir randevusu almak için lütfen servis seçiniz." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-nf-tcT">
-                                        <rect key="frame" x="16" y="70" width="278" height="20.5"/>
+                                        <rect key="frame" x="16" y="70" width="351" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1295,18 +1319,18 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="ServiceDetailViewController" id="jyu-ES-ljG" userLabel="ServiceDetailViewController" customClass="ServiceDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cr9-WO-gEX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Maw-2a-ymm">
-                                <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="DzP-wR-40H"/>
                                     <constraint firstAttribute="height" constant="24" id="MF4-vr-M09"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt1-fw-i3K">
-                                <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Azs-T4-vY5"/>
                                     <constraint firstAttribute="width" constant="40" id="ts4-dj-Fxy"/>
@@ -1318,46 +1342,46 @@ talep edebilirsiniz.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-mT-tsy">
-                                <rect key="frame" x="60" y="25" width="244" height="21"/>
+                                <rect key="frame" x="60" y="84" width="317" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-5d-5A2">
-                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <rect key="frame" x="0.0" y="131" width="393" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xJ-hU-TbS">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="630"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="630"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWy-T4-eOA">
-                                                <rect key="frame" x="16" y="0.0" width="288" height="630"/>
+                                                <rect key="frame" x="16" y="0.0" width="361" height="630"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik tamir randevusu almak için lütfen tarih ve saat  seçiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="sMA-bK-W7z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-jP-ea5">
-                                                        <rect key="frame" x="0.0" y="68" width="288" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="68" width="361" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Hedef Mahallesi Filo Sokak 12/45 Üsküdar /İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-pK-BSJ">
-                                                        <rect key="frame" x="0.0" y="100.5" width="288" height="36"/>
+                                                        <rect key="frame" x="0.0" y="100.33333333333334" width="361" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çalışma saati: 09:00-17:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hsh-PW-WUz">
-                                                        <rect key="frame" x="0.0" y="144.5" width="288" height="21"/>
+                                                        <rect key="frame" x="0.0" y="144.33333333333331" width="361" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juq-gu-OGZ">
-                                                        <rect key="frame" x="0.0" y="177.5" width="143" height="32"/>
+                                                        <rect key="frame" x="0.0" y="177.33333333333331" width="143" height="32"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openMapIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GFb-ut-VXQ">
                                                                 <rect key="frame" x="16" y="8" width="16" height="16"/>
@@ -1367,7 +1391,7 @@ talep edebilirsiniz.</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haritada Aç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-ab-wLD">
-                                                                <rect key="frame" x="38" y="5.5" width="89" height="21"/>
+                                                                <rect key="frame" x="38" y="5.6666666666666856" width="89" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1394,46 +1418,64 @@ talep edebilirsiniz.</string>
                                                             <constraint firstItem="8sk-Yp-5I4" firstAttribute="top" secondItem="juq-gu-OGZ" secondAttribute="top" id="vQ5-2S-zKC"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bC-DC-eSE">
+                                                        <rect key="frame" x="224" y="181.33333333333331" width="137" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onay Bekliyor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-Uu-aqR">
+                                                                <rect key="frame" x="16" y="1.6666666666666856" width="105" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="AkQ-Uu-aqR" secondAttribute="trailing" constant="16" id="d7u-5m-jvC"/>
+                                                            <constraint firstItem="AkQ-Uu-aqR" firstAttribute="leading" secondItem="4bC-DC-eSE" secondAttribute="leading" constant="16" id="hC8-Ye-pfl"/>
+                                                            <constraint firstAttribute="height" constant="24" id="pAa-T9-8om"/>
+                                                            <constraint firstItem="AkQ-Uu-aqR" firstAttribute="centerY" secondItem="4bC-DC-eSE" secondAttribute="centerY" id="zHY-3w-ngE"/>
+                                                        </constraints>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Günü Seçiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bGf-wa-gxg">
-                                                        <rect key="frame" x="0.0" y="241.5" width="288" height="21"/>
+                                                        <rect key="frame" x="0.0" y="241.33333333333331" width="361" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yalnızca önümüzdeki 15 gün için randevu alabilirsiniz." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lef-s6-qhr">
-                                                        <rect key="frame" x="0.0" y="266.5" width="288" height="33.5"/>
+                                                        <rect key="frame" x="0.0" y="266.33333333333331" width="361" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gün Seçiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d7-lS-3ih">
-                                                        <rect key="frame" x="0.0" y="316" width="81.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="299.33333333333331" width="81.666666666666671" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPz-r8-cn8" customClass="CPDateChooseView" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="342" width="288" height="56"/>
+                                                        <rect key="frame" x="0.0" y="325.33333333333331" width="361" height="56"/>
                                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="HXf-W0-8iV"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saat Seçiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8R-Ou-TOU">
-                                                        <rect key="frame" x="0.0" y="414" width="79" height="17"/>
+                                                        <rect key="frame" x="0.0" y="397.33333333333337" width="79" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-sz-qh8" customClass="CPTimeChooseView" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="439" width="288" height="56"/>
+                                                        <rect key="frame" x="0.0" y="422.33333333333337" width="361" height="56"/>
                                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="hcu-vW-h7T"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clt-RV-gK5" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="555" width="288" height="48"/>
+                                                        <rect key="frame" x="0.0" y="538.33333333333337" width="361" height="48"/>
                                                         <color key="backgroundColor" name="appLightGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="Fdi-ou-DaU"/>
@@ -1451,9 +1493,11 @@ talep edebilirsiniz.</string>
                                                 <constraints>
                                                     <constraint firstItem="tPz-r8-cn8" firstAttribute="top" secondItem="8d7-lS-3ih" secondAttribute="bottom" constant="8" id="0oI-Px-uhU"/>
                                                     <constraint firstAttribute="trailing" secondItem="Lef-s6-qhr" secondAttribute="trailing" id="1v8-NJ-Mlg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4bC-DC-eSE" secondAttribute="trailing" id="3xi-o5-yF4"/>
                                                     <constraint firstAttribute="trailing" secondItem="bGf-wa-gxg" secondAttribute="trailing" id="5b9-j7-lia"/>
                                                     <constraint firstAttribute="trailing" secondItem="sMA-bK-W7z" secondAttribute="trailing" id="6pG-GP-xBr"/>
                                                     <constraint firstItem="sMA-bK-W7z" firstAttribute="leading" secondItem="PWy-T4-eOA" secondAttribute="leading" id="7cx-dm-W4J"/>
+                                                    <constraint firstItem="4bC-DC-eSE" firstAttribute="centerY" secondItem="8sk-Yp-5I4" secondAttribute="centerY" id="DEt-bI-XKO"/>
                                                     <constraint firstItem="Lef-s6-qhr" firstAttribute="leading" secondItem="PWy-T4-eOA" secondAttribute="leading" id="Dw9-3h-GXV"/>
                                                     <constraint firstItem="bGf-wa-gxg" firstAttribute="leading" secondItem="PWy-T4-eOA" secondAttribute="leading" id="F3B-Qz-cSH"/>
                                                     <constraint firstAttribute="trailing" secondItem="Clt-RV-gK5" secondAttribute="trailing" id="I5J-Ss-hjn"/>
@@ -1534,6 +1578,8 @@ talep edebilirsiniz.</string>
                         <outlet property="selectDayLabel" destination="8d7-lS-3ih" id="ESU-E7-Zx7"/>
                         <outlet property="selectRandevuLabel" destination="bGf-wa-gxg" id="iw8-9h-0Ge"/>
                         <outlet property="selectTimeLabel" destination="o8R-Ou-TOU" id="qpU-1P-Pw1"/>
+                        <outlet property="statusLabel" destination="AkQ-Uu-aqR" id="zaI-ib-Yun"/>
+                        <outlet property="statusView" destination="4bC-DC-eSE" id="7u7-Qc-UbE"/>
                         <outlet property="timeChooseView" destination="RfK-sz-qh8" id="aVY-rf-afg"/>
                         <outlet property="titleLabel" destination="WoU-mT-tsy" id="vJs-xX-nhN"/>
                     </connections>
@@ -1560,14 +1606,14 @@ talep edebilirsiniz.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mov-Xd-qTp">
-                                        <rect key="frame" x="345" y="22.5" width="24" height="24"/>
+                                        <rect key="frame" x="345" y="22.666666666666671" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="EmH-JI-0ju"/>
                                             <constraint firstAttribute="width" constant="24" id="SOB-ef-sfx"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-GS-XDf">
-                                        <rect key="frame" x="337" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="337" y="14.666666666666664" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="19n-3j-kHe"/>
                                             <constraint firstAttribute="height" constant="40" id="oBY-zy-jBa"/>
@@ -1663,27 +1709,27 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="ServiceRandevuViewController" id="IMl-P4-4nv" userLabel="ServiceRandevuViewController" customClass="ServiceRandevuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcx-X5-MEB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6N-uK-Ocy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Onayı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nja-gQ-mA3">
-                                        <rect key="frame" x="16" y="25" width="288" height="21"/>
+                                        <rect key="frame" x="16" y="25" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2d0-o3-ScR">
-                                        <rect key="frame" x="24" y="23.5" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="23.666666666666671" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="cVR-ue-eDz"/>
                                             <constraint firstAttribute="height" constant="24" id="s42-Kr-BPL"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-xn-4jN">
-                                        <rect key="frame" x="16" y="15.5" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="15.666666666666671" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MDf-Dq-yeQ"/>
                                             <constraint firstAttribute="width" constant="40" id="mYa-JV-8ur"/>
@@ -1695,50 +1741,50 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen lastik tamir randevu bilgilerinizi onaylayınız." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bzm-2q-PZg">
-                                        <rect key="frame" x="16" y="70" width="278" height="21"/>
+                                        <rect key="frame" x="16" y="70" width="351" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByH-f9-raC">
-                                        <rect key="frame" x="16" y="102" width="288" height="250"/>
+                                        <rect key="frame" x="16" y="264.66666666666669" width="361" height="229.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-rL-KEk">
-                                                <rect key="frame" x="16" y="16" width="256" height="218"/>
+                                                <rect key="frame" x="16" y="16" width="329" height="197.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Talebi Onayı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-ju-pE1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBu-Ki-tvT">
-                                                        <rect key="frame" x="0.0" y="37" width="256" height="1"/>
+                                                        <rect key="frame" x="0.0" y="37" width="329" height="1"/>
                                                         <color key="backgroundColor" name="exactGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="pZx-ET-vct"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6zD-ky-UkA">
-                                                        <rect key="frame" x="0.0" y="54" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="54" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Hedef Mahallesi Filo Sokak 12/45 Üsküdar /İstanbul" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-0m-kGW">
-                                                        <rect key="frame" x="0.0" y="83" width="256" height="61"/>
+                                                        <rect key="frame" x="0.0" y="83" width="329" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-0a-pbK">
-                                                        <rect key="frame" x="0.0" y="152" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="131.66666666666663" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Mart 2023 Cumartesi 10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-mX-doP">
-                                                        <rect key="frame" x="0.0" y="197" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="176.66666666666669" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1777,7 +1823,7 @@ talep edebilirsiniz.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-4L-5rQ" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="432" width="288" height="56"/>
+                                        <rect key="frame" x="16" y="623" width="361" height="56"/>
                                         <color key="backgroundColor" name="theme"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="Sv7-eh-Gww"/>
@@ -1789,7 +1835,7 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-4r-5vm" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="360" width="288" height="56"/>
+                                        <rect key="frame" x="16" y="551" width="361" height="56"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="7OQ-fu-SU1"/>
@@ -1861,21 +1907,21 @@ talep edebilirsiniz.</string>
             <objects>
                 <viewController storyboardIdentifier="ConfirmedRandevuViewController" id="7tX-7V-sdT" userLabel="ConfirmedRandevuViewController" customClass="ConfirmedRandevuViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILE-ed-bkZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oib-SK-1lN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Sjc-Bf-Btj">
-                                        <rect key="frame" x="272" y="24" width="24" height="24"/>
+                                        <rect key="frame" x="345" y="24" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="PdK-rG-lYv"/>
                                             <constraint firstAttribute="height" constant="24" id="fYS-XZ-awS"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4C-iv-wcd">
-                                        <rect key="frame" x="264" y="16" width="40" height="40"/>
+                                        <rect key="frame" x="337" y="16" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="YJO-PF-z37"/>
                                             <constraint firstAttribute="width" constant="40" id="wGd-ys-e9h"/>
@@ -1886,10 +1932,10 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="rtx-JT-vZc">
-                                        <rect key="frame" x="135.5" y="12" width="49" height="49"/>
+                                        <rect key="frame" x="156.66666666666666" y="72" width="80" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" image="clock24Icon" translatesAutoresizingMaskIntoConstraints="NO" id="nya-ea-yNG">
-                                                <rect key="frame" x="12.5" y="12.5" width="24.5" height="24.5"/>
+                                                <rect key="frame" x="20" y="20" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nya-ea-yNG" secondAttribute="height" multiplier="1:1" id="T4w-Q0-Alc"/>
                                                 </constraints>
@@ -1906,31 +1952,31 @@ talep edebilirsiniz.</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYy-JS-boM">
-                                        <rect key="frame" x="16" y="156" width="288" height="196"/>
+                                        <rect key="frame" x="16" y="266" width="361" height="175.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfU-3B-ZGw">
-                                                <rect key="frame" x="16" y="16" width="256" height="164"/>
+                                                <rect key="frame" x="16" y="16" width="329" height="143.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fy0-gh-9TK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Hedef Mahallesi Filo Sokak 12/45 Üsküdar /İstanbul" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-zw-h0w">
-                                                        <rect key="frame" x="0.0" y="29" width="256" height="61"/>
+                                                        <rect key="frame" x="0.0" y="28.999999999999996" width="329" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="eez-gC-7zD">
-                                                        <rect key="frame" x="0.0" y="98" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="77.666666666666686" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Mart 2023 Cumartesi 10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W2s-Z8-e8X">
-                                                        <rect key="frame" x="0.0" y="143" width="256" height="21"/>
+                                                        <rect key="frame" x="0.0" y="122.66666666666669" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1964,7 +2010,7 @@ talep edebilirsiniz.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YC4-8P-CWp" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="432" width="288" height="56"/>
+                                        <rect key="frame" x="16" y="623" width="361" height="56"/>
                                         <color key="backgroundColor" name="theme"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="Qdj-ca-g0O"/>
@@ -1976,7 +2022,7 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtF-uu-sdg" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="360" width="288" height="56"/>
+                                        <rect key="frame" x="16" y="551" width="361" height="56"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="DH7-wS-UYz"/>
@@ -1990,13 +2036,13 @@ talep edebilirsiniz.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Lastik Değişim Randevu Talebiniz Başarıyla Alındı." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O02-aq-XgV">
-                                        <rect key="frame" x="16" y="65" width="288" height="33.5"/>
+                                        <rect key="frame" x="16" y="176" width="361" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onaylanan randevu tarihiniz size ayrıca iletilecektir" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNd-xB-LLB">
-                                        <rect key="frame" x="16" y="114.5" width="288" height="33.5"/>
+                                        <rect key="frame" x="16" y="209" width="361" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2088,6 +2134,9 @@ talep edebilirsiniz.</string>
         </namedColor>
         <namedColor name="theme">
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

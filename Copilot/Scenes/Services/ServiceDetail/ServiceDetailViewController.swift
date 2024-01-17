@@ -31,6 +31,9 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet weak var dateChooseView: CPDateChooseView!
     @IBOutlet weak var timeChooseView: CPTimeChooseView!
     
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
@@ -51,6 +54,8 @@ class ServiceDetailViewController: UIViewController {
         continueButton.isEnabled = false
         dateChooseView.delegate = self
         timeChooseView.delegate = self
+        statusView.clipsToBounds = true
+        statusView.isHidden = viewModel.randevu == nil
     }
     
     func applyStyle() {
@@ -68,6 +73,9 @@ class ServiceDetailViewController: UIViewController {
         selectDayLabel.apply(.blackS12B700)
         selectTimeLabel.apply(.blackS12B700)
         continueButton.isSmallFontSize = true
+        statusView.layer.cornerRadius = 12
+        statusView.backgroundColor = .appYellow
+        statusLabel.apply(.whiteS12B700)
     }
     
     func setTexts() {

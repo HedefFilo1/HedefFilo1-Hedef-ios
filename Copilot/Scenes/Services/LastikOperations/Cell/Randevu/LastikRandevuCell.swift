@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LastikRandevuCellDelegate: AnyObject {
-    
+    func didTapEdit()
 }
 
 class LastikRandevuCell: UICollectionViewCell, Reusable {
@@ -63,7 +63,7 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapEdit() {
-        
+        delegate?.didTapEdit()
     }
 
 }

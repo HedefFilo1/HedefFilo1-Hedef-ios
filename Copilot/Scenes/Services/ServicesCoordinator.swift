@@ -36,10 +36,11 @@ class ServicesCoordinator: Coordinator {
 }
 
 extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
-    func goToLastikOperations() {
+    func goToLastikOperations(service: Supplier?) {
         let viewController: LastikOperationsViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikOperationsViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.service = service
         navigationController.pushViewController(viewController, animated: true)
     }
 }
@@ -84,6 +85,11 @@ extension ServicesCoordinator: LastikFromMangerVMCoordinatorDelegate {
 
 extension ServicesCoordinator: RequestLastikResultVMCoordinatorDelegate {
     func getBackToHome() {
+        for item in navigationController.viewControllers {
+            if let item = item as? ServiceTabViewController {
+                item.showRandevu = true
+            }
+        }
         navigationController.popToRootViewController(animated: true)
     }
     
@@ -122,6 +128,7 @@ extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
+    
     func presentFilters() {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         let viewModel = ServiceFilterViewModel()
@@ -129,12 +136,13 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(service: Supplier) {
+    func goToServiceDetail(service: Supplier, randevu: String?) {
         let controller: ServiceDetailViewController = storyboard.instantiateViewController()
         let viewModel = ServiceDetailViewModel()
         viewModel.service = service
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
+        viewModel.randevu = randevu
         navigationController.pushViewController(controller, animated: true)
     }
 }

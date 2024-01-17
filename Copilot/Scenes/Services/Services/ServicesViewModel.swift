@@ -13,7 +13,7 @@ import MapKit
 protocol ServicesVMCoordinatorDelegate: AnyObject {
     func presentFilters()
     func getBack()
-    func goToServiceDetail(service: Supplier)
+    func goToServiceDetail(service: Supplier, randevu: String?)
 }
 
 protocol ServicesViewModelDelegate: BaseViewModelDelegate {
@@ -85,7 +85,7 @@ class ServicesViewModel: ServicesViewModelType {
     }
     
     func goToServiceDetail(service: Supplier) {
-        coordinatorDelegate?.goToServiceDetail(service: service)
+        coordinatorDelegate?.goToServiceDetail(service: service, randevu: nil)
     }
     
     func openGoogleMap(latitude: Double, longitude: Double) {
