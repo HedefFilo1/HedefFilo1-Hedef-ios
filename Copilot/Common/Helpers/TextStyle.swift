@@ -84,6 +84,9 @@ enum FontTypographyType {
     /// textGrey size(14) Regular(400)
     case greyS14R400
     
+    /// textGrey size(14) Bold(700)
+    case greyS14B700
+    
     /// textGrey size(16) Bold(700)
     case greyS16B700
     
@@ -191,6 +194,9 @@ enum FontTypographyType {
         
         case .greyS14R400:
             return (TextStyle(fontStyle: .regular, size: 14), color: .textGrey)
+            
+        case .greyS14B700:
+            return (TextStyle(fontStyle: .bold, size: 14), color: .textGrey)
             
         case .greyS16B700:
             return (TextStyle(fontStyle: .bold, size: 16), color: .textGrey)

@@ -211,71 +211,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEI-sG-K87">
                                         <rect key="frame" x="0.0" y="53" width="320" height="431"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jli-6J-rKK">
-                                                <rect key="frame" x="24" y="113.5" width="272" height="204"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-eu-gCG" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="ioo-Nw-hxM"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Yeni Lastik Talep Et">
-                                                            <color key="titleColor" name="theme"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTapRequestNew" destination="Wut-2n-xiz" eventType="touchUpInside" id="MM4-Qh-QJE"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK4-6g-oNY" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="74" width="272" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="gTj-se-qHa"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Lastik Hasarı Randevusu Al">
-                                                            <color key="titleColor" name="theme"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTapRandevu" destination="Wut-2n-xiz" eventType="touchUpInside" id="e3Y-aw-y0a"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWx-Ue-goA" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="152" width="272" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="OLW-QP-bIw"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Lastik Değişimi Randevusu Al">
-                                                            <color key="titleColor" name="theme"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTapChange" destination="Wut-2n-xiz" eventType="touchUpInside" id="ALU-r0-0ra"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-iu-rlS">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="TK4-6g-oNY" firstAttribute="leading" secondItem="Jli-6J-rKK" secondAttribute="leading" id="3xx-WM-Sy2"/>
-                                                    <constraint firstItem="dGV-eu-gCG" firstAttribute="top" secondItem="Jli-6J-rKK" secondAttribute="top" id="44c-jl-H0z"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TK4-6g-oNY" secondAttribute="trailing" id="AyA-6q-K4f"/>
-                                                    <constraint firstItem="mWx-Ue-goA" firstAttribute="top" secondItem="TK4-6g-oNY" secondAttribute="bottom" constant="26" id="UAm-Ux-4bG"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mWx-Ue-goA" secondAttribute="bottom" id="VTa-zF-xBz"/>
-                                                    <constraint firstItem="TK4-6g-oNY" firstAttribute="top" secondItem="dGV-eu-gCG" secondAttribute="bottom" constant="22" id="YI1-PT-Df7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dGV-eu-gCG" secondAttribute="trailing" id="YwB-vC-Den"/>
-                                                    <constraint firstItem="dGV-eu-gCG" firstAttribute="leading" secondItem="Jli-6J-rKK" secondAttribute="leading" id="aHj-7y-suP"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mWx-Ue-goA" secondAttribute="trailing" id="aRO-xf-UU4"/>
-                                                    <constraint firstItem="mWx-Ue-goA" firstAttribute="leading" secondItem="Jli-6J-rKK" secondAttribute="leading" id="shd-L0-3qK"/>
-                                                </constraints>
-                                            </view>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x2O-MX-cao">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Jli-6J-rKK" firstAttribute="top" relation="lessThanOrEqual" secondItem="ZEI-sG-K87" secondAttribute="top" priority="100" constant="190" id="7L3-Of-4Gt"/>
-                                            <constraint firstItem="Jli-6J-rKK" firstAttribute="centerY" secondItem="ZEI-sG-K87" secondAttribute="centerY" priority="50" id="OVY-0b-JtE"/>
-                                            <constraint firstItem="Jli-6J-rKK" firstAttribute="leading" secondItem="ZEI-sG-K87" secondAttribute="leading" constant="24" id="YdI-Th-NW4"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jli-6J-rKK" secondAttribute="trailing" constant="24" id="fnB-i1-ptE"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jli-6J-rKK" secondAttribute="bottom" constant="70" id="iuL-3c-t43"/>
+                                            <constraint firstItem="OIi-iu-rlS" firstAttribute="leading" secondItem="ZEI-sG-K87" secondAttribute="leading" id="CGg-3D-0RH"/>
+                                            <constraint firstItem="OIi-iu-rlS" firstAttribute="top" secondItem="ZEI-sG-K87" secondAttribute="top" id="NoO-xU-OZp"/>
+                                            <constraint firstAttribute="bottom" secondItem="OIi-iu-rlS" secondAttribute="bottom" id="W0e-we-2qQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="OIi-iu-rlS" secondAttribute="trailing" id="mo4-tl-TSr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -306,16 +259,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="gAP-iO-6RD"/>
                     <connections>
-                        <outlet property="changeButton" destination="mWx-Ue-goA" id="d9t-NT-c5w"/>
+                        <outlet property="collectionView" destination="OIi-iu-rlS" id="KLv-S3-c6c"/>
                         <outlet property="contentView" destination="bXS-6n-fjZ" id="EXR-ob-rGk"/>
-                        <outlet property="randevuButton" destination="TK4-6g-oNY" id="IHv-az-mb5"/>
-                        <outlet property="requestNewButton" destination="dGV-eu-gCG" id="Cah-vu-bpS"/>
                         <outlet property="titleLabel" destination="H0Z-Xg-XiM" id="3yK-S3-bky"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkF-Je-L6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="1764.4677661169417"/>
+            <point key="canvasLocation" x="858.75" y="1764.0845070422536"/>
         </scene>
         <!--NewLastikRequestViewController-->
         <scene sceneID="EHb-Vm-GEG">

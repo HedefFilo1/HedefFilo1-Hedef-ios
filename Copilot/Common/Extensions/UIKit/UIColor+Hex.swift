@@ -66,6 +66,9 @@ extension UIColor {
     /// #FFF4DF
     static let lightYellow = UIColor(named: "lightYellow") ?? .black
     
+    /// #FFB82E
+    static let appYellow = UIColor(named: "appYellow") ?? .yellow
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

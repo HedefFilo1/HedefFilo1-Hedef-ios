@@ -20,6 +20,7 @@ protocol LastikOperationsViewModelDelegate: AnyObject {
 protocol LastikOperationsViewModelType: AnyObject {
     var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate? { get set }
     var delegate: LastikOperationsViewModelDelegate? { get set }
+    var service: Supplier? { get set }
     
     func getBack()
     func goToRequestNewLastik()
@@ -30,6 +31,8 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     
     weak var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate?
     weak var delegate: LastikOperationsViewModelDelegate?
+    
+    var service: Supplier?
     
     func getBack() {
         coordinatorDelegate?.getBack()

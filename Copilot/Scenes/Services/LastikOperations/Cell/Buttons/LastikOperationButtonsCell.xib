@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LastikOperationButtonsCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="368"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="368"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-iE-gcV">
+                        <rect key="frame" x="0.0" y="93" width="348" height="182"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-wy-IH9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="348" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K3h-vm-Ah0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Yeni Lastik Talep Et">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRequestNew" destination="gTV-IL-0wX" eventType="touchUpInside" id="vQy-eS-SMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idI-f6-Peh" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="66" width="348" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dfK-qf-MyB"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Lastik Hasarı Randevusu Al">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRandevu" destination="gTV-IL-0wX" eventType="touchUpInside" id="7h5-hn-BJ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-eL-aB1" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="132" width="348" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9mM-Xl-biM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Lastik Değişimi Randevusu Al">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapChange" destination="gTV-IL-0wX" eventType="touchUpInside" id="BdW-5k-wsW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nDt-eL-aB1" secondAttribute="bottom" id="3Ci-Pl-uml"/>
+                            <constraint firstItem="idI-f6-Peh" firstAttribute="top" secondItem="3tS-wy-IH9" secondAttribute="bottom" constant="16" id="ATe-02-ECG"/>
+                            <constraint firstItem="nDt-eL-aB1" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="Gw2-4M-KFn"/>
+                            <constraint firstAttribute="trailing" secondItem="idI-f6-Peh" secondAttribute="trailing" id="NUv-ok-TUI"/>
+                            <constraint firstItem="nDt-eL-aB1" firstAttribute="top" secondItem="idI-f6-Peh" secondAttribute="bottom" constant="16" id="QGM-UN-tZS"/>
+                            <constraint firstItem="idI-f6-Peh" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="VPH-7o-JGW"/>
+                            <constraint firstAttribute="trailing" secondItem="nDt-eL-aB1" secondAttribute="trailing" id="hBa-7B-rWN"/>
+                            <constraint firstItem="3tS-wy-IH9" firstAttribute="top" secondItem="EWf-iE-gcV" secondAttribute="top" id="kCr-ji-zoe"/>
+                            <constraint firstItem="3tS-wy-IH9" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="vMD-Y3-1Ea"/>
+                            <constraint firstAttribute="trailing" secondItem="3tS-wy-IH9" secondAttribute="trailing" id="zHW-Wo-GDQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="EWf-iE-gcV" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hKf-50-p9W"/>
+                <constraint firstItem="EWf-iE-gcV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rkv-bA-aOs"/>
+                <constraint firstAttribute="trailing" secondItem="EWf-iE-gcV" secondAttribute="trailing" id="zoh-4R-LWY"/>
+            </constraints>
+            <size key="customSize" width="348" height="368"/>
+            <connections>
+                <outlet property="changeButton" destination="nDt-eL-aB1" id="EIm-ph-IcL"/>
+                <outlet property="randevuButton" destination="idI-f6-Peh" id="o6E-MM-x0P"/>
+                <outlet property="requestNewButton" destination="3tS-wy-IH9" id="XjQ-uh-aVP"/>
+            </connections>
+            <point key="canvasLocation" x="163.35877862595419" y="131.69014084507043"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

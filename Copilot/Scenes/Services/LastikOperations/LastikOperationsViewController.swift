@@ -18,9 +18,7 @@ class LastikOperationsViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var requestNewButton: CPLightButton!
-    @IBOutlet weak var randevuButton: CPLightButton!
-    @IBOutlet weak var changeButton: CPLightButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -37,6 +35,12 @@ class LastikOperationsViewController: UIViewController {
     
     func setupUI() {
         setBasicViews()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(cellType: LastikRandevuCell.self)
+        collectionView.register(cellType: LastikOperationButtonsCell.self)
+        collectionView.contentInset.top = 12
+        collectionView.contentInset.bottom = 90
         applyStyle()
         setTexts()
     }
@@ -50,26 +54,78 @@ class LastikOperationsViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        requestNewButton.setTitle(Strings.requestNewTire, for: .normal)
-        randevuButton.setTitle(Strings.tireDamageAppointment, for: .normal)
-        changeButton.setTitle(Strings.tireChangeAppointment, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTapRequestNew() {
+}
+
+extension LastikOperationsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return viewModel.service == nil ? 0: 1
+        }
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 0 {
+            let cell: LastikRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
+//            cell.layer.borderWidth = 1
+            return cell
+        }
+        
+        let cell: LastikOperationButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = self
+//        cell.layer.borderWidth = 1
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var height: CGFloat = 353
+        
+        if indexPath.section == 1 {
+            height = viewModel.service == nil ? (collectionView.frame.height - 90): 184
+        }
+        return CGSize(width: collectionView.frame.width-32, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOperationButtonsCellDelegate {
+    
+    func goToRequestNewLastik() {
         viewModel.goToRequestNewLastik()
     }
     
-    @IBAction func didTapRandevu() {
+    func goToLastikRandevu() {
         viewModel.goToLastikRandevu()
     }
     
-    @IBAction func didTapChange() {
+    func didTapChange() {
         
     }
+    
+    
 }
 
 extension LastikOperationsViewController: LastikOperationsViewModelDelegate {
