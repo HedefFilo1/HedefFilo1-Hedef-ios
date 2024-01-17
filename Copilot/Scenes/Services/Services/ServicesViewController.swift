@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class ServicesViewController: UIViewController {
-
+    
     var viewModel: ServicesViewModelType! {
         didSet {
             viewModel.delegate = self
@@ -34,13 +34,13 @@ class ServicesViewController: UIViewController {
         setupUI()
 #if DEV_DEBUG
         if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
-//            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
-//            class Fss:  CalendarViewControllerDelegate {
-//                func didSelect(date: Date) {
-//                    
-//                }
-//            }
-//            coordintor.presentCalendar(delegate: Fss())
+            //            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
+            //            class Fss:  CalendarViewControllerDelegate {
+            //                func didSelect(date: Date) {
+            //
+            //                }
+            //            }
+            //            coordintor.presentCalendar(delegate: Fss())
         }
         
 #endif
@@ -158,6 +158,15 @@ extension ServicesViewController: ServicesItemsCellDelegate {
 }
 
 extension ServicesViewController: CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .notDetermined ||
+            manager.authorizationStatus == .restricted ||
+            manager.authorizationStatus == .restricted {
+            viewModel.getServices(lat: nil, lon: nil)
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return

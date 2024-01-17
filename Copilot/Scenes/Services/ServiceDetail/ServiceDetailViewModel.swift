@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import UIKit
+import CoreLocation
+import MapKit
+
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
@@ -23,6 +27,8 @@ protocol ServiceDetailViewModelType: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
     func goToServiceRandevu(date: String, time: String)
+    func openGoogleMap(latitude: Double, longitude: Double)
+    func openAppleMap(latitude: Double, longitude: Double)
 }
 
 class ServiceDetailViewModel: ServiceDetailViewModelType {
@@ -44,5 +50,17 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
             let model = MockRandevu(supplier: service, date: date, time: time)
             coordinatorDelegate?.goToServiceRandevu(randevu: model)
         }
+    }
+    
+    func openGoogleMap(latitude: Double, longitude: Double) {
+        if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
+            UIApplication.shared.open(urlDestination)
+        }
+    }
+    
+    func openAppleMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }
