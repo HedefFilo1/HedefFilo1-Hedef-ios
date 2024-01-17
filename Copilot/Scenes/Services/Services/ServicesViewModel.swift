@@ -7,6 +7,8 @@
 
 import Foundation
 import CoreLocation
+import UIKit
+import MapKit
 
 protocol ServicesVMCoordinatorDelegate: AnyObject {
     func presentFilters()
@@ -28,6 +30,8 @@ protocol ServicesViewModelType: AnyObject {
     func presentFilters()
     func getBack()
     func goToServiceDetail(service: Supplier)
+    func openGoogleMap(latitude: Double, longitude: Double)
+    func openAppleMap(latitude: Double, longitude: Double)
 }
 
 class ServicesViewModel: ServicesViewModelType {
@@ -82,5 +86,17 @@ class ServicesViewModel: ServicesViewModelType {
     
     func goToServiceDetail(service: Supplier) {
         coordinatorDelegate?.goToServiceDetail(service: service)
+    }
+    
+    func openGoogleMap(latitude: Double, longitude: Double) {
+        if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
+            UIApplication.shared.open(urlDestination)
+        }
+    }
+    
+    func openAppleMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }

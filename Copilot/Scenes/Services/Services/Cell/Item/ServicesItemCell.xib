@@ -55,13 +55,24 @@
                                             <constraint firstAttribute="width" constant="13" id="NIU-Hw-h9K"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJA-4h-hMu">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapLocation" destination="gTV-IL-0wX" eventType="touchUpInside" id="ETf-Ot-2nm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="27j-1R-Q2d"/>
                                     <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerY" secondItem="Tnl-tm-DEO" secondAttribute="centerY" id="Gjb-2l-jCK"/>
+                                    <constraint firstItem="uJA-4h-hMu" firstAttribute="leading" secondItem="Tnl-tm-DEO" secondAttribute="leading" id="TmC-r6-G4j"/>
+                                    <constraint firstAttribute="bottom" secondItem="uJA-4h-hMu" secondAttribute="bottom" id="bxd-Sk-gC7"/>
+                                    <constraint firstItem="uJA-4h-hMu" firstAttribute="top" secondItem="Tnl-tm-DEO" secondAttribute="top" id="ldp-mw-Nl7"/>
                                     <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerX" secondItem="Tnl-tm-DEO" secondAttribute="centerX" id="mZe-U5-61x"/>
                                     <constraint firstAttribute="height" constant="24" id="vZS-Sj-s5n"/>
+                                    <constraint firstAttribute="trailing" secondItem="uJA-4h-hMu" secondAttribute="trailing" id="xlk-36-VLM"/>
                                 </constraints>
                             </view>
                         </subviews>

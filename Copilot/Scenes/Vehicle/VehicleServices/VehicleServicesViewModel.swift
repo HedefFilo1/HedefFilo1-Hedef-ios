@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import MapKit
 
 protocol VehicleServicesVMCoordinatorDelegate: AnyObject {
     func presentFilters()
@@ -23,6 +25,8 @@ protocol VehicleServicesViewModelType: AnyObject {
     var searchText: String { get set }
     func getServices(lat: Double?, lon: Double?)
     func presentFilters()
+    func openGoogleMap(latitude: Double, longitude: Double)
+    func openAppleMap(latitude: Double, longitude: Double)
 }
 
 class VehicleServicesViewModel: VehicleServicesViewModelType {
@@ -69,5 +73,17 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
     
     func presentFilters() {
         coordinatorDelegate?.presentFilters()
+    }
+    
+    func openGoogleMap(latitude: Double, longitude: Double) {
+        if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
+            UIApplication.shared.open(urlDestination)
+        }
+    }
+    
+    func openAppleMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }

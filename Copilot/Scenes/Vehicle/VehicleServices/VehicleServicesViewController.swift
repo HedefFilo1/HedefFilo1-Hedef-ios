@@ -85,6 +85,7 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
         }
         
         let cell: VehicleServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = self
         cell.items = viewModel.filteredServices
         return cell
     }
@@ -132,13 +133,48 @@ extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
     }
 }
 
-extension VehicleServicesViewController: CLLocationManagerDelegate {
+extension VehicleServicesViewController: CLLocationManagerDelegate, VehicleServicesItemCellDelegate {
+    
+    func didTapLocation(item: Supplier) {
+        showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .notDetermined ||
+            manager.authorizationStatus == .restricted ||
+            manager.authorizationStatus == .restricted {
+            viewModel.getServices(lat: nil, lon: nil)
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
         }
         viewModel.getServices(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
         locationManager.stopUpdatingLocation()
+    }
+    
+    func showActionSheet(lat: Double, lon: Double) {
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let firstAction: UIAlertAction = UIAlertAction(title: Strings.map, style: .default) { [weak self] _ in
+            self?.viewModel.openAppleMap(latitude: lat, longitude: lon)
+        }
+        
+        let secondAction: UIAlertAction = UIAlertAction(title: Strings.googleMap, style: .default) { [weak self] _ in
+            self?.viewModel.openGoogleMap(latitude: lat, longitude: lon)
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel)
+        
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        
+        present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
     }
 }
 

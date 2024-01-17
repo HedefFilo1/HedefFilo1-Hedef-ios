@@ -155,6 +155,10 @@ extension ServicesViewController: ServicesItemsCellDelegate {
     func didSelect(item: Supplier) {
         viewModel.goToServiceDetail(service: item)
     }
+    
+    func didTapLocation(item: Supplier) {
+        showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+    }
 }
 
 extension ServicesViewController: CLLocationManagerDelegate {
@@ -173,6 +177,28 @@ extension ServicesViewController: CLLocationManagerDelegate {
         }
         viewModel.getServices(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
         locationManager.stopUpdatingLocation()
+    }
+    
+    func showActionSheet(lat: Double, lon: Double) {
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let firstAction: UIAlertAction = UIAlertAction(title: Strings.map, style: .default) { [weak self] _ in
+            self?.viewModel.openAppleMap(latitude: lat, longitude: lon)
+        }
+        
+        let secondAction: UIAlertAction = UIAlertAction(title: Strings.googleMap, style: .default) { [weak self] _ in
+            self?.viewModel.openGoogleMap(latitude: lat, longitude: lon)
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel)
+        
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        
+        present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
     }
 }
 

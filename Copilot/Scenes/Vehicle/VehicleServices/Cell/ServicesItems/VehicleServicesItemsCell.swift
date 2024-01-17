@@ -17,6 +17,7 @@ class VehicleServicesItemsCell: UICollectionViewCell, Reusable {
         }
     }
     
+    weak var delegate: VehicleServicesItemCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -54,6 +55,7 @@ extension VehicleServicesItemsCell: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: VehicleServicesItemCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.item = items?[indexPath.item]
+        cell.delegate = delegate
         return cell
     }
     

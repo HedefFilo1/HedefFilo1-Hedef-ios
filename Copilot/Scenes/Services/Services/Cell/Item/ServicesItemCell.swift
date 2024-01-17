@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ServicesItemCellDelegate: AnyObject {
+    func didTapLocation(item: Supplier)
+}
+
 class ServicesItemCell: UICollectionViewCell, Reusable {
 
     var item: Supplier? {
@@ -17,6 +21,7 @@ class ServicesItemCell: UICollectionViewCell, Reusable {
         }
     }
     
+    weak var delegate: ServicesItemCellDelegate?
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -41,4 +46,9 @@ class ServicesItemCell: UICollectionViewCell, Reusable {
         iconView.layer.borderColor = UIColor.theme.cgColor
     }
     
+    @IBAction func didTapLocation() {
+        if let item {
+            delegate?.didTapLocation(item: item)
+        }
+    }
 }

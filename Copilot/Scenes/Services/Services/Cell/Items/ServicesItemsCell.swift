@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ServicesItemsCellDelegate: AnyObject {
+protocol ServicesItemsCellDelegate: ServicesItemCellDelegate {
     func didSelect(item: Supplier)
 }
 
@@ -59,6 +59,7 @@ extension ServicesItemsCell: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ServicesItemCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.item = items?[indexPath.item]
+        cell.delegate = delegate
         return cell
     }
     
