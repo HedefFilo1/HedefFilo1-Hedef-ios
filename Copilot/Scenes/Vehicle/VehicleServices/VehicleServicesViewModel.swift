@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 protocol VehicleServicesVMCoordinatorDelegate: AnyObject {
-    func presentFilters()
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate)
 }
 
 protocol VehicleServicesViewModelDelegate: BaseViewModelDelegate {
@@ -21,8 +21,10 @@ protocol VehicleServicesViewModelType: AnyObject {
     var coordinatorDelegate: VehicleServicesVMCoordinatorDelegate? { get set }
     var delegate: VehicleServicesViewModelDelegate? { get set }
     var services: [Supplier]? { get set }
-    var filteredServices: [Supplier]? { get set }
+    var filteredServices: [Supplier]? { get }
     var searchText: String { get set }
+    var filterCity: String? { get set }
+    var filterDistrict: String? { get set }
     func getServices(lat: Double?, lon: Double?)
     func presentFilters()
     func openGoogleMap(latitude: Double, longitude: Double)
@@ -34,22 +36,31 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
     weak var delegate: VehicleServicesViewModelDelegate?
     var services: [Supplier]?
     
-    var searchText: String = "" {
-        didSet {
-            if searchText.count == 0 {
-                filteredServices = services
-                return
-            }
-            
-            let result = services?.filter {
-                $0.name.lowercased().contains(searchText.lowercased())
-            }
-            
-            filteredServices = result
-        }
-    }
+    var filterCity: String?
+    var filterDistrict: String?
     
-    var filteredServices: [Supplier]?
+    var searchText: String = ""
+    
+    var filteredServices: [Supplier]? {
+        var result = services
+        if let city = filterCity {
+            result = result?.filter({ $0.city == city })
+        }
+        
+        if let district = filterDistrict {
+            result = result?.filter({ $0.district == district })
+        }
+        
+        if searchText.count == 0 {
+            return result
+        }
+        
+        let result2 = result?.filter {
+            $0.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        return result2
+    }
     
     func getServices(lat: Double?, lon: Double?) {
         let mark = App.vehicle?.make ?? ""
@@ -60,7 +71,6 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
             
             if let model = model {
                 self.services = model
-                self.filteredServices = model
                 self.delegate?.reloadData()
             } else
             
@@ -72,7 +82,7 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
     }
     
     func presentFilters() {
-        coordinatorDelegate?.presentFilters()
+        coordinatorDelegate?.presentFilters(services: services ?? [], delegate: self)
     }
     
     func openGoogleMap(latitude: Double, longitude: Double) {
@@ -85,5 +95,13 @@ class VehicleServicesViewModel: VehicleServicesViewModelType {
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+    }
+}
+
+extension VehicleServicesViewModel: ServiceFilterViewControllerDelegate {
+    func didTapApply(city: String?, district: String?) {
+        filterCity = city
+        filterDistrict = district
+        delegate?.reloadData()
     }
 }

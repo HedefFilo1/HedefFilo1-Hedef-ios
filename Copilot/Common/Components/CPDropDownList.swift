@@ -21,6 +21,7 @@ protocol CPDropDownListDelegate: AnyObject {
 
 class CPDropDownList: UIView {
     
+    var isUpSide = false
     var selectedIndex: Int?
     var isOpen = false
     var maxHeight: CGFloat = 223
@@ -151,7 +152,11 @@ class CPDropDownList: UIView {
             superview?.addSubview(dropDownView)
         }
         dropDownView.clipsToBounds = false
-        dropDownView.align(toView: headView, height: 8, leadingAndTrailing: 0, topToBottom: 0)
+        if isUpSide {
+            dropDownView.align(toView: headView, height: 8, leadingAndTrailing: 0, bottomToTop: 0)
+        } else {
+            dropDownView.align(toView: headView, height: 8, leadingAndTrailing: 0, topToBottom: 0)
+        }
         hasDropDownAdded = true
         setTableView()
     }

@@ -91,7 +91,7 @@ class ServiceTabViewController: UIViewController {
     @IBAction func didTapLastikButton() {
         var service: Supplier? = nil
         if showRandevu {
-            service = Supplier(id: "232", name: "Service name", address: "Address", lon: nil, lat: nil)
+            service = Supplier(id: "232", name: "Service name", address: "Address", lon: nil, lat: nil, district: "", city: "")
         }
         viewModel.goToLastikOperations(service: service)
     }

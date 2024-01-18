@@ -81,6 +81,7 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
         if indexPath.section == 0 {
             let cell: VehicleServicesSearchCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.setFilters(city: viewModel.filterCity, district: viewModel.filterDistrict)
             return cell
         }
         
@@ -92,10 +93,13 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            return CGSize(width: collectionView.frame.width, height: 74)
+//            return CGSize(width: collectionView.frame.width, height: 74)
+            let hasFilter = viewModel.filterDistrict != nil || viewModel.filterCity != nil
+            let height: CGFloat = hasFilter ? 110: 74
+            return CGSize(width: collectionView.frame.width, height: height)
         } else {
             
-            let count = viewModel.services?.count ?? 0
+            let count = viewModel.filteredServices?.count ?? 0
             let height = CGFloat(count * 102 + (count * 8)) - 8 + 44
             return CGSize(width: collectionView.frame.width, height: height)
         }
@@ -114,6 +118,13 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
 }
 
 extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
+    
+    func didTapRemoveFilter() {
+        viewModel.filterCity = nil
+        viewModel.filterDistrict = nil
+        reloadData()
+    }
+    
     func didChangeSearch(text: String) {
         searchText = text
         if filtering {

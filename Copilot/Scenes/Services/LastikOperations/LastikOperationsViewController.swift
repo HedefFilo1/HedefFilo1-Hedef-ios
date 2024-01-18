@@ -114,7 +114,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
 extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOperationButtonsCellDelegate {
     
     func didTapEdit() {
-        let service = Supplier(id: "34", name: "Test Service", address: "Address: test", lon: nil, lat: nil)
+        let service = Supplier(id: "34", name: "Test Service", address: "Address: test", lon: nil, lat: nil, district: "", city: "")
         viewModel.goToServiceDetail(service: service, randevu: "randeveu")
     }
     
@@ -129,8 +129,6 @@ extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOpera
     func didTapChange() {
         
     }
-    
-    
 }
 
 extension LastikOperationsViewController: LastikOperationsViewModelDelegate {

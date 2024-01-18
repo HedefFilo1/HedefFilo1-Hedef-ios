@@ -29,6 +29,7 @@ class MenuViewController: PopupViewController {
         
 #if DEV_DEBUG
 //        viewModel.showDocuments()
+        viewModel.showServices()
 #endif
     }
     

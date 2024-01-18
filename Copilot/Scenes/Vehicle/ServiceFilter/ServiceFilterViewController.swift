@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol ServiceFilterViewControllerDelegate: AnyObject {
+    func didTapApply(city: String?, district: String?)
+}
+
 class ServiceFilterViewController: SheetViewController {
     
     var viewModel: ServiceFilterViewModelType! {
@@ -19,9 +23,10 @@ class ServiceFilterViewController: SheetViewController {
     override var presentationHeight: CGFloat {
         return 290
     }
+    weak var delegate: ServiceFilterViewControllerDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var provinceList: CPDropDownList!
+    @IBOutlet weak var citiesList: CPDropDownList!
     @IBOutlet weak var districtList: CPDropDownList!
     @IBOutlet weak var applyButton: CPButton!
     
@@ -41,8 +46,10 @@ class ServiceFilterViewController: SheetViewController {
     }
     
     func setupUI() {
-        provinceList.delegate = self
+        citiesList.delegate = self
         districtList.delegate = self
+        citiesList.isUpSide = true
+        districtList.isUpSide = true
         applyStyle()
         setTexts()
     }
@@ -54,16 +61,16 @@ class ServiceFilterViewController: SheetViewController {
     func setTexts() {
         view.backgroundColor = .white
         titleLabel.text = Strings.filter
-        provinceList.title = Strings.province
+        citiesList.title = Strings.province
         districtList.title = Strings.district
-        provinceList.valueLabel.text = Strings.choose
+        citiesList.valueLabel.text = Strings.choose
         districtList.valueLabel.text = Strings.choose
     }
     
     func setButtonActivation() {
-        let province = provinceList.hasSelectedItem
+        let province = citiesList.hasSelectedItem
         let district = districtList.hasSelectedItem
-        applyButton.isEnabled = province && district
+        applyButton.isEnabled = province || district
     }
     
     @IBAction func didTapClose() {
@@ -71,29 +78,40 @@ class ServiceFilterViewController: SheetViewController {
     }
     
     @IBAction func didTapApply() {
-        dismiss(animated: true)
+        dismiss(animated: true) { [weak self] in
+            guard let self else { return }
+            self.delegate?.didTapApply(city: self.viewModel.selectedCity, district: self.viewModel.selectedDistrict)
+        }
     }
 }
 
 extension ServiceFilterViewController: CPDropDownListDelegate {
     
     func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
-        return view
+        return self.presentationController?.containerView ?? self.view
     }
     
     func numberOfItems(in dropDownList: CPDropDownList) -> Int {
-        2
+        if dropDownList == citiesList {
+            return viewModel.cities?.count ?? 0
+        }
+        return viewModel.districts?.count ?? 0
     }
     
     func CPDropDownList(_ dropDownList: CPDropDownList, titleFor index: Int) -> String {
         
-        if dropDownList == provinceList {
-            return viewModel.provinces?[index] ?? ""
+        if dropDownList == citiesList {
+            return viewModel.cities?[index] ?? ""
         }
-        return Strings.district
+        return viewModel.districts?[index] ?? ""
     }
     
     func CPDropDownList(_ dropDownList: CPDropDownList, didSelect index: Int) {
+        if dropDownList == citiesList {
+            viewModel.selectedCity = viewModel.cities?[index]
+        } else {
+            viewModel.selectedDistrict = viewModel.districts?[index]
+        }
         
     }
     
@@ -121,5 +139,3 @@ extension ServiceFilterViewController: CPDropDownListDelegate {
 extension ServiceFilterViewController: ServiceFilterViewModelDelegate {
    
 }
-
-
