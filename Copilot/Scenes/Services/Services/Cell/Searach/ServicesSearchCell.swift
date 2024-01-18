@@ -8,17 +8,23 @@
 import UIKit
 
 protocol ServicesSearchCellDelegate: AnyObject {
-    func didChangeSearch(text: String)
     func didTapFilter()
+    func didTapRemoveFilter()
+    func didChangeSearch(text: String)
 }
 
 class ServicesSearchCell: UICollectionViewCell, Reusable {
+    
     weak var delegate: ServicesSearchCellDelegate?
-//    @IBOutlet weak var sortLabel: UILabel!
     @IBOutlet weak var filterLabel: UILabel!
-//    @IBOutlet weak var sortView: UIView!
+    @IBOutlet weak var filterCityView: UIView!
+    @IBOutlet weak var filterCityLabel: UILabel!
+    @IBOutlet weak var filterDistrictView: UIView!
+    @IBOutlet weak var filterDistrictLabel: UILabel!
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var searchTextField: CPSearchTextField!
+    @IBOutlet weak var removFilterView: UIView!
+    @IBOutlet weak var removFilterLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,17 +38,18 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
     
     func applyStyles() {
         backgroundColor = .white
-//        sortView.layer.borderWidth = 1
-//        sortView.layer.borderColor = UIColor.borderColor.cgColor
-//        sortView.layer.cornerRadius = 10
         
         filterView.layer.borderWidth = 1
         filterView.layer.borderColor = UIColor.borderColor.cgColor
         filterView.layer.cornerRadius = 10
-//        sortLabel.apply(.blackS14B700)
         filterLabel.apply(.blackS14B700)
         searchTextField.setTint(color: .fieldsTitle)
         searchTextField.apply(.blackS14R400)
+        filterCityView.layer.borderWidth = 1
+        filterCityView.layer.borderColor = UIColor.greyTextLight.cgColor
+        filterCityView.layer.cornerRadius = 10
+        removFilterLabel.apply(.blackS12B700)
+        filterCityLabel.apply(.blackS12B700)
     }
     
     @objc func editingChanged() {
@@ -50,7 +57,33 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
         delegate?.didChangeSearch(text: text)
     }
     
+    func setFilters(city: String?, district: String?) {
+        if city == nil && district == nil {
+            removFilterView.isHidden = true
+        } else {
+            removFilterView.isHidden = false
+        }
+        
+        filterCityLabel.text = city
+        filterCityView.isHidden = city == nil
+        
+        if city == nil, district != nil {
+            filterCityLabel.text = district
+            filterCityView.isHidden = false
+        }
+        
+//        filterDistrictView.isHidden = district == nil
+        filterDistrictView.isHidden = true
+        
+    }
+    
     @IBAction func didTapFilter() {
         delegate?.didTapFilter()
+    }
+    
+    @IBAction func didTapRemoveFilter() {
+        filterCityView.isHidden = true
+        removFilterView.isHidden = true
+        delegate?.didTapRemoveFilter()
     }
 }

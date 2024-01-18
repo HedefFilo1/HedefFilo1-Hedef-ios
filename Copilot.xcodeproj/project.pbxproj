@@ -96,6 +96,8 @@
 		8935AC512AFA5D87002F1C68 /* SponsorshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */; };
 		8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */; };
 		8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */; };
+		893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */; };
+		893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */; };
 		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
 		893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */; };
 		893EDF652AF92B95004E643E /* CampaignsOfferTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */; };
@@ -189,8 +191,6 @@
 		89A908BE2B31A75400BC7727 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908BC2B31A75400BC7727 /* HeaderCell.xib */; };
 		89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908C02B31A92B00BC7727 /* ContentCell.swift */; };
 		89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908C12B31A92B00BC7727 /* ContentCell.xib */; };
-		89A908CB2B31ABA400BC7727 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */; };
-		89A908CC2B31ABA400BC7727 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */; };
 		89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */; };
 		89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */; };
 		89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */; };
@@ -383,6 +383,8 @@
 		8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipCell.swift; sourceTree = "<group>"; };
 		8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewModel.swift; sourceTree = "<group>"; };
 		8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
+		893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
+		893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
 		893EDF5F2AF924E0004E643E /* CampaignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewController.swift; sourceTree = "<group>"; };
 		893EDF632AF92B95004E643E /* CampaignsOfferTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsOfferTabCell.swift; sourceTree = "<group>"; };
@@ -479,8 +481,6 @@
 		89A908BC2B31A75400BC7727 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		89A908C02B31A92B00BC7727 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		89A908C12B31A92B00BC7727 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
-		89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
-		89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		89A908CE2B31ADF600BC7727 /* ServicesItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemsCell.swift; sourceTree = "<group>"; };
 		89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemCell.swift; sourceTree = "<group>"; };
 		89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemCell.xib; sourceTree = "<group>"; };
@@ -1671,8 +1671,8 @@
 		89CE08072B3AE3DA00C76433 /* Searach */ = {
 			isa = PBXGroup;
 			children = (
-				89A908CA2B31ABA400BC7727 /* ServicesSearchCell.xib */,
-				89A908C92B31ABA400BC7727 /* ServicesSearchCell.swift */,
+				893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */,
+				893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */,
 			);
 			path = Searach;
 			sourceTree = "<group>";
@@ -1963,12 +1963,12 @@
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
-				89A908CC2B31ABA400BC7727 /* ServicesSearchCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
 				89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
 				89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
+				893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */,
 				89DF07142AF0F4DA00892B1D /* StandingCell.xib in Resources */,
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
 				894CEC912B07A68600D369E9 /* SearchHeaderCell.xib in Resources */,
@@ -2169,7 +2169,6 @@
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
-				89A908CB2B31ABA400BC7727 /* ServicesSearchCell.swift in Sources */,
 				89E0458B2B04D3EB00745E73 /* DocumentCell.swift in Sources */,
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
@@ -2282,6 +2281,7 @@
 				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
+				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift in Sources */,
 				891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */,

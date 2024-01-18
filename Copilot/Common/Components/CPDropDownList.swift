@@ -24,7 +24,7 @@ class CPDropDownList: UIView {
     var isUpSide = false
     var selectedIndex: Int?
     var isOpen = false
-    var maxHeight: CGFloat = 223
+    var maxHeight: CGFloat = 130
     weak var owner: UIView?
     
     var itemHeight: CGFloat = 43

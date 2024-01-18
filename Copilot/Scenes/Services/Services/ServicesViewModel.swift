@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 
 protocol ServicesVMCoordinatorDelegate: AnyObject {
-    func presentFilters()
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate)
     func getBack()
     func goToServiceDetail(service: Supplier, randevu: String?)
 }
@@ -24,7 +24,9 @@ protocol ServicesViewModelType: AnyObject {
     var coordinatorDelegate: ServicesVMCoordinatorDelegate? { get set }
     var delegate: ServicesViewModelDelegate? { get set }
     var services: [Supplier]? { get set }
-    var filteredServices: [Supplier]? { get set }
+    var filteredServices: [Supplier]? { get }
+    var filterCity: String? { get set }
+    var filterDistrict: String? { get set }
     var searchText: String { get set }
     func getServices(lat: Double?, lon: Double?)
     func presentFilters()
@@ -38,23 +40,32 @@ class ServicesViewModel: ServicesViewModelType {
     weak var coordinatorDelegate: ServicesVMCoordinatorDelegate?
     weak var delegate: ServicesViewModelDelegate?
     var services: [Supplier]?
-
-    var searchText: String = "" {
-        didSet {
-            if searchText.count == 0 {
-                filteredServices = services
-                return
-            }
-            
-            let result = services?.filter {
-                $0.name.lowercased().contains(searchText.lowercased())
-            }
-            
-            filteredServices = result
-        }
-    }
     
-    var filteredServices: [Supplier]?
+    var filterCity: String?
+    var filterDistrict: String?
+    
+    var searchText: String = ""
+    
+    var filteredServices: [Supplier]? {
+        var result = services
+        if let city = filterCity {
+            result = result?.filter({ $0.city == city })
+        }
+        
+        if let district = filterDistrict {
+            result = result?.filter({ $0.district == district })
+        }
+        
+        if searchText.count == 0 {
+            return result
+        }
+        
+        let result2 = result?.filter {
+            $0.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        return result2
+    }
     
     func getServices(lat: Double?, lon: Double?) {
         let mark = App.vehicle?.make ?? ""
@@ -65,7 +76,6 @@ class ServicesViewModel: ServicesViewModelType {
             
             if let model = model {
                 self.services = model
-                self.filteredServices = model
                 self.delegate?.reloadData()
             } else
             
@@ -77,7 +87,7 @@ class ServicesViewModel: ServicesViewModelType {
     }
     
     func presentFilters() {
-        coordinatorDelegate?.presentFilters()
+        coordinatorDelegate?.presentFilters(services: services ?? [], delegate: self)
     }
     
     func getBack() {
@@ -98,5 +108,13 @@ class ServicesViewModel: ServicesViewModelType {
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+    }
+}
+
+extension ServicesViewModel: ServiceFilterViewControllerDelegate {
+    func didTapApply(city: String?, district: String?) {
+        filterCity = city
+        filterDistrict = district
+        delegate?.reloadData()
     }
 }

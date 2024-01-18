@@ -48,7 +48,7 @@ class ServiceFilterViewController: SheetViewController {
     func setupUI() {
         citiesList.delegate = self
         districtList.delegate = self
-        citiesList.isUpSide = true
+//        citiesList.isUpSide = true
         districtList.isUpSide = true
         applyStyle()
         setTexts()
@@ -88,7 +88,8 @@ class ServiceFilterViewController: SheetViewController {
 extension ServiceFilterViewController: CPDropDownListDelegate {
     
     func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
-        return self.presentationController?.containerView ?? self.view
+//        return self.presentationController?.containerView ?? self.view
+        return view
     }
     
     func numberOfItems(in dropDownList: CPDropDownList) -> Int {

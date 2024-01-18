@@ -129,10 +129,12 @@ extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
 
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
     
-    func presentFilters() {
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         let viewModel = ServiceFilterViewModel()
         controller.viewModel = viewModel
+        viewModel.services = services
+        controller.delegate = delegate
         navigationController.present(controller, animated: true)
     }
     
