@@ -36,11 +36,11 @@ class ServicesCoordinator: Coordinator {
 }
 
 extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
-    func goToLastikOperations(service: Supplier?) {
+    func goToLastikOperations(appointment: Case?) {
         let viewController: LastikOperationsViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikOperationsViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        viewController.viewModel.service = service
+        viewController.viewModel.appointment = appointment
         navigationController.pushViewController(viewController, animated: true)
     }
 }
@@ -85,11 +85,6 @@ extension ServicesCoordinator: LastikFromMangerVMCoordinatorDelegate {
 
 extension ServicesCoordinator: RequestLastikResultVMCoordinatorDelegate {
     func getBackToHome() {
-        for item in navigationController.viewControllers {
-            if let item = item as? ServiceTabViewController {
-                item.showRandevu = true
-            }
-        }
         navigationController.popToRootViewController(animated: true)
     }
     

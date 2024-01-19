@@ -8,18 +8,19 @@
 import Foundation
 
 protocol ServiceTabViewModelCoordinatorDelegate: AnyObject {
-    func goToLastikOperations(service: Supplier?)
+    func goToLastikOperations(appointment: Case?)
 }
 
-protocol ServiceTabViewModelDelegate: AnyObject {
-    
+protocol ServiceTabViewModelDelegate: BaseViewModelDelegate {
+    func setAppointment()
 }
 
 protocol ServiceTabViewModelType: AnyObject {
     var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate? { get set }
     var delegate: ServiceTabViewModelDelegate? { get set }
-    
-    func goToLastikOperations(service: Supplier?)
+    var appointment: Case? { get set }
+    func goToLastikOperations()
+    func getAppointment()
 }
 
 class ServiceTabViewModel: ServiceTabViewModelType {
@@ -27,7 +28,27 @@ class ServiceTabViewModel: ServiceTabViewModelType {
     weak var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate?
     weak var delegate: ServiceTabViewModelDelegate?
     
-    func goToLastikOperations(service: Supplier?) {
-        coordinatorDelegate?.goToLastikOperations(service: service)
+    var appointment: Case?
+    
+    func goToLastikOperations() {
+        coordinatorDelegate?.goToLastikOperations(appointment: appointment)
+    }
+    
+    func getAppointment() {
+        Loading.shared.show()
+        APIService.getCase { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model, model.count > 0 {
+                self.appointment = model[0]
+                self.delegate?.setAppointment()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
     }
 }

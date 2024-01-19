@@ -70,7 +70,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return viewModel.service == nil ? 0: 1
+            return viewModel.appointment == nil ? 0: 1
         }
         return 1
     }
@@ -94,7 +94,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
         var height: CGFloat = 353
         
         if indexPath.section == 1 {
-            height = viewModel.service == nil ? (collectionView.frame.height - 90): 184
+            height = viewModel.appointment == nil ? (collectionView.frame.height - 90): 184
         }
         return CGSize(width: collectionView.frame.width-32, height: height)
     }

@@ -16,7 +16,6 @@ class ServiceTabViewController: UIViewController {
         }
     }
     
-    var showRandevu = false
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -45,15 +44,13 @@ class ServiceTabViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        randevuView.heightConstraint?.constant = showRandevu ? 27: 0
-        randevuView.isHidden = !showRandevu
-        view.animate()
+        viewModel.getAppointment()
     }
     
     func setupUI() {
         setBasicViews()
-        randevuView.heightConstraint?.constant = showRandevu ? 27: 0
-        randevuView.isHidden = !showRandevu
+        randevuView.heightConstraint?.constant = 0
+        randevuView.isHidden = true
         applyStyle()
         setTexts()
         
@@ -89,11 +86,7 @@ class ServiceTabViewController: UIViewController {
     }
     
     @IBAction func didTapLastikButton() {
-        var service: Supplier? = nil
-        if showRandevu {
-            service = Supplier(id: "232", name: "Service name", address: "Address", lon: nil, lat: nil, district: "", city: "")
-        }
-        viewModel.goToLastikOperations(service: service)
+        viewModel.goToLastikOperations()
     }
     
     @IBAction func didTapPastServicesButton() {
@@ -102,5 +95,11 @@ class ServiceTabViewController: UIViewController {
 }
 
 extension ServiceTabViewController: ServiceTabViewModelDelegate {
+    
+    func setAppointment() {
+        randevuView.heightConstraint?.constant = 27
+        randevuView.isHidden = false
+        view.animate()
+    }
     
 }
