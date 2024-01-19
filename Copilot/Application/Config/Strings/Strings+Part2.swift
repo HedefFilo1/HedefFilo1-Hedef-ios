@@ -16,4 +16,16 @@ extension Strings {
     static var randevuRequestSuccessDescriptin: String {
         return localized(string: "randevuRequestSuccessDescriptin")
     }
+    
+    static var randevuApproved: String {
+        return localized(string: "randevuApproved")
+    }
+    
+    static var approved: String {
+        return localized(string: "approved")
+    }
+    
+    static var waitingToApprove: String {
+        return localized(string: "waitingToApprove")
+    }
 }

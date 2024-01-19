@@ -14,12 +14,16 @@ enum CaseRecordType: String {
     case tireChange
 }
 
+enum CaseStatusType: String, Decodable {
+    case approved = "APPOINTMENT_APPROVED"
+}
+
 struct Case: Decodable {
     let caseNumber: String
     let supplierName: String
     let appointmentDate: String
     let recordType: String
-    let status: String
+    let status: CaseStatusType
     
     var caseRecordType: CaseRecordType {
         let record = recordType.lowercased()

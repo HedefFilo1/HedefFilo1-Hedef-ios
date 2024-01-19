@@ -99,6 +99,11 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
     func setAppointment() {
         randevuView.heightConstraint?.constant = 27
         randevuView.isHidden = false
+        let type = viewModel.appointment?.status ?? .none
+        if type == .approved {
+            randevuView.backgroundColor = .textSuccess
+            randevuLabel.text = Strings.randevuApproved
+        }
         view.animate()
     }
     

@@ -1470,28 +1470,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your confirmed randevu date will be communicated to you separately.</string>
         </dict>
         
-        <key></key>
+        <key>randevuApproved</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Randevu Oluşturuldu</string>
             <key>en</key>
-            <string></string>
+            <string>Randevu Approved</string>
         </dict>
         
-        <key></key>
+        <key>approved</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Onaylanmış</string>
             <key>en</key>
-            <string></string>
+            <string>Approved</string>
         </dict>
         
-        <key></key>
+        <key>waitingToApprove</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Onay Bekliyor</string>
             <key>en</key>
-            <string></string>
+            <string>Waiting To Approve</string>
         </dict>
         
         <key></key>
