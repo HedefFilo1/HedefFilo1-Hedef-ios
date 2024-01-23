@@ -41,7 +41,7 @@ class ServiceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setService()
+        setAppointment()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +55,6 @@ class ServiceDetailViewController: UIViewController {
         dateChooseView.delegate = self
         timeChooseView.delegate = self
         statusView.clipsToBounds = true
-        statusView.isHidden = viewModel.randevu == nil
     }
     
     func applyStyle() {
@@ -109,12 +108,23 @@ class ServiceDetailViewController: UIViewController {
         viewModel.goToServiceRandevu(date: dateChooseView.stringDate, time: time)
     }
     
-    func setService() {
-        guard let item = viewModel.service else { return }
-        titleLabel.text = item.name
-        nameLabel.text = item.name
+    func setAppointment() {
+        guard let item = viewModel.appointment else { return }
+        titleLabel.text = item.supplierName
+        nameLabel.text = item.supplierName
         addressLabel.text = item.address
+        let type = item.status
+        if type == .approved {
+            statusView.backgroundColor = .textSuccess
+            statusLabel.text = Strings.randevuApproved
+        } else {
+            statusView.backgroundColor = .appYellow
+            statusLabel.text = Strings.waitingToApprove
+        }
         
+        dateChooseView.setDate(strDate: item.appointmentDate)
+        timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
+        setButtonActivation()
     }
     
     func showActionSheet(lat: Double, lon: Double) {

@@ -123,6 +123,10 @@ extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
+    func goToServiceDetail(service: Supplier, randevu: String?) {
+        
+    }
+    
     
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
@@ -133,13 +137,12 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(service: Supplier, randevu: String?) {
+    func goToServiceDetail(appointment: Case) {
         let controller: ServiceDetailViewController = storyboard.instantiateViewController()
         let viewModel = ServiceDetailViewModel()
-        viewModel.service = service
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
-        viewModel.randevu = randevu
+        viewModel.appointment = appointment
         navigationController.pushViewController(controller, animated: true)
     }
 }

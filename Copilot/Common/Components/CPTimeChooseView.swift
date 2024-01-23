@@ -26,7 +26,11 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
     
     var parentView: UIView?
     
-    var selectedNumber: String?
+    var selectedNumber: String? {
+        didSet {
+            textField.text = selectedNumber
+        }
+    }
     var numbers = ["01", "01", "1", "1"]
     let textField = UITextField()
     let icon = UIImageView()
@@ -154,7 +158,6 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        textField.text = numbers[indexPath.item]
         selectedNumber = numbers[indexPath.item]
         delegate?.didSelect(self, number: numbers[indexPath.item])
         closeList()
@@ -260,5 +263,10 @@ class CPTimeChooseView: UIView {
             }
             minuteView.numbers.append(item)
         }
+    }
+    
+    func set(hourNumber: String, minuteNumber: String) {
+        hourView.selectedNumber = hourNumber
+        minuteView.selectedNumber = minuteNumber
     }
 }

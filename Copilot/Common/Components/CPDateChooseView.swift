@@ -19,6 +19,7 @@ class CPDateChooseView: UIView {
     var stringDate: String {
         return label.text ?? ""
     }
+    
     var date: Date? {
         didSet {
             guard let date = date else { return }
@@ -66,5 +67,13 @@ class CPDateChooseView: UIView {
     
     @objc func didTap() {
         delegate?.didTap(self)
+    }
+    
+    func setDate(strDate: String) {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        if let date = formmater.date(from: strDate) {
+            self.date = date
+        }
     }
 }
