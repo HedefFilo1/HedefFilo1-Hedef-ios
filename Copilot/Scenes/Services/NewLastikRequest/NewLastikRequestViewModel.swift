@@ -9,7 +9,7 @@ import Foundation
 
 protocol NewLastikRequestVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func lastikFromManger()
+    func goToLastikFromManger()
 }
 
 protocol NewLastikRequestViewModelDelegate: AnyObject {
@@ -34,6 +34,6 @@ class NewLastikRequestViewModel: NewLastikRequestViewModelType {
     }
     
     func lastikFromManger() {
-        coordinatorDelegate?.lastikFromManger()
+        coordinatorDelegate?.goToLastikFromManger()
     }
 }

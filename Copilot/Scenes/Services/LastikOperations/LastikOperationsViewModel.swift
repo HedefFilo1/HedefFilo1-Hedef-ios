@@ -13,9 +13,10 @@ protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func goToLastikRandevu()
     func goToLastikChange()
     func goToServiceDetail(appointment: Case)
+    func goToLastikFromManger()
 }
 
-protocol LastikOperationsViewModelDelegate: AnyObject {
+protocol LastikOperationsViewModelDelegate: BaseViewModelDelegate {
     
 }
 
@@ -43,7 +44,25 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     }
     
     func goToRequestNewLastik() {
-        coordinatorDelegate?.goToRequestNewLastik()
+            Loading.shared.show()
+            APIService.getTireControl { [weak self] model, error in
+                Loading.shared.hide()
+                guard let self = self else { return }
+                
+                if let model {
+                    for item in model where item.available {
+                        self.coordinatorDelegate?.goToLastikFromManger()
+                        return
+                    }
+                    self.coordinatorDelegate?.goToRequestNewLastik()
+                }
+                
+                if let error = error {
+                    self.delegate?.showError(title: Strings.errorTitle,
+                                             message: error.message)
+                }
+            }
+//
     }
     
     func goToLastikRandevu() {

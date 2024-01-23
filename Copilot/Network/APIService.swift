@@ -252,6 +252,15 @@ class APIService {
         req.start()
     }
     
+    static func getTireControl(completion: @escaping ([TireControl]?, APIResponseError?) -> Void) {
+        let route = "copilot/tire/control"
+        let req = APIRequest<[TireControl]>(route: route, method: .get, hasToken: true)
+        req.identifier = "GetTireControl"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
 //    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
 //        //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
 //        //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"

@@ -213,6 +213,7 @@
 		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
 		89B790CB2B5FBB5400993933 /* LastikChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */; };
 		89B790CD2B5FBB5C00993933 /* LastikChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */; };
+		89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CE2B5FC54900993933 /* GetTireControl.swift */; };
 		89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB3812AD955F5003D5717 /* CPErrorView.swift */; };
 		89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BED9752AFE3C810068E087 /* VerifyToken.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
@@ -505,6 +506,7 @@
 		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewModel.swift; sourceTree = "<group>"; };
 		89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewController.swift; sourceTree = "<group>"; };
+		89B790CE2B5FC54900993933 /* GetTireControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTireControl.swift; sourceTree = "<group>"; };
 		89BDB3812AD955F5003D5717 /* CPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPErrorView.swift; sourceTree = "<group>"; };
 		89BED9752AFE3C810068E087 /* VerifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyToken.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -1353,6 +1355,7 @@
 				89F23BC32B29C0E30081DD85 /* ContentString.swift */,
 				89F23BC52B29EC220081DD85 /* Document.swift */,
 				892B23832B2C40680000E6E1 /* MaintenanceLast.swift */,
+				89B790CE2B5FC54900993933 /* GetTireControl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2298,6 +2301,7 @@
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
 				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
+				89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift in Sources */,
 				891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,

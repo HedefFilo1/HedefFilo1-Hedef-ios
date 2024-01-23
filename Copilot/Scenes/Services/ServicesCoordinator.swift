@@ -74,7 +74,7 @@ extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: NewLastikRequestVMCoordinatorDelegate {
-    func lastikFromManger() {
+    func goToLastikFromManger() {
         let viewController: LastikFromMangerViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikFromMangerViewModel()
         viewController.viewModel.coordinatorDelegate = self
