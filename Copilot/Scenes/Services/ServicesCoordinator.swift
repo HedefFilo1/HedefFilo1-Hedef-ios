@@ -46,6 +46,7 @@ extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
+    
     func goToRequestNewLastik() {
         let viewController: NewLastikRequestViewController = storyboard.instantiateViewController()
         viewController.viewModel = NewLastikRequestViewModel()
@@ -56,6 +57,13 @@ extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
     func goToLastikRandevu() {
         let viewController: LastikRandevuViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikRandevuViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToLastikChange() {
+        let viewController: LastikChangeViewController = storyboard.instantiateViewController()
+        viewController.viewModel = LastikChangeViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -127,7 +135,6 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         
     }
     
-    
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         let viewModel = ServiceFilterViewModel()
@@ -176,6 +183,10 @@ extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+}
+
+extension ServicesCoordinator: LastikChangeVMCoordinatorDelegate {
+    
 }
 
 extension ServicesCoordinator: ConfirmedRandevuVMCoordinatorDelegate {

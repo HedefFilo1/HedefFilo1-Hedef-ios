@@ -126,7 +126,7 @@ extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOpera
     }
     
     func didTapChange() {
-        
+        viewModel.goToLastikChange()
     }
 }
 
