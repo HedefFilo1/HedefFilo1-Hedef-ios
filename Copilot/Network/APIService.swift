@@ -261,6 +261,23 @@ class APIService {
         req.start()
     }
     
+    static func createCase(tireType: String, completion: @escaping ([TireControl]?, APIResponseError?) -> Void) {
+        let route = "copilot/case"
+        let params = [
+            "webCategory": "TIRE",
+            "tireType": tireType
+        ]
+        
+        let req = APIRequest<[TireControl]>(route: route,
+                                            method: .post,
+                                            parameters: params,
+                                            hasToken: true)
+        req.identifier = "createCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
 //    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
 //        //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
 //        //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"

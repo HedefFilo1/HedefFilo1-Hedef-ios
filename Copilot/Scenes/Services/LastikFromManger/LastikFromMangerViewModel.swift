@@ -12,7 +12,7 @@ protocol LastikFromMangerVMCoordinatorDelegate: AnyObject {
     func goToRequestLastikResult()
 }
 
-protocol LastikFromMangerViewModelDelegate: AnyObject {
+protocol LastikFromMangerViewModelDelegate: BaseViewModelDelegate {
     
 }
 
@@ -22,6 +22,7 @@ protocol LastikFromMangerViewModelType: AnyObject {
     
     func getBack()
     func goToRequestLastikResult()
+    func goToRequestNewLastik(tireType: String)
 }
 
 class LastikFromMangerViewModel: LastikFromMangerViewModelType {
@@ -35,5 +36,22 @@ class LastikFromMangerViewModel: LastikFromMangerViewModelType {
     
     func goToRequestLastikResult() {
         coordinatorDelegate?.goToRequestLastikResult()
+    }
+    
+    func goToRequestNewLastik(tireType: String) {
+        Loading.shared.show()
+        APIService.createCase(tireType: tireType) { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if model != nil {
+                self.goToRequestLastikResult()
+            }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
     }
 }
