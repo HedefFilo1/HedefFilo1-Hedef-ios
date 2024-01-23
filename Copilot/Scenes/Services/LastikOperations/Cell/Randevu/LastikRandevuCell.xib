@@ -50,7 +50,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahalle - Levent - İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-ta-fhX">
-                                        <rect key="frame" x="0.0" y="58" width="314" height="21"/>
+                                        <rect key="frame" x="0.0" y="58" width="178.66666666666666" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="(0212) 012 34 56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSx-zY-Ke6">
+                                        <rect key="frame" x="182.66666666666663" y="58" width="131.33333333333337" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -114,14 +120,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FkB-ta-fhX" secondAttribute="trailing" id="0AP-vG-IOZ"/>
                                     <constraint firstAttribute="trailing" secondItem="o7N-yI-ISo" secondAttribute="trailing" id="1r4-g5-VeC"/>
+                                    <constraint firstItem="sSx-zY-Ke6" firstAttribute="leading" secondItem="FkB-ta-fhX" secondAttribute="trailing" constant="4" id="2aW-vB-wRJ"/>
                                     <constraint firstAttribute="trailing" secondItem="gEu-he-iA9" secondAttribute="trailing" id="32q-ke-aWQ"/>
                                     <constraint firstItem="GuA-ss-3wd" firstAttribute="leading" secondItem="34r-YC-KDp" secondAttribute="leading" id="5mq-84-4Ye"/>
                                     <constraint firstAttribute="trailing" secondItem="w1l-dC-7ai" secondAttribute="trailing" id="6sn-7U-tpX"/>
+                                    <constraint firstAttribute="trailing" secondItem="sSx-zY-Ke6" secondAttribute="trailing" id="9j3-8d-eYB"/>
                                     <constraint firstItem="Dzj-Eh-DKu" firstAttribute="leading" secondItem="34r-YC-KDp" secondAttribute="leading" id="APw-bO-JJ7"/>
                                     <constraint firstItem="Dzj-Eh-DKu" firstAttribute="top" secondItem="34r-YC-KDp" secondAttribute="top" id="Efr-Ie-oLP"/>
                                     <constraint firstItem="w1l-dC-7ai" firstAttribute="top" secondItem="Dzj-Eh-DKu" secondAttribute="bottom" constant="8" id="Eyd-NZ-2Uy"/>
+                                    <constraint firstItem="sSx-zY-Ke6" firstAttribute="centerY" secondItem="FkB-ta-fhX" secondAttribute="centerY" id="GFr-Lz-ajm"/>
                                     <constraint firstItem="gEu-he-iA9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dzj-Eh-DKu" secondAttribute="trailing" constant="4" id="QxO-OO-UD3"/>
                                     <constraint firstItem="FkB-ta-fhX" firstAttribute="leading" secondItem="34r-YC-KDp" secondAttribute="leading" id="VAU-M6-aIF"/>
                                     <constraint firstItem="w1l-dC-7ai" firstAttribute="leading" secondItem="34r-YC-KDp" secondAttribute="leading" id="X1I-XX-dvA"/>
@@ -175,7 +183,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Örnek Sokak no:23 İlçe/il" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cjc-uC-1UH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Örnek Sokak no:23 İlçe/il" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="cjc-uC-1UH">
                                 <rect key="frame" x="76" y="34" width="262" height="13.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
@@ -218,6 +226,7 @@
                 <outlet property="dateLabel" destination="Dzj-Eh-DKu" id="mE8-fd-1Ka"/>
                 <outlet property="editLabel" destination="MLN-WG-PC0" id="Dzo-O3-N6m"/>
                 <outlet property="imageContainer" destination="Ope-Q3-gKT" id="bIM-Xj-iZW"/>
+                <outlet property="phoneLabel" destination="sSx-zY-Ke6" id="OsY-fl-B2p"/>
                 <outlet property="randevuTitleLabel" destination="bKb-dx-cwn" id="8TK-tR-WMM"/>
                 <outlet property="randevuView" destination="p5d-oL-u7u" id="eYg-vH-0ai"/>
                 <outlet property="serviceNameLabel" destination="w1l-dC-7ai" id="5hg-tV-A8E"/>

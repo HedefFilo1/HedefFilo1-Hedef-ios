@@ -25,6 +25,9 @@ struct Case: Decodable {
     let recordType: String
     let status: CaseStatusType
     
+    let address: String
+    let supplierPhone: String
+    
     var caseRecordType: CaseRecordType {
         let record = recordType.lowercased()
         if record.contains(CaseRecordType.maintenance.rawValue) {
@@ -46,7 +49,8 @@ struct Case: Decodable {
         var str: String?
         switch caseRecordType {
         case .maintenance:
-            str = App.getString(key: CodeStrings.maintenaceKey)
+//            str = App.getString(key: CodeStrings.maintenaceKey)
+            return "Tamir"
         case .mechanicalFailure:
             str = App.getString(key: CodeStrings.mechanicalFailurKey)
         case .damage:
@@ -63,6 +67,18 @@ struct Case: Decodable {
         // 2023-12-06T09:00:00.000Z
         if let date = formmater.date(from: appointmentDate) {
             formmater.dateFormat = "d MMMM EEEE HH:mm"
+            formmater.locale = Locale(identifier: "tr_TR")
+            return formmater.string(from: date)
+        }
+        return ""
+    }
+    
+    var displayDateWithYear: String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        // 2023-12-06T09:00:00.000Z
+        if let date = formmater.date(from: appointmentDate) {
+            formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
             formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
         }

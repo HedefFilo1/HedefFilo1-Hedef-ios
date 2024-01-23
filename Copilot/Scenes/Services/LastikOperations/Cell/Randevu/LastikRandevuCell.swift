@@ -13,9 +13,24 @@ protocol LastikRandevuCellDelegate: AnyObject {
 
 class LastikRandevuCell: UICollectionViewCell, Reusable {
     
-    var item: Supplier? {
+    var appointment: Case? {
         didSet {
+            dateLabel.text = appointment?.displayDateWithYear
+            serviceNameLabel.text = appointment?.supplierName
+            addressLabel.text = appointment?.address
+            phoneLabel.text = appointment?.supplierPhone
+            typeLabel.text = appointment?.title
+            let type = appointment?.status ?? .none
+            if type == .approved {
+                statusView.backgroundColor = .textSuccess
+                statusLabel.text = Strings.randevuApproved
+            } else {
+                statusView.backgroundColor = .appYellow
+                statusLabel.text = Strings.waitingToApprove
+            }
             
+            tireServiceLabel.text = appointment?.supplierName
+            tireInfoLabel.text = appointment?.address
         }
     }
     
@@ -26,6 +41,7 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var serviceNameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
@@ -50,6 +66,8 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
         typeLabel.apply(.greyS14B700)
         serviceNameLabel.apply(.blackS16B700)
         addressLabel.apply(.greyS14R400)
+        phoneLabel.apply(.blackS12R400)
+        
         statusView.backgroundColor = .appYellow
         statusView.layer.cornerRadius = 12
         statusLabel.apply(.whiteS12B700)

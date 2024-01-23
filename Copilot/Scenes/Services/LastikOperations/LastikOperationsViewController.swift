@@ -80,7 +80,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
         if indexPath.section == 0 {
             let cell: LastikRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
-//            cell.layer.borderWidth = 1
+            cell.appointment = viewModel.appointment
             return cell
         }
         
