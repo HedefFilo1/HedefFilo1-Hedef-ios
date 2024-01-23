@@ -10,7 +10,7 @@ import Foundation
 protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToRequestNewLastik()
-    func goToLastikRandevu()
+    func goToLastikRandevuConfirmation()
     func goToLastikChange()
     func goToServiceDetail(appointment: Case)
     func goToLastikFromManger()
@@ -66,7 +66,7 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     }
     
     func goToLastikRandevu() {
-        coordinatorDelegate?.goToLastikRandevu()
+        coordinatorDelegate?.goToLastikRandevuConfirmation()
     }
     
     func goToServiceDetail() {
