@@ -72,7 +72,7 @@ class HomeViewModel: HomeViewModelType {
     
     func getAppointment() {
         Loading.shared.show()
-        APIService.getCase { [weak self] model, error in
+        APIService.getHomeCase { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             

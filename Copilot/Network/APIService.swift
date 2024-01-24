@@ -166,9 +166,11 @@ class APIService {
         req.start()
     }
     
-    static func getCase(completion: @escaping ([Case]?, APIResponseError?) -> Void) {
+    static func getHomeCase(completion: @escaping ([Case]?, APIResponseError?) -> Void) {
         
-        let route = "copilot/case/generic?statuses=APPOINTMENT_APPROVED&recordTypes=MAINTENANCE%2CMECHANICAL_FAILURE%2CNEW_DAMAGE%2CTIRE_CHANGE"
+        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
+        let startDate = date?.getServerDate() ?? ""
+        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Case"
@@ -176,6 +178,23 @@ class APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getCase(completion: @escaping ([Case]?, APIResponseError?) -> Void) {
+        
+        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
+        let startDate = date?.getServerDate() ?? ""
+        // working one
+                let route = "copilot/case/generic?startDate=&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_REQUESTED&returnLast=false"
+        
+//        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
+        
+        let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Case"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     
     static func getTire(completion: @escaping ([Tire]?, APIResponseError?) -> Void) {
         
@@ -278,41 +297,41 @@ class APIService {
         req.start()
     }
     
-//    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
-//        //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
-//        //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
-//        //        route += "&types=\(typesString)"
-//        //        route = route.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? route
-//        //
-//        //        let req = APIRequest<[Places]>(route: route, method: .get)
-//        //        req.baseURL = "https://maps.googleapis.com/maps/api/place/"
-//        //        req.headers = nil
-//        //        req.identifier = "Get Places"
-//        //        req.log = loggingEnabled
-//        //        req.completion = { model, error in
-//        //
-//        //            completion(model, error)
-//        //        }
-//        //        req.start()
-//
-//        var placesTask: URLSessionDataTask?
-//
-//        var urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.googlePlacesAPIKey)"
-//        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
-//        urlString += "&types=\(typesString)"
-//        urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? urlString
-//
-//        guard let url = URL(string: urlString) else { return}
-//
-//        placesTask = URLSession.shared.dataTask(with: url) { data, response, error in
-//
-//            guard let data = data else {
-//                return
-//            }
-//            completion(nil, nil)
-//            print(data)
-//        }
-//
-//        placesTask?.resume()
-//    }
+    //    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
+    //        //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
+    //        //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
+    //        //        route += "&types=\(typesString)"
+    //        //        route = route.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? route
+    //        //
+    //        //        let req = APIRequest<[Places]>(route: route, method: .get)
+    //        //        req.baseURL = "https://maps.googleapis.com/maps/api/place/"
+    //        //        req.headers = nil
+    //        //        req.identifier = "Get Places"
+    //        //        req.log = loggingEnabled
+    //        //        req.completion = { model, error in
+    //        //
+    //        //            completion(model, error)
+    //        //        }
+    //        //        req.start()
+    //
+    //        var placesTask: URLSessionDataTask?
+    //
+    //        var urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.googlePlacesAPIKey)"
+    //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
+    //        urlString += "&types=\(typesString)"
+    //        urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? urlString
+    //
+    //        guard let url = URL(string: urlString) else { return}
+    //
+    //        placesTask = URLSession.shared.dataTask(with: url) { data, response, error in
+    //
+    //            guard let data = data else {
+    //                return
+    //            }
+    //            completion(nil, nil)
+    //            print(data)
+    //        }
+    //
+    //        placesTask?.resume()
+    //    }
 }

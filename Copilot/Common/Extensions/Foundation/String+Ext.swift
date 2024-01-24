@@ -93,6 +93,16 @@ extension String {
         let formattedNumber = numberFormatter.string(from: NSNumber(value: int))
         return formattedNumber ?? ""
     }
+    
+}
+
+extension Date {
+    func getServerDate() -> String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "YYYY-MM-dd"
+        let result = formmater.string(from: self) + "T00:00:00.000Z"
+        return result
+    }
 }
 
 extension Data {

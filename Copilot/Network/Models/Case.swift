@@ -7,49 +7,46 @@
 
 import Foundation
 
-enum CaseRecordType: String {
-    case maintenance
-    case mechanicalFailure
-    case damage
-    case tireChange
+enum CaseRecordType: String, Decodable {
+    case maintenance = "MAINTENANCE"
+    case mechanicalFailure = "MECHANICAL_FAILURE"
+    case damage = "NEW_DAMAGE"
+    case tireChange = "TIRE_CHANGE"
+    case none = "NONE"
 }
 
 enum CaseStatusType: String, Decodable {
     case approved = "APPOINTMENT_APPROVED"
+    case workInProgress = "WORK_IN_PROGRESS"
+    case none = "NONE"
+    case new = "NEW"
+    case owned = "OWNED"
+    case waitingForInformation = "WAITING_FOR_INFORMATION"
+    case responseReceived = "RESPONSE_RECEIVED"
+}
+
+enum AppointmentStatus: String, Decodable {
+    case none = "NONE"
+    case appointmentRequired = "APPOINTMENT_REQUESTED"
+    case appointmentApproved = "APPOINTMENT_APPROVED"
 }
 
 struct Case: Decodable {
     let caseNumber: String
     let supplierName: String
     let appointmentDate: String
-    let recordType: String
+    let recordType: CaseRecordType
     let status: CaseStatusType
     
     let address: String
     let supplierPhone: String
-    
-    var caseRecordType: CaseRecordType {
-        let record = recordType.lowercased()
-        if record.contains(CaseRecordType.maintenance.rawValue) {
-            return .maintenance
-        }
-        if record.contains(CaseRecordType.mechanicalFailure.rawValue) {
-            return .mechanicalFailure
-        }
-        if record.contains(CaseRecordType.damage.rawValue.lowercased()) {
-            return .damage
-        }
-        if record.contains(CaseRecordType.tireChange.rawValue) {
-            return .maintenance
-        }
-        return .maintenance
-    }
-    
+    let appointmentStatus: AppointmentStatus
+      
     var title: String {
         var str: String?
-        switch caseRecordType {
+        switch recordType {
         case .maintenance:
-//            str = App.getString(key: CodeStrings.maintenaceKey)
+            //            str = App.getString(key: CodeStrings.maintenaceKey)
             return "Tamir"
         case .mechanicalFailure:
             str = App.getString(key: CodeStrings.mechanicalFailurKey)
@@ -57,6 +54,8 @@ struct Case: Decodable {
             str = App.getString(key: CodeStrings.damageKey)
         case .tireChange:
             str = App.getString(key: CodeStrings.tireChangeKey)
+        case .none:
+            return "None"
         }
         return str ?? "unknow"
     }

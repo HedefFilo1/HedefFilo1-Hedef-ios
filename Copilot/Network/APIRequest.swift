@@ -191,7 +191,8 @@ class APIRequest<T: Decodable> {
     
     func createURLRequest() -> URLRequest {
         
-        guard let url = URL(string: url) else {
+        let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        guard let url = URL(string: urlString) else {
             fatalError("Can't create url request")
         }
         
