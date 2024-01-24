@@ -19,6 +19,7 @@ class ServicesViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var filtering = false
@@ -33,15 +34,6 @@ class ServicesViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
 #if DEV_DEBUG
-        if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
-            //            coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: ""))
-            //            class Fss:  CalendarViewControllerDelegate {
-            //                func didSelect(date: Date) {
-            //
-            //                }
-            //            }
-            //            coordintor.presentCalendar(delegate: Fss())
-        }
         
 #endif
     }
@@ -72,10 +64,16 @@ class ServicesViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
+        descriptionLabel.apply(.greyS14R400)
     }
     
     func setTexts() {
         titleLabel.text = Strings.services
+        if viewModel.tireSupportType == .damage {
+            descriptionLabel.text = Strings.servicesFixTireDescription
+        } else {
+            descriptionLabel.text = Strings.servicesChangeTireDescription
+        }
     }
     
     @IBAction func didTapBack() {

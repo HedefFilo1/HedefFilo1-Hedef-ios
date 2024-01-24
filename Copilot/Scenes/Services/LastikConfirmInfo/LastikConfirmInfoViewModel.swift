@@ -8,7 +8,7 @@
 import Foundation
 protocol LastikConfirmInfoVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToServices()
+    func goToServices(tireSupportType: TireSupportType)
 }
 
 protocol LastikConfirmInfoViewModelDelegate: AnyObject {
@@ -33,6 +33,6 @@ class LastikConfirmInfoViewModel: LastikConfirmInfoViewModelType {
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices()
+        coordinatorDelegate?.goToServices(tireSupportType: .damage)
     }
 }

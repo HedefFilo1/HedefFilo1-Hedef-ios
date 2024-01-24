@@ -11,7 +11,8 @@ enum TireSupportType: String, Decodable {
     case newSummer = "NEW_SUMMER"
     case newWinter = "NEW_WINTER"
     case change = "CHANGE"
-    case damege = "DAMAGE"
+    case damage = "DAMAGE"
+    case none
 }
 
 enum TireControlType: String, Decodable {

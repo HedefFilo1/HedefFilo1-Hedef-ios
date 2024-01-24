@@ -120,9 +120,11 @@ class ServiceDetailViewController: UIViewController {
         if type == .approved {
             statusView.backgroundColor = .textSuccess
             statusLabel.text = Strings.randevuApproved
+            desciptionLabel.text = Strings.tireRepairappointmentCreated
         } else {
             statusView.backgroundColor = .appYellow
             statusLabel.text = Strings.waitingToApprove
+            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
         }
         
         dateChooseView.setDate(strDate: item.appointmentDate)

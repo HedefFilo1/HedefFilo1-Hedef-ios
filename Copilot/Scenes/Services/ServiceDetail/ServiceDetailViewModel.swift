@@ -13,7 +13,7 @@ import MapKit
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
-    func goToServiceRandevu(service: Supplier, date: Date)
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType)
 }
 
 protocol ServiceDetailViewModelDelegate: BaseViewModelDelegate {
@@ -25,6 +25,7 @@ protocol ServiceDetailViewModelType: AnyObject {
     var delegate: ServiceDetailViewModelDelegate? { get set }
     var appointment: Case? { get set }
     var service: Supplier? { get set }
+    var tireSupportType: TireSupportType? { get set }
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
     func goToServiceRandevu(date: Date, hour: String, minute: String)
@@ -38,6 +39,7 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     
     var appointment: Case?
     var service: Supplier?
+    var tireSupportType: TireSupportType?
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -49,8 +51,10 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     
     func goToServiceRandevu(date: Date, hour: String, minute: String) {
         guard let hour = Int(hour), let min = Int(minute) else { return }
-        if let service = service, let date = date.setTime(hour: hour, min: min) {
-            coordinatorDelegate?.goToServiceRandevu(service: service, date: date)
+        if let service = service,
+           let date = date.setTime(hour: hour, min: min),
+        let type = tireSupportType {
+            coordinatorDelegate?.goToServiceRandevu(service: service, date: date, tireSupportType: type)
         }
     }
     

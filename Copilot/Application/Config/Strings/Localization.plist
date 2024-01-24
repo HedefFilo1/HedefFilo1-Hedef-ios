@@ -1494,6 +1494,95 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Waiting To Approve</string>
         </dict>
         
+        <key>servicesFixTireDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik tamir randevusu almak için lütfen servis seçiniz.</string>
+            <key>en</key>
+            <string>Please select service to make a tire repair appointment.</string>
+        </dict>
+        
+        <key>servicesChangeTireDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik değişim randevusu almak için lütfen servis seçiniz.</string>
+            <key>en</key>
+            <string>Please select service to make a tire change appointment.</string>
+        </dict>
+        
+        <key>tireRepairAwaitingConfirmation</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik tamir randevunuz onay bekliyor.</string>
+            <key>en</key>
+            <string>Your tire repair appointment is awaiting confirmation.</string>
+        </dict>
+        
+        <key>tireRepairappointmentCreated</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik tamir randevunuz oluşturuldu.</string>
+            <key>en</key>
+            <string>Your tire repair appointment has been created.</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

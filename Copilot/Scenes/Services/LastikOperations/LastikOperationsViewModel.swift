@@ -12,7 +12,7 @@ protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func goToRequestNewLastik()
     func goToLastikRandevuConfirmation()
     func goToLastikChange()
-    func goToServiceDetail(service: Supplier?, appointment: Case?)
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
     func goToLastikFromManger()
 }
 
@@ -91,7 +91,15 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     
     func goToServiceDetail() {
         if let appointment {
-            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment)
+            var support = TireSupportType.none
+            if appointment.recordType == .tireChange {
+                support = .change
+            }
+            
+            if appointment.recordType == .maintenance {
+                support = .damage
+            }
+            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
         }
     }
     

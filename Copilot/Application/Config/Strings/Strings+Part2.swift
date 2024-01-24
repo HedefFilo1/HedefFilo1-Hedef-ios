@@ -28,4 +28,20 @@ extension Strings {
     static var waitingToApprove: String {
         return localized(string: "waitingToApprove")
     }
+    
+    static var servicesChangeTireDescription: String {
+        return localized(string: "servicesChangeTireDescription")
+    }
+    
+    static var servicesFixTireDescription: String {
+        return localized(string: "servicesFixTireDescription")
+    }
+    
+    static var tireRepairAwaitingConfirmation: String {
+        return localized(string: "servicesFixTireDescription")
+    }
+    
+    static var tireRepairappointmentCreated: String {
+        return localized(string: "servicesFixTireDescription")
+    }
 }

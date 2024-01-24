@@ -1239,7 +1239,7 @@ talep edebilirsiniz.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-O7-0Pj">
-                                        <rect key="frame" x="0.0" y="102.66666666666669" width="393" height="656.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="122.66666666666669" width="393" height="636.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I7o-fw-SV0">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1268,8 +1268,8 @@ talep edebilirsiniz.</string>
                                             <action selector="didTapBack" destination="3wM-56-mPU" eventType="touchUpInside" id="dMp-lY-FUs"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik tamir randevusu almak için lütfen servis seçiniz." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-nf-tcT">
-                                        <rect key="frame" x="16" y="70" width="351" height="20.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik tamir randevusu almak için lütfen servis seçiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-nf-tcT">
+                                        <rect key="frame" x="16" y="70" width="351" height="40.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1307,6 +1307,7 @@ talep edebilirsiniz.</string>
                     <connections>
                         <outlet property="collectionView" destination="C0U-O7-0Pj" id="Od2-nP-bFt"/>
                         <outlet property="contentView" destination="QW3-KC-Gcx" id="F66-6u-acV"/>
+                        <outlet property="descriptionLabel" destination="uZK-nf-tcT" id="1je-Bn-VSs"/>
                         <outlet property="titleLabel" destination="G0Q-Xq-KhK" id="Jlj-2i-5tn"/>
                     </connections>
                 </viewController>

@@ -122,10 +122,11 @@ extension ServicesCoordinator: LastikRandevuConfirmationVMCrdintrDlgt {
 }
 
 extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
-    func goToServices() {
+    func goToServices(tireSupportType: TireSupportType) {
         let viewController: ServicesViewController = storyboard.instantiateViewController()
         viewController.viewModel = ServicesViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireSupportType = tireSupportType
         navigationController.pushViewController(viewController, animated: true)
     }
 }
@@ -141,26 +142,28 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(service: Supplier?, appointment: Case?) {
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
         let controller: ServiceDetailViewController = storyboard.instantiateViewController()
         let viewModel = ServiceDetailViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewModel.appointment = appointment
         viewModel.service = service
+        viewModel.tireSupportType = tireSupportType
         navigationController.pushViewController(controller, animated: true)
     }
 }
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
    
-    func goToServiceRandevu(service: Supplier, date: Date) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
         let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
         let viewModel = ServiceRandevuViewModel()
         viewModel.service = service
         viewModel.date = date
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
+        viewModel.tireSupportType = tireSupportType
         navigationController.pushViewController(controller, animated: true)
     }
     
