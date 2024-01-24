@@ -42,6 +42,7 @@ class ServiceDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setAppointment()
+        setService()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,8 +105,10 @@ class ServiceDetailViewController: UIViewController {
     }
     
     @IBAction func didContinue() {
-        let time = timeChooseView.selecteTimeString ?? ""
-        viewModel.goToServiceRandevu(date: dateChooseView.stringDate, time: time)
+        guard let date = dateChooseView.date else { return }
+        let hour = timeChooseView.seletedHour ?? ""
+        let minute = timeChooseView.seletedMinute ?? ""
+        viewModel.goToServiceRandevu(date: date, hour: hour, minute: minute)
     }
     
     func setAppointment() {
@@ -125,6 +128,14 @@ class ServiceDetailViewController: UIViewController {
         dateChooseView.setDate(strDate: item.appointmentDate)
         timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
         setButtonActivation()
+    }
+    
+    func setService() {
+        guard let item = viewModel.service else { return }
+        titleLabel.text = item.name
+        nameLabel.text = item.name
+        addressLabel.text = item.address
+        statusView.isHidden = true
     }
     
     func showActionSheet(lat: Double, lon: Double) {

@@ -91,13 +91,12 @@ class ConfirmedRandevuViewController: UIViewController {
     }
     
     func setRandevu() {
-        
-        if let randevu = viewModel.randevu {
-            supplierNameLabel.text = randevu.supplier.name
-            addressLabel.text = randevu.supplier.address
-            phoneLabel.text = "(0212) 012 34 56"
-            dateLabel.text = "\(randevu.date) \(randevu.time)"
+        if let service = viewModel.service {
+            supplierNameLabel.text = service.name
+            addressLabel.text = service.address
+            phoneLabel.text = ""
         }
+        dateLabel.text = viewModel.displayDate
     }
 }
 

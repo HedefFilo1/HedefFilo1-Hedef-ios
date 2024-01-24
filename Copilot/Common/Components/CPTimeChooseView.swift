@@ -219,6 +219,14 @@ class CPTimeChooseView: UIView {
         return nil
     }
     
+    var seletedHour: String? {
+        return hourView.selectedNumber
+    }
+    
+    var seletedMinute: String? {
+        return minuteView.selectedNumber
+    }
+    
     let dotslabel = UILabel()
     let hourView = CPTimeNumberChooseView()
     let minuteView = CPTimeNumberChooseView()

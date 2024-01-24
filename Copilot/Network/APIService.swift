@@ -9,7 +9,7 @@ import UIKit
 
 class APIService {
     
-    static var loggingEnabled = false
+    static var loggingEnabled = true
     
     static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
         let route = "content-string"
@@ -279,14 +279,14 @@ class APIService {
         req.start()
     }
     
-    static func createTireCase(tireType: TireSupportType,
-                               towTruck: Bool,
-                               supplierName: String,
-                               supplierPhone: String,
-                               city: String,
-                               district: String,
-                               appointmentDate: Date,
-                               completion: @escaping (Success?, APIResponseError?) -> Void) {
+    static func createCase(tireType: TireSupportType,
+                           towTruck: Bool,
+                           supplierName: String,
+                           supplierPhone: String,
+                           city: String,
+                           district: String,
+                           appointmentDate: Date,
+                           completion: @escaping (Success?, APIResponseError?) -> Void) {
         let serverdate = appointmentDate.getServerDate()
         let route = "copilot/case"
         let params = [
@@ -302,9 +302,9 @@ class APIService {
         ] as [String: Any]
         
         let req = APIRequest<Success>(route: route,
-                                            method: .post,
-                                            parameters: params,
-                                            hasToken: true)
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
         req.identifier = "createCase"
         req.log = loggingEnabled || true
         req.completion = completion

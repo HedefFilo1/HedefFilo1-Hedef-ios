@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ServiceRandevuViewController: UIViewController {
-
+    
     var viewModel: ServiceRandevuViewModelType! {
         didSet {
             viewModel.delegate = self
@@ -66,11 +66,11 @@ class ServiceRandevuViewController: UIViewController {
         titleLabel.text = Strings.randevuConfirmation
         desciptionLabel.text = Strings.pleaseConfirmRandevu
         confirmationLabel.text = Strings.randevuRequestConfirmation
-      
+        
         editButton.setTitle(Strings.editRandevu, for: .normal)
         confirmButton.setTitle(Strings.confirmRandevu, for: .normal)
     }
-   
+    
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
@@ -80,17 +80,16 @@ class ServiceRandevuViewController: UIViewController {
     }
     
     @IBAction func didTapConfirm() {
-        viewModel.goToConfirmedRandevu()
+        viewModel.createRandevu()
     }
     
     func setRandevu() {
-        
-        if let randevu = viewModel.randevu {
-            supplierNameLabel.text = randevu.supplier.name
-            addressLabel.text = randevu.supplier.address
-            phoneLabel.text = "(0212) 012 34 56"
-            dateLabel.text = "\(randevu.date) \(randevu.time)"
+        if let service = viewModel.service {
+            supplierNameLabel.text = service.name
+            addressLabel.text = service.address
+            phoneLabel.text = ""
         }
+        dateLabel.text = viewModel.displayDate
     }
 }
 

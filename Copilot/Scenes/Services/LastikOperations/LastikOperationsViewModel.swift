@@ -12,7 +12,7 @@ protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func goToRequestNewLastik()
     func goToLastikRandevuConfirmation()
     func goToLastikChange()
-    func goToServiceDetail(appointment: Case)
+    func goToServiceDetail(service: Supplier?, appointment: Case?)
     func goToLastikFromManger()
 }
 
@@ -91,7 +91,7 @@ class LastikOperationsViewModel: LastikOperationsViewModelType {
     
     func goToServiceDetail() {
         if let appointment {
-            coordinatorDelegate?.goToServiceDetail(appointment: appointment)
+            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment)
         }
     }
     

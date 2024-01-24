@@ -131,9 +131,6 @@ extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
-    func goToServiceDetail(service: Supplier, randevu: String?) {
-        
-    }
     
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
@@ -144,22 +141,24 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(appointment: Case) {
+    func goToServiceDetail(service: Supplier?, appointment: Case?) {
         let controller: ServiceDetailViewController = storyboard.instantiateViewController()
         let viewModel = ServiceDetailViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewModel.appointment = appointment
+        viewModel.service = service
         navigationController.pushViewController(controller, animated: true)
     }
 }
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
    
-    func goToServiceRandevu(randevu: MockRandevu) {
+    func goToServiceRandevu(service: Supplier, date: Date) {
         let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
         let viewModel = ServiceRandevuViewModel()
-        viewModel.randevu = randevu
+        viewModel.service = service
+        viewModel.date = date
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
@@ -175,10 +174,11 @@ extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
-    func goToConfirmedRandevu(randevu: MockRandevu) {
+    func goToConfirmedRandevu(service: Supplier, date: Date) {
         let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
         let viewModel = ConfirmedRandevuViewModel()
-        viewModel.randevu = randevu
+        viewModel.service = service
+        viewModel.date = date
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)

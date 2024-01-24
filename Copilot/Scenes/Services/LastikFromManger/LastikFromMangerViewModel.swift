@@ -40,16 +40,16 @@ class LastikFromMangerViewModel: LastikFromMangerViewModelType {
     
     func goToRequestNewLastik(tireType: TireSupportType) {
         Loading.shared.show()
-        APIService.createTireCase(tireType: tireType,
-                                  towTruck: false,
-                                  supplierName: "",
-                                  supplierPhone: "",
-                                  city: "",
-                                  district: "",
-                                  appointmentDate: Date()) { [weak self] _, error in
+        APIService.createCase(tireType: tireType,
+                              towTruck: false,
+                              supplierName: "",
+                              supplierPhone: "",
+                              city: "",
+                              district: "",
+                              appointmentDate: Date()) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
-
+            
             if let error = error {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)

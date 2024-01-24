@@ -103,6 +103,16 @@ extension Date {
         let result = formmater.string(from: self) + "T00:00:00.000Z"
         return result
     }
+    
+    public func setTime(hour: Int, min: Int) -> Date? {
+        let compos: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
+        let cal = Calendar.current
+        var components = cal.dateComponents(compos, from: self)
+        components.hour = hour
+        components.minute = min
+        return cal.date(from: components)
+    }
+    
 }
 
 extension Data {
