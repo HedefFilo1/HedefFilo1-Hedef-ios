@@ -28,9 +28,13 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
                 statusView.backgroundColor = .appYellow
                 statusLabel.text = Strings.waitingToApprove
             }
-            
-            tireServiceLabel.text = appointment?.supplierName
-            tireInfoLabel.text = appointment?.address
+        }
+    }
+    
+    var tire: Tire? {
+        didSet {
+            tireServiceLabel.text = tire?.supplierName
+            tireInfoLabel.text = tire?.supplierAddress
         }
     }
     

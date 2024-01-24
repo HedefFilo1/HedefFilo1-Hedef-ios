@@ -27,6 +27,7 @@ class LastikOperationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getTire()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,6 +82,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
             let cell: LastikRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             cell.appointment = viewModel.appointment
+            cell.tire = viewModel.tire
             return cell
         }
         
@@ -131,5 +133,7 @@ extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOpera
 }
 
 extension LastikOperationsViewController: LastikOperationsViewModelDelegate {
-    
+    func setTire() {
+        collectionView.reloadData()
+    }
 }
