@@ -195,7 +195,6 @@ class APIService {
         req.start()
     }
     
-    
     static func getTire(completion: @escaping ([Tire]?, APIResponseError?) -> Void) {
         
         let req = APIRequest<[Tire]>(route: "copilot/tire", method: .get, hasToken: true)
@@ -280,12 +279,27 @@ class APIService {
         req.start()
     }
     
-    static func createCase(tireType: String, completion: @escaping ([TireControl]?, APIResponseError?) -> Void) {
+    static func createTireCase(tireType: TireSupportType,
+                                  towTruck: Bool,
+                                  supplierName: String,
+                                  supplierPhone: String,
+                                  city: String,
+                                  district: String,
+                                  appointmentDate: Date,
+                                  completion: @escaping ([TireControl]?, APIResponseError?) -> Void) {
+        let serverdate = appointmentDate.getServerDate()
         let route = "copilot/case"
         let params = [
             "webCategory": "TIRE",
-            "tireType": tireType
-        ]
+            "accidentType": "TIRE_BREAK",
+            "tireSupportType": tireType.rawValue,
+            "towTruck": towTruck,
+            "supplierName": supplierName,
+            "supplierPhone": supplierPhone,
+            "city": city,
+            "district": district,
+            "appointmentDate": appointmentDate
+        ] as [String : Any]
         
         let req = APIRequest<[TireControl]>(route: route,
                                             method: .post,

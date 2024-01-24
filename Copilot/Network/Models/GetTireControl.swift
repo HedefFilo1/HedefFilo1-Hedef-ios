@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum TireSupportType: String, Decodable {
+    case newSummer = "NEW_SUMMER"
+    case newWinter = "NEW_WINTER"
+    case change = "CHANGE"
+    case damege = "DAMAGE"
+}
+
 enum TireControlType: String, Decodable {
     case summer = "SUMMER"
     case winter = "WINTER"
