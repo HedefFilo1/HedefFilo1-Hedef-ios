@@ -98,7 +98,11 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
     
     func showList() {
         isOpen = true
-        dropDownView.heightConstraint?.constant = 104
+        var height =  CGFloat(numbers.count * 26)
+        if height > 104 {
+            height = 104
+        }
+        dropDownView.heightConstraint?.constant = height
         UIView.animate(withDuration: 0.2) { [weak self] in
             guard let self = self else { return }
             self.parentView?.layoutIfNeeded()
@@ -203,8 +207,8 @@ class CPTimeChooseView: UIView {
     
     weak var delegate: CPTimeChooseViewDelegate? {
         didSet {
-            hourView.delegate = delegate
-            minuteView.delegate = delegate
+            hourView.delegate = self
+            minuteView.delegate = self
         }
     }
     
@@ -252,7 +256,7 @@ class CPTimeChooseView: UIView {
         hourView.align(leading: 0, topAndBottom: 0)
         hourView.align(toView: dotslabel, trailingToLeading: -12)
         hourView.numbers = []
-        for num in 0...23 {
+        for num in 0...17 {
             var item = "\(num)"
             if num < 10 {
                 item = "0\(num)"
@@ -263,18 +267,35 @@ class CPTimeChooseView: UIView {
         addSubview(minuteView)
         minuteView.align(trailing: 0, topAndBottom: 0)
         minuteView.align(toView: dotslabel, leadingToTrailing: 12)
-        minuteView.numbers = []
-        for num in 0...59 {
-            var item = "\(num)"
-            if num < 10 {
-                item = "0\(num)"
-            }
-            minuteView.numbers.append(item)
-        }
+        minuteView.numbers = ["00", "15", "30", "45"]
     }
     
     func set(hourNumber: String, minuteNumber: String) {
         hourView.selectedNumber = hourNumber
         minuteView.selectedNumber = minuteNumber
     }
+}
+
+extension CPTimeChooseView: CPTimeNumberChooseViewDelegate {
+    
+    func didTap(_ view: CPTimeChooseView) {
+        delegate?.didTap(view)
+    }
+    
+    func didSelect(_ view: CPTimeNumberChooseView, number: String) {
+        if view == hourView, number == "17" {
+            minuteView.selectedNumber = "00"
+            minuteView.numbers = ["00"]
+            minuteView.tableView.reloadData()
+        } else {
+            minuteView.numbers = ["00", "15", "30", "45"]
+            minuteView.tableView.reloadData()
+        }
+        delegate?.didSelect(view, number: number)
+    }
+    
+    func superViewForDropDown(in cpTimeChooseView: CPTimeNumberChooseView) -> UIView? {
+        return delegate?.superViewForDropDown(in: cpTimeChooseView)
+    }
+    
 }

@@ -88,7 +88,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
         
         let cell: LastikOperationButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.delegate = self
-//        cell.layer.borderWidth = 1
+//        cell.shouldRemoveNewButton = viewModel.appointment != nil
         return cell
     }
     

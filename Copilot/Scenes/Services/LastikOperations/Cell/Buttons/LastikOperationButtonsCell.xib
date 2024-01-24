@@ -22,58 +22,57 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-iE-gcV">
                         <rect key="frame" x="0.0" y="93" width="348" height="182"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-wy-IH9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="348" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="K3h-vm-Ah0"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Yeni Lastik Talep Et">
-                                    <color key="titleColor" name="theme"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapRequestNew" destination="gTV-IL-0wX" eventType="touchUpInside" id="vQy-eS-SMa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idI-f6-Peh" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="348" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dfK-qf-MyB"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Lastik Hasarı Randevusu Al">
-                                    <color key="titleColor" name="theme"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapRandevu" destination="gTV-IL-0wX" eventType="touchUpInside" id="7h5-hn-BJ3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-eL-aB1" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="348" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9mM-Xl-biM"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Lastik Değişimi Randevusu Al">
-                                    <color key="titleColor" name="theme"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapChange" destination="gTV-IL-0wX" eventType="touchUpInside" id="BdW-5k-wsW"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rqV-zR-Hcc">
+                                <rect key="frame" x="0.0" y="0.0" width="348" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-wy-IH9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="K3h-vm-Ah0"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Yeni Lastik Talep Et">
+                                            <color key="titleColor" name="theme"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapRequestNew" destination="gTV-IL-0wX" eventType="touchUpInside" id="vQy-eS-SMa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idI-f6-Peh" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="348" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dfK-qf-MyB"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Lastik Hasarı Randevusu Al">
+                                            <color key="titleColor" name="theme"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapRandevu" destination="gTV-IL-0wX" eventType="touchUpInside" id="7h5-hn-BJ3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-eL-aB1" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="132" width="348" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9mM-Xl-biM"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Lastik Değişimi Randevusu Al">
+                                            <color key="titleColor" name="theme"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapChange" destination="gTV-IL-0wX" eventType="touchUpInside" id="BdW-5k-wsW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="nDt-eL-aB1" secondAttribute="bottom" id="3Ci-Pl-uml"/>
-                            <constraint firstItem="idI-f6-Peh" firstAttribute="top" secondItem="3tS-wy-IH9" secondAttribute="bottom" constant="16" id="ATe-02-ECG"/>
-                            <constraint firstItem="nDt-eL-aB1" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="Gw2-4M-KFn"/>
-                            <constraint firstAttribute="trailing" secondItem="idI-f6-Peh" secondAttribute="trailing" id="NUv-ok-TUI"/>
-                            <constraint firstItem="nDt-eL-aB1" firstAttribute="top" secondItem="idI-f6-Peh" secondAttribute="bottom" constant="16" id="QGM-UN-tZS"/>
-                            <constraint firstItem="idI-f6-Peh" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="VPH-7o-JGW"/>
-                            <constraint firstAttribute="trailing" secondItem="nDt-eL-aB1" secondAttribute="trailing" id="hBa-7B-rWN"/>
-                            <constraint firstItem="3tS-wy-IH9" firstAttribute="top" secondItem="EWf-iE-gcV" secondAttribute="top" id="kCr-ji-zoe"/>
-                            <constraint firstItem="3tS-wy-IH9" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="vMD-Y3-1Ea"/>
-                            <constraint firstAttribute="trailing" secondItem="3tS-wy-IH9" secondAttribute="trailing" id="zHW-Wo-GDQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rqV-zR-Hcc" secondAttribute="trailing" id="Lv6-Kf-3AK"/>
+                            <constraint firstItem="rqV-zR-Hcc" firstAttribute="top" secondItem="EWf-iE-gcV" secondAttribute="top" id="fEn-tf-zUC"/>
+                            <constraint firstAttribute="bottom" secondItem="rqV-zR-Hcc" secondAttribute="bottom" id="mnx-7p-xFW"/>
+                            <constraint firstItem="rqV-zR-Hcc" firstAttribute="leading" secondItem="EWf-iE-gcV" secondAttribute="leading" id="qga-Su-wEq"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -183,10 +183,10 @@ class APIService {
         
         let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
         let startDate = date?.getServerDate() ?? ""
-        // working one
-        let route = "copilot/case/generic?startDate=&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_REQUESTED&returnLast=false"
         
-        //        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
+        var route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=NEW&statuses=OWNED&statuses=WORK_IN_PROGRESS&statuses=WAITING_FOR_INFORMATION&statuses=RESPONSE_RECEIVED"
+        
+        route += "&recordTypes=MAINTENANCE&recordTypes=MECHANICAL_FAILURE&recordTypes=TIRE_CHANGE&appointmentStatuses=APPOINTMENT_REQUESTED&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=true"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Case"

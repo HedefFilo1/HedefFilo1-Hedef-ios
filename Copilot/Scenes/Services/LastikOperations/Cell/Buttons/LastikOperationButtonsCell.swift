@@ -16,14 +16,21 @@ protocol LastikOperationButtonsCellDelegate: AnyObject {
 class LastikOperationButtonsCell: UICollectionViewCell, Reusable {
     
     weak var delegate: LastikOperationButtonsCellDelegate?
-    @IBOutlet weak var requestNewButton: CPLightButton!
+    @IBOutlet weak var requestNewButton: CPLightButton?
     @IBOutlet weak var randevuButton: CPLightButton!
     @IBOutlet weak var changeButton: CPLightButton!
+    
+    var shouldRemoveNewButton: Bool = false {
+        didSet {
+            if shouldRemoveNewButton {
+                requestNewButton?.removeFromSuperview()
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        requestNewButton.setTitle(Strings.requestNewTire, for: .normal)
+        requestNewButton?.setTitle(Strings.requestNewTire, for: .normal)
         randevuButton.setTitle(Strings.tireDamageAppointment, for: .normal)
         changeButton.setTitle(Strings.tireChangeAppointment, for: .normal)
     }
