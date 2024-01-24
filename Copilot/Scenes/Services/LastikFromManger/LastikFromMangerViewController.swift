@@ -61,11 +61,11 @@ class LastikFromMangerViewController: UIViewController {
     }
     
     @IBAction func didTapSummer() {
-        viewModel.goToRequestNewLastik(tireType: TireControlType.summer.rawValue)
+        viewModel.goToRequestNewLastik(tireType: TireSupportType.newSummer)
     }
     
     @IBAction func didTapWinter() {
-        viewModel.goToRequestNewLastik(tireType: TireControlType.winter.rawValue)
+        viewModel.goToRequestNewLastik(tireType: TireSupportType.newWinter)
     }
 }
 

@@ -184,9 +184,9 @@ class APIService {
         let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
         let startDate = date?.getServerDate() ?? ""
         // working one
-                let route = "copilot/case/generic?startDate=&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_REQUESTED&returnLast=false"
+        let route = "copilot/case/generic?startDate=&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_REQUESTED&returnLast=false"
         
-//        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
+        //        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Case"
@@ -280,13 +280,13 @@ class APIService {
     }
     
     static func createTireCase(tireType: TireSupportType,
-                                  towTruck: Bool,
-                                  supplierName: String,
-                                  supplierPhone: String,
-                                  city: String,
-                                  district: String,
-                                  appointmentDate: Date,
-                                  completion: @escaping ([TireControl]?, APIResponseError?) -> Void) {
+                               towTruck: Bool,
+                               supplierName: String,
+                               supplierPhone: String,
+                               city: String,
+                               district: String,
+                               appointmentDate: Date,
+                               completion: @escaping (Success?, APIResponseError?) -> Void) {
         let serverdate = appointmentDate.getServerDate()
         let route = "copilot/case"
         let params = [
@@ -298,10 +298,10 @@ class APIService {
             "supplierPhone": supplierPhone,
             "city": city,
             "district": district,
-            "appointmentDate": appointmentDate
-        ] as [String : Any]
+            "appointmentDate": serverdate
+        ] as [String: Any]
         
-        let req = APIRequest<[TireControl]>(route: route,
+        let req = APIRequest<Success>(route: route,
                                             method: .post,
                                             parameters: params,
                                             hasToken: true)

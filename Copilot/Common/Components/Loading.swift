@@ -47,7 +47,7 @@ class Loading {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 80, height: 182)
-        label.apply(TextStyle(fontStyle: .regular, size: 14), color: .darkText)
+        label.apply(TextStyle(fontStyle: .bold, size: 14), color: .white)
         containerView.addSubview(label)
         containerView.addSubview(animationView)
      
