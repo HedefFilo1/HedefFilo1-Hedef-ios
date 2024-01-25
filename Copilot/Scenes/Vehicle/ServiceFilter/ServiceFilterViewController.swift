@@ -80,7 +80,7 @@ class ServiceFilterViewController: SheetViewController {
     @IBAction func didTapApply() {
         dismiss(animated: true) { [weak self] in
             guard let self else { return }
-            self.delegate?.didTapApply(city: self.viewModel.selectedCity, district: self.viewModel.selectedDistrict)
+            self.delegate?.didTapApply(city: self.viewModel.selectedCity?.name, district: self.viewModel.selectedDistrict)
         }
     }
 }
@@ -94,24 +94,25 @@ extension ServiceFilterViewController: CPDropDownListDelegate {
     
     func numberOfItems(in dropDownList: CPDropDownList) -> Int {
         if dropDownList == citiesList {
-            return viewModel.cities?.count ?? 0
+            return viewModel.cities.count
         }
-        return viewModel.districts?.count ?? 0
+        return viewModel.selectedCity?.districts.count ?? 0
     }
     
     func CPDropDownList(_ dropDownList: CPDropDownList, titleFor index: Int) -> String {
         
         if dropDownList == citiesList {
-            return viewModel.cities?[index] ?? ""
+            return viewModel.cities[index].name
         }
-        return viewModel.districts?[index] ?? ""
+        return viewModel.selectedCity?.districts[index] ?? ""
     }
     
     func CPDropDownList(_ dropDownList: CPDropDownList, didSelect index: Int) {
         if dropDownList == citiesList {
-            viewModel.selectedCity = viewModel.cities?[index]
+            viewModel.selectedCity = viewModel.cities[index]
+            districtList.clearSelection()
         } else {
-            viewModel.selectedDistrict = viewModel.districts?[index]
+            viewModel.selectedDistrict = viewModel.selectedCity?.districts[index]
         }
         
     }

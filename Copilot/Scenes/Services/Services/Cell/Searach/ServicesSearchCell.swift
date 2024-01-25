@@ -67,7 +67,7 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
         filterCityLabel.text = city
         filterCityView.isHidden = city == nil
         
-        if city == nil, district != nil {
+        if district != nil {
             filterCityLabel.text = district
             filterCityView.isHidden = false
         }

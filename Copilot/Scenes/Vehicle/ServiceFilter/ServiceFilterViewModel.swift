@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct City {
+    let name: String
+    var districts: [String] = []
+}
+
 protocol ServiceFilterVMCoordinatorDelegate: AnyObject {
     
 }
@@ -18,10 +23,9 @@ protocol ServiceFilterViewModelDelegate: AnyObject {
 protocol ServiceFilterViewModelType: AnyObject {
     var coordinatorDelegate: ServiceFilterVMCoordinatorDelegate? { get set }
     var delegate: ServiceFilterViewModelDelegate? { get set }
-    var districts: [String]? { get set }
-    var cities: [String]? { get set }
+    var cities: [City] { get set }
     var selectedDistrict: String? { get set }
-    var selectedCity: String? { get set }
+    var selectedCity: City? { get set }
     var services: [Supplier]? { get set }
 }
 
@@ -30,28 +34,36 @@ class ServiceFilterViewModel: ServiceFilterViewModelType {
     weak var coordinatorDelegate: ServiceFilterVMCoordinatorDelegate?
     weak var delegate: ServiceFilterViewModelDelegate?
    
-    var districts: [String]? = []
-    var cities: [String]? = []
+    var cities: [City] = []
     
     var selectedDistrict: String?
-    var selectedCity: String?
+    var selectedCity: City?
     
     var services: [Supplier]? {
         didSet {
             guard let services else { return }
-            var districts = Set<String>()
             var cities = Set<String>()
             
             for item in services {
-                if let district = item.district {
-                    districts.insert(district)
-                }
                 if let city = item.city {
                     cities.insert(city)
                 }
             }
-            self.districts = districts.sorted()
-            self.cities = cities.sorted()
+            
+            for item in cities {
+                var cityModel = City(name: item, districts: [])
+                
+                var districts = Set<String>()
+                for service in services {
+                    if service.city == item, let district = service.district {
+                        districts.insert(district)
+                    }
+                }
+                cityModel.districts = districts.sorted()
+                self.cities.append(cityModel)
+                self.cities = self.cities.sorted(by: { $0.name < $1.name })
+            }
+            
         }
     }
 }
