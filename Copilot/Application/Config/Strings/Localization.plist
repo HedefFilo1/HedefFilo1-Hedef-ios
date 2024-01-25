@@ -1366,6 +1366,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please select a date and time to make a tire repair appointment.</string>
         </dict>
         
+        <key>selectTimeToChange</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik değişim randevusu almak için lütfen tarih ve saat  seçiniz.</string>
+            <key>en</key>
+            <string>Please select a date and time to make a tire change appointment.</string>
+        </dict>
+        
         <key>showOnMap</key>
         <dict>
             <key>tr</key>
@@ -1524,22 +1532,6 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Lastik tamir randevunuz oluşturuldu.</string>
             <key>en</key>
             <string>Your tire repair appointment has been created.</string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
         </dict>
         
         <key></key>

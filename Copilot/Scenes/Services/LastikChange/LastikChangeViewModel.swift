@@ -9,7 +9,7 @@ import Foundation
 
 protocol LastikChangeVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToRequestLastikResult()
+    func goToServices(tireSupportType: TireSupportType)
 }
 
 protocol LastikChangeViewModelDelegate: AnyObject {
@@ -21,7 +21,7 @@ protocol LastikChangeViewModelType: AnyObject {
     var delegate: LastikChangeViewModelDelegate? { get set }
     
     func getBack()
-    func goToRequestLastikResult()
+    func goToServices()
 }
 
 class LastikChangeViewModel: LastikChangeViewModelType {
@@ -33,7 +33,7 @@ class LastikChangeViewModel: LastikChangeViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToRequestLastikResult() {
-        coordinatorDelegate?.goToRequestLastikResult()
+    func goToServices() {
+        coordinatorDelegate?.goToServices(tireSupportType: .change)
     }
 }

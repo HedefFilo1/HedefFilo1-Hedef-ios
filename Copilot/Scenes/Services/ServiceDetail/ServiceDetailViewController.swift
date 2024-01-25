@@ -138,6 +138,14 @@ class ServiceDetailViewController: UIViewController {
         nameLabel.text = item.name
         addressLabel.text = item.address
         statusView.isHidden = true
+        
+        if viewModel.tireSupportType == .damage {
+            desciptionLabel.text = Strings.selectTimeToRepair
+        }
+        
+        if viewModel.tireSupportType == .change {
+            desciptionLabel.text = Strings.selectTimeToChange
+        }
     }
     
     func showActionSheet(lat: Double, lon: Double) {

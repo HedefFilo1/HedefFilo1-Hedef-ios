@@ -44,4 +44,8 @@ extension Strings {
     static var tireRepairappointmentCreated: String {
         return localized(string: "servicesFixTireDescription")
     }
+    
+    static var selectTimeToChange: String {
+        return localized(string: "selectTimeToChange")
+    }
 }

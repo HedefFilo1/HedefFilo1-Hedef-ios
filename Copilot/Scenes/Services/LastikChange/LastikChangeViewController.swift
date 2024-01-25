@@ -64,11 +64,11 @@ class LastikChangeViewController: UIViewController {
     }
     
     @IBAction func didTapHeddefolio() {
-        viewModel.goToRequestLastikResult()
+        viewModel.goToServices()
     }
     
     @IBAction func didTapMySelf() {
-        viewModel.goToRequestLastikResult()
+        viewModel.goToServices()
     }
 }
 
