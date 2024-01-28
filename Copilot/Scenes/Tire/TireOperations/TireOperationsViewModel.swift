@@ -9,11 +9,13 @@ import Foundation
 
 protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToRequestNewLastik()
-    func goToLastikRandevuConfirmation()
-    func goToLastikChange()
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
-    func goToLastikFromManger()
+    func goToFlow1Step2NewTire()
+    
+//    func goToRequestNewLastik()
+//    func goToLastikRandevuConfirmation()
+//    func goToLastikChange()
+//    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+//    func goToLastikFromManger()
 }
 
 protocol TireOperationsViewModelDelegate: BaseViewModelDelegate {
@@ -47,6 +49,11 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     }
     
     func goToRequestNewLastik() {
+        if true {
+            coordinatorDelegate?.goToFlow1Step2NewTire()
+            return
+        }
+        
         Loading.shared.show()
         APIService.getTireControl { [weak self] model, error in
             Loading.shared.hide()
@@ -54,10 +61,10 @@ class TireOperationsViewModel: TireOperationsViewModelType {
             
             if let model {
                 for item in model where item.available {
-                    self.coordinatorDelegate?.goToLastikFromManger()
+//                    self.coordinatorDelegate?.goToLastikFromManger()
                     return
                 }
-                self.coordinatorDelegate?.goToRequestNewLastik()
+                self.coordinatorDelegate?.goToFlow1Step2NewTire()
             }
             
             if let error = error {
@@ -86,7 +93,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     }
     
     func goToLastikRandevu() {
-        coordinatorDelegate?.goToLastikRandevuConfirmation()
+//        coordinatorDelegate?.goToLastikRandevuConfirmation()
     }
     
     func goToServiceDetail() {
@@ -99,11 +106,11 @@ class TireOperationsViewModel: TireOperationsViewModelType {
             if appointment.recordType == .maintenance {
                 support = .damage
             }
-            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
+//            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
         }
     }
     
     func goToLastikChange() {
-        coordinatorDelegate?.goToLastikChange()
+//        coordinatorDelegate?.goToLastikChange()
     }
 }

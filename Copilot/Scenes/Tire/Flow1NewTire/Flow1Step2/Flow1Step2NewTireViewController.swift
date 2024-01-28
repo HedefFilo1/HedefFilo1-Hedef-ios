@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class NewLastikRequestViewController: UIViewController {
+class Flow1Step2NewTireViewController: UIViewController {
     
-    var viewModel: NewLastikRequestViewModelType! {
+    var viewModel: Flow1Step2NewTireViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -67,6 +67,6 @@ class NewLastikRequestViewController: UIViewController {
     }
 }
 
-extension NewLastikRequestViewController: NewLastikRequestViewModelDelegate {
+extension Flow1Step2NewTireViewController: Flow1Step2NewTireViewModelDelegate {
     
 }

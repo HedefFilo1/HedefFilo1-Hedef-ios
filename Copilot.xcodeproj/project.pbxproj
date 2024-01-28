@@ -16,8 +16,8 @@
 		890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDB2ACEC80400F053DA /* PopupViewController.swift */; };
 		890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CDD2ACEC84600F053DA /* SheetViewController.swift */; };
 		89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */; };
-		89108A9E2B39E01100C8F400 /* NewLastikRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */; };
-		89108AA02B39E01700C8F400 /* NewLastikRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */; };
+		89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */; };
+		89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */; };
 		8917F5402B39E52500681AD3 /* LastikFromMangerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* LastikFromMangerViewModel.swift */; };
 		8917F5422B39E52E00681AD3 /* LastikFromMangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */; };
 		8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */; };
@@ -308,8 +308,8 @@
 		890D7CDB2ACEC80400F053DA /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		890D7CDD2ACEC84600F053DA /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLastikRequestViewModel.swift; sourceTree = "<group>"; };
-		89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLastikRequestViewController.swift; sourceTree = "<group>"; };
+		89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewModel.swift; sourceTree = "<group>"; };
+		89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewController.swift; sourceTree = "<group>"; };
 		8917F53F2B39E52500681AD3 /* LastikFromMangerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikFromMangerViewModel.swift; sourceTree = "<group>"; };
 		8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikFromMangerViewController.swift; sourceTree = "<group>"; };
 		8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewModel.swift; sourceTree = "<group>"; };
@@ -645,13 +645,13 @@
 			path = popup;
 			sourceTree = "<group>";
 		};
-		89108A9C2B39DF7600C8F400 /* NewLastikRequest */ = {
+		89108A9C2B39DF7600C8F400 /* Flow1Step2 */ = {
 			isa = PBXGroup;
 			children = (
-				89108A9D2B39E01100C8F400 /* NewLastikRequestViewModel.swift */,
-				89108A9F2B39E01700C8F400 /* NewLastikRequestViewController.swift */,
+				89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */,
+				89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */,
 			);
-			path = NewLastikRequest;
+			path = Flow1Step2;
 			sourceTree = "<group>";
 		};
 		8917F53E2B39E50600681AD3 /* LastikFromManger */ = {
@@ -1058,6 +1058,7 @@
 		894632DE2B66B85100D8F301 /* Flow1NewTire */ = {
 			isa = PBXGroup;
 			children = (
+				89108A9C2B39DF7600C8F400 /* Flow1Step2 */,
 			);
 			path = Flow1NewTire;
 			sourceTree = "<group>";
@@ -1388,7 +1389,6 @@
 				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
-				89108A9C2B39DF7600C8F400 /* NewLastikRequest */,
 				8917F53E2B39E50600681AD3 /* LastikFromManger */,
 				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
@@ -2218,7 +2218,7 @@
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
-				89108A9E2B39E01100C8F400 /* NewLastikRequestViewModel.swift in Sources */,
+				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
@@ -2253,7 +2253,7 @@
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
 				89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */,
-				89108AA02B39E01700C8F400 /* NewLastikRequestViewController.swift in Sources */,
+				89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */,
 				897835CF2B44A0CB00C63AA7 /* CalendarViewController.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,

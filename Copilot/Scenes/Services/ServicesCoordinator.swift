@@ -43,13 +43,10 @@ extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
     }
 }
 
-extension ServicesCoordinator: TireOperationsVMCoordinatorDelegate {
+extension ServicesCoordinator {
     
     func goToRequestNewLastik() {
-        let viewController: NewLastikRequestViewController = storyboard.instantiateViewController()
-        viewController.viewModel = NewLastikRequestViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+      
     }
     
     func goToLastikRandevu() {
@@ -71,7 +68,7 @@ extension ServicesCoordinator: TireOperationsVMCoordinatorDelegate {
     }
 }
 
-extension ServicesCoordinator: NewLastikRequestVMCoordinatorDelegate {
+extension ServicesCoordinator {
     func goToLastikFromManger() {
         let viewController: LastikFromMangerViewController = storyboard.instantiateViewController()
         viewController.viewModel = LastikFromMangerViewModel()

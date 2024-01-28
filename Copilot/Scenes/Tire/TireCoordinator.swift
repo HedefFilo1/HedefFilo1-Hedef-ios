@@ -26,7 +26,7 @@ class TireCoordinator: Coordinator {
     func start(appointment: Case?) {
         let viewController: TireOperationsViewController = storyboard.instantiateViewController()
         viewController.viewModel = TireOperationsViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.coordinatorDelegate = self
         viewController.viewModel.appointment = appointment
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -34,4 +34,19 @@ class TireCoordinator: Coordinator {
     override func finish() {
         delegate?.didFinish(from: self)
     }
+}
+
+extension TireCoordinator: TireOperationsVMCoordinatorDelegate {
+    
+    func getBack() {
+        navigationController.popViewController(animated: true)
+    }
+    
+    func goToFlow1Step2NewTire() {
+        let viewController: Flow1Step2NewTireViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow1Step2NewTireViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
 }
