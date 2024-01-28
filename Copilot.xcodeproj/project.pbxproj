@@ -213,6 +213,8 @@
 		89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */; };
 		89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB82AD47902002C70E4 /* MainTabBarController.swift */; };
 		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
+		89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */; };
+		89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */; };
 		89B790CB2B5FBB5400993933 /* LastikChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */; };
 		89B790CD2B5FBB5C00993933 /* LastikChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */; };
 		89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CE2B5FC54900993933 /* GetTireControl.swift */; };
@@ -508,6 +510,8 @@
 		89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		89B12BB82AD47902002C70E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewController.swift; sourceTree = "<group>"; };
+		89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewModel.swift; sourceTree = "<group>"; };
 		89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewModel.swift; sourceTree = "<group>"; };
 		89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewController.swift; sourceTree = "<group>"; };
 		89B790CE2B5FC54900993933 /* GetTireControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTireControl.swift; sourceTree = "<group>"; };
@@ -1042,6 +1046,7 @@
 				894632E12B66B9AC00D8F301 /* TireCoordinator.swift */,
 				891BFB712B34C51B009BD793 /* TireOperations */,
 				894632DE2B66B85100D8F301 /* Flow1NewTire */,
+				89B6F6222B66EA6B00F4C3AB /* Flow3Damage */,
 			);
 			path = Tire;
 			sourceTree = "<group>";
@@ -1509,6 +1514,23 @@
 				8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */,
 			);
 			path = Step3;
+			sourceTree = "<group>";
+		};
+		89B6F6222B66EA6B00F4C3AB /* Flow3Damage */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F6232B66EB2100F4C3AB /* step2 */,
+			);
+			path = Flow3Damage;
+			sourceTree = "<group>";
+		};
+		89B6F6232B66EB2100F4C3AB /* step2 */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */,
+				89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */,
+			);
+			path = step2;
 			sourceTree = "<group>";
 		};
 		89B790C92B5FBB2D00993933 /* LastikChange */ = {
@@ -2145,6 +2167,7 @@
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
+				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
@@ -2228,6 +2251,7 @@
 				89CE08092B3AE40100C76433 /* VehicleServicesItemsCell.swift in Sources */,
 				89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
+				89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */,
 				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,

@@ -36,6 +36,7 @@ class TireCoordinator: Coordinator {
     }
 }
 
+// Flow 1, 2
 extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
                            Flow1Step2NewTireVMCoordinatorDelegate,
                            Flow1Step3TireTypesVMCoordinatorDelegate,
@@ -78,6 +79,22 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
         let viewController: Flow1Step3TireTypesViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow1Step3TireTypesViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+
+// FLOW 3
+extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate {
+    
+    func goToLastikConfirmInfo() {
+        //need to remove
+    }
+    
+    func goToFlow3Step2Damage() {
+        let viewController: Flow3Step2DamageViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow3Step2DamageViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
 }
