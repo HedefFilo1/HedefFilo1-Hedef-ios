@@ -1550,20 +1550,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your tire repair appointment has been created.</string>
         </dict>
         
-        <key></key>
+        <key>getWellSoon</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geçmiş olsun. Lütfen güvenliğiniz için aracınızı çalıştırmayın.</string>
             <key>en</key>
-            <string></string>
+            <string>Get well soon. Please do not start your vehicle for your safety.</string>
         </dict>
         
-        <key></key>
+        <key>towTruckSendingDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Size en uygun servisler listelenecektir. Servis seçimi yaptıktan sonra bulunduğunuz konuma çekici yönlendirilecektir.</string>
             <key>en</key>
-            <string></string>
+            <string>The services most suitable for you will be listed. After selecting the service, a tow truck will be directed to your location.</string>
         </dict>
         
         

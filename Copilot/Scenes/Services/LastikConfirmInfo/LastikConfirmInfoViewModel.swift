@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol LastikConfirmInfoVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToServices(tireSupportType: TireSupportType)

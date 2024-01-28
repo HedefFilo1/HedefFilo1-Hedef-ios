@@ -866,6 +866,160 @@ talep edebilirsiniz.</string>
             </objects>
             <point key="canvasLocation" x="555" y="1251"/>
         </scene>
+        <!--LastikConfirmInfoViewController-->
+        <scene sceneID="frb-H9-G5j">
+            <objects>
+                <viewController storyboardIdentifier="Flow3Step4TowTruckViewController" id="vr3-J2-tOh" userLabel="LastikConfirmInfoViewController" customClass="Flow3Step4TowTruckViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJ1-7P-6aw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou6-9h-iHS">
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBX-Qp-VQZ">
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="d4B-fg-krt">
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="SkM-WY-MW5"/>
+                                            <constraint firstAttribute="width" constant="24" id="iti-sG-xSP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY1-yP-Mp7">
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="01o-GU-YIW"/>
+                                            <constraint firstAttribute="width" constant="40" id="hs1-mm-sV7"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack" destination="vr3-J2-tOh" eventType="touchUpInside" id="cOj-y3-Vok"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-lP-nVP">
+                                        <rect key="frame" x="0.0" y="62.666666666666686" width="393" height="612.33333333333326"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhZ-6s-dkM">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="612.33333333333337"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jr-VJ-HdS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-0E-bFD">
+                                                                <rect key="frame" x="24" y="0.0" width="345" height="370"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size en uygun servisler listelenecektir. Lütfen aracınızı listeden seçeceğiniz servise götürünüz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-8F-eBV">
+                                                                        <rect key="frame" x="0.0" y="48" width="345" height="61"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-u0-9kY" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="242" width="345" height="52"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="52" id="xZG-Vk-3gm"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Servis Seçimi İle İlerle">
+                                                                            <color key="titleColor" name="theme"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="didTapService" destination="vr3-J2-tOh" eventType="touchUpInside" id="CMK-Sc-7RT"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size en uygun servisler listelenecektir. Servis seçimi yaptıktan sonra bulunduğunuz konuma çekici yönlendirilecektir." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN5-9F-Wbm">
+                                                                        <rect key="frame" x="0.0" y="125.00000000000003" width="345" height="61"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="wF4-u0-9kY" firstAttribute="top" secondItem="uN5-9F-Wbm" secondAttribute="bottom" constant="56" id="AOp-MK-Uj7"/>
+                                                                    <constraint firstItem="wF4-u0-9kY" firstAttribute="leading" secondItem="l6l-0E-bFD" secondAttribute="leading" id="C4r-z7-Ud3"/>
+                                                                    <constraint firstItem="CKB-8F-eBV" firstAttribute="top" secondItem="l6l-0E-bFD" secondAttribute="top" priority="100" constant="48" id="LP6-JT-YXU"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="CKB-8F-eBV" secondAttribute="trailing" id="Nz5-zb-sn9"/>
+                                                                    <constraint firstItem="uN5-9F-Wbm" firstAttribute="leading" secondItem="l6l-0E-bFD" secondAttribute="leading" id="Qb7-Rk-III"/>
+                                                                    <constraint firstItem="CKB-8F-eBV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="l6l-0E-bFD" secondAttribute="top" constant="12" id="SYe-N8-nI3"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="uN5-9F-Wbm" secondAttribute="trailing" id="cOo-mu-JUg"/>
+                                                                    <constraint firstItem="CKB-8F-eBV" firstAttribute="leading" secondItem="l6l-0E-bFD" secondAttribute="leading" id="pAn-QP-nu1"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="wF4-u0-9kY" secondAttribute="trailing" id="skc-7b-FVJ"/>
+                                                                    <constraint firstItem="uN5-9F-Wbm" firstAttribute="top" secondItem="CKB-8F-eBV" secondAttribute="bottom" constant="16" id="z6k-HR-GqR"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="370" id="9Ll-Mr-yV6"/>
+                                                            <constraint firstAttribute="bottom" secondItem="l6l-0E-bFD" secondAttribute="bottom" id="EUQ-0P-C2p"/>
+                                                            <constraint firstAttribute="trailing" secondItem="l6l-0E-bFD" secondAttribute="trailing" constant="24" id="QAo-LZ-l5E"/>
+                                                            <constraint firstItem="l6l-0E-bFD" firstAttribute="leading" secondItem="3jr-VJ-HdS" secondAttribute="leading" constant="24" id="hBX-wc-tc2"/>
+                                                            <constraint firstItem="l6l-0E-bFD" firstAttribute="top" secondItem="3jr-VJ-HdS" secondAttribute="top" id="q4q-3B-fL3"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="3jr-VJ-HdS" secondAttribute="bottom" id="gfb-RQ-fof"/>
+                                                    <constraint firstItem="3jr-VJ-HdS" firstAttribute="leading" secondItem="yhZ-6s-dkM" secondAttribute="leading" id="x3w-KY-gGZ"/>
+                                                    <constraint firstItem="3jr-VJ-HdS" firstAttribute="top" secondItem="yhZ-6s-dkM" secondAttribute="top" id="y7f-Kt-iSe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3jr-VJ-HdS" secondAttribute="trailing" id="zX0-JE-JP5"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="yhZ-6s-dkM" secondAttribute="bottom" id="6QL-ar-Hh6"/>
+                                            <constraint firstAttribute="trailing" secondItem="yhZ-6s-dkM" secondAttribute="trailing" id="BJI-u3-yfA"/>
+                                            <constraint firstItem="yhZ-6s-dkM" firstAttribute="top" secondItem="Ddm-lP-nVP" secondAttribute="top" id="YCT-N0-aLh"/>
+                                            <constraint firstItem="yhZ-6s-dkM" firstAttribute="leading" secondItem="Ddm-lP-nVP" secondAttribute="leading" id="ua5-o9-kVE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ddm-lP-nVP" firstAttribute="leading" secondItem="ou6-9h-iHS" secondAttribute="leading" id="2ha-bz-x2u"/>
+                                    <constraint firstItem="BBX-Qp-VQZ" firstAttribute="leading" secondItem="ou6-9h-iHS" secondAttribute="leading" constant="16" id="DRb-3E-lIl"/>
+                                    <constraint firstAttribute="trailing" secondItem="BBX-Qp-VQZ" secondAttribute="trailing" constant="16" id="FDt-YP-jo4"/>
+                                    <constraint firstItem="d4B-fg-krt" firstAttribute="centerY" secondItem="BBX-Qp-VQZ" secondAttribute="centerY" id="MX8-Kr-xiF"/>
+                                    <constraint firstItem="Ddm-lP-nVP" firstAttribute="top" secondItem="BY1-yP-Mp7" secondAttribute="bottom" constant="8" id="XJX-kc-UqD"/>
+                                    <constraint firstItem="d4B-fg-krt" firstAttribute="leading" secondItem="ou6-9h-iHS" secondAttribute="leading" constant="24" id="ZZk-yt-LaW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ddm-lP-nVP" secondAttribute="bottom" id="Zir-tw-wkU"/>
+                                    <constraint firstItem="BY1-yP-Mp7" firstAttribute="centerY" secondItem="d4B-fg-krt" secondAttribute="centerY" id="dLW-mH-O1R"/>
+                                    <constraint firstItem="BBX-Qp-VQZ" firstAttribute="top" secondItem="ou6-9h-iHS" secondAttribute="top" constant="24" id="hJj-oT-TWl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddm-lP-nVP" secondAttribute="trailing" id="jIL-iz-ErY"/>
+                                    <constraint firstItem="BY1-yP-Mp7" firstAttribute="centerX" secondItem="d4B-fg-krt" secondAttribute="centerX" id="jrY-kc-JJ8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NTX-cp-H88"/>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="ou6-9h-iHS" firstAttribute="leading" secondItem="NTX-cp-H88" secondAttribute="leading" id="FSa-vu-Ekx"/>
+                            <constraint firstItem="NTX-cp-H88" firstAttribute="bottom" secondItem="ou6-9h-iHS" secondAttribute="bottom" id="T0X-Ll-0WI"/>
+                            <constraint firstItem="ou6-9h-iHS" firstAttribute="top" secondItem="NTX-cp-H88" secondAttribute="top" constant="84" id="aMr-E7-2MR"/>
+                            <constraint firstItem="NTX-cp-H88" firstAttribute="trailing" secondItem="ou6-9h-iHS" secondAttribute="trailing" id="jhS-Hu-7Sy"/>
+                            <constraint firstItem="3jr-VJ-HdS" firstAttribute="width" secondItem="HJ1-7P-6aw" secondAttribute="width" id="sOw-gi-vgY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Id3-Jr-Qgs"/>
+                    <connections>
+                        <outlet property="contentView" destination="ou6-9h-iHS" id="eeY-HV-dd2"/>
+                        <outlet property="descriptionLabel" destination="CKB-8F-eBV" id="cCd-dA-nph"/>
+                        <outlet property="secondLabel" destination="uN5-9F-Wbm" id="6UC-TS-UgB"/>
+                        <outlet property="serviceButton" destination="wF4-u0-9kY" id="mGZ-H7-ElT"/>
+                        <outlet property="titleLabel" destination="BBX-Qp-VQZ" id="gr7-GP-ee2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxo-AS-gK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="1251"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>

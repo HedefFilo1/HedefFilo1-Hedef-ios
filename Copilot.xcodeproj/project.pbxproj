@@ -215,6 +215,8 @@
 		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
 		89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */; };
 		89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */; };
+		89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */; };
+		89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F62C2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift */; };
 		89B790CB2B5FBB5400993933 /* LastikChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */; };
 		89B790CD2B5FBB5C00993933 /* LastikChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */; };
 		89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CE2B5FC54900993933 /* GetTireControl.swift */; };
@@ -512,6 +514,8 @@
 		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewController.swift; sourceTree = "<group>"; };
 		89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewModel.swift; sourceTree = "<group>"; };
+		89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step4TowTruckViewController.swift; sourceTree = "<group>"; };
+		89B6F62C2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step4TowTruckViewModel.swift; sourceTree = "<group>"; };
 		89B790CA2B5FBB5400993933 /* LastikChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewModel.swift; sourceTree = "<group>"; };
 		89B790CC2B5FBB5C00993933 /* LastikChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikChangeViewController.swift; sourceTree = "<group>"; };
 		89B790CE2B5FC54900993933 /* GetTireControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTireControl.swift; sourceTree = "<group>"; };
@@ -1511,6 +1515,7 @@
 			children = (
 				89B6F6232B66EB2100F4C3AB /* step2 */,
 				89B6F6282B66F09E00F4C3AB /* Step3 */,
+				89B6F6292B66F50F00F4C3AB /* Step4 */,
 			);
 			path = Flow3Damage;
 			sourceTree = "<group>";
@@ -1531,6 +1536,15 @@
 				8917F5592B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift */,
 			);
 			path = Step3;
+			sourceTree = "<group>";
+		};
+		89B6F6292B66F50F00F4C3AB /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F62C2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift */,
+				89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */,
+			);
+			path = Step4;
 			sourceTree = "<group>";
 		};
 		89B790C92B5FBB2D00993933 /* LastikChange */ = {
@@ -2240,6 +2254,7 @@
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
+				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
@@ -2308,6 +2323,7 @@
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
+				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,

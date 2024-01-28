@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol Flow3Step3ConfirmVMCrdintrDlgt: AnyObject {
+protocol Flow3Step3ConfirmVMCrdintrDelegate: AnyObject {
     func getBack()
-    func goToLastikConfirmInfo()
+    func goToFlow3Step4TowTruck()
 }
 
 protocol Flow3Step3ConfirmVMDelegate: AnyObject {
@@ -17,23 +17,23 @@ protocol Flow3Step3ConfirmVMDelegate: AnyObject {
 }
 
 protocol Flow3Step3ConfirmViewModelType: AnyObject {
-    var coordinatorDelegate: Flow3Step3ConfirmVMCrdintrDlgt? { get set }
+    var coordinatorDelegate: Flow3Step3ConfirmVMCrdintrDelegate? { get set }
     var delegate: Flow3Step3ConfirmVMDelegate? { get set }
     
     func getBack()
-    func goToLastikConfirmInfo()
+    func goToFlow3Step4TowTruck()
 }
 
 class Flow3Step3ConfirmViewModel: Flow3Step3ConfirmViewModelType {
     
-    weak var coordinatorDelegate: Flow3Step3ConfirmVMCrdintrDlgt?
+    weak var coordinatorDelegate: Flow3Step3ConfirmVMCrdintrDelegate?
     weak var delegate: Flow3Step3ConfirmVMDelegate?
     
     func getBack() {
         coordinatorDelegate?.getBack()
     }
     
-    func goToLastikConfirmInfo() {
-        coordinatorDelegate?.goToLastikConfirmInfo()
+    func goToFlow3Step4TowTruck() {
+        coordinatorDelegate?.goToFlow3Step4TowTruck()
     }
 }

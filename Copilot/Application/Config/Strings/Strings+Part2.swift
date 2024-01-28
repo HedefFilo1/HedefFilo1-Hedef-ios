@@ -56,4 +56,12 @@ extension Strings {
     static var noNo: String {
         return localized(string: "no")
     }
+    
+    static var getWellSoon: String {
+        return localized(string: "getWellSoon")
+    }
+    
+    static var towTruckSendingDescription: String {
+        return localized(string: "towTruckSendingDescription")
+    }
 }
