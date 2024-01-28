@@ -287,7 +287,7 @@ class APIService {
                            district: String,
                            appointmentDate: Date,
                            completion: @escaping (Success?, APIResponseError?) -> Void) {
-        let serverdate = appointmentDate.getServerDate()
+//        let serverdate = appointmentDate.getServerDate()
         let route = "copilot/case"
         let params = [
             "webCategory": "TIRE",
@@ -298,7 +298,7 @@ class APIService {
             "supplierPhone": supplierPhone,
             "city": city,
             "district": district,
-            "appointmentDate": serverdate
+//            "appointmentDate": serverdate
         ] as [String: Any]
         
         let req = APIRequest<Success>(route: route,
