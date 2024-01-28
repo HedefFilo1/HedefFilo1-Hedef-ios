@@ -1,5 +1,5 @@
 //
-//  LastikFromMangerViewController.swift
+//  Flow1Step3TireTypes.swift
 //  Copilot
 //
 //  Created by Jamal on 12/25/23.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikFromMangerViewController: UIViewController {
+class Flow1Step3TireTypesViewController: UIViewController {
     
-    var viewModel: LastikFromMangerViewModelType! {
+    var viewModel: Flow1Step3TireTypesViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -69,6 +69,6 @@ class LastikFromMangerViewController: UIViewController {
     }
 }
 
-extension LastikFromMangerViewController: LastikFromMangerViewModelDelegate {
+extension Flow1Step3TireTypesViewController: Flow1Step3TireTypesViewModelDelegate {
     
 }

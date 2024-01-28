@@ -9,7 +9,7 @@ import Foundation
 
 protocol Flow1Step2NewTireVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToLastikFromManger()
+    func goToFlow1Step3TireTypes()
 }
 
 protocol Flow1Step2NewTireViewModelDelegate: AnyObject {
@@ -34,6 +34,6 @@ class Flow1Step2NewTireViewModel: Flow1Step2NewTireViewModelType {
     }
     
     func lastikFromManger() {
-        coordinatorDelegate?.goToLastikFromManger()
+        coordinatorDelegate?.goToFlow1Step3TireTypes()
     }
 }

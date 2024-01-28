@@ -1,5 +1,5 @@
 //
-//  LastikFromMangerViewModel.swift
+//  Flow1Step3TireTypesViewModel.swift
 //  Copilot
 //
 //  Created by Jamal on 12/25/23.
@@ -7,28 +7,28 @@
 
 import Foundation
 
-protocol LastikFromMangerVMCoordinatorDelegate: AnyObject {
+protocol Flow1Step3TireTypesVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToRequestLastikResult()
 }
 
-protocol LastikFromMangerViewModelDelegate: BaseViewModelDelegate {
+protocol Flow1Step3TireTypesViewModelDelegate: BaseViewModelDelegate {
     
 }
 
-protocol LastikFromMangerViewModelType: AnyObject {
-    var coordinatorDelegate: LastikFromMangerVMCoordinatorDelegate? { get set }
-    var delegate: LastikFromMangerViewModelDelegate? { get set }
+protocol Flow1Step3TireTypesViewModelType: AnyObject {
+    var coordinatorDelegate: Flow1Step3TireTypesVMCoordinatorDelegate? { get set }
+    var delegate: Flow1Step3TireTypesViewModelDelegate? { get set }
     
     func getBack()
     func goToRequestLastikResult()
     func goToRequestNewLastik(tireType: TireSupportType)
 }
 
-class LastikFromMangerViewModel: LastikFromMangerViewModelType {
+class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
     
-    weak var coordinatorDelegate: LastikFromMangerVMCoordinatorDelegate?
-    weak var delegate: LastikFromMangerViewModelDelegate?
+    weak var coordinatorDelegate: Flow1Step3TireTypesVMCoordinatorDelegate?
+    weak var delegate: Flow1Step3TireTypesViewModelDelegate?
     
     func getBack() {
         coordinatorDelegate?.getBack()

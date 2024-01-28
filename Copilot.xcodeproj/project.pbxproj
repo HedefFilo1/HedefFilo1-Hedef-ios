@@ -18,8 +18,8 @@
 		89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */; };
 		89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */; };
 		89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */; };
-		8917F5402B39E52500681AD3 /* LastikFromMangerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* LastikFromMangerViewModel.swift */; };
-		8917F5422B39E52E00681AD3 /* LastikFromMangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */; };
+		8917F5402B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */; };
+		8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */; };
 		8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */; };
 		8917F5472B39EC2900681AD3 /* RequestLastikResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */; };
 		8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5482B39F91A00681AD3 /* CPPointButton.swift */; };
@@ -310,8 +310,8 @@
 		89108A9A2B39C66D00C8F400 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewModel.swift; sourceTree = "<group>"; };
 		89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewController.swift; sourceTree = "<group>"; };
-		8917F53F2B39E52500681AD3 /* LastikFromMangerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikFromMangerViewModel.swift; sourceTree = "<group>"; };
-		8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikFromMangerViewController.swift; sourceTree = "<group>"; };
+		8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewModel.swift; sourceTree = "<group>"; };
+		8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewController.swift; sourceTree = "<group>"; };
 		8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewModel.swift; sourceTree = "<group>"; };
 		8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewController.swift; sourceTree = "<group>"; };
 		8917F5482B39F91A00681AD3 /* CPPointButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPointButton.swift; sourceTree = "<group>"; };
@@ -645,22 +645,13 @@
 			path = popup;
 			sourceTree = "<group>";
 		};
-		89108A9C2B39DF7600C8F400 /* Flow1Step2 */ = {
+		89108A9C2B39DF7600C8F400 /* Step2 */ = {
 			isa = PBXGroup;
 			children = (
 				89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */,
 				89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */,
 			);
-			path = Flow1Step2;
-			sourceTree = "<group>";
-		};
-		8917F53E2B39E50600681AD3 /* LastikFromManger */ = {
-			isa = PBXGroup;
-			children = (
-				8917F53F2B39E52500681AD3 /* LastikFromMangerViewModel.swift */,
-				8917F5412B39E52E00681AD3 /* LastikFromMangerViewController.swift */,
-			);
-			path = LastikFromManger;
+			path = Step2;
 			sourceTree = "<group>";
 		};
 		8917F5432B39EC0300681AD3 /* RequestLastikResult */ = {
@@ -1058,7 +1049,8 @@
 		894632DE2B66B85100D8F301 /* Flow1NewTire */ = {
 			isa = PBXGroup;
 			children = (
-				89108A9C2B39DF7600C8F400 /* Flow1Step2 */,
+				89108A9C2B39DF7600C8F400 /* Step2 */,
+				89B6F6202B66DED600F4C3AB /* Step3 */,
 			);
 			path = Flow1NewTire;
 			sourceTree = "<group>";
@@ -1389,7 +1381,6 @@
 				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
-				8917F53E2B39E50600681AD3 /* LastikFromManger */,
 				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
 				8917F5562B3A04CA00681AD3 /* LastikRandevuConfirmation */,
@@ -1509,6 +1500,15 @@
 				8934D4DE2B0F913500CD0CA7 /* DocumentPopup */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		89B6F6202B66DED600F4C3AB /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */,
+				8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */,
+			);
+			path = Step3;
 			sourceTree = "<group>";
 		};
 		89B790C92B5FBB2D00993933 /* LastikChange */ = {
@@ -2182,7 +2182,7 @@
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
-				8917F5422B39E52E00681AD3 /* LastikFromMangerViewController.swift in Sources */,
+				8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				894CEC812B078F9300D369E9 /* SearchViewController.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
@@ -2311,7 +2311,7 @@
 				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
 				89DF070E2AF0F18A00892B1D /* StandingsViewController.swift in Sources */,
-				8917F5402B39E52500681AD3 /* LastikFromMangerViewModel.swift in Sources */,
+				8917F5402B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift in Sources */,
 				8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,

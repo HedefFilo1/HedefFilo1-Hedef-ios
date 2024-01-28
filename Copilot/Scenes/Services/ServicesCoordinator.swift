@@ -70,14 +70,11 @@ extension ServicesCoordinator {
 
 extension ServicesCoordinator {
     func goToLastikFromManger() {
-        let viewController: LastikFromMangerViewController = storyboard.instantiateViewController()
-        viewController.viewModel = LastikFromMangerViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+       
     }
 }
 
-extension ServicesCoordinator: LastikFromMangerVMCoordinatorDelegate {
+extension ServicesCoordinator {
     func goToRequestLastikResult() {
         let viewController: RequestLastikResultViewController = storyboard.instantiateViewController()
         viewController.viewModel = RequestLastikResultViewModel()
