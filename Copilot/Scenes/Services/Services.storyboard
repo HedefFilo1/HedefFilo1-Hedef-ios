@@ -197,163 +197,6 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="1751.9704433497539"/>
         </scene>
-        <!--RequestLastikResultViewController-->
-        <scene sceneID="LlV-8F-RrV">
-            <objects>
-                <viewController storyboardIdentifier="RequestLastikResultViewController" id="NpC-kY-XVd" userLabel="RequestLastikResultViewController" customClass="RequestLastikResultViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="snN-Bg-fBr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWX-3Q-iNf">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-fW-ZsC">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ol3-qq-FyA">
-                                                <rect key="frame" x="24" y="218" width="345" height="460"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-eC-eg5">
-                                                        <rect key="frame" x="132.66666666666666" y="0.0" width="80" height="80"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock24Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jl0-et-oaG">
-                                                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="40" id="XaW-tU-7lA"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="jtk-YS-Pkw"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" name="lightYellow"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="80" id="Po6-L2-CXy"/>
-                                                            <constraint firstItem="jl0-et-oaG" firstAttribute="centerX" secondItem="Dw8-eC-eg5" secondAttribute="centerX" id="PvE-dY-SSY"/>
-                                                            <constraint firstItem="jl0-et-oaG" firstAttribute="centerY" secondItem="Dw8-eC-eg5" secondAttribute="centerY" id="q0V-so-far"/>
-                                                            <constraint firstAttribute="width" constant="80" id="ujD-Fc-3ms"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Kış Lastiği Talebiniz Alındı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3B-Hv-bGz">
-                                                        <rect key="frame" x="0.0" y="104" width="345" height="20.333333333333329"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talep sonucuna göre tarafınıza bilgi verilecektir" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLK-dy-Xqe">
-                                                        <rect key="frame" x="0.0" y="140.33333333333331" width="345" height="40.666666666666657"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80B-t2-jO9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="340" width="345" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="Byn-YL-i5v"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Taleplere Git">
-                                                            <color key="titleColor" name="theme"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="bFk-ej-JVl"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-Rn-hNp" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="408" width="345" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="Hbw-bO-Pdi"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Anasayfaya Dön">
-                                                            <color key="titleColor" name="theme"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTapHome" destination="NpC-kY-XVd" eventType="touchUpInside" id="PMa-ll-zpy"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="Dw8-eC-eg5" firstAttribute="top" secondItem="Ol3-qq-FyA" secondAttribute="top" id="0go-gF-AR7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="wHH-Rn-hNp" secondAttribute="trailing" id="Cj8-bx-0hc"/>
-                                                    <constraint firstAttribute="bottom" secondItem="wHH-Rn-hNp" secondAttribute="bottom" id="JEh-I3-A9C"/>
-                                                    <constraint firstItem="Dw8-eC-eg5" firstAttribute="centerX" secondItem="Ol3-qq-FyA" secondAttribute="centerX" id="JQ5-ec-OGn"/>
-                                                    <constraint firstItem="80B-t2-jO9" firstAttribute="leading" secondItem="Ol3-qq-FyA" secondAttribute="leading" id="JxB-KU-PIS"/>
-                                                    <constraint firstItem="80B-t2-jO9" firstAttribute="top" secondItem="kLK-dy-Xqe" secondAttribute="bottom" priority="100" constant="159" id="Njf-rc-hSR"/>
-                                                    <constraint firstItem="r3B-Hv-bGz" firstAttribute="leading" secondItem="Ol3-qq-FyA" secondAttribute="leading" id="UB0-MN-d9E"/>
-                                                    <constraint firstItem="wHH-Rn-hNp" firstAttribute="leading" secondItem="Ol3-qq-FyA" secondAttribute="leading" id="UiC-zZ-zTl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="r3B-Hv-bGz" secondAttribute="trailing" id="V63-NN-BpA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="80B-t2-jO9" secondAttribute="trailing" id="WHP-Lz-aDY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="kLK-dy-Xqe" secondAttribute="trailing" id="hcA-Rg-Uoo"/>
-                                                    <constraint firstItem="kLK-dy-Xqe" firstAttribute="top" secondItem="r3B-Hv-bGz" secondAttribute="bottom" constant="16" id="jUa-HT-sLf"/>
-                                                    <constraint firstItem="wHH-Rn-hNp" firstAttribute="top" secondItem="80B-t2-jO9" secondAttribute="bottom" constant="16" id="nbN-1D-VjG"/>
-                                                    <constraint firstItem="r3B-Hv-bGz" firstAttribute="top" secondItem="Dw8-eC-eg5" secondAttribute="bottom" constant="24" id="pQB-SY-4sd"/>
-                                                    <constraint firstItem="kLK-dy-Xqe" firstAttribute="leading" secondItem="Ol3-qq-FyA" secondAttribute="leading" id="tYK-tI-O46"/>
-                                                </constraints>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="m9e-Me-vc4">
-                                                <rect key="frame" x="345" y="24" width="24" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="Sji-IV-l1h"/>
-                                                    <constraint firstAttribute="width" constant="24" id="WB2-5j-hB6"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-vY-s9l">
-                                                <rect key="frame" x="337" y="16" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="Ek0-rH-lsC"/>
-                                                    <constraint firstAttribute="height" constant="40" id="vp5-uf-3Pt"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="didTapClose" destination="NpC-kY-XVd" eventType="touchUpInside" id="R7K-lN-oPl"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="bSG-vY-s9l" firstAttribute="centerY" secondItem="m9e-Me-vc4" secondAttribute="centerY" id="ABQ-Jv-EfY"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ol3-qq-FyA" secondAttribute="bottom" constant="81" id="JOS-HG-qRb"/>
-                                            <constraint firstItem="Ol3-qq-FyA" firstAttribute="leading" secondItem="AAk-fW-ZsC" secondAttribute="leading" constant="24" id="O4u-02-iC4"/>
-                                            <constraint firstItem="Ol3-qq-FyA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AAk-fW-ZsC" secondAttribute="top" constant="12" id="OFp-hY-cG4"/>
-                                            <constraint firstAttribute="trailing" secondItem="m9e-Me-vc4" secondAttribute="trailing" constant="24" id="msN-FN-rbH"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ol3-qq-FyA" secondAttribute="trailing" constant="24" id="ta5-YD-K8v"/>
-                                            <constraint firstItem="m9e-Me-vc4" firstAttribute="top" secondItem="AAk-fW-ZsC" secondAttribute="top" constant="24" id="vMf-PG-8hN"/>
-                                            <constraint firstItem="bSG-vY-s9l" firstAttribute="centerX" secondItem="m9e-Me-vc4" secondAttribute="centerX" id="yJO-FI-ycd"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="AAk-fW-ZsC" firstAttribute="leading" secondItem="uWX-3Q-iNf" secondAttribute="leading" id="5Bd-st-Wxs"/>
-                                    <constraint firstAttribute="bottom" secondItem="AAk-fW-ZsC" secondAttribute="bottom" id="HYV-2H-oi9"/>
-                                    <constraint firstAttribute="trailing" secondItem="AAk-fW-ZsC" secondAttribute="trailing" id="IHl-KN-xEn"/>
-                                    <constraint firstItem="AAk-fW-ZsC" firstAttribute="top" secondItem="uWX-3Q-iNf" secondAttribute="top" id="PSQ-qQ-BsK"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="CLn-U2-uCz"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CLn-U2-uCz" firstAttribute="trailing" secondItem="uWX-3Q-iNf" secondAttribute="trailing" id="Efo-e3-JId"/>
-                            <constraint firstItem="CLn-U2-uCz" firstAttribute="bottom" secondItem="uWX-3Q-iNf" secondAttribute="bottom" id="XDj-Dz-bb7"/>
-                            <constraint firstItem="uWX-3Q-iNf" firstAttribute="top" secondItem="CLn-U2-uCz" secondAttribute="top" id="wyP-0m-nDo"/>
-                            <constraint firstItem="uWX-3Q-iNf" firstAttribute="leading" secondItem="CLn-U2-uCz" secondAttribute="leading" id="x9f-Kp-Quy"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ol3-Tq-SuX"/>
-                    <connections>
-                        <outlet property="clockView" destination="Dw8-eC-eg5" id="woB-2h-mXG"/>
-                        <outlet property="descriptionLabel" destination="kLK-dy-Xqe" id="GSY-MZ-Qr7"/>
-                        <outlet property="homeButton" destination="wHH-Rn-hNp" id="Kms-fV-SRC"/>
-                        <outlet property="requestsButton" destination="80B-t2-jO9" id="oJD-qO-ssA"/>
-                        <outlet property="titleLabel" destination="r3B-Hv-bGz" id="1bp-0Y-jVl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7O7-p9-tDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3292.3664122137402" y="1763.3802816901409"/>
-        </scene>
         <!--LastikRandevuViewController-->
         <scene sceneID="i4J-cY-b5Z">
             <objects>
@@ -426,7 +269,6 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="didTaOneIssue" destination="fdf-hZ-eAv" eventType="touchUpInside" id="5me-5b-7zw"/>
-                                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="zme-jn-w87"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNj-1E-WPo" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
@@ -440,7 +282,6 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="didTaMoreIssues" destination="fdf-hZ-eAv" eventType="touchUpInside" id="Rqj-nw-zV8"/>
-                                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="SRX-Sq-dY4"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -597,7 +438,6 @@
                                                                             <color key="titleColor" name="theme"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="GG7-7J-zOe"/>
                                                                             <action selector="didTapYes" destination="zrG-ae-485" eventType="touchUpInside" id="pO9-1I-1y2"/>
                                                                         </connections>
                                                                     </button>
@@ -612,7 +452,6 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="didTapNo" destination="zrG-ae-485" eventType="touchUpInside" id="Vfw-Na-461"/>
-                                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="eLA-7g-OfK"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -770,7 +609,6 @@
                                                                             <color key="titleColor" name="theme"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="didTapRequests" destination="NpC-kY-XVd" eventType="touchUpInside" id="ohh-WO-8Po"/>
                                                                             <action selector="didTapService" destination="9hs-Hd-Vip" eventType="touchUpInside" id="3ll-4e-W1Q"/>
                                                                         </connections>
                                                                     </button>

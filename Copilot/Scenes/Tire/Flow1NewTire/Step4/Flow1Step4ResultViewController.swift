@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class RequestLastikResultViewController: UIViewController {
+class Flow1Step4ResultViewController: UIViewController {
     
-    var viewModel: RequestLastikResultViewModelType! {
+    var viewModel: Flow1Step4ResultViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -67,6 +67,6 @@ class RequestLastikResultViewController: UIViewController {
     }
 }
 
-extension RequestLastikResultViewController: RequestLastikResultViewModelDelegate {
+extension Flow1Step4ResultViewController: Flow1Step4ResultViewModelDelegate {
     
 }

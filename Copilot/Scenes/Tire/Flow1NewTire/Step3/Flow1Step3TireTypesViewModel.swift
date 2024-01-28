@@ -9,7 +9,7 @@ import Foundation
 
 protocol Flow1Step3TireTypesVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToRequestLastikResult()
+    func goToFlow1Step4Result()
 }
 
 protocol Flow1Step3TireTypesViewModelDelegate: BaseViewModelDelegate {
@@ -21,8 +21,8 @@ protocol Flow1Step3TireTypesViewModelType: AnyObject {
     var delegate: Flow1Step3TireTypesViewModelDelegate? { get set }
     
     func getBack()
-    func goToRequestLastikResult()
-    func goToRequestNewLastik(tireType: TireSupportType)
+    func goToFlow1Step4Result()
+    func requestTire(tireType: TireSupportType)
 }
 
 class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
@@ -34,11 +34,11 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToRequestLastikResult() {
-        coordinatorDelegate?.goToRequestLastikResult()
+    func goToFlow1Step4Result() {
+        coordinatorDelegate?.goToFlow1Step4Result()
     }
     
-    func goToRequestNewLastik(tireType: TireSupportType) {
+    func requestTire(tireType: TireSupportType) {
         Loading.shared.show()
         APIService.createCase(tireType: tireType,
                               towTruck: false,
@@ -54,7 +54,7 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
-                self.goToRequestLastikResult()
+                self.goToFlow1Step4Result()
             }
         }
     }

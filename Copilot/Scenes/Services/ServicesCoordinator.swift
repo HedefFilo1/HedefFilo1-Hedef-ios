@@ -76,14 +76,11 @@ extension ServicesCoordinator {
 
 extension ServicesCoordinator {
     func goToRequestLastikResult() {
-        let viewController: RequestLastikResultViewController = storyboard.instantiateViewController()
-        viewController.viewModel = RequestLastikResultViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+       
     }
 }
 
-extension ServicesCoordinator: RequestLastikResultVMCoordinatorDelegate {
+extension ServicesCoordinator {
     func getBackToHome() {
         navigationController.popToRootViewController(animated: true)
     }

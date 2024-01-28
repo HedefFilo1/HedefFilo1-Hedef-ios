@@ -61,11 +61,11 @@ class Flow1Step3TireTypesViewController: UIViewController {
     }
     
     @IBAction func didTapSummer() {
-        viewModel.goToRequestNewLastik(tireType: TireSupportType.newSummer)
+        viewModel.requestTire(tireType: TireSupportType.newSummer)
     }
     
     @IBAction func didTapWinter() {
-        viewModel.goToRequestNewLastik(tireType: TireSupportType.newWinter)
+        viewModel.requestTire(tireType: TireSupportType.newWinter)
     }
 }
 

@@ -20,8 +20,8 @@
 		89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */; };
 		8917F5402B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */; };
 		8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */; };
-		8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */; };
-		8917F5472B39EC2900681AD3 /* RequestLastikResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */; };
+		8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */; };
+		8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5462B39EC2900681AD3 /* Flow1Step4ResultViewController.swift */; };
 		8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5482B39F91A00681AD3 /* CPPointButton.swift */; };
 		8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8917F54B2B39FBB600681AD3 /* LastikPointsView.xib */; };
 		8917F54E2B39FBBD00681AD3 /* LastikPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F54D2B39FBBD00681AD3 /* LastikPointsView.swift */; };
@@ -312,8 +312,8 @@
 		89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewController.swift; sourceTree = "<group>"; };
 		8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewModel.swift; sourceTree = "<group>"; };
 		8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewController.swift; sourceTree = "<group>"; };
-		8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewModel.swift; sourceTree = "<group>"; };
-		8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLastikResultViewController.swift; sourceTree = "<group>"; };
+		8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step4ResultViewModel.swift; sourceTree = "<group>"; };
+		8917F5462B39EC2900681AD3 /* Flow1Step4ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step4ResultViewController.swift; sourceTree = "<group>"; };
 		8917F5482B39F91A00681AD3 /* CPPointButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPointButton.swift; sourceTree = "<group>"; };
 		8917F54B2B39FBB600681AD3 /* LastikPointsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LastikPointsView.xib; sourceTree = "<group>"; };
 		8917F54D2B39FBBD00681AD3 /* LastikPointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastikPointsView.swift; sourceTree = "<group>"; };
@@ -654,13 +654,13 @@
 			path = Step2;
 			sourceTree = "<group>";
 		};
-		8917F5432B39EC0300681AD3 /* RequestLastikResult */ = {
+		8917F5432B39EC0300681AD3 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
-				8917F5442B39EC2100681AD3 /* RequestLastikResultViewModel.swift */,
-				8917F5462B39EC2900681AD3 /* RequestLastikResultViewController.swift */,
+				8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */,
+				8917F5462B39EC2900681AD3 /* Flow1Step4ResultViewController.swift */,
 			);
-			path = RequestLastikResult;
+			path = Step4;
 			sourceTree = "<group>";
 		};
 		8917F54A2B39FB9B00681AD3 /* LastikPointsView */ = {
@@ -1051,6 +1051,7 @@
 			children = (
 				89108A9C2B39DF7600C8F400 /* Step2 */,
 				89B6F6202B66DED600F4C3AB /* Step3 */,
+				8917F5432B39EC0300681AD3 /* Step4 */,
 			);
 			path = Flow1NewTire;
 			sourceTree = "<group>";
@@ -1381,7 +1382,6 @@
 				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
-				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
 				8917F5562B3A04CA00681AD3 /* LastikRandevuConfirmation */,
 				8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */,
@@ -2140,7 +2140,7 @@
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
-				8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */,
+				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
 				891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
@@ -2247,7 +2247,7 @@
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
-				8917F5472B39EC2900681AD3 /* RequestLastikResultViewController.swift in Sources */,
+				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				897835D12B44A0D400C63AA7 /* CalendarViewModel.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
