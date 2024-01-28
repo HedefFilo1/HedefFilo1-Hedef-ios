@@ -10,6 +10,7 @@ import Foundation
 protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToFlow1Step2NewTire()
+    func goToFlow2Step2TireTypes()
     
 //    func goToRequestNewLastik()
 //    func goToLastikRandevuConfirmation()
@@ -49,10 +50,11 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     }
     
     func goToRequestNewLastik() {
-        if true {
-            coordinatorDelegate?.goToFlow1Step2NewTire()
-            return
-        }
+//        if true {
+////            coordinatorDelegate?.goToFlow1Step2NewTire()
+//            coordinatorDelegate?.goToFlow2Step2TireTypes()
+//            return
+//        }
         
         Loading.shared.show()
         APIService.getTireControl { [weak self] model, error in
@@ -61,7 +63,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
             
             if let model {
                 for item in model where item.available {
-//                    self.coordinatorDelegate?.goToLastikFromManger()
+                    self.coordinatorDelegate?.goToFlow2Step2TireTypes()
                     return
                 }
                 self.coordinatorDelegate?.goToFlow1Step2NewTire()
@@ -106,6 +108,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
             if appointment.recordType == .maintenance {
                 support = .damage
             }
+            print(support)
 //            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
         }
     }

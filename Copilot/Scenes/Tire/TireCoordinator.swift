@@ -40,6 +40,7 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
                            Flow1Step2NewTireVMCoordinatorDelegate,
                            Flow1Step3TireTypesVMCoordinatorDelegate,
                            Flow1Step4ResultVMCoordinatorDelegate {
+    
     func getBackToHome() {
         navigationController.popToRootViewController(animated: true)
     }
@@ -69,6 +70,13 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
     func goToFlow1Step4Result() {
         let viewController: Flow1Step4ResultViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow1Step4ResultViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToFlow2Step2TireTypes() {
+        let viewController: Flow1Step3TireTypesViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow1Step3TireTypesViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

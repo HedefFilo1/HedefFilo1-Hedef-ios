@@ -39,6 +39,7 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
     }
     
     func requestTire(tireType: TireSupportType) {
+        goToFlow1Step4Result()
         Loading.shared.show()
         APIService.createCase(tireType: tireType,
                               towTruck: false,
