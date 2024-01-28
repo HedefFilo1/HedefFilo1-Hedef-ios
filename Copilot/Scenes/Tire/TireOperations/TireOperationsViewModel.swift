@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
+protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToRequestNewLastik()
     func goToLastikRandevuConfirmation()
@@ -16,13 +16,13 @@ protocol LastikOperationsVMCoordinatorDelegate: AnyObject {
     func goToLastikFromManger()
 }
 
-protocol LastikOperationsViewModelDelegate: BaseViewModelDelegate {
+protocol TireOperationsViewModelDelegate: BaseViewModelDelegate {
     func setTire()
 }
 
-protocol LastikOperationsViewModelType: AnyObject {
-    var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate? { get set }
-    var delegate: LastikOperationsViewModelDelegate? { get set }
+protocol TireOperationsViewModelType: AnyObject {
+    var coordinatorDelegate: TireOperationsVMCoordinatorDelegate? { get set }
+    var delegate: TireOperationsViewModelDelegate? { get set }
     var appointment: Case? { get set }
     var tire: Tire? { get set }
     
@@ -34,10 +34,10 @@ protocol LastikOperationsViewModelType: AnyObject {
     func getTire()
 }
 
-class LastikOperationsViewModel: LastikOperationsViewModelType {
+class TireOperationsViewModel: TireOperationsViewModelType {
     
-    weak var coordinatorDelegate: LastikOperationsVMCoordinatorDelegate?
-    weak var delegate: LastikOperationsViewModelDelegate?
+    weak var coordinatorDelegate: TireOperationsVMCoordinatorDelegate?
+    weak var delegate: TireOperationsViewModelDelegate?
     
     var appointment: Case?
     var tire: Tire?

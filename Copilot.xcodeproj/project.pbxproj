@@ -38,8 +38,8 @@
 		891BFB6B2B348BB3009BD793 /* CPGreyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6A2B348BB3009BD793 /* CPGreyButton.swift */; };
 		891BFB6E2B349667009BD793 /* ServiceTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */; };
 		891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */; };
-		891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */; };
-		891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */; };
+		891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB722B34C55B009BD793 /* TireOperationsViewController.swift */; };
+		891BFB752B34C563009BD793 /* TireOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891BFB742B34C563009BD793 /* TireOperationsViewModel.swift */; };
 		891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D1C942ACAB1A500457C17 /* CPButton.swift */; };
 		891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78302B4440BE008FC722 /* CPDateChooseView.swift */; };
 		891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78322B4443CC008FC722 /* CPTimeChooseView.swift */; };
@@ -109,6 +109,8 @@
 		893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF722AFA5A92004E643E /* NewsTabCell.swift */; };
 		893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF742AFA5A97004E643E /* NewsTabCell.xib */; };
 		893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF772AFA5B0B004E643E /* NewsCell.swift */; };
+		894632E02B66B92600D8F301 /* Tire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894632DF2B66B92600D8F301 /* Tire.storyboard */; };
+		894632E22B66B9AC00D8F301 /* TireCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894632E12B66B9AC00D8F301 /* TireCoordinator.swift */; };
 		894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */; };
 		894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894C45302B2789FF004356C8 /* HGSEmptyCell.xib */; };
 		894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC7B2B0660C900D369E9 /* SignupViewController+Validation.swift */; };
@@ -328,8 +330,8 @@
 		891BFB6A2B348BB3009BD793 /* CPGreyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPGreyButton.swift; sourceTree = "<group>"; };
 		891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTabViewController.swift; sourceTree = "<group>"; };
 		891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTabViewModel.swift; sourceTree = "<group>"; };
-		891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewController.swift; sourceTree = "<group>"; };
-		891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationsViewModel.swift; sourceTree = "<group>"; };
+		891BFB722B34C55B009BD793 /* TireOperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireOperationsViewController.swift; sourceTree = "<group>"; };
+		891BFB742B34C563009BD793 /* TireOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireOperationsViewModel.swift; sourceTree = "<group>"; };
 		891D1C942ACAB1A500457C17 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		891D78302B4440BE008FC722 /* CPDateChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDateChooseView.swift; sourceTree = "<group>"; };
 		891D78322B4443CC008FC722 /* CPTimeChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTimeChooseView.swift; sourceTree = "<group>"; };
@@ -399,6 +401,8 @@
 		893EDF722AFA5A92004E643E /* NewsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTabCell.swift; sourceTree = "<group>"; };
 		893EDF742AFA5A97004E643E /* NewsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTabCell.xib; sourceTree = "<group>"; };
 		893EDF772AFA5B0B004E643E /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		894632DF2B66B92600D8F301 /* Tire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tire.storyboard; sourceTree = "<group>"; };
+		894632E12B66B9AC00D8F301 /* TireCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireCoordinator.swift; sourceTree = "<group>"; };
 		894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSEmptyCell.swift; sourceTree = "<group>"; };
 		894C45302B2789FF004356C8 /* HGSEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGSEmptyCell.xib; sourceTree = "<group>"; };
 		894CEC7B2B0660C900D369E9 /* SignupViewController+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController+Validation.swift"; sourceTree = "<group>"; };
@@ -743,14 +747,14 @@
 			path = ServiceTab;
 			sourceTree = "<group>";
 		};
-		891BFB712B34C51B009BD793 /* LastikOperations */ = {
+		891BFB712B34C51B009BD793 /* TireOperations */ = {
 			isa = PBXGroup;
 			children = (
-				891BFB722B34C55B009BD793 /* LastikOperationsViewController.swift */,
-				891BFB742B34C563009BD793 /* LastikOperationsViewModel.swift */,
+				891BFB722B34C55B009BD793 /* TireOperationsViewController.swift */,
+				891BFB742B34C563009BD793 /* TireOperationsViewModel.swift */,
 				89F6A04D2B5849E80052EE15 /* Cell */,
 			);
-			path = LastikOperations;
+			path = TireOperations;
 			sourceTree = "<group>";
 		};
 		891D78342B445BF9008FC722 /* ServiceDetail */ = {
@@ -1038,6 +1042,24 @@
 				893EDF772AFA5B0B004E643E /* NewsCell.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		894632DD2B66B83A00D8F301 /* Tire */ = {
+			isa = PBXGroup;
+			children = (
+				894632DF2B66B92600D8F301 /* Tire.storyboard */,
+				894632E12B66B9AC00D8F301 /* TireCoordinator.swift */,
+				891BFB712B34C51B009BD793 /* TireOperations */,
+				894632DE2B66B85100D8F301 /* Flow1NewTire */,
+			);
+			path = Tire;
+			sourceTree = "<group>";
+		};
+		894632DE2B66B85100D8F301 /* Flow1NewTire */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flow1NewTire;
 			sourceTree = "<group>";
 		};
 		894C452E2B2789ED004356C8 /* Empty */ = {
@@ -1366,7 +1388,6 @@
 				89A908B22B31A6DB00BC7727 /* Services.storyboard */,
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
-				891BFB712B34C51B009BD793 /* LastikOperations */,
 				89108A9C2B39DF7600C8F400 /* NewLastikRequest */,
 				8917F53E2B39E50600681AD3 /* LastikFromManger */,
 				8917F5432B39EC0300681AD3 /* RequestLastikResult */,
@@ -1539,6 +1560,7 @@
 				89B07A4F2AD9351700D3BE80 /* Profile */,
 				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
 				89A908B12B31A6C400BC7727 /* Services */,
+				894632DD2B66B83A00D8F301 /* Tire */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1969,6 +1991,7 @@
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
 				893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */,
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
+				894632E02B66B92600D8F301 /* Tire.storyboard in Resources */,
 				89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */,
 				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
@@ -2118,7 +2141,7 @@
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* RequestLastikResultViewModel.swift in Sources */,
-				891BFB732B34C55B009BD793 /* LastikOperationsViewController.swift in Sources */,
+				891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
@@ -2303,12 +2326,13 @@
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
 				89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* LastikRandevuConfirmationViewController.swift in Sources */,
-				891BFB752B34C563009BD793 /* LastikOperationsViewModel.swift in Sources */,
+				891BFB752B34C563009BD793 /* TireOperationsViewModel.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				8934D4F62B0FA97D00CD0CA7 /* VehicleInfoItemCell.swift in Sources */,
 				896CB3452AD5BD830048025A /* HomeCoordinator.swift in Sources */,
 				894CEC862B0790A400D369E9 /* PastSearchCell.swift in Sources */,
 				896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */,
+				894632E22B66B9AC00D8F301 /* TireCoordinator.swift in Sources */,
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,

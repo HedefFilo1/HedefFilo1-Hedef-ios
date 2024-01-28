@@ -37,15 +37,13 @@ class ServicesCoordinator: Coordinator {
 
 extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
     func goToLastikOperations(appointment: Case?) {
-        let viewController: LastikOperationsViewController = storyboard.instantiateViewController()
-        viewController.viewModel = LastikOperationsViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        viewController.viewModel.appointment = appointment
-        navigationController.pushViewController(viewController, animated: true)
+       let coordinator = TireCoordinator(navigationController: navigationController, delegate: self)
+        addChildCoordinator(coordinator)
+        coordinator.start(appointment: appointment)
     }
 }
 
-extension ServicesCoordinator: LastikOperationsVMCoordinatorDelegate {
+extension ServicesCoordinator: TireOperationsVMCoordinatorDelegate {
     
     func goToRequestNewLastik() {
         let viewController: NewLastikRequestViewController = storyboard.instantiateViewController()
@@ -194,4 +192,11 @@ extension ServicesCoordinator: LastikChangeVMCoordinatorDelegate {
 
 extension ServicesCoordinator: ConfirmedRandevuVMCoordinatorDelegate {
     
+}
+
+extension ServicesCoordinator: TireCoordinatorDelegate {
+    
+    func didFinish(from coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
+    }
 }

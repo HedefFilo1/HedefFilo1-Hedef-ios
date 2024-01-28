@@ -197,101 +197,6 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="1751.9704433497539"/>
         </scene>
-        <!--Lastik Operations View Controller-->
-        <scene sceneID="zUw-CU-fFS">
-            <objects>
-                <viewController storyboardIdentifier="LastikOperationsViewController" id="Wut-2n-xiz" userLabel="Lastik Operations View Controller" customClass="LastikOperationsViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c0V-lk-6xd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-6n-fjZ">
-                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-Xg-XiM">
-                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-AQ-Xy5">
-                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="Xug-Dv-NBL"/>
-                                            <constraint firstAttribute="height" constant="24" id="b4u-dP-MKn"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-gc-U0d">
-                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QDS-MW-o9O"/>
-                                            <constraint firstAttribute="width" constant="40" id="qbB-AI-ZhN"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <connections>
-                                            <action selector="didTapBack" destination="Wut-2n-xiz" eventType="touchUpInside" id="yzF-OI-VLT"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEI-sG-K87">
-                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
-                                        <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-iu-rlS">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="622"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x2O-MX-cao">
-                                                    <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells/>
-                                            </collectionView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="OIi-iu-rlS" firstAttribute="leading" secondItem="ZEI-sG-K87" secondAttribute="leading" id="CGg-3D-0RH"/>
-                                            <constraint firstItem="OIi-iu-rlS" firstAttribute="top" secondItem="ZEI-sG-K87" secondAttribute="top" id="NoO-xU-OZp"/>
-                                            <constraint firstAttribute="bottom" secondItem="OIi-iu-rlS" secondAttribute="bottom" id="W0e-we-2qQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="OIi-iu-rlS" secondAttribute="trailing" id="mo4-tl-TSr"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZEI-sG-K87" secondAttribute="bottom" id="1RY-EM-Sba"/>
-                                    <constraint firstItem="H0Z-Xg-XiM" firstAttribute="top" secondItem="bXS-6n-fjZ" secondAttribute="top" constant="24" id="4yb-iG-SgK"/>
-                                    <constraint firstItem="ZEI-sG-K87" firstAttribute="leading" secondItem="bXS-6n-fjZ" secondAttribute="leading" id="8VF-gb-g3t"/>
-                                    <constraint firstItem="xjX-AQ-Xy5" firstAttribute="centerY" secondItem="H0Z-Xg-XiM" secondAttribute="centerY" id="Fnb-9s-cy3"/>
-                                    <constraint firstItem="4eG-gc-U0d" firstAttribute="centerX" secondItem="xjX-AQ-Xy5" secondAttribute="centerX" id="OJz-Ig-253"/>
-                                    <constraint firstItem="4eG-gc-U0d" firstAttribute="centerY" secondItem="xjX-AQ-Xy5" secondAttribute="centerY" id="Pdx-XH-Py4"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZEI-sG-K87" secondAttribute="trailing" id="Rxx-Zh-vNh"/>
-                                    <constraint firstAttribute="trailing" secondItem="H0Z-Xg-XiM" secondAttribute="trailing" constant="16" id="Vc3-7S-FKi"/>
-                                    <constraint firstItem="ZEI-sG-K87" firstAttribute="top" secondItem="H0Z-Xg-XiM" secondAttribute="bottom" constant="8" id="cFc-51-z0W"/>
-                                    <constraint firstItem="xjX-AQ-Xy5" firstAttribute="leading" secondItem="bXS-6n-fjZ" secondAttribute="leading" constant="24" id="giC-df-H2u"/>
-                                    <constraint firstItem="H0Z-Xg-XiM" firstAttribute="leading" secondItem="bXS-6n-fjZ" secondAttribute="leading" constant="16" id="weW-hj-M3S"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="XVF-ix-aL1"/>
-                        <color key="backgroundColor" name="theme"/>
-                        <constraints>
-                            <constraint firstItem="XVF-ix-aL1" firstAttribute="bottom" secondItem="bXS-6n-fjZ" secondAttribute="bottom" id="Sdy-UQ-cUH"/>
-                            <constraint firstItem="bXS-6n-fjZ" firstAttribute="top" secondItem="XVF-ix-aL1" secondAttribute="top" constant="84" id="q7J-xj-vg9"/>
-                            <constraint firstItem="XVF-ix-aL1" firstAttribute="trailing" secondItem="bXS-6n-fjZ" secondAttribute="trailing" id="xzQ-1s-ZWX"/>
-                            <constraint firstItem="bXS-6n-fjZ" firstAttribute="leading" secondItem="XVF-ix-aL1" secondAttribute="leading" id="zZs-aC-2RJ"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gAP-iO-6RD"/>
-                    <connections>
-                        <outlet property="collectionView" destination="OIi-iu-rlS" id="KLv-S3-c6c"/>
-                        <outlet property="contentView" destination="bXS-6n-fjZ" id="EXR-ob-rGk"/>
-                        <outlet property="titleLabel" destination="H0Z-Xg-XiM" id="3yK-S3-bky"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QkF-Je-L6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="858.75" y="1764.0845070422536"/>
-        </scene>
         <!--NewLastikRequestViewController-->
         <scene sceneID="EHb-Vm-GEG">
             <objects>
@@ -1264,7 +1169,6 @@ talep edebilirsiniz.</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
-                                            <action selector="didTapBack" destination="Wut-2n-xiz" eventType="touchUpInside" id="Mms-IB-tTA"/>
                                             <action selector="didTapBack" destination="3wM-56-mPU" eventType="touchUpInside" id="dMp-lY-FUs"/>
                                         </connections>
                                     </button>
@@ -1339,7 +1243,6 @@ talep edebilirsiniz.</string>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="didTapBack" destination="jyu-ES-ljG" eventType="touchUpInside" id="1Vd-Xp-vrv"/>
-                                    <action selector="didTapBack" destination="Wut-2n-xiz" eventType="touchUpInside" id="dqv-PQ-9Ti"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-mT-tsy">
@@ -1737,7 +1640,6 @@ talep edebilirsiniz.</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
-                                            <action selector="didTapBack" destination="Wut-2n-xiz" eventType="touchUpInside" id="Crx-1K-MZK"/>
                                             <action selector="didTapBack" destination="IMl-P4-4nv" eventType="touchUpInside" id="jim-Q3-m9g"/>
                                         </connections>
                                     </button>

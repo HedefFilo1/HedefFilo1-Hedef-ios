@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikOperationsViewController: UIViewController {
+class TireOperationsViewController: UIViewController {
     
-    var viewModel: LastikOperationsViewModelType! {
+    var viewModel: TireOperationsViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -63,7 +63,7 @@ class LastikOperationsViewController: UIViewController {
     
 }
 
-extension LastikOperationsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension TireOperationsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -113,7 +113,7 @@ extension LastikOperationsViewController: UICollectionViewDataSource, UICollecti
     }
 }
 
-extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOperationButtonsCellDelegate {
+extension TireOperationsViewController: LastikRandevuCellDelegate, LastikOperationButtonsCellDelegate {
     
     func didTapEdit() {
         viewModel.goToServiceDetail()
@@ -132,7 +132,7 @@ extension LastikOperationsViewController: LastikRandevuCellDelegate, LastikOpera
     }
 }
 
-extension LastikOperationsViewController: LastikOperationsViewModelDelegate {
+extension TireOperationsViewController: TireOperationsViewModelDelegate {
     func setTire() {
         collectionView.reloadData()
     }
