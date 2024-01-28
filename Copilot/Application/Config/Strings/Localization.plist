@@ -1318,6 +1318,22 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>No, I don't accept</string>
         </dict>
         
+        <key>yes</key>
+        <dict>
+            <key>tr</key>
+            <string>Evet</string>
+            <key>en</key>
+            <string>Yes</string>
+        </dict>
+        
+        <key>no</key>
+        <dict>
+            <key>tr</key>
+            <string>Hayır</string>
+            <key>en</key>
+            <string>No</string>
+        </dict>
+        
         <key>lastikConfirmInfoText</key>
         <dict>
             <key>tr</key>

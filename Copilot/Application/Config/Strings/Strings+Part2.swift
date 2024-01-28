@@ -48,4 +48,12 @@ extension Strings {
     static var selectTimeToChange: String {
         return localized(string: "selectTimeToChange")
     }
+    
+    static var yes: String {
+        return localized(string: "yes")
+    }
+    
+    static var noNo: String {
+        return localized(string: "no")
+    }
 }

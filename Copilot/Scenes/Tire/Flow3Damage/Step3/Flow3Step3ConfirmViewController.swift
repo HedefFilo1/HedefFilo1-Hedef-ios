@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikRandevuConfirmationViewController: UIViewController {
+class Flow3Step3ConfirmViewController: UIViewController {
     
-    var viewModel: LastikRandevuConfirmationViewModelType! {
+    var viewModel: Flow3Step3ConfirmViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -71,6 +71,6 @@ class LastikRandevuConfirmationViewController: UIViewController {
     }
 }
 
-extension LastikRandevuConfirmationViewController: LastikRandevuConfirmationVMDelegate {
+extension Flow3Step3ConfirmViewController: Flow3Step3ConfirmVMDelegate {
     
 }

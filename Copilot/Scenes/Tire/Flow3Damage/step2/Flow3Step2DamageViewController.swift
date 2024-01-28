@@ -54,8 +54,8 @@ class Flow3Step2DamageViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.tireOperations
         descriptionLabel.text = Strings.lastikRandevuAcceptionText
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        yesButton.setTitle(Strings.yes, for: .normal)
+        noButton.setTitle(Strings.noNo, for: .normal)
     }
     
     @IBAction func didTapBack() {
@@ -63,11 +63,11 @@ class Flow3Step2DamageViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        viewModel.goToLastikConfirmInfo()
+        viewModel.goToFlow3Step3Confirm()
     }
     
     @IBAction func didTapNo() {
-        viewModel.goToLastikConfirmInfo()
+        viewModel.goToFlow3Step3Confirm()
     }
 }
 

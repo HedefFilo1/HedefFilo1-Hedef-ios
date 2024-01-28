@@ -83,17 +83,19 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
     }
 }
 
-
 // FLOW 3
 extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate {
-    
-    func goToLastikConfirmInfo() {
-        //need to remove
-    }
     
     func goToFlow3Step2Damage() {
         let viewController: Flow3Step2DamageViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow3Step2DamageViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToFlow3Step3Confirm() {
+        let viewController: Flow3Step3ConfirmViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow3Step3ConfirmViewModel()
 //        viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
