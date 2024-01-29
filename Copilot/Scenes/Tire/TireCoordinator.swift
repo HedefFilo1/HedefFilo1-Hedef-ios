@@ -44,6 +44,9 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
     
     func getBackToHome() {
         navigationController.popToRootViewController(animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            self.navigationController.tabBarController?.selectedIndex = 2
+        }
     }
     
     func goToRequests() {
@@ -198,7 +201,7 @@ extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
 extension TireCoordinator: ServiceRandevuVMCoordinatorDelegate,
                            ConfirmedRandevuVMCoordinatorDelegate {
     func goToConfirmedRandevu(service: Supplier, date: Date) {
-        let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
+        let controller: ConfirmedRandevuViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         let viewModel = ConfirmedRandevuViewModel()
         viewModel.service = service
         viewModel.date = date

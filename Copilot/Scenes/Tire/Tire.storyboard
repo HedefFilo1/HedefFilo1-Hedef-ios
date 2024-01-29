@@ -742,27 +742,19 @@ talep edebilirsiniz.</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-ph-XzR">
                                                                 <rect key="frame" x="24" y="0.0" width="345" height="400"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOV-Rd-uB4" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="BCX-xT-d2w"/>
-                                                                            <constraint firstAttribute="width" constant="275" id="Im5-5Q-AIn"/>
-                                                                        </constraints>
-                                                                    </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aracınız en yakın servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAT-yp-Ki6">
-                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="40.666666666666657"/>
+                                                                        <rect key="frame" x="0.0" y="48" width="345" height="40.666666666666657"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R98-B8-aD4" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="253.66666666666663" width="345" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="143.66666666666666" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="gWF-Vi-9A4"/>
                                                                         </constraints>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Evet, Onaylıyorum">
+                                                                        <state key="normal" title="Evet">
                                                                             <color key="titleColor" name="theme"/>
                                                                         </state>
                                                                         <connections>
@@ -770,12 +762,12 @@ talep edebilirsiniz.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNR-gi-5Qv" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="329.66666666666674" width="345" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="219.66666666666666" width="345" height="51.999999999999972"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="sgi-LH-C0C"/>
                                                                         </constraints>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Hayır, Onaylamıyorum">
+                                                                        <state key="normal" title="Hayır">
                                                                             <color key="titleColor" name="theme"/>
                                                                         </state>
                                                                         <connections>
@@ -785,10 +777,8 @@ talep edebilirsiniz.</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="dAT-yp-Ki6" firstAttribute="top" secondItem="lOV-Rd-uB4" secondAttribute="bottom" constant="55" id="5Ly-iH-EER"/>
-                                                                    <constraint firstItem="lOV-Rd-uB4" firstAttribute="centerX" secondItem="DqY-ph-XzR" secondAttribute="centerX" id="BcO-Pb-G5i"/>
                                                                     <constraint firstItem="dAT-yp-Ki6" firstAttribute="leading" secondItem="DqY-ph-XzR" secondAttribute="leading" id="G9b-Me-Vxn"/>
-                                                                    <constraint firstItem="lOV-Rd-uB4" firstAttribute="top" secondItem="DqY-ph-XzR" secondAttribute="top" constant="48" id="GbY-Tk-Quq"/>
+                                                                    <constraint firstItem="dAT-yp-Ki6" firstAttribute="top" secondItem="DqY-ph-XzR" secondAttribute="top" constant="48" id="IHC-5b-98q"/>
                                                                     <constraint firstItem="kNR-gi-5Qv" firstAttribute="leading" secondItem="DqY-ph-XzR" secondAttribute="leading" id="KVP-0w-1hk"/>
                                                                     <constraint firstAttribute="trailing" secondItem="R98-B8-aD4" secondAttribute="trailing" id="TAM-GG-eUl"/>
                                                                     <constraint firstAttribute="trailing" secondItem="kNR-gi-5Qv" secondAttribute="trailing" id="TkX-MW-fVm"/>
@@ -857,7 +847,6 @@ talep edebilirsiniz.</string>
                         <outlet property="contentView" destination="CIA-41-McU" id="7Mv-iJ-Hkr"/>
                         <outlet property="descriptionLabel" destination="dAT-yp-Ki6" id="0Cf-8K-dZP"/>
                         <outlet property="noButton" destination="kNR-gi-5Qv" id="FiO-jI-BpG"/>
-                        <outlet property="pointsView" destination="lOV-Rd-uB4" id="Afr-fh-7Lb"/>
                         <outlet property="titleLabel" destination="uW1-ra-rZb" id="X3F-LH-94k"/>
                         <outlet property="yesButton" destination="R98-B8-aD4" id="DFc-gh-tYQ"/>
                     </connections>
@@ -1067,22 +1056,14 @@ talep edebilirsiniz.</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-Mh-cPp">
                                                                 <rect key="frame" x="24" y="0.0" width="345" height="370"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIM-1Y-dcA" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="275" id="K1H-W3-BpC"/>
-                                                                            <constraint firstAttribute="height" constant="55" id="KrQ-NY-42d"/>
-                                                                        </constraints>
-                                                                    </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size en uygun servisler listelenecektir. Lütfen aracınızı listeden seçeceğiniz servise götürünüz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-KE-CZv">
-                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="61"/>
+                                                                        <rect key="frame" x="0.0" y="48" width="345" height="61"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbu-VL-GhW" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="271" width="345" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="191.00000000000003" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="nje-YZ-7Mh"/>
                                                                         </constraints>
@@ -1097,14 +1078,12 @@ talep edebilirsiniz.</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="B0D-KE-CZv" firstAttribute="top" secondItem="MIM-1Y-dcA" secondAttribute="bottom" constant="55" id="1Jz-ca-7MN"/>
                                                                     <constraint firstAttribute="trailing" secondItem="B0D-KE-CZv" secondAttribute="trailing" id="1vk-mb-CgV"/>
                                                                     <constraint firstItem="B0D-KE-CZv" firstAttribute="leading" secondItem="cWy-Mh-cPp" secondAttribute="leading" id="6gB-SD-yrw"/>
-                                                                    <constraint firstItem="MIM-1Y-dcA" firstAttribute="centerX" secondItem="cWy-Mh-cPp" secondAttribute="centerX" id="HbD-Qi-aop"/>
                                                                     <constraint firstItem="Zbu-VL-GhW" firstAttribute="leading" secondItem="cWy-Mh-cPp" secondAttribute="leading" id="NfZ-it-nKh"/>
-                                                                    <constraint firstItem="MIM-1Y-dcA" firstAttribute="top" secondItem="cWy-Mh-cPp" secondAttribute="top" constant="48" id="S97-J4-VR2"/>
+                                                                    <constraint firstItem="B0D-KE-CZv" firstAttribute="top" secondItem="cWy-Mh-cPp" secondAttribute="top" constant="48" id="WS7-tq-NDA"/>
                                                                     <constraint firstAttribute="trailing" secondItem="Zbu-VL-GhW" secondAttribute="trailing" id="gga-gS-3xh"/>
-                                                                    <constraint firstItem="Zbu-VL-GhW" firstAttribute="top" secondItem="B0D-KE-CZv" secondAttribute="bottom" constant="52" id="uYv-nj-t28"/>
+                                                                    <constraint firstItem="Zbu-VL-GhW" firstAttribute="top" secondItem="B0D-KE-CZv" secondAttribute="bottom" constant="82" id="uYv-nj-t28"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1165,7 +1144,6 @@ talep edebilirsiniz.</string>
                     <connections>
                         <outlet property="contentView" destination="85v-X8-bCb" id="DXN-Jy-UPx"/>
                         <outlet property="descriptionLabel" destination="B0D-KE-CZv" id="YFs-jX-wfz"/>
-                        <outlet property="pointsView" destination="MIM-1Y-dcA" id="gfS-nA-Xdh"/>
                         <outlet property="serviceButton" destination="Zbu-VL-GhW" id="ZZ3-2H-0Vu"/>
                         <outlet property="titleLabel" destination="3Ro-yR-aX2" id="LXo-5f-I7L"/>
                     </connections>

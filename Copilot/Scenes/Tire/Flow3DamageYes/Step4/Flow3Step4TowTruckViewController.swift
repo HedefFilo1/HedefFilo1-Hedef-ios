@@ -18,7 +18,6 @@ class Flow3Step4TowTruckViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-//    @IBOutlet weak var pointsView: LastikPointsView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var serviceButton: CPLightButton!

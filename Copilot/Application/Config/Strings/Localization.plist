@@ -1305,17 +1305,17 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>yesAndAccept</key>
         <dict>
             <key>tr</key>
-            <string>Evet, Onaylıyorum</string>
+            <string>Evet</string>
             <key>en</key>
-            <string>Yes I accept</string>
+            <string>Yes</string>
         </dict>
         
         <key>noDontAccept</key>
         <dict>
             <key>tr</key>
-            <string>Hayır, Onaylamıyorum</string>
+            <string>Hayır</string>
             <key>en</key>
-            <string>No, I don't accept</string>
+            <string>No</string>
         </dict>
         
         <key>yes</key>

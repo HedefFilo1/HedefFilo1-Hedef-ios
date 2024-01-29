@@ -244,22 +244,14 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaS-iH-0Wd">
                                                                 <rect key="frame" x="24" y="0.0" width="345" height="400"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibo-Cg-rSZ" customClass="LastikPointsView" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="35" y="48" width="275" height="55"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="jor-yd-eHv"/>
-                                                                            <constraint firstAttribute="width" constant="275" id="s8Y-CT-GzE"/>
-                                                                        </constraints>
-                                                                    </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu adım lastiklerin hava basıncı kaybı veya yarılması sonucu oluşan arızaların tamiri veya benzeri işlemleri kapsar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-8U-2qe">
-                                                                        <rect key="frame" x="0.0" y="158.00000000000003" width="345" height="61"/>
+                                                                        <rect key="frame" x="0.0" y="48" width="345" height="61"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSJ-Yd-TEp" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="274" width="345" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="164.00000000000003" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="0M0-uQ-xLt"/>
                                                                         </constraints>
@@ -272,7 +264,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNj-1E-WPo" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="350" width="345" height="52"/>
+                                                                        <rect key="frame" x="0.0" y="240" width="345" height="52"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="52" id="5fy-OG-PhE"/>
                                                                         </constraints>
@@ -289,14 +281,12 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="RNj-1E-WPo" secondAttribute="trailing" id="1a1-Vs-saL"/>
                                                                     <constraint firstItem="RNj-1E-WPo" firstAttribute="leading" secondItem="YaS-iH-0Wd" secondAttribute="leading" id="2hb-Yg-jj0"/>
-                                                                    <constraint firstItem="ibo-Cg-rSZ" firstAttribute="top" secondItem="YaS-iH-0Wd" secondAttribute="top" constant="48" id="9ru-da-PLS"/>
                                                                     <constraint firstAttribute="trailing" secondItem="qSJ-Yd-TEp" secondAttribute="trailing" id="AKt-Nj-YRw"/>
                                                                     <constraint firstItem="RNj-1E-WPo" firstAttribute="top" secondItem="qSJ-Yd-TEp" secondAttribute="bottom" constant="24" id="Kel-1G-J0R"/>
                                                                     <constraint firstItem="qSJ-Yd-TEp" firstAttribute="leading" secondItem="YaS-iH-0Wd" secondAttribute="leading" id="ZSw-zS-t8o"/>
                                                                     <constraint firstAttribute="trailing" secondItem="AXo-8U-2qe" secondAttribute="trailing" id="bXV-Sf-isd"/>
-                                                                    <constraint firstItem="ibo-Cg-rSZ" firstAttribute="centerX" secondItem="YaS-iH-0Wd" secondAttribute="centerX" id="gnn-UA-d6U"/>
+                                                                    <constraint firstItem="AXo-8U-2qe" firstAttribute="top" secondItem="YaS-iH-0Wd" secondAttribute="top" constant="48" id="hT9-vL-bPP"/>
                                                                     <constraint firstItem="AXo-8U-2qe" firstAttribute="leading" secondItem="YaS-iH-0Wd" secondAttribute="leading" id="kEt-8Y-KgV"/>
-                                                                    <constraint firstItem="AXo-8U-2qe" firstAttribute="top" secondItem="ibo-Cg-rSZ" secondAttribute="bottom" constant="55" id="m9F-Nu-s7A"/>
                                                                     <constraint firstItem="qSJ-Yd-TEp" firstAttribute="top" secondItem="AXo-8U-2qe" secondAttribute="bottom" constant="55" id="xnr-EV-Q3F"/>
                                                                 </constraints>
                                                             </view>

@@ -14,10 +14,11 @@ protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func goToFlow3Step2Damage()
     func goToFlow5Step2TireChange(tireService: Supplier?)
     func goToFlow7Step2SelectService()
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
 //    func goToRequestNewLastik()
 //    func goToLastikRandevuConfirmation()
 //    func goToLastikChange()
-//    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+    
 //    func goToLastikFromManger()
 }
 
@@ -54,11 +55,12 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     
     func goToRequestNewLastik() {
 //        if true {
-////            coordinatorDelegate?.goToFlow1Step2NewTire()
-//            coordinatorDelegate?.goToFlow2Step2TireTypes()
+//            coordinatorDelegate?.goToFlow1Step2NewTire()
+////            coordinatorDelegate?.goToFlow2Step2TireTypes()
 //            return
 //        }
         
+        // we should call Another Api
         Loading.shared.show()
         APIService.getTireControl { [weak self] model, error in
             Loading.shared.hide()
@@ -112,21 +114,24 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                 support = .damage
             }
             print(support)
-//            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
+            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
         }
     }
     
     func goToFlow5Step2TireChange() {
         
         if tire == nil {
-            coordinatorDelegate?.goToFlow7Step2SelectService()
+//            coordinatorDelegate?.goToFlow7Step2SelectService()
         }
         
         #if DEV_DEBUG
 //        coordinatorDelegate?.goToFlow5Step2TireChange(tireService: nil)
         #endif
         
-        guard let tire = tire else { return }
+        guard let tire = tire else {
+            coordinatorDelegate?.goToFlow5Step2TireChange(tireService: nil)
+            return
+        }
         let model = Supplier(id: tire.supplierId,
                              name: tire.supplierName,
                              address: tire.supplierAddress,

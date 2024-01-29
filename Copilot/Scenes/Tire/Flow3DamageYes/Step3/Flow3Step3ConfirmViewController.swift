@@ -18,7 +18,6 @@ class Flow3Step3ConfirmViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var pointsView: LastikPointsView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var yesButton: CPLightButton!
     @IBOutlet weak var noButton: CPLightButton!
@@ -40,7 +39,6 @@ class Flow3Step3ConfirmViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {

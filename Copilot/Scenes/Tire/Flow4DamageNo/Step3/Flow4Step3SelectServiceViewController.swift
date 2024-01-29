@@ -18,7 +18,6 @@ class Flow4Step3SelectServiceViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var pointsView: LastikPointsView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var serviceButton: CPLightButton!
     
@@ -39,7 +38,6 @@ class Flow4Step3SelectServiceViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {
