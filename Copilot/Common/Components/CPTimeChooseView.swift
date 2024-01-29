@@ -257,7 +257,7 @@ class CPTimeChooseView: UIView {
         hourView.align(leading: 0, topAndBottom: 0)
         hourView.align(toView: dotslabel, trailingToLeading: 0)
         hourView.numbers = []
-        for num in 0...17 {
+        for num in 9...17 {
             var item = "\(num)"
             if num < 10 {
                 item = "0\(num)"
