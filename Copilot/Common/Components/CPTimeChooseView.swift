@@ -248,13 +248,14 @@ class CPTimeChooseView: UIView {
     func setup() {
         backgroundColor = .white
         addSubview(dotslabel)
-        dotslabel.align(centerX: 0, centerY: 0)
+        dotslabel.align(width: 24, centerX: 0, centerY: 0)
         dotslabel.apply(.custom(.black, .bold, 20))
         dotslabel.text = ":"
+        dotslabel.textAlignment = .center
         
         addSubview(hourView)
         hourView.align(leading: 0, topAndBottom: 0)
-        hourView.align(toView: dotslabel, trailingToLeading: -12)
+        hourView.align(toView: dotslabel, trailingToLeading: 0)
         hourView.numbers = []
         for num in 0...17 {
             var item = "\(num)"
@@ -266,7 +267,7 @@ class CPTimeChooseView: UIView {
         
         addSubview(minuteView)
         minuteView.align(trailing: 0, topAndBottom: 0)
-        minuteView.align(toView: dotslabel, leadingToTrailing: 12)
+        minuteView.align(toView: dotslabel, leadingToTrailing: 0)
         minuteView.numbers = ["00", "15", "30", "45"]
     }
     
