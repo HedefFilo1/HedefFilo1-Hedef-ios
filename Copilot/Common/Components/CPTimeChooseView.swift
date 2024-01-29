@@ -76,7 +76,7 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
         let button = UIButton()
         button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         addSubview(button)
-        button.align(trailing: 0, width: 54, topAndBottom: 0)
+        button.align(leading: 0, trailing: 0, topAndBottom: 0)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
         addGestureRecognizer(tap)
