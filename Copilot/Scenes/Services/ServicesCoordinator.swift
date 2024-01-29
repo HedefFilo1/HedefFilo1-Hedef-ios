@@ -100,20 +100,20 @@ extension ServicesCoordinator: LastikRandevuVMCoordinatorDelegate {
 extension ServicesCoordinator {
     
     func goToLastikConfirmInfo() {
-        let viewController: LastikConfirmInfoViewController = storyboard.instantiateViewController()
-        viewController.viewModel = LastikConfirmInfoViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+//        let viewController: LastikConfirmInfoViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = LastikConfirmInfoViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
-extension ServicesCoordinator: LastikConfirmInfoVMCoordinatorDelegate {
+extension ServicesCoordinator {
     func goToServices(tireSupportType: TireSupportType) {
-        let viewController: ServicesViewController = storyboard.instantiateViewController()
-        viewController.viewModel = ServicesViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        viewController.viewModel.tireSupportType = tireSupportType
-        navigationController.pushViewController(viewController, animated: true)
+//        let viewController: ServicesViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = ServicesViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        viewController.viewModel.tireSupportType = tireSupportType
+//        navigationController.pushViewController(viewController, animated: true)
     }
 }
 

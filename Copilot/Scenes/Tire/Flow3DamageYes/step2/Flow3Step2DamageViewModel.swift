@@ -10,6 +10,7 @@ import Foundation
 protocol Flow3Step2DamageVMCrdintrDelegate: AnyObject {
     func getBack()
     func goToFlow3Step3Confirm()
+    func goToFlow4Step3SelectService()
 }
 
 protocol Flow3Step2DamageVMDelegate: AnyObject {
@@ -22,6 +23,7 @@ protocol Flow3Step2DamageViewModelType: AnyObject {
     
     func getBack()
     func goToFlow3Step3Confirm()
+    func goToFlow4Step3SelectService()
 }
 
 class Flow3Step2DamageViewModel: Flow3Step2DamageViewModelType {
@@ -35,5 +37,9 @@ class Flow3Step2DamageViewModel: Flow3Step2DamageViewModelType {
     
     func goToFlow3Step3Confirm() {
         coordinatorDelegate?.goToFlow3Step3Confirm()
+    }
+    
+    func goToFlow4Step3SelectService() {
+        coordinatorDelegate?.goToFlow4Step3SelectService()
     }
 }

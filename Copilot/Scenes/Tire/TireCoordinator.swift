@@ -83,10 +83,11 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
     }
 }
 
-// FLOW 3
+// FLOW 3, 4
 extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
                            Flow3Step3ConfirmVMCrdintrDelegate,
-                           Flow3Step4TowTruckVMCoordinatorDelegate {
+                           Flow3Step4TowTruckVMCoordinatorDelegate,
+                           Flow4Step3SelectServiceVMCoordinatorDlgt {
     
     func goToFlow3Step2Damage() {
         let viewController: Flow3Step2DamageViewController = storyboard.instantiateViewController()
@@ -109,6 +110,12 @@ extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
         navigationController.pushViewController(viewController, animated: true)
     }
     
+    func goToFlow4Step3SelectService() {
+        let viewController: Flow4Step3SelectServiceViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow4Step3SelectServiceViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension TireCoordinator: ServicesVMCoordinatorDelegate {

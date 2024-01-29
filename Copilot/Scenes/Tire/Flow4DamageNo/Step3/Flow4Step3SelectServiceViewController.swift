@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikConfirmInfoViewController: UIViewController {
+class Flow4Step3SelectServiceViewController: UIViewController {
     
-    var viewModel: LastikConfirmInfoViewModelType! {
+    var viewModel: Flow4Step3SelectServiceViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -65,6 +65,6 @@ class LastikConfirmInfoViewController: UIViewController {
     }
 }
 
-extension LastikConfirmInfoViewController: LastikConfirmInfoViewModelDelegate {
+extension Flow4Step3SelectServiceViewController: Flow4Step3SelectServiceViewModelDelegate {
     
 }

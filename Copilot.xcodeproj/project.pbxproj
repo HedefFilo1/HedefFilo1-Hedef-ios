@@ -29,8 +29,8 @@
 		8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */; };
 		8917F5582B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5572B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift */; };
 		8917F55A2B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5592B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift */; };
-		8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */; };
-		8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */; };
+		8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55C2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift */; };
+		8917F55F2B3AC89400681AD3 /* Flow4Step3SelectServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F55E2B3AC89400681AD3 /* Flow4Step3SelectServiceViewController.swift */; };
 		891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CA2AF1107300D6F09C /* PointsCell.swift */; };
 		891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B60CB2AF1107300D6F09C /* PointsCell.xib */; };
 		891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */; };
@@ -325,8 +325,8 @@
 		8917F5542B39FEB300681AD3 /* LastikRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuViewModel.swift; sourceTree = "<group>"; };
 		8917F5572B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step3ConfirmViewModel.swift; sourceTree = "<group>"; };
 		8917F5592B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step3ConfirmViewController.swift; sourceTree = "<group>"; };
-		8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewModel.swift; sourceTree = "<group>"; };
-		8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikConfirmInfoViewController.swift; sourceTree = "<group>"; };
+		8917F55C2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow4Step3SelectServiceViewModel.swift; sourceTree = "<group>"; };
+		8917F55E2B3AC89400681AD3 /* Flow4Step3SelectServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow4Step3SelectServiceViewController.swift; sourceTree = "<group>"; };
 		891B60CA2AF1107300D6F09C /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
 		891B60CB2AF1107300D6F09C /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
 		891B60CF2AF1205D00D6F09C /* KMUsedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMUsedViewModel.swift; sourceTree = "<group>"; };
@@ -689,15 +689,6 @@
 			path = LastikRandevu;
 			sourceTree = "<group>";
 		};
-		8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */ = {
-			isa = PBXGroup;
-			children = (
-				8917F55C2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift */,
-				8917F55E2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift */,
-			);
-			path = LastikConfirmInfo;
-			sourceTree = "<group>";
-		};
 		891B60C92AF1105500D6F09C /* Points */ = {
 			isa = PBXGroup;
 			children = (
@@ -1041,7 +1032,8 @@
 				894632E12B66B9AC00D8F301 /* TireCoordinator.swift */,
 				891BFB712B34C51B009BD793 /* TireOperations */,
 				894632DE2B66B85100D8F301 /* Flow1NewTire */,
-				89B6F6222B66EA6B00F4C3AB /* Flow3Damage */,
+				89B6F6222B66EA6B00F4C3AB /* Flow3DamageYes */,
+				89B6F62E2B677BEC00F4C3AB /* Flow4DamageNo */,
 			);
 			path = Tire;
 			sourceTree = "<group>";
@@ -1383,7 +1375,6 @@
 				89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */,
 				891BFB6C2B349653009BD793 /* ServiceTab */,
 				8917F54F2B39FE6200681AD3 /* LastikRandevu */,
-				8917F55B2B3AC86300681AD3 /* LastikConfirmInfo */,
 				89CE07FD2B3AE2CC00C76433 /* Services */,
 				891D78342B445BF9008FC722 /* ServiceDetail */,
 				897835CD2B44A0B800C63AA7 /* Calendar */,
@@ -1510,14 +1501,14 @@
 			path = Step3;
 			sourceTree = "<group>";
 		};
-		89B6F6222B66EA6B00F4C3AB /* Flow3Damage */ = {
+		89B6F6222B66EA6B00F4C3AB /* Flow3DamageYes */ = {
 			isa = PBXGroup;
 			children = (
 				89B6F6232B66EB2100F4C3AB /* step2 */,
 				89B6F6282B66F09E00F4C3AB /* Step3 */,
 				89B6F6292B66F50F00F4C3AB /* Step4 */,
 			);
-			path = Flow3Damage;
+			path = Flow3DamageYes;
 			sourceTree = "<group>";
 		};
 		89B6F6232B66EB2100F4C3AB /* step2 */ = {
@@ -1545,6 +1536,23 @@
 				89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */,
 			);
 			path = Step4;
+			sourceTree = "<group>";
+		};
+		89B6F62E2B677BEC00F4C3AB /* Flow4DamageNo */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F62F2B677C3B00F4C3AB /* Step3 */,
+			);
+			path = Flow4DamageNo;
+			sourceTree = "<group>";
+		};
+		89B6F62F2B677C3B00F4C3AB /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				8917F55C2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift */,
+				8917F55E2B3AC89400681AD3 /* Flow4Step3SelectServiceViewController.swift */,
+			);
+			path = Step3;
 			sourceTree = "<group>";
 		};
 		89B790C92B5FBB2D00993933 /* LastikChange */ = {
@@ -2205,7 +2213,7 @@
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
-				8917F55D2B3AC88C00681AD3 /* LastikConfirmInfoViewModel.swift in Sources */,
+				8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */,
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
@@ -2355,7 +2363,7 @@
 				8917F5552B39FEB300681AD3 /* LastikRandevuViewModel.swift in Sources */,
 				899CF56E2AE18CD5006D85E4 /* APIClient.swift in Sources */,
 				89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */,
-				8917F55F2B3AC89400681AD3 /* LastikConfirmInfoViewController.swift in Sources */,
+				8917F55F2B3AC89400681AD3 /* Flow4Step3SelectServiceViewController.swift in Sources */,
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,

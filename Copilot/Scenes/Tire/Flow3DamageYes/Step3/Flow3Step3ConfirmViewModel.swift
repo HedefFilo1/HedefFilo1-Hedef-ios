@@ -36,4 +36,5 @@ class Flow3Step3ConfirmViewModel: Flow3Step3ConfirmViewModelType {
     func goToFlow3Step4TowTruck() {
         coordinatorDelegate?.goToFlow3Step4TowTruck()
     }
+    
 }

@@ -67,7 +67,7 @@ class Flow3Step2DamageViewController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        viewModel.goToFlow3Step3Confirm()
+        viewModel.goToFlow4Step3SelectService()
     }
 }
 
