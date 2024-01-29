@@ -15,6 +15,7 @@ struct Supplier: Decodable {
     let lat: String?
     let district: String?
     let city: String?
+    let phone: String?
     
     var longitude: Double? {
         return Double(lon ?? "")

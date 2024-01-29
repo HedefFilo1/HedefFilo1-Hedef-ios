@@ -87,7 +87,7 @@ class ServiceRandevuViewController: UIViewController {
         if let service = viewModel.service {
             supplierNameLabel.text = service.name
             addressLabel.text = service.address
-            phoneLabel.text = ""
+            phoneLabel.text =service.phone
         }
         dateLabel.text = viewModel.displayDate
     }

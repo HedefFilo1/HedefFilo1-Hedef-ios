@@ -19,6 +19,7 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var desciptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mapButtonView: UIView!
@@ -56,12 +57,14 @@ class ServiceDetailViewController: UIViewController {
         dateChooseView.delegate = self
         timeChooseView.delegate = self
         statusView.clipsToBounds = true
+        phoneLabel.text = ""
     }
     
     func applyStyle() {
         titleLabel.apply(.blackS18B700)
         desciptionLabel.apply(.greyS14R400)
         nameLabel.apply(.blackS16B700)
+        phoneLabel.apply(.blackS12R400)
         addressLabel.apply(.greyS12R400)
         dateLabel.apply(.greyS12R400)
         mapButtonView.layer.cornerRadius = 10
@@ -136,6 +139,7 @@ class ServiceDetailViewController: UIViewController {
         guard let item = viewModel.service else { return }
         titleLabel.text = item.name
         nameLabel.text = item.name
+        phoneLabel.text = item.phone
         addressLabel.text = item.address
         statusView.isHidden = true
         

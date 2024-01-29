@@ -137,7 +137,8 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                              address: tire.supplierAddress,
                              lon: nil, lat: nil,
                              district: tire.supplierId,
-                             city: nil)
+                             city: nil,
+                             phone: nil)
         coordinatorDelegate?.goToFlow5Step2TireChange(tireService: model)
     }
 }

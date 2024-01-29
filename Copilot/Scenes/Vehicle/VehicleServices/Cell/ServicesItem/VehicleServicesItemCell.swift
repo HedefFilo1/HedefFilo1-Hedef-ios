@@ -17,7 +17,7 @@ class VehicleServicesItemCell: UICollectionViewCell, Reusable {
         didSet {
             nameLabel.text = item?.name
             addressLabel.text = item?.address
-            numberLabel.text = ""
+            numberLabel.text = item?.phone
         }
     }
     
