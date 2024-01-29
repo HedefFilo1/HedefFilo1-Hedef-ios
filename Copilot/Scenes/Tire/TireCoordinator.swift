@@ -114,6 +114,7 @@ extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
         let viewController: Flow4Step3SelectServiceViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow4Step3SelectServiceViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireSupportType = .damage
         navigationController.pushViewController(viewController, animated: true)
     }
 }
@@ -136,6 +137,7 @@ extension TireCoordinator {
         let viewController: Flow4Step3SelectServiceViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow4Step3SelectServiceViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireSupportType = .change
         navigationController.pushViewController(viewController, animated: true)
     }
 }
