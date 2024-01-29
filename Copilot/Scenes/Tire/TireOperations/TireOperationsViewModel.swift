@@ -13,6 +13,7 @@ protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func goToFlow2Step2TireTypes()
     func goToFlow3Step2Damage()
     func goToFlow5Step2TireChange(tireService: Supplier?)
+    func goToFlow7Step2SelectService()
 //    func goToRequestNewLastik()
 //    func goToLastikRandevuConfirmation()
 //    func goToLastikChange()
@@ -116,8 +117,13 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     }
     
     func goToFlow5Step2TireChange() {
+        
+        if tire == nil {
+            coordinatorDelegate?.goToFlow7Step2SelectService()
+        }
+        
         #if DEV_DEBUG
-        coordinatorDelegate?.goToFlow5Step2TireChange(tireService: nil)
+//        coordinatorDelegate?.goToFlow5Step2TireChange(tireService: nil)
         #endif
         
         guard let tire = tire else { return }
