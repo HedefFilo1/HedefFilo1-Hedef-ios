@@ -43,10 +43,8 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
                            Flow1Step4ResultVMCoordinatorDelegate {
     
     func getBackToHome() {
+        self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            self.navigationController.tabBarController?.selectedIndex = 2
-        }
     }
     
     func goToRequests() {
@@ -71,10 +69,11 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToFlow1Step4Result() {
+    func goToFlow1Step4Result(tireType: TireControlType) {
         let viewController: Flow1Step4ResultViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow1Step4ResultViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireType = tireType
         navigationController.pushViewController(viewController, animated: true)
     }
     

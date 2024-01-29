@@ -20,7 +20,7 @@ protocol Flow1Step4ResultViewModelDelegate: AnyObject {
 protocol Flow1Step4ResultViewModelType: AnyObject {
     var coordinatorDelegate: Flow1Step4ResultVMCoordinatorDelegate? { get set }
     var delegate: Flow1Step4ResultViewModelDelegate? { get set }
-    
+    var tireType: TireControlType { get set }
     func getBack()
     func getBackToHome()
     func goToRequests()
@@ -30,6 +30,8 @@ class Flow1Step4ResultViewModel: Flow1Step4ResultViewModelType {
     
     weak var coordinatorDelegate: Flow1Step4ResultVMCoordinatorDelegate?
     weak var delegate: Flow1Step4ResultViewModelDelegate?
+    
+    var tireType: TireControlType = .summer
     
     func getBack() {
         coordinatorDelegate?.getBack()

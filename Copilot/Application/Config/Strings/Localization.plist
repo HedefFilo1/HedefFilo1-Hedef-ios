@@ -1246,6 +1246,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your New Winter Tire Request Has Been Received</string>
         </dict>
         
+        <key>summerTireRequestReceived</key>
+        <dict>
+            <key>tr</key>
+            <string>Yeni Yaz Lastiği Talebiniz Alındı</string>
+            <key>en</key>
+            <string>Your New Summer Tire Request Has Been Received</string>
+        </dict>
+        
         <key>requestLastikResultText</key>
         <dict>
             <key>tr</key>

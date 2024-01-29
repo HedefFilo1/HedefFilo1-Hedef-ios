@@ -48,7 +48,7 @@ class Flow1Step4ResultViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.winterTireRequestReceived
+        titleLabel.text = viewModel.tireType == .winter ? Strings.winterTireRequestReceived: Strings.summerTireRequestReceived
         descriptionLabel.text = Strings.requestLastikResultText
         requestsButton.setTitle(Strings.goToRequests, for: .normal)
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)

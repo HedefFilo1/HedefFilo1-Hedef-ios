@@ -301,6 +301,10 @@ extension Strings {
         return localized(string: "winterTireRequestReceived")
     }
     
+    static var summerTireRequestReceived: String {
+        return localized(string: "summerTireRequestReceived")
+    }
+    
     static var requestLastikResultText: String {
         return localized(string: "requestLastikResultText")
     }

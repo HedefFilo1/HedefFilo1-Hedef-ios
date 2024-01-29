@@ -9,7 +9,7 @@ import Foundation
 
 protocol Flow1Step3TireTypesVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToFlow1Step4Result()
+    func goToFlow1Step4Result(tireType: TireControlType)
 }
 
 protocol Flow1Step3TireTypesViewModelDelegate: BaseViewModelDelegate {
@@ -21,7 +21,6 @@ protocol Flow1Step3TireTypesViewModelType: AnyObject {
     var delegate: Flow1Step3TireTypesViewModelDelegate? { get set }
     
     func getBack()
-    func goToFlow1Step4Result()
     func requestTire(tireType: TireSupportType)
 }
 
@@ -34,11 +33,11 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToFlow1Step4Result() {
-        coordinatorDelegate?.goToFlow1Step4Result()
-    }
-    
     func requestTire(tireType: TireSupportType) {
+        var type = TireControlType.summer
+        if tireType == .newWinter {
+            type = .winter
+        }
         Loading.shared.show()
         APIService.createCase(tireType: tireType,
                               towTruck: false,
@@ -54,7 +53,7 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
-                self.goToFlow1Step4Result()
+                self.coordinatorDelegate?.goToFlow1Step4Result(tireType: type)
             }
         }
     }
