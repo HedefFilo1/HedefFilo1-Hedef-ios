@@ -69,7 +69,8 @@ class CalendarViewController: SheetViewController {
         calendar.appearance.titleWeekendColor = .black
         calendar.appearance.borderRadius = 0.3
         calendar.appearance.selectionColor = .theme
-        calendar.appearance.todayColor = .theme
+        calendar.appearance.todayColor = .white
+        calendar.appearance.titleTodayColor = .theme
         calendar.appearance.caseOptions = .weekdayUsesUpperCase
         calendar.calendarHeaderView.backgroundColor = .lightRed
         calendar.backgroundColor = .white
@@ -101,6 +102,18 @@ extension CalendarViewController: FSCalendarDelegate,
                                   FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         selectedDate = date
+    }
+    
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+        return !isWeekend(date: date)
+    }
+    
+    func isWeekend(date: Date) -> Bool {
+        let components = date.get(.weekday)
+        if components == 1 || components == 7 {
+            return true
+        }
+        return false
     }
 }
 

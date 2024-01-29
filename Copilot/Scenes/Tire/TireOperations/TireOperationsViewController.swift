@@ -28,6 +28,15 @@ class TireOperationsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getTire()
+        
+#if DEV_DEBUG
+                if let coordintor = viewModel.coordinatorDelegate as? TireCoordinator {
+//                    coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: "", district: "", city: "", phone: ""))
+                    coordintor.goToServiceDetail(service: nil, appointment: nil, tireSupportType: .newWinter)
+//                    coordintor.goToLastikOperations(appointment: nil)
+                }
+        
+#endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
