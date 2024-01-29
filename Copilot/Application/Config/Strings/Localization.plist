@@ -1199,11 +1199,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>requestFromMangerText</key>
         <dict>
             <key>tr</key>
-            <string>Dilerseniz Filo Yöneticinizden lastik değişimi
-                talep edebilirsiniz.</string>
+            <string>Dilerseniz Filo Yöneticinizden lastik değişimi talep edebilirsiniz.</string>
             <key>en</key>
-            <string>If you wish, tire change can be requested from your Fleet Manager.
-                you can request.</string>
+            <string>If you wish, tire change can be requested from your Fleet Manager. you can request.</string>
         </dict>
         
         <key>requestFromManger</key>
