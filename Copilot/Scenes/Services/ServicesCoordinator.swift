@@ -57,10 +57,10 @@ extension ServicesCoordinator {
     }
     
     func goToLastikChange() {
-        let viewController: LastikChangeViewController = storyboard.instantiateViewController()
-        viewController.viewModel = LastikChangeViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+//        let viewController: Flow5Step2TireChangeViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = LastikChangeViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
     }
     
     func getBack() {
@@ -175,7 +175,7 @@ extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
     }
 }
 
-extension ServicesCoordinator: LastikChangeVMCoordinatorDelegate {
+extension ServicesCoordinator {
     
 }
 

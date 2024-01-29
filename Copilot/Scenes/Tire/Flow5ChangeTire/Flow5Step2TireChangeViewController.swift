@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class LastikChangeViewController: UIViewController {
+class Flow5Step2TireChangeViewController: UIViewController {
     
-    var viewModel: LastikChangeViewModelType! {
+    var viewModel: Flow5Step2TireChangeViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -68,10 +68,10 @@ class LastikChangeViewController: UIViewController {
     }
     
     @IBAction func didTapMySelf() {
-        viewModel.goToServices()
+        viewModel.goToServiceDetail()
     }
 }
 
-extension LastikChangeViewController: LastikChangeViewModelDelegate {
+extension Flow5Step2TireChangeViewController: Flow5Step2TireChangeViewModelDelegate {
     
 }

@@ -118,6 +118,18 @@ extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
     }
 }
 
+// FLOW 5, 6
+extension TireCoordinator: Flow5Step2TireChangeVMCoordinatorDlgt {
+    
+    func goToFlow5Step2TireChange(tireService: Supplier?) {
+        let viewController: Flow5Step2TireChangeViewController = storyboard.instantiateViewController()
+        viewController.viewModel = Flow5Step2TireChangeViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireService = tireService
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
 extension TireCoordinator: ServicesVMCoordinatorDelegate {
     
     func goToServices(tireSupportType: TireSupportType) {

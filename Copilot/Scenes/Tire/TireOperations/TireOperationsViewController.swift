@@ -128,7 +128,7 @@ extension TireOperationsViewController: LastikRandevuCellDelegate, LastikOperati
     }
     
     func didTapChange() {
-        viewModel.goToLastikChange()
+        viewModel.goToFlow5Step2TireChange()
     }
 }
 

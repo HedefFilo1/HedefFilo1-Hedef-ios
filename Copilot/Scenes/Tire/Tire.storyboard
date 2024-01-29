@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRj-R8-Np1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="551"/>
+            <point key="canvasLocation" x="-277" y="551"/>
         </scene>
         <!--Flow1Step2NewTireViewController-->
         <scene sceneID="9r4-D5-IW6">
@@ -695,10 +695,10 @@ talep edebilirsiniz.</string>
             </objects>
             <point key="canvasLocation" x="-277" y="1251"/>
         </scene>
-        <!--LastikRandevuConfirmationViewController-->
+        <!--Flow3Step3ConfirmViewController-->
         <scene sceneID="XNK-51-SqQ">
             <objects>
-                <viewController storyboardIdentifier="Flow3Step3ConfirmViewController" id="t1R-26-1W4" userLabel="LastikRandevuConfirmationViewController" customClass="Flow3Step3ConfirmViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Flow3Step3ConfirmViewController" id="t1R-26-1W4" userLabel="Flow3Step3ConfirmViewController" customClass="Flow3Step3ConfirmViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ag-Yb-asY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -866,10 +866,10 @@ talep edebilirsiniz.</string>
             </objects>
             <point key="canvasLocation" x="555" y="1251"/>
         </scene>
-        <!--LastikConfirmInfoViewController-->
+        <!--Flow3Step4TowTruckViewController-->
         <scene sceneID="frb-H9-G5j">
             <objects>
-                <viewController storyboardIdentifier="Flow3Step4TowTruckViewController" id="vr3-J2-tOh" userLabel="LastikConfirmInfoViewController" customClass="Flow3Step4TowTruckViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Flow3Step4TowTruckViewController" id="vr3-J2-tOh" userLabel="Flow3Step4TowTruckViewController" customClass="Flow3Step4TowTruckViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HJ1-7P-6aw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1020,10 +1020,10 @@ talep edebilirsiniz.</string>
             </objects>
             <point key="canvasLocation" x="1369" y="1251"/>
         </scene>
-        <!--LastikConfirmInfoViewController-->
+        <!--Flow4Step3SelectServiceViewController-->
         <scene sceneID="pWt-gu-Sg4">
             <objects>
-                <viewController storyboardIdentifier="Flow4Step3SelectServiceViewController" id="9IT-xa-jmt" userLabel="LastikConfirmInfoViewController" customClass="Flow4Step3SelectServiceViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Flow4Step3SelectServiceViewController" id="9IT-xa-jmt" userLabel="Flow4Step3SelectServiceViewController" customClass="Flow4Step3SelectServiceViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aa8-3t-O6g">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1173,6 +1173,145 @@ talep edebilirsiniz.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7H-b5-CdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="555" y="1961"/>
+        </scene>
+        <!--Flow5Step2TireChangeViewController-->
+        <scene sceneID="JgF-KD-RVe">
+            <objects>
+                <viewController storyboardIdentifier="Flow5Step2TireChangeViewController" id="dXz-5f-f2m" userLabel="Flow5Step2TireChangeViewController" customClass="Flow5Step2TireChangeViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vza-xu-shq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myU-ES-tGN">
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastik İşlemleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-nh-i3M">
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-ru-Qxt">
+                                        <rect key="frame" x="24" y="22.666666666666657" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="CCq-JL-10V"/>
+                                            <constraint firstAttribute="width" constant="24" id="bO0-i1-rf8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-Vn-fgl">
+                                        <rect key="frame" x="16" y="14.666666666666657" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="QAO-KU-4wR"/>
+                                            <constraint firstAttribute="height" constant="40" id="sI9-kP-MaI"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack" destination="dXz-5f-f2m" eventType="touchUpInside" id="hJu-qV-oVk"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb3-oF-YJz">
+                                        <rect key="frame" x="0.0" y="53" width="393" height="622"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkV-zh-zsl">
+                                                <rect key="frame" x="24" y="169.66666666666666" width="345" height="282.66666666666674"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu adım mevsim değişimi sebebiyle yalnızca mevcut lastiklerinizin değişimi işlemini içerir." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-na-Lht">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8A-wz-UUU" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120.66666666666663" width="345" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="68" id="hWL-c9-eiR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Hedef Filo Tarafından Saklanan Lastiklerin Montajı ile İlerle">
+                                                            <color key="titleColor" name="theme"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapHeddefolio" destination="dXz-5f-f2m" eventType="touchUpInside" id="YRs-nU-nyz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J4-h8-gD9" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="214.66666666666669" width="345" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="68" id="Tv5-qW-Wm3"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Kendi Götüreceğim Lastiklerin Montajı ile İlerle">
+                                                            <color key="titleColor" name="theme"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapMySelf" destination="dXz-5f-f2m" eventType="touchUpInside" id="szD-OB-HXy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="N8A-wz-UUU" firstAttribute="leading" secondItem="LkV-zh-zsl" secondAttribute="leading" id="1UN-Fs-Rxc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8J4-h8-gD9" secondAttribute="bottom" id="A6v-Sk-huZ"/>
+                                                    <constraint firstItem="BLN-na-Lht" firstAttribute="top" secondItem="LkV-zh-zsl" secondAttribute="top" id="HZi-DK-MaO"/>
+                                                    <constraint firstItem="BLN-na-Lht" firstAttribute="leading" secondItem="LkV-zh-zsl" secondAttribute="leading" id="Ky9-Um-QXc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="N8A-wz-UUU" secondAttribute="trailing" id="Ph2-qR-510"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BLN-na-Lht" secondAttribute="trailing" id="d7K-3T-q5o"/>
+                                                    <constraint firstItem="8J4-h8-gD9" firstAttribute="leading" secondItem="LkV-zh-zsl" secondAttribute="leading" id="fqN-LQ-Jp1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8J4-h8-gD9" secondAttribute="trailing" id="hyF-ev-wxD"/>
+                                                    <constraint firstItem="BLN-na-Lht" firstAttribute="top" secondItem="LkV-zh-zsl" secondAttribute="top" id="jA8-sz-iRJ"/>
+                                                    <constraint firstItem="8J4-h8-gD9" firstAttribute="top" secondItem="N8A-wz-UUU" secondAttribute="bottom" constant="26" id="klP-57-zAP"/>
+                                                    <constraint firstItem="N8A-wz-UUU" firstAttribute="top" secondItem="BLN-na-Lht" secondAttribute="bottom" constant="80" id="tN8-tL-Niu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LkV-zh-zsl" firstAttribute="top" relation="lessThanOrEqual" secondItem="wb3-oF-YJz" secondAttribute="top" priority="100" constant="190" id="3QN-kG-p53"/>
+                                            <constraint firstAttribute="trailing" secondItem="LkV-zh-zsl" secondAttribute="trailing" constant="24" id="7pL-4l-kc0"/>
+                                            <constraint firstItem="LkV-zh-zsl" firstAttribute="centerY" secondItem="wb3-oF-YJz" secondAttribute="centerY" priority="50" id="F1n-ee-fC1"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LkV-zh-zsl" secondAttribute="bottom" constant="70" id="bxG-Lz-pc3"/>
+                                            <constraint firstItem="LkV-zh-zsl" firstAttribute="leading" secondItem="wb3-oF-YJz" secondAttribute="leading" constant="24" id="eRs-c4-hdh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wb3-oF-YJz" secondAttribute="trailing" id="0eT-4r-AFo"/>
+                                    <constraint firstItem="FRa-nh-i3M" firstAttribute="leading" secondItem="myU-ES-tGN" secondAttribute="leading" constant="16" id="8xG-fu-oxe"/>
+                                    <constraint firstAttribute="bottom" secondItem="wb3-oF-YJz" secondAttribute="bottom" id="94c-QA-gBW"/>
+                                    <constraint firstItem="G0d-ru-Qxt" firstAttribute="centerY" secondItem="FRa-nh-i3M" secondAttribute="centerY" id="NmE-tv-AQc"/>
+                                    <constraint firstItem="FRa-nh-i3M" firstAttribute="top" secondItem="myU-ES-tGN" secondAttribute="top" constant="24" id="RSG-2u-dKm"/>
+                                    <constraint firstItem="wb3-oF-YJz" firstAttribute="top" secondItem="FRa-nh-i3M" secondAttribute="bottom" constant="8" id="Rgz-eX-ZH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="FRa-nh-i3M" secondAttribute="trailing" constant="16" id="ahU-fx-gZ2"/>
+                                    <constraint firstItem="G0d-ru-Qxt" firstAttribute="leading" secondItem="myU-ES-tGN" secondAttribute="leading" constant="24" id="icR-L4-kcz"/>
+                                    <constraint firstItem="6dC-Vn-fgl" firstAttribute="centerX" secondItem="G0d-ru-Qxt" secondAttribute="centerX" id="kCY-aW-g0y"/>
+                                    <constraint firstItem="wb3-oF-YJz" firstAttribute="leading" secondItem="myU-ES-tGN" secondAttribute="leading" id="puL-z3-HgT"/>
+                                    <constraint firstItem="6dC-Vn-fgl" firstAttribute="centerY" secondItem="G0d-ru-Qxt" secondAttribute="centerY" id="zaV-64-QCC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R3V-BY-Jjr"/>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="myU-ES-tGN" firstAttribute="leading" secondItem="R3V-BY-Jjr" secondAttribute="leading" id="b4S-ds-1UE"/>
+                            <constraint firstItem="R3V-BY-Jjr" firstAttribute="trailing" secondItem="myU-ES-tGN" secondAttribute="trailing" id="bmI-Yw-0y4"/>
+                            <constraint firstItem="myU-ES-tGN" firstAttribute="top" secondItem="R3V-BY-Jjr" secondAttribute="top" constant="84" id="i3W-GL-8l5"/>
+                            <constraint firstItem="R3V-BY-Jjr" firstAttribute="bottom" secondItem="myU-ES-tGN" secondAttribute="bottom" id="pqc-OF-Ysu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Fxn-QV-34M"/>
+                    <connections>
+                        <outlet property="contentView" destination="myU-ES-tGN" id="kJI-SL-2FT"/>
+                        <outlet property="descriptionLabel" destination="BLN-na-Lht" id="BQC-qh-9Kb"/>
+                        <outlet property="heffolioButton" destination="N8A-wz-UUU" id="WOG-n6-jRM"/>
+                        <outlet property="myselfButton" destination="8J4-h8-gD9" id="rQS-oD-08l"/>
+                        <outlet property="titleLabel" destination="FRa-nh-i3M" id="C30-Us-Hcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3j-v4-Nfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="2704"/>
         </scene>
     </scenes>
     <resources>

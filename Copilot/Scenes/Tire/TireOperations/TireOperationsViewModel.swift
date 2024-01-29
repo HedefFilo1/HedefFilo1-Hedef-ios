@@ -12,7 +12,7 @@ protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func goToFlow1Step2NewTire()
     func goToFlow2Step2TireTypes()
     func goToFlow3Step2Damage()
-    
+    func goToFlow5Step2TireChange(tireService: Supplier?)
 //    func goToRequestNewLastik()
 //    func goToLastikRandevuConfirmation()
 //    func goToLastikChange()
@@ -33,7 +33,8 @@ protocol TireOperationsViewModelType: AnyObject {
     func getBack()
     func goToRequestNewLastik()
     func goToFlow3Step2Damage()
-    func goToLastikChange()
+    func goToFlow5Step2TireChange()
+    
     func goToServiceDetail()
     func getTire()
 }
@@ -114,7 +115,18 @@ class TireOperationsViewModel: TireOperationsViewModelType {
         }
     }
     
-    func goToLastikChange() {
-//        coordinatorDelegate?.goToLastikChange()
+    func goToFlow5Step2TireChange() {
+        #if DEV_DEBUG
+        coordinatorDelegate?.goToFlow5Step2TireChange(tireService: nil)
+        #endif
+        
+        guard let tire = tire else { return }
+        let model = Supplier(id: tire.supplierId,
+                             name: tire.supplierName,
+                             address: tire.supplierAddress,
+                             lon: nil, lat: nil,
+                             district: tire.supplierId,
+                             city: nil)
+        coordinatorDelegate?.goToFlow5Step2TireChange(tireService: model)
     }
 }
