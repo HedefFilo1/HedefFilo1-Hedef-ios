@@ -85,7 +85,8 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
 
 // FLOW 3
 extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
-                           Flow3Step3ConfirmVMCrdintrDelegate{
+                           Flow3Step3ConfirmVMCrdintrDelegate,
+                           Flow3Step4TowTruckVMCoordinatorDelegate {
     
     func goToFlow3Step2Damage() {
         let viewController: Flow3Step2DamageViewController = storyboard.instantiateViewController()
@@ -104,7 +105,74 @@ extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
     func goToFlow3Step4TowTruck() {
         let viewController: Flow3Step4TowTruckViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow3Step4TowTruckViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+}
+
+extension TireCoordinator: ServicesVMCoordinatorDelegate {
+    
+    func goToServices(tireSupportType: TireSupportType) {
+        let viewController: ServicesViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        viewController.viewModel = ServicesViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.tireSupportType = tireSupportType
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
+        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        let viewModel = ServiceFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.services = services
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
+    
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
+        let controller: ServiceDetailViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = ServiceDetailViewModel()
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewModel.appointment = appointment
+        viewModel.service = service
+        viewModel.tireSupportType = tireSupportType
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
+   
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
+        let controller: ServiceRandevuViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = ServiceRandevuViewModel()
+        viewModel.service = service
+        viewModel.date = date
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewModel.tireSupportType = tireSupportType
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        let controller: CalendarViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = CalendarViewModel()
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
+}
+
+extension TireCoordinator: ServiceRandevuVMCoordinatorDelegate,
+                           ConfirmedRandevuVMCoordinatorDelegate {
+    func goToConfirmedRandevu(service: Supplier, date: Date) {
+        let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
+        let viewModel = ConfirmedRandevuViewModel()
+        viewModel.service = service
+        viewModel.date = date
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
 }
