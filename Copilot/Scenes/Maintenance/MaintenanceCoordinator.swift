@@ -42,10 +42,27 @@ extension MaintenanceCoordinator: MaintenanceVMCoordinatorDelegate {
         navigationController.popViewController(animated: true)
     }
     
+    func getBackToHome() {
+        self.navigationController.select(tab: 2)
+        navigationController.popToRootViewController(animated: true)
+    }
+    
     func goToMaintenanceStep2KM() {
         let controller: MaintenanceStep2KMViewController = storyboard.instantiateViewController()
         controller.viewModel = MaintenanceStep2KMViewModel()
-//        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+}
+
+extension MaintenanceCoordinator: MaintenanceStep2KMVMCoordinatorDelegate,
+                                  NotMaintenancePeriodVMCoordinatorDelegate {
+    func goToNotMaintenancePeriod() {
+        let controller: NotMaintenancePeriodViewController = storyboard.instantiateViewController()
+        controller.viewModel = NotMaintenancePeriodViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    
 }

@@ -92,4 +92,20 @@ extension Strings {
     static var enterVehicleMileage: String {
         return localized(string: "enterVehicleMileage")
     }
+    
+    static var accordingToVehiclePeriods: String {
+        return localized(string: "accordingToVehiclePeriods")
+    }
+    
+    static var timeToMaintenance: String {
+        return localized(string: "timeToMaintenance")
+    }
+    
+    static var mileageToBeMaintained: String {
+        return localized(string: "mileageToBeMaintained")
+    }
+    
+    static var kmRemainingForMaintenance: String {
+        return localized(string: "kmRemainingForMaintenance")
+    }
 }

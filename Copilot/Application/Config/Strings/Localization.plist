@@ -1628,44 +1628,44 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter Vehicle Mileage</string>
         </dict>
         
-        <key></key>
+        <key>notMaintenancePeriodDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Maalesef henüz bakım randevusu oluşturamazsınız.</string>
             <key>en</key>
-            <string></string>
+            <string>Unfortunately, you cannot create a maintenance appointment yet.</string>
         </dict>
         
-        <key></key>
+        <key>accordingToVehiclePeriods</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracınızın bakım periyodlarına göre</string>
             <key>en</key>
-            <string></string>
+            <string>According to your vehicle's maintenance periods</string>
         </dict>
         
-        <key></key>
+        <key>timeToMaintenance</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakıma Kalan Süre</string>
             <key>en</key>
-            <string></string>
+            <string>Time to Maintenance</string>
         </dict>
         
-        <key></key>
+        <key>mileageToBeMaintained</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakıma Gireceğin KM</string>
             <key>en</key>
-            <string></string>
+            <string>Mileage to be Maintained</string>
         </dict>
         
-        <key></key>
+        <key>kmRemainingForMaintenance</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakıma Kalan KM</string>
             <key>en</key>
-            <string></string>
+            <string>KM Remaining for Maintenance</string>
         </dict>
         
         <key></key>
