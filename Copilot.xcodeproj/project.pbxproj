@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8907EEEF2B696590004869BE /* Maintenance.storyboard */; };
+		8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */; };
+		8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF42B69662A004869BE /* MaintenanceViewController.swift */; };
+		8907EEF72B696653004869BE /* MaintenanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF62B696653004869BE /* MaintenanceViewModel.swift */; };
+		8907EEFB2B696807004869BE /* MaintenanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF92B696807004869BE /* MaintenanceCell.swift */; };
+		8907EEFC2B696807004869BE /* MaintenanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907EEFA2B696807004869BE /* MaintenanceCell.xib */; };
+		8907EF042B6971BE004869BE /* MaintenanceRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907EF032B6971BE004869BE /* MaintenanceRandevuCell.xib */; };
+		8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */; };
 		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
 		890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD22ACE99BC00F053DA /* SignupViewController.swift */; };
 		890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD42ACEB60D00F053DA /* AttributedText.swift */; };
@@ -304,6 +312,14 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		8907EEEF2B696590004869BE /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maintenance.storyboard; sourceTree = "<group>"; };
+		8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCoordinator.swift; sourceTree = "<group>"; };
+		8907EEF42B69662A004869BE /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
+		8907EEF62B696653004869BE /* MaintenanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewModel.swift; sourceTree = "<group>"; };
+		8907EEF92B696807004869BE /* MaintenanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCell.swift; sourceTree = "<group>"; };
+		8907EEFA2B696807004869BE /* MaintenanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintenanceCell.xib; sourceTree = "<group>"; };
+		8907EF032B6971BE004869BE /* MaintenanceRandevuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaintenanceRandevuCell.xib; sourceTree = "<group>"; };
+		8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuCell.swift; sourceTree = "<group>"; };
 		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		890D7CD22ACE99BC00F053DA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		890D7CD42ACEB60D00F053DA /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
@@ -630,6 +646,53 @@
 				31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8907EEEE2B69656D004869BE /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				8907EEEF2B696590004869BE /* Maintenance.storyboard */,
+				8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */,
+				8907EEF32B696602004869BE /* Step1 */,
+			);
+			path = Maintenance;
+			sourceTree = "<group>";
+		};
+		8907EEF32B696602004869BE /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				8907EEF62B696653004869BE /* MaintenanceViewModel.swift */,
+				8907EEF42B69662A004869BE /* MaintenanceViewController.swift */,
+				8907EEF82B6967E3004869BE /* Cell */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		8907EEF82B6967E3004869BE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8907EEFD2B6970F3004869BE /* Maintenance */,
+				8907EEFE2B69713A004869BE /* MaintenanceAppointment */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8907EEFD2B6970F3004869BE /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				8907EEFA2B696807004869BE /* MaintenanceCell.xib */,
+				8907EEF92B696807004869BE /* MaintenanceCell.swift */,
+			);
+			path = Maintenance;
+			sourceTree = "<group>";
+		};
+		8907EEFE2B69713A004869BE /* MaintenanceAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				8907EF032B6971BE004869BE /* MaintenanceRandevuCell.xib */,
+				8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */,
+			);
+			path = MaintenanceAppointment;
 			sourceTree = "<group>";
 		};
 		890D7CCF2ACE997800F053DA /* Signup */ = {
@@ -1605,6 +1668,7 @@
 				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
 				89A908B12B31A6C400BC7727 /* Services */,
 				894632DD2B66B83A00D8F301 /* Tire */,
+				8907EEEE2B69656D004869BE /* Maintenance */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -2034,6 +2098,7 @@
 				89C686952B0260C900011897 /* AvatarCell.xib in Resources */,
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
 				893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */,
+				8907EF042B6971BE004869BE /* MaintenanceRandevuCell.xib in Resources */,
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
 				894632E02B66B92600D8F301 /* Tire.storyboard in Resources */,
 				89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */,
@@ -2058,6 +2123,7 @@
 				894CEC912B07A68600D369E9 /* SearchHeaderCell.xib in Resources */,
 				894CEC872B0790A400D369E9 /* PastSearchCell.xib in Resources */,
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
+				8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89F6A0582B5868950052EE15 /* LastikOperationButtonsCell.xib in Resources */,
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
@@ -2069,6 +2135,7 @@
 				89E29B5E2B3AE53000CCABAD /* VehicleServicesItemCell.xib in Resources */,
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
+				8907EEFC2B696807004869BE /* MaintenanceCell.xib in Resources */,
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
 				89CE08052B3AE3AC00C76433 /* VehicleServicesSearchCell.xib in Resources */,
@@ -2194,6 +2261,7 @@
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
 				8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */,
+				8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
@@ -2222,6 +2290,7 @@
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
+				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
@@ -2258,6 +2327,7 @@
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
+				8907EEFB2B696807004869BE /* MaintenanceCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
@@ -2267,6 +2337,7 @@
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
+				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
@@ -2368,6 +2439,7 @@
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
 				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,
+				8907EEF72B696653004869BE /* MaintenanceViewModel.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
 				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,

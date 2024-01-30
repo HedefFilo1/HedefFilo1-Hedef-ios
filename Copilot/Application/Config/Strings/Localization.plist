@@ -1572,37 +1572,36 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>The services most suitable for you will be listed. After selecting the service, a tow truck will be directed to your location.</string>
         </dict>
         
-        
-        <key></key>
+        <key>noMaintenanceAppointment</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracınıza ait bakım randevusu bulunmamaktadır. </string>
             <key>en</key>
-            <string></string>
+            <string>There is no maintenance appointment for your vehicle.</string>
         </dict>
         
-        <key></key>
+        <key>maintenanceOperations</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakım İşlemleri</string>
             <key>en</key>
-            <string></string>
+            <string>Maintenance Operations</string>
         </dict>
         
-        <key></key>
+        <key>makeAnAppointment</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aşağıdan randevu oluşturabilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>You can make an appointment below.</string>
         </dict>
         
-        <key></key>
+        <key>createMaintenanceAppointment</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakım Randevusu Al</string>
             <key>en</key>
-            <string></string>
+            <string>Create a Maintenance Appointment</string>
         </dict>
         
         <key></key>

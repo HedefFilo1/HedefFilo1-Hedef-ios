@@ -38,7 +38,7 @@ class ServiceTabViewController: UIViewController {
                 if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
 //                    coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: "", district: "", city: "", phone: ""))
 //                    coordintor.goToServiceDetail(service: nil, appointment: nil, tireSupportType: .newWinter)
-                    coordintor.goToLastikOperations(appointment: nil)
+//                    coordintor.goToLastikOperations(appointment: nil)
                 }
         
 #endif
@@ -80,7 +80,7 @@ class ServiceTabViewController: UIViewController {
     }
     
     @IBAction func didTapCareButton() {
-        
+        viewModel.goToMaintenance()
     }
     
     @IBAction func didTapFaultButton() {

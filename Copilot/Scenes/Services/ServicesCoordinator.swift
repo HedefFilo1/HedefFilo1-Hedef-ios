@@ -36,10 +36,17 @@ class ServicesCoordinator: Coordinator {
 }
 
 extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
+    
     func goToLastikOperations(appointment: Case?) {
        let coordinator = TireCoordinator(navigationController: navigationController, delegate: self)
         addChildCoordinator(coordinator)
         coordinator.start(appointment: appointment)
+    }
+    
+    func goToMiantenance(appointment: Case?) {
+        let coordinator = MaintenanceCoordinator(navigationController: navigationController, delegate: self)
+         addChildCoordinator(coordinator)
+         coordinator.start(appointment: appointment)
     }
 }
 
@@ -183,7 +190,8 @@ extension ServicesCoordinator: ConfirmedRandevuVMCoordinatorDelegate {
     
 }
 
-extension ServicesCoordinator: TireCoordinatorDelegate {
+extension ServicesCoordinator: TireCoordinatorDelegate,
+                               MaintenanceCoordinatorDelegate {
     
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)

@@ -64,4 +64,20 @@ extension Strings {
     static var towTruckSendingDescription: String {
         return localized(string: "towTruckSendingDescription")
     }
+    
+    static var noMaintenanceAppointment: String {
+        return localized(string: "noMaintenanceAppointment")
+    }
+    
+    static var maintenanceOperations: String {
+        return localized(string: "maintenanceOperations")
+    }
+    
+    static var makeAnAppointment: String {
+        return localized(string: "makeAnAppointment")
+    }
+    
+    static var createMaintenanceAppointment: String {
+        return localized(string: "createMaintenanceAppointment")
+    }
 }

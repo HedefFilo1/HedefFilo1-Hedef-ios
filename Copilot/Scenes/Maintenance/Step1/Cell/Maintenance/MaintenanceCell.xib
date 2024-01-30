@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MaintenanceCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="412"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="412"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvm-zl-272">
+                        <rect key="frame" x="24" y="0.0" width="337" height="412"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aracınıza ait bakım randevusu bulunmamaktadır. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xum-Ig-Aqa">
+                                <rect key="frame" x="0.0" y="147.33333333333334" width="337" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aşağıdan randevu oluşturabilirsiniz." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mBE-gT-cNg">
+                                <rect key="frame" x="0.0" y="196" width="337" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGf-am-e0Z" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="291" width="337" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="PHK-Jk-RWn"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Bakım Randevusu Al">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pGf-am-e0Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mBE-gT-cNg" secondAttribute="bottom" constant="10" id="0oq-vL-yi8"/>
+                            <constraint firstItem="xum-Ig-Aqa" firstAttribute="leading" secondItem="Pvm-zl-272" secondAttribute="leading" id="1hE-C9-gBW"/>
+                            <constraint firstAttribute="trailing" secondItem="pGf-am-e0Z" secondAttribute="trailing" id="EF8-63-N3R"/>
+                            <constraint firstItem="pGf-am-e0Z" firstAttribute="leading" secondItem="Pvm-zl-272" secondAttribute="leading" id="ELN-aV-AOY"/>
+                            <constraint firstItem="pGf-am-e0Z" firstAttribute="top" secondItem="mBE-gT-cNg" secondAttribute="bottom" priority="100" constant="133" id="Nlm-BP-Lz6"/>
+                            <constraint firstItem="mBE-gT-cNg" firstAttribute="top" secondItem="xum-Ig-Aqa" secondAttribute="bottom" constant="8" id="UhE-PO-e4F"/>
+                            <constraint firstAttribute="trailing" secondItem="xum-Ig-Aqa" secondAttribute="trailing" id="cVc-9K-XNE"/>
+                            <constraint firstItem="mBE-gT-cNg" firstAttribute="centerY" secondItem="Pvm-zl-272" secondAttribute="centerY" priority="101" id="dDl-42-6kM"/>
+                            <constraint firstItem="mBE-gT-cNg" firstAttribute="leading" secondItem="Pvm-zl-272" secondAttribute="leading" id="jHn-3c-7vW"/>
+                            <constraint firstItem="xum-Ig-Aqa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pvm-zl-272" secondAttribute="top" constant="12" id="uEc-ox-tcY"/>
+                            <constraint firstAttribute="trailing" secondItem="mBE-gT-cNg" secondAttribute="trailing" id="w0X-AJ-meo"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pGf-am-e0Z" secondAttribute="bottom" constant="73" id="wbH-ZK-mOI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Pvm-zl-272" secondAttribute="bottom" id="OkR-kB-ZS6"/>
+                <constraint firstItem="Pvm-zl-272" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Son-6q-9Dq"/>
+                <constraint firstAttribute="trailing" secondItem="Pvm-zl-272" secondAttribute="trailing" constant="24" id="XDF-tr-EOU"/>
+                <constraint firstItem="Pvm-zl-272" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="s1k-Ua-PN6"/>
+            </constraints>
+            <size key="customSize" width="385" height="412"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="mBE-gT-cNg" id="BJi-Rl-61T"/>
+                <outlet property="randevuButton" destination="pGf-am-e0Z" id="g0R-3S-dn0"/>
+                <outlet property="titleLabel" destination="xum-Ig-Aqa" id="Xss-GY-sPU"/>
+            </connections>
+            <point key="canvasLocation" x="156.4885496183206" y="37.323943661971832"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

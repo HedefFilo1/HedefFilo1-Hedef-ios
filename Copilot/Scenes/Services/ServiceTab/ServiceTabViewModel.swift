@@ -9,6 +9,7 @@ import Foundation
 
 protocol ServiceTabViewModelCoordinatorDelegate: AnyObject {
     func goToLastikOperations(appointment: Case?)
+    func goToMiantenance(appointment: Case?)
 }
 
 protocol ServiceTabViewModelDelegate: BaseViewModelDelegate {
@@ -19,8 +20,10 @@ protocol ServiceTabViewModelType: AnyObject {
     var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate? { get set }
     var delegate: ServiceTabViewModelDelegate? { get set }
     var appointment: Case? { get set }
+    var maintenanceAppointment: Case? { get set }
     func goToLastikOperations()
     func getAppointment()
+    func goToMaintenance()
 }
 
 class ServiceTabViewModel: ServiceTabViewModelType {
@@ -29,9 +32,14 @@ class ServiceTabViewModel: ServiceTabViewModelType {
     weak var delegate: ServiceTabViewModelDelegate?
     
     var appointment: Case?
+    var maintenanceAppointment: Case?
     
     func goToLastikOperations() {
         coordinatorDelegate?.goToLastikOperations(appointment: appointment)
+    }
+    
+    func goToMaintenance() {
+        coordinatorDelegate?.goToMiantenance(appointment: maintenanceAppointment)
     }
     
     func getAppointment() {
