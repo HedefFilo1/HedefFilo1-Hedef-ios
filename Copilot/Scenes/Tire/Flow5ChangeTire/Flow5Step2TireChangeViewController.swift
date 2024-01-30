@@ -64,11 +64,11 @@ class Flow5Step2TireChangeViewController: UIViewController {
     }
     
     @IBAction func didTapHeddefolio() {
-        viewModel.goToServices()
+        viewModel.goToServiceDetail()
     }
     
     @IBAction func didTapMySelf() {
-        viewModel.goToServiceDetail()
+        viewModel.goToServices()
     }
 }
 
