@@ -40,6 +40,9 @@ class MaintenanceStep2KMViewController: UIViewController {
         setTexts()
         kmTextField.keyboardType = .numberPad
         continueButton.isEnabled = false
+        kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        kmTextField.addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)
+        kmTextField.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
     }
     
     func applyStyle() {
@@ -62,12 +65,27 @@ class MaintenanceStep2KMViewController: UIViewController {
         continueButton.isEnabled = text
     }
     
+    @objc
+    func editingChanged() {
+        setButtonActivation()
+    }
+    
+    @objc
+    func editingDidBegin() {
+        kmTextField.text = kmTextField.text?.replacingOccurrences(of: " KM", with: "")
+    }
+    
+    @objc
+    func editingDidEnd() {
+        if let text = kmTextField.text {
+            kmTextField.text = "\(text) KM"
+        }
+    }
+    
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
-    
 
-    
     @IBAction func didContinue() {
     
     }
