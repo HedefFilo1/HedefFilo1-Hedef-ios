@@ -1604,6 +1604,38 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Create a Maintenance Appointment</string>
         </dict>
         
+        <key>vehicleMileage</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Kilometresi</string>
+            <key>en</key>
+            <string>Vehicle Mileage</string>
+        </dict>
+        
+        <key>maintenanceKMDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen bakım periyoduna göre randevu hakkınızı sorgulayabilmemiz için aracınızın kilometresini seçiniz.</string>
+            <key>en</key>
+            <string>Please select the mileage of your vehicle so that we can inquire about your appointment right according to the maintenance period.</string>
+        </dict>
+        
+        <key>enterVehicleMileage</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Kilometresi Girin</string>
+            <key>en</key>
+            <string>Enter Vehicle Mileage</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
@@ -1627,6 +1659,71 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string></string>
         </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         
     </dict>
 </plist>

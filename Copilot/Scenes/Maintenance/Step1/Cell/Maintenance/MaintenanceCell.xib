@@ -43,6 +43,9 @@
                                 <state key="normal" title="Bakım Randevusu Al">
                                     <color key="titleColor" name="theme"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapRandevu" destination="gTV-IL-0wX" eventType="touchUpInside" id="lXy-hk-CWY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

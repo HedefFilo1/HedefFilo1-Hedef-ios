@@ -9,6 +9,7 @@ import UIKit
 
 protocol MaintenanceRandevuCellDelegate: AnyObject {
     func didTapEdit()
+    func didTapRandevu()
 }
 
 class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
@@ -79,4 +80,8 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
         delegate?.didTapEdit()
     }
 
+    @IBAction func didTapRandevu() {
+        delegate?.didTapRandevu()
+    }
+    
 }

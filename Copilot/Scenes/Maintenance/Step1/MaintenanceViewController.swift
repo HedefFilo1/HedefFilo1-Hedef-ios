@@ -27,7 +27,6 @@ class MaintenanceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getAppoinment()
         
 #if DEV_DEBUG
         
@@ -116,7 +115,7 @@ extension MaintenanceViewController: UICollectionViewDataSource, UICollectionVie
 extension MaintenanceViewController: MaintenanceCellDelegate,
                                      MaintenanceRandevuCellDelegate {
     func didTapRandevu() {
-        
+        viewModel.goToMaintenanceStep2KM()
     }
     
     func didTapEdit() {

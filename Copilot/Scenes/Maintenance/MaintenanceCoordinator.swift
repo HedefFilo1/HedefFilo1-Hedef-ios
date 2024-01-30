@@ -42,7 +42,10 @@ extension MaintenanceCoordinator: MaintenanceVMCoordinatorDelegate {
         navigationController.popViewController(animated: true)
     }
     
-    func goToFlow1Step2NewMaintenance() {
-
+    func goToMaintenanceStep2KM() {
+        let controller: MaintenanceStep2KMViewController = storyboard.instantiateViewController()
+        controller.viewModel = MaintenanceStep2KMViewModel()
+//        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
 }

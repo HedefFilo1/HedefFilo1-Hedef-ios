@@ -16,6 +16,8 @@
 		8907EEFC2B696807004869BE /* MaintenanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907EEFA2B696807004869BE /* MaintenanceCell.xib */; };
 		8907EF042B6971BE004869BE /* MaintenanceRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907EF032B6971BE004869BE /* MaintenanceRandevuCell.xib */; };
 		8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */; };
+		8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF082B698B1C004869BE /* MaintenanceStep2KMViewController.swift */; };
+		8907EF0B2B698B24004869BE /* MaintenanceStep2KMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF0A2B698B24004869BE /* MaintenanceStep2KMViewModel.swift */; };
 		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
 		890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD22ACE99BC00F053DA /* SignupViewController.swift */; };
 		890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD42ACEB60D00F053DA /* AttributedText.swift */; };
@@ -320,6 +322,8 @@
 		8907EEFA2B696807004869BE /* MaintenanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintenanceCell.xib; sourceTree = "<group>"; };
 		8907EF032B6971BE004869BE /* MaintenanceRandevuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaintenanceRandevuCell.xib; sourceTree = "<group>"; };
 		8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuCell.swift; sourceTree = "<group>"; };
+		8907EF082B698B1C004869BE /* MaintenanceStep2KMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStep2KMViewController.swift; sourceTree = "<group>"; };
+		8907EF0A2B698B24004869BE /* MaintenanceStep2KMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStep2KMViewModel.swift; sourceTree = "<group>"; };
 		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		890D7CD22ACE99BC00F053DA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		890D7CD42ACEB60D00F053DA /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
@@ -654,6 +658,7 @@
 				8907EEEF2B696590004869BE /* Maintenance.storyboard */,
 				8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */,
 				8907EEF32B696602004869BE /* Step1 */,
+				8907EF072B69890F004869BE /* Step2 */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -693,6 +698,15 @@
 				8907EF052B6971CE004869BE /* MaintenanceRandevuCell.swift */,
 			);
 			path = MaintenanceAppointment;
+			sourceTree = "<group>";
+		};
+		8907EF072B69890F004869BE /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				8907EF0A2B698B24004869BE /* MaintenanceStep2KMViewModel.swift */,
+				8907EF082B698B1C004869BE /* MaintenanceStep2KMViewController.swift */,
+			);
+			path = Step2;
 			sourceTree = "<group>";
 		};
 		890D7CCF2ACE997800F053DA /* Signup */ = {
@@ -2264,6 +2278,7 @@
 				8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
+				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
@@ -2302,6 +2317,7 @@
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
 				89CE08032B3AE3A300C76433 /* VehicleServicesSearchCell.swift in Sources */,
 				89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */,
+				8907EF0B2B698B24004869BE /* MaintenanceStep2KMViewModel.swift in Sources */,
 				893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,

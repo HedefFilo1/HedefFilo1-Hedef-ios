@@ -80,4 +80,16 @@ extension Strings {
     static var createMaintenanceAppointment: String {
         return localized(string: "createMaintenanceAppointment")
     }
+    
+    static var vehicleMileage: String {
+        return localized(string: "vehicleMileage")
+    }
+    
+    static var maintenanceKMDescription: String {
+        return localized(string: "maintenanceKMDescription")
+    }
+    
+    static var enterVehicleMileage: String {
+        return localized(string: "enterVehicleMileage")
+    }
 }
