@@ -38,22 +38,28 @@ class ServicesCoordinator: Coordinator {
 extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
     
     func goToLastikOperations(appointment: Case?) {
-       let coordinator = TireCoordinator(navigationController: navigationController, delegate: self)
+        let coordinator = TireCoordinator(navigationController: navigationController, delegate: self)
         addChildCoordinator(coordinator)
         coordinator.start(appointment: appointment)
     }
     
     func goToMiantenance(appointment: Case?) {
         let coordinator = MaintenanceCoordinator(navigationController: navigationController, delegate: self)
-         addChildCoordinator(coordinator)
-         coordinator.start(appointment: appointment)
+        addChildCoordinator(coordinator)
+        coordinator.start(appointment: appointment)
+    }
+    
+    func goToBreakDown() {
+        let coordinator = BreakDownCoordinator(navigationController: navigationController, delegate: self)
+        addChildCoordinator(coordinator)
+        coordinator.start()
     }
 }
 
 extension ServicesCoordinator {
     
     func goToRequestNewLastik() {
-      
+        
     }
     
     func goToLastikRandevu() {
@@ -64,10 +70,10 @@ extension ServicesCoordinator {
     }
     
     func goToLastikChange() {
-//        let viewController: Flow5Step2TireChangeViewController = storyboard.instantiateViewController()
-//        viewController.viewModel = LastikChangeViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
-//        navigationController.pushViewController(viewController, animated: true)
+        //        let viewController: Flow5Step2TireChangeViewController = storyboard.instantiateViewController()
+        //        viewController.viewModel = LastikChangeViewModel()
+        //        viewController.viewModel.coordinatorDelegate = self
+        //        navigationController.pushViewController(viewController, animated: true)
     }
     
     func getBack() {
@@ -77,13 +83,13 @@ extension ServicesCoordinator {
 
 extension ServicesCoordinator {
     func goToLastikFromManger() {
-       
+        
     }
 }
 
 extension ServicesCoordinator {
     func goToRequestLastikResult() {
-       
+        
     }
 }
 
@@ -100,85 +106,85 @@ extension ServicesCoordinator {
 extension ServicesCoordinator: LastikRandevuVMCoordinatorDelegate {
     
     func goToLastikRandevuConfirmation() {
-    
+        
     }
 }
 
 extension ServicesCoordinator {
     
     func goToLastikConfirmInfo() {
-//        let viewController: LastikConfirmInfoViewController = storyboard.instantiateViewController()
-//        viewController.viewModel = LastikConfirmInfoViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
-//        navigationController.pushViewController(viewController, animated: true)
+        //        let viewController: LastikConfirmInfoViewController = storyboard.instantiateViewController()
+        //        viewController.viewModel = LastikConfirmInfoViewModel()
+        //        viewController.viewModel.coordinatorDelegate = self
+        //        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 extension ServicesCoordinator {
     func goToServices(tireSupportType: TireSupportType) {
-//        let viewController: ServicesViewController = storyboard.instantiateViewController()
-//        viewController.viewModel = ServicesViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
-//        viewController.viewModel.tireSupportType = tireSupportType
-//        navigationController.pushViewController(viewController, animated: true)
+        //        let viewController: ServicesViewController = storyboard.instantiateViewController()
+        //        viewController.viewModel = ServicesViewModel()
+        //        viewController.viewModel.coordinatorDelegate = self
+        //        viewController.viewModel.tireSupportType = tireSupportType
+        //        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
-//neeed to remove this block
+// neeed to remove this block
 extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
     
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
-//        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
-//        let viewModel = ServiceFilterViewModel()
-//        controller.viewModel = viewModel
-//        viewModel.services = services
-//        controller.delegate = delegate
-//        navigationController.present(controller, animated: true)
+        //        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        //        let viewModel = ServiceFilterViewModel()
+        //        controller.viewModel = viewModel
+        //        viewModel.services = services
+        //        controller.delegate = delegate
+        //        navigationController.present(controller, animated: true)
     }
     
     func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
-//        let controller: ServiceDetailViewController = storyboard.instantiateViewController()
-//        let viewModel = ServiceDetailViewModel()
-//        controller.viewModel = viewModel
-//        viewModel.coordinatorDelegate = self
-//        viewModel.appointment = appointment
-//        viewModel.service = service
-//        viewModel.tireSupportType = tireSupportType
-//        navigationController.pushViewController(controller, animated: true)
+        //        let controller: ServiceDetailViewController = storyboard.instantiateViewController()
+        //        let viewModel = ServiceDetailViewModel()
+        //        controller.viewModel = viewModel
+        //        viewModel.coordinatorDelegate = self
+        //        viewModel.appointment = appointment
+        //        viewModel.service = service
+        //        viewModel.tireSupportType = tireSupportType
+        //        navigationController.pushViewController(controller, animated: true)
     }
 }
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
-   
+    
     func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
-//        let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
-//        let viewModel = ServiceRandevuViewModel()
-//        viewModel.service = service
-//        viewModel.date = date
-//        controller.viewModel = viewModel
-//        viewModel.coordinatorDelegate = self
-//        viewModel.tireSupportType = tireSupportType
-//        navigationController.pushViewController(controller, animated: true)
+        //        let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
+        //        let viewModel = ServiceRandevuViewModel()
+        //        viewModel.service = service
+        //        viewModel.date = date
+        //        controller.viewModel = viewModel
+        //        viewModel.coordinatorDelegate = self
+        //        viewModel.tireSupportType = tireSupportType
+        //        navigationController.pushViewController(controller, animated: true)
     }
     
     func presentCalendar(delegate: CalendarViewControllerDelegate) {
-//        let controller: CalendarViewController = storyboard.instantiateViewController()
-//        let viewModel = CalendarViewModel()
-//        controller.viewModel = viewModel
-//        controller.delegate = delegate
-//        navigationController.present(controller, animated: true)
+        //        let controller: CalendarViewController = storyboard.instantiateViewController()
+        //        let viewModel = CalendarViewModel()
+        //        controller.viewModel = viewModel
+        //        controller.delegate = delegate
+        //        navigationController.present(controller, animated: true)
     }
 }
 
 extension ServicesCoordinator: ServiceRandevuVMCoordinatorDelegate {
     func goToConfirmedRandevu(service: Supplier, date: Date) {
-//        let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
-//        let viewModel = ConfirmedRandevuViewModel()
-//        viewModel.service = service
-//        viewModel.date = date
-//        controller.viewModel = viewModel
-//        viewModel.coordinatorDelegate = self
-//        navigationController.pushViewController(controller, animated: true)
+        //        let controller: ConfirmedRandevuViewController = storyboard.instantiateViewController()
+        //        let viewModel = ConfirmedRandevuViewModel()
+        //        viewModel.service = service
+        //        viewModel.date = date
+        //        controller.viewModel = viewModel
+        //        viewModel.coordinatorDelegate = self
+        //        navigationController.pushViewController(controller, animated: true)
     }
 }
 
@@ -191,7 +197,8 @@ extension ServicesCoordinator: ConfirmedRandevuVMCoordinatorDelegate {
 }
 
 extension ServicesCoordinator: TireCoordinatorDelegate,
-                               MaintenanceCoordinatorDelegate {
+                               MaintenanceCoordinatorDelegate,
+                               BreakDownCoordinatorDelegate {
     
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)

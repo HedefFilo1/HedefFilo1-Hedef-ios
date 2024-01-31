@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BreakDownCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="342"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="342"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-P1-wfs">
+                        <rect key="frame" x="0.0" y="72.666666666666686" width="401" height="197"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aracın motoru çalışıyor mu?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-ha-wSG">
+                                <rect key="frame" x="0.0" y="0.0" width="401" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2al-DK-PBA" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="76.999999999999986" width="401" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="was-Ve-lJ4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Evet, Çalışıyor">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapYes" destination="gTV-IL-0wX" eventType="touchUpInside" id="fio-QC-JD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M7-QP-sst" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="149" width="401" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="4eD-gj-7gw"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Hayır, Çalışmıyor">
+                                    <color key="titleColor" name="theme"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNo" destination="gTV-IL-0wX" eventType="touchUpInside" id="O8F-5R-lXV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2al-DK-PBA" firstAttribute="leading" secondItem="SUL-P1-wfs" secondAttribute="leading" id="9bi-vI-9pC"/>
+                            <constraint firstItem="cG4-ha-wSG" firstAttribute="leading" secondItem="SUL-P1-wfs" secondAttribute="leading" id="Bp2-6l-Hlk"/>
+                            <constraint firstAttribute="trailing" secondItem="4M7-QP-sst" secondAttribute="trailing" id="Idy-fX-1ej"/>
+                            <constraint firstItem="4M7-QP-sst" firstAttribute="top" secondItem="2al-DK-PBA" secondAttribute="bottom" constant="24" id="V7p-ua-cmp"/>
+                            <constraint firstAttribute="trailing" secondItem="cG4-ha-wSG" secondAttribute="trailing" id="XRj-9T-cl0"/>
+                            <constraint firstAttribute="trailing" secondItem="2al-DK-PBA" secondAttribute="trailing" id="e5H-cq-Qm3"/>
+                            <constraint firstItem="2al-DK-PBA" firstAttribute="top" secondItem="cG4-ha-wSG" secondAttribute="bottom" constant="56" id="eyW-HQ-PDV"/>
+                            <constraint firstItem="cG4-ha-wSG" firstAttribute="top" secondItem="SUL-P1-wfs" secondAttribute="top" id="lhI-x0-cxR"/>
+                            <constraint firstItem="4M7-QP-sst" firstAttribute="leading" secondItem="SUL-P1-wfs" secondAttribute="leading" id="mST-0A-R9p"/>
+                            <constraint firstAttribute="bottom" secondItem="4M7-QP-sst" secondAttribute="bottom" id="x8i-zC-F6x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SUL-P1-wfs" secondAttribute="trailing" id="Asz-Xu-GFM"/>
+                <constraint firstItem="SUL-P1-wfs" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="X8D-g1-2Um"/>
+                <constraint firstItem="SUL-P1-wfs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lJ8-xO-sCK"/>
+            </constraints>
+            <size key="customSize" width="401" height="342"/>
+            <connections>
+                <outlet property="noButton" destination="4M7-QP-sst" id="jqc-Pu-LJN"/>
+                <outlet property="titleLabel" destination="cG4-ha-wSG" id="5nY-BQ-hOz"/>
+                <outlet property="yesButton" destination="2al-DK-PBA" id="g4p-Hd-Det"/>
+            </connections>
+            <point key="canvasLocation" x="168.70229007633588" y="122.53521126760565"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

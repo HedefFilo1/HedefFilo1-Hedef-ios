@@ -316,6 +316,12 @@
 		89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51842B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift */; };
 		89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51862B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift */; };
 		89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51882B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift */; };
+		89FC518E2B6A965900AD37D4 /* BreakDown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */; };
+		89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */; };
+		89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51922B6A96E700AD37D4 /* BreakDownViewController.swift */; };
+		89FC51952B6A96F000AD37D4 /* BreakDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51942B6A96F000AD37D4 /* BreakDownViewModel.swift */; };
+		89FC51992B6A982200AD37D4 /* BreakDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51972B6A982200AD37D4 /* BreakDownCell.swift */; };
+		89FC519A2B6A982200AD37D4 /* BreakDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FC51982B6A982200AD37D4 /* BreakDownCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -633,6 +639,12 @@
 		89FC51842B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuViewController.swift; sourceTree = "<group>"; };
 		89FC51862B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuViewModel.swift; sourceTree = "<group>"; };
 		89FC51882B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceConfirmViewController.swift; sourceTree = "<group>"; };
+		89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakDown.storyboard; sourceTree = "<group>"; };
+		89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownCoordinator.swift; sourceTree = "<group>"; };
+		89FC51922B6A96E700AD37D4 /* BreakDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownViewController.swift; sourceTree = "<group>"; };
+		89FC51942B6A96F000AD37D4 /* BreakDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownViewModel.swift; sourceTree = "<group>"; };
+		89FC51972B6A982200AD37D4 /* BreakDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownCell.swift; sourceTree = "<group>"; };
+		89FC51982B6A982200AD37D4 /* BreakDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreakDownCell.xib; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1713,6 +1725,7 @@
 				89A908B12B31A6C400BC7727 /* Services */,
 				894632DD2B66B83A00D8F301 /* Tire */,
 				8907EEEE2B69656D004869BE /* Maintenance */,
+				89FC518C2B6A963D00AD37D4 /* BreakDown */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -2107,6 +2120,35 @@
 			path = ConfirmRandevu;
 			sourceTree = "<group>";
 		};
+		89FC518C2B6A963D00AD37D4 /* BreakDown */ = {
+			isa = PBXGroup;
+			children = (
+				89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */,
+				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
+				89FC51912B6A96D300AD37D4 /* Step1 */,
+			);
+			path = BreakDown;
+			sourceTree = "<group>";
+		};
+		89FC51912B6A96D300AD37D4 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				89FC51942B6A96F000AD37D4 /* BreakDownViewModel.swift */,
+				89FC51922B6A96E700AD37D4 /* BreakDownViewController.swift */,
+				89FC51962B6A97E500AD37D4 /* Cell */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		89FC51962B6A97E500AD37D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89FC51972B6A982200AD37D4 /* BreakDownCell.swift */,
+				89FC51982B6A982200AD37D4 /* BreakDownCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2170,6 +2212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8934D5162B10FE0900CD0CA7 /* HGSCell.xib in Resources */,
+				89FC518E2B6A965900AD37D4 /* BreakDown.storyboard in Resources */,
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
 				894CEC8C2B07933600D369E9 /* GuideCell.xib in Resources */,
 				89F6A0542B584A860052EE15 /* LastikRandevuCell.xib in Resources */,
@@ -2239,6 +2282,7 @@
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */,
+				89FC519A2B6A982200AD37D4 /* BreakDownCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2333,6 +2377,7 @@
 				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
 				891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
+				89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
@@ -2345,6 +2390,7 @@
 				89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
+				89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
@@ -2418,6 +2464,7 @@
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
+				89FC51952B6A96F000AD37D4 /* BreakDownViewModel.swift in Sources */,
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
@@ -2452,6 +2499,7 @@
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				897835D12B44A0D400C63AA7 /* CalendarViewModel.swift in Sources */,
+				89FC51992B6A982200AD37D4 /* BreakDownCell.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
 				89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */,

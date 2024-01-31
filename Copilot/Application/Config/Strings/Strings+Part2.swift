@@ -124,4 +124,25 @@ extension Strings {
     static var miantenanceRandevuSuccessMessage: String {
         return localized(string: "miantenanceRandevuSuccessMessage")
     }
+    
+    static var breakDownOperations: String {
+        return localized(string: "breakDownOperations")
+    }
+    
+    static var followTheInstructions: String {
+        return localized(string: "followTheInstructions")
+    }
+    
+    static var yesItWorks: String {
+        return localized(string: "yesItWorks")
+    }
+    
+    static var noItDoesntWork: String {
+        return localized(string: "noItDoesntWork")
+    }
+    
+    static var isVehicleEngineWorking: String {
+        return localized(string: "isVehicleEngineWorking")
+    }
+    
 }

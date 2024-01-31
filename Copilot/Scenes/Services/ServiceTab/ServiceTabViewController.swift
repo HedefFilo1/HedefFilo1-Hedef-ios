@@ -84,7 +84,7 @@ class ServiceTabViewController: UIViewController {
     }
     
     @IBAction func didTapFaultButton() {
-        
+        viewModel.goToBreakDown()
     }
     
     @IBAction func didTapLastikButton() {

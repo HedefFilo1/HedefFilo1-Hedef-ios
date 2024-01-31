@@ -1708,6 +1708,86 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your Tire Change Randevu Request has been Successfully Received.</string>
         </dict>
         
+        <key>breakDownOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Arıza İşlemleri</string>
+            <key>en</key>
+            <string>BreakDown Operations</string>
+        </dict>
+        
+        <key>followTheInstructions</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen size yardımcı olabilmemiz için aşağıdaki soruları cevaplayın.</string>
+            <key>en</key>
+            <string>Please answer the questions below so we can assist you.</string>
+        </dict>
+        
+        <key>yesItWorks</key>
+        <dict>
+            <key>tr</key>
+            <string>Evet, Çalışıyor</string>
+            <key>en</key>
+            <string>Yes it works</string>
+        </dict>
+        
+        <key>noItDoesntWork</key>
+        <dict>
+            <key>tr</key>
+            <string>Hayır, Çalışmıyor</string>
+            <key>en</key>
+            <string>No, It Doesn't Work</string>
+        </dict>
+        
+        <key>isVehicleEngineWorking</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracın motoru çalışıyor mu?</string>
+            <key>en</key>
+            <string>Is the vehicle's engine Working?</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
