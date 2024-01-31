@@ -112,4 +112,8 @@ extension Strings {
     static var maintenanceServicesDescription: String {
         return localized(string: "maintenanceServicesDescription")
     }
+    
+    static var maintenanceSelectTime: String {
+        return localized(string: "maintenanceSelectTime")
+    }
 }

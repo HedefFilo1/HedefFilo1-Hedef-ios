@@ -480,10 +480,10 @@
             </objects>
             <point key="canvasLocation" x="1482" y="1323"/>
         </scene>
-        <!--ServiceDetailViewController-->
+        <!--MaintenanceServiceDetilViewController-->
         <scene sceneID="6sJ-lf-hbs">
             <objects>
-                <viewController storyboardIdentifier="ServiceDetailViewController" id="HKb-yh-f4e" userLabel="ServiceDetailViewController" customClass="ServiceDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MaintenanceServiceDetailViewController" id="HKb-yh-f4e" userLabel="MaintenanceServiceDetilViewController" customClass="MaintenanceServiceDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Byz-QI-RRO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -312,6 +312,7 @@
 		89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */; };
 		89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */; };
 		89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */; };
+		89FC51812B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51802B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -625,6 +626,7 @@
 		89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewModel.swift; sourceTree = "<group>"; };
 		89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewController.swift; sourceTree = "<group>"; };
 		89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewModel.swift; sourceTree = "<group>"; };
+		89FC51802B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceServiceDetailViewController.swift; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -669,6 +671,7 @@
 				8907EF072B69890F004869BE /* Step2 */,
 				8907EF0C2B6995CB004869BE /* NotMaintenancePeriod */,
 				89FC517A2B6A39BA00AD37D4 /* Services */,
+				89FC517F2B6A5B2F00AD37D4 /* ServiceDetail */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -2071,6 +2074,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		89FC517F2B6A5B2F00AD37D4 /* ServiceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				89FC51802B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift */,
+			);
+			path = ServiceDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2509,6 +2520,7 @@
 				896CB3552AD5D46D0048025A /* VehicleInfoCell.swift in Sources */,
 				89A908BA2B31A70B00BC7727 /* VehicleServicesViewModel.swift in Sources */,
 				8907EF102B6996A2004869BE /* NotMaintenancePeriodViewController.swift in Sources */,
+				89FC51812B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift in Sources */,
 				89DF071E2AF0F8B900892B1D /* PointsView.swift in Sources */,
 				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,

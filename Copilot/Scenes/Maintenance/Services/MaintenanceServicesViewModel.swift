@@ -24,6 +24,10 @@ protocol MaintenanceServicesViewModelType: ServicesViewModelType {
 }
 
 class MaintenanceServicesViewModel: ServicesViewModel {
-    weak var coordinatorDelegate: MaintenanceServicesVMCoordinatorDelegate?
-    weak var delegate: MaintenanceServicesViewModelDelegate?
+//    weak var coordinatorDelegate: MaintenanceServicesVMCoordinatorDelegate?
+//    weak var delegate: MaintenanceServicesViewModelDelegate?
+    
+//    func goToServiceDetail(service: Supplier) {
+//        coordinatorDelegate?.goToServiceDetail(service: service, appointment: nil, tireSupportType: tireSupportType)
+//    }
 }
