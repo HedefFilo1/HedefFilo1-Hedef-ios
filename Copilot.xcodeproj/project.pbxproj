@@ -1123,8 +1123,8 @@
 				894632E12B66B9AC00D8F301 /* TireCoordinator.swift */,
 				891BFB712B34C51B009BD793 /* TireOperations */,
 				894632DE2B66B85100D8F301 /* Flow1NewTire */,
-				89B6F6222B66EA6B00F4C3AB /* Flow3DamageYes */,
-				89B6F62E2B677BEC00F4C3AB /* Flow4DamageNo */,
+				89B6F6222B66EA6B00F4C3AB /* Flow3DamageNo */,
+				89B6F62E2B677BEC00F4C3AB /* Flow4DamageYes */,
 				89B6F6302B677FC100F4C3AB /* Flow5ChangeTire */,
 			);
 			path = Tire;
@@ -1592,14 +1592,14 @@
 			path = Step3;
 			sourceTree = "<group>";
 		};
-		89B6F6222B66EA6B00F4C3AB /* Flow3DamageYes */ = {
+		89B6F6222B66EA6B00F4C3AB /* Flow3DamageNo */ = {
 			isa = PBXGroup;
 			children = (
 				89B6F6232B66EB2100F4C3AB /* step2 */,
 				89B6F6282B66F09E00F4C3AB /* Step3 */,
 				89B6F6292B66F50F00F4C3AB /* Step4 */,
 			);
-			path = Flow3DamageYes;
+			path = Flow3DamageNo;
 			sourceTree = "<group>";
 		};
 		89B6F6232B66EB2100F4C3AB /* step2 */ = {
@@ -1629,12 +1629,12 @@
 			path = Step4;
 			sourceTree = "<group>";
 		};
-		89B6F62E2B677BEC00F4C3AB /* Flow4DamageNo */ = {
+		89B6F62E2B677BEC00F4C3AB /* Flow4DamageYes */ = {
 			isa = PBXGroup;
 			children = (
 				89B6F62F2B677C3B00F4C3AB /* Step3 */,
 			);
-			path = Flow4DamageNo;
+			path = Flow4DamageYes;
 			sourceTree = "<group>";
 		};
 		89B6F62F2B677C3B00F4C3AB /* Step3 */ = {

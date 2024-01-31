@@ -1,16 +1,16 @@
 //
-//  LastikRandevuConfirmationAcceptionViewModel.swift
+//  Flow3Step2DamageViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 12/25/23.
+//  Created by Jamal on 1/28/24.
 //
 
 import Foundation
 import UIKit
 
-class Flow3Step3ConfirmViewController: UIViewController {
+class Flow3Step2DamageViewController: UIViewController {
     
-    var viewModel: Flow3Step3ConfirmViewModelType! {
+    var viewModel: Flow3Step2DamageViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -52,8 +52,8 @@ class Flow3Step3ConfirmViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.tireOperations
         descriptionLabel.text = Strings.lastikRandevuAcceptionText
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        yesButton.setTitle(Strings.yes, for: .normal)
+        noButton.setTitle(Strings.noNo, for: .normal)
     }
     
     @IBAction func didTapBack() {
@@ -61,14 +61,14 @@ class Flow3Step3ConfirmViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        viewModel.goToFlow3Step4TowTruck()
+        viewModel.goToFlow4Step3SelectService()
     }
     
     @IBAction func didTapNo() {
-        viewModel.goToFlow3Step4TowTruck()
+        viewModel.goToFlow3Step3Confirm()
     }
 }
 
-extension Flow3Step3ConfirmViewController: Flow3Step3ConfirmVMDelegate {
+extension Flow3Step2DamageViewController: Flow3Step2DamageVMDelegate {
     
 }
