@@ -1684,20 +1684,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please select a date and time to make a Maintenance appointment.</string>
         </dict>
         
-        <key></key>
+        <key>maintenancePleaseConfirmRandevu</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen Bakım randevu bilgilerinizi onaylayınız.</string>
             <key>en</key>
-            <string></string>
+            <string>Please confirm your Maintenance Randevu information.</string>
+        </dict>
+        
+        <key>miantenanceRandevuSuccessMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lastik Bakım Randevu Talebiniz Başarıyla Alındı.</string>
+            <key>en</key>
+            <string>Your Maintenance Randevu Request has been Successfully Received.</string>
         </dict>
         
         <key></key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lastik Değişim Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
-            <string></string>
+            <string>Your Tire Change Randevu Request has been Successfully Received.</string>
         </dict>
         
         <key></key>

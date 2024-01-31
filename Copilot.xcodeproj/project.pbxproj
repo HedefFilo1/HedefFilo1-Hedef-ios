@@ -313,6 +313,9 @@
 		89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */; };
 		89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */; };
 		89FC51812B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51802B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift */; };
+		89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51842B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift */; };
+		89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51862B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift */; };
+		89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC51882B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -627,6 +630,9 @@
 		89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewController.swift; sourceTree = "<group>"; };
 		89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewModel.swift; sourceTree = "<group>"; };
 		89FC51802B6A5BD900AD37D4 /* MaintenanceServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceServiceDetailViewController.swift; sourceTree = "<group>"; };
+		89FC51842B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuViewController.swift; sourceTree = "<group>"; };
+		89FC51862B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRandevuViewModel.swift; sourceTree = "<group>"; };
+		89FC51882B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceConfirmViewController.swift; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -672,6 +678,8 @@
 				8907EF0C2B6995CB004869BE /* NotMaintenancePeriod */,
 				89FC517A2B6A39BA00AD37D4 /* Services */,
 				89FC517F2B6A5B2F00AD37D4 /* ServiceDetail */,
+				89FC51822B6A6BB700AD37D4 /* Randevu */,
+				89FC51832B6A6BDE00AD37D4 /* ConfirmRandevu */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -2082,6 +2090,23 @@
 			path = ServiceDetail;
 			sourceTree = "<group>";
 		};
+		89FC51822B6A6BB700AD37D4 /* Randevu */ = {
+			isa = PBXGroup;
+			children = (
+				89FC51842B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift */,
+				89FC51862B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift */,
+			);
+			path = Randevu;
+			sourceTree = "<group>";
+		};
+		89FC51832B6A6BDE00AD37D4 /* ConfirmRandevu */ = {
+			isa = PBXGroup;
+			children = (
+				89FC51882B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift */,
+			);
+			path = ConfirmRandevu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2317,6 +2342,7 @@
 				8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */,
 				8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
+				89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
@@ -2349,6 +2375,7 @@
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
+				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
@@ -2454,6 +2481,7 @@
 				89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
+				89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,

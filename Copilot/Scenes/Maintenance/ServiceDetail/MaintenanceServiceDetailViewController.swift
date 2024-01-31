@@ -10,6 +10,13 @@ import UIKit
 
 class MaintenanceServiceDetailViewController: ServiceDetailViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+#if DEV_DEBUG
+        viewModel.goToServiceRandevu(date: Date(), hour: "14", minute: "45")
+    #endif
+    }
+    
     override func setService() {
         super.setService()
         desciptionLabel.text = Strings.maintenanceSelectTime

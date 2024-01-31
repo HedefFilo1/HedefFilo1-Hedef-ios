@@ -105,8 +105,29 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
         controller.delegate = delegate
         navigationController.present(controller, animated: true)
     }
+}
+
+extension MaintenanceCoordinator: ServiceRandevuVMCoordinatorDelegate,
+                                  ConfirmedRandevuVMCoordinatorDelegate {
     
     func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
-        
+        let controller: MaintenanceRandevuViewController = storyboard.instantiateViewController()
+        let viewModel = MaintenanceRandevuViewModel()
+        viewModel.service = service
+        viewModel.date = date
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewModel.tireSupportType = tireSupportType
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToConfirmedRandevu(service: Supplier, date: Date) {
+        let controller: MaintenanceConfirmViewController = storyboard.instantiateViewController()
+        let viewModel = ConfirmedRandevuViewModel()
+        viewModel.service = service
+        viewModel.date = date
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
 }
