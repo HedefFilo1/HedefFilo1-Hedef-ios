@@ -57,12 +57,18 @@ extension MaintenanceCoordinator: MaintenanceVMCoordinatorDelegate {
 
 extension MaintenanceCoordinator: MaintenanceStep2KMVMCoordinatorDelegate,
                                   NotMaintenancePeriodVMCoordinatorDelegate {
+    func goToServices() {
+        let viewController: MaintenanceServicesViewController = storyboard.instantiateViewController()
+        viewController.viewModel = ServicesViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     func goToNotMaintenancePeriod() {
         let controller: NotMaintenancePeriodViewController = storyboard.instantiateViewController()
         controller.viewModel = NotMaintenancePeriodViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
-    
     
 }

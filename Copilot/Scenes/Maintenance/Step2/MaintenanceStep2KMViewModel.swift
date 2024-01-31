@@ -9,6 +9,7 @@ import Foundation
 protocol MaintenanceStep2KMVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToNotMaintenancePeriod()
+    func goToServices()
 }
 
 protocol MaintenanceStep2KMViewModelDelegate: BaseViewModelDelegate {
@@ -32,7 +33,8 @@ class MaintenanceStep2KMViewModel: MaintenanceStep2KMViewModelType {
     }
     
     func goToNotMaintenancePeriod() {
-        coordinatorDelegate?.goToNotMaintenancePeriod()
+        coordinatorDelegate?.goToServices()
+//        coordinatorDelegate?.goToNotMaintenancePeriod()
     }
     
 }

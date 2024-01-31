@@ -310,6 +310,8 @@
 		89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */; };
 		89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */; };
 		89F7AAB82B15E06E00858D2E /* HGSDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */; };
+		89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */; };
+		89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -621,6 +623,8 @@
 		89F6ADEB2AC4AD7700994F18 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		89F7AAB52B15DF5E00858D2E /* HGSDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewController.swift; sourceTree = "<group>"; };
 		89F7AAB72B15E06E00858D2E /* HGSDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSDetailViewModel.swift; sourceTree = "<group>"; };
+		89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewController.swift; sourceTree = "<group>"; };
+		89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceServicesViewModel.swift; sourceTree = "<group>"; };
 		B5B645D4F3F778FEBCC416F5 /* Pods-Copilot.release development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release development.xcconfig"; sourceTree = "<group>"; };
 		FAAE0A468DDFAED8E614E518 /* Pods-Copilot.debug production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -664,6 +668,7 @@
 				8907EEF32B696602004869BE /* Step1 */,
 				8907EF072B69890F004869BE /* Step2 */,
 				8907EF0C2B6995CB004869BE /* NotMaintenancePeriod */,
+				89FC517A2B6A39BA00AD37D4 /* Services */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -2057,6 +2062,15 @@
 			path = HGSDetail;
 			sourceTree = "<group>";
 		};
+		89FC517A2B6A39BA00AD37D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89FC517D2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift */,
+				89FC517B2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2184,6 +2198,7 @@
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
 				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
 				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
+				89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
@@ -2315,6 +2330,7 @@
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
+				89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
@@ -2647,7 +2663,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2681,7 +2697,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2775,7 +2791,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -2863,7 +2879,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
