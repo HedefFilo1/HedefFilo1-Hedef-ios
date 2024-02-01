@@ -33,14 +33,14 @@ enum AppointmentStatus: String, Decodable {
 
 struct Case: Decodable {
     let caseNumber: String
-    let supplierName: String
+    let supplierName: String?
     let appointmentDate: String
     let recordType: CaseRecordType
     let status: CaseStatusType
     let appointmentStatus: AppointmentStatus
     
-    let address: String
-    let supplierPhone: String
+    let address: String?
+    let supplierPhone: String?
       
     var title: String {
         var str: String?

@@ -49,6 +49,8 @@ class ServiceTabViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        removeTireAppointment()
+        removeMaintenanceAppointment()
         viewModel.getAppointments()
     }
     
@@ -123,6 +125,12 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         view.animate()
     }
     
+    func removeTireAppointment() {
+        tireRandevuView.heightConstraint?.constant = 0
+        tireRandevuView.isHidden = true
+        view.animate()
+    }
+    
     func setMaintenanceAppointment() {
         maintenanceRandevuView.heightConstraint?.constant = 27
         maintenanceRandevuView.isHidden = false
@@ -134,4 +142,9 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         view.animate()
     }
     
+    func removeMaintenanceAppointment() {
+        maintenanceRandevuView.heightConstraint?.constant = 0
+        maintenanceRandevuView.isHidden = true
+        view.animate()
+    }
 }
