@@ -121,7 +121,8 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     func goToFlow5Step2TireChange() {
         
         if tire == nil {
-//            coordinatorDelegate?.goToFlow7Step2SelectService()
+            coordinatorDelegate?.goToFlow7Step2SelectService()
+            return
         }
         
         #if DEV_DEBUG
