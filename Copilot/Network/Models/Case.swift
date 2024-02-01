@@ -37,10 +37,10 @@ struct Case: Decodable {
     let appointmentDate: String
     let recordType: CaseRecordType
     let status: CaseStatusType
+    let appointmentStatus: AppointmentStatus
     
     let address: String
     let supplierPhone: String
-    let appointmentStatus: AppointmentStatus
       
     var title: String {
         var str: String?

@@ -1748,12 +1748,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Is the vehicle's engine Working?</string>
         </dict>
         
-        <key></key>
+        <key>appointmentRequestReceived</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Randevu Talebi Alındı.</string>
             <key>en</key>
-            <string></string>
+            <string>Appointment Request Received.</string>
         </dict>
         
         <key></key>

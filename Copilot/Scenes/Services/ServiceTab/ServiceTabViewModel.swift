@@ -14,16 +14,17 @@ protocol ServiceTabViewModelCoordinatorDelegate: AnyObject {
 }
 
 protocol ServiceTabViewModelDelegate: BaseViewModelDelegate {
-    func setAppointment()
+    func setTireAppointment()
+    func setMaintenanceAppointment()
 }
 
 protocol ServiceTabViewModelType: AnyObject {
     var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate? { get set }
     var delegate: ServiceTabViewModelDelegate? { get set }
-    var appointment: Case? { get set }
+    var tireAppointment: Case? { get set }
     var maintenanceAppointment: Case? { get set }
     func goToLastikOperations()
-    func getAppointment()
+    func getAppointments()
     func goToMaintenance()
     func goToBreakDown()
 }
@@ -33,11 +34,11 @@ class ServiceTabViewModel: ServiceTabViewModelType {
     weak var coordinatorDelegate: ServiceTabViewModelCoordinatorDelegate?
     weak var delegate: ServiceTabViewModelDelegate?
     
-    var appointment: Case?
+    var tireAppointment: Case?
     var maintenanceAppointment: Case?
     
     func goToLastikOperations() {
-        coordinatorDelegate?.goToLastikOperations(appointment: appointment)
+        coordinatorDelegate?.goToLastikOperations(appointment: tireAppointment)
     }
     
     func goToMaintenance() {
@@ -48,15 +49,24 @@ class ServiceTabViewModel: ServiceTabViewModelType {
         coordinatorDelegate?.goToBreakDown()
     }
     
-    func getAppointment() {
+    func getAppointments() {
         Loading.shared.show()
         APIService.getCase { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
             if let model = model, model.count > 0 {
-                self.appointment = model[0]
-                self.delegate?.setAppointment()
+                
+                for item in model {
+                    if item.recordType == .tireChange || item.recordType == .damage {
+                        self.tireAppointment = item
+                        self.delegate?.setTireAppointment()
+                    } else if item.recordType == .maintenance {
+                        self.maintenanceAppointment = item
+                        self.delegate?.setMaintenanceAppointment()
+                    }
+                    
+                }
             } else
             
             if let error = error {

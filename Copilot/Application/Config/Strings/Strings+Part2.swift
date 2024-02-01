@@ -145,4 +145,7 @@ extension Strings {
         return localized(string: "isVehicleEngineWorking")
     }
     
+    static var appointmentRequestReceived: String {
+        return localized(string: "appointmentRequestReceived")
+    }
 }

@@ -841,8 +841,8 @@
 		891BFB6C2B349653009BD793 /* ServiceTab */ = {
 			isa = PBXGroup;
 			children = (
-				891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */,
 				891BFB6F2B34966F009BD793 /* ServiceTabViewModel.swift */,
+				891BFB6D2B349667009BD793 /* ServiceTabViewController.swift */,
 			);
 			path = ServiceTab;
 			sourceTree = "<group>";

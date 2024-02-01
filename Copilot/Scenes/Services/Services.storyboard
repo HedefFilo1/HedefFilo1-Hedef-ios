@@ -39,8 +39,27 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1g-nC-DUG">
+                                                        <rect key="frame" x="0.0" y="37" width="345" height="27"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Talebi Alındı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-eR-Elb">
+                                                                <rect key="frame" x="0.0" y="2" width="345" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <color key="textColor" name="white"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="theme"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="8Aa-hf-8Hw"/>
+                                                            <constraint firstItem="hEJ-eR-Elb" firstAttribute="leading" secondItem="l1g-nC-DUG" secondAttribute="leading" id="9Ak-ur-jIY"/>
+                                                            <constraint firstItem="hEJ-eR-Elb" firstAttribute="top" secondItem="l1g-nC-DUG" secondAttribute="top" constant="2" id="CWI-Xx-lpo"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hEJ-eR-Elb" secondAttribute="trailing" id="KVh-xQ-M0H"/>
+                                                        </constraints>
+                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-3C-4cB" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="57" width="345" height="52"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="hfg-zE-IPQ"/>
                                                         </constraints>
@@ -85,7 +104,7 @@
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dny-US-DA3" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="229" width="345" height="52"/>
-                                                        <color key="backgroundColor" name="white"/>
+                                                        <color key="backgroundColor" name="whiteBorder"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="BR7-AJ-Qlr"/>
                                                         </constraints>
@@ -124,6 +143,7 @@
                                                     <constraint firstItem="RZc-4Z-gsE" firstAttribute="top" relation="lessThanOrEqual" secondItem="dny-US-DA3" secondAttribute="bottom" priority="210" constant="24" id="21O-AR-2Yw"/>
                                                     <constraint firstAttribute="trailing" secondItem="dny-US-DA3" secondAttribute="trailing" id="2wS-Bl-nDb"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="top" relation="lessThanOrEqual" secondItem="rL5-is-zhe" secondAttribute="bottom" priority="211" constant="36" id="3Fx-tu-siE"/>
+                                                    <constraint firstItem="l1g-nC-DUG" firstAttribute="leading" secondItem="O0K-3C-4cB" secondAttribute="leading" id="4pv-WQ-gHj"/>
                                                     <constraint firstAttribute="trailing" secondItem="9du-B2-g7h" secondAttribute="trailing" id="5vx-Wg-Dlo"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rL5-is-zhe" secondAttribute="bottom" constant="8" id="6fD-N3-vWy"/>
                                                     <constraint firstItem="RZc-4Z-gsE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dny-US-DA3" secondAttribute="bottom" constant="8" id="Amj-sb-uBc"/>
@@ -141,9 +161,11 @@
                                                     <constraint firstItem="Vfs-8u-DVZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RZc-4Z-gsE" secondAttribute="bottom" constant="8" id="bFT-fw-929"/>
                                                     <constraint firstItem="Vfs-8u-DVZ" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="bT9-SQ-6c5"/>
                                                     <constraint firstItem="dny-US-DA3" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="dyU-kw-77l"/>
+                                                    <constraint firstItem="l1g-nC-DUG" firstAttribute="trailing" secondItem="O0K-3C-4cB" secondAttribute="trailing" id="e8e-hz-6fs"/>
                                                     <constraint firstItem="RZc-4Z-gsE" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="eAy-zk-3lC"/>
                                                     <constraint firstAttribute="trailing" secondItem="O0K-3C-4cB" secondAttribute="trailing" id="hxg-OD-bAu"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="top" secondItem="rL5-is-zhe" secondAttribute="bottom" priority="150" constant="36" id="miW-21-eAn"/>
+                                                    <constraint firstItem="l1g-nC-DUG" firstAttribute="bottom" secondItem="O0K-3C-4cB" secondAttribute="top" constant="7" id="mwc-Vc-dse"/>
                                                     <constraint firstAttribute="trailing" secondItem="RZc-4Z-gsE" secondAttribute="trailing" id="oCF-nE-sqp"/>
                                                     <constraint firstItem="O0K-3C-4cB" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="sgE-vd-zUH"/>
                                                 </constraints>
@@ -187,9 +209,11 @@
                         <outlet property="descriptionLabel" destination="rL5-is-zhe" id="j9y-HD-hho"/>
                         <outlet property="faultButton" destination="WDg-tM-NFw" id="0Nu-hN-Bbg"/>
                         <outlet property="lastikButton" destination="dny-US-DA3" id="pcF-RI-hlY"/>
+                        <outlet property="maintenanceRandevuLabel" destination="hEJ-eR-Elb" id="3v0-TC-3Ko"/>
+                        <outlet property="maintenanceRandevuView" destination="l1g-nC-DUG" id="ul3-1E-R0h"/>
                         <outlet property="pastServicesButton" destination="Vfs-8u-DVZ" id="f0P-0J-Izf"/>
-                        <outlet property="randevuLabel" destination="qgn-ln-Y0A" id="HMS-j8-q1i"/>
-                        <outlet property="randevuView" destination="9du-B2-g7h" id="Cns-E4-7n1"/>
+                        <outlet property="tireRandevuLabel" destination="qgn-ln-Y0A" id="HMS-j8-q1i"/>
+                        <outlet property="tireRandevuView" destination="9du-B2-g7h" id="Cns-E4-7n1"/>
                         <outlet property="titleLabel" destination="Qw5-Hj-eNb" id="ptv-5o-LRA"/>
                     </connections>
                 </viewController>
@@ -1280,6 +1304,9 @@
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBorder">
+            <color red="0.94509803921568625" green="0.94509803921568625" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
