@@ -45,7 +45,7 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
                               supplierPhone: "",
                               city: "",
                               district: "",
-                              appointmentDate: Date()) { [weak self] _, error in
+                              appointmentDate: nil) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
             

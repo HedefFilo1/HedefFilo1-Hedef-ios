@@ -54,7 +54,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     }
     
     func createRandevu() {
-        guard let service, let date else { return }
+        guard let service else { return }
         Loading.shared.show()
         APIService.createCase(tireType: tireSupportType ?? .damage,
                               towTruck: false,
