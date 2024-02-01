@@ -156,7 +156,7 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
     
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
         //        let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
         //        let viewModel = ServiceRandevuViewModel()
         //        viewModel.service = service

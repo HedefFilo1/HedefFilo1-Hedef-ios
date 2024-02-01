@@ -13,7 +13,7 @@ import MapKit
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType)
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?)
 }
 
 protocol ServiceDetailViewModelDelegate: BaseViewModelDelegate {

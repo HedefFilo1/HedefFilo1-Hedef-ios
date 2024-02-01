@@ -177,7 +177,7 @@ extension TireCoordinator: ServicesVMCoordinatorDelegate {
 
 extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
    
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
         let controller: ServiceRandevuViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         let viewModel = ServiceRandevuViewModel()
         viewModel.service = service

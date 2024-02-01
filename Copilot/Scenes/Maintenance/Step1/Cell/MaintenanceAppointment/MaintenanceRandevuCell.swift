@@ -72,7 +72,6 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
         statusLabel.apply(.whiteS12B700)
         editLabel.apply(.whiteS12B700)
         editLabel.textColor = .theme
-        
         createRandevuLabel?.apply(.blackS14R400)
     }
     

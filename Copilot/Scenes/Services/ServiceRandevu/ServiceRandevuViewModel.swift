@@ -33,7 +33,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     
     var service: Supplier?
     var date: Date?
-    var tireSupportType: TireSupportType = .damage
+    var tireSupportType: TireSupportType? = .damage
     
     var displayDate: String? {
         guard let date = date else { return nil }
@@ -56,7 +56,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     func createRandevu() {
         guard let service, let date else { return }
         Loading.shared.show()
-        APIService.createCase(tireType: tireSupportType,
+        APIService.createCase(tireType: tireSupportType ?? .damage,
                               towTruck: false,
                               supplierName: service.name,
                               supplierPhone: "",

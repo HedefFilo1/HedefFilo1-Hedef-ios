@@ -110,7 +110,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                 support = .change
             }
             
-            if appointment.recordType == .maintenance {
+            if appointment.recordType == .damage {
                 support = .damage
             }
             print(support)

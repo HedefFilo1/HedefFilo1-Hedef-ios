@@ -89,7 +89,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
     
     func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
         let controller: MaintenanceServiceDetailViewController = storyboard.instantiateViewController()
-        let viewModel = ServiceDetailViewModel()
+        let viewModel = MaintenanceServiceDetailViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewModel.appointment = appointment
@@ -110,7 +110,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
 extension MaintenanceCoordinator: ServiceRandevuVMCoordinatorDelegate,
                                   ConfirmedRandevuVMCoordinatorDelegate {
     
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
         let controller: MaintenanceRandevuViewController = storyboard.instantiateViewController()
         let viewModel = MaintenanceRandevuViewModel()
         viewModel.service = service

@@ -119,7 +119,7 @@ extension MaintenanceViewController: MaintenanceCellDelegate,
     }
     
     func didTapEdit() {
-        
+        viewModel.goToServiceDetail()
     }
 }
 
