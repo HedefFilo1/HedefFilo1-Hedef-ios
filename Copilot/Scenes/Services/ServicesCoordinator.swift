@@ -131,7 +131,7 @@ extension ServicesCoordinator {
 }
 
 // neeed to remove this block
-extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
+extension ServicesCoordinator {
     
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         //        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
@@ -156,7 +156,7 @@ extension ServicesCoordinator: ServicesVMCoordinatorDelegate {
 
 extension ServicesCoordinator: ServiceDetailVMCoordinatorDelegate {
     
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?, towTruck: Bool) {
         //        let controller: ServiceRandevuViewController = storyboard.instantiateViewController()
         //        let viewModel = ServiceRandevuViewModel()
         //        viewModel.service = service

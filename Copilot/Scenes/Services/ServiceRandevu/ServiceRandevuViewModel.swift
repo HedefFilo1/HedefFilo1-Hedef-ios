@@ -20,6 +20,7 @@ protocol ServiceRandevuViewModelType: AnyObject {
     var coordinatorDelegate: ServiceRandevuVMCoordinatorDelegate? { get set }
     var delegate: ServiceRandevuViewModelDelegate? { get set }
     var service: Supplier? { get set }
+    var towTruck: Bool { get set }
     var date: Date? { get set }
     var displayDate: String? { get }
     func getBack()
@@ -34,6 +35,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     var service: Supplier?
     var date: Date?
     var tireSupportType: TireSupportType? = .damage
+    var towTruck = false
     
     var displayDate: String? {
         guard let date = date else { return nil }
@@ -57,7 +59,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
         guard let service else { return }
         Loading.shared.show()
         APIService.createCase(tireType: tireSupportType ?? .damage,
-                              towTruck: false,
+                              towTruck: towTruck,
                               supplierName: service.name,
                               supplierPhone: "",
                               city: service.city ?? "",

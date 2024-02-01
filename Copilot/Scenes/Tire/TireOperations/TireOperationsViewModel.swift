@@ -14,7 +14,7 @@ protocol TireOperationsVMCoordinatorDelegate: AnyObject {
     func goToFlow3Step2Damage()
     func goToFlow5Step2TireChange(tireService: Supplier?)
     func goToFlow7Step2SelectService()
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool)
 //    func goToRequestNewLastik()
 //    func goToLastikRandevuConfirmation()
 //    func goToLastikChange()
@@ -114,7 +114,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                 support = .damage
             }
             print(support)
-            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support)
+            coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: support, towTruck: false)
         }
     }
     

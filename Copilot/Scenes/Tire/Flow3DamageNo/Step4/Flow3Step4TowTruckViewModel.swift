@@ -9,7 +9,7 @@ import Foundation
 
 protocol Flow3Step4TowTruckVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToServices(tireSupportType: TireSupportType)
+    func goToServices(tireSupportType: TireSupportType, towTruck: Bool)
 }
 
 protocol Flow3Step4TowTruckViewModelDelegate: AnyObject {
@@ -34,6 +34,6 @@ class Flow3Step4TowTruckViewModel: Flow3Step4TowTruckViewModelType {
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices(tireSupportType: .damage)
+        coordinatorDelegate?.goToServices(tireSupportType: .damage, towTruck: true)
     }
 }

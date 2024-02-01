@@ -9,8 +9,8 @@ import Foundation
 
 protocol Flow5Step2TireChangeVMCoordinatorDlgt: AnyObject {
     func getBack()
-    func goToServices(tireSupportType: TireSupportType)
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+    func goToServices(tireSupportType: TireSupportType, towTruck: Bool)
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool)
 }
 
 protocol Flow5Step2TireChangeViewModelDelegate: AnyObject {
@@ -38,10 +38,10 @@ class Flow5Step2TireChangeViewModel: Flow5Step2TireChangeViewModelType {
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices(tireSupportType: .change)
+        coordinatorDelegate?.goToServices(tireSupportType: .change, towTruck: false)
     }
     
     func goToServiceDetail() {
-        coordinatorDelegate?.goToServiceDetail(service: tireService, appointment: nil, tireSupportType: .change)
+        coordinatorDelegate?.goToServiceDetail(service: tireService, appointment: nil, tireSupportType: .change, towTruck: false)
     }
 }

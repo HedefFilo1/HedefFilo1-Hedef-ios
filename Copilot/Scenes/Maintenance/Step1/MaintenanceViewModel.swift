@@ -10,7 +10,7 @@ import Foundation
 protocol MaintenanceVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToMaintenanceStep2KM()
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool)
 }
 
 protocol MaintenanceViewModelDelegate: BaseViewModelDelegate {
@@ -41,7 +41,7 @@ class MaintenanceViewModel: MaintenanceViewModelType {
     }
     
     func goToServiceDetail() {
-        coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: nil)
+        coordinatorDelegate?.goToServiceDetail(service: nil, appointment: appointment, tireSupportType: nil, towTruck: false)
     }
     
 }

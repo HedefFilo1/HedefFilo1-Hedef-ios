@@ -9,7 +9,7 @@ import Foundation
 
 protocol Flow4Step3SelectServiceVMCoordinatorDlgt: AnyObject {
     func getBack()
-    func goToServices(tireSupportType: TireSupportType)
+    func goToServices(tireSupportType: TireSupportType, towTruck: Bool)
 }
 
 protocol Flow4Step3SelectServiceViewModelDelegate: AnyObject {
@@ -36,6 +36,6 @@ class Flow4Step3SelectServiceViewModel: Flow4Step3SelectServiceViewModelType {
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices(tireSupportType: tireSupportType ?? .damage)
+        coordinatorDelegate?.goToServices(tireSupportType: tireSupportType ?? .damage, towTruck: false)
     }
 }

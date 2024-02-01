@@ -123,7 +123,7 @@ extension TireCoordinator: Flow3Step2DamageVMCrdintrDelegate,
 
 // FLOW 5, 6
 extension TireCoordinator: Flow5Step2TireChangeVMCoordinatorDlgt {
-    
+
     func goToFlow5Step2TireChange(tireService: Supplier?) {
         let viewController: Flow5Step2TireChangeViewController = storyboard.instantiateViewController()
         viewController.viewModel = Flow5Step2TireChangeViewModel()
@@ -146,11 +146,12 @@ extension TireCoordinator {
 
 extension TireCoordinator: ServicesVMCoordinatorDelegate {
     
-    func goToServices(tireSupportType: TireSupportType) {
+    func goToServices(tireSupportType: TireSupportType, towTruck: Bool) {
         let viewController: ServicesViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         viewController.viewModel = ServicesViewModel()
         viewController.viewModel.coordinatorDelegate = self
         viewController.viewModel.tireSupportType = tireSupportType
+        viewController.viewModel.towTruck = towTruck
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -163,7 +164,7 @@ extension TireCoordinator: ServicesVMCoordinatorDelegate {
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
         let controller: ServiceDetailViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         let viewModel = ServiceDetailViewModel()
         controller.viewModel = viewModel
@@ -171,13 +172,14 @@ extension TireCoordinator: ServicesVMCoordinatorDelegate {
         viewModel.appointment = appointment
         viewModel.service = service
         viewModel.tireSupportType = tireSupportType
+        viewModel.towTruck = towTruck
         navigationController.pushViewController(controller, animated: true)
     }
 }
 
 extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
    
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?, towTruck: Bool) {
         let controller: ServiceRandevuViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         let viewModel = ServiceRandevuViewModel()
         viewModel.service = service
@@ -185,6 +187,7 @@ extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewModel.tireSupportType = tireSupportType
+        viewModel.towTruck = towTruck
         navigationController.pushViewController(controller, animated: true)
     }
     

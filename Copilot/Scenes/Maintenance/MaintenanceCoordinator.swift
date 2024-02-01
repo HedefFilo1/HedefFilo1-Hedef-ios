@@ -37,7 +37,7 @@ class MaintenanceCoordinator: Coordinator {
 }
 
 extension MaintenanceCoordinator: MaintenanceVMCoordinatorDelegate {
-    
+ 
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -75,6 +75,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
         let viewController: MaintenanceServicesViewController = storyboard.instantiateViewController()
         viewController.viewModel = ServicesViewModel()
         viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.towTruck = false
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -87,7 +88,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
         navigationController.present(controller, animated: true)
     }
     
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?) {
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
         let controller: MaintenanceServiceDetailViewController = storyboard.instantiateViewController()
         let viewModel = MaintenanceServiceDetailViewModel()
         controller.viewModel = viewModel
@@ -95,6 +96,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
         viewModel.appointment = appointment
         viewModel.service = service
         viewModel.tireSupportType = tireSupportType
+        viewModel.towTruck = towTruck
         navigationController.pushViewController(controller, animated: true)
     }
     
@@ -110,7 +112,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
 extension MaintenanceCoordinator: ServiceRandevuVMCoordinatorDelegate,
                                   ConfirmedRandevuVMCoordinatorDelegate {
     
-    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?) {
+    func goToServiceRandevu(service: Supplier, date: Date, tireSupportType: TireSupportType?, towTruck: Bool) {
         let controller: MaintenanceRandevuViewController = storyboard.instantiateViewController()
         let viewModel = MaintenanceRandevuViewModel()
         viewModel.service = service
@@ -118,6 +120,7 @@ extension MaintenanceCoordinator: ServiceRandevuVMCoordinatorDelegate,
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         viewModel.tireSupportType = tireSupportType
+        viewModel.towTruck = false
         navigationController.pushViewController(controller, animated: true)
     }
     

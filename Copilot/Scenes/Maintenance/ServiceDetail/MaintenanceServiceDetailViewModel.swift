@@ -13,7 +13,7 @@ class MaintenanceServiceDetailViewModel: ServiceDetailViewModel {
         guard let hour = Int(hour), let min = Int(minute) else { return }
         if let service = service,
            let date = date.setTime(hour: hour, min: min) {
-            coordinatorDelegate?.goToServiceRandevu(service: service, date: date, tireSupportType: nil)
+            coordinatorDelegate?.goToServiceRandevu(service: service, date: date, tireSupportType: nil, towTruck: false)
         }
     }
 }

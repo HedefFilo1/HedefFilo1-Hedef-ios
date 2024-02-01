@@ -13,7 +13,7 @@ import MapKit
 protocol ServicesVMCoordinatorDelegate: AnyObject {
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate)
     func getBack()
-    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?)
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool)
 }
 
 protocol ServicesViewModelDelegate: BaseViewModelDelegate {
@@ -29,6 +29,7 @@ protocol ServicesViewModelType: AnyObject {
     var filterCity: String? { get set }
     var filterDistrict: String? { get set }
     var searchText: String { get set }
+    var towTruck: Bool { get set }
     func getServices(lat: Double?, lon: Double?)
     func presentFilters()
     func getBack()
@@ -47,6 +48,7 @@ class ServicesViewModel: ServicesViewModelType {
     var filterDistrict: String?
     
     var searchText: String = ""
+    var towTruck: Bool = false
     
     var filteredServices: [Supplier]? {
         var result = services
@@ -97,7 +99,7 @@ class ServicesViewModel: ServicesViewModelType {
     }
     
     func goToServiceDetail(service: Supplier) {
-        coordinatorDelegate?.goToServiceDetail(service: service, appointment: nil, tireSupportType: tireSupportType)
+        coordinatorDelegate?.goToServiceDetail(service: service, appointment: nil, tireSupportType: tireSupportType, towTruck: towTruck)
     }
     
     func openGoogleMap(latitude: Double, longitude: Double) {
