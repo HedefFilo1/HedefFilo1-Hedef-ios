@@ -297,7 +297,7 @@ class APIService {
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,
             "city": city,
-            "district": district,
+            "district": district
         ] as [String: Any]
         
         if let appointmentDate {
