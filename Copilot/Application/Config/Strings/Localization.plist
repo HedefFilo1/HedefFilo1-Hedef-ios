@@ -1303,25 +1303,25 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>lastikRandevuAcceptionText</key>
         <dict>
             <key>tr</key>
-            <string>Aracınız en yakın servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?</string>
+            <string>Aracınızı servise kendi imkanlarınızla götürebilecek misiniz?</string>
             <key>en</key>
-            <string>Your vehicle will be sent to the nearest service via a paid tow truck. Do you confirm?</string>
+            <string>Will you be able to take your vehicle to the service at your own expense?</string>
         </dict>
         
         <key>yesAndAccept</key>
         <dict>
             <key>tr</key>
-            <string>Evet</string>
+            <string>Evet, Onaylıyorum</string>
             <key>en</key>
-            <string>Yes</string>
+            <string>Yes, I accept</string>
         </dict>
         
         <key>noDontAccept</key>
         <dict>
             <key>tr</key>
-            <string>Hayır</string>
+            <string>Hayır, Onaylamıyorum</string>
             <key>en</key>
-            <string>No</string>
+            <string>No, I don't accept</string>
         </dict>
         
         <key>yes</key>
@@ -1756,10 +1756,10 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Appointment Request Received.</string>
         </dict>
         
-        <key></key>
+        <key>lastikRandevuAcceptionTextStep3</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracınız bir sonraki adımda seçeceğiniz servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?</string>
             <key>en</key>
             <string></string>
         </dict>

@@ -148,4 +148,8 @@ extension Strings {
     static var appointmentRequestReceived: String {
         return localized(string: "appointmentRequestReceived")
     }
+    
+    static var lastikRandevuAcceptionTextStep3: String {
+        return localized(string: "lastikRandevuAcceptionTextStep3")
+    }
 }

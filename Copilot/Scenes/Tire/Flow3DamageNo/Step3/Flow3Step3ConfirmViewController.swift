@@ -51,7 +51,7 @@ class Flow3Step3ConfirmViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.lastikRandevuAcceptionText
+        descriptionLabel.text = Strings.lastikRandevuAcceptionTextStep3
         yesButton.setTitle(Strings.yesAndAccept, for: .normal)
         noButton.setTitle(Strings.noDontAccept, for: .normal)
     }
