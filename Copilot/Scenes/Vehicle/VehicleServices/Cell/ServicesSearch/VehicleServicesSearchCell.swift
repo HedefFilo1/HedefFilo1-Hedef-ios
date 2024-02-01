@@ -10,6 +10,8 @@ import UIKit
 protocol VehicleServicesSearchCellDelegate: AnyObject {
     func didTapFilter()
     func didTapRemoveFilter()
+    func didTapRemoveCityFilter()
+    func didTapRemoveDistrictFilter()
     func didChangeSearch(text: String)
 }
 
@@ -48,8 +50,14 @@ class VehicleServicesSearchCell: UICollectionViewCell, Reusable {
         filterCityView.layer.borderWidth = 1
         filterCityView.layer.borderColor = UIColor.greyTextLight.cgColor
         filterCityView.layer.cornerRadius = 10
+       
+        filterDistrictView.layer.borderWidth = 1
+        filterDistrictView.layer.borderColor = UIColor.greyTextLight.cgColor
+        filterDistrictView.layer.cornerRadius = 10
+        
         removFilterLabel.apply(.blackS12B700)
         filterCityLabel.apply(.blackS12B700)
+        filterDistrictLabel.apply(.blackS12B700)
     }
     
     @objc func editingChanged() {
@@ -58,22 +66,23 @@ class VehicleServicesSearchCell: UICollectionViewCell, Reusable {
     }
     
     func setFilters(city: String?, district: String?) {
-        if city == nil && district == nil {
-            removFilterView.isHidden = true
+            
+        removFilterView.isHidden = (city == nil && district == nil)
+       
+        
+        if city != nil {
+            filterCityLabel.text = city
+            filterCityView.isHidden = city == nil
         } else {
-            removFilterView.isHidden = false
+            filterCityView.isHidden = true
         }
         
-        filterCityLabel.text = city
-        filterCityView.isHidden = city == nil
-        
-        if city == nil, district != nil {
-            filterCityLabel.text = district
-            filterCityView.isHidden = false
+        if city != nil && district != nil {
+            filterDistrictLabel.text = district
+            filterDistrictView.isHidden = false
+        } else {
+            filterDistrictView.isHidden = district == nil
         }
-        
-//        filterDistrictView.isHidden = district == nil
-        filterDistrictView.isHidden = true
         
     }
     
@@ -83,7 +92,20 @@ class VehicleServicesSearchCell: UICollectionViewCell, Reusable {
     
     @IBAction func didTapRemoveFilter() {
         filterCityView.isHidden = true
+        filterDistrictView.isHidden = true
         removFilterView.isHidden = true
         delegate?.didTapRemoveFilter()
+    }
+    
+    @IBAction func didTapRemoveCity() {
+        filterCityLabel.text = ""
+        filterCityView.isHidden = true
+        delegate?.didTapRemoveCityFilter()
+    }
+    
+    @IBAction func didTapRemoveDistrict() {
+        
+        filterCityView.isHidden = true
+        delegate?.didTapRemoveDistrictFilter()
     }
 }

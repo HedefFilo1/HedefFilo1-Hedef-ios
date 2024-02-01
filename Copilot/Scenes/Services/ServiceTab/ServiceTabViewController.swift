@@ -40,9 +40,9 @@ class ServiceTabViewController: UIViewController {
 #if DEV_DEBUG
 //        let str = Date().getServerDate()
 //        print(str)
-                if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
-                    coordintor.goToLastikOperations(appointment: nil)
-                }
+//                if let coordintor = viewModel.coordinatorDelegate as? ServicesCoordinator {
+//                    coordintor.goToLastikOperations(appointment: nil)
+//                }
         
 #endif
     }

@@ -69,19 +69,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2d-Kz-mQT">
+                                <rect key="frame" x="4" y="-4" width="32" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="T73-Sr-jIU"/>
+                                    <constraint firstAttribute="height" constant="40" id="afD-0s-W5e"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapRemoveCity" destination="gTV-IL-0wX" eventType="touchUpInside" id="VpQ-jE-Cij"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0lo-NS-fQA" secondAttribute="trailing" constant="12" id="8We-j6-L2M"/>
                             <constraint firstItem="0lo-NS-fQA" firstAttribute="centerY" secondItem="lUl-m3-q4S" secondAttribute="centerY" id="8Xs-Os-KZ5"/>
+                            <constraint firstItem="N2d-Kz-mQT" firstAttribute="centerY" secondItem="pXD-FS-oVe" secondAttribute="centerY" id="DWx-p5-i72"/>
                             <constraint firstItem="pXD-FS-oVe" firstAttribute="leading" secondItem="lUl-m3-q4S" secondAttribute="leading" constant="12" id="PhB-e9-gXp"/>
                             <constraint firstItem="0lo-NS-fQA" firstAttribute="leading" secondItem="pXD-FS-oVe" secondAttribute="trailing" constant="6" id="S86-B0-NiW"/>
                             <constraint firstAttribute="height" constant="32" id="kSg-ds-rSi"/>
                             <constraint firstItem="pXD-FS-oVe" firstAttribute="centerY" secondItem="lUl-m3-q4S" secondAttribute="centerY" id="uxB-Iv-RII"/>
+                            <constraint firstItem="N2d-Kz-mQT" firstAttribute="centerX" secondItem="pXD-FS-oVe" secondAttribute="centerX" id="wzq-cL-AJ4"/>
                         </constraints>
                     </view>
                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-8T-vqp">
-                        <rect key="frame" x="129" y="70" width="107" height="32"/>
+                        <rect key="frame" x="129" y="70" width="125.33333333333331" height="32"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boldCloseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ACX-Lk-7Qx">
                                 <rect key="frame" x="12" y="8" width="16" height="16"/>
@@ -90,25 +103,38 @@
                                     <constraint firstAttribute="width" constant="16" id="CAb-ZI-oyB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hS-JG-XXJ">
-                                <rect key="frame" x="34" y="5.6666666666666714" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="İstanbul district xxdwM23LNW8D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hS-JG-XXJ">
+                                <rect key="frame" x="33.999999999999993" y="5.6666666666666714" width="79.333333333333314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYm-i4-Tb9">
+                                <rect key="frame" x="4" y="-4" width="32" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M27-xS-O62"/>
+                                    <constraint firstAttribute="width" constant="32" id="N5c-nJ-BEY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapRemoveDistrict" destination="gTV-IL-0wX" eventType="touchUpInside" id="5Mo-ax-Zud"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eYm-i4-Tb9" firstAttribute="centerY" secondItem="ACX-Lk-7Qx" secondAttribute="centerY" id="103-xX-8au"/>
                             <constraint firstItem="ACX-Lk-7Qx" firstAttribute="leading" secondItem="hdR-8T-vqp" secondAttribute="leading" constant="12" id="7wy-OE-Ecv"/>
                             <constraint firstItem="9hS-JG-XXJ" firstAttribute="leading" secondItem="ACX-Lk-7Qx" secondAttribute="trailing" constant="6" id="ANc-Rg-1KS"/>
                             <constraint firstItem="9hS-JG-XXJ" firstAttribute="centerY" secondItem="hdR-8T-vqp" secondAttribute="centerY" id="EuK-f9-iPv"/>
                             <constraint firstAttribute="trailing" secondItem="9hS-JG-XXJ" secondAttribute="trailing" constant="12" id="LKH-6v-zZ5"/>
+                            <constraint firstItem="eYm-i4-Tb9" firstAttribute="centerX" secondItem="ACX-Lk-7Qx" secondAttribute="centerX" id="Tdc-4b-8Yj"/>
                             <constraint firstItem="ACX-Lk-7Qx" firstAttribute="centerY" secondItem="hdR-8T-vqp" secondAttribute="centerY" id="dh7-G6-mxu"/>
                             <constraint firstAttribute="height" constant="32" id="oUc-KY-iS4"/>
                         </constraints>
                     </view>
                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3O-PH-5Oo">
-                        <rect key="frame" x="258" y="70" width="168" height="32"/>
+                        <rect key="frame" x="258.33333333333331" y="70" width="167.66666666666669" height="32"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boldCloseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ld0-FE-xbo">
                                 <rect key="frame" x="0.0" y="8" width="16" height="16"/>
@@ -118,13 +144,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tüm Filtreleri Kaldır" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at5-dn-Ke2">
-                                <rect key="frame" x="22" y="5.6666666666666714" width="146" height="21"/>
+                                <rect key="frame" x="22" y="5.6666666666666714" width="145.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whL-Sl-d5k">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="32"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="didTapRemoveFilter" destination="gTV-IL-0wX" eventType="touchUpInside" id="dRk-dV-RSF"/>
@@ -156,6 +182,7 @@
                 <constraint firstItem="hdR-8T-vqp" firstAttribute="centerY" secondItem="lUl-m3-q4S" secondAttribute="centerY" id="GW3-Hv-USe"/>
                 <constraint firstAttribute="trailing" secondItem="5On-dJ-yrI" secondAttribute="trailing" constant="16" id="Gg3-nv-dXy"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="top" secondItem="h8P-PU-RHX" secondAttribute="top" id="Mug-5D-K4f"/>
+                <constraint firstItem="b3O-PH-5Oo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hdR-8T-vqp" secondAttribute="trailing" constant="4" id="Ra3-j3-LFM"/>
                 <constraint firstItem="h8P-PU-RHX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="aY0-r8-zJ7"/>
                 <constraint firstItem="b3O-PH-5Oo" firstAttribute="centerY" secondItem="hdR-8T-vqp" secondAttribute="centerY" id="gh1-Wh-cH6"/>
                 <constraint firstAttribute="trailing" secondItem="b3O-PH-5Oo" secondAttribute="trailing" constant="16" id="h6m-OI-kiu"/>

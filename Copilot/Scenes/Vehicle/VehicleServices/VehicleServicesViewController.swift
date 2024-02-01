@@ -118,6 +118,16 @@ extension VehicleServicesViewController: UICollectionViewDataSource, UICollectio
 }
 
 extension VehicleServicesViewController: VehicleServicesSearchCellDelegate {
+   
+    func didTapRemoveCityFilter() {
+        viewModel.filterCity = nil
+        reloadData()
+    }
+    
+    func didTapRemoveDistrictFilter() {
+        viewModel.filterDistrict = nil
+        reloadData()
+    }
     
     func didTapRemoveFilter() {
         viewModel.filterCity = nil
