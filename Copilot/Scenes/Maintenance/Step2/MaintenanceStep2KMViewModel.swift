@@ -21,6 +21,7 @@ protocol MaintenanceStep2KMViewModelType: AnyObject {
     
     func getBack()
     func goToNotMaintenancePeriod()
+    func checkEligible()
 }
 
 class MaintenanceStep2KMViewModel: MaintenanceStep2KMViewModelType {
@@ -35,6 +36,24 @@ class MaintenanceStep2KMViewModel: MaintenanceStep2KMViewModelType {
     func goToNotMaintenancePeriod() {
         coordinatorDelegate?.goToServices()
 //        coordinatorDelegate?.goToNotMaintenancePeriod()
+    }
+    
+    func checkEligible() {
+        Loading.shared.show()
+        APIService.getMaintenanceEligible { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if model != nil {
+                self.coordinatorDelegate?.goToServices()
+            } else {
+                self.goToNotMaintenancePeriod()
+            }
+//            if let error = error {
+//                self.delegate?.showError(title: Strings.errorTitle,
+//                                         message: error.message)
+//            }
+        }
     }
     
 }

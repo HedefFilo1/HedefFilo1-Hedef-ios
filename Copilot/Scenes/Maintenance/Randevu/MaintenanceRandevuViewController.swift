@@ -13,7 +13,7 @@ class MaintenanceRandevuViewController: ServiceRandevuViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 #if DEV_DEBUG
-        viewModel.goToConfirmedRandevu()
+//        viewModel.goToConfirmedRandevu()
 #endif
     }
     

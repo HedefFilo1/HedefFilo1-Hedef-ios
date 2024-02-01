@@ -87,7 +87,8 @@ class MaintenanceStep2KMViewController: UIViewController {
     }
 
     @IBAction func didContinue() {
-        viewModel.goToNotMaintenancePeriod()
+//        viewModel.goToNotMaintenancePeriod()
+        viewModel.checkEligible()
     }
 }
 

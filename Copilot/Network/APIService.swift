@@ -287,7 +287,7 @@ class APIService {
                            district: String,
                            appointmentDate: Date,
                            completion: @escaping (Success?, APIResponseError?) -> Void) {
-//        let serverdate = appointmentDate.getServerDate()
+        let serverdate = appointmentDate.getServerDate()
         let route = "copilot/case"
         let params = [
             "webCategory": "TIRE",
@@ -298,7 +298,7 @@ class APIService {
             "supplierPhone": supplierPhone,
             "city": city,
             "district": district,
-//            "appointmentDate": serverdate
+            "appointmentDate": serverdate
         ] as [String: Any]
         
         let req = APIRequest<Success>(route: route,
@@ -311,41 +311,43 @@ class APIService {
         req.start()
     }
     
-    //    static func getPlaces(lat: Double, lon: Double, types: [String], completion: @escaping ([Places]?, APIResponseError?) -> Void) {
-    //        //        var route = "nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.GMSServiceAPIKey)"
-    //        //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
-    //        //        route += "&types=\(typesString)"
-    //        //        route = route.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? route
-    //        //
-    //        //        let req = APIRequest<[Places]>(route: route, method: .get)
-    //        //        req.baseURL = "https://maps.googleapis.com/maps/api/place/"
-    //        //        req.headers = nil
-    //        //        req.identifier = "Get Places"
-    //        //        req.log = loggingEnabled
-    //        //        req.completion = { model, error in
-    //        //
-    //        //            completion(model, error)
-    //        //        }
-    //        //        req.start()
-    //
-    //        var placesTask: URLSessionDataTask?
-    //
-    //        var urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lon)&radius=\(1000)&rankby=prominence&sensor=true&key=\(CodeStrings.googlePlacesAPIKey)"
-    //        let typesString = types.count > 0 ? types.joined(separator: "|") : "food"
-    //        urlString += "&types=\(typesString)"
-    //        urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? urlString
-    //
-    //        guard let url = URL(string: urlString) else { return}
-    //
-    //        placesTask = URLSession.shared.dataTask(with: url) { data, response, error in
-    //
-    //            guard let data = data else {
-    //                return
-    //            }
-    //            completion(nil, nil)
-    //            print(data)
-    //        }
-    //
-    //        placesTask?.resume()
-    //    }
+    static func createMaintenanceCase(supplierName: String,
+                                      supplierPhone: String,
+                                      city: String,
+                                      district: String,
+                                      appointmentDate: Date,
+                                      completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let serverdate = appointmentDate.getServerDate()
+        
+        let route = "copilot/case"
+        let params = [
+            "webCategory": "MAINTENANCE",
+            "accidentType": "MAINTENANCE",
+            "supplierName": supplierName,
+            "supplierPhone": supplierPhone,
+            "city": city,
+            "district": district,
+            "appointmentDate": serverdate
+        ] as [String: Any]
+        
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "createMaintenanceCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
+    static func getMaintenanceEligible(completion: @escaping (Success?, APIResponseError?) -> Void) {
+        let route = "copilot/maintenance-eligible"
+        let req = APIRequest<Success>(route: route, method: .get, hasToken: true)
+        req.identifier = "getMaintenanceEligible"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
 }
