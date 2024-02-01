@@ -152,4 +152,12 @@ extension Strings {
     static var lastikRandevuAcceptionTextStep3: String {
         return localized(string: "lastikRandevuAcceptionTextStep3")
     }
+    
+    static var edit: String {
+        return localized(string: "edit")
+    }
+    
+    static var confirm: String {
+        return localized(string: "confirm")
+    }
 }

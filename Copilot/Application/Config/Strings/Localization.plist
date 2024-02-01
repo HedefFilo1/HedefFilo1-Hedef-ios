@@ -1764,6 +1764,22 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
+        <key>confirm</key>
+        <dict>
+            <key>tr</key>
+            <string>Onayla</string>
+            <key>en</key>
+            <string>Confirm</string>
+        </dict>
+        
+        <key>edit</key>
+        <dict>
+            <key>tr</key>
+            <string>Düzenle</string>
+            <key>en</key>
+            <string>Edit</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

@@ -20,5 +20,7 @@ class MaintenanceRandevuViewController: ServiceRandevuViewController {
     override func setTexts() {
         super.setTexts()
         desciptionLabel.text = Strings.maintenancePleaseConfirmRandevu
+        editButton.setTitle(Strings.edit, for: .normal)
+        confirmButton.setTitle(Strings.confirm, for: .normal)
     }
 }

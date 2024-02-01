@@ -11,5 +11,7 @@ class MaintenanceConfirmViewController: ConfirmedRandevuViewController {
     override func setTexts() {
         super.setTexts()
         titleLabel.text = Strings.miantenanceRandevuSuccessMessage
+        editButton.setTitle(Strings.edit, for: .normal)
+        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }
 }
