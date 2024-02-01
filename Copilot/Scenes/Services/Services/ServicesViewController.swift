@@ -134,6 +134,16 @@ extension ServicesViewController: UICollectionViewDataSource, UICollectionViewDe
 
 extension ServicesViewController: ServicesSearchCellDelegate {
     
+    func didTapRemoveCityFilter() {
+        viewModel.filterCity = nil
+        reloadData()
+    }
+    
+    func didTapRemoveDistrictFilter() {
+        viewModel.filterDistrict = nil
+        reloadData()
+    }
+    
     func didTapRemoveFilter() {
         viewModel.filterCity = nil
         viewModel.filterDistrict = nil
