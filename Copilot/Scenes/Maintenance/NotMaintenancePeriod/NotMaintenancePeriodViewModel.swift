@@ -23,7 +23,7 @@ protocol NotMaintenancePeriodViewModelType: AnyObject {
     var remainingKM: Int { get}
     
     func getBack()
-    func getAppoinment()
+    func getBackToHome()
 }
 
 class NotMaintenancePeriodViewModel: NotMaintenancePeriodViewModelType {
@@ -37,13 +37,11 @@ class NotMaintenancePeriodViewModel: NotMaintenancePeriodViewModelType {
         return nextMaintenanceKm - userInputKm
     }
     
-    
     func getBack() {
         coordinatorDelegate?.getBack()
     }
     
-    func getAppoinment() {
-        
+    func getBackToHome() {
+        coordinatorDelegate?.getBackToHome()
     }
-    
 }

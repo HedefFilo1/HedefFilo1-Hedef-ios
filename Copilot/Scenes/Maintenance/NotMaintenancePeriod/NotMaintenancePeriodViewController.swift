@@ -77,7 +77,7 @@ class NotMaintenancePeriodViewController: UIViewController {
     }
     
     @IBAction func didTapGetBackToHome() {
-        
+        viewModel.getBackToHome()
     }
 }
 
