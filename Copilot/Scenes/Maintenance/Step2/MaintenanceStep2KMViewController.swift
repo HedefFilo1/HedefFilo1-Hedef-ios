@@ -88,7 +88,10 @@ class MaintenanceStep2KMViewController: UIViewController {
 
     @IBAction func didContinue() {
 //        viewModel.goToNotMaintenancePeriod()
-        viewModel.checkEligible()
+        guard let text = kmTextField.text?.replacingOccurrences(of: " KM", with: "") else { return }
+        if let kmeter = Int(text) {
+            viewModel.checkEligible(kmeter: kmeter)
+        }
     }
 }
 

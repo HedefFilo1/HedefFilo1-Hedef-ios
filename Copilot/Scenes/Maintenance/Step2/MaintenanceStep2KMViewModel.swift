@@ -8,7 +8,7 @@
 import Foundation
 protocol MaintenanceStep2KMVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToNotMaintenancePeriod()
+    func goToNotMaintenancePeriod(nextMaintenanceKm: Int, userInputKm: Int)
     func goToServices()
 }
 
@@ -20,8 +20,8 @@ protocol MaintenanceStep2KMViewModelType: AnyObject {
     var delegate: MaintenanceStep2KMViewModelDelegate? { get set }
     
     func getBack()
-    func goToNotMaintenancePeriod()
-    func checkEligible()
+    func goToNotMaintenancePeriod(nextMaintenanceKm: Int, userInputKm: Int)
+    func checkEligible(kmeter: Int)
 }
 
 class MaintenanceStep2KMViewModel: MaintenanceStep2KMViewModelType {
@@ -33,26 +33,27 @@ class MaintenanceStep2KMViewModel: MaintenanceStep2KMViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToNotMaintenancePeriod() {
-        coordinatorDelegate?.goToServices()
-//        coordinatorDelegate?.goToNotMaintenancePeriod()
+    func goToNotMaintenancePeriod(nextMaintenanceKm: Int, userInputKm: Int) {
+        coordinatorDelegate?.goToNotMaintenancePeriod(nextMaintenanceKm: nextMaintenanceKm, userInputKm: userInputKm)
     }
     
-    func checkEligible() {
+    func checkEligible(kmeter: Int) {
         Loading.shared.show()
-        APIService.getMaintenanceEligible { [weak self] model, error in
+        APIService.getMaintenanceEligible(kmeter: kmeter) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
-            if model != nil {
-                self.coordinatorDelegate?.goToServices()
-            } else {
-                self.goToNotMaintenancePeriod()
+            if let model {
+                if model.eligible {
+                    self.coordinatorDelegate?.goToServices()
+                } else {
+                    self.goToNotMaintenancePeriod(nextMaintenanceKm: model.nextMaintenanceKm, userInputKm: kmeter)
+                }
             }
-//            if let error = error {
-//                self.delegate?.showError(title: Strings.errorTitle,
-//                                         message: error.message)
-//            }
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
         }
     }
     

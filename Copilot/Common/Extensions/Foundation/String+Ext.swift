@@ -94,6 +94,15 @@ extension String {
         return formattedNumber ?? ""
     }
     
+    func getFormattedIntNumber() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let int = Int(self) ?? -1
+        let nsNumber = NSNumber(value: int)
+        let str = formatter.string(from: nsNumber) ?? ""
+        return str
+    }
+    
 }
 
 extension Date {
@@ -134,3 +143,4 @@ extension Data {
         
     }
 }
+

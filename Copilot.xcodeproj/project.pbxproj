@@ -225,6 +225,7 @@
 		89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */; };
 		89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BB82AD47902002C70E4 /* MainTabBarController.swift */; };
 		89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */; };
+		89B610DE2B6CDB0C0052A417 /* GetEligible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B610DD2B6CDB0C0052A417 /* GetEligible.swift */; };
 		89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */; };
 		89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */; };
 		89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */; };
@@ -549,6 +550,7 @@
 		89B12BB62AD478C0002C70E4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		89B12BB82AD47902002C70E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		89B12BBA2AD4790B002C70E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		89B610DD2B6CDB0C0052A417 /* GetEligible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEligible.swift; sourceTree = "<group>"; };
 		89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewController.swift; sourceTree = "<group>"; };
 		89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewModel.swift; sourceTree = "<group>"; };
 		89B6F62A2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step4TowTruckViewController.swift; sourceTree = "<group>"; };
@@ -1486,6 +1488,7 @@
 				89F23BC52B29EC220081DD85 /* Document.swift */,
 				892B23832B2C40680000E6E1 /* MaintenanceLast.swift */,
 				89B790CE2B5FC54900993933 /* GetTireControl.swift */,
+				89B610DD2B6CDB0C0052A417 /* GetEligible.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2594,6 +2597,7 @@
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
+				89B610DE2B6CDB0C0052A417 /* GetEligible.swift in Sources */,
 				891D78382B445C3F008FC722 /* ServiceDetailViewModel.swift in Sources */,
 				89F23BC02B299FE60081DD85 /* PdfViewerViewModel.swift in Sources */,
 				89C55DEC2AC4A66300C3066A /* String+Ext.swift in Sources */,

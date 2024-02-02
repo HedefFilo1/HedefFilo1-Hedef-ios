@@ -60,8 +60,10 @@ class NotMaintenancePeriodViewController: UIViewController {
     
     func setPeriodLabels() {
         setAttributedText(label: daysLabel, title: Strings.timeToMaintenance, value: "365 Gün")
-        setAttributedText(label: kmLabel, title: Strings.mileageToBeMaintained, value: "40.000 KM")
-        setAttributedText(label: remainedKmLabel, title: Strings.kmRemainingForMaintenance, value: "4.000 KM")
+        let str = "\(viewModel.nextMaintenanceKm)".getFormattedIntNumber()
+        setAttributedText(label: kmLabel, title: Strings.mileageToBeMaintained, value: "\(str) KM")
+        let remaining = "\(viewModel.remainingKM)".getFormattedIntNumber()
+        setAttributedText(label: remainedKmLabel, title: Strings.kmRemainingForMaintenance, value: "\(remaining) KM")
     }
     
     func setAttributedText(label: UILabel, title: String, value: String) {

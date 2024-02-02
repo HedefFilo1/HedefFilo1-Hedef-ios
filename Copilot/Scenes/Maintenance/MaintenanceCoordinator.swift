@@ -56,12 +56,14 @@ extension MaintenanceCoordinator: MaintenanceVMCoordinatorDelegate {
 }
 
 extension MaintenanceCoordinator: MaintenanceStep2KMVMCoordinatorDelegate,
-                                  NotMaintenancePeriodVMCoordinatorDelegate {
+                                  NotMaintenancePeriodVMCoordinatorDlgt {
     
-    func goToNotMaintenancePeriod() {
+    func goToNotMaintenancePeriod(nextMaintenanceKm: Int, userInputKm: Int) {
         let controller: NotMaintenancePeriodViewController = storyboard.instantiateViewController()
         controller.viewModel = NotMaintenancePeriodViewModel()
         controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.nextMaintenanceKm = nextMaintenanceKm
+        controller.viewModel.userInputKm = userInputKm
         navigationController.pushViewController(controller, animated: true)
     }
     

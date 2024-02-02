@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NotMaintenancePeriodVMCoordinatorDelegate: AnyObject {
+protocol NotMaintenancePeriodVMCoordinatorDlgt: AnyObject {
     func getBack()
     func getBackToHome()
 }
@@ -16,8 +16,11 @@ protocol NotMaintenancePeriodViewModelDelegate: BaseViewModelDelegate {
 }
 
 protocol NotMaintenancePeriodViewModelType: AnyObject {
-    var coordinatorDelegate: NotMaintenancePeriodVMCoordinatorDelegate? { get set }
+    var coordinatorDelegate: NotMaintenancePeriodVMCoordinatorDlgt? { get set }
     var delegate: NotMaintenancePeriodViewModelDelegate? { get set }
+    var nextMaintenanceKm: Int { get set }
+    var userInputKm: Int { get set }
+    var remainingKM: Int { get}
     
     func getBack()
     func getAppoinment()
@@ -25,8 +28,15 @@ protocol NotMaintenancePeriodViewModelType: AnyObject {
 
 class NotMaintenancePeriodViewModel: NotMaintenancePeriodViewModelType {
     
-    weak var coordinatorDelegate: NotMaintenancePeriodVMCoordinatorDelegate?
+    weak var coordinatorDelegate: NotMaintenancePeriodVMCoordinatorDlgt?
     weak var delegate: NotMaintenancePeriodViewModelDelegate?
+    var nextMaintenanceKm: Int = 0
+    var userInputKm: Int = 0
+    
+    var remainingKM: Int {
+        return nextMaintenanceKm - userInputKm
+    }
+    
     
     func getBack() {
         coordinatorDelegate?.getBack()
