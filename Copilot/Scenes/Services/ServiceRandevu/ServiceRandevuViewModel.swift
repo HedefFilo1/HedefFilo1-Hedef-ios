@@ -61,7 +61,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
         APIService.createCase(tireType: tireSupportType ?? .damage,
                               towTruck: towTruck,
                               supplierName: service.name,
-                              supplierPhone: "",
+                              supplierPhone: service.phone ?? "",
                               city: service.city ?? "",
                               district: service.district ?? "",
                               appointmentDate: date) { [weak self] _, error in
