@@ -10,6 +10,7 @@ import Foundation
 struct City {
     let name: String
     var districts: [String] = []
+    var order: Int
 }
 
 protocol ServiceFilterVMCoordinatorDelegate: AnyObject {
@@ -51,7 +52,7 @@ class ServiceFilterViewModel: ServiceFilterViewModelType {
             }
             
             for item in cities {
-                var cityModel = City(name: item, districts: [])
+                var cityModel = City(name: item, districts: [], order: 10)
                 
                 var districts = Set<String>()
                 for service in services {
@@ -60,8 +61,18 @@ class ServiceFilterViewModel: ServiceFilterViewModelType {
                     }
                 }
                 cityModel.districts = districts.sorted()
+                
+                if item == "İSTANBUL" {
+                    cityModel.order = 1
+                    
+                } else if item == "ANKARA" {
+                    cityModel.order = 2
+                    
+                } else if item == "İZMİR" {
+                    cityModel.order = 3
+                }
                 self.cities.append(cityModel)
-                self.cities = self.cities.sorted(by: { $0.name < $1.name })
+                self.cities = self.cities.sorted(by: { ($0.order, $0.name) < ($1.order, $1.name) })
             }
             
         }

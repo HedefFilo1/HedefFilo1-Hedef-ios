@@ -34,7 +34,7 @@ class ServicesViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
 #if DEV_DEBUG
-        
+        viewModel.getServices(lat: nil, lon: nil)
         
 #endif
     }
