@@ -41,7 +41,6 @@ class ServiceTabViewController: UIViewController {
         //        let str = Date().getServerDate()
         //        print(str)
         
-        
 #endif
     }
     

@@ -105,7 +105,10 @@ extension CalendarViewController: FSCalendarDelegate,
     }
     
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-        return !isWeekend(date: date)
+        if isWeekend(date: date) || date < Date() {
+            return false
+        }
+        return true
     }
     
     func isWeekend(date: Date) -> Bool {

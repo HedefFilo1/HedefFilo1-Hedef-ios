@@ -12,7 +12,6 @@ class CPPointButton: UIView {
     
     let centerView = UIView()
     
-    
     var isEnabled: Bool = false {
         didSet {
             layer.borderWidth = isEnabled ? 1: 0

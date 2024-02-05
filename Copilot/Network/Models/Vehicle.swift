@@ -36,7 +36,7 @@ struct Vehicle: Decodable {
     }
     
     var duration: String {
-        let number = leaseDuration ?? "0"
+        let number = leaseDuration // ?? "0"
         return "\(number) \(Strings.months)"
     }
 
