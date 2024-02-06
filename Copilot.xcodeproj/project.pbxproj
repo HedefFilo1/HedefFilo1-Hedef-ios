@@ -275,6 +275,8 @@
 		89DBD9D02B72568B007B416A /* BreakdownStep2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */; };
 		89DBD9D32B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D22B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift */; };
 		89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */; };
+		89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */; };
+		89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */; };
 		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
@@ -604,6 +606,8 @@
 		89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownStep2ViewModel.swift; sourceTree = "<group>"; };
 		89DBD9D22B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownFlow1Step2TowTruckVController.swift; sourceTree = "<group>"; };
 		89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2TowTruckViewModel.swift; sourceTree = "<group>"; };
+		89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2SelectServiceViewModel.swift; sourceTree = "<group>"; };
+		89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2SelectServiceVController.swift; sourceTree = "<group>"; };
 		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
@@ -1928,12 +1932,28 @@
 		89DBD9CC2B725615007B416A /* Step2 */ = {
 			isa = PBXGroup;
 			children = (
-				89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */,
-				89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */,
 				89DBD9D22B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift */,
 				89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */,
 			);
 			path = Step2;
+			sourceTree = "<group>";
+		};
+		89DBD9D62B72C684007B416A /* Flow1 */ = {
+			isa = PBXGroup;
+			children = (
+				89DBD9CC2B725615007B416A /* Step2 */,
+				89DBD9D72B72C6C4007B416A /* step3 */,
+			);
+			path = Flow1;
+			sourceTree = "<group>";
+		};
+		89DBD9D72B72C6C4007B416A /* step3 */ = {
+			isa = PBXGroup;
+			children = (
+				89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */,
+				89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */,
+			);
+			path = step3;
 			sourceTree = "<group>";
 		};
 		89DC31292B3E852400791C3B /* ServiceFilter */ = {
@@ -2150,8 +2170,10 @@
 			children = (
 				89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */,
 				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
+				89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */,
+				89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
-				89DBD9CC2B725615007B416A /* Step2 */,
+				89DBD9D62B72C684007B416A /* Flow1 */,
 			);
 			path = BreakDown;
 			sourceTree = "<group>";
@@ -2406,6 +2428,7 @@
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
+				89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
@@ -2586,6 +2609,7 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
+				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,

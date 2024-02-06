@@ -1,5 +1,5 @@
 //
-//  BreakdownFlow1Step2TowTruckVController.swift
+//  BrkdwnFlw1Stp2SelectServiceVController.swift
 //  Copilot
 //
 //  Created by Jamal on 2/6/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
+class BrkdwnFlw1Stp2SelectServiceVController: UIViewController {
     
-    var viewModel: BrkdwnFlw1Stp2TowTruckViewModelType! {
+    var viewModel: BrkdwnFlw1Stp2SelectServiceViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -19,8 +19,8 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var yesButton: CPLightButton!
-    @IBOutlet weak var noButton: CPLightButton!
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var serviceButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,6 +39,7 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
+//        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {
@@ -47,28 +48,25 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
         descriptionLabel.apply(.blackS20B700)
+        secondLabel.apply(.greyS14R400)
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.breakdownTowTruckDescription
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        titleLabel.text = Strings.breakDownOperations
+        descriptionLabel.text = Strings.getWellSoonDoNotStart
+        secondLabel.text = Strings.towTruckSendingDescription
+        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTapYes() {
-//        viewModel.goToFlow3Step4TowTruck()
-    }
-    
-    @IBAction func didTapNo() {
-        viewModel.getBack()
+    @IBAction func didTapService() {
+        viewModel.goToServices()
     }
 }
 
-extension BrkdwnFlw1Stp2TowTruckVController: BrkdwnFlw1Stp2TowTruckViewModelDelegate {
+extension BrkdwnFlw1Stp2SelectServiceVController: BrkdwnFlw1Stp2SelectServiceVMDelegate {
     
 }
