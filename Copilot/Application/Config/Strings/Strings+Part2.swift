@@ -57,8 +57,8 @@ extension Strings {
         return localized(string: "no")
     }
     
-    static var getWellSoon: String {
-        return localized(string: "getWellSoon")
+    static var getWellSoonDoNotStart: String {
+        return localized(string: "getWellSoonDoNotStart")
     }
     
     static var towTruckSendingDescription: String {
@@ -159,5 +159,33 @@ extension Strings {
     
     static var confirm: String {
         return localized(string: "confirm")
+    }
+    
+    static var getWellSoon: String {
+        return localized(string: "getWellSoon")
+    }
+    
+    static var donotStartVehicle: String {
+        return localized(string: "donotStartVehicle")
+    }
+    
+    static var breakdownStep2Description: String {
+        return localized(string: "breakdownStep2Description")
+    }
+    
+    static var showLocation: String {
+        return localized(string: "showLocation")
+    }
+    
+    static var callSolutionCenter: String {
+        return localized(string: "callSolutionCenter")
+    }
+    
+    static var warning: String {
+        return localized(string: "warning")
+    }
+    
+    static var breakdownWarrningMessage: String {
+        return localized(string: "breakdownWarrningMessage")
     }
 }

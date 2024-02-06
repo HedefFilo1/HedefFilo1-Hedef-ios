@@ -271,6 +271,8 @@
 		89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */; };
 		89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */; };
 		89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAB8092AC73BD50098BA67 /* CodeStrings.swift */; };
+		89DBD9CE2B725682007B416A /* BreakdownStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */; };
+		89DBD9D02B72568B007B416A /* BreakdownStep2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */; };
 		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
@@ -596,6 +598,8 @@
 		89DAB8052AC738720098BA67 /* CPPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPasswordTextField.swift; sourceTree = "<group>"; };
 		89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPEmailTextField.swift; sourceTree = "<group>"; };
 		89DAB8092AC73BD50098BA67 /* CodeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStrings.swift; sourceTree = "<group>"; };
+		89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownStep2ViewController.swift; sourceTree = "<group>"; };
+		89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownStep2ViewModel.swift; sourceTree = "<group>"; };
 		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
@@ -1917,6 +1921,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		89DBD9CC2B725615007B416A /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */,
+				89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
 		89DC31292B3E852400791C3B /* ServiceFilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -2132,6 +2145,7 @@
 				89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */,
 				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
+				89DBD9CC2B725615007B416A /* Step2 */,
 			);
 			path = BreakDown;
 			sourceTree = "<group>";
@@ -2377,6 +2391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
+				89DBD9D02B72568B007B416A /* BreakdownStep2ViewModel.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
@@ -2499,6 +2514,7 @@
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
+				89DBD9CE2B725682007B416A /* BreakdownStep2ViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,

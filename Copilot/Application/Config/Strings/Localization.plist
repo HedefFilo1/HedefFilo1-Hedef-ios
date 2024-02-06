@@ -1556,7 +1556,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your tire repair appointment has been created.</string>
         </dict>
         
-        <key>getWellSoon</key>
+        <key>getWellSoonDoNotStart</key>
         <dict>
             <key>tr</key>
             <string>Geçmiş olsun. Lütfen güvenliğiniz için aracınızı çalıştırmayın.</string>
@@ -1780,28 +1780,60 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Edit</string>
         </dict>
         
-        <key></key>
+        <key>getWellSoon</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geçmiş Olsun</string>
             <key>en</key>
-            <string></string>
+            <string>Get well soon</string>
         </dict>
         
-        <key></key>
+        <key>donotStartVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen güvenliğiniz için aracı çalıştırmayın.</string>
             <key>en</key>
-            <string></string>
+            <string>Please do not start the vehicle for your safety.</string>
         </dict>
         
-        <key></key>
+        <key>breakdownStep2Description</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Konumunuza çekici yönlendirmesi yaptık. Lorem Ipsum anlaşmalı firmamız xx dk içinde sizinle iletişime geçecek.</string>
             <key>en</key>
-            <string></string>
+            <string>We have directed a tow truck to your location. Our Lorem Ipsum contracted company will contact you within xx minutes.</string>
+        </dict>
+        
+        <key>showLocation</key>
+        <dict>
+            <key>tr</key>
+            <string>Konumu Göster</string>
+            <key>en</key>
+            <string>Show Location</string>
+        </dict>
+        
+        <key>callSolutionCenter</key>
+        <dict>
+            <key>tr</key>
+            <string>Çözüm Merkezini Ara</string>
+            <key>en</key>
+            <string>Call Solution Center</string>
+        </dict>
+
+        <key>warning</key>
+        <dict>
+            <key>tr</key>
+            <string>UYARI</string>
+            <key>en</key>
+            <string>WARNING</string>
+        </dict>
+        
+        <key>breakdownWarrningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>İkamet ettiğinizden farklı bir şehirde bulunuyorsanız lütfen çözüm merkezini arayın.</string>
+            <key>en</key>
+            <string>In a different city than where you reside If you are, please call the solution center.</string>
         </dict>
         
         <key></key>

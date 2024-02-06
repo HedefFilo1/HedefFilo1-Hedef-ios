@@ -53,7 +53,7 @@ class Flow3Step4TowTruckViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.getWellSoon
+        descriptionLabel.text = Strings.getWellSoonDoNotStart
         secondLabel.text = Strings.towTruckSendingDescription
         serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
     }
