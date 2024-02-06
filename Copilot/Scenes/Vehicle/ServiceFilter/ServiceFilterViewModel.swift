@@ -72,7 +72,11 @@ class ServiceFilterViewModel: ServiceFilterViewModelType {
                     cityModel.order = 3
                 }
                 self.cities.append(cityModel)
-                self.cities = self.cities.sorted(by: { ($0.order, $0.name) < ($1.order, $1.name) })
+                self.cities = self.cities.sorted { (item1, item2) -> Bool in
+                    return item1.name.compare(item2.name, locale: Locale(identifier: "tr_TR")) == .orderedAscending
+                }
+                
+                self.cities = self.cities.sorted(by: { $0.order < $1.order })
             }
             
         }
