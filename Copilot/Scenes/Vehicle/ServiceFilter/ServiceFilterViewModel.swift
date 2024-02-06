@@ -60,7 +60,9 @@ class ServiceFilterViewModel: ServiceFilterViewModelType {
                         districts.insert(district)
                     }
                 }
-                cityModel.districts = districts.sorted()
+                cityModel.districts = districts.sorted { (item1, item2) -> Bool in
+                    return item1.compare(item2, locale: Locale(identifier: "tr_TR")) == .orderedAscending
+                }
                 
                 if item == "İSTANBUL" {
                     cityModel.order = 1
