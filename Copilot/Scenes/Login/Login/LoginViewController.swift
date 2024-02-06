@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         
 #if DEV_DEBUG
         // just for test
-//        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
+        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
 #endif
     }
     

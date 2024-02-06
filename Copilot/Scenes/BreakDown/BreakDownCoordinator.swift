@@ -47,10 +47,14 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
         navigationController.popToRootViewController(animated: true)
     }
     
-    func goToBreakDownStep2() {
-        let controller: BreakdownStep2ViewController = storyboard.instantiateViewController()
-        controller.viewModel = BreakdownStep2ViewModel()
+    func goToBreakDownStep2TowTruck() {
+        let controller: BrkdwnFlw1Stp2TowTruckVController = storyboard.instantiateViewController()
+        controller.viewModel = BrkdwnFlw1Stp2TowTruckViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+}
+
+extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt {
+    
 }
