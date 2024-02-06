@@ -1,5 +1,5 @@
 //
-//  BrkdwnFlw1Stp2SelectServiceVController.swift
+//  BrkdwnFlw1Stp3SelectServiceVController.swift
 //  Copilot
 //
 //  Created by Jamal on 2/6/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class BrkdwnFlw1Stp2SelectServiceVController: UIViewController {
+class BrkdwnFlw1Stp3SelectServiceVController: UIViewController {
     
-    var viewModel: BrkdwnFlw1Stp2SelectServiceViewModelType! {
+    var viewModel: BrkdwnFlw1Stp3SelectServiceViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -67,6 +67,6 @@ class BrkdwnFlw1Stp2SelectServiceVController: UIViewController {
     }
 }
 
-extension BrkdwnFlw1Stp2SelectServiceVController: BrkdwnFlw1Stp2SelectServiceVMDelegate {
+extension BrkdwnFlw1Stp3SelectServiceVController: BrkdwnFlw1Stp3SelectServiceVMDelegate {
     
 }

@@ -61,7 +61,7 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        viewModel.goToBrkdwnFlw1Stp2SelectService()
+        viewModel.goToBrkdwnFlw1Stp3SelectService()
     }
     
     @IBAction func didTapNo() {

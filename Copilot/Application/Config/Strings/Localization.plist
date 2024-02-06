@@ -1844,12 +1844,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your vehicle will be sent to the service you choose in the next step with a paid tow truck. Do you confirm?</string>
         </dict>
         
-        <key></key>
+        <key>breakdownServicesDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza randevu talebi oluşturmak için lütfen servis seçiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please select service to create a Breakdown appointment request.</string>
         </dict>
         
         <key></key>

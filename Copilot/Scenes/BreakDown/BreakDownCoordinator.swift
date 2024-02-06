@@ -47,7 +47,7 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
         navigationController.popToRootViewController(animated: true)
     }
     
-    func goToBreakDownStep2TowTruck() {
+    func goToFlow1BreakDownStep2TowTruck() {
         let controller: BrkdwnFlw1Stp2TowTruckVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw1Stp2TowTruckViewModel()
         controller.viewModel.coordinatorDelegate = self
@@ -55,11 +55,22 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
     }
 }
 
-extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt {
-    func goToBrkdwnFlw1Stp2SelectService() {
-        let controller: BrkdwnFlw1Stp2SelectServiceVController = storyboard.instantiateViewController()
-        controller.viewModel = BrkdwnFlw1Stp2SelectServiceViewModel()
-//        controller.viewModel.coordinatorDelegate = self
+extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
+                                BrkdwnFlw1Stp3SelectServiceVMCrdintrDlgt {
+    
+    func goToBrkdwnFlw1Stp3SelectService() {
+        let controller: BrkdwnFlw1Stp3SelectServiceVController = storyboard.instantiateViewController()
+        controller.viewModel = BrkdwnFlw1Stp3SelectServiceViewModel()
+        controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+    
+    func goToServices() {
+        let viewController: BrkdwnFlw1Stp2ServicesVController = storyboard.instantiateViewController()
+        viewController.viewModel = ServicesViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.towTruck = false
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
+

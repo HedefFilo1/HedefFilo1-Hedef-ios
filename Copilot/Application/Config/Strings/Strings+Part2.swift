@@ -192,4 +192,8 @@ extension Strings {
     static var breakdownTowTruckDescription: String {
         return localized(string: "breakdownTowTruckDescription")
     }
+    
+    static var breakdownServicesDescription: String {
+        return localized(string: "breakdownServicesDescription")
+    }
 }

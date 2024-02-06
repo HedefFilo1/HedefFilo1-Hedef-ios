@@ -275,8 +275,10 @@
 		89DBD9D02B72568B007B416A /* BreakdownStep2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */; };
 		89DBD9D32B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D22B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift */; };
 		89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */; };
-		89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */; };
-		89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */; };
+		89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift */; };
+		89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift */; };
+		89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */; };
+		89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */; };
 		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
@@ -606,8 +608,10 @@
 		89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownStep2ViewModel.swift; sourceTree = "<group>"; };
 		89DBD9D22B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownFlow1Step2TowTruckVController.swift; sourceTree = "<group>"; };
 		89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2TowTruckViewModel.swift; sourceTree = "<group>"; };
-		89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2SelectServiceViewModel.swift; sourceTree = "<group>"; };
-		89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2SelectServiceVController.swift; sourceTree = "<group>"; };
+		89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp3SelectServiceViewModel.swift; sourceTree = "<group>"; };
+		89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp3SelectServiceVController.swift; sourceTree = "<group>"; };
+		89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2ServicesVController.swift; sourceTree = "<group>"; };
+		89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2ServicesViewModel.swift; sourceTree = "<group>"; };
 		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
@@ -1943,6 +1947,7 @@
 			children = (
 				89DBD9CC2B725615007B416A /* Step2 */,
 				89DBD9D72B72C6C4007B416A /* step3 */,
+				89DBD9DC2B72CAA5007B416A /* Step4 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1950,10 +1955,19 @@
 		89DBD9D72B72C6C4007B416A /* step3 */ = {
 			isa = PBXGroup;
 			children = (
-				89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift */,
-				89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift */,
+				89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift */,
+				89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift */,
 			);
 			path = step3;
+			sourceTree = "<group>";
+		};
+		89DBD9DC2B72CAA5007B416A /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */,
+				89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */,
+			);
+			path = Step4;
 			sourceTree = "<group>";
 		};
 		89DC31292B3E852400791C3B /* ServiceFilter */ = {
@@ -2428,7 +2442,7 @@
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
-				89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp2SelectServiceViewModel.swift in Sources */,
+				89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
@@ -2467,6 +2481,7 @@
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
+				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
@@ -2528,6 +2543,7 @@
 				89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */,
+				89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift in Sources */,
 				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
@@ -2609,7 +2625,7 @@
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
-				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp2SelectServiceVController.swift in Sources */,
+				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,
