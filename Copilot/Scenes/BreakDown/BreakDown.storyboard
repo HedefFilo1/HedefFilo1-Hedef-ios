@@ -212,7 +212,7 @@ soruları cevaplayın.</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-GJ-u7k">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="188.33333333333331" height="32"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="188.33333333333334" height="32"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <connections>
                                                                                     <action selector="didTapCall" destination="UsN-Ut-hN0" eventType="touchUpInside" id="qke-8l-I9p"/>
@@ -234,7 +234,7 @@ soruları cevaplayın.</string>
                                                                             <constraint firstAttribute="trailing" secondItem="pPY-GJ-u7k" secondAttribute="trailing" id="woO-Lp-ZZr"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAe-y9-eG7">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAe-y9-eG7" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="287" width="345" height="48"/>
                                                                         <color key="backgroundColor" name="theme"/>
                                                                         <constraints>
@@ -396,6 +396,7 @@ bulunuyorsanız lütfen çözüm merkezini arayın.</string>
                         <outlet property="descriptionLabel" destination="nV8-oU-3DI" id="qEi-7B-RcV"/>
                         <outlet property="donotStartLabel" destination="zrT-1f-8Gt" id="gPH-08-w8d"/>
                         <outlet property="getWellLabel" destination="2tI-TZ-Lpz" id="xgN-RF-Mm3"/>
+                        <outlet property="homeButton" destination="YAe-y9-eG7" id="XpS-JU-3AR"/>
                         <outlet property="locationLabel" destination="cYk-kY-oil" id="BzR-R7-Xkp"/>
                         <outlet property="showLocationLabel" destination="nad-Va-mHN" id="8Ce-JV-KX7"/>
                         <outlet property="titleLabel" destination="apu-s4-FjV" id="F1L-sP-tWF"/>

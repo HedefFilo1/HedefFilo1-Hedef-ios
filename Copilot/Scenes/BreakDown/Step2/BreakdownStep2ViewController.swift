@@ -26,6 +26,7 @@ class BreakdownStep2ViewController: UIViewController {
     @IBOutlet weak var callView: UIView!
     @IBOutlet weak var callLabel: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var homeButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -48,6 +49,7 @@ class BreakdownStep2ViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
+        homeButton.isEnabled = true
     }
     
     func applyStyle() {
@@ -74,8 +76,8 @@ class BreakdownStep2ViewController: UIViewController {
         showLocationLabel.text = Strings.showLocation
         callLabel.text = Strings.callSolutionCenter
       
-        let text1 = AttributedText(text: "\(Strings.warning): ",type: .themeS12B700)
-        let text2 = AttributedText(text: Strings.breakdownWarrningMessage,type: .greyS12R400)
+        let text1 = AttributedText(text: "\(Strings.warning): ", type: .themeS12B700)
+        let text2 = AttributedText(text: Strings.breakdownWarrningMessage, type: .greyS12R400)
         warningLabel.attributedText = AttributedText.createString(texts: [text1, text2])
     }
     

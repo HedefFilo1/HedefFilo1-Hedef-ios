@@ -26,12 +26,31 @@ class BreakDownCoordinator: Coordinator {
     override func start() {
         let viewController: BreakDownViewController = storyboard.instantiateViewController()
         viewController.viewModel = BreakDownViewModel()
-//        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.coordinatorDelegate = self
 //        viewController.viewModel.appointment = appointment
         navigationController.pushViewController(viewController, animated: true)
     }
     
     override func finish() {
         delegate?.didFinish(from: self)
+    }
+}
+
+extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
+                                BreakdownStep2VMCoordinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
+    }
+    
+    func getBackToHome() {
+        self.navigationController.select(tab: 2)
+        navigationController.popToRootViewController(animated: true)
+    }
+    
+    func goToBreakDownStep2() {
+        let controller: BreakdownStep2ViewController = storyboard.instantiateViewController()
+        controller.viewModel = BreakdownStep2ViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
 }

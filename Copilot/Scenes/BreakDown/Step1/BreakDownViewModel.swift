@@ -9,7 +9,7 @@ import Foundation
 
 protocol BreakDownVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToBreakDownStep2KM()
+    func goToBreakDownStep2()
 //    func goToServiceDetail(service: Supplier?, appointment: Case?, BreakDownSupportType: BreakDownSupportType?)
 }
 
@@ -22,7 +22,7 @@ protocol BreakDownViewModelType: AnyObject {
     var delegate: BreakDownViewModelDelegate? { get set }
     var appointment: Case? { get set }
     func getBack()
-    func goToBreakDownStep2KM()
+    func goToBreakDownStep2()
 }
 
 class BreakDownViewModel: BreakDownViewModelType {
@@ -35,8 +35,8 @@ class BreakDownViewModel: BreakDownViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToBreakDownStep2KM() {
-        coordinatorDelegate?.goToBreakDownStep2KM()
+    func goToBreakDownStep2() {
+        coordinatorDelegate?.goToBreakDownStep2()
     }
     
 }
