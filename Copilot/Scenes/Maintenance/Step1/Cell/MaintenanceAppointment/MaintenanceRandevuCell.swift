@@ -24,7 +24,7 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
             let type = appointment?.appointmentStatus ?? .none
             if type == .appointmentApproved {
                 statusView.backgroundColor = .textSuccess
-                statusLabel.text = Strings.randevuApproved
+                statusLabel.text = Strings.approved
             } else {
                 statusView.backgroundColor = .appYellow
                 statusLabel.text = Strings.waitingToApprove

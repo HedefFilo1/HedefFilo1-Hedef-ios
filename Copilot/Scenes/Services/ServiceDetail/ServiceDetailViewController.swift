@@ -123,7 +123,7 @@ class ServiceDetailViewController: UIViewController {
         let type = item.appointmentStatus
         if type == .appointmentApproved {
             statusView.backgroundColor = .textSuccess
-            statusLabel.text = Strings.randevuApproved
+            statusLabel.text = Strings.approved
             desciptionLabel.text = Strings.tireRepairappointmentCreated
         } else {
             statusView.backgroundColor = .appYellow

@@ -118,6 +118,9 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         if type == .appointmentApproved {
             tireRandevuView.backgroundColor = .textSuccess
             tireRandevuLabel.text = Strings.randevuApproved
+        } else {
+            tireRandevuView.backgroundColor = .theme
+            tireRandevuLabel.text = Strings.appointmentRequestReceived
         }
         view.animate()
     }
@@ -135,6 +138,9 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         if type == .appointmentApproved {
             maintenanceRandevuView.backgroundColor = .textSuccess
             maintenanceRandevuLabel.text = Strings.randevuApproved
+        } else {
+            maintenanceRandevuView.backgroundColor = .theme
+            maintenanceRandevuLabel.text = Strings.appointmentRequestReceived
         }
         view.animate()
     }
