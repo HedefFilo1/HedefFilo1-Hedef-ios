@@ -116,11 +116,12 @@ class ServiceDetailViewController: UIViewController {
     
     func setAppointment() {
         guard let item = viewModel.appointment else { return }
-        titleLabel.text = item.supplierName
+        titleLabel.text = item.supplierName ?? Strings.service
         nameLabel.text = item.supplierName
         addressLabel.text = item.address
-        let type = item.status
-        if type == .approved {
+        phoneLabel.text = item.supplierPhone
+        let type = item.appointmentStatus
+        if type == .appointmentApproved {
             statusView.backgroundColor = .textSuccess
             statusLabel.text = Strings.randevuApproved
             desciptionLabel.text = Strings.tireRepairappointmentCreated

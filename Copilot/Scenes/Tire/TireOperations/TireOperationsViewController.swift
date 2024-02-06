@@ -30,12 +30,12 @@ class TireOperationsViewController: UIViewController {
         viewModel.getTire()
         
 #if DEV_DEBUG
-                if let coordintor = viewModel.coordinatorDelegate as? TireCoordinator {
-                    coordintor.goToServices(tireSupportType: .change, towTruck: false)
+//                if let coordintor = viewModel.coordinatorDelegate as? TireCoordinator {
+//                    coordintor.goToServices(tireSupportType: .change, towTruck: false)
 //                    coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: "", district: "", city: "", phone: ""))
 //                    coordintor.goToServiceDetail(service: nil, appointment: nil, tireSupportType: .newWinter)
 //                    coordintor.goToLastikOperations(appointment: nil)
-                }
+//                }
         
 #endif
     }
