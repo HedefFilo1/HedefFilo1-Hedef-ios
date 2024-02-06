@@ -277,8 +277,10 @@
 		89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */; };
 		89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift */; };
 		89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift */; };
-		89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */; };
-		89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */; };
+		89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift */; };
+		89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift */; };
+		89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9E22B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift */; };
+		89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9E42B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift */; };
 		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
@@ -610,8 +612,10 @@
 		89DBD9D42B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2TowTruckViewModel.swift; sourceTree = "<group>"; };
 		89DBD9D82B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp3SelectServiceViewModel.swift; sourceTree = "<group>"; };
 		89DBD9DA2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp3SelectServiceVController.swift; sourceTree = "<group>"; };
-		89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2ServicesVController.swift; sourceTree = "<group>"; };
-		89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp2ServicesViewModel.swift; sourceTree = "<group>"; };
+		89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp4ServicesVController.swift; sourceTree = "<group>"; };
+		89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp4ServicesViewModel.swift; sourceTree = "<group>"; };
+		89DBD9E22B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp5ServiceDetailVController.swift; sourceTree = "<group>"; };
+		89DBD9E42B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp5ServiceDetailViewModel.swift; sourceTree = "<group>"; };
 		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
@@ -1948,6 +1952,7 @@
 				89DBD9CC2B725615007B416A /* Step2 */,
 				89DBD9D72B72C6C4007B416A /* step3 */,
 				89DBD9DC2B72CAA5007B416A /* Step4 */,
+				89DBD9E12B72CF37007B416A /* Step5 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1964,10 +1969,19 @@
 		89DBD9DC2B72CAA5007B416A /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
-				89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift */,
-				89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift */,
+				89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift */,
+				89DBD9DD2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift */,
 			);
 			path = Step4;
+			sourceTree = "<group>";
+		};
+		89DBD9E12B72CF37007B416A /* Step5 */ = {
+			isa = PBXGroup;
+			children = (
+				89DBD9E42B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift */,
+				89DBD9E22B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift */,
+			);
+			path = Step5;
 			sourceTree = "<group>";
 		};
 		89DC31292B3E852400791C3B /* ServiceFilter */ = {
@@ -2471,6 +2485,7 @@
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */,
+				89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */,
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,
@@ -2481,7 +2496,7 @@
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
-				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp2ServicesVController.swift in Sources */,
+				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
@@ -2543,7 +2558,7 @@
 				89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */,
-				89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp2ServicesViewModel.swift in Sources */,
+				89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift in Sources */,
 				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
@@ -2606,6 +2621,7 @@
 				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
+				89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,

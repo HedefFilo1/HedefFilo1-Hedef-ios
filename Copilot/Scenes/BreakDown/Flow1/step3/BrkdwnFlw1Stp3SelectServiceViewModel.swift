@@ -9,7 +9,7 @@ import Foundation
 
 protocol BrkdwnFlw1Stp3SelectServiceVMCrdintrDlgt: AnyObject {
     func getBack()
-    func goToServices()
+    func goToServices(towTruck: Bool)
 }
 
 protocol BrkdwnFlw1Stp3SelectServiceVMDelegate: AnyObject {
@@ -34,6 +34,6 @@ class BrkdwnFlw1Stp3SelectServiceViewModel: BrkdwnFlw1Stp3SelectServiceViewModel
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices()
+        coordinatorDelegate?.goToServices(towTruck: true)
     }
 }
