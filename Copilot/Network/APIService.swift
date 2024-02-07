@@ -345,6 +345,38 @@ class APIService {
         req.start()
     }
     
+    static func createBreakDownCase(supplierName: String,
+                                    supplierPhone: String,
+                                    city: String,
+                                    district: String,
+                                    appointmentDate: Date?,
+                                    completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "copilot/case"
+        var params = [
+            "webCategory": "FAILURE",
+            "accidentType": "FAILURE",
+            "supplierName": supplierName,
+            "supplierPhone": supplierPhone,
+            "city": city,
+            "district": district,
+        ] as [String: Any]
+        
+        if let appointmentDate {
+            let serverdate = appointmentDate.getServerDate()
+            params["appointmentDate"] = serverdate
+        }
+        
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "createBreakDownCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     static func getMaintenanceEligible(kmeter: Int, completion: @escaping (GetEligible?, APIResponseError?) -> Void) {
         let route = "copilot/maintenance-eligible?km=\(kmeter)"
         let req = APIRequest<GetEligible>(route: route, method: .get, hasToken: true)

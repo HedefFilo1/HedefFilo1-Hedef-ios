@@ -11,7 +11,7 @@ import MapKit
 
 protocol BrkdwnFlw1Stp5ServiceDetailVMCrdintrDlgt: AnyObject {
     func getBack()
-    
+    func goToBreakDownSuccessRandevu(service: Supplier, date: Date?)
 }
 
 protocol BrkdwnFlw1Stp5ServiceDetailVMdlDlgt: BaseViewModelDelegate {
@@ -24,7 +24,7 @@ protocol BrkdwnFlw1Stp5ServiceDetailViewModelType: AnyObject {
     var towTruck: Bool { get set }
     var service: Supplier? { get set }
     func getBack()
-    
+    func createRandevu()
     func openGoogleMap(latitude: Double, longitude: Double)
     func openAppleMap(latitude: Double, longitude: Double)
 }
@@ -50,5 +50,29 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+    }
+    
+    func createRandevu() {
+        if true {
+            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, date: nil)
+            return
+        }
+        guard let service else { return }
+        Loading.shared.show()
+        APIService.createBreakDownCase(supplierName: service.name,
+                                       supplierPhone: service.phone ?? "",
+                                       city: service.city ?? "",
+                                       district: service.district ?? "",
+                                       appointmentDate: nil) { [weak self] _, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else {
+                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, date: nil)
+            }
+        }
     }
 }

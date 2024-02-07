@@ -78,7 +78,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     }
     
     @IBAction func didContinue() {
-     
+        viewModel.createRandevu()
     }
     
     func setService() {

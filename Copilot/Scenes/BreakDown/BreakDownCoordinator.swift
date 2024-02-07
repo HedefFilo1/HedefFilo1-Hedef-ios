@@ -37,7 +37,8 @@ class BreakDownCoordinator: Coordinator {
 }
 
 extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
-                                BreakdownStep2VMCoordinatorDelegate {
+                                BreakdownStep2VMCoordinatorDelegate,
+                                BreakDownSuccessRandevuVMCrdinatorDlgt {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -47,6 +48,14 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
         navigationController.popToRootViewController(animated: true)
     }
     
+    func goToBreakDownSuccessRandevu(service: Supplier, date: Date?) {
+        let controller: BreakDownSuccessRandevuViewController = storyboard.instantiateViewController()
+        controller.viewModel = BreakDownSuccessRandevuViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.service = service
+        controller.viewModel.date = date
+        navigationController.pushViewController(controller, animated: true)
+    }
     func goToFlow1BreakDownStep2TowTruck() {
         let controller: BrkdwnFlw1Stp2TowTruckVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw1Stp2TowTruckViewModel()
@@ -57,7 +66,9 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
 
 extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
                                 BrkdwnFlw1Stp3SelectServiceVMCrdintrDlgt,
-                                BrkdwnFlw1Stp2ServicesCrdinatorDlgt {
+                                BrkdwnFlw1Stp2ServicesCrdinatorDlgt,
+                                BrkdwnFlw1Stp5ServiceDetailVMCrdintrDlgt {
+    
     func goToBrkdwnFlw1Stp3SelectService() {
         let controller: BrkdwnFlw1Stp3SelectServiceVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw1Stp3SelectServiceViewModel()
@@ -77,7 +88,7 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
     func goToBrkdwnFlw1Stp5ServiceDetail(towTruck: Bool, service: Supplier) {
         let controller: BrkdwnFlw1Stp5ServiceDetailVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw1Stp5ServiceDetailViewModel()
-//        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.coordinatorDelegate = self
         controller.viewModel.service = service
         controller.viewModel.towTruck = towTruck
         navigationController.pushViewController(controller, animated: true)

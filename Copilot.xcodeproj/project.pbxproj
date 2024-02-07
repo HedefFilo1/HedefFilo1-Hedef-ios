@@ -160,6 +160,8 @@
 		896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3682AD722590048025A /* TireInfoCell.xib */; };
 		896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */; };
 		896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */; };
+		8976B01B2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B01A2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift */; };
+		8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B01C2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift */; };
 		897835CF2B44A0CB00C63AA7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897835CE2B44A0CB00C63AA7 /* CalendarViewController.swift */; };
 		897835D12B44A0D400C63AA7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897835D02B44A0D400C63AA7 /* CalendarViewModel.swift */; };
 		897835D42B454F3900C63AA7 /* ServiceRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897835D32B454F3900C63AA7 /* ServiceRandevuViewController.swift */; };
@@ -493,6 +495,8 @@
 		896CB3682AD722590048025A /* TireInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TireInfoCell.xib; sourceTree = "<group>"; };
 		896CB36C2AD7273C0048025A /* MaintainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintainInfoCell.swift; sourceTree = "<group>"; };
 		896CB36D2AD7273C0048025A /* MaintainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintainInfoCell.xib; sourceTree = "<group>"; };
+		8976B01A2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownSuccessRandevuViewController.swift; sourceTree = "<group>"; };
+		8976B01C2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownSuccessRandevuViewModel.swift; sourceTree = "<group>"; };
 		897835CE2B44A0CB00C63AA7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		897835D02B44A0D400C63AA7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		897835D32B454F3900C63AA7 /* ServiceRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRandevuViewController.swift; sourceTree = "<group>"; };
@@ -1350,6 +1354,15 @@
 			path = MaintainInfo;
 			sourceTree = "<group>";
 		};
+		8976B0192B73AC6D00E7C58F /* SuccessRandevu */ = {
+			isa = PBXGroup;
+			children = (
+				8976B01C2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift */,
+				8976B01A2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift */,
+			);
+			path = SuccessRandevu;
+			sourceTree = "<group>";
+		};
 		897835CD2B44A0B800C63AA7 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2200,6 +2213,7 @@
 				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
 				89DBD9CF2B72568B007B416A /* BreakdownStep2ViewModel.swift */,
 				89DBD9CD2B725682007B416A /* BreakdownStep2ViewController.swift */,
+				8976B0192B73AC6D00E7C58F /* SuccessRandevu */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
 				89DBD9D62B72C684007B416A /* Flow1 */,
 			);
@@ -2489,6 +2503,7 @@
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */,
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,
+				8976B01B2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
@@ -2501,6 +2516,7 @@
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
+				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
