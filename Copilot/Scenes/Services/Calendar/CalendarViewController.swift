@@ -52,6 +52,7 @@ class CalendarViewController: SheetViewController {
     func setupCalendar() {
         calendar.delegate = self
         calendar.dataSource = self
+        calendar.firstWeekday = 2
         
         calendar.scrollDirection = .horizontal
         calendar.placeholderType = .none
@@ -105,7 +106,8 @@ extension CalendarViewController: FSCalendarDelegate,
     }
     
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-        if isWeekend(date: date) || date < Date() {
+        let next15 = Calendar.current.date(byAdding: .day, value: 15, to: Date()) ?? Date()
+        if isWeekend(date: date) || date < Date() || date > next15 {
             return false
         }
         return true
