@@ -1876,20 +1876,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Go to Warning Lights Guide</string>
         </dict>
         
-        <key></key>
+        <key>selectWarningLight</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen hangi ikaz lambasının yandığını seçiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please select which warning light is on.</string>
         </dict>
         
-        <key></key>
+        <key>turnBack</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geri Dön</string>
             <key>en</key>
-            <string></string>
+            <string>Turn back</string>
         </dict>
         
         <key></key>

@@ -232,5 +232,12 @@ extension Strings {
     static var goToWarningLightsGuide: String {
         return localized(string: "goToWarningLightsGuide")
     }
-
+    
+    static var selectWarningLight: String {
+        return localized(string: "selectWarningLight")
+    }
+    
+    static var turnBack: String {
+        return localized(string: "turnBack")
+    }
 }

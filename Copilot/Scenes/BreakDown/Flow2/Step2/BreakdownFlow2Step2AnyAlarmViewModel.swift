@@ -9,7 +9,7 @@ import Foundation
 
 protocol BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt: AnyObject {
     func getBack()
-    func goToBrkdwnFlw1Stp3SelectService()
+    func goToBrkdwnFlw2Stp3WarningLights()
 }
 
 protocol BrkdwnFlw2Stp2AnyAlarmViewModelDelegate: BaseViewModelDelegate {
@@ -20,7 +20,7 @@ protocol BrkdwnFlw2Stp2AnyAlarmViewModelType: AnyObject {
     var coordinatorDelegate: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt? { get set }
     var delegate: BrkdwnFlw2Stp2AnyAlarmViewModelDelegate? { get set }
     func getBack()
-    func goToBrkdwnFlw1Stp3SelectService()
+    func goToBrkdwnFlw2Stp3WarningLights()
 }
 
 class BrkdwnFlw2Stp2AnyAlarmViewModel: BrkdwnFlw2Stp2AnyAlarmViewModelType {
@@ -32,8 +32,8 @@ class BrkdwnFlw2Stp2AnyAlarmViewModel: BrkdwnFlw2Stp2AnyAlarmViewModelType {
         coordinatorDelegate?.getBack()
     }
     
-    func goToBrkdwnFlw1Stp3SelectService() {
-        coordinatorDelegate?.goToBrkdwnFlw1Stp3SelectService()
+    func goToBrkdwnFlw2Stp3WarningLights() {
+        coordinatorDelegate?.goToBrkdwnFlw2Stp3WarningLights()
     }
     
 }

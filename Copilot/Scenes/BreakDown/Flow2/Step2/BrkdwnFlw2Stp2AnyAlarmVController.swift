@@ -67,7 +67,7 @@ class BrkdwnFlw2Stp2AnyAlarmVController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        viewModel.goToBrkdwnFlw1Stp3SelectService()
+        viewModel.goToBrkdwnFlw2Stp3WarningLights()
     }
     
     @IBAction func didTapNo() {
