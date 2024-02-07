@@ -65,6 +65,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         desciptionLabel.text = Strings.selectTimeToRepair
         mapButtonLabel.text = Strings.showOnMap
         continueButton.setTitle(Strings.devamEt, for: .normal)
+        continueButton.isSmallFontSize = true
     }
     
     @IBAction func didTapBack() {
