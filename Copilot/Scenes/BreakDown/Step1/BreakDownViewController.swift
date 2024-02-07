@@ -117,7 +117,7 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
 extension BreakDownViewController: BreakDownCellDelegate {
    
     func didTapYes() {
-        
+        viewModel.goToBreakdownFlow2Step2AnyAlarm()
     }
     
     func didTapNo() {

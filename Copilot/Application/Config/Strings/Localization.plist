@@ -1844,6 +1844,142 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please select service to create a Breakdown appointment request.</string>
         </dict>
         
+        <key>anyWarningLightOn</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracın ikaz lambalarından biri ya da birkaçı yanıyor mu?</string>
+            <key>en</key>
+            <string>Are one or more of the vehicle's warning lights on?</string>
+        </dict>
+        
+        <key>lightOn</key>
+        <dict>
+            <key>tr</key>
+            <string>Yanıyor</string>
+            <key>en</key>
+            <string>Lights Turning On</string>
+        </dict>
+        
+        <key>lightOff</key>
+        <dict>
+            <key>tr</key>
+            <string>Yanmıyor</string>
+            <key>en</key>
+            <string>Lights Off</string>
+        </dict>
+        
+        <key>goToWarningLightsGuide</key>
+        <dict>
+            <key>tr</key>
+            <string>İkaz Lambaları Rehberine Git</string>
+            <key>en</key>
+            <string>Go to Warning Lights Guide</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

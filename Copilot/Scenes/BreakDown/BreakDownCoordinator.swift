@@ -64,6 +64,7 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
     }
 }
 
+// MARK: FLOW 1
 extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
                                 BrkdwnFlw1Stp3SelectServiceVMCrdintrDlgt,
                                 BrkdwnFlw1Stp2ServicesCrdinatorDlgt,
@@ -91,6 +92,17 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.service = service
         controller.viewModel.towTruck = towTruck
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: FLOW 2
+extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt {
+    
+    func goToBreakdownFlow2Step2AnyAlarm() {
+        let controller: BrkdwnFlw2Stp2AnyAlarmVController = storyboard.instantiateViewController()
+        controller.viewModel = BrkdwnFlw2Stp2AnyAlarmViewModel()
+        controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
 }

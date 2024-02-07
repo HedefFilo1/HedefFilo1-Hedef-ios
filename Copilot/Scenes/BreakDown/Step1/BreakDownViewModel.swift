@@ -10,7 +10,7 @@ import Foundation
 protocol BreakDownVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToFlow1BreakDownStep2TowTruck()
-//    func goToServiceDetail(service: Supplier?, appointment: Case?, BreakDownSupportType: BreakDownSupportType?)
+    func goToBreakdownFlow2Step2AnyAlarm()
 }
 
 protocol BreakDownViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +23,7 @@ protocol BreakDownViewModelType: AnyObject {
     var appointment: Case? { get set }
     func getBack()
     func goToFlow1BreakDownStep2TowTruck()
+    func goToBreakdownFlow2Step2AnyAlarm()
 }
 
 class BreakDownViewModel: BreakDownViewModelType {
@@ -37,6 +38,10 @@ class BreakDownViewModel: BreakDownViewModelType {
     
     func goToFlow1BreakDownStep2TowTruck() {
         coordinatorDelegate?.goToFlow1BreakDownStep2TowTruck()
+    }
+    
+    func goToBreakdownFlow2Step2AnyAlarm() {
+        coordinatorDelegate?.goToBreakdownFlow2Step2AnyAlarm()
     }
     
 }

@@ -216,4 +216,21 @@ extension Strings {
     static var breakdownServicesDescription: String {
         return localized(string: "breakdownServicesDescription")
     }
+    
+    static var anyWarningLightOn: String {
+        return localized(string: "anyWarningLightOn")
+    }
+    
+    static var lightOn: String {
+        return localized(string: "lightOn")
+    }
+    
+    static var lightOff: String {
+        return localized(string: "lightOff")
+    }
+    
+    static var goToWarningLightsGuide: String {
+        return localized(string: "goToWarningLightsGuide")
+    }
+
 }
