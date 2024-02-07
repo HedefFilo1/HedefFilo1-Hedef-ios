@@ -24,6 +24,7 @@ class WarningLightsFooterCell: UICollectionViewCell, Reusable {
     }
     
     func setup() {
+        guidLabel.apply(.themeS14B700)
         backButton.setTitle(Strings.turnBack, for: .normal)
         guidLabel.text = Strings.goToWarningLightsGuide
     }

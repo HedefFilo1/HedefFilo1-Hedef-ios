@@ -18,13 +18,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="372" height="124"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDF-cp-AaV" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDF-cp-AaV" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="372" height="48"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="48" id="lXF-5o-aHS"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Geri Dön"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Geri Dön"/>
                         <connections>
                             <action selector="didTapBack" destination="gTV-IL-0wX" eventType="touchUpInside" id="DYq-N6-h4m"/>
                         </connections>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRedRight" translatesAutoresizingMaskIntoConstraints="NO" id="fFO-QP-zXM">
-                                <rect key="frame" x="190" y="14" width="16" height="16"/>
+                                <rect key="frame" x="190" y="16" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="7eO-4w-KoL"/>
                                     <constraint firstAttribute="width" constant="16" id="xat-r9-zJx"/>
@@ -60,7 +60,7 @@
                             <constraint firstItem="9vA-yI-WJc" firstAttribute="leading" secondItem="bmB-Kc-pcC" secondAttribute="leading" constant="32" id="MP6-ey-Q6k"/>
                             <constraint firstAttribute="height" constant="44" id="U0H-P4-KyL"/>
                             <constraint firstAttribute="bottom" secondItem="Hel-YB-7ox" secondAttribute="bottom" id="W2m-03-E9f"/>
-                            <constraint firstItem="fFO-QP-zXM" firstAttribute="centerY" secondItem="bmB-Kc-pcC" secondAttribute="centerY" id="duP-dK-EAt"/>
+                            <constraint firstItem="fFO-QP-zXM" firstAttribute="centerY" secondItem="bmB-Kc-pcC" secondAttribute="centerY" constant="2" id="duP-dK-EAt"/>
                             <constraint firstAttribute="trailing" secondItem="Hel-YB-7ox" secondAttribute="trailing" id="f1g-wE-OqE"/>
                             <constraint firstItem="fFO-QP-zXM" firstAttribute="leading" secondItem="9vA-yI-WJc" secondAttribute="trailing" constant="8" id="hy5-ya-1Py"/>
                             <constraint firstItem="9vA-yI-WJc" firstAttribute="centerY" secondItem="bmB-Kc-pcC" secondAttribute="centerY" id="lj7-Ya-gCM"/>

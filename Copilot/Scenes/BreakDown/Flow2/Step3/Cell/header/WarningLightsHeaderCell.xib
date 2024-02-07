@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen hangi ikaz lambasının yandığını seçiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-9V-z9K">
-                        <rect key="frame" x="0.0" y="116.33333333333333" width="306" height="40.666666666666671"/>
+                        <rect key="frame" x="0.0" y="92.333333333333329" width="306" height="40.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                 <constraint firstItem="EfV-9V-z9K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Q1-Y8-Ck5"/>
                 <constraint firstItem="lfk-z8-8Jq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dws-bC-HFa"/>
                 <constraint firstItem="lfk-z8-8Jq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="E5Q-xX-lz0"/>
-                <constraint firstAttribute="bottom" secondItem="EfV-9V-z9K" secondAttribute="bottom" id="ZmZ-iI-3As"/>
+                <constraint firstAttribute="bottom" secondItem="EfV-9V-z9K" secondAttribute="bottom" constant="24" id="ZmZ-iI-3As"/>
                 <constraint firstAttribute="trailing" secondItem="lfk-z8-8Jq" secondAttribute="trailing" id="hex-om-DZb"/>
                 <constraint firstAttribute="trailing" secondItem="EfV-9V-z9K" secondAttribute="trailing" id="oVW-9e-I2r"/>
             </constraints>

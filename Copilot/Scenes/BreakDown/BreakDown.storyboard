@@ -1475,10 +1475,10 @@ bulunuyorsanız lütfen çözüm merkezini arayın.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFF-QL-NOG">
-                                        <rect key="frame" x="0.0" y="69" width="393" height="606"/>
+                                        <rect key="frame" x="24" y="69" width="345" height="606"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-Wh-fZW">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="606"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="606"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yVD-j9-w2M">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -1501,11 +1501,11 @@ bulunuyorsanız lütfen çözüm merkezini arayın.</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="WCz-5G-XDX" firstAttribute="centerX" secondItem="clX-SR-5iQ" secondAttribute="centerX" id="0pa-e6-TaD"/>
-                                    <constraint firstAttribute="trailing" secondItem="TFF-QL-NOG" secondAttribute="trailing" id="CL8-Bb-e2N"/>
+                                    <constraint firstAttribute="trailing" secondItem="TFF-QL-NOG" secondAttribute="trailing" constant="24" id="CL8-Bb-e2N"/>
                                     <constraint firstItem="Nao-fW-GBc" firstAttribute="leading" secondItem="ri9-Mg-ClG" secondAttribute="leading" constant="16" id="LUg-h2-aLu"/>
                                     <constraint firstItem="WCz-5G-XDX" firstAttribute="centerY" secondItem="clX-SR-5iQ" secondAttribute="centerY" id="Pra-qX-ofa"/>
                                     <constraint firstItem="Nao-fW-GBc" firstAttribute="top" secondItem="ri9-Mg-ClG" secondAttribute="top" constant="24" id="RjF-ob-GcV"/>
-                                    <constraint firstItem="TFF-QL-NOG" firstAttribute="leading" secondItem="ri9-Mg-ClG" secondAttribute="leading" id="awj-N6-KpX"/>
+                                    <constraint firstItem="TFF-QL-NOG" firstAttribute="leading" secondItem="ri9-Mg-ClG" secondAttribute="leading" constant="24" id="awj-N6-KpX"/>
                                     <constraint firstItem="TFF-QL-NOG" firstAttribute="top" secondItem="Nao-fW-GBc" secondAttribute="bottom" constant="24" id="cn0-yX-brT"/>
                                     <constraint firstAttribute="bottom" secondItem="TFF-QL-NOG" secondAttribute="bottom" id="csq-UW-G2s"/>
                                     <constraint firstItem="clX-SR-5iQ" firstAttribute="centerY" secondItem="Nao-fW-GBc" secondAttribute="centerY" id="jlS-ZL-obz"/>
