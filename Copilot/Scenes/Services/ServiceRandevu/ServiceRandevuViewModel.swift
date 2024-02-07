@@ -58,7 +58,8 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     func createRandevu() {
         guard let service else { return }
         Loading.shared.show()
-        APIService.createCase(tireType: tireSupportType ?? .damage,
+        APIService.createCase(supplierId: service.id,
+                              tireType: tireSupportType ?? .damage,
                               towTruck: towTruck,
                               supplierName: service.name,
                               supplierPhone: service.phone ?? "",

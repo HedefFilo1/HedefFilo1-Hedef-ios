@@ -279,7 +279,8 @@ class APIService {
         req.start()
     }
     
-    static func createCase(tireType: TireSupportType,
+    static func createCase(supplierId: String?,
+                           tireType: TireSupportType,
                            towTruck: Bool,
                            supplierName: String,
                            supplierPhone: String,
@@ -305,6 +306,10 @@ class APIService {
             params["appointmentDate"] = serverdate
         }
         
+        if let supplierId {
+            params["supplierId"] = supplierId
+        }
+        
         let req = APIRequest<Success>(route: route,
                                       method: .post,
                                       parameters: params,
@@ -315,7 +320,8 @@ class APIService {
         req.start()
     }
     
-    static func createMaintenanceCase(supplierName: String,
+    static func createMaintenanceCase(supplierId: String,
+                                      supplierName: String,
                                       supplierPhone: String,
                                       city: String,
                                       district: String,
@@ -328,6 +334,7 @@ class APIService {
         let params = [
             "webCategory": "MAINTENANCE",
             "accidentType": "MAINTENANCE",
+            "supplierId": supplierId,
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,
             "city": city,
@@ -345,7 +352,8 @@ class APIService {
         req.start()
     }
     
-    static func createBreakDownCase(supplierName: String,
+    static func createBreakDownCase(supplierId: String,
+                                    supplierName: String,
                                     supplierPhone: String,
                                     city: String,
                                     district: String,
@@ -357,6 +365,7 @@ class APIService {
         var params = [
             "webCategory": "FAILURE",
             "accidentType": "FAILURE",
+            "supplierId": supplierId,
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,
             "city": city,

@@ -11,7 +11,8 @@ class MaintenanceRandevuViewModel: ServiceRandevuViewModel {
     override func createRandevu() {
         guard let service, let date else { return }
         Loading.shared.show()
-        APIService.createMaintenanceCase(supplierName: service.name,
+        APIService.createMaintenanceCase(supplierId: service.id,
+                                         supplierName: service.name,
                                          supplierPhone: service.phone ?? "",
                                          city: service.city ?? "",
                                          district: service.district ?? "",

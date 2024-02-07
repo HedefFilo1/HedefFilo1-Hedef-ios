@@ -61,7 +61,8 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
 #endif
         guard let service else { return }
         Loading.shared.show()
-        APIService.createBreakDownCase(supplierName: service.name,
+        APIService.createBreakDownCase(supplierId: service.id,
+                                       supplierName: service.name,
                                        supplierPhone: service.phone ?? "",
                                        city: service.city ?? "",
                                        district: service.district ?? "",

@@ -39,7 +39,8 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
             type = .winter
         }
         Loading.shared.show()
-        APIService.createCase(tireType: tireType,
+        APIService.createCase(supplierId: nil,
+                              tireType: tireType,
                               towTruck: false,
                               supplierName: "",
                               supplierPhone: "",
