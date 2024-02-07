@@ -80,7 +80,7 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         let viewController: BrkdwnFlw1Stp4ServicesVController = storyboard.instantiateViewController()
         let viewModel = BrkdwnFlw1Stp2ServicesViewModel()
         viewModel.breakDownCoordinatorDelegate = self
-        viewModel.towTruck = true
+        viewModel.towTruck = towTruck
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }

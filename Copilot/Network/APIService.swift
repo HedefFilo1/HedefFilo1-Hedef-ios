@@ -349,6 +349,7 @@ class APIService {
                                     supplierPhone: String,
                                     city: String,
                                     district: String,
+                                    towTruck: Bool,
                                     appointmentDate: Date?,
                                     completion: @escaping (Success?, APIResponseError?) -> Void) {
         
@@ -359,7 +360,8 @@ class APIService {
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,
             "city": city,
-            "district": district,
+            "towTruck": towTruck,
+            "district": district
         ] as [String: Any]
         
         if let appointmentDate {

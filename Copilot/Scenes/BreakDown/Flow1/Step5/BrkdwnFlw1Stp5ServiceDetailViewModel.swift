@@ -53,16 +53,19 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
     }
     
     func createRandevu() {
-        if true {
-            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, date: nil)
-            return
-        }
+#if DEV_DEBUG
+        //        if true {
+        //            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, date: nil)
+        //            return
+        //        }
+#endif
         guard let service else { return }
         Loading.shared.show()
         APIService.createBreakDownCase(supplierName: service.name,
                                        supplierPhone: service.phone ?? "",
                                        city: service.city ?? "",
                                        district: service.district ?? "",
+                                       towTruck: towTruck,
                                        appointmentDate: nil) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
