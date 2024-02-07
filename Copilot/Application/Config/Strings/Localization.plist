@@ -1255,7 +1255,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>requestLastikResultText</key>
         <dict>
             <key>tr</key>
-            <string>Talep sonucuna göre tarafınıza bilgi verilecektir</string>
+            <string>Talep sonucuna göre tarafınıza bilgi verilecektir.</string>
             <key>en</key>
             <string>You will be informed according to the result of your request.</string>
         </dict>
@@ -1495,7 +1495,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>randevuRequestSuccessDescriptin</key>
         <dict>
             <key>tr</key>
-            <string>Onaylanan randevu tarihiniz size ayrıca iletilecektir</string>
+            <string>Onaylanan randevu tarihiniz size ayrıca iletilecektir.</string>
             <key>en</key>
             <string>Your confirmed randevu date will be communicated to you separately.</string>
         </dict>
@@ -1698,14 +1698,6 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Lastik Bakım Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
             <string>Your Maintenance Randevu Request has been Successfully Received.</string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string>Lastik Değişim Randevu Talebiniz Başarıyla Alındı.</string>
-            <key>en</key>
-            <string>Your Tire Change Randevu Request has been Successfully Received.</string>
         </dict>
         
         <key>breakDownOperations</key>
