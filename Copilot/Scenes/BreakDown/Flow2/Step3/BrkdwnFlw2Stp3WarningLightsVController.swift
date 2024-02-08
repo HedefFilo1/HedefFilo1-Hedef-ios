@@ -115,7 +115,7 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
             break
         }
         
-        return CGSize(width: collectionView.frame.width, height: height)
+        return CGSize(width: collectionView.frame.width-48, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
