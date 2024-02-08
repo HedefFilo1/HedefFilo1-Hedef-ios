@@ -71,7 +71,7 @@ class BrkdwnFlw2Stp2AnyAlarmVController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        viewModel.getBack()
+        viewModel.goToBrkdwnFlw4Stp3NoWarning()
     }
     
     @IBAction func didTapGoToWarnings() {

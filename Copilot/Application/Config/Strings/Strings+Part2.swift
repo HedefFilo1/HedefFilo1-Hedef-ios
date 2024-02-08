@@ -244,4 +244,12 @@ extension Strings {
     static var chooseAnotherLight: String {
         return localized(string: "chooseAnotherLight")
     }
+    
+    static var onLightWarning: String {
+        return localized(string: "onLightWarning")
+    }
+    
+    static var turnOffRestartVehicle: String {
+        return localized(string: "turnOffRestartVehicle")
+    }
 }

@@ -1900,20 +1900,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Choose Another Light</string>
         </dict>
         
-        <key></key>
+        <key>onLightWarning</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yanan İkaz Işığı</string>
             <key>en</key>
-            <string></string>
+            <string>On Light Warning</string>
         </dict>
         
-        <key></key>
+        <key>turnOffRestartVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen kontağı kapatıp aracınızı yeniden çalıştırınız.</string>
             <key>en</key>
-            <string></string>
+            <string>Please turn off the ignition and restart your vehicle.</string>
         </dict>
         
         <key></key>

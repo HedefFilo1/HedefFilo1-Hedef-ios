@@ -80,6 +80,7 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         let viewController: BrkdwnFlw1Stp4ServicesVController = storyboard.instantiateViewController()
         let viewModel = BrkdwnFlw1Stp2ServicesViewModel()
         viewModel.breakDownCoordinatorDelegate = self
+        viewModel.coordinatorDelegate = self
         viewModel.towTruck = towTruck
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
@@ -95,7 +96,23 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
     }
 }
 
-// MARK: FLOW 2
+extension BreakDownCoordinator: ServicesVMCoordinatorDelegate {
+
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
+        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        let viewModel = ServiceFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.services = services
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
+    
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
+    }
+}
+
+
+// MARK: FLOW 2 AND 3
 extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
                                 BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt,
                                 BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt,
@@ -125,6 +142,16 @@ extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
     func goToWarningLights() {
         let controller: WarningLightsViewController = storyboard.instantiateViewController()
         controller.viewModel = WarningLightsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: Flow 4
+extension BreakDownCoordinator: BrkdwnFlw4Stp3NoWarningVMCrdntrDlgt {
+    func goToBrkdwnFlw4Stp3NoWarning() {
+        let controller: BrkdwnFlw4Stp3NoWarningVController = storyboard.instantiateViewController()
+        controller.viewModel = BrkdwnFlw4Stp3NoWarningViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

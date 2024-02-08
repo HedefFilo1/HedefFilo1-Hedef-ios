@@ -57,6 +57,8 @@
 		891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78322B4443CC008FC722 /* CPTimeChooseView.swift */; };
 		891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78352B445C13008FC722 /* ServiceDetailViewController.swift */; };
 		891D78382B445C3F008FC722 /* ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D78372B445C3F008FC722 /* ServiceDetailViewModel.swift */; };
+		892A57D02B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A57CF2B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift */; };
+		892A57D22B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A57D12B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift */; };
 		892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */; };
 		892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */; };
 		892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892A8CF12AC4C6860020C1C4 /* Splash.storyboard */; };
@@ -409,6 +411,8 @@
 		891D78322B4443CC008FC722 /* CPTimeChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTimeChooseView.swift; sourceTree = "<group>"; };
 		891D78352B445C13008FC722 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		891D78372B445C3F008FC722 /* ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewModel.swift; sourceTree = "<group>"; };
+		892A57CF2B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw4Stp3NoWarningVController.swift; sourceTree = "<group>"; };
+		892A57D12B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw4Stp3NoWarningViewModel.swift; sourceTree = "<group>"; };
 		892A8CEC2AC4C3720020C1C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		892A8CEE2AC4C3920020C1C4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		892A8CF12AC4C6860020C1C4 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -930,6 +934,23 @@
 			path = ServiceDetail;
 			sourceTree = "<group>";
 		};
+		892A57CD2B753B27002C6CD1 /* Flow4NoWarning */ = {
+			isa = PBXGroup;
+			children = (
+				892A57CE2B753B63002C6CD1 /* Step3 */,
+			);
+			path = Flow4NoWarning;
+			sourceTree = "<group>";
+		};
+		892A57CE2B753B63002C6CD1 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				892A57D12B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift */,
+				892A57CF2B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift */,
+			);
+			path = Step3;
+			sourceTree = "<group>";
+		};
 		892A8CF02AC4C6760020C1C4 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -1445,14 +1466,14 @@
 			path = SuccessRandevu;
 			sourceTree = "<group>";
 		};
-		8976B01E2B73B7F300E7C58F /* Flow2 */ = {
+		8976B01E2B73B7F300E7C58F /* Flow2And3RedAndYellowWarnings */ = {
 			isa = PBXGroup;
 			children = (
 				8976B01F2B73B80700E7C58F /* Step2 */,
 				8976B0242B73C89E00E7C58F /* Step3 */,
 				8944AB792B74D2D100967CE2 /* Step4 */,
 			);
-			path = Flow2;
+			path = Flow2And3RedAndYellowWarnings;
 			sourceTree = "<group>";
 		};
 		8976B01F2B73B80700E7C58F /* Step2 */ = {
@@ -2373,7 +2394,8 @@
 				8944AB892B74F7DA00967CE2 /* WarningLights */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
 				89DBD9D62B72C684007B416A /* Flow1 */,
-				8976B01E2B73B7F300E7C58F /* Flow2 */,
+				8976B01E2B73B7F300E7C58F /* Flow2And3RedAndYellowWarnings */,
+				892A57CD2B753B27002C6CD1 /* Flow4NoWarning */,
 			);
 			path = BreakDown;
 			sourceTree = "<group>";
@@ -2752,6 +2774,7 @@
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
 				8986FCB62AFBCC82006057EA /* KeychainOptions.swift in Sources */,
 				894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */,
+				892A57D02B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift in Sources */,
 				89C686942B0260C900011897 /* AvatarCell.swift in Sources */,
 				8976B0342B73CA5D00E7C58F /* WarningItemCell.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
@@ -2880,6 +2903,7 @@
 				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
+				892A57D22B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
