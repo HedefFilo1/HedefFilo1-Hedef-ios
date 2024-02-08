@@ -78,6 +78,10 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
         switch indexPath.section {
         case 0:
             let cell: SelectedWarningItemCell = collectionView.dequeueReusableCell(for: indexPath)
+            if let name = viewModel.warnings?[indexPath.item].image {
+                let image = UIImage(named: name)
+                cell.imageView.image = image
+            }
             return cell
             
         case 1:
@@ -140,7 +144,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDeleg
 }
 
 extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: BrkdwnFlw2Stp4SelectedWarningsVMDelegate {
-    func setBrkdwnFlw2Stp4SelectedWarnings() {
+    func reloadData() {
         collectionView.reloadData()
     }
 }

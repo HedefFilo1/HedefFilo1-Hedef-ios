@@ -132,17 +132,19 @@ extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToBrkdwnFlw2Stp4SelectedWarnings() {
+    func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning) {
         let controller: BrkdwnFlw2Stp4SelectedWarningsVCntlr = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw2Stp4SelectedWarningsViewModel()
         controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.warnings = [item]
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToWarningLights() {
+    func goToWarningLights(delegate: WarningLightsViewControllerDelegate) {
         let controller: WarningLightsViewController = storyboard.instantiateViewController()
         controller.viewModel = WarningLightsViewModel()
         controller.viewModel.coordinatorDelegate = self
+        controller.delegate = delegate
         navigationController.pushViewController(controller, animated: true)
     }
 }

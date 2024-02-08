@@ -9,13 +9,13 @@ import Foundation
 
 protocol BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt: AnyObject {
     func getBack()
-    func goToWarningLights()
+    func goToWarningLights(delegate: WarningLightsViewControllerDelegate)
     func goToServices(towTruck: Bool)
     
 }
 
 protocol BrkdwnFlw2Stp4SelectedWarningsVMDelegate: BaseViewModelDelegate {
-    func setBrkdwnFlw2Stp4SelectedWarnings()
+    func reloadData()
 }
 
 protocol BrkdwnFlw2Stp4SelectedWarningsVMType: AnyObject {
@@ -33,20 +33,26 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     weak var coordinatorDelegate: BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt?
     weak var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate?
     
-    var warnings: [MockWarning]? = [
-        MockWarning(id: 1, title: "Yanan İkaz Işığı", trTitle: "Yanan İkaz Işığı", image: "absWarning", isRed: true, description: ""),
-        MockWarning(id: 2, title: "Yanan İkaz Işığı", trTitle: "Yanan İkaz Işığı", image: "absWarning", isRed: true, description: "")
-    ]
+    var warnings: [MockWarning]? = []
     
     func getBack() {
         coordinatorDelegate?.getBack()
     }
     
     func goToWarningLights() {
-        coordinatorDelegate?.goToWarningLights()
+        coordinatorDelegate?.goToWarningLights(delegate: self)
     }
     
     func goToServices() {
         coordinatorDelegate?.goToServices(towTruck: false)
     }
+}
+
+extension BrkdwnFlw2Stp4SelectedWarningsViewModel: WarningLightsViewControllerDelegate {
+    
+    func didSelect(item: MockWarning) {
+        warnings?.append(item)
+        delegate?.reloadData()
+    }
+    
 }

@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol WarningLightsViewControllerDelegate: AnyObject {
+    func didSelect(item: MockWarning)
+}
+
 class WarningLightsViewController: UIViewController {
     
     var viewModel: WarningLightsViewModelType! {
@@ -15,7 +19,7 @@ class WarningLightsViewController: UIViewController {
             viewModel.delegate = self
         }
     }
-    
+    weak var delegate: WarningLightsViewControllerDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -141,6 +145,10 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            delegate?.didSelect(item: viewModel.warnings[indexPath.item])
+            viewModel.getBack()
+        }
     }
 }
 
