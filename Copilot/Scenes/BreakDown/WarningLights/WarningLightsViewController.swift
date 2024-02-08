@@ -159,7 +159,7 @@ extension WarningLightsViewController: WarningItemsCellDelegate,
     }
     
     func didTabBack() {
-        
+        viewModel.getBack()
     }
     
     func didTapGoToGuide() {

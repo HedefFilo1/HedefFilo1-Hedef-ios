@@ -72,7 +72,7 @@ class BreakDownSuccessRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.randevuRequestSuccessMessage
+        titleLabel.text = Strings.breakdownRandevuSuccessMessage
         desciptionLabel.text = Strings.randevuRequestSuccessDescriptin
         editButton.setTitle(Strings.edit, for: .normal)
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)

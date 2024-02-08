@@ -161,7 +161,7 @@ extension BrkdwnFlw2Stp3WarningLightsVController: WarningItemsCellDelegate,
     }
     
     func didTabBack() {
-        
+        viewModel.getBack()
     }
     
     func didTapGoToGuide() {

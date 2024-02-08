@@ -36,8 +36,15 @@ class LoginViewController: UIViewController {
         
 #if DEV_DEBUG
         // just for test
-        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapTwice))
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
 #endif
+    }
+    
+    @objc func didTapTwice() {
+        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
     }
     
     override func viewWillAppear(_ animated: Bool) {

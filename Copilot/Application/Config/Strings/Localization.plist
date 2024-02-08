@@ -1916,12 +1916,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please turn off the ignition and restart your vehicle.</string>
         </dict>
         
-        <key></key>
+        <key>breakdownRandevuSuccessMessage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
-            <string></string>
+            <string>Your Breakdown Appointment Request has been Successfully Received.</string>
         </dict>
         
         <key></key>

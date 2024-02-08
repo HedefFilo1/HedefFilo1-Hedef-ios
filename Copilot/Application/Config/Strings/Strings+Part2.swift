@@ -252,4 +252,8 @@ extension Strings {
     static var turnOffRestartVehicle: String {
         return localized(string: "turnOffRestartVehicle")
     }
+    
+    static var breakdownRandevuSuccessMessage: String {
+        return localized(string: "breakdownRandevuSuccessMessage")
+    }
 }
