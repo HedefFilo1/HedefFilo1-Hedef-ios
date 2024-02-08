@@ -9,7 +9,6 @@ import Foundation
 
 protocol WarningLightsViewModelVMCrdntrDlgt: AnyObject {
     func getBack()
-    func goToBrkdwnFlw2Stp4SelectedWarnings()
 }
 
 protocol WarningLightsViewModelVMDelegate: BaseViewModelDelegate {
@@ -21,7 +20,6 @@ protocol WarningLightsViewModelType: AnyObject {
     var delegate: WarningLightsViewModelVMDelegate? { get set }
 
     func getBack()
-    func goToBrkdwnFlw2Stp4SelectedWarnings()
 }
 
 class WarningLightsViewModel: WarningLightsViewModelType {
@@ -31,9 +29,5 @@ class WarningLightsViewModel: WarningLightsViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
-    }
-    
-    func goToBrkdwnFlw2Stp4SelectedWarnings() {
-        coordinatorDelegate?.goToBrkdwnFlw2Stp4SelectedWarnings()
     }
 }

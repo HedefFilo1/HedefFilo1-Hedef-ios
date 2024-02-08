@@ -16,7 +16,6 @@ class WarningLightsViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -38,7 +37,6 @@ class WarningLightsViewController: UIViewController {
     }
     
     func setupUI() {
-        setBasicViews()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: WarningLightsHeaderCell.self)
@@ -50,9 +48,6 @@ class WarningLightsViewController: UIViewController {
     }
     
     func applyStyle() {
-        contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 40
-        contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
     }
     
@@ -133,7 +128,7 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
 extension WarningLightsViewController: WarningItemsCellDelegate,
                                                   WarningLightsFooterCellDelegate {
     func didSelectItem() {
-        viewModel.goToBrkdwnFlw2Stp4SelectedWarnings()
+        
     }
     
     func didTabBack() {

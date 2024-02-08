@@ -126,7 +126,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDeleg
     }
     
     func didTapChooseAnother() {
-            
+        viewModel.goToWarningLights()
     }
     
     func didTapServices() {
