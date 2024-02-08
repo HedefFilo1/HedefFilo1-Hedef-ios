@@ -240,4 +240,8 @@ extension Strings {
     static var turnBack: String {
         return localized(string: "turnBack")
     }
+    
+    static var chooseAnotherLight: String {
+        return localized(string: "chooseAnotherLight")
+    }
 }

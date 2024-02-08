@@ -1892,12 +1892,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Turn back</string>
         </dict>
         
-        <key></key>
+        <key>chooseAnotherLight</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Başka Bir Işık Seç</string>
             <key>en</key>
-            <string></string>
+            <string>Choose Another Light</string>
         </dict>
         
         <key></key>

@@ -1,16 +1,16 @@
 //
-//  BrkdwnFlw2Stp3WarningLightsVController.swift
+//  BrkdwnFlw2Stp4SelectedWarningsVCntlr.swift
 //  Copilot
 //
-//  Created by Jamal on 2/7/24.
+//  Created by Jamal on 2/8/24.
 //
 
 import Foundation
 import UIKit
 
-class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
+class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
     
-    var viewModel: BrkdwnFlw2Stp3WarningLightsViewModelType! {
+    var viewModel: BrkdwnFlw2Stp4SelectedWarningsVMType! {
         didSet {
             viewModel.delegate = self
         }
@@ -41,10 +41,9 @@ class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
         setBasicViews()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: WarningLightsHeaderCell.self)
-        collectionView.register(cellType: WarningItemsCell.self)
-        collectionView.register(cellType: WarningLightsFooterCell.self)
-        collectionView.contentInset.bottom = 90
+        collectionView.register(cellType: SelectedWarningItemCell.self)
+        collectionView.register(cellType: SelectedWarningsContentCell.self)
+        collectionView.contentInset.bottom = 60
         applyStyle()
         setTexts()
     }
@@ -66,13 +65,17 @@ class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
     
 }
 
-extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return viewModel.warnings?.count ?? 0
+        }
+        
         return 1
     }
     
@@ -80,16 +83,11 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
         
         switch indexPath.section {
         case 0:
-            let cell: WarningLightsHeaderCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: SelectedWarningItemCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         case 1:
-            let cell: WarningItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = self
-            return cell
-            
-        case 2:
-            let cell: WarningLightsFooterCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: SelectedWarningsContentCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             return cell
         
@@ -103,19 +101,16 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
         var height: CGFloat = 353
         switch indexPath.section {
         case 0:
-         height = 145
+         height = 118
             
         case 1:
-           height = 648
-            
-        case 2:
-          height = 136
+           height = 600
             
         default:
             break
         }
         
-        return CGSize(width: collectionView.frame.width-48, height: height)
+        return CGSize(width: collectionView.frame.width-32, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -130,23 +125,27 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
     }
 }
 
-extension BrkdwnFlw2Stp3WarningLightsVController: WarningItemsCellDelegate,
-                                                  WarningLightsFooterCellDelegate {
-    func didSelectItem() {
-        viewModel.goToBrkdwnFlw2Stp4SelectedWarnings()
+extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDelegate {
+    
+    func didTapShowLocation() {
+            
     }
     
-    func didTabBack() {
+    func didTapChooseAnother() {
+            
+    }
+    
+    func didTapServices() {
         
     }
     
-    func didTapGoToGuide() {
+    func didTapCall() {
         
     }
 }
 
-extension BrkdwnFlw2Stp3WarningLightsVController: BrkdwnFlw2Stp3WarningLightsVMDelegate {
-    func setBrkdwnFlw2Stp3WarningLights() {
+extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: BrkdwnFlw2Stp4SelectedWarningsVMDelegate {
+    func setBrkdwnFlw2Stp4SelectedWarnings() {
         collectionView.reloadData()
     }
 }

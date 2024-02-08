@@ -121,6 +121,12 @@
 		893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF722AFA5A92004E643E /* NewsTabCell.swift */; };
 		893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF742AFA5A97004E643E /* NewsTabCell.xib */; };
 		893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF772AFA5B0B004E643E /* NewsCell.swift */; };
+		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
+		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
+		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
+		8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */; };
+		8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB852B74DB6E00967CE2 /* SelectedWarningItemCell.swift */; };
+		8944AB882B74DB6E00967CE2 /* SelectedWarningItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944AB862B74DB6E00967CE2 /* SelectedWarningItemCell.xib */; };
 		894632E02B66B92600D8F301 /* Tire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894632DF2B66B92600D8F301 /* Tire.storyboard */; };
 		894632E22B66B9AC00D8F301 /* TireCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894632E12B66B9AC00D8F301 /* TireCoordinator.swift */; };
 		894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */; };
@@ -467,6 +473,12 @@
 		893EDF722AFA5A92004E643E /* NewsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTabCell.swift; sourceTree = "<group>"; };
 		893EDF742AFA5A97004E643E /* NewsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTabCell.xib; sourceTree = "<group>"; };
 		893EDF772AFA5B0B004E643E /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
+		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
+		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
+		8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsContentCell.xib; sourceTree = "<group>"; };
+		8944AB852B74DB6E00967CE2 /* SelectedWarningItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningItemCell.swift; sourceTree = "<group>"; };
+		8944AB862B74DB6E00967CE2 /* SelectedWarningItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningItemCell.xib; sourceTree = "<group>"; };
 		894632DF2B66B92600D8F301 /* Tire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tire.storyboard; sourceTree = "<group>"; };
 		894632E12B66B9AC00D8F301 /* TireCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireCoordinator.swift; sourceTree = "<group>"; };
 		894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSEmptyCell.swift; sourceTree = "<group>"; };
@@ -1196,6 +1208,43 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		8944AB792B74D2D100967CE2 /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */,
+				8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */,
+				8944AB7E2B74D3F000967CE2 /* Cell */,
+			);
+			path = Step4;
+			sourceTree = "<group>";
+		};
+		8944AB7E2B74D3F000967CE2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8944AB7F2B74D3FE00967CE2 /* Item */,
+				8944AB802B74D40D00967CE2 /* Content */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8944AB7F2B74D3FE00967CE2 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				8944AB852B74DB6E00967CE2 /* SelectedWarningItemCell.swift */,
+				8944AB862B74DB6E00967CE2 /* SelectedWarningItemCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		8944AB802B74D40D00967CE2 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */,
+				8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		894632DD2B66B83A00D8F301 /* Tire */ = {
 			isa = PBXGroup;
 			children = (
@@ -1392,6 +1441,7 @@
 			children = (
 				8976B01F2B73B80700E7C58F /* Step2 */,
 				8976B0242B73C89E00E7C58F /* Step3 */,
+				8944AB792B74D2D100967CE2 /* Step4 */,
 			);
 			path = Flow2;
 			sourceTree = "<group>";
@@ -2425,6 +2475,7 @@
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
+				8944AB882B74DB6E00967CE2 /* SelectedWarningItemCell.xib in Resources */,
 				89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
 				89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */,
@@ -2460,6 +2511,7 @@
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */,
+				8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				8976B0302B73CA2100E7C58F /* WarningItemsCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
@@ -2622,6 +2674,7 @@
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8976B0392B73CD3C00E7C58F /* WarningLightsFooterCell.swift in Sources */,
+				8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */,
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
@@ -2638,6 +2691,7 @@
 				8907EF0B2B698B24004869BE /* MaintenanceStep2KMViewModel.swift in Sources */,
 				893EDF602AF924E0004E643E /* CampaignsViewController.swift in Sources */,
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
+				8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
 				897835DD2B455FB300C63AA7 /* Strings+Part2.swift in Sources */,
 				897835D92B455D9600C63AA7 /* ConfirmedRandevuViewController.swift in Sources */,
@@ -2732,12 +2786,14 @@
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
+				8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
 				89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
 				89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */,
+				8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
 				8976B03E2B73CF2600E7C58F /* BrkdwnFlw2Stp3WarningLightsViewModel.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,

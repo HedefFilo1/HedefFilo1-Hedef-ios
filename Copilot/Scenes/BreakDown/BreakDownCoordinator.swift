@@ -98,7 +98,8 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
 
 // MARK: FLOW 2
 extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
-                                BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt {
+                                BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt,
+                                BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt {
     
     func goToBreakdownFlow2Step2AnyAlarm() {
         let controller: BrkdwnFlw2Stp2AnyAlarmVController = storyboard.instantiateViewController()
@@ -110,6 +111,13 @@ extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
     func goToBrkdwnFlw2Stp3WarningLights() {
         let controller: BrkdwnFlw2Stp3WarningLightsVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw2Stp3WarningLightsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToBrkdwnFlw2Stp4SelectedWarnings() {
+        let controller: BrkdwnFlw2Stp4SelectedWarningsVCntlr = storyboard.instantiateViewController()
+        controller.viewModel = BrkdwnFlw2Stp4SelectedWarningsViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
