@@ -42,7 +42,7 @@ class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: WarningLightsHeaderCell.self)
-        collectionView.register(cellType: WarningItemsCell.self)
+        collectionView.register(cellType: WarningItemCell.self)
         collectionView.register(cellType: WarningLightsFooterCell.self)
         collectionView.contentInset.bottom = 90
         applyStyle()
@@ -73,6 +73,9 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 1 {
+            return viewModel.warnings.count
+        }
         return 1
     }
     
@@ -84,8 +87,10 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
             return cell
             
         case 1:
-            let cell: WarningItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = self
+            let cell: WarningItemCell = collectionView.dequeueReusableCell(for: indexPath)
+//            cell.delegate = self
+            let image = UIImage(named: viewModel.warnings[indexPath.item].image)
+            cell.imageView.image = image
             return cell
             
         case 2:
@@ -106,7 +111,9 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
          height = 145
             
         case 1:
-           height = 648
+//           height = 648
+            let width: CGFloat = 64
+            return CGSize(width: width, height: width)
             
         case 2:
           height = 136
@@ -118,15 +125,31 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
         return CGSize(width: collectionView.frame.width-48, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 1 {
+            return UIEdgeInsets(top: 0, left: 24, bottom: 24, right: 24)
+        }
+        return .zero
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        if section == 1 {
+            return 24
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        if section == 1 {
+            return 24
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            viewModel.goToBrkdwnFlw2Stp4SelectedWarnings()
+        }
     }
 }
 

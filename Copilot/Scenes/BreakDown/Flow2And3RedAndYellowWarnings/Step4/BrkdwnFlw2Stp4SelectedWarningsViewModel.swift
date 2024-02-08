@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct MockWarning {
-    let id: Int
-    let title: String
-    let image: String
-}
-
 protocol BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt: AnyObject {
     func getBack()
     func goToWarningLights()
@@ -40,8 +34,8 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     weak var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate?
     
     var warnings: [MockWarning]? = [
-        MockWarning(id: 1, title: "Yanan İkaz Işığı", image: "absWarning"),
-        MockWarning(id: 2, title: "Yanan İkaz Işığı", image: "absWarning")
+        MockWarning(id: 1, title: "Yanan İkaz Işığı", trTitle: "Yanan İkaz Işığı", image: "absWarning", isRed: true, description: ""),
+        MockWarning(id: 2, title: "Yanan İkaz Işığı", trTitle: "Yanan İkaz Işığı", image: "absWarning", isRed: true, description: "")
     ]
     
     func getBack() {

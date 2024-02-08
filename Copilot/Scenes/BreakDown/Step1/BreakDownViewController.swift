@@ -30,7 +30,9 @@ class BreakDownViewController: UIViewController {
         setupUI()
         
 #if DEV_DEBUG
-        
+        if let coordinatro = viewModel.coordinatorDelegate as? BreakDownCoordinator {
+            coordinatro.goToBrkdwnFlw2Stp3WarningLights()
+        }
 #endif
     }
     

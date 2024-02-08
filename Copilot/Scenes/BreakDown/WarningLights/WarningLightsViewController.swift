@@ -40,7 +40,7 @@ class WarningLightsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: WarningLightsHeaderCell.self)
-        collectionView.register(cellType: WarningItemsCell.self)
+        collectionView.register(cellType: WarningItemCell.self)
         collectionView.register(cellType: WarningLightsFooterCell.self)
         collectionView.contentInset.bottom = 90
         applyStyle()
@@ -68,6 +68,9 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 1 {
+            return viewModel.warnings.count
+        }
         return 1
     }
     
@@ -79,32 +82,35 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
             return cell
             
         case 1:
-            let cell: WarningItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = self
+            let cell: WarningItemCell = collectionView.dequeueReusableCell(for: indexPath)
+            //            cell.delegate = self
+            let image = UIImage(named: viewModel.warnings[indexPath.item].image)
+            cell.imageView.image = image
             return cell
             
         case 2:
             let cell: WarningLightsFooterCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             return cell
-        
+            
         default:
             return UICollectionViewCell()
         }
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var height: CGFloat = 353
         switch indexPath.section {
         case 0:
-         height = 145
+            height = 145
             
         case 1:
-           height = 648
+            let width: CGFloat = 64
+            return CGSize(width: width, height: width)
             
         case 2:
-          height = 136
+            height = 136
             
         default:
             break
@@ -113,12 +119,25 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
         return CGSize(width: collectionView.frame.width-48, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 1 {
+            return UIEdgeInsets(top: 0, left: 24, bottom: 24, right: 24)
+        }
+        return .zero
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        if section == 1 {
+            return 24
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        if section == 1 {
+            return 24
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -126,7 +145,7 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
 }
 
 extension WarningLightsViewController: WarningItemsCellDelegate,
-                                                  WarningLightsFooterCellDelegate {
+                                       WarningLightsFooterCellDelegate {
     func didSelectItem() {
         
     }
@@ -141,5 +160,5 @@ extension WarningLightsViewController: WarningItemsCellDelegate,
 }
 
 extension WarningLightsViewController: WarningLightsViewModelVMDelegate {
-   
+    
 }
