@@ -24,6 +24,9 @@ class ServiceTabViewController: UIViewController {
     @IBOutlet weak var maintenanceRandevuLabel: UILabel!
     @IBOutlet weak var maintenanceRandevuView: UIView!
     
+    @IBOutlet weak var breakdownRandevuLabel: UILabel!
+    @IBOutlet weak var breakdownRandevuView: UIView!
+    
     @IBOutlet weak var tireRandevuLabel: UILabel!
     @IBOutlet weak var tireRandevuView: UIView!
     @IBOutlet weak var lastikButton: CPLightButton!
@@ -48,6 +51,7 @@ class ServiceTabViewController: UIViewController {
         super.viewDidAppear(animated)
         removeTireAppointment()
         removeMaintenanceAppointment()
+        removeBreakdownAppointment()
         viewModel.getAppointments()
     }
     
@@ -58,6 +62,9 @@ class ServiceTabViewController: UIViewController {
         
         maintenanceRandevuView.heightConstraint?.constant = 0
         maintenanceRandevuView.isHidden = false
+        
+        breakdownRandevuView.heightConstraint?.constant = 0
+        breakdownRandevuView.isHidden = false
         
         applyStyle()
         setTexts()
@@ -70,6 +77,7 @@ class ServiceTabViewController: UIViewController {
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
         descriptionLabel.apply(.blackS18B700)
+       
         maintenanceRandevuView.layer.cornerRadius = 10
         maintenanceRandevuView.clipsToBounds = true
         maintenanceRandevuView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -79,6 +87,11 @@ class ServiceTabViewController: UIViewController {
         tireRandevuView.clipsToBounds = true
         tireRandevuView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tireRandevuLabel.apply(.whiteS12B700)
+        
+        breakdownRandevuLabel.apply(.whiteS12B700)
+        breakdownRandevuView.layer.cornerRadius = 10
+        breakdownRandevuView.clipsToBounds = true
+        breakdownRandevuView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     func setTexts() {
@@ -88,6 +101,7 @@ class ServiceTabViewController: UIViewController {
         faultButton.setTitle(Strings.fault, for: .normal)
         lastikButton.setTitle(Strings.lastik, for: .normal)
         tireRandevuLabel.text = Strings.appointmentRequestReceived
+        breakdownRandevuLabel.text = Strings.appointmentRequestReceived
         maintenanceRandevuLabel.text = Strings.appointmentRequestReceived
         pastServicesButton.setTitle(Strings.pastServiceTransactions, for: .normal)
     }
@@ -148,6 +162,26 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
     func removeMaintenanceAppointment() {
         maintenanceRandevuView.heightConstraint?.constant = 0
         maintenanceRandevuView.isHidden = true
+        view.animate()
+    }
+    
+    func setBreakdownAppointment() {
+        breakdownRandevuView.heightConstraint?.constant = 27
+        breakdownRandevuView.isHidden = false
+        let type = viewModel.maintenanceAppointment?.appointmentStatus ?? .none
+        if type == .appointmentApproved {
+            breakdownRandevuView.backgroundColor = .textSuccess
+            breakdownRandevuLabel.text = Strings.randevuApproved
+        } else {
+            breakdownRandevuView.backgroundColor = .theme
+            breakdownRandevuLabel.text = Strings.appointmentRequestReceived
+        }
+        view.animate()
+    }
+    
+    func removeBreakdownAppointment() {
+        breakdownRandevuView.heightConstraint?.constant = 0
+        breakdownRandevuView.isHidden = true
         view.animate()
     }
 }

@@ -16,6 +16,7 @@ protocol ServiceTabViewModelCoordinatorDelegate: AnyObject {
 protocol ServiceTabViewModelDelegate: BaseViewModelDelegate {
     func setTireAppointment()
     func setMaintenanceAppointment()
+    func setBreakdownAppointment()
 }
 
 protocol ServiceTabViewModelType: AnyObject {
@@ -23,6 +24,7 @@ protocol ServiceTabViewModelType: AnyObject {
     var delegate: ServiceTabViewModelDelegate? { get set }
     var tireAppointment: Case? { get set }
     var maintenanceAppointment: Case? { get set }
+    var breakdownAppointment: Case? { get set }
     func goToLastikOperations()
     func getAppointments()
     func goToMaintenance()
@@ -36,6 +38,7 @@ class ServiceTabViewModel: ServiceTabViewModelType {
     
     var tireAppointment: Case?
     var maintenanceAppointment: Case?
+    var breakdownAppointment: Case?
     
     func goToLastikOperations() {
         coordinatorDelegate?.goToLastikOperations(appointment: tireAppointment)
@@ -61,11 +64,15 @@ class ServiceTabViewModel: ServiceTabViewModelType {
                     if item.recordType == .tireChange || item.recordType == .damage {
                         self.tireAppointment = item
                         self.delegate?.setTireAppointment()
+                        
                     } else if item.recordType == .maintenance {
                         self.maintenanceAppointment = item
                         self.delegate?.setMaintenanceAppointment()
-                    }
-                    
+                        
+                    } else if item.recordType == .mechanicalFailure {
+                        self.breakdownAppointment = item
+                        self.delegate?.setBreakdownAppointment()
+                    } 
                 }
             } else
             

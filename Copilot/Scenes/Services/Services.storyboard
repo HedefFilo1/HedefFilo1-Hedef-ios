@@ -71,8 +71,27 @@
                                                             <action selector="didTapCareButton" destination="QRj-Jq-Ukx" eventType="touchUpInside" id="ZVJ-xy-ACR"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wc-c8-aYd">
+                                                        <rect key="frame" x="0.0" y="113" width="345" height="27"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Talebi Alındı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIs-pb-NgR">
+                                                                <rect key="frame" x="0.0" y="2" width="345" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <color key="textColor" name="white"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="theme"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="68A-yH-izu"/>
+                                                            <constraint firstItem="nIs-pb-NgR" firstAttribute="leading" secondItem="1wc-c8-aYd" secondAttribute="leading" id="6rK-gc-C6B"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nIs-pb-NgR" secondAttribute="trailing" id="W9h-59-9i8"/>
+                                                            <constraint firstItem="nIs-pb-NgR" firstAttribute="top" secondItem="1wc-c8-aYd" secondAttribute="top" constant="2" id="fux-s5-9cW"/>
+                                                        </constraints>
+                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDg-tM-NFw" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="133" width="345" height="52"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="9Fe-Od-BJS"/>
                                                         </constraints>
@@ -152,9 +171,12 @@
                                                     <constraint firstAttribute="bottom" secondItem="Vfs-8u-DVZ" secondAttribute="bottom" id="HsU-KF-Yri"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vfs-8u-DVZ" secondAttribute="trailing" id="JOd-mt-pqe"/>
                                                     <constraint firstItem="9du-B2-g7h" firstAttribute="top" secondItem="WDg-tM-NFw" secondAttribute="bottom" constant="24" id="JxI-1o-Z4Q"/>
+                                                    <constraint firstItem="1wc-c8-aYd" firstAttribute="bottom" secondItem="WDg-tM-NFw" secondAttribute="top" constant="7" id="Kje-nn-MHK"/>
                                                     <constraint firstAttribute="trailing" secondItem="rL5-is-zhe" secondAttribute="trailing" id="LJk-XO-lYs"/>
                                                     <constraint firstItem="Vfs-8u-DVZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="RZc-4Z-gsE" secondAttribute="bottom" priority="200" constant="24" id="LqB-wa-toH"/>
+                                                    <constraint firstItem="1wc-c8-aYd" firstAttribute="leading" secondItem="WDg-tM-NFw" secondAttribute="leading" id="PCq-cu-ZsO"/>
                                                     <constraint firstItem="dny-US-DA3" firstAttribute="top" secondItem="9du-B2-g7h" secondAttribute="bottom" constant="-7" id="QYZ-p1-QeX"/>
+                                                    <constraint firstItem="1wc-c8-aYd" firstAttribute="trailing" secondItem="WDg-tM-NFw" secondAttribute="trailing" id="Qj4-mc-Wk7"/>
                                                     <constraint firstItem="9du-B2-g7h" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="T5E-MV-daL"/>
                                                     <constraint firstAttribute="trailing" secondItem="WDg-tM-NFw" secondAttribute="trailing" id="XUf-bG-fsO"/>
                                                     <constraint firstItem="WDg-tM-NFw" firstAttribute="leading" secondItem="glQ-Gy-Ry2" secondAttribute="leading" id="a77-25-OHo"/>
@@ -204,6 +226,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Nof-NA-FI8"/>
                     <connections>
+                        <outlet property="breakdownRandevuLabel" destination="nIs-pb-NgR" id="sDd-Dd-vTj"/>
+                        <outlet property="breakdownRandevuView" destination="1wc-c8-aYd" id="OK3-BS-NO2"/>
                         <outlet property="careButton" destination="O0K-3C-4cB" id="ajm-rV-bn6"/>
                         <outlet property="contentView" destination="hXv-XU-044" id="VnZ-GW-QcS"/>
                         <outlet property="descriptionLabel" destination="rL5-is-zhe" id="j9y-HD-hho"/>
