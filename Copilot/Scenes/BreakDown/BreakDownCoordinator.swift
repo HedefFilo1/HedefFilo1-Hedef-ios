@@ -37,7 +37,6 @@ class BreakDownCoordinator: Coordinator {
 }
 
 extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
-                                BreakdownStep2VMCoordinatorDelegate,
                                 BreakDownSuccessRandevuVMCrdinatorDlgt {
     func getBack() {
         navigationController.popViewController(animated: true)

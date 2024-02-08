@@ -170,7 +170,7 @@ class APIService {
         
 //        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
         let date = Date()
-        let startDate = date.getServerDate() //?? ""
+        let startDate = date.getServerDate() // ?? ""
         let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=true"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)

@@ -16,8 +16,6 @@ class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
         }
     }
     
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -38,7 +36,6 @@ class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
     }
     
     func setupUI() {
-        setBasicViews()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: SelectedWarningItemCell.self)
@@ -49,14 +46,11 @@ class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
     }
     
     func applyStyle() {
-        contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 40
-        contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        titleLabel.apply(.blackS24B700)
+
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
+        
     }
     
     @IBAction func didTapBack() {
