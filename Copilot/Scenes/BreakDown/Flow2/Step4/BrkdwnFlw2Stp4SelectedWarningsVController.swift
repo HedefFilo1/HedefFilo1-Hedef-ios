@@ -130,7 +130,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDeleg
     }
     
     func didTapServices() {
-        
+        viewModel.goToServices()
     }
     
     func didTapCall() {

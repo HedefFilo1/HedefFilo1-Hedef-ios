@@ -16,6 +16,7 @@ struct MockWarning {
 protocol BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt: AnyObject {
     func getBack()
     func goToWarningLights()
+    func goToServices(towTruck: Bool)
     
 }
 
@@ -28,6 +29,7 @@ protocol BrkdwnFlw2Stp4SelectedWarningsVMType: AnyObject {
     var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate? { get set }
     var warnings: [MockWarning]? { get set }
     func goToWarningLights()
+    func goToServices()
     func getBack()
     
 }
@@ -48,5 +50,9 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     
     func goToWarningLights() {
         coordinatorDelegate?.goToWarningLights()
+    }
+    
+    func goToServices() {
+        coordinatorDelegate?.goToServices(towTruck: false)
     }
 }
