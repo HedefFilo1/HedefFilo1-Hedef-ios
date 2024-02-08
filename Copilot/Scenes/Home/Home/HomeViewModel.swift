@@ -34,6 +34,7 @@ protocol HomeViewModelType: AnyObject {
     func goToStandings()
     func presentKMUsed(delegate: KMUsedViewControllerDelegate)
     func goToSearch()
+    func getAppointment()
 }
 
 class HomeViewModel: HomeViewModelType {
