@@ -34,7 +34,7 @@ enum AppointmentStatus: String, Decodable {
 struct Case: Decodable {
     let caseNumber: String
     let supplierName: String?
-    let appointmentDate: String
+    let appointmentDate: String?
     let recordType: CaseRecordType
     let status: CaseStatusType
     let appointmentStatus: AppointmentStatus
@@ -65,7 +65,7 @@ struct Case: Decodable {
     var displayDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        if let date = formmater.date(from: appointmentDate) {
+        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE HH:mm"
             formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
@@ -77,7 +77,7 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         // 2023-12-06T09:00:00.000Z
-        if let date = formmater.date(from: appointmentDate) {
+        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
             formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
@@ -89,7 +89,7 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         // 2023-12-06T09:00:00.000Z
-        if let date = formmater.date(from: appointmentDate) {
+        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "HH"
             formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
@@ -101,7 +101,7 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         // 2023-12-06T09:00:00.000Z
-        if let date = formmater.date(from: appointmentDate) {
+        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "mm"
             formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)

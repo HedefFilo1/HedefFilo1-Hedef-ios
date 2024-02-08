@@ -127,6 +127,8 @@
 		8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */; };
 		8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB852B74DB6E00967CE2 /* SelectedWarningItemCell.swift */; };
 		8944AB882B74DB6E00967CE2 /* SelectedWarningItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944AB862B74DB6E00967CE2 /* SelectedWarningItemCell.xib */; };
+		8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB8A2B74F80000967CE2 /* WarningLightsViewController.swift */; };
+		8944AB8D2B74F80800967CE2 /* WarningLightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB8C2B74F80800967CE2 /* WarningLightsViewModel.swift */; };
 		894632E02B66B92600D8F301 /* Tire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894632DF2B66B92600D8F301 /* Tire.storyboard */; };
 		894632E22B66B9AC00D8F301 /* TireCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894632E12B66B9AC00D8F301 /* TireCoordinator.swift */; };
 		894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */; };
@@ -477,6 +479,8 @@
 		8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsContentCell.xib; sourceTree = "<group>"; };
 		8944AB852B74DB6E00967CE2 /* SelectedWarningItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningItemCell.swift; sourceTree = "<group>"; };
 		8944AB862B74DB6E00967CE2 /* SelectedWarningItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningItemCell.xib; sourceTree = "<group>"; };
+		8944AB8A2B74F80000967CE2 /* WarningLightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningLightsViewController.swift; sourceTree = "<group>"; };
+		8944AB8C2B74F80800967CE2 /* WarningLightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningLightsViewModel.swift; sourceTree = "<group>"; };
 		894632DF2B66B92600D8F301 /* Tire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tire.storyboard; sourceTree = "<group>"; };
 		894632E12B66B9AC00D8F301 /* TireCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireCoordinator.swift; sourceTree = "<group>"; };
 		894C452F2B2789FF004356C8 /* HGSEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSEmptyCell.swift; sourceTree = "<group>"; };
@@ -1239,6 +1243,15 @@
 				8944AB822B74D43100967CE2 /* SelectedWarningsContentCell.xib */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		8944AB892B74F7DA00967CE2 /* WarningLights */ = {
+			isa = PBXGroup;
+			children = (
+				8944AB8C2B74F80800967CE2 /* WarningLightsViewModel.swift */,
+				8944AB8A2B74F80000967CE2 /* WarningLightsViewController.swift */,
+			);
+			path = WarningLights;
 			sourceTree = "<group>";
 		};
 		894632DD2B66B83A00D8F301 /* Tire */ = {
@@ -2357,6 +2370,7 @@
 				89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */,
 				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
 				8976B0192B73AC6D00E7C58F /* SuccessRandevu */,
+				8944AB892B74F7DA00967CE2 /* WarningLights */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
 				89DBD9D62B72C684007B416A /* Flow1 */,
 				8976B01E2B73B7F300E7C58F /* Flow2 */,
@@ -2686,6 +2700,7 @@
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
+				8944AB8D2B74F80800967CE2 /* WarningLightsViewModel.swift in Sources */,
 				897835DD2B455FB300C63AA7 /* Strings+Part2.swift in Sources */,
 				897835D92B455D9600C63AA7 /* ConfirmedRandevuViewController.swift in Sources */,
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
@@ -2871,6 +2886,7 @@
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
+				8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */,
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
 				893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */,
@@ -3015,7 +3031,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 77;
+				CURRENT_PROJECT_VERSION = 78;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3049,7 +3065,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 77;
+				CURRENT_PROJECT_VERSION = 78;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3143,7 +3159,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 77;
+				CURRENT_PROJECT_VERSION = 78;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3231,7 +3247,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 77;
+				CURRENT_PROJECT_VERSION = 78;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

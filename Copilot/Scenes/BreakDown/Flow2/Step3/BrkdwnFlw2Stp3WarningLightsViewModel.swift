@@ -19,7 +19,7 @@ protocol BrkdwnFlw2Stp3WarningLightsVMDelegate: BaseViewModelDelegate {
 protocol BrkdwnFlw2Stp3WarningLightsViewModelType: AnyObject {
     var coordinatorDelegate: BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt? { get set }
     var delegate: BrkdwnFlw2Stp3WarningLightsVMDelegate? { get set }
-    var appointment: Case? { get set }
+
     func getBack()
     func goToBrkdwnFlw2Stp4SelectedWarnings()
 }
@@ -28,7 +28,6 @@ class BrkdwnFlw2Stp3WarningLightsViewModel: BrkdwnFlw2Stp3WarningLightsViewModel
     
     weak var coordinatorDelegate: BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt?
     weak var delegate: BrkdwnFlw2Stp3WarningLightsVMDelegate?
-    var appointment: Case?
     
     func getBack() {
         coordinatorDelegate?.getBack()

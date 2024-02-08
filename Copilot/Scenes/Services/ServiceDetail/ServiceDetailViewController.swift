@@ -131,7 +131,7 @@ class ServiceDetailViewController: UIViewController {
             desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
         }
         
-        dateChooseView.setDate(strDate: item.appointmentDate)
+        dateChooseView.setDate(strDate: item.appointmentDate ?? "")
         timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
         setButtonActivation()
     }
