@@ -36,12 +36,11 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     
     var warnings: [MockWarning]? = []
     
+    // FLow 3 here
     var isJustYellowWarning: Bool {
         if let warnings {
-            for item in warnings {
-                if item.isRed {
-                    return false
-                }
+            for item in warnings where item.isRed {
+                return false
             }
         }
         return true

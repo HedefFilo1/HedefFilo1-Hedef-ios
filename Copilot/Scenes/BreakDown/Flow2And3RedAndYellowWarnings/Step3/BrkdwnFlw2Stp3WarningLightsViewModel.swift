@@ -31,7 +31,27 @@ var allWarnings = [
     
     MockWarning(id: 6, title: "ABS", trTitle: "kontağı kapatıp", image: "absWarning", isRed: false, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
     
-    MockWarning(id: 7, title: "Restart", trTitle: "kontağı kapatıp", image: "restartWarning", isRed: false, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız")
+    MockWarning(id: 7, title: "Restart", trTitle: "kontağı kapatıp", image: "restartWarning", isRed: false, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
+    
+    MockWarning(id: 8, title: "Air pressure", trTitle: "lastik hava", image: "airPressure", isRed: false, description: "Lütfen lastik hava basıncını kontrol ediniz"),
+    
+    MockWarning(id: 9, title: "Get Away Vehicle", trTitle: "araçla takip mesafenizi koruyunuz", image: "getAwayVehicle", isRed: true, description: "Lütfen önünüzdeki araçla takip mesafenizi koruyunuz"),
+    
+    MockWarning(id: 10, title: "brake pad", trTitle: "brake pad", image: "brakePad", isRed: true, description: "brake pad"),
+    
+    MockWarning(id: 11, title: "Check Engine", trTitle: "check Engine", image: "checkEngine", isRed: false, description: "Check Engine"),
+    
+    MockWarning(id: 12, title: "Check Battery", trTitle: "akü", image: "battery", isRed: true, description: "check Battery"),
+    
+    MockWarning(id: 13, title: "diesel particulate", trTitle: "dizel partikül", image: "dieselParticulate", isRed: false, description: "Dizel partikül"),
+    
+    MockWarning(id: 14, title: "chareg Vehicle", trTitle: "chareg Vehicle", image: "charegVehicle", isRed: false, description: "chareg Vehicle"),
+    
+    MockWarning(id: 15, title: "brake system", trTitle: "fren sistemi", image: "brakeSystem", isRed: true, description: "fren sistemi"),
+    
+    MockWarning(id: 16, title: "general malfunction", trTitle: "genel arıza", image: "generalMalfunction", isRed: true, description: "genel arıza"),
+    
+    MockWarning(id: 17, title: "temperature warning", trTitle: "sıcaklık uyarı", image: "temperatureWarning", isRed: true, description: "sıcaklık uyarı")
     
 ]
 
