@@ -22,6 +22,7 @@ protocol BrkdwnFlw2Stp4SelectedWarningsVMType: AnyObject {
     var coordinatorDelegate: BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt? { get set }
     var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate? { get set }
     var warnings: [MockWarning]? { get set }
+    var isJustYellowWarning: Bool { get }
     func goToWarningLights()
     func goToServices()
     func getBack()
@@ -34,6 +35,17 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     weak var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate?
     
     var warnings: [MockWarning]? = []
+    
+    var isJustYellowWarning: Bool {
+        if let warnings {
+            for item in warnings {
+                if item.isRed {
+                    return false
+                }
+            }
+        }
+        return true
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()

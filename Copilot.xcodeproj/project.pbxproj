@@ -221,6 +221,10 @@
 		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
 		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
 		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
+		899FF4152B76405500447118 /* SelectedWarningsButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */; };
+		899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */; };
+		899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF4182B76433900447118 /* JustYellowWarningCell.swift */; };
+		899FF41B2B76433900447118 /* JustYellowWarningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4192B76433900447118 /* JustYellowWarningCell.xib */; };
 		89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A908B22B31A6DB00BC7727 /* Services.storyboard */; };
 		89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */; };
 		89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B72B31A70200BC7727 /* VehicleServicesViewController.swift */; };
@@ -578,6 +582,10 @@
 		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
+		899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsButtonsCell.swift; sourceTree = "<group>"; };
+		899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsButtonsCell.xib; sourceTree = "<group>"; };
+		899FF4182B76433900447118 /* JustYellowWarningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustYellowWarningCell.swift; sourceTree = "<group>"; };
+		899FF4192B76433900447118 /* JustYellowWarningCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustYellowWarningCell.xib; sourceTree = "<group>"; };
 		89A908B22B31A6DB00BC7727 /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
 		89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCoordinator.swift; sourceTree = "<group>"; };
 		89A908B72B31A70200BC7727 /* VehicleServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServicesViewController.swift; sourceTree = "<group>"; };
@@ -1244,6 +1252,8 @@
 			children = (
 				8944AB7F2B74D3FE00967CE2 /* Item */,
 				8944AB802B74D40D00967CE2 /* Content */,
+				899FF4172B76425C00447118 /* JustYellowWarning */,
+				899FF4122B76403600447118 /* Button */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1703,6 +1713,24 @@
 				89B610DD2B6CDB0C0052A417 /* GetEligible.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		899FF4122B76403600447118 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */,
+				899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		899FF4172B76425C00447118 /* JustYellowWarning */ = {
+			isa = PBXGroup;
+			children = (
+				899FF4182B76433900447118 /* JustYellowWarningCell.swift */,
+				899FF4192B76433900447118 /* JustYellowWarningCell.xib */,
+			);
+			path = JustYellowWarning;
 			sourceTree = "<group>";
 		};
 		89A908B12B31A6C400BC7727 /* Services */ = {
@@ -2531,6 +2559,7 @@
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
 				8907EEFC2B696807004869BE /* MaintenanceCell.xib in Resources */,
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
+				899FF41B2B76433900447118 /* JustYellowWarningCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
 				89CE08052B3AE3AC00C76433 /* VehicleServicesSearchCell.xib in Resources */,
 				8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */,
@@ -2545,6 +2574,7 @@
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				8976B0302B73CA2100E7C58F /* WarningItemsCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
+				899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */,
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
 				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
@@ -2836,6 +2866,7 @@
 				89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
+				899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */,
@@ -2877,6 +2908,7 @@
 				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
 				89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */,
+				899FF4152B76405500447118 /* SelectedWarningsButtonsCell.swift in Sources */,
 				89DBD9D32B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift in Sources */,
 				891BFB752B34C563009BD793 /* TireOperationsViewModel.swift in Sources */,

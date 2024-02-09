@@ -40,6 +40,8 @@ class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
         collectionView.dataSource = self
         collectionView.register(cellType: SelectedWarningItemCell.self)
         collectionView.register(cellType: SelectedWarningsContentCell.self)
+        collectionView.register(cellType: JustYellowWarningCell.self)
+        collectionView.register(cellType: SelectedWarningsButtonsCell.self)
         collectionView.contentInset.bottom = 60
         applyStyle()
         setTexts()
@@ -62,7 +64,7 @@ class BrkdwnFlw2Stp4SelectedWarningsVCntlr: UIViewController {
 extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -85,7 +87,17 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
             return cell
             
         case 1:
-            let cell: SelectedWarningsContentCell = collectionView.dequeueReusableCell(for: indexPath)
+            if viewModel.isJustYellowWarning {
+                let cell: JustYellowWarningCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+                
+            } else {
+                let cell: SelectedWarningsContentCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.delegate = self
+                return cell
+            }
+        case 2:
+            let cell: SelectedWarningsButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             return cell
         
@@ -102,7 +114,14 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
          height = 118
             
         case 1:
-           height = 600
+            if viewModel.isJustYellowWarning {
+                height = 100
+            } else {
+                height = 312
+            }
+            
+        case 2:
+            height = 288
             
         default:
             break
@@ -124,7 +143,8 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
     }
 }
 
-extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDelegate {
+extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsContentCellDelegate,
+                                                SelectedWarningsButtonsCellDelegate {
     
     func didTapShowLocation() {
             
