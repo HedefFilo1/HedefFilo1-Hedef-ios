@@ -96,7 +96,7 @@ struct Case: Decodable {
         // 2023-12-06T09:00:00.000Z
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "HH"
-            formmater.locale = Locale(identifier: "tr_TR")
+//            formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
         }
         return ""

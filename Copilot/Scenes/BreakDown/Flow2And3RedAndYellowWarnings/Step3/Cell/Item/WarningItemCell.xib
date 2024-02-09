@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gasStation" translatesAutoresizingMaskIntoConstraints="NO" id="pYC-iJ-XXR">
-                        <rect key="frame" x="2" y="0.0" width="128" height="128"/>
+                        <rect key="frame" x="2" y="2" width="128" height="124"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pYC-iJ-XXR" secondAttribute="bottom" id="EA1-Ww-nlz"/>
+                <constraint firstAttribute="bottom" secondItem="pYC-iJ-XXR" secondAttribute="bottom" constant="2" id="EA1-Ww-nlz"/>
                 <constraint firstItem="pYC-iJ-XXR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Jb4-v4-JQf"/>
                 <constraint firstAttribute="trailing" secondItem="pYC-iJ-XXR" secondAttribute="trailing" constant="2" id="n4i-QU-9P3"/>
-                <constraint firstItem="pYC-iJ-XXR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sqW-m4-f1I"/>
+                <constraint firstItem="pYC-iJ-XXR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="sqW-m4-f1I"/>
             </constraints>
             <size key="customSize" width="132" height="128"/>
             <connections>
