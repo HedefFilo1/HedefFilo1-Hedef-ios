@@ -30,6 +30,7 @@ protocol ServicesViewModelType: AnyObject {
     var filterDistrict: String? { get set }
     var searchText: String { get set }
     var towTruck: Bool { get set }
+    var supplierType: SupplierType { get set }
     func getServices(lat: Double?, lon: Double?)
     func presentFilters()
     func getBack()
@@ -49,6 +50,7 @@ class ServicesViewModel: ServicesViewModelType {
     
     var searchText: String = ""
     var towTruck: Bool = false
+    var supplierType: SupplierType = .tire
     
     var filteredServices: [Supplier]? {
         var result = services
@@ -74,7 +76,7 @@ class ServicesViewModel: ServicesViewModelType {
     func getServices(lat: Double?, lon: Double?) {
         let mark = App.vehicle?.make ?? ""
         Loading.shared.show()
-        APIService.getSupplier(mark: mark, lat: lat, lon: lon) { [weak self] model, error in
+        APIService.getSupplier(type: supplierType, mark: mark, lat: lat, lon: lon) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             

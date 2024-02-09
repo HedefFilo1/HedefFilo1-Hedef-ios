@@ -78,6 +78,7 @@ extension MaintenanceCoordinator: ServicesVMCoordinatorDelegate,
         viewController.viewModel = ServicesViewModel()
         viewController.viewModel.coordinatorDelegate = self
         viewController.viewModel.towTruck = false
+        viewController.viewModel.supplierType = .maintenance
         navigationController.pushViewController(viewController, animated: true)
     }
     

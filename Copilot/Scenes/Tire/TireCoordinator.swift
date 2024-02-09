@@ -152,6 +152,7 @@ extension TireCoordinator: ServicesVMCoordinatorDelegate {
         viewController.viewModel.coordinatorDelegate = self
         viewController.viewModel.tireSupportType = tireSupportType
         viewController.viewModel.towTruck = towTruck
+        viewController.viewModel.supplierType = tireSupportType == .change ? .tire: .damage
         navigationController.pushViewController(viewController, animated: true)
     }
     

@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum SupplierType: String {
+    case maintenance = "Maintenance"
+    case tire = "Tire"
+    case damage = "Damage"
+    case all
+}
+
 struct Supplier: Decodable {
     let id: String
     let name: String

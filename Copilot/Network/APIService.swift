@@ -206,11 +206,26 @@ class APIService {
         req.start()
     }
     
-    static func getSupplier(mark: String, lat: Double? = nil, lon: Double? = nil, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
-        var route = "copilot/supplier?mark=\(mark)"
-        if let lat, let lon {
-            route += "&lat=\(lat)&lon=\(lon)"
+    static func getSupplier(type: SupplierType? = nil, mark: String, lat: Double? = nil, lon: Double? = nil, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
+        var route = "copilot/supplier"
+        
+        let shoudAddMark = type != .tire
+        if shoudAddMark {
+            route += "?mark=\(mark)&"
+        } else {
+//            route += "?"
+            route += "?mark=\(mark)&"
         }
+        
+        if let lat, let lon {
+            route += "lat=\(lat)&lon=\(lon)&"
+        }
+        if let type {
+            route += "type=\(type.rawValue)"
+        } else {
+            route.removeLast()
+        }
+    
         let req = APIRequest<[Supplier]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Suppiler"
         req.log = loggingEnabled
@@ -389,36 +404,4 @@ class APIService {
         req.completion = completion
         req.start()
     }
-    
-    static func updateCase(caseId: String,
-                           appointmentDate: Date,
-                           completion: @escaping (Success?, APIResponseError?) -> Void) {
-        
-        let serverdate = appointmentDate.getServerDate()
-        
-        let route = "copilot/case"
-        let params = [
-            "caseId": caseId,
-            "appointmentDate": serverdate
-        ] as [String: Any]
-        
-        let req = APIRequest<Success>(route: route,
-                                      method: .patch,
-                                      parameters: params,
-                                      hasToken: true)
-        req.identifier = "createMaintenanceCase"
-        req.log = loggingEnabled || true
-        req.completion = completion
-        req.start()
-    }
-    
-    static func getMaintenanceEligible(kmeter: Int, completion: @escaping (GetEligible?, APIResponseError?) -> Void) {
-        let route = "copilot/maintenance-eligible?km=\(kmeter)"
-        let req = APIRequest<GetEligible>(route: route, method: .get, hasToken: true)
-        req.identifier = "getMaintenanceEligible"
-        req.log = loggingEnabled || true
-        req.completion = completion
-        req.start()
-    }
-    
 }

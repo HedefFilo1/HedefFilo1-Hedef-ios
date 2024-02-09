@@ -83,6 +83,7 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         viewModel.coordinatorDelegate = self
         viewModel.towTruck = towTruck
         viewController.viewModel = viewModel
+        viewController.viewModel.supplierType = .maintenance
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -110,7 +111,6 @@ extension BreakDownCoordinator: ServicesVMCoordinatorDelegate {
     func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
     }
 }
-
 
 // MARK: FLOW 2 AND 3
 extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,

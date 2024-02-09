@@ -225,6 +225,7 @@
 		899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */; };
 		899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF4182B76433900447118 /* JustYellowWarningCell.swift */; };
 		899FF41B2B76433900447118 /* JustYellowWarningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4192B76433900447118 /* JustYellowWarningCell.xib */; };
+		899FF41D2B766BC100447118 /* APIService+Part2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF41C2B766BC100447118 /* APIService+Part2.swift */; };
 		89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A908B22B31A6DB00BC7727 /* Services.storyboard */; };
 		89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */; };
 		89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908B72B31A70200BC7727 /* VehicleServicesViewController.swift */; };
@@ -586,6 +587,7 @@
 		899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsButtonsCell.xib; sourceTree = "<group>"; };
 		899FF4182B76433900447118 /* JustYellowWarningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustYellowWarningCell.swift; sourceTree = "<group>"; };
 		899FF4192B76433900447118 /* JustYellowWarningCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustYellowWarningCell.xib; sourceTree = "<group>"; };
+		899FF41C2B766BC100447118 /* APIService+Part2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Part2.swift"; sourceTree = "<group>"; };
 		89A908B22B31A6DB00BC7727 /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
 		89A908B42B31A6E100BC7727 /* ServicesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCoordinator.swift; sourceTree = "<group>"; };
 		89A908B72B31A70200BC7727 /* VehicleServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServicesViewController.swift; sourceTree = "<group>"; };
@@ -1685,6 +1687,7 @@
 				899CF56A2AE18CD5006D85E4 /* APIClient.swift */,
 				899CF5692AE18CD5006D85E4 /* APIRequest.swift */,
 				899CF5682AE18CD4006D85E4 /* APIService.swift */,
+				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
 				899CF56F2AE18EE5006D85E4 /* Models */,
 			);
 			path = Network;
@@ -2679,6 +2682,7 @@
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
+				899FF41D2B766BC100447118 /* APIService+Part2.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
 				891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */,
