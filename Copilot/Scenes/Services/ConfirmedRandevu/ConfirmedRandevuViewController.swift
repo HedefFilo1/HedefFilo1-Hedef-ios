@@ -95,6 +95,11 @@ class ConfirmedRandevuViewController: UIViewController {
             supplierNameLabel.text = service.name
             addressLabel.text = service.address
             phoneLabel.text = service.phone
+            
+        } else if let appointment = viewModel.appointment {
+            supplierNameLabel.text = appointment.supplierName
+            addressLabel.text = appointment.address
+            phoneLabel.text = appointment.supplierPhone
         }
         dateLabel.text = viewModel.displayDate
     }

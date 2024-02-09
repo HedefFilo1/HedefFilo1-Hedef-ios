@@ -80,7 +80,11 @@ class ServiceRandevuViewController: UIViewController {
     }
     
     @IBAction func didTapConfirm() {
-        viewModel.createRandevu()
+        if viewModel.appointment != nil {
+            viewModel.updateRandevu()
+        } else {
+            viewModel.createRandevu()
+        }
     }
     
     func setRandevu() {

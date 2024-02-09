@@ -9,7 +9,7 @@ import Foundation
 
 protocol ServiceRandevuVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToConfirmedRandevu(service: Supplier, date: Date)
+    func goToConfirmedRandevu(service: Supplier?, date: Date, appointment: Case?)
 }
 
 protocol ServiceRandevuViewModelDelegate: BaseViewModelDelegate {
@@ -20,12 +20,14 @@ protocol ServiceRandevuViewModelType: AnyObject {
     var coordinatorDelegate: ServiceRandevuVMCoordinatorDelegate? { get set }
     var delegate: ServiceRandevuViewModelDelegate? { get set }
     var service: Supplier? { get set }
+    var appointment: Case? { get set }
     var towTruck: Bool { get set }
     var date: Date? { get set }
     var displayDate: String? { get }
     func getBack()
     func goToConfirmedRandevu()
     func createRandevu()
+    func updateRandevu()
 }
 
 class ServiceRandevuViewModel: ServiceRandevuViewModelType {
@@ -36,6 +38,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     var date: Date?
     var tireSupportType: TireSupportType? = .damage
     var towTruck = false
+    var appointment: Case?
     
     var displayDate: String? {
         guard let date = date else { return nil }
@@ -51,7 +54,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     
     func goToConfirmedRandevu() {
         if let service, let date {
-            coordinatorDelegate?.goToConfirmedRandevu(service: service, date: date)
+            coordinatorDelegate?.goToConfirmedRandevu(service: service, date: date, appointment: nil)
         }
     }
     
@@ -74,6 +77,23 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
                                          message: error.message)
             } else {
                 self.goToConfirmedRandevu()
+            }
+        }
+    }
+    
+    func updateRandevu() {
+        guard let appointment, let date else { return }
+        Loading.shared.show()
+        APIService.updateCase(caseId: appointment.id ?? "",
+                              appointmentDate: date) { [weak self] _, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else {
+                self.coordinatorDelegate?.goToConfirmedRandevu(service: nil, date: date, appointment: appointment)
             }
         }
     }

@@ -13,7 +13,7 @@ class MaintenanceServiceDetailViewController: ServiceDetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 #if DEV_DEBUG
-        viewModel.goToServiceRandevu(date: Date(), hour: "14", minute: "45")
+//        viewModel.goToServiceRandevu(date: Date(), hour: "14", minute: "45")
     #endif
     }
     

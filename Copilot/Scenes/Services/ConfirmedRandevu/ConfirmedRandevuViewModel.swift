@@ -21,6 +21,7 @@ protocol ConfirmedRandevuViewModelType: AnyObject {
     var delegate: ConfirmedRandevuViewModelDelegate? { get set }
     var service: Supplier? { get set }
     var date: Date? { get set }
+    var appointment: Case? { get set }
     var displayDate: String? { get }
     func getBack()
     func getBackToHome()
@@ -32,6 +33,7 @@ class ConfirmedRandevuViewModel: ConfirmedRandevuViewModelType {
     
     var service: Supplier?
     var date: Date?
+    var appointment: Case?
     
     var displayDate: String? {
         guard let date = date else { return nil }
