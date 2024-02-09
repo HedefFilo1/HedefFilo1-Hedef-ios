@@ -137,11 +137,11 @@ class TireOperationsViewModel: TireOperationsViewModelType {
         let model = Supplier(id: tire.supplierId,
                              name: tire.supplierName,
                              address: tire.supplierAddress,
-                             lon: nil,
-                             lat: nil,
+                             lon: tire.supplierLon,
+                             lat: tire.supplierLat,
                              district: nil,
                              city: nil,
-                             phone: nil)
+                             phone: tire.supplierPhone)
         coordinatorDelegate?.goToFlow5Step2TireChange(tireService: model)
     }
 }
