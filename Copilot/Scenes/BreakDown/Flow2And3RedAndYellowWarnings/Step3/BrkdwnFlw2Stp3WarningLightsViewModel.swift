@@ -51,8 +51,27 @@ var allWarnings = [
     
     MockWarning(id: 16, title: "general malfunction", trTitle: "genel arıza", image: "generalMalfunction", isRed: true, description: "genel arıza"),
     
-    MockWarning(id: 17, title: "temperature warning", trTitle: "sıcaklık uyarı", image: "temperatureWarning", isRed: true, description: "sıcaklık uyarı")
+    MockWarning(id: 17, title: "temperature warning", trTitle: "sıcaklık uyarı", image: "temperatureWarning", isRed: true, description: "sıcaklık uyarı"),
     
+    MockWarning(id: 18, title: "oil warning", trTitle: "yağ uyarı", image: "oilWarning", isRed: true, description: "yağ uyarı"),
+    
+    MockWarning(id: 19, title: "airbag", trTitle: "airbag", image: "airbag", isRed: true, description: "airbag"),
+    
+    MockWarning(id: 20, title: "balance", trTitle: "balans", image: "balance", isRed: false, description: "balans"),
+    
+    MockWarning(id: 21, title: "brake Pad", trTitle: "brake Pad", image: "brakePadYellow", isRed: false, description: "brakePadYellow"),
+    
+    MockWarning(id: 22, title: "light", trTitle: "lamp", image: "light", isRed: false, description: "lamp"),
+    
+    MockWarning(id: 23, title: "wire", trTitle: "wire", image: "wire", isRed: false, description: "wire"),
+    
+    MockWarning(id: 24, title: "service", trTitle: "Servis", image: "serviceWarning", isRed: false, description: "service Warning"),
+    
+    MockWarning(id: 25, title: "park", trTitle: "park", image: "park", isRed: true, description: "park"),
+    
+    MockWarning(id: 26, title: "fog lamp", trTitle: "sis lambası", image: "fogLamp", isRed: false, description: "sis lambası"),
+    
+    MockWarning(id: 27, title: "washer fluid", trTitle: "yıkama sıvısı", image: "washerFluid", isRed: false, description: "yıkama sıvısı")
 ]
 
 protocol BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt: AnyObject {
