@@ -9,7 +9,7 @@ import UIKit
 
 class APIService {
     
-    static var loggingEnabled = false
+    static var loggingEnabled = true
     
     static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
         let route = "content-string"
@@ -171,7 +171,7 @@ class APIService {
 //        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date())
         let date = Date()
         let startDate = date.getServerDate() // ?? ""
-        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=true"
+        let route = "copilot/case/generic?startDate=\(startDate)&endDate=&statuses=&recordTypes=&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=false"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Home Case"
