@@ -67,8 +67,8 @@ class ServiceRandevuViewController: UIViewController {
         desciptionLabel.text = Strings.pleaseConfirmRandevu
         confirmationLabel.text = Strings.randevuRequestConfirmation
         
-        editButton.setTitle(Strings.editRandevu, for: .normal)
-        confirmButton.setTitle(Strings.confirmRandevu, for: .normal)
+        editButton.setTitle(Strings.edit, for: .normal)
+        confirmButton.setTitle(Strings.confirm, for: .normal)
     }
     
     @IBAction func didTapBack() {

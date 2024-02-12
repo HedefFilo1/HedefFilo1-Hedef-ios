@@ -74,7 +74,7 @@ class ConfirmedRandevuViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.randevuRequestSuccessMessage
         desciptionLabel.text = Strings.randevuRequestSuccessDescriptin
-        editButton.setTitle(Strings.editRandevu, for: .normal)
+        editButton.setTitle(Strings.edit, for: .normal)
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }
 

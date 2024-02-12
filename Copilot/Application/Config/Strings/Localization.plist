@@ -1455,7 +1455,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>pleaseConfirmRandevu</key>
         <dict>
             <key>tr</key>
-            <string>Lütfen lastik tamir randevu bilgilerinizi onaylayınız.</string>
+            <string>Lütfen lastik tamir randevu talebi bilgilerinizi onaylayınız.</string>
             <key>en</key>
             <string>Please confirm your tire repair Randevu information.</string>
         </dict>

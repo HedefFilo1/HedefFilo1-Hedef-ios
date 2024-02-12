@@ -8,6 +8,7 @@
 import Foundation
 
 extension APIService {
+    
     static func updateCase(caseId: String,
                            appointmentDate: Date,
                            completion: @escaping (Success?, APIResponseError?) -> Void) {

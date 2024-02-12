@@ -7,6 +7,7 @@ line_length: 210
 large_tuple: 4
 function_body_length: 100
 function_parameter_count: 20
+type_body_length: 500
 
 disabled_rules:
   - trailing_whitespace
