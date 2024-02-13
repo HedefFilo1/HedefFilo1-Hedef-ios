@@ -35,6 +35,9 @@ class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        for item in viewModel.warnings {
+            item.selected = false
+        }
     }
     
     func setupUI() {
@@ -148,7 +151,8 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            let item = viewModel.warnings[indexPath.item]
+            var item = viewModel.warnings[indexPath.item]
+            item.selected = true
             viewModel.goToBrkdwnFlw2Stp4SelectedWarnings(item: item)
         }
     }

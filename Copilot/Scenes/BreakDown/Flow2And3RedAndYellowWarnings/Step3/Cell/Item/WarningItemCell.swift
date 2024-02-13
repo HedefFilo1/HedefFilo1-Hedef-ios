@@ -10,6 +10,13 @@ import UIKit
 class WarningItemCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var haSelected: Bool = false {
+        didSet {
+            let color: UIColor = haSelected ? .theme: .borderColor
+            layer.borderColor = color.cgColor
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,7 +9,7 @@ import Foundation
 
 protocol BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt: AnyObject {
     func getBack()
-    func goToWarningLights(delegate: WarningLightsViewControllerDelegate)
+    func goToWarningLights(delegate: WarningLightsViewControllerDelegate, warnings: [MockWarning])
     func goToServices(towTruck: Bool)
     
 }
@@ -21,7 +21,7 @@ protocol BrkdwnFlw2Stp4SelectedWarningsVMDelegate: BaseViewModelDelegate {
 protocol BrkdwnFlw2Stp4SelectedWarningsVMType: AnyObject {
     var coordinatorDelegate: BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt? { get set }
     var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate? { get set }
-    var warnings: [MockWarning]? { get set }
+    var warnings: [MockWarning]? { get }
     var isJustYellowWarning: Bool { get }
     func goToWarningLights()
     func goToServices()
@@ -34,7 +34,10 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     weak var coordinatorDelegate: BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt?
     weak var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate?
     
-    var warnings: [MockWarning]? = []
+    var allWarninggs: [MockWarning] = []
+    var warnings: [MockWarning]? {
+        return allWarninggs.filter({ $0.selected })
+    }
     
     // FLow 3 here
     var isJustYellowWarning: Bool {
@@ -51,7 +54,7 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     }
     
     func goToWarningLights() {
-        coordinatorDelegate?.goToWarningLights(delegate: self)
+        coordinatorDelegate?.goToWarningLights(delegate: self, warnings: allWarninggs)
     }
     
     func goToServices() {
@@ -62,7 +65,7 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
 extension BrkdwnFlw2Stp4SelectedWarningsViewModel: WarningLightsViewControllerDelegate {
     
     func didSelect(item: MockWarning) {
-        warnings?.append(item)
+        item.selected = true
         delegate?.reloadData()
     }
     

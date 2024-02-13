@@ -27,7 +27,7 @@ class BreakDownCoordinator: Coordinator {
         let viewController: BreakDownViewController = storyboard.instantiateViewController()
         viewController.viewModel = BreakDownViewModel()
         viewController.viewModel.coordinatorDelegate = self
-//        viewController.viewModel.appointment = appointment
+        //        viewController.viewModel.appointment = appointment
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -106,7 +106,7 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
 }
 
 extension BreakDownCoordinator: ServicesVMCoordinatorDelegate {
-
+    
     func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
         let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         let viewModel = ServiceFilterViewModel()
@@ -140,19 +140,22 @@ extension BreakDownCoordinator: BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning) {
+    func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning, allWarnings: [MockWarning]) {
         let controller: BrkdwnFlw2Stp4SelectedWarningsVCntlr = storyboard.instantiateViewController()
-        controller.viewModel = BrkdwnFlw2Stp4SelectedWarningsViewModel()
-        controller.viewModel.coordinatorDelegate = self
-        controller.viewModel.warnings = [item]
+        let viewModel = BrkdwnFlw2Stp4SelectedWarningsViewModel()
+        viewModel.coordinatorDelegate = self
+//        viewModel.warnings = [item]
+        viewModel.allWarninggs = allWarnings
+        controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToWarningLights(delegate: WarningLightsViewControllerDelegate) {
+    func goToWarningLights(delegate: WarningLightsViewControllerDelegate, warnings: [MockWarning]) {
         let controller: WarningLightsViewController = storyboard.instantiateViewController()
         controller.viewModel = WarningLightsViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.delegate = delegate
+        controller.viewModel.warnings = warnings
         navigationController.pushViewController(controller, animated: true)
     }
 }

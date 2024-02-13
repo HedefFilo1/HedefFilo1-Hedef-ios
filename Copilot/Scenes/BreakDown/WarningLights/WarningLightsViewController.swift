@@ -88,8 +88,10 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
         case 1:
             let cell: WarningItemCell = collectionView.dequeueReusableCell(for: indexPath)
             //            cell.delegate = self
-            let image = UIImage(named: viewModel.warnings[indexPath.item].image)
+            let item = viewModel.warnings[indexPath.item]
+            let image = UIImage(named: item.image)
             cell.imageView.image = image
+            cell.haSelected = item.selected
             return cell
             
         case 2:
@@ -146,7 +148,16 @@ extension WarningLightsViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            delegate?.didSelect(item: viewModel.warnings[indexPath.item])
+            let item = viewModel.warnings[indexPath.item]
+            if item.selected {
+                item.selected = false
+                if let cell = collectionView.cellForItem(at: indexPath) as? WarningItemCell {
+                    cell.haSelected = false
+                }
+                return
+            }
+            item.selected = true
+            delegate?.didSelect(item: item)
             viewModel.getBack()
         }
     }

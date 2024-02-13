@@ -7,13 +7,22 @@
 
 import Foundation
 
-struct MockWarning {
+class MockWarning {
     let id: Int
     let title: String
     let trTitle: String
     let image: String
     let isRed: Bool
     let description: String
+    var selected = false
+    init(id: Int, title: String, trTitle: String, image: String, isRed: Bool, description: String) {
+        self.id = id
+        self.title = title
+        self.trTitle = trTitle
+        self.image = image
+        self.isRed = isRed
+        self.description = description
+    }
 }
 
 var allWarnings = [
@@ -76,7 +85,7 @@ var allWarnings = [
 
 protocol BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt: AnyObject {
     func getBack()
-    func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning)
+    func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning, allWarnings: [MockWarning])
 }
 
 protocol BrkdwnFlw2Stp3WarningLightsVMDelegate: BaseViewModelDelegate {
@@ -102,6 +111,6 @@ class BrkdwnFlw2Stp3WarningLightsViewModel: BrkdwnFlw2Stp3WarningLightsViewModel
     }
     
     func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning) {
-        coordinatorDelegate?.goToBrkdwnFlw2Stp4SelectedWarnings(item: item)
+        coordinatorDelegate?.goToBrkdwnFlw2Stp4SelectedWarnings(item: item, allWarnings: warnings)
     }
 }
