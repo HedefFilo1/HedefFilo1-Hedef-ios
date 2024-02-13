@@ -1924,6 +1924,94 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your Breakdown Appointment Request has been Successfully Received.</string>
         </dict>
         
+        <key>enginWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Motoru durdurunuz! Servis seçimi yaptıktan sonra bulunduğunuz konuma çekici gönderilecektir, lütfen bir sonraki adımdan konumunuzu seçiniz.</string>
+            <key>en</key>
+            <string>Stop the engine! After selecting the service, a tow truck will be sent to your location. Please select your location from the next step.</string>
+        </dict>
+        
+        <key>serviceWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Size en yakın servisler listelenecektir. Lütfen aracınızı listeden seçeceğiniz servise götürünüz.</string>
+            <key>en</key>
+            <string>The services closest to you will be listed. Please take your vehicle to the service you choose from the list.</string>
+        </dict>
+        
+        <key>seatBeltWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen emniyet kemerinizi takınız.</string>
+            <key>en</key>
+            <string>Please fasten your seat belt.</string>
+        </dict>
+        
+        <key>batteryWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen batarya dolumu yapınız.</string>
+            <key>en</key>
+            <string>Please charge the battery.</string>
+        </dict>
+        
+        <key>doorsWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen aracın kapılarının kapalı olduğundan emin olunuz.</string>
+            <key>en</key>
+            <string>Please make sure the vehicle doors are closed.</string>
+        </dict>
+        
+        <key>pedestrianWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracın etrafında yaya tespit edilmiştir, dikkat ediniz.</string>
+            <key>en</key>
+            <string>A pedestrian has been detected around the vehicle, be careful.</string>
+        </dict>
+        
+        <key>airPressureWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen lastik hava basıncını kontrol ediniz.</string>
+            <key>en</key>
+            <string>Please check the tire air pressure.</string>
+        </dict>
+        
+        <key>getAwayWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen önünüzdeki araçla takip mesafenizi koruyunuz.</string>
+            <key>en</key>
+            <string>Please maintain your following distance from the vehicle in front of you.</string>
+        </dict>
+        
+        <key>refuelWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen aracınıza yakıt dolumu yapınız.</string>
+            <key>en</key>
+            <string>Please refuel your vehicle.</string>
+        </dict>
+        
+        <key>restartWarningMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen kontağı kapatıp aracı yeniden çalıştırınız.</string>
+            <key>en</key>
+            <string>Please turn off the ignition and restart the vehicle.</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

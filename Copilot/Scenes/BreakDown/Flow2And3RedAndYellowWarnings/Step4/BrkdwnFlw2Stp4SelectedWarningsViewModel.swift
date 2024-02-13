@@ -22,7 +22,8 @@ protocol BrkdwnFlw2Stp4SelectedWarningsVMType: AnyObject {
     var coordinatorDelegate: BrkdnFlw2Stp4SelectedWrnngsVMCrdntrDlgt? { get set }
     var delegate: BrkdwnFlw2Stp4SelectedWarningsVMDelegate? { get set }
     var warnings: [MockWarning]? { get }
-    var isJustYellowWarning: Bool { get }
+    var isTowTruck: Bool { get }
+    var message: String { get }
     func goToWarningLights()
     func goToServices()
     func getBack()
@@ -39,14 +40,22 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
         return allWarninggs.filter({ $0.selected })
     }
     
-    // FLow 3 here
-    var isJustYellowWarning: Bool {
-        if let warnings {
-            for item in warnings where item.isRed {
-                return false
-            }
+    var isTowTruck: Bool {
+        guard let warnings else { return false }
+        for item in warnings where item.type == .engin {
+            return true
         }
-        return true
+        
+        return false
+    }
+    
+    // FLow 3 here
+    var message: String {
+        guard let warnings, warnings.count > 0 else { return "" }
+        for item in warnings where item.type == .engin {
+            return item.message
+        }
+        return warnings[0].message
     }
     
     func getBack() {
@@ -58,7 +67,7 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     }
     
     func goToServices() {
-        coordinatorDelegate?.goToServices(towTruck: false)
+        coordinatorDelegate?.goToServices(towTruck: isTowTruck)
     }
 }
 

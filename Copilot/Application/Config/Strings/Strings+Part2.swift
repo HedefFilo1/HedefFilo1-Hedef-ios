@@ -256,4 +256,45 @@ extension Strings {
     static var breakdownRandevuSuccessMessage: String {
         return localized(string: "breakdownRandevuSuccessMessage")
     }
+    
+    static var enginWarningMessage: String {
+        return localized(string: "enginWarningMessage")
+    }
+    
+    static var serviceWarningMessage: String {
+        return localized(string: "serviceWarningMessage")
+    }
+    
+    static var seatBeltWarningMessage: String {
+        return localized(string: "seatBeltWarningMessage")
+    }
+    
+    static var batteryWarningMessage: String {
+        return localized(string: "batteryWarningMessage")
+    }
+    
+    static var doorsWarningMessage: String {
+        return localized(string: "doorsWarningMessage")
+    }
+    
+    static var pedestrianWarningMessage: String {
+        return localized(string: "pedestrianWarningMessage")
+    }
+    
+    static var airPressureWarningMessage: String {
+        return localized(string: "airPressureWarningMessage")
+    }
+    
+    static var getAwayWarningMessage: String {
+        return localized(string: "getAwayWarningMessage")
+    }
+    
+    static var refuelWarningMessage: String {
+        return localized(string: "refuelWarningMessage")
+    }
+    
+    static var restartWarningMessage: String {
+        return localized(string: "restartWarningMessage")
+    }
+    
 }

@@ -87,8 +87,9 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
             return cell
             
         case 1:
-            if viewModel.isJustYellowWarning {
+            if !viewModel.isTowTruck {
                 let cell: JustYellowWarningCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.label.text = viewModel.message
                 return cell
                 
             } else {
@@ -114,7 +115,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
          height = 118
             
         case 1:
-            if viewModel.isJustYellowWarning {
+            if !viewModel.isTowTruck {
                 height = 100
             } else {
                 height = 312
