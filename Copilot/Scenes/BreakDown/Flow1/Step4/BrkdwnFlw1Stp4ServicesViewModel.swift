@@ -17,6 +17,6 @@ class BrkdwnFlw1Stp2ServicesViewModel: ServicesViewModel {
     weak var breakDownCoordinatorDelegate: BrkdwnFlw1Stp2ServicesCrdinatorDlgt?
     
     override func goToServiceDetail(service: Supplier) {
-        breakDownCoordinatorDelegate?.goToBrkdwnFlw1Stp5ServiceDetail(towTruck: true, service: service)
+        breakDownCoordinatorDelegate?.goToBrkdwnFlw1Stp5ServiceDetail(towTruck: towTruck, service: service)
     }
 }

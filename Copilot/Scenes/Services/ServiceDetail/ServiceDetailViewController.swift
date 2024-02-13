@@ -79,6 +79,7 @@ class ServiceDetailViewController: UIViewController {
         statusView.layer.cornerRadius = 12
         statusView.backgroundColor = .appYellow
         statusLabel.apply(.whiteS12B700)
+        continueButton.isSmallFontSize = true
     }
     
     func setTexts() {

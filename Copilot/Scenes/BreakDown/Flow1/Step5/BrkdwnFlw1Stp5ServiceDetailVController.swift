@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
-
+    
     var viewModel: BrkdwnFlw1Stp5ServiceDetailViewModelType! {
         didSet {
             viewModel.delegate = self
@@ -24,7 +24,17 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mapButtonView: UIView!
     @IBOutlet weak var mapButtonLabel: UILabel!
+    @IBOutlet weak var dateAndTimeView: UIView!
+    @IBOutlet weak var selectRandevuLabel: UILabel!
+    @IBOutlet weak var randevuDescriptionLabel: UILabel!
+    @IBOutlet weak var selectDayLabel: UILabel!
+    @IBOutlet weak var selectTimeLabel: UILabel!
     @IBOutlet weak var continueButton: CPButton!
+    @IBOutlet weak var dateChooseView: CPDateChooseView!
+    @IBOutlet weak var timeChooseView: CPTimeChooseView!
+    
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -33,7 +43,12 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+//        setAppointment()
         setService()
+        continueButton.isEnabled = viewModel.towTruck
+        if viewModel.towTruck {
+            dateAndTimeView.isHidden = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +58,10 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     func setupUI() {
         applyStyle()
         setTexts()
-        continueButton.isEnabled = true
+        continueButton.isEnabled = false
+        dateChooseView.delegate = self
+        timeChooseView.delegate = self
+        statusView.clipsToBounds = true
         phoneLabel.text = ""
     }
     
@@ -58,14 +76,37 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         mapButtonView.layer.borderWidth = 1
         mapButtonView.layer.borderColor = UIColor.theme.cgColor
         mapButtonLabel.apply(.themeS12B700)
+        selectRandevuLabel.apply(.blackS14B700)
+        randevuDescriptionLabel.apply(.greyS12R400)
+        selectDayLabel.apply(.blackS12B700)
+        selectTimeLabel.apply(.blackS12B700)
+        continueButton.isSmallFontSize = true
+        statusView.layer.cornerRadius = 12
+        statusView.backgroundColor = .appYellow
+        statusLabel.apply(.whiteS12B700)
     }
     
     func setTexts() {
         titleLabel.text = viewModel.service?.name
-        desciptionLabel.text = Strings.selectTimeToRepair
+//        desciptionLabel.text = Strings.breakdownServicesDescription
+        desciptionLabel.text = ""
         mapButtonLabel.text = Strings.showOnMap
+        selectRandevuLabel.text = Strings.selectAppointmentDay
+        randevuDescriptionLabel.text = Strings.oneAppointment15Days
+        selectDayLabel.text = Strings.selectDay
+        selectTimeLabel.text = Strings.selectTime
         continueButton.setTitle(Strings.devamEt, for: .normal)
         continueButton.isSmallFontSize = true
+    }
+    
+    func setButtonActivation() {
+        if viewModel.towTruck {
+            continueButton.isEnabled = true
+        } else {
+            let date = dateChooseView.date != nil
+            let time = timeChooseView.timeSelected
+            continueButton.isEnabled = date && time
+        }
     }
     
     @IBAction func didTapBack() {
@@ -73,13 +114,43 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     }
     
     @IBAction func didTapLocation() {
-        guard let item = viewModel.service else { return }
-        showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        if let item = viewModel.service {
+            showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        }
     }
     
     @IBAction func didContinue() {
-        viewModel.createRandevu()
+        if viewModel.towTruck {
+            viewModel.createTowTruckRandevu()
+            return
+        }
+        guard let date = dateChooseView.date else { return }
+        let hour = timeChooseView.seletedHour ?? ""
+        let minute = timeChooseView.seletedMinute ?? ""
+        viewModel.createRandevu(with: date, hour: hour, minute: minute)
     }
+    
+//    func setAppointment() {
+//        guard let item = viewModel.appointment else { return }
+//        titleLabel.text = item.supplierName ?? Strings.service
+//        nameLabel.text = item.supplierName
+//        addressLabel.text = item.address
+//        phoneLabel.text = item.supplierPhone
+//        let type = item.appointmentStatus
+//        if type == .appointmentApproved {
+//            statusView.backgroundColor = .textSuccess
+//            statusLabel.text = Strings.approved
+//            desciptionLabel.text = Strings.tireRepairappointmentCreated
+//        } else {
+//            statusView.backgroundColor = .appYellow
+//            statusLabel.text = Strings.waitingToApprove
+//            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
+//        }
+//
+//        dateChooseView.setDate(strDate: item.appointmentDate ?? "")
+//        timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
+//        setButtonActivation()
+//    }
     
     func setService() {
         guard let item = viewModel.service else { return }
@@ -87,6 +158,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         nameLabel.text = item.name
         phoneLabel.text = item.phone
         addressLabel.text = item.address
+        statusView.isHidden = true
     }
     
     func showActionSheet(lat: Double, lon: Double) {
@@ -112,6 +184,31 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     }
 }
 
+extension BrkdwnFlw1Stp5ServiceDetailVController: CPTimeChooseViewDelegate,
+                                                  CPDateChooseViewDelegate,
+                                                  CalendarViewControllerDelegate {
+    
+    func didTap(_: CPDateChooseView) {
+        viewModel.presentCalendar(delegate: self)
+    }
+    
+    func didTap(_: CPTimeChooseView) {
+        
+    }
+    
+    func didSelect(_: CPTimeNumberChooseView, number: String) {
+        setButtonActivation()
+    }
+    
+    func superViewForDropDown(in cpTimeChooseView: CPTimeNumberChooseView) -> UIView? {
+        return view
+    }
+    
+    func didSelect(date: Date) {
+        dateChooseView.date = date
+        setButtonActivation()
+    }
+}
 extension BrkdwnFlw1Stp5ServiceDetailVController: BrkdwnFlw1Stp5ServiceDetailVMdlDlgt {
     
 }

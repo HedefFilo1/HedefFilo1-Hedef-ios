@@ -95,6 +95,14 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         controller.viewModel.towTruck = towTruck
         navigationController.pushViewController(controller, animated: true)
     }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        let controller: CalendarViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = CalendarViewModel()
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
 }
 
 extension BreakDownCoordinator: ServicesVMCoordinatorDelegate {

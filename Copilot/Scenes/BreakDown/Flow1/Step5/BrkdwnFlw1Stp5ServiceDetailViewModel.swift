@@ -12,6 +12,7 @@ import MapKit
 protocol BrkdwnFlw1Stp5ServiceDetailVMCrdintrDlgt: AnyObject {
     func getBack()
     func goToBreakDownSuccessRandevu(service: Supplier, date: Date?)
+    func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
 protocol BrkdwnFlw1Stp5ServiceDetailVMdlDlgt: BaseViewModelDelegate {
@@ -24,9 +25,11 @@ protocol BrkdwnFlw1Stp5ServiceDetailViewModelType: AnyObject {
     var towTruck: Bool { get set }
     var service: Supplier? { get set }
     func getBack()
-    func createRandevu()
+    func createTowTruckRandevu()
+    func createRandevu(with date: Date, hour: String, minute: String)
     func openGoogleMap(latitude: Double, longitude: Double)
     func openAppleMap(latitude: Double, longitude: Double)
+    func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
 class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModelType {
@@ -52,7 +55,7 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
     
-    func createRandevu() {
+    func createTowTruckRandevu() {
 #if DEV_DEBUG
         //        if true {
         //            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, date: nil)
@@ -66,7 +69,7 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                                        supplierPhone: service.phone ?? "",
                                        city: service.city ?? "",
                                        district: service.district ?? "",
-                                       towTruck: towTruck,
+                                       towTruck: true,
                                        appointmentDate: nil) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
@@ -78,5 +81,33 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                 self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, date: nil)
             }
         }
+    }
+    
+    func createRandevu(with date: Date, hour: String, minute: String) {
+        guard let hour = Int(hour), let min = Int(minute),
+              let date = date.setTime(hour: hour, min: min),
+              let service else { return }
+        Loading.shared.show()
+        APIService.createBreakDownCase(supplierId: service.id,
+                                       supplierName: service.name,
+                                       supplierPhone: service.phone ?? "",
+                                       city: service.city ?? "",
+                                       district: service.district ?? "",
+                                       towTruck: false,
+                                       appointmentDate: date) { [weak self] _, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else {
+                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, date: nil)
+            }
+        }
+    }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        coordinatorDelegate?.presentCalendar(delegate: delegate)
     }
 }
