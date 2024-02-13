@@ -103,8 +103,13 @@ class ServiceDetailViewController: UIViewController {
     }
     
     @IBAction func didTapLocation() {
-        guard let item = viewModel.service else { return }
-        showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        if let item = viewModel.service {
+            showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        }
+        
+        if let item = viewModel.appointment {
+            showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        }
     }
     
     @IBAction func didContinue() {

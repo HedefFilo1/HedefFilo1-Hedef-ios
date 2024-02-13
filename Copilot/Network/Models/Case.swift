@@ -42,6 +42,17 @@ struct Case: Decodable {
     
     let address: String?
     let supplierPhone: String?
+    
+    let lon: String?
+    let lat: String?
+    
+    var longitude: Double? {
+        return Double(lon ?? "")
+    }
+    
+    var latitude: Double? {
+        return Double(lat ?? "")
+    }
       
     var title: String {
         var str: String?

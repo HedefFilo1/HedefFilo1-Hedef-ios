@@ -30,13 +30,13 @@ class TireOperationsViewController: UIViewController {
         viewModel.getTire()
         
 #if DEV_DEBUG
-                if let coordintor = viewModel.coordinatorDelegate as? TireCoordinator {
-//                    coordintor.goToServices(tireSupportType: .change, towTruck: false)
-//                    coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: "", district: "", city: "", phone: ""))
-//                    coordintor.goToServiceDetail(service: nil, appointment: nil, tireSupportType: .newWinter)
-//                    coordintor.goToLastikOperations(appointment: nil)
-                    coordintor.presentCalendar(delegate: Del())
-                }
+        //                if let coordintor = viewModel.coordinatorDelegate as? TireCoordinator {
+        //                    coordintor.goToServices(tireSupportType: .change, towTruck: false)
+        //                    coordintor.goToServiceDetail(service: Supplier(id: "e3", name: "Boch SErvice", address: "Marawa", lon: "", lat: "", district: "", city: "", phone: ""))
+        //                    coordintor.goToServiceDetail(service: nil, appointment: nil, tireSupportType: .newWinter)
+        //                    coordintor.goToLastikOperations(appointment: nil)
+        //                    coordintor.presentCalendar(delegate: Del())
+        //                }
         
         class Del: CalendarViewControllerDelegate {
             func didSelect(date: Date) {
@@ -57,6 +57,7 @@ class TireOperationsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: LastikRandevuCell.self)
+        collectionView.register(cellType: TireOperationTireCell.self)
         collectionView.register(cellType: LastikOperationButtonsCell.self)
         collectionView.contentInset.top = 12
         collectionView.contentInset.bottom = 90
@@ -84,38 +85,59 @@ class TireOperationsViewController: UIViewController {
 extension TireOperationsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return viewModel.appointment == nil ? 0: 1
         }
+        
+        if section == 1 {
+            return viewModel.tire == nil ? 0: 1
+        }
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if indexPath.section == 0 {
+        switch indexPath.section {
+            
+        case 0:
             let cell: LastikRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             cell.appointment = viewModel.appointment
+            return cell
+            
+        case 1:
+            let cell: TireOperationTireCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.tire = viewModel.tire
             return cell
+            
+        default:
+            let cell: LastikOperationButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
+            return cell
         }
-        
-        let cell: LastikOperationButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.delegate = self
-//        cell.shouldRemoveNewButton = viewModel.appointment != nil
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var height: CGFloat = 353
-        
-        if indexPath.section == 1 {
-            height = viewModel.appointment == nil ? (collectionView.frame.height - 90): 184
+       
+        switch indexPath.section {
+        case 0:
+            height = 230
+            
+        case 1:
+            height = 140
+            
+        case 2:
+            let bigSize = (viewModel.appointment == nil && viewModel.tire == nil)
+            height = bigSize ? (collectionView.frame.height - 90): 184
+            
+        default:
+            break
         }
+        
         return CGSize(width: collectionView.frame.width-32, height: height)
     }
     

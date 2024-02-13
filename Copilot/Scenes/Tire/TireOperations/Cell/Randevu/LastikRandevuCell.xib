@@ -149,75 +149,15 @@
                             <constraint firstAttribute="bottom" secondItem="34r-YC-KDp" secondAttribute="bottom" constant="16" id="vcP-8n-2Ps"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saklamadaki Lastik Bilgisi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ktx-bN-Qdb">
-                        <rect key="frame" x="8" y="201" width="330" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-Sg-KFY">
-                        <rect key="frame" x="8" y="238" width="338" height="64"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ope-Q3-gKT">
-                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tireIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rNs-0p-QbO">
-                                        <rect key="frame" x="14.666666666666671" y="14.666666666666657" width="35" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="Rxm-pP-HjM"/>
-                                            <constraint firstAttribute="height" constant="35" id="g1u-lx-eVg"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" name="theme"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="E0h-QY-Rjs"/>
-                                    <constraint firstAttribute="width" constant="64" id="KTW-Ie-rJf"/>
-                                    <constraint firstItem="rNs-0p-QbO" firstAttribute="centerX" secondItem="Ope-Q3-gKT" secondAttribute="centerX" id="kAt-BV-V8n"/>
-                                    <constraint firstItem="rNs-0p-QbO" firstAttribute="centerY" secondItem="Ope-Q3-gKT" secondAttribute="centerY" id="rUE-WU-Qgh"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petlas Lastik Servisi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-U0-3MW">
-                                <rect key="frame" x="76" y="12" width="262" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Caddesi Örnek Sokak no:23 İlçe/il" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="cjc-uC-1UH">
-                                <rect key="frame" x="76" y="34" width="262" height="13.333333333333336"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cjc-uC-1UH" firstAttribute="top" secondItem="UaZ-U0-3MW" secondAttribute="bottom" constant="4" id="4za-86-BE1"/>
-                            <constraint firstAttribute="trailing" secondItem="cjc-uC-1UH" secondAttribute="trailing" id="8Jv-0E-xid"/>
-                            <constraint firstItem="Ope-Q3-gKT" firstAttribute="leading" secondItem="LjD-Sg-KFY" secondAttribute="leading" id="I0o-RR-DcE"/>
-                            <constraint firstAttribute="height" constant="64" id="Vuj-Hq-lKZ"/>
-                            <constraint firstItem="UaZ-U0-3MW" firstAttribute="leading" secondItem="Ope-Q3-gKT" secondAttribute="trailing" constant="12" id="cQl-8J-zow"/>
-                            <constraint firstAttribute="trailing" secondItem="UaZ-U0-3MW" secondAttribute="trailing" id="dMG-tT-USB"/>
-                            <constraint firstItem="UaZ-U0-3MW" firstAttribute="top" secondItem="LjD-Sg-KFY" secondAttribute="top" constant="12" id="iuB-u6-61o"/>
-                            <constraint firstItem="Ope-Q3-gKT" firstAttribute="centerY" secondItem="LjD-Sg-KFY" secondAttribute="centerY" id="sFH-67-f3M"/>
-                            <constraint firstItem="cjc-uC-1UH" firstAttribute="leading" secondItem="Ope-Q3-gKT" secondAttribute="trailing" constant="12" id="y6X-Vi-cq3"/>
-                        </constraints>
-                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ktx-bN-Qdb" secondAttribute="trailing" constant="8" id="9ey-Ya-hXY"/>
-                <constraint firstItem="LjD-Sg-KFY" firstAttribute="top" secondItem="ktx-bN-Qdb" secondAttribute="bottom" constant="16" id="A0B-cu-xhO"/>
-                <constraint firstItem="LjD-Sg-KFY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BkI-ZK-Scg"/>
-                <constraint firstItem="ktx-bN-Qdb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="J3z-Bo-JqP"/>
-                <constraint firstItem="ktx-bN-Qdb" firstAttribute="top" secondItem="p5d-oL-u7u" secondAttribute="bottom" constant="24" id="KLD-PP-Xrn"/>
                 <constraint firstAttribute="trailing" secondItem="bKb-dx-cwn" secondAttribute="trailing" id="LkL-0F-goP"/>
                 <constraint firstItem="p5d-oL-u7u" firstAttribute="top" secondItem="bKb-dx-cwn" secondAttribute="bottom" constant="16" id="M63-B6-fv5"/>
                 <constraint firstItem="bKb-dx-cwn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QMG-Fh-As2"/>
                 <constraint firstAttribute="trailing" secondItem="p5d-oL-u7u" secondAttribute="trailing" id="kCk-e6-5c0"/>
                 <constraint firstItem="p5d-oL-u7u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kz9-3c-xFh"/>
-                <constraint firstAttribute="trailing" secondItem="LjD-Sg-KFY" secondAttribute="trailing" id="luK-YD-jm5"/>
                 <constraint firstItem="bKb-dx-cwn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vvy-of-yMb"/>
             </constraints>
             <size key="customSize" width="346" height="315"/>
@@ -225,16 +165,12 @@
                 <outlet property="addressLabel" destination="FkB-ta-fhX" id="RGH-oJ-gUI"/>
                 <outlet property="dateLabel" destination="Dzj-Eh-DKu" id="mE8-fd-1Ka"/>
                 <outlet property="editLabel" destination="MLN-WG-PC0" id="Dzo-O3-N6m"/>
-                <outlet property="imageContainer" destination="Ope-Q3-gKT" id="bIM-Xj-iZW"/>
                 <outlet property="phoneLabel" destination="sSx-zY-Ke6" id="OsY-fl-B2p"/>
                 <outlet property="randevuTitleLabel" destination="bKb-dx-cwn" id="8TK-tR-WMM"/>
                 <outlet property="randevuView" destination="p5d-oL-u7u" id="eYg-vH-0ai"/>
                 <outlet property="serviceNameLabel" destination="w1l-dC-7ai" id="5hg-tV-A8E"/>
                 <outlet property="statusLabel" destination="GYI-gJ-8IO" id="bSo-VH-KFM"/>
                 <outlet property="statusView" destination="GuA-ss-3wd" id="WEV-l1-BMD"/>
-                <outlet property="tireInfoLabel" destination="cjc-uC-1UH" id="j40-nD-Ige"/>
-                <outlet property="tireServiceLabel" destination="UaZ-U0-3MW" id="VmQ-ky-Paq"/>
-                <outlet property="tireTitleLabel" destination="ktx-bN-Qdb" id="yhX-br-kS2"/>
                 <outlet property="typeLabel" destination="gEu-he-iA9" id="aDg-v7-XwJ"/>
             </connections>
             <point key="canvasLocation" x="161.83206106870227" y="113.02816901408451"/>
@@ -242,12 +178,8 @@
     </objects>
     <resources>
         <image name="penIcon" width="16" height="16"/>
-        <image name="tireIcon" width="35.333332061767578" height="35.333332061767578"/>
         <namedColor name="appYellow">
             <color red="1" green="0.72156862745098038" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="theme">
-            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

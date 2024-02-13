@@ -168,7 +168,7 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
     func setBreakdownAppointment() {
         breakdownRandevuView.heightConstraint?.constant = 27
         breakdownRandevuView.isHidden = false
-        let type = viewModel.maintenanceAppointment?.appointmentStatus ?? .none
+        let type = viewModel.breakdownAppointment?.appointmentStatus ?? .none
         if type == .appointmentApproved {
             breakdownRandevuView.backgroundColor = .textSuccess
             breakdownRandevuLabel.text = Strings.randevuApproved

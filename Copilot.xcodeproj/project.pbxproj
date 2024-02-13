@@ -110,6 +110,8 @@
 		8935AC512AFA5D87002F1C68 /* SponsorshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */; };
 		8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */; };
 		8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */; };
+		8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */; };
+		893659412B7BACC600A657B0 /* TireOperationTireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893659402B7BACC600A657B0 /* TireOperationTireCell.xib */; };
 		893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */; };
 		893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */; };
 		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
@@ -469,6 +471,8 @@
 		8935AC502AFA5D87002F1C68 /* SponsorshipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorshipCell.swift; sourceTree = "<group>"; };
 		8935AC532AFA6742002F1C68 /* CampaignDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewModel.swift; sourceTree = "<group>"; };
 		8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
+		8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TireOperationTireCell.swift; sourceTree = "<group>"; };
+		893659402B7BACC600A657B0 /* TireOperationTireCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TireOperationTireCell.xib; sourceTree = "<group>"; };
 		893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
 		893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
@@ -1168,6 +1172,15 @@
 				8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */,
 			);
 			path = CampaignDetail;
+			sourceTree = "<group>";
+		};
+		8936593D2B7BABFF00A657B0 /* Tire */ = {
+			isa = PBXGroup;
+			children = (
+				893659402B7BACC600A657B0 /* TireOperationTireCell.xib */,
+				8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */,
+			);
+			path = Tire;
 			sourceTree = "<group>";
 		};
 		893EDF5C2AF924A7004E643E /* Campaigns */ = {
@@ -2349,6 +2362,7 @@
 			isa = PBXGroup;
 			children = (
 				89F6A0502B584A250052EE15 /* Randevu */,
+				8936593D2B7BABFF00A657B0 /* Tire */,
 				89F6A04F2B584A0C0052EE15 /* Buttons */,
 			);
 			path = Cell;
@@ -2590,6 +2604,7 @@
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				8976B0352B73CA5D00E7C58F /* WarningItemCell.xib in Resources */,
+				893659412B7BACC600A657B0 /* TireOperationTireCell.xib in Resources */,
 				893EDF6B2AF92C39004E643E /* CampaignOfferCell.xib in Resources */,
 				89FC519A2B6A982200AD37D4 /* BreakDownCell.xib in Resources */,
 			);
@@ -2818,6 +2833,7 @@
 				895ADBC12B177E08004C9A4C /* Case.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,
+				8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */,
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
@@ -3091,7 +3107,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3125,7 +3141,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3219,7 +3235,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3307,7 +3323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 84;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

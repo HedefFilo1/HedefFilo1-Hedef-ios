@@ -38,8 +38,12 @@ class LoginViewController: UIViewController {
         // just for test
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapTwice))
-        tap.numberOfTapsRequired = 2
+        tap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tap)
+        
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(didTapTripple))
+        tap2.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap2)
 #endif
     }
     
@@ -47,6 +51,10 @@ class LoginViewController: UIViewController {
         viewModel.goToNextScene(email: "jamal.zare@solidict.com")
     }
     
+    @objc func didTapTripple() {
+        emailTextFiled.preText = "ezgiakcay@hedeffilo.com"
+        passwordTextFiled.preText = "Helen1234."
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.checkRememberMe()

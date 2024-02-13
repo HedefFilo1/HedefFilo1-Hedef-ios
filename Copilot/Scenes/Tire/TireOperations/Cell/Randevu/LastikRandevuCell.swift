@@ -31,13 +31,6 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
         }
     }
     
-    var tire: Tire? {
-        didSet {
-            tireServiceLabel.text = tire?.supplierName
-            tireInfoLabel.text = tire?.supplierAddress
-        }
-    }
-    
     weak var delegate: LastikRandevuCellDelegate?
     @IBOutlet weak var randevuTitleLabel: UILabel!
     @IBOutlet weak var randevuView: UIView!
@@ -50,11 +43,6 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var editLabel: UILabel!
-    
-    @IBOutlet weak var tireTitleLabel: UILabel!
-    @IBOutlet weak var imageContainer: UIView!
-    @IBOutlet weak var tireServiceLabel: UILabel!
-    @IBOutlet weak var tireInfoLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -77,11 +65,6 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
         statusLabel.apply(.whiteS12B700)
         editLabel.apply(.whiteS12B700)
         editLabel.textColor = .theme
-        
-        tireTitleLabel.apply(.blackS20B700)
-        imageContainer.layer.cornerRadius = 10
-        tireServiceLabel.apply(.blackS16B700)
-        tireInfoLabel.apply(.greyS12M500)
     }
     
     @IBAction func didTapEdit() {
