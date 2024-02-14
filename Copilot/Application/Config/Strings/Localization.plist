@@ -1487,7 +1487,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>randevuRequestSuccessMessage</key>
         <dict>
             <key>tr</key>
-            <string>Lastik Değişim Randevu Talebiniz Başarıyla Alındı.</string>
+            <string>Lastik Hasar Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
             <string>Your Tire Change Randevu Request has been Successfully Received.</string>
         </dict>
