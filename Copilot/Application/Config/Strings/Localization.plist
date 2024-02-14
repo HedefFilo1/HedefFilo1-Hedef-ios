@@ -2004,12 +2004,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please turn off the ignition and restart the vehicle.</string>
         </dict>
         
-        <key></key>
+        <key>breakDownTowTruckSent</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bulunduğunuz konuma çekici yönlendirmesi yapılmıştır.</string>
             <key>en</key>
-            <string></string>
+            <string>A tow truck has been directed to your location.</string>
         </dict>
         
         <key></key>

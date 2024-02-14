@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="344" height="353"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U1-mu-MJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="344" height="261"/>
+                                <rect key="frame" x="0.0" y="0.0" width="344" height="163"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geçmiş Olsun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fym-ID-9tu">
                                         <rect key="frame" x="16" y="16" width="312" height="21"/>
@@ -43,77 +42,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93e-2Y-1PW">
-                                        <rect key="frame" x="20" y="171" width="304" height="1"/>
-                                        <color key="backgroundColor" name="exactGrey"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="m8R-7k-Vpr"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Örnek Mahallesi Hedef Caddesi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAD-3X-Qaa">
-                                        <rect key="frame" x="20" y="188" width="304" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-va-xoK">
-                                        <rect key="frame" x="78.000000000000014" y="213" width="188.33333333333337" height="32"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2sM-3r-ZBo">
-                                                <rect key="frame" x="24" y="8" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="c2O-Kc-iW7"/>
-                                                    <constraint firstAttribute="width" constant="16" id="uIx-5v-gsO"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konumu Göster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-bX-GYu">
-                                                <rect key="frame" x="45.999999999999993" y="5.6666666666666572" width="118.33333333333331" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-T2-fxg">
-                                                <rect key="frame" x="0.0" y="0.0" width="188.33333333333334" height="32"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="didTapShowLocation" destination="gTV-IL-0wX" eventType="touchUpInside" id="rDW-SA-JeH"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="OkQ-T2-fxg" secondAttribute="trailing" id="4i8-42-Vnh"/>
-                                            <constraint firstAttribute="bottom" secondItem="OkQ-T2-fxg" secondAttribute="bottom" id="73L-Tz-XgU"/>
-                                            <constraint firstItem="OkQ-T2-fxg" firstAttribute="leading" secondItem="AYp-va-xoK" secondAttribute="leading" id="CXt-Cy-ogs"/>
-                                            <constraint firstItem="2sM-3r-ZBo" firstAttribute="leading" secondItem="AYp-va-xoK" secondAttribute="leading" constant="24" id="MEa-9Q-jmf"/>
-                                            <constraint firstItem="IOE-bX-GYu" firstAttribute="leading" secondItem="2sM-3r-ZBo" secondAttribute="trailing" constant="6" id="ZLW-2W-FlF"/>
-                                            <constraint firstAttribute="height" constant="32" id="aMb-m8-48X"/>
-                                            <constraint firstAttribute="trailing" secondItem="IOE-bX-GYu" secondAttribute="trailing" constant="24" id="lKL-eU-AuW"/>
-                                            <constraint firstItem="2sM-3r-ZBo" firstAttribute="centerY" secondItem="AYp-va-xoK" secondAttribute="centerY" id="trt-I0-aTs"/>
-                                            <constraint firstItem="OkQ-T2-fxg" firstAttribute="top" secondItem="AYp-va-xoK" secondAttribute="top" id="ud9-4R-7o5"/>
-                                            <constraint firstItem="IOE-bX-GYu" firstAttribute="centerY" secondItem="AYp-va-xoK" secondAttribute="centerY" id="zBe-IE-YxS"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="93e-2Y-1PW" firstAttribute="leading" secondItem="8U1-mu-MJ8" secondAttribute="leading" constant="20" id="24e-qb-hWf"/>
                                     <constraint firstAttribute="trailing" secondItem="iFQ-k5-6Wk" secondAttribute="trailing" constant="20" id="8EF-Fe-D9u"/>
                                     <constraint firstItem="iFQ-k5-6Wk" firstAttribute="leading" secondItem="8U1-mu-MJ8" secondAttribute="leading" constant="16" id="8fn-N2-XL6"/>
-                                    <constraint firstAttribute="trailing" secondItem="PAD-3X-Qaa" secondAttribute="trailing" constant="20" id="D70-FT-8Nr"/>
                                     <constraint firstItem="iFQ-k5-6Wk" firstAttribute="top" secondItem="fym-ID-9tu" secondAttribute="bottom" constant="16" id="FiU-AQ-Gs1"/>
                                     <constraint firstAttribute="trailing" secondItem="fym-ID-9tu" secondAttribute="trailing" constant="16" id="ICW-Tu-BMg"/>
-                                    <constraint firstItem="AYp-va-xoK" firstAttribute="centerX" secondItem="8U1-mu-MJ8" secondAttribute="centerX" id="IKf-bh-ziY"/>
                                     <constraint firstAttribute="trailing" secondItem="qdU-G1-e2S" secondAttribute="trailing" constant="16" id="IKz-Zy-i26"/>
                                     <constraint firstItem="qdU-G1-e2S" firstAttribute="leading" secondItem="8U1-mu-MJ8" secondAttribute="leading" constant="16" id="J2h-Da-jB8"/>
                                     <constraint firstItem="fym-ID-9tu" firstAttribute="top" secondItem="8U1-mu-MJ8" secondAttribute="top" constant="16" id="LNm-5T-idr"/>
-                                    <constraint firstAttribute="trailing" secondItem="93e-2Y-1PW" secondAttribute="trailing" constant="20" id="Mc0-38-sFp"/>
-                                    <constraint firstAttribute="bottom" secondItem="AYp-va-xoK" secondAttribute="bottom" constant="16" id="nYJ-pu-NMd"/>
-                                    <constraint firstItem="PAD-3X-Qaa" firstAttribute="top" secondItem="93e-2Y-1PW" secondAttribute="bottom" constant="16" id="pXp-oT-5Np"/>
+                                    <constraint firstAttribute="bottom" secondItem="qdU-G1-e2S" secondAttribute="bottom" constant="20" id="WdQ-Dk-RLj"/>
                                     <constraint firstItem="fym-ID-9tu" firstAttribute="leading" secondItem="8U1-mu-MJ8" secondAttribute="leading" constant="16" id="qQ4-ae-F1m"/>
-                                    <constraint firstItem="PAD-3X-Qaa" firstAttribute="leading" secondItem="8U1-mu-MJ8" secondAttribute="leading" constant="20" id="qfN-Bd-Wg2"/>
-                                    <constraint firstItem="AYp-va-xoK" firstAttribute="top" secondItem="PAD-3X-Qaa" secondAttribute="bottom" constant="4" id="u62-sS-Pk4"/>
-                                    <constraint firstItem="93e-2Y-1PW" firstAttribute="top" secondItem="qdU-G1-e2S" secondAttribute="bottom" constant="28" id="xj9-ng-myG"/>
                                     <constraint firstItem="qdU-G1-e2S" firstAttribute="top" secondItem="iFQ-k5-6Wk" secondAttribute="bottom" constant="8" id="z5d-x5-lAo"/>
                                 </constraints>
                             </view>
@@ -140,17 +80,11 @@
                 <outlet property="donotStartLabel" destination="iFQ-k5-6Wk" id="0S5-Az-zmC"/>
                 <outlet property="getWellLabel" destination="fym-ID-9tu" id="4cC-od-zMB"/>
                 <outlet property="headView" destination="8U1-mu-MJ8" id="deD-L7-fOA"/>
-                <outlet property="locationLabel" destination="PAD-3X-Qaa" id="gp3-ry-tBc"/>
-                <outlet property="showLocationLabel" destination="IOE-bX-GYu" id="Dqg-Wb-8xS"/>
             </connections>
             <point key="canvasLocation" x="175.57251908396947" y="241.90140845070422"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="navigationIcon" width="16.333333969116211" height="16"/>
-        <namedColor name="exactGrey">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

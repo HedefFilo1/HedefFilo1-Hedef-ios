@@ -297,4 +297,7 @@ extension Strings {
         return localized(string: "restartWarningMessage")
     }
     
+    static var breakDownTowTruckSent: String {
+        return localized(string: "breakDownTowTruckSent")
+    }
 }
