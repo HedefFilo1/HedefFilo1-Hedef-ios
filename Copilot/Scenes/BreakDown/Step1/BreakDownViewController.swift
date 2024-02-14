@@ -92,17 +92,17 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
             return cell
         }
         
-//        if viewModel.appointment == nil {
-            let cell: BreakDownCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.delegate = self
-            return cell
-//        } else {
-//
-//            let cell: BreakDownRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
-//            cell.delegate = self
-//            cell.appointment = viewModel.appointment
-//            return cell
-//        }
+        //        if viewModel.appointment == nil {
+        let cell: BreakDownCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.delegate = self
+        return cell
+        //        } else {
+        //
+        //            let cell: BreakDownRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
+        //            cell.delegate = self
+        //            cell.appointment = viewModel.appointment
+        //            return cell
+        //        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -110,10 +110,10 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
         
         if indexPath.section == 0 {
             height = 230
-            
-        } else if viewModel.appointment != nil {
-            height = collectionView.frame.height - 90
         }
+        //        else if viewModel.appointment != nil {
+        //            height = collectionView.frame.height - 90
+        //        }
         return CGSize(width: collectionView.frame.width-32, height: height)
     }
     
@@ -130,7 +130,7 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
 }
 
 extension BreakDownViewController: BreakDownCellDelegate, BreakdownRandevuCellDelegate {
-   
+    
     func didTapEdit() {
         
     }
