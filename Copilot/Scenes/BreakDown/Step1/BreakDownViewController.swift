@@ -45,7 +45,7 @@ class BreakDownViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: BreakDownCell.self)
-//        collectionView.register(cellType: BreakDownRandevuCell.self)
+        collectionView.register(cellType: BreakdownRandevuCell.self)
         collectionView.contentInset.top = 12
         collectionView.contentInset.bottom = 90
         applyStyle()
@@ -73,14 +73,24 @@ class BreakDownViewController: UIViewController {
 extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return viewModel.appointment == nil ? 0: 1
+        }
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 0 {
+            let cell: BreakdownRandevuCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
+            cell.appointment = viewModel.appointment
+            return cell
+        }
         
 //        if viewModel.appointment == nil {
             let cell: BreakDownCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -98,7 +108,10 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var height: CGFloat = 353
         
-        if viewModel.appointment != nil {
+        if indexPath.section == 0 {
+            height = 230
+            
+        } else if viewModel.appointment != nil {
             height = collectionView.frame.height - 90
         }
         return CGSize(width: collectionView.frame.width-32, height: height)
@@ -116,8 +129,12 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
     }
 }
 
-extension BreakDownViewController: BreakDownCellDelegate {
+extension BreakDownViewController: BreakDownCellDelegate, BreakdownRandevuCellDelegate {
    
+    func didTapEdit() {
+        
+    }
+    
     func didTapYes() {
         viewModel.goToBreakdownFlow2Step2AnyAlarm()
     }
