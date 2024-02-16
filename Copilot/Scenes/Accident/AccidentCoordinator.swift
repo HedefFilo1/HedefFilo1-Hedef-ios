@@ -43,7 +43,8 @@ class AccidentCoordinator: Coordinator {
 extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccFlw1Stp2OtherVehicleVMCrdinatorDlgt,
                                AccFlw1Stp3AgreementVMCrdinatorDlgt,
-                               AccFlw1Stp4ReportVMCrdinatorDlgt {
+                               AccFlw1Stp4ReportVMCrdinatorDlgt,
+                               AccFlw1Stp5LeaksVMCrdinatorDlgt {
     
     func getBack() {
         navigationController.popViewController(animated: true)
@@ -71,6 +72,13 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
     func goToAccFlw1Stp4Report() {
         let viewController: AccFlw1Stp4ReportViewController = storyboard.instantiateViewController()
         viewController.viewModel = AccFlw1Stp4ReportViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToAccFlw1Stp3Leaks() {
+        let viewController: AccFlw1Stp5LeaksViewController = storyboard.instantiateViewController()
+        viewController.viewModel = AccFlw1Stp5LeaksViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

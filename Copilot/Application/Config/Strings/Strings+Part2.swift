@@ -401,4 +401,8 @@ extension Strings {
         return localized(string: "photoSelected")
     }
     
+    static var areThereAnyFluidLeaks: String {
+        return localized(string: "areThereAnyFluidLeaks")
+    }
+    
 }

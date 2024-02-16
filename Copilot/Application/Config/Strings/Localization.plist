@@ -2212,12 +2212,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Photo Selected</string>
         </dict>
         
-        <key></key>
+        <key>areThereAnyFluidLeaks</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracın alt kısmında herhangi bir sıvı kaçağı/sızıntısı var mı?</string>
             <key>en</key>
-            <string></string>
+            <string>Are there any fluid leaks/leaks under the vehicle?</string>
         </dict>
         
         <key></key>

@@ -231,6 +231,8 @@
 		89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */; };
 		89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */; };
 		89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */; };
+		89950AD32B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */; };
+		89950AD52B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -615,6 +617,8 @@
 		89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw1Stp4ReportImageCell.xib; sourceTree = "<group>"; };
 		89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoCell.swift; sourceTree = "<group>"; };
 		89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCell.xib; sourceTree = "<group>"; };
+		89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3LeaksViewModel.swift; sourceTree = "<group>"; };
+		89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3LeaksViewController.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1760,6 +1764,7 @@
 				89950AAC2B7F81F5004537D2 /* Step2 */,
 				89950AB12B7F9FA5004537D2 /* Step3 */,
 				89950AB62B7FA7D8004537D2 /* Step4 */,
+				89950AD12B7FCB55004537D2 /* Step5 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1846,6 +1851,15 @@
 				89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */,
 			);
 			path = UploadPhoto;
+			sourceTree = "<group>";
+		};
+		89950AD12B7FCB55004537D2 /* Step5 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */,
+				89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */,
+			);
+			path = Step5;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -2892,6 +2906,7 @@
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */,
 				89950ABA2B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift in Sources */,
+				89950AD32B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
@@ -3012,6 +3027,7 @@
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
+				89950AD52B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
 				89950AAE2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift in Sources */,

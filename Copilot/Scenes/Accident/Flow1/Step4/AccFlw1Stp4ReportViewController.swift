@@ -57,12 +57,16 @@ class AccFlw1Stp4ReportViewController: UIViewController {
     }
     
     func setTexts() {
-        let text = "\(Strings.devamEt) (1 \(Strings.photoSelected))"
-        button.setTitle(text, for: .normal)
+//        let text = "\(Strings.devamEt) (1 \(Strings.photoSelected))"
+        button.setTitle(Strings.devamEt, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
+    }
+    
+    @IBAction func didTapContinue() {
+        viewModel.goToAccFlw1Stp3Leaks()
     }
     
 }
