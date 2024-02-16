@@ -345,4 +345,15 @@ extension Strings {
         return localized(string: "goToAccidentGuide")
     }
     
+    static var wereYouAbleAgreement: String {
+        return localized(string: "wereYouAbleAgreement")
+    }
+    
+    static var weAgreed: String {
+        return localized(string: "weAgreed")
+    }
+    
+    static var weCouldntAgreed: String {
+        return localized(string: "weCouldntAgreed")
+    }
 }

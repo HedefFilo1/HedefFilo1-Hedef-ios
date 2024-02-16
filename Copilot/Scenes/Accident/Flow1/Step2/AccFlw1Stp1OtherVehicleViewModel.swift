@@ -9,6 +9,7 @@ import Foundation
 
 protocol AccFlw1Stp2OtherVehicleVMCrdinatorDlgt: AnyObject {
     func getBack()
+    func goToAccFlw1Stp3Agreement()
 }
 
 protocol AccFlw1Stp2OtherVehicleViewModelDelegate: BaseViewModelDelegate {
@@ -19,6 +20,7 @@ protocol AccFlw1Stp2OtherVehicleViewModelType: AnyObject {
     var coordinatorDelegate: AccFlw1Stp2OtherVehicleVMCrdinatorDlgt? { get set }
     var delegate: AccFlw1Stp2OtherVehicleViewModelDelegate? { get set }
     func getBack()
+    func goToAccFlw1Stp3Agreement()
 }
 
 class AccFlw1Stp2OtherVehicleViewModel: AccFlw1Stp2OtherVehicleViewModelType {
@@ -30,4 +32,7 @@ class AccFlw1Stp2OtherVehicleViewModel: AccFlw1Stp2OtherVehicleViewModelType {
         coordinatorDelegate?.getBack()
     }
     
+    func goToAccFlw1Stp3Agreement() {
+        coordinatorDelegate?.goToAccFlw1Stp3Agreement()
+    }
 }

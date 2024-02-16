@@ -2100,36 +2100,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Go to Accident Guide</string>
         </dict>
         
-        <key></key>
+        <key>wereYouAbleAgreement</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Karşı tarafla anlaşabildiniz mi?</string>
             <key>en</key>
-            <string></string>
+            <string>Were you able to reach an agreement with the other party?</string>
         </dict>
         
-        <key></key>
+        <key>weAgreed</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Anlaştık, Tutanak Tutacağız</string>
             <key>en</key>
-            <string></string>
+            <string>We Agreed, We Will Keep a Record</string>
         </dict>
-        
-        <key></key>
+       
+        <key>weCouldntAgreed</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Anlaşamadık, Polis Zabıtı Tutturacağız</string>
             <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
+            <string>We Couldn't Agree, We Will Have a Police Report</string>
         </dict>
         
         <key></key>
