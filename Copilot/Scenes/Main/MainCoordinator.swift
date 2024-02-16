@@ -41,16 +41,17 @@ class MainCoordinator: Coordinator {
         return coordinator
     }()
     
+    lazy var accidentCoordinator: AccidentCoordinator = {
+        let coordinator = AccidentCoordinator()
+        coordinator.delegate = self
+        coordinator.start()
+        return coordinator
+    }()
+    
     lazy var mainViewModel: MainViewModel = {
         let viewModel = MainViewModel()
         viewModel.coordinatorDelegate = self
         return viewModel
-    }()
-    
-    lazy var carTabViewController = {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .white
-        return controller
     }()
     
     lazy var supportTabViewController = {
@@ -69,7 +70,7 @@ class MainCoordinator: Coordinator {
         tabBarController.viewModel = mainViewModel
         
         tabBarController.viewControllers = [
-            carTabViewController,
+            accidentCoordinator.navigationController,
             servicesCoordinator.navigationController,
             homeCoordinator.navigationController,
             supportTabViewController,
@@ -80,7 +81,7 @@ class MainCoordinator: Coordinator {
         
 #if DEV_DEBUG
         // just for test
-        tabBarController.selectedIndex = 1
+        tabBarController.selectedIndex = 0
 #endif
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
@@ -94,7 +95,9 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: HomeCoordinatorDelegate,
                            ServicesCoordinatorDelegate,
-                           MenuCoordinatorDelegate {
+                           MenuCoordinatorDelegate,
+                           AccidentCoordinatorDelegate {
+    
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
         finish()

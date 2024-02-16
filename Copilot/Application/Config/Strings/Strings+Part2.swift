@@ -300,4 +300,24 @@ extension Strings {
     static var breakDownTowTruckSent: String {
         return localized(string: "breakDownTowTruckSent")
     }
+    
+    static var accidentOperations: String {
+        return localized(string: "accidentOperations")
+    }
+    
+    static var medicalHelpQuestion: String {
+        return localized(string: "medicalHelpQuestion")
+    }
+    
+    static var call112: String {
+        return localized(string: "call112")
+    }
+    
+    static var goToAccidentPage: String {
+        return localized(string: "goToAccidentPage")
+    }
+    
+    static var goToAccidentPageDescription: String {
+        return localized(string: "goToAccidentPageDescription")
+    }
 }

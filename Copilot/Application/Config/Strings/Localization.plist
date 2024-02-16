@@ -2012,44 +2012,44 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>A tow truck has been directed to your location.</string>
         </dict>
         
-        <key></key>
+        <key>accidentOperations</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kaza İşlemleri</string>
             <key>en</key>
-            <string></string>
+            <string>Accident Operations</string>
         </dict>
         
-        <key></key>
+        <key>medicalHelpQuestion</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Acil tıbbi yardıma ihtiyacınız var mı?</string>
             <key>en</key>
-            <string></string>
+            <string>Do you need urgent medical help?</string>
+        </dict>
+          
+        <key>call112</key>
+        <dict>
+            <key>tr</key>
+            <string>112’yi Ara</string>
+            <key>en</key>
+            <string>Call 112</string>
         </dict>
         
-        <key></key>
+        <key>goToAccidentPage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>İyiyim, Kaza Sayfasına Git</string>
             <key>en</key>
-            <string></string>
+            <string>I'm OK, Go to Accident Page</string>
         </dict>
         
-        <key></key>
+        <key>goToAccidentPageDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kaza sayfasına giderek, Tutanak, Beyan işlemlerini yapabilirsiniz.</string>
             <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
+            <string>By going to the accident page, you can make Reports and Declarations.</string>
         </dict>
         
         <key></key>

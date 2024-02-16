@@ -213,6 +213,10 @@
 		89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */; };
 		89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D612AF010E500CEFD0E /* FilteresViewController.swift */; };
 		89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D642AF0110F00CEFD0E /* FilterCell.swift */; };
+		89950AA32B7F71BF004537D2 /* Accident.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89950AA22B7F71BF004537D2 /* Accident.storyboard */; };
+		89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AA62B7F7422004537D2 /* AccFlw1Stp1ViewController.swift */; };
+		89950AA92B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AA82B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift */; };
+		89950AAB2B7F77DD004537D2 /* AccidentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -579,6 +583,10 @@
 		89941D5D2AF010D300CEFD0E /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 		89941D612AF010E500CEFD0E /* FilteresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteresViewController.swift; sourceTree = "<group>"; };
 		89941D642AF0110F00CEFD0E /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		89950AA22B7F71BF004537D2 /* Accident.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accident.storyboard; sourceTree = "<group>"; };
+		89950AA62B7F7422004537D2 /* AccFlw1Stp1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1ViewController.swift; sourceTree = "<group>"; };
+		89950AA82B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1ViewModel.swift; sourceTree = "<group>"; };
+		89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentCoordinator.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1707,6 +1715,33 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		89950AA12B7F71A1004537D2 /* Accident */ = {
+			isa = PBXGroup;
+			children = (
+				89950AA22B7F71BF004537D2 /* Accident.storyboard */,
+				89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */,
+				89950AA42B7F73D7004537D2 /* Flow1 */,
+			);
+			path = Accident;
+			sourceTree = "<group>";
+		};
+		89950AA42B7F73D7004537D2 /* Flow1 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AA52B7F73F6004537D2 /* AccFlw1Stp1 */,
+			);
+			path = Flow1;
+			sourceTree = "<group>";
+		};
+		89950AA52B7F73F6004537D2 /* AccFlw1Stp1 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AA82B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift */,
+				89950AA62B7F7422004537D2 /* AccFlw1Stp1ViewController.swift */,
+			);
+			path = AccFlw1Stp1;
+			sourceTree = "<group>";
+		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -2000,6 +2035,7 @@
 				894632DD2B66B83A00D8F301 /* Tire */,
 				8907EEEE2B69656D004869BE /* Maintenance */,
 				89FC518C2B6A963D00AD37D4 /* BreakDown */,
+				89950AA12B7F71A1004537D2 /* Accident */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -2552,6 +2588,7 @@
 				89FC518E2B6A965900AD37D4 /* BreakDown.storyboard in Resources */,
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
 				894CEC8C2B07933600D369E9 /* GuideCell.xib in Resources */,
+				89950AA32B7F71BF004537D2 /* Accident.storyboard in Resources */,
 				89F6A0542B584A860052EE15 /* LastikRandevuCell.xib in Resources */,
 				89F67DA92B7D399E0040DF15 /* BreakdownRandevuCell.xib in Resources */,
 				89C686952B0260C900011897 /* AvatarCell.xib in Resources */,
@@ -2734,6 +2771,7 @@
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
 				8976B03C2B73CF2000E7C58F /* BrkdwnFlw2Stp3WarningLightsVController.swift in Sources */,
+				89950AAB2B7F77DD004537D2 /* AccidentCoordinator.swift in Sources */,
 				8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */,
 				8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
@@ -2823,6 +2861,7 @@
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
+				89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
 				89FC51952B6A96F000AD37D4 /* BreakDownViewModel.swift in Sources */,
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
@@ -2964,6 +3003,7 @@
 				89FC519C2B6B85F400AD37D4 /* MaintenanceServiceDetailViewModel.swift in Sources */,
 				894632E22B66B9AC00D8F301 /* TireCoordinator.swift in Sources */,
 				8976B02F2B73CA2100E7C58F /* WarningItemsCell.swift in Sources */,
+				89950AA92B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift in Sources */,
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
