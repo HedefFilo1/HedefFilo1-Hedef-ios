@@ -30,8 +30,8 @@ class AccidentCoordinator: Coordinator {
         let viewController: AccFlw1Stp1VController = storyboard.instantiateViewController()
         viewController.viewModel = AccFlw1Stp1ViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        //        viewController.viewModel.appointment = appointment
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.navigationBar.isHidden = true
+        navigationController.setViewControllers([viewController], animated: true)
     }
     
     override func finish() {
@@ -40,7 +40,8 @@ class AccidentCoordinator: Coordinator {
 }
 
 // MARK: FLOW 1
-extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt {
+extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
+                               AccFlw1Stp2OtherVehicleVMCrdinatorDlgt {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -48,5 +49,12 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt {
     func getBackToHome() {
         self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
+    }
+    
+    func goToAccFlw1Stp2OtherVehicle() {
+        let viewController: AccFlw1Stp2OtherVehicleViewController = storyboard.instantiateViewController()
+        viewController.viewModel = AccFlw1Stp2OtherVehicleViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

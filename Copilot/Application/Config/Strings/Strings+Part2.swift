@@ -320,4 +320,29 @@ extension Strings {
     static var goToAccidentPageDescription: String {
         return localized(string: "goToAccidentPageDescription")
     }
+    
+    static var getWellAndFillInfo: String {
+        return localized(string: "getWellAndFillInfo")
+    }
+    
+    static var anyOtherVehicles: String {
+        return localized(string: "anyOtherVehicles")
+    }
+    
+    static var yesThereIs: String {
+        return localized(string: "yesThereIs")
+    }
+    
+    static var noThereIsNot: String {
+        return localized(string: "noThereIsNot")
+    }
+    
+    static var getInfoAfter: String {
+        return localized(string: "getInfoAfter")
+    }
+    
+    static var goToAccidentGuide: String {
+        return localized(string: "goToAccidentGuide")
+    }
+    
 }

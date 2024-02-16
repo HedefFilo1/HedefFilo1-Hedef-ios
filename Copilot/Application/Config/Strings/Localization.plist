@@ -2052,6 +2052,198 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>By going to the accident page, you can make Reports and Declarations.</string>
         </dict>
         
+        <key>getWellAndFillInfo</key>
+        <dict>
+            <key>tr</key>
+            <string>Geçmiş olsun. Lütfen size yardımcı olmamız için aşağıdaki bilgileri doldurunuz.</string>
+            <key>en</key>
+            <string>Get well soon. Please fill out the information below so that we can assist you.</string>
+        </dict>
+        
+        <key>anyOtherVehicles</key>
+        <dict>
+            <key>tr</key>
+            <string>Kazaya karışan başka araç var mı?</string>
+            <key>en</key>
+            <string>Are there any other vehicles involved in the accident?</string>
+        </dict>
+        
+        <key>yesThereIs</key>
+        <dict>
+            <key>tr</key>
+            <string>Evet, Var</string>
+            <key>en</key>
+            <string>Yes there is</string>
+        </dict>
+        
+        <key>noThereIsNot</key>
+        <dict>
+            <key>tr</key>
+            <string>Hayır, Yok</string>
+            <key>en</key>
+            <string>No there's not</string>
+        </dict>
+
+       <key>getInfoAfter</key>
+        <dict>
+            <key>tr</key>
+            <string>Kaza sonrasında yapmanız gerekenler hakkında bilgi almak için lütfen tıklayın.</string>
+            <key>en</key>
+            <string>Please click to get information about what you need to do after the accident.</string>
+        </dict>
+        
+        <key>goToAccidentGuide</key>
+        <dict>
+            <key>tr</key>
+            <string>Kaza Rehberine Git</string>
+            <key>en</key>
+            <string>Go to Accident Guide</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

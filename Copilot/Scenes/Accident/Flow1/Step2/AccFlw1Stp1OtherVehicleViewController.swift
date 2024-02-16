@@ -1,5 +1,5 @@
 //
-//  AccFlw1Stp1ViewController.swift
+//  AccFlw1Stp1OtherVehicleViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 2/16/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class AccFlw1Stp1VController: UIViewController {
+class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     
-    var viewModel: AccFlw1Stp1ViewModelType! {
+    var viewModel: AccFlw1Stp2OtherVehicleViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -18,10 +18,12 @@ class AccFlw1Stp1VController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var questonLabel: UILabel!
-    @IBOutlet weak var callButton: CPButton!
-    @IBOutlet weak var continueButton: CPGreyButton!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var questonLabel: UILabel!
+    @IBOutlet weak var yesButton: CPLightButton!
+    @IBOutlet weak var noButton: CPLightButton!
+    @IBOutlet weak var footerLabel: UILabel!
+    @IBOutlet weak var guidLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -40,8 +42,6 @@ class AccFlw1Stp1VController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-        callButton.isEnabled = true
-        continueButton.isEnabled = true
     }
     
     func applyStyle() {
@@ -49,27 +49,35 @@ class AccFlw1Stp1VController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
+        descriptionLabel.apply(.greyS14R400)
         questonLabel.apply(.blackS20B700)
-        descriptionLabel.apply(.greyS12R400)
+        footerLabel.apply(.greyS12R400)
+        guidLabel.apply(.themeS14B700)
     }
     
     func setTexts() {
         titleLabel.text = Strings.accidentOperations
-        descriptionLabel.text = Strings.medicalHelpQuestion
-        callButton.setTitle(Strings.call112, for: .normal)
-        continueButton.setTitle(Strings.goToAccidentPage, for: .normal)
-        descriptionLabel.text = Strings.goToAccidentPageDescription
+        descriptionLabel.text = Strings.getWellAndFillInfo
+        yesButton.setTitle(Strings.yesThereIs, for: .normal)
+        noButton.setTitle(Strings.noThereIsNot, for: .normal)
+        footerLabel.text = Strings.getInfoAfter
+        guidLabel.text = Strings.goToAccidentGuide
     }
     
-    @IBAction func didTapCall() {
+    @IBAction func didTapBack() {
+        viewModel.getBack()
+    }
+    
+    @IBAction func didTapYes() {
         
     }
     
-    @IBAction func didTapContinue() {
-        viewModel.getBack()
+    @IBAction func didTapNo() {
+        
     }
+
 }
 
-extension AccFlw1Stp1VController: AccFlw1Stp1ViewModelDelegate {
+extension AccFlw1Stp2OtherVehicleViewController: AccFlw1Stp2OtherVehicleViewModelDelegate {
     
 }
