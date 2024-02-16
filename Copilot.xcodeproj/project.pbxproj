@@ -221,6 +221,16 @@
 		89950AB02B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAF2B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift */; };
 		89950AB32B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB22B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift */; };
 		89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB42B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift */; };
+		89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB72B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift */; };
+		89950ABA2B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB92B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift */; };
+		89950ABF2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ABD2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift */; };
+		89950AC02B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950ABE2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib */; };
+		89950AC42B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AC22B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift */; };
+		89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950AC32B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib */; };
+		89950AC92B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AC72B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift */; };
+		89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */; };
+		89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */; };
+		89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -595,6 +605,16 @@
 		89950AAF2B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1OtherVehicleViewController.swift; sourceTree = "<group>"; };
 		89950AB22B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3AgreementViewModel.swift; sourceTree = "<group>"; };
 		89950AB42B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3AgreementViewController.swift; sourceTree = "<group>"; };
+		89950AB72B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportViewModel.swift; sourceTree = "<group>"; };
+		89950AB92B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportViewController.swift; sourceTree = "<group>"; };
+		89950ABD2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportHeaderCell.swift; sourceTree = "<group>"; };
+		89950ABE2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw1Stp4ReportHeaderCell.xib; sourceTree = "<group>"; };
+		89950AC22B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportTitleCell.swift; sourceTree = "<group>"; };
+		89950AC32B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw1Stp4ReportTitleCell.xib; sourceTree = "<group>"; };
+		89950AC72B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportImageCell.swift; sourceTree = "<group>"; };
+		89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw1Stp4ReportImageCell.xib; sourceTree = "<group>"; };
+		89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoCell.swift; sourceTree = "<group>"; };
+		89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCell.xib; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1739,6 +1759,7 @@
 				89950AA52B7F73F6004537D2 /* step1 */,
 				89950AAC2B7F81F5004537D2 /* Step2 */,
 				89950AB12B7F9FA5004537D2 /* Step3 */,
+				89950AB62B7FA7D8004537D2 /* Step4 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1768,6 +1789,63 @@
 				89950AB42B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift */,
 			);
 			path = Step3;
+			sourceTree = "<group>";
+		};
+		89950AB62B7FA7D8004537D2 /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AB72B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift */,
+				89950AB92B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift */,
+				89950ABB2B7FA9CB004537D2 /* Cell */,
+			);
+			path = Step4;
+			sourceTree = "<group>";
+		};
+		89950ABB2B7FA9CB004537D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89950ABC2B7FA9D1004537D2 /* Header */,
+				89950AC12B7FB78F004537D2 /* Title */,
+				89950AC62B7FB836004537D2 /* Tutanak */,
+				89950ACB2B7FBA8D004537D2 /* UploadPhoto */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89950ABC2B7FA9D1004537D2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				89950ABD2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift */,
+				89950ABE2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		89950AC12B7FB78F004537D2 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				89950AC22B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift */,
+				89950AC32B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		89950AC62B7FB836004537D2 /* Tutanak */ = {
+			isa = PBXGroup;
+			children = (
+				89950AC72B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift */,
+				89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */,
+			);
+			path = Tutanak;
+			sourceTree = "<group>";
+		};
+		89950ACB2B7FBA8D004537D2 /* UploadPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */,
+				89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */,
+			);
+			path = UploadPhoto;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -2634,6 +2712,7 @@
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
+				89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */,
 				89E29B592B3AE4B300CCABAD /* ServicesItemsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
@@ -2642,6 +2721,7 @@
 				8944AB882B74DB6E00967CE2 /* SelectedWarningItemCell.xib in Resources */,
 				89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
+				89950AC02B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib in Resources */,
 				89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
 				893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */,
@@ -2654,6 +2734,7 @@
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89F6A0582B5868950052EE15 /* LastikOperationButtonsCell.xib in Resources */,
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
+				89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */,
 				89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
@@ -2676,6 +2757,7 @@
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */,
+				89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */,
 				8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				8976B0302B73CA2100E7C58F /* WarningItemsCell.xib in Resources */,
@@ -2785,6 +2867,7 @@
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
+				89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */,
 				899FF41D2B766BC100447118 /* APIService+Part2.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
@@ -2808,6 +2891,7 @@
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */,
+				89950ABA2B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
@@ -2834,6 +2918,7 @@
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
 				89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */,
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
+				89950AC92B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
 				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */,
@@ -2970,10 +3055,12 @@
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
 				8976B03E2B73CF2600E7C58F /* BrkdwnFlw2Stp3WarningLightsViewModel.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
+				89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */,
 				89F67DA72B7D39920040DF15 /* BreakdownRandevuCell.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
+				89950AC42B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift in Sources */,
 				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
@@ -3062,6 +3149,7 @@
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
 				893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */,
+				89950ABF2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift in Sources */,
 				89B790CD2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift in Sources */,
 				89B07A552AD9362900D3BE80 /* ProfileViewModel.swift in Sources */,
 			);

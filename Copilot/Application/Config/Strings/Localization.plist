@@ -2124,100 +2124,92 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>We Couldn't Agree, We Will Have a Police Report</string>
         </dict>
         
-        <key></key>
+        <key>keepReports</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tutanak Tutma</string>
             <key>en</key>
-            <string></string>
+            <string>Keep Reports</string>
         </dict>
         
-        <key></key>
+        <key>fillReportDocuments</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen tutanak dokümanını uygun şekilde doldurun.</string>
             <key>en</key>
-            <string></string>
+            <string>Please fill out the report document appropriately.</string>
         </dict>
         
-        <key></key>
+        <key>clickHelpReport</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tutanak doldurulması ile ilgili yardım için tıklayın.</string>
             <key>en</key>
-            <string></string>
+            <string>Click for help with filling out the report.</string>
         </dict>
         
-        <key></key>
+        <key>recordKeepingGuide</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tutanak Tutma Rehberi</string>
             <key>en</key>
-            <string></string>
+            <string>Record Keeping Guide</string>
+        </dict>
+    
+        <key>report</key>
+        <dict>
+            <key>tr</key>
+            <string>Tutanak</string>
+            <key>en</key>
+            <string>Report</string>
         </dict>
         
-        <key></key>
+        <key>uploadPhoto</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Fotoğraf Yükle</string>
             <key>en</key>
-            <string></string>
+            <string>Upload Photo</string>
         </dict>
         
-        <key></key>
+        <key>competenceOfOtherParty</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Karşı tarafın ehliyeti</string>
             <key>en</key>
-            <string></string>
+            <string>Competence of the other party</string>
         </dict>
         
-        <key></key>
+        <key>insurancePolicyOfOtherParty</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Karşı tarafın sigorta poliçesi</string>
             <key>en</key>
-            <string></string>
+            <string>Insurance policy of the other party</string>
         </dict>
         
-        <key></key>
+        <key>otherPartysLicense</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Karşı tarafın ruhsatı</string>
             <key>en</key>
-            <string></string>
+            <string>Other party's license</string>
         </dict>
         
-        <key></key>
+        <key>photosOfVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracın fotoğrafları</string>
             <key>en</key>
-            <string></string>
+            <string>Photos of the vehicle</string>
         </dict>
         
-        <key></key>
+        <key>photoSelected</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Fotoğraf Seçildi</string>
             <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
+            <string>Photo Selected</string>
         </dict>
         
         <key></key>

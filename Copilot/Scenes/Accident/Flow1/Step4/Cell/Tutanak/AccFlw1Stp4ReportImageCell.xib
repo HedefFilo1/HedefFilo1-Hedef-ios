@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AccFlw1Stp4ReportImageCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleReportFile" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-9C-ETK">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="214"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feX-fu-u61">
+                        <rect key="frame" x="243" y="6" width="24" height="24"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recyclebinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VVy-NC-bGX">
+                                <rect key="frame" x="4" y="4" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Ser-6B-uG7"/>
+                                    <constraint firstAttribute="height" constant="16" id="lor-m9-GhH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt1-dZ-dmW">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="0mg-gf-tH1"/>
+                            <constraint firstAttribute="trailing" secondItem="Pt1-dZ-dmW" secondAttribute="trailing" id="6HS-08-OUr"/>
+                            <constraint firstAttribute="width" constant="24" id="DYk-Tg-Pqp"/>
+                            <constraint firstAttribute="bottom" secondItem="Pt1-dZ-dmW" secondAttribute="bottom" id="XRA-zt-U1M"/>
+                            <constraint firstItem="VVy-NC-bGX" firstAttribute="centerY" secondItem="feX-fu-u61" secondAttribute="centerY" id="c17-hz-RTe"/>
+                            <constraint firstItem="Pt1-dZ-dmW" firstAttribute="top" secondItem="feX-fu-u61" secondAttribute="top" id="epW-t3-A6J"/>
+                            <constraint firstItem="Pt1-dZ-dmW" firstAttribute="leading" secondItem="feX-fu-u61" secondAttribute="leading" id="mqT-px-fBl"/>
+                            <constraint firstItem="VVy-NC-bGX" firstAttribute="centerX" secondItem="feX-fu-u61" secondAttribute="centerX" id="uJO-df-LiH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Zqa-9C-ETK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Yo-wB-4dG"/>
+                <constraint firstAttribute="trailing" secondItem="Zqa-9C-ETK" secondAttribute="trailing" id="PuC-jh-jNY"/>
+                <constraint firstAttribute="trailing" secondItem="feX-fu-u61" secondAttribute="trailing" constant="6" id="WQD-V2-ylg"/>
+                <constraint firstItem="Zqa-9C-ETK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eMS-aj-15n"/>
+                <constraint firstAttribute="bottom" secondItem="Zqa-9C-ETK" secondAttribute="bottom" id="pf6-g3-f8s"/>
+                <constraint firstItem="feX-fu-u61" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="vLP-1V-fCs"/>
+            </constraints>
+            <size key="customSize" width="273" height="214"/>
+            <connections>
+                <outlet property="deleteView" destination="feX-fu-u61" id="EWo-WZ-JDh"/>
+                <outlet property="imageView" destination="Zqa-9C-ETK" id="Xnv-hc-8Og"/>
+            </connections>
+            <point key="canvasLocation" x="70.992366412213741" y="77.464788732394368"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="recyclebinIcon" width="16" height="16"/>
+        <image name="sampleReportFile" width="104" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

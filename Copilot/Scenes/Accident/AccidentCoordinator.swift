@@ -42,7 +42,8 @@ class AccidentCoordinator: Coordinator {
 // MARK: FLOW 1
 extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccFlw1Stp2OtherVehicleVMCrdinatorDlgt,
-                               AccFlw1Stp3AgreementVMCrdinatorDlgt {
+                               AccFlw1Stp3AgreementVMCrdinatorDlgt,
+                               AccFlw1Stp4ReportVMCrdinatorDlgt {
     
     func getBack() {
         navigationController.popViewController(animated: true)
@@ -63,6 +64,13 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
     func goToAccFlw1Stp3Agreement() {
         let viewController: AccFlw1Stp3AgreementViewController = storyboard.instantiateViewController()
         viewController.viewModel = AccFlw1Stp3AgreementViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToAccFlw1Stp4Report() {
+        let viewController: AccFlw1Stp4ReportViewController = storyboard.instantiateViewController()
+        viewController.viewModel = AccFlw1Stp4ReportViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

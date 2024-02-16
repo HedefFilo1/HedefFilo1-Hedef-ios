@@ -64,7 +64,7 @@ class AccFlw1Stp3AgreementViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        
+        viewModel.goToAccFlw1Stp4Report()
     }
     
     @IBAction func didTapNo() {

@@ -356,4 +356,49 @@ extension Strings {
     static var weCouldntAgreed: String {
         return localized(string: "weCouldntAgreed")
     }
+    
+    static var keepReports: String {
+        return localized(string: "keepReports")
+    }
+    
+    static var fillReportDocuments: String {
+        return localized(string: "fillReportDocuments")
+    }
+    
+    static var clickHelpReport: String {
+        return localized(string: "clickHelpReport")
+    }
+    
+    static var recordKeepingGuide: String {
+        return localized(string: "recordKeepingGuide")
+    }
+    
+    static var report: String {
+        return localized(string: "report")
+    }
+    
+    static var uploadPhoto: String {
+        return localized(string: "uploadPhoto")
+    }
+    
+    static var competenceOfOtherParty: String {
+        return localized(string: "competenceOfOtherParty")
+    }
+    
+    static var insurancePolicyOfOtherParty: String {
+        return localized(string: "insurancePolicyOfOtherParty")
+    }
+    
+    static var otherPartysLicense: String {
+        return localized(string: "otherPartysLicense")
+    }
+    
+    static var photosOfVehicle: String {
+        return localized(string: "photosOfVehicle")
+    }
+    
+    static var photoSelected: String {
+        return localized(string: "photoSelected")
+    }
+    
 }
