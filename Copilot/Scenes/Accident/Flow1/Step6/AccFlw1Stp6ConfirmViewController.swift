@@ -1,22 +1,23 @@
 //
-//  AccFlw1Stp5LeaksViewController.swift
+//  AccFlw1Stp6ConfirmViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 2/16/24.
+//  Created by Jamal on 2/17/24.
 //
 
 import Foundation
 import UIKit
 
-class AccFlw1Stp5LeaksViewController: UIViewController {
+class AccFlw1Stp6ConfirmViewController: UIViewController {
     
-    var viewModel: AccFlw1Stp5LeaksViewModelType! {
+    var viewModel: AccFlw1Stp6ConfirmViewModelType! {
         didSet {
             viewModel.delegate = self
         }
     }
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var questonLabel: UILabel!
     @IBOutlet weak var yesButton: CPLightButton!
     @IBOutlet weak var noButton: CPLightButton!
@@ -44,13 +45,15 @@ class AccFlw1Stp5LeaksViewController: UIViewController {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        titleLabel.apply(.blackS24B700)
         questonLabel.apply(.blackS20B700)
     }
     
     func setTexts() {
-        questonLabel.text = Strings.areThereAnyFluidLeaks
-        yesButton.setTitle(Strings.yesThereIs, for: .normal)
-        noButton.setTitle(Strings.noThereIsNot, for: .normal)
+        titleLabel.text = Strings.accidentOperations
+        questonLabel.text = Strings.accidentTowTruckDescription
+        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
+        noButton.setTitle(Strings.noDontAccept, for: .normal)
     }
     
     @IBAction func didTapBack() {
@@ -62,11 +65,11 @@ class AccFlw1Stp5LeaksViewController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        
+        viewModel.getBack()
     }
 
 }
 
-extension AccFlw1Stp5LeaksViewController: AccFlw1Stp5LeaksViewModelDelegate {
+extension AccFlw1Stp6ConfirmViewController: AccFlw1Stp6ConfirmViewModelDelegate {
     
 }

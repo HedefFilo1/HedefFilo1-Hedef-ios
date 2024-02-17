@@ -405,4 +405,8 @@ extension Strings {
         return localized(string: "areThereAnyFluidLeaks")
     }
     
+    static var accidentTowTruckDescription: String {
+        return localized(string: "accidentTowTruckDescription")
+    }
+    
 }

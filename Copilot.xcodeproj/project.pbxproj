@@ -231,8 +231,10 @@
 		89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */; };
 		89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */; };
 		89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */; };
-		89950AD32B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */; };
-		89950AD52B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */; };
+		89950AD32B7FCBBF004537D2 /* AccFlw1Stp5LeaksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD22B7FCBBF004537D2 /* AccFlw1Stp5LeaksViewModel.swift */; };
+		89950AD52B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD42B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift */; };
+		89950ADA2B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD92B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift */; };
+		89950ADC2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -617,8 +619,10 @@
 		89950AC82B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw1Stp4ReportImageCell.xib; sourceTree = "<group>"; };
 		89950ACC2B7FBAA2004537D2 /* UploadPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoCell.swift; sourceTree = "<group>"; };
 		89950ACD2B7FBAA2004537D2 /* UploadPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCell.xib; sourceTree = "<group>"; };
-		89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3LeaksViewModel.swift; sourceTree = "<group>"; };
-		89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3LeaksViewController.swift; sourceTree = "<group>"; };
+		89950AD22B7FCBBF004537D2 /* AccFlw1Stp5LeaksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp5LeaksViewModel.swift; sourceTree = "<group>"; };
+		89950AD42B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp5LeaksViewController.swift; sourceTree = "<group>"; };
+		89950AD92B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp6ConfirmViewModel.swift; sourceTree = "<group>"; };
+		89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp6ConfirmViewController.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1765,6 +1769,7 @@
 				89950AB12B7F9FA5004537D2 /* Step3 */,
 				89950AB62B7FA7D8004537D2 /* Step4 */,
 				89950AD12B7FCB55004537D2 /* Step5 */,
+				89950AD62B810FF9004537D2 /* Step6 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1856,10 +1861,19 @@
 		89950AD12B7FCB55004537D2 /* Step5 */ = {
 			isa = PBXGroup;
 			children = (
-				89950AD22B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift */,
-				89950AD42B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift */,
+				89950AD22B7FCBBF004537D2 /* AccFlw1Stp5LeaksViewModel.swift */,
+				89950AD42B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift */,
 			);
 			path = Step5;
+			sourceTree = "<group>";
+		};
+		89950AD62B810FF9004537D2 /* Step6 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AD92B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift */,
+				89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */,
+			);
+			path = Step6;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -2906,7 +2920,7 @@
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */,
 				89950ABA2B7FA97D004537D2 /* AccFlw1Stp4ReportViewController.swift in Sources */,
-				89950AD32B7FCBBF004537D2 /* AccFlw1Stp3LeaksViewModel.swift in Sources */,
+				89950AD32B7FCBBF004537D2 /* AccFlw1Stp5LeaksViewModel.swift in Sources */,
 				890D7CD52ACEB60D00F053DA /* AttributedText.swift in Sources */,
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
@@ -2994,6 +3008,7 @@
 				89FC51952B6A96F000AD37D4 /* BreakDownViewModel.swift in Sources */,
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
+				89950ADC2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift in Sources */,
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
@@ -3027,7 +3042,7 @@
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
-				89950AD52B7FCBC8004537D2 /* AccFlw1Stp3LeaksViewController.swift in Sources */,
+				89950AD52B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
 				89950AAE2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift in Sources */,
@@ -3106,6 +3121,7 @@
 				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
+				89950ADA2B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
 				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,

@@ -1753,7 +1753,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>tr</key>
             <string>Aracınız bir sonraki adımda seçeceğiniz servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?</string>
             <key>en</key>
-            <string></string>
+            <string>Your vehicle will be sent to the service you choose in the next step with a paid tow truck. Do you confirm?</string>
         </dict>
         
         <key>confirm</key>
@@ -2218,6 +2218,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Aracın alt kısmında herhangi bir sıvı kaçağı/sızıntısı var mı?</string>
             <key>en</key>
             <string>Are there any fluid leaks/leaks under the vehicle?</string>
+        </dict>
+        
+        <key>accidentTowTruckDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracınız bir sonraki adımda seçeceğiniz servise ücretli çekici ile gönderilecektir. Onaylıyor musunuz?</string>
+            <key>en</key>
+            <string>Your vehicle will be sent to the service you choose in the next step with a paid tow truck. Do you confirm?</string>
         </dict>
         
         <key></key>
