@@ -1,5 +1,5 @@
 //
-//  AccFlw1Stp6ConfirmViewController.swift
+//  AccFlw1Stp7SelectServiceViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 2/17/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class AccFlw1Stp6ConfirmViewController: UIViewController {
+class AccFlw1Stp7SelectServiceViewController: UIViewController {
     
-    var viewModel: AccFlw1Stp6ConfirmViewModelType! {
+    var viewModel: AccFlw1Stp7SelectServiceViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -18,9 +18,9 @@ class AccFlw1Stp6ConfirmViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var questonLabel: UILabel!
-    @IBOutlet weak var yesButton: CPLightButton!
-    @IBOutlet weak var noButton: CPLightButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var serviceButton: CPLightButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,6 +39,7 @@ class AccFlw1Stp6ConfirmViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
+//        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {
@@ -46,30 +47,26 @@ class AccFlw1Stp6ConfirmViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
-        questonLabel.apply(.blackS20B700)
+        descriptionLabel.apply(.blackS20B700)
+        secondLabel.apply(.greyS14R400)
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentOperations
-        questonLabel.text = Strings.accidentTowTruckDescription
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        titleLabel.text = Strings.tireOperations
+        descriptionLabel.text = Strings.getWellSoonDoNotStart
+        secondLabel.text = Strings.towTruckSendingDescription
+        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didTapYes() {
-        viewModel.goToAccFlw1Stp7SelectService()
+    @IBAction func didTapService() {
+//        viewModel.goToServices()
     }
-    
-    @IBAction func didTapNo() {
-        viewModel.getBack()
-    }
-
 }
 
-extension AccFlw1Stp6ConfirmViewController: AccFlw1Stp6ConfirmViewModelDelegate {
+extension AccFlw1Stp7SelectServiceViewController: AccFlw1Stp7SelectServiceVMDelegate {
     
 }

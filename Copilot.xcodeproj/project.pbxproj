@@ -235,6 +235,8 @@
 		89950AD52B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD42B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift */; };
 		89950ADA2B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AD92B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift */; };
 		89950ADC2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */; };
+		89950ADF2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ADE2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift */; };
+		89950AE12B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -623,6 +625,8 @@
 		89950AD42B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp5LeaksViewController.swift; sourceTree = "<group>"; };
 		89950AD92B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp6ConfirmViewModel.swift; sourceTree = "<group>"; };
 		89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp6ConfirmViewController.swift; sourceTree = "<group>"; };
+		89950ADE2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp7SelectServiceViewModel.swift; sourceTree = "<group>"; };
+		89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp7SelectServiceViewController.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1770,6 +1774,7 @@
 				89950AB62B7FA7D8004537D2 /* Step4 */,
 				89950AD12B7FCB55004537D2 /* Step5 */,
 				89950AD62B810FF9004537D2 /* Step6 */,
+				89950ADD2B8112F5004537D2 /* Step7 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1874,6 +1879,15 @@
 				89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */,
 			);
 			path = Step6;
+			sourceTree = "<group>";
+		};
+		89950ADD2B8112F5004537D2 /* Step7 */ = {
+			isa = PBXGroup;
+			children = (
+				89950ADE2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift */,
+				89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */,
+			);
+			path = Step7;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -2900,6 +2914,7 @@
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
 				891BFB732B34C55B009BD793 /* TireOperationsViewController.swift in Sources */,
+				89950AE12B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift in Sources */,
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
@@ -3107,6 +3122,7 @@
 				89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */,
 				8976B0292B73C8D300E7C58F /* WarningLightsHeaderCell.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
+				89950ADF2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift in Sources */,
 				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */,
