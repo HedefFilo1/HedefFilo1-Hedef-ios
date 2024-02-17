@@ -9,6 +9,7 @@ import Foundation
 
 protocol AccFlw1Stp7SelectServiceVMCrdinatorDlgt: AnyObject {
     func getBack()
+    func goToServices(towTruck: Bool)
 }
 
 protocol AccFlw1Stp7SelectServiceVMDelegate: BaseViewModelDelegate {
@@ -19,6 +20,7 @@ protocol AccFlw1Stp7SelectServiceViewModelType: AnyObject {
     var coordinatorDelegate: AccFlw1Stp7SelectServiceVMCrdinatorDlgt? { get set }
     var delegate: AccFlw1Stp7SelectServiceVMDelegate? { get set }
     func getBack()
+    func goToServices()
 }
 
 class AccFlw1Stp7SelectServiceViewModel: AccFlw1Stp7SelectServiceViewModelType {
@@ -30,4 +32,7 @@ class AccFlw1Stp7SelectServiceViewModel: AccFlw1Stp7SelectServiceViewModelType {
         coordinatorDelegate?.getBack()
     }
     
+    func goToServices() {
+        coordinatorDelegate?.goToServices(towTruck: true)
+    }
 }

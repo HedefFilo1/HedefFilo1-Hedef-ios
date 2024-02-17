@@ -63,7 +63,7 @@ class AccFlw1Stp7SelectServiceViewController: UIViewController {
     }
     
     @IBAction func didTapService() {
-//        viewModel.goToServices()
+        viewModel.goToServices()
     }
 }
 

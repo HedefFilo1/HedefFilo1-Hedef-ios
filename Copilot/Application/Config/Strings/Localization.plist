@@ -2228,12 +2228,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Your vehicle will be sent to the service you choose in the next step with a paid tow truck. Do you confirm?</string>
         </dict>
         
-        <key></key>
+        <key>accidentServicesDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen en kısa sürede aracınızı servise götürün.</string>
             <key>en</key>
-            <string></string>
+            <string>Please have your vehicle serviced as soon as possible.</string>
         </dict>
         
         <key></key>

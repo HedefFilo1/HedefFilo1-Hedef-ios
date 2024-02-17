@@ -99,3 +99,49 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
         navigationController.pushViewController(viewController, animated: true)
     }
 }
+
+// MARK: Services
+extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
+                               ServicesVMCoordinatorDelegate {
+    
+    func goToServices(towTruck: Bool) {
+        let viewController: AccidentServicesViewController = storyboard.instantiateViewController()
+        let viewModel = AccidentServicesViewModel()
+        viewModel.accidentCoordinatorDelegate = self
+        viewModel.coordinatorDelegate = self
+        viewModel.towTruck = towTruck
+        viewController.viewModel = viewModel
+        viewController.viewModel.supplierType = .damage
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToServiceDetail(towTruck: Bool, service: Supplier) {
+//        let controller: BrkdwnFlw1Stp5ServiceDetailVController = storyboard.instantiateViewController()
+//        controller.viewModel = BrkdwnFlw1Stp5ServiceDetailViewModel()
+//        controller.viewModel.coordinatorDelegate = self
+//        controller.viewModel.service = service
+//        controller.viewModel.towTruck = towTruck
+//        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
+        
+    }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        let controller: CalendarViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = CalendarViewModel()
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
+    
+    func presentFilters(services: [Supplier], delegate: ServiceFilterViewControllerDelegate) {
+        let controller: ServiceFilterViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        let viewModel = ServiceFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.services = services
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
+}

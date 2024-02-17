@@ -237,6 +237,9 @@
 		89950ADC2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */; };
 		89950ADF2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950ADE2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift */; };
 		89950AE12B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */; };
+		89950AE42B811622004537D2 /* AccidentServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE32B811622004537D2 /* AccidentServicesViewController.swift */; };
+		89950AE62B8116C7004537D2 /* Strings+Part3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE52B8116C7004537D2 /* Strings+Part3.swift */; };
+		89950AE82B811786004537D2 /* AccidentServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE72B811786004537D2 /* AccidentServicesViewModel.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -627,6 +630,9 @@
 		89950ADB2B8110C4004537D2 /* AccFlw1Stp6ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp6ConfirmViewController.swift; sourceTree = "<group>"; };
 		89950ADE2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp7SelectServiceViewModel.swift; sourceTree = "<group>"; };
 		89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp7SelectServiceViewController.swift; sourceTree = "<group>"; };
+		89950AE32B811622004537D2 /* AccidentServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServicesViewController.swift; sourceTree = "<group>"; };
+		89950AE52B8116C7004537D2 /* Strings+Part3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Part3.swift"; sourceTree = "<group>"; };
+		89950AE72B811786004537D2 /* AccidentServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServicesViewModel.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1075,6 +1081,7 @@
 				892A8D1A2AC587690020C1C4 /* Strings.swift */,
 				8986FCBC2AFCC802006057EA /* Strings+Part1.swift */,
 				897835DC2B455FB300C63AA7 /* Strings+Part2.swift */,
+				89950AE52B8116C7004537D2 /* Strings+Part3.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -1760,6 +1767,7 @@
 			children = (
 				89950AA22B7F71BF004537D2 /* Accident.storyboard */,
 				89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */,
+				89950AE22B8115E5004537D2 /* AccidentServices */,
 				89950AA42B7F73D7004537D2 /* Flow1 */,
 			);
 			path = Accident;
@@ -1888,6 +1896,15 @@
 				89950AE02B811421004537D2 /* AccFlw1Stp7SelectServiceViewController.swift */,
 			);
 			path = Step7;
+			sourceTree = "<group>";
+		};
+		89950AE22B8115E5004537D2 /* AccidentServices */ = {
+			isa = PBXGroup;
+			children = (
+				89950AE72B811786004537D2 /* AccidentServicesViewModel.swift */,
+				89950AE32B811622004537D2 /* AccidentServicesViewController.swift */,
+			);
+			path = AccidentServices;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -2940,6 +2957,7 @@
 				89B07A572AD9363100D3BE80 /* ProfileViewController.swift in Sources */,
 				89DAB7FD2AC72D240098BA67 /* LoginCoordinator.swift in Sources */,
 				892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */,
+				89950AE42B811622004537D2 /* AccidentServicesViewController.swift in Sources */,
 				8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
@@ -3045,7 +3063,9 @@
 				894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */,
 				892A57D02B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift in Sources */,
 				89C686942B0260C900011897 /* AvatarCell.swift in Sources */,
+				89950AE82B811786004537D2 /* AccidentServicesViewModel.swift in Sources */,
 				8976B0342B73CA5D00E7C58F /* WarningItemCell.swift in Sources */,
+				89950AE62B8116C7004537D2 /* Strings+Part3.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				89B790CB2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift in Sources */,
 				89F23BC62B29EC220081DD85 /* Document.swift in Sources */,

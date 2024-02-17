@@ -392,21 +392,4 @@ extension Strings {
     static var otherPartysLicense: String {
         return localized(string: "otherPartysLicense")
     }
-    
-    static var photosOfVehicle: String {
-        return localized(string: "photosOfVehicle")
-    }
-    
-    static var photoSelected: String {
-        return localized(string: "photoSelected")
-    }
-    
-    static var areThereAnyFluidLeaks: String {
-        return localized(string: "areThereAnyFluidLeaks")
-    }
-    
-    static var accidentTowTruckDescription: String {
-        return localized(string: "accidentTowTruckDescription")
-    }
-    
 }
