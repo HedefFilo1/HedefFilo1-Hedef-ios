@@ -102,8 +102,9 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
 
 // MARK: Services
 extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
-                               ServicesVMCoordinatorDelegate ,
-                               AccidentServiceDetailVMCrdintrDlgt {
+                               ServicesVMCoordinatorDelegate,
+                               AccidentServiceDetailVMCrdintrDlgt,
+                               AccidentSuccessRandevuVMCrdinatorDlgt {
     
     func goToServices(towTruck: Bool) {
         let viewController: AccidentServicesViewController = storyboard.instantiateViewController()
@@ -147,6 +148,11 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
     }
     
     func goToAccidentSuccessRandevu(service: Supplier, date: Date?) {
-        
+        let controller: AccidentSuccessRandevuViewController = storyboard.instantiateViewController()
+        controller.viewModel = AccidentSuccessRandevuViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.service = service
+        controller.viewModel.date = date
+        navigationController.pushViewController(controller, animated: true)
     }
 }

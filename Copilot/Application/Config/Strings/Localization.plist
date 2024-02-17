@@ -2236,20 +2236,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please have your vehicle serviced as soon as possible.</string>
         </dict>
         
-        <key></key>
+        <key>accidentSuccessMessage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Hasar Randevu Talebiniz Başarıyla Alındı.</string>
             <key>en</key>
-            <string></string>
+            <string>Your Damage Appointment Request has been Successfully Received.</string>
         </dict>
         
-        <key></key>
+        <key>accidentTowTruckSent</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bulunduğunuz konuma çekici yönlendirmesi yapılmıştır.</string>
             <key>en</key>
-            <string></string>
+            <string>A tow truck has been directed to your location.</string>
+        </dict>
+        
+        <key>keepReportOfAccident</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen kazaya ilişkin tutanak tuttuğunuzdan emin olunuz.</string>
+            <key>en</key>
+            <string>Please be sure to keep a report of the accident.</string>
         </dict>
         
         <key></key>

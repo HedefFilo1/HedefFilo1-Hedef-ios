@@ -242,6 +242,8 @@
 		89950AE82B811786004537D2 /* AccidentServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AE72B811786004537D2 /* AccidentServicesViewModel.swift */; };
 		89950AEB2B812D57004537D2 /* AccidentServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AEA2B812D56004537D2 /* AccidentServiceDetailViewModel.swift */; };
 		89950AED2B812D65004537D2 /* AccidentServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AEC2B812D65004537D2 /* AccidentServiceDetailViewController.swift */; };
+		89950AF02B813059004537D2 /* AccidentSuccessRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */; };
+		89950AF22B813062004537D2 /* AccidentSuccessRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AF12B813062004537D2 /* AccidentSuccessRandevuViewModel.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -637,6 +639,8 @@
 		89950AE72B811786004537D2 /* AccidentServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServicesViewModel.swift; sourceTree = "<group>"; };
 		89950AEA2B812D56004537D2 /* AccidentServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServiceDetailViewModel.swift; sourceTree = "<group>"; };
 		89950AEC2B812D65004537D2 /* AccidentServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServiceDetailViewController.swift; sourceTree = "<group>"; };
+		89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentSuccessRandevuViewController.swift; sourceTree = "<group>"; };
+		89950AF12B813062004537D2 /* AccidentSuccessRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentSuccessRandevuViewModel.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1773,6 +1777,7 @@
 				89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */,
 				89950AE22B8115E5004537D2 /* AccidentServices */,
 				89950AE92B812D3D004537D2 /* ServiceDetail */,
+				89950AEE2B813026004537D2 /* SuccessRandevu */,
 				89950AA42B7F73D7004537D2 /* Flow1 */,
 			);
 			path = Accident;
@@ -1919,6 +1924,15 @@
 				89950AEC2B812D65004537D2 /* AccidentServiceDetailViewController.swift */,
 			);
 			path = ServiceDetail;
+			sourceTree = "<group>";
+		};
+		89950AEE2B813026004537D2 /* SuccessRandevu */ = {
+			isa = PBXGroup;
+			children = (
+				89950AF12B813062004537D2 /* AccidentSuccessRandevuViewModel.swift */,
+				89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */,
+			);
+			path = SuccessRandevu;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -3138,6 +3152,7 @@
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
 				89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */,
 				89F67DA72B7D39920040DF15 /* BreakdownRandevuCell.swift in Sources */,
+				89950AF02B813059004537D2 /* AccidentSuccessRandevuViewController.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
@@ -3235,6 +3250,7 @@
 				893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */,
 				89950ABF2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift in Sources */,
 				89B790CD2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift in Sources */,
+				89950AF22B813062004537D2 /* AccidentSuccessRandevuViewModel.swift in Sources */,
 				89B07A552AD9362900D3BE80 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

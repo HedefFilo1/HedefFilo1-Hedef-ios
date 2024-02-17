@@ -57,10 +57,10 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     
     func createTowTruckRandevu() {
 #if DEV_DEBUG
-        //        if true {
-        //            self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
-        //            return
-        //        }
+                if true {
+                    self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
+                    return
+                }
 #endif
         guard let service else { return }
         Loading.shared.show()

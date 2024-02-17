@@ -28,5 +28,17 @@ extension Strings {
     static var accidentServicesDescription: String {
         return localized(string: "accidentServicesDescription")
     }
+    
+    static var accidentSuccessMessage: String {
+        return localized(string: "accidentSuccessMessage")
+    }
+    
+    static var accidentTowTruckSent: String {
+        return localized(string: "accidentTowTruckSent")
+    }
+    
+    static var keepReportOfAccident: String {
+        return localized(string: "keepReportOfAccident")
+    }
+    
 }
-
