@@ -1,16 +1,16 @@
 //
-//  BrkdwnFlw1Stp5ServiceDetailVController.swift
+//  AccidentServiceDetailViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 2/7/24.
+//  Created by Jamal on 2/17/24.
 //
 
 import Foundation
 import UIKit
 
-class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
+class AccidentServiceDetailVController: UIViewController {
     
-    var viewModel: BrkdwnFlw1Stp5ServiceDetailViewModelType! {
+    var viewModel: AccidentServiceDetailViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -184,7 +184,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     }
 }
 
-extension BrkdwnFlw1Stp5ServiceDetailVController: CPTimeChooseViewDelegate,
+extension AccidentServiceDetailVController: CPTimeChooseViewDelegate,
                                                   CPDateChooseViewDelegate,
                                                   CalendarViewControllerDelegate {
     
@@ -209,6 +209,6 @@ extension BrkdwnFlw1Stp5ServiceDetailVController: CPTimeChooseViewDelegate,
         setButtonActivation()
     }
 }
-extension BrkdwnFlw1Stp5ServiceDetailVController: BrkdwnFlw1Stp5ServiceDetailVMdlDlgt {
+extension AccidentServiceDetailVController: AccidentServiceDetailVMdlDlgt {
     
 }

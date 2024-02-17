@@ -1373,10 +1373,10 @@ soruları cevaplayın.</string>
             </objects>
             <point key="canvasLocation" x="1701.5267175572519" y="1728.8732394366198"/>
         </scene>
-        <!--ServiceDetailViewController-->
+        <!--BrkdwnFlw1Stp5ServiceDetailVController-->
         <scene sceneID="YiK-zr-zCE">
             <objects>
-                <viewController storyboardIdentifier="BrkdwnFlw1Stp5ServiceDetailVController" id="eT5-j5-lNT" userLabel="ServiceDetailViewController" customClass="BrkdwnFlw1Stp5ServiceDetailVController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrkdwnFlw1Stp5ServiceDetailVController" id="eT5-j5-lNT" userLabel="BrkdwnFlw1Stp5ServiceDetailVController" customClass="BrkdwnFlw1Stp5ServiceDetailVController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Cf-mR-5Rb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

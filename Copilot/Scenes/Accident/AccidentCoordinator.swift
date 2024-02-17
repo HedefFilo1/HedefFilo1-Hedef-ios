@@ -102,7 +102,8 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
 
 // MARK: Services
 extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
-                               ServicesVMCoordinatorDelegate {
+                               ServicesVMCoordinatorDelegate ,
+                               AccidentServiceDetailVMCrdintrDlgt {
     
     func goToServices(towTruck: Bool) {
         let viewController: AccidentServicesViewController = storyboard.instantiateViewController()
@@ -116,12 +117,12 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
     }
     
     func goToServiceDetail(towTruck: Bool, service: Supplier) {
-//        let controller: BrkdwnFlw1Stp5ServiceDetailVController = storyboard.instantiateViewController()
-//        controller.viewModel = BrkdwnFlw1Stp5ServiceDetailViewModel()
-//        controller.viewModel.coordinatorDelegate = self
-//        controller.viewModel.service = service
-//        controller.viewModel.towTruck = towTruck
-//        navigationController.pushViewController(controller, animated: true)
+        let controller: AccidentServiceDetailVController = storyboard.instantiateViewController()
+        controller.viewModel = AccidentServiceDetailViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.service = service
+        controller.viewModel.towTruck = towTruck
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func goToServiceDetail(service: Supplier?, appointment: Case?, tireSupportType: TireSupportType?, towTruck: Bool) {
@@ -143,5 +144,9 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
         viewModel.services = services
         controller.delegate = delegate
         navigationController.present(controller, animated: true)
+    }
+    
+    func goToAccidentSuccessRandevu(service: Supplier, date: Date?) {
+        
     }
 }
