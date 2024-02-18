@@ -1,16 +1,16 @@
 //
-//  AccFlw1Stp5LeaksViewController.swift
+//  AccFlw2Stp6MovableViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 2/16/24.
+//  Created by Jamal on 2/18/24.
 //
 
 import Foundation
 import UIKit
 
-class AccFlw1Stp5LeaksViewController: UIViewController {
+class AccFlw2Stp6MovableViewController: UIViewController {
     
-    var viewModel: AccFlw1Stp5LeaksViewModelType! {
+    var viewModel: AccFlw2Stp6MovableViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -48,9 +48,9 @@ class AccFlw1Stp5LeaksViewController: UIViewController {
     }
     
     func setTexts() {
-        questonLabel.text = Strings.areThereAnyFluidLeaks
-        yesButton.setTitle(Strings.yesThereIs, for: .normal)
-        noButton.setTitle(Strings.noThereIsNot, for: .normal)
+        questonLabel.text = Strings.isVehicleMovable
+        yesButton.setTitle(Strings.yesCanMove, for: .normal)
+        noButton.setTitle(Strings.noCantMove, for: .normal)
     }
     
     @IBAction func didTapBack() {
@@ -58,15 +58,15 @@ class AccFlw1Stp5LeaksViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
-        viewModel.goToAccFlw1Stp6Confirm()
+        viewModel.goToServices()
     }
     
     @IBAction func didTapNo() {
-        viewModel.goToAccFlw2Stp6Movable()
+        
     }
 
 }
 
-extension AccFlw1Stp5LeaksViewController: AccFlw1Stp5LeaksViewModelDelegate {
+extension AccFlw2Stp6MovableViewController: AccFlw2Stp6MovableViewModelDelegate {
     
 }

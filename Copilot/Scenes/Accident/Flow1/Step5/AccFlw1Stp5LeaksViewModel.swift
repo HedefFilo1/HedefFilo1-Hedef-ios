@@ -10,6 +10,7 @@ import Foundation
 protocol AccFlw1Stp5LeaksVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlw1Stp6Confirm()
+    func goToAccFlw2Stp6Movable()
 }
 
 protocol AccFlw1Stp5LeaksViewModelDelegate: BaseViewModelDelegate {
@@ -21,6 +22,7 @@ protocol AccFlw1Stp5LeaksViewModelType: AnyObject {
     var delegate: AccFlw1Stp5LeaksViewModelDelegate? { get set }
     func getBack()
     func goToAccFlw1Stp6Confirm()
+    func goToAccFlw2Stp6Movable()
 }
 
 class AccFlw1Stp5LeaksViewModel: AccFlw1Stp5LeaksViewModelType {
@@ -36,4 +38,7 @@ class AccFlw1Stp5LeaksViewModel: AccFlw1Stp5LeaksViewModelType {
         coordinatorDelegate?.goToAccFlw1Stp6Confirm()
     }
     
+    func goToAccFlw2Stp6Movable() {
+        coordinatorDelegate?.goToAccFlw2Stp6Movable()
+    }
 }

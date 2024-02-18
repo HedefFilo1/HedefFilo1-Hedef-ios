@@ -2260,6 +2260,30 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please be sure to keep a report of the accident.</string>
         </dict>
         
+        <key>isVehicleMovable</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç yürüyebilecek durumda mı?</string>
+            <key>en</key>
+            <string>Is the vehicle movable?</string>
+        </dict>
+        
+        <key>yesCanMove</key>
+        <dict>
+            <key>tr</key>
+            <string>Evet, Yürüyebilir Durumda</string>
+            <key>en</key>
+            <string>Yes, Can move</string>
+        </dict>
+        
+        <key>noCantMove</key>
+        <dict>
+            <key>tr</key>
+            <string>Hayır, Yürüyemez Durumda</string>
+            <key>en</key>
+            <string>No, Can't Move</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>
@@ -2275,6 +2299,87 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string></string>
         </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         
         
     </dict>

@@ -244,6 +244,8 @@
 		89950AED2B812D65004537D2 /* AccidentServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AEC2B812D65004537D2 /* AccidentServiceDetailViewController.swift */; };
 		89950AF02B813059004537D2 /* AccidentSuccessRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */; };
 		89950AF22B813062004537D2 /* AccidentSuccessRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AF12B813062004537D2 /* AccidentSuccessRandevuViewModel.swift */; };
+		89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AF52B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift */; };
+		89950AF82B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AF72B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift */; };
 		899BF5B42B2087150058123C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B32B2087150058123C /* Supplier.swift */; };
 		899BF5B62B20C1640058123C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B52B20C1640058123C /* Transition.swift */; };
 		899BF5B82B20E3A80058123C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF5B72B20E3A80058123C /* Places.swift */; };
@@ -641,6 +643,8 @@
 		89950AEC2B812D65004537D2 /* AccidentServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentServiceDetailViewController.swift; sourceTree = "<group>"; };
 		89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentSuccessRandevuViewController.swift; sourceTree = "<group>"; };
 		89950AF12B813062004537D2 /* AccidentSuccessRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentSuccessRandevuViewModel.swift; sourceTree = "<group>"; };
+		89950AF52B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw2Stp6MovableViewController.swift; sourceTree = "<group>"; };
+		89950AF72B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw2Stp6MovableViewModel.swift; sourceTree = "<group>"; };
 		899BF5B32B2087150058123C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		899BF5B52B20C1640058123C /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		899BF5B72B20E3A80058123C /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
@@ -1779,6 +1783,7 @@
 				89950AE92B812D3D004537D2 /* ServiceDetail */,
 				89950AEE2B813026004537D2 /* SuccessRandevu */,
 				89950AA42B7F73D7004537D2 /* Flow1 */,
+				89950AF32B826E21004537D2 /* Flow2 */,
 			);
 			path = Accident;
 			sourceTree = "<group>";
@@ -1933,6 +1938,23 @@
 				89950AEF2B813059004537D2 /* AccidentSuccessRandevuViewController.swift */,
 			);
 			path = SuccessRandevu;
+			sourceTree = "<group>";
+		};
+		89950AF32B826E21004537D2 /* Flow2 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AF42B826E6B004537D2 /* Step6 */,
+			);
+			path = Flow2;
+			sourceTree = "<group>";
+		};
+		89950AF42B826E6B004537D2 /* Step6 */ = {
+			isa = PBXGroup;
+			children = (
+				89950AF72B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift */,
+				89950AF52B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift */,
+			);
+			path = Step6;
 			sourceTree = "<group>";
 		};
 		899CF5662AE18CAE006D85E4 /* Network */ = {
@@ -3054,6 +3076,7 @@
 				89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */,
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
+				89950AF82B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
 				89E0458B2B04D3EB00745E73 /* DocumentCell.swift in Sources */,
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
@@ -3074,6 +3097,7 @@
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
+				89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,

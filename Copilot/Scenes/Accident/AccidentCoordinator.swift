@@ -156,3 +156,14 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
         navigationController.pushViewController(controller, animated: true)
     }
 }
+
+// MARK: Flow 2
+extension AccidentCoordinator: AccFlw2Stp6MovableVMCrdinatorDlgt {
+    
+    func goToAccFlw2Stp6Movable() {
+        let controller: AccFlw2Stp6MovableViewController = storyboard.instantiateViewController()
+        controller.viewModel = AccFlw2Stp6MovableViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
