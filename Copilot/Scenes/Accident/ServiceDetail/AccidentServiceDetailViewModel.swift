@@ -56,12 +56,12 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     }
     
     func createTowTruckRandevu() {
-#if DEV_DEBUG
+//#if DEV_DEBUG
                 if true {
                     self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
                     return
                 }
-#endif
+//#endif
         guard let service else { return }
         Loading.shared.show()
         APIService.createBreakDownCase(supplierId: service.id,
@@ -87,6 +87,10 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         guard let hour = Int(hour), let min = Int(minute),
               let date = date.setTime(hour: hour, min: min),
               let service else { return }
+        if true {
+            self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
+            return
+        }
         Loading.shared.show()
         APIService.createBreakDownCase(supplierId: service.id,
                                        supplierName: service.name,

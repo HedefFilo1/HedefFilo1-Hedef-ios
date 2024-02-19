@@ -23,11 +23,11 @@ class BreakDownCoordinator: Coordinator {
         self.delegate = delegate
     }
     
-    override func start() {
+    func start(appointment: Case?) {
         let viewController: BreakDownViewController = storyboard.instantiateViewController()
         viewController.viewModel = BreakDownViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        //        viewController.viewModel.appointment = appointment
+        viewController.viewModel.appointment = appointment
         navigationController.pushViewController(viewController, animated: true)
     }
     

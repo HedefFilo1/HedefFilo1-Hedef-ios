@@ -26,10 +26,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-oL-u7u">
-                        <rect key="frame" x="0.0" y="37" width="346" height="140"/>
+                        <rect key="frame" x="0.0" y="37" width="346" height="147"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34r-YC-KDp">
-                                <rect key="frame" x="16" y="16" width="314" height="108"/>
+                                <rect key="frame" x="16" y="16" width="314" height="115"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="10 Mart 2023 Cumartesi 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzj-Eh-DKu">
                                         <rect key="frame" x="0.0" y="0.0" width="228.66666666666666" height="21"/>
@@ -136,6 +136,7 @@
                                     <constraint firstItem="GuA-ss-3wd" firstAttribute="top" secondItem="FkB-ta-fhX" secondAttribute="bottom" constant="12" id="a7A-b8-OD1"/>
                                     <constraint firstItem="gEu-he-iA9" firstAttribute="top" secondItem="34r-YC-KDp" secondAttribute="top" id="o05-Rm-zmn"/>
                                     <constraint firstItem="FkB-ta-fhX" firstAttribute="top" secondItem="w1l-dC-7ai" secondAttribute="bottom" constant="8" id="sOL-Da-PX3"/>
+                                    <constraint firstAttribute="bottom" secondItem="GuA-ss-3wd" secondAttribute="bottom" id="tTh-pn-khx"/>
                                     <constraint firstItem="o7N-yI-ISo" firstAttribute="centerY" secondItem="GYI-gJ-8IO" secondAttribute="centerY" id="uvK-1T-ogI"/>
                                 </constraints>
                             </view>
@@ -145,7 +146,6 @@
                             <constraint firstAttribute="trailing" secondItem="34r-YC-KDp" secondAttribute="trailing" constant="16" id="Lkt-CZ-E1F"/>
                             <constraint firstItem="34r-YC-KDp" firstAttribute="leading" secondItem="p5d-oL-u7u" secondAttribute="leading" constant="16" id="Ng8-cC-ZIQ"/>
                             <constraint firstItem="34r-YC-KDp" firstAttribute="top" secondItem="p5d-oL-u7u" secondAttribute="top" constant="16" id="b03-Wr-cBR"/>
-                            <constraint firstAttribute="height" constant="140" id="tJw-NF-WVX"/>
                             <constraint firstAttribute="bottom" secondItem="34r-YC-KDp" secondAttribute="bottom" constant="16" id="vcP-8n-2Ps"/>
                         </constraints>
                     </view>

@@ -77,7 +77,7 @@ struct Case: Decodable {
     var displayDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        formmater.timeZone = TimeZone(identifier: "UTC")
+//        formmater.timeZone = TimeZone(identifier: "UTC")
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE HH:mm"
 //            formmater.locale = Locale(identifier: "tr_TR")
@@ -89,7 +89,7 @@ struct Case: Decodable {
     var displayDateWithYear: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        formmater.timeZone = TimeZone(identifier: "UTC")
+//        formmater.timeZone = TimeZone(identifier: "UTC")
         // 2023-12-06T09:00:00.000Z
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
@@ -103,7 +103,7 @@ struct Case: Decodable {
     var hourOfDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        formmater.timeZone = TimeZone(identifier: "UTC")
+//        formmater.timeZone = TimeZone(identifier: "UTC")
         // 2023-12-06T09:00:00.000Z
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "HH"
@@ -116,7 +116,7 @@ struct Case: Decodable {
     var minetusOfDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        formmater.timeZone = TimeZone(identifier: "UTC")
+//        formmater.timeZone = TimeZone(identifier: "UTC")
         // 2023-12-06T09:00:00.000Z
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "mm"

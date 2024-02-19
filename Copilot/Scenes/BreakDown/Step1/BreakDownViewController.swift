@@ -109,7 +109,7 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
         var height: CGFloat = 353
         
         if indexPath.section == 0 {
-            height = 230
+            height = 200
         }
         //        else if viewModel.appointment != nil {
         //            height = collectionView.frame.height - 90

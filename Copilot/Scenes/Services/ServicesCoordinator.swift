@@ -49,10 +49,10 @@ extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
         coordinator.start(appointment: appointment)
     }
     
-    func goToBreakDown() {
+    func goToBreakDown(appointment: Case?) {
         let coordinator = BreakDownCoordinator(navigationController: navigationController, delegate: self)
         addChildCoordinator(coordinator)
-        coordinator.start()
+        coordinator.start(appointment: appointment)
     }
 }
 

@@ -44,6 +44,13 @@ class LoginViewController: UIViewController {
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(didTapTripple))
         tap2.numberOfTapsRequired = 2
         view.addGestureRecognizer(tap2)
+        
+        let button = UIButton()
+        view.addSubview(button)
+        button.align(top: 250, width: 170, height: 40, centerX: 0)
+        button.addTarget(self, action: #selector(loginMyAccount), for: .touchUpInside)
+        button.setTitle("Login My Account", for: .normal)
+        button.backgroundColor = .systemYellow
 #endif
     }
     
@@ -55,6 +62,13 @@ class LoginViewController: UIViewController {
         emailTextFiled.preText = "ezgiakcay@hedeffilo.com"
         passwordTextFiled.preText = "Helen1234."
     }
+    
+    @objc func loginMyAccount() {
+        viewModel.login(email: "jamal.zare@solidict.com",
+                        password: "Jj_123456",
+                        rememberMe: rememberCheckBox.isSelected)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.checkRememberMe()

@@ -54,10 +54,10 @@ soruları cevaplayın.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiB-92-0XC">
-                                        <rect key="frame" x="0.0" y="145" width="393" height="530"/>
+                                        <rect key="frame" x="0.0" y="117.66666666666669" width="393" height="557.33333333333326"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wgs-vQ-pnx">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="530"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="557.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GDY-7f-xRb">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -80,11 +80,11 @@ soruları cevaplayın.</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="oDK-2f-cpg" firstAttribute="centerY" secondItem="FcS-jc-yIu" secondAttribute="centerY" id="4lO-qw-qeH"/>
-                                    <constraint firstItem="YiB-92-0XC" firstAttribute="top" secondItem="FcS-jc-yIu" secondAttribute="bottom" constant="100" id="6SH-1P-vVr"/>
                                     <constraint firstItem="L14-5o-TTj" firstAttribute="centerY" secondItem="oDK-2f-cpg" secondAttribute="centerY" id="EMK-2a-Ud3"/>
                                     <constraint firstItem="L14-5o-TTj" firstAttribute="centerX" secondItem="oDK-2f-cpg" secondAttribute="centerX" id="FPR-iD-pgD"/>
                                     <constraint firstAttribute="trailing" secondItem="FcS-jc-yIu" secondAttribute="trailing" constant="16" id="KUS-LM-SiE"/>
                                     <constraint firstItem="FcS-jc-yIu" firstAttribute="top" secondItem="eLf-ag-CEx" secondAttribute="top" constant="24" id="M3g-f6-Tke"/>
+                                    <constraint firstItem="YiB-92-0XC" firstAttribute="top" secondItem="vKy-3C-ot2" secondAttribute="bottom" constant="8" id="MkM-1O-NtY"/>
                                     <constraint firstItem="vKy-3C-ot2" firstAttribute="top" secondItem="FcS-jc-yIu" secondAttribute="bottom" constant="24" id="RZI-hs-Ke3"/>
                                     <constraint firstAttribute="trailing" secondItem="vKy-3C-ot2" secondAttribute="trailing" constant="16" id="SdC-Kd-h2f"/>
                                     <constraint firstItem="FcS-jc-yIu" firstAttribute="leading" secondItem="eLf-ag-CEx" secondAttribute="leading" constant="16" id="Wva-hD-3MI"/>
