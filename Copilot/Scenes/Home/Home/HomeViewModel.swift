@@ -78,7 +78,10 @@ class HomeViewModel: HomeViewModelType {
             guard let self = self else { return }
             
             if let model = model, model.count > 0 {
-                self.appointment = model[0]
+//                self.appointment = model[0]
+                for item in model where item.appointmentDate != nil {
+                    self.appointment = item
+                }
                 self.delegate?.setAppointment()
             } else
             

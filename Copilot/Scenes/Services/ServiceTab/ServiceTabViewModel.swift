@@ -61,15 +61,18 @@ class ServiceTabViewModel: ServiceTabViewModelType {
             if let model = model, model.count > 0 {
                 
                 for item in model {
-                    if item.recordType == .tireChange || item.recordType == .damage {
+                    if item.recordType == .tireChange || item.recordType == .damage,
+                        item.appointmentDate != nil {
                         self.tireAppointment = item
                         self.delegate?.setTireAppointment()
                         
-                    } else if item.recordType == .maintenance {
+                    } else if item.recordType == .maintenance,
+                              item.appointmentDate != nil {
                         self.maintenanceAppointment = item
                         self.delegate?.setMaintenanceAppointment()
                         
-                    } else if item.recordType == .mechanicalFailure {
+                    } else if item.recordType == .mechanicalFailure,
+                              item.appointmentDate != nil {
                         self.breakdownAppointment = item
                         self.delegate?.setBreakdownAppointment()
                     } 
