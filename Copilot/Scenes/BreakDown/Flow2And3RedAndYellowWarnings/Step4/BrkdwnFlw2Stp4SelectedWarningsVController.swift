@@ -154,7 +154,10 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: SelectedWarningsButtonsCellDeleg
     }
     
     func didTapCall() {
-        
+        guard let url = URL(string: CodeStrings.callSupportCenterPhone) else {
+        return
+        }
+        UIApplication.shared.open(url)
     }
 }
 

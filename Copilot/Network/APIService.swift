@@ -213,8 +213,8 @@ class APIService {
         if shoudAddMark {
             route += "?mark=\(mark)&"
         } else {
-//            route += "?"
-            route += "?mark=\(mark)&"
+            route += "?"
+//            route += "?mark=\(mark)&"
         }
         
         if let lat, let lon {
