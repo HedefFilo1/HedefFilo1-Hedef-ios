@@ -38,6 +38,7 @@ class BreakDownCoordinator: Coordinator {
 
 extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
                                 BreakDownSuccessRandevuVMCrdinatorDlgt {
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -47,12 +48,13 @@ extension BreakDownCoordinator: BreakDownVMCoordinatorDelegate,
         navigationController.popToRootViewController(animated: true)
     }
     
-    func goToBreakDownSuccessRandevu(service: Supplier, date: Date?) {
+    func goToBreakDownSuccessRandevu(service: Supplier?, appointment: Case?, date: Date?) {
         let controller: BreakDownSuccessRandevuViewController = storyboard.instantiateViewController()
         controller.viewModel = BreakDownSuccessRandevuViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.service = service
         controller.viewModel.date = date
+        controller.viewModel.appointment = appointment
         navigationController.pushViewController(controller, animated: true)
     }
     func goToFlow1BreakDownStep2TowTruck() {
@@ -87,13 +89,18 @@ extension BreakDownCoordinator: BrkdwnFlw1Stp2TowTruckVMCrdinatorDlgt,
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToBrkdwnFlw1Stp5ServiceDetail(towTruck: Bool, service: Supplier) {
+    func goToBrkdwnFlw1Stp5ServiceDetail(towTruck: Bool, service: Supplier?, appointment: Case?) {
         let controller: BrkdwnFlw1Stp5ServiceDetailVController = storyboard.instantiateViewController()
         controller.viewModel = BrkdwnFlw1Stp5ServiceDetailViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.service = service
         controller.viewModel.towTruck = towTruck
+        controller.viewModel.appointment = appointment
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToServiceDetail(appointment: Case?) {
+        goToBrkdwnFlw1Stp5ServiceDetail(towTruck: false, service: nil, appointment: appointment)
     }
     
     func presentCalendar(delegate: CalendarViewControllerDelegate) {

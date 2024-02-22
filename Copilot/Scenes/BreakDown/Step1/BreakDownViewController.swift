@@ -132,7 +132,7 @@ extension BreakDownViewController: UICollectionViewDataSource, UICollectionViewD
 extension BreakDownViewController: BreakDownCellDelegate, BreakdownRandevuCellDelegate {
     
     func didTapEdit() {
-        
+        viewModel.goToServiceDetail()
     }
     
     func didTapYes() {

@@ -98,8 +98,12 @@ class BreakDownSuccessRandevuViewController: UIViewController {
             phoneLabel.text = service.phone
             phone = service.phone ?? ""
             
+        } else if let appointment = viewModel.appointment {
+            supplierNameLabel.text = appointment.supplierName
+            addressLabel.text = appointment.address
+            phoneLabel.text = appointment.supplierPhone
         }
-       
+        
         if let date = viewModel.displayDate {
             dateLabel.text = date
         } else {

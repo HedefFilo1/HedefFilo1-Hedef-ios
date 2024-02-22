@@ -43,12 +43,13 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        setAppointment()
         setService()
         continueButton.isEnabled = viewModel.towTruck
         if viewModel.towTruck {
             dateAndTimeView.isHidden = true
         }
+        
+        setAppointment()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -120,6 +121,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     }
     
     @IBAction func didContinue() {
+        
         if viewModel.towTruck {
             viewModel.createTowTruckRandevu()
             return
@@ -127,30 +129,34 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         guard let date = dateChooseView.date else { return }
         let hour = timeChooseView.seletedHour ?? ""
         let minute = timeChooseView.seletedMinute ?? ""
-        viewModel.createRandevu(with: date, hour: hour, minute: minute)
+        if viewModel.appointment != nil {
+            viewModel.updateRandevu(with: date, hour: hour, minute: minute)
+        } else {
+            viewModel.createRandevu(with: date, hour: hour, minute: minute)
+        }
     }
     
-//    func setAppointment() {
-//        guard let item = viewModel.appointment else { return }
-//        titleLabel.text = item.supplierName ?? Strings.service
-//        nameLabel.text = item.supplierName
-//        addressLabel.text = item.address
-//        phoneLabel.text = item.supplierPhone
-//        let type = item.appointmentStatus
-//        if type == .appointmentApproved {
-//            statusView.backgroundColor = .textSuccess
-//            statusLabel.text = Strings.approved
-//            desciptionLabel.text = Strings.tireRepairappointmentCreated
-//        } else {
-//            statusView.backgroundColor = .appYellow
-//            statusLabel.text = Strings.waitingToApprove
-//            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
-//        }
-//
-//        dateChooseView.setDate(strDate: item.appointmentDate ?? "")
-//        timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
-//        setButtonActivation()
-//    }
+    func setAppointment() {
+        guard let item = viewModel.appointment else { return }
+        titleLabel.text = item.supplierName ?? Strings.service
+        nameLabel.text = item.supplierName
+        addressLabel.text = item.address
+        phoneLabel.text = item.supplierPhone
+        let type = item.appointmentStatus
+        if type == .appointmentApproved {
+            statusView.backgroundColor = .textSuccess
+            statusLabel.text = Strings.approved
+            desciptionLabel.text = Strings.tireRepairappointmentCreated
+        } else {
+            statusView.backgroundColor = .appYellow
+            statusLabel.text = Strings.waitingToApprove
+            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
+        }
+
+        dateChooseView.setDate(strDate: item.appointmentDate ?? "")
+        timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
+        setButtonActivation()
+    }
     
     func setService() {
         guard let item = viewModel.service else { return }

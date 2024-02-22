@@ -19,6 +19,7 @@ protocol BreakDownSuccessRandevuViewModelType: AnyObject {
     var coordinatorDelegate: BreakDownSuccessRandevuVMCrdinatorDlgt? { get set }
     var delegate: BreakDownSuccessRandevuViewModelDelegate? { get set }
     var service: Supplier? { get set }
+    var appointment: Case? { get set }
     var date: Date? { get set }
     var displayDate: String? { get }
     func getBack()
@@ -30,6 +31,7 @@ class BreakDownSuccessRandevuViewModel: BreakDownSuccessRandevuViewModelType {
     weak var delegate: BreakDownSuccessRandevuViewModelDelegate?
     
     var service: Supplier?
+    var appointment: Case?
     var date: Date?
     
     var displayDate: String? {

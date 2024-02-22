@@ -11,7 +11,7 @@ import MapKit
 
 protocol BrkdwnFlw1Stp5ServiceDetailVMCrdintrDlgt: AnyObject {
     func getBack()
-    func goToBreakDownSuccessRandevu(service: Supplier, date: Date?)
+    func goToBreakDownSuccessRandevu(service: Supplier?, appointment: Case?, date: Date?)
     func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
@@ -24,9 +24,11 @@ protocol BrkdwnFlw1Stp5ServiceDetailViewModelType: AnyObject {
     var delegate: BrkdwnFlw1Stp5ServiceDetailVMdlDlgt? { get set }
     var towTruck: Bool { get set }
     var service: Supplier? { get set }
+    var appointment: Case? { get set }
     func getBack()
     func createTowTruckRandevu()
     func createRandevu(with date: Date, hour: String, minute: String)
+    func updateRandevu(with date: Date, hour: String, minute: String) 
     func openGoogleMap(latitude: Double, longitude: Double)
     func openAppleMap(latitude: Double, longitude: Double)
     func presentCalendar(delegate: CalendarViewControllerDelegate)
@@ -38,6 +40,7 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
     
     var towTruck: Bool = false
     var service: Supplier?
+    var appointment: Case?
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -78,7 +81,9 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
-                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, date: nil)
+                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service,
+                                                                      appointment: nil,
+                                                                      date: nil)
             }
         }
     }
@@ -102,7 +107,30 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
-                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, date: nil)
+                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service,
+                                                                      appointment: nil,
+                                                                      date: date)
+            }
+        }
+    }
+    
+    func updateRandevu(with date: Date, hour: String, minute: String) {
+        guard let appointment,
+              let hour = Int(hour), let min = Int(minute),
+              let date = date.setTime(hour: hour, min: min) else { return }
+        Loading.shared.show()
+        APIService.updateCase(caseId: appointment.id ?? "",
+                              appointmentDate: date) { [weak self] _, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else {
+                self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: nil,
+                                                                      appointment: appointment,
+                                                                      date: date)
             }
         }
     }

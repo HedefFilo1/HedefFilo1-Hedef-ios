@@ -11,6 +11,7 @@ protocol BreakDownVMCoordinatorDelegate: AnyObject {
     func getBack()
     func goToFlow1BreakDownStep2TowTruck()
     func goToBreakdownFlow2Step2AnyAlarm()
+    func goToServiceDetail(appointment: Case?)
 }
 
 protocol BreakDownViewModelDelegate: BaseViewModelDelegate {
@@ -24,6 +25,7 @@ protocol BreakDownViewModelType: AnyObject {
     func getBack()
     func goToFlow1BreakDownStep2TowTruck()
     func goToBreakdownFlow2Step2AnyAlarm()
+    func goToServiceDetail()
 }
 
 class BreakDownViewModel: BreakDownViewModelType {
@@ -42,6 +44,10 @@ class BreakDownViewModel: BreakDownViewModelType {
     
     func goToBreakdownFlow2Step2AnyAlarm() {
         coordinatorDelegate?.goToBreakdownFlow2Step2AnyAlarm()
+    }
+    
+    func goToServiceDetail() {
+        coordinatorDelegate?.goToServiceDetail(appointment: appointment)
     }
     
 }
