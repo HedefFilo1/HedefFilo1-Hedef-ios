@@ -9,7 +9,7 @@ import Foundation
 
 protocol ServiceRandevuVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToConfirmedRandevu(service: Supplier?, date: Date, appointment: Case?)
+    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?)
 }
 
 protocol ServiceRandevuViewModelDelegate: BaseViewModelDelegate {
@@ -53,7 +53,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     }
     
     func goToConfirmedRandevu() {
-        if let service, let date {
+        if let service {
             coordinatorDelegate?.goToConfirmedRandevu(service: service, date: date, appointment: nil)
         }
     }

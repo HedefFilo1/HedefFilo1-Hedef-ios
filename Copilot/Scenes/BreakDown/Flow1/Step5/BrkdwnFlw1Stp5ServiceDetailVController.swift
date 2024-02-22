@@ -118,6 +118,10 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         if let lat = viewModel.service?.latitude, let lon = viewModel.service?.longitude {
             showActionSheet(lat: lat, lon: lon)
         }
+        
+        if let item = viewModel.appointment {
+            showActionSheet(lat: item.latitude ?? 0, lon: item.longitude ?? 0)
+        }
     }
     
     @IBAction func didContinue() {

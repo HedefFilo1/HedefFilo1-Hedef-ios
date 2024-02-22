@@ -24,6 +24,7 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mapButtonView: UIView!
     @IBOutlet weak var mapButtonLabel: UILabel!
+    @IBOutlet weak var dateAndTimeView: UIView!
     @IBOutlet weak var selectRandevuLabel: UILabel!
     @IBOutlet weak var randevuDescriptionLabel: UILabel!
     @IBOutlet weak var selectDayLabel: UILabel!
@@ -42,8 +43,13 @@ class ServiceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setAppointment()
+        
         setService()
+        continueButton.isEnabled = viewModel.towTruck
+        if viewModel.towTruck {
+            dateAndTimeView.isHidden = true
+        }
+        setAppointment()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -94,9 +100,13 @@ class ServiceDetailViewController: UIViewController {
     }
     
     func setButtonActivation() {
-        let date = dateChooseView.date != nil
-        let time = timeChooseView.timeSelected
-        continueButton.isEnabled = date && time
+        if viewModel.towTruck {
+            continueButton.isEnabled = true
+        } else {
+            let date = dateChooseView.date != nil
+            let time = timeChooseView.timeSelected
+            continueButton.isEnabled = date && time
+        }
     }
     
     @IBAction func didTapBack() {
@@ -114,6 +124,10 @@ class ServiceDetailViewController: UIViewController {
     }
     
     @IBAction func didContinue() {
+        if viewModel.towTruck {
+            viewModel.goToTowTruckServiceRandevu()
+            return
+        }
         guard let date = dateChooseView.date else { return }
         let hour = timeChooseView.seletedHour ?? ""
         let minute = timeChooseView.seletedMinute ?? ""

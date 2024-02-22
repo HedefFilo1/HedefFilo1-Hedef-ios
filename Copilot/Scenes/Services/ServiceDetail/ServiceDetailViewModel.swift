@@ -13,7 +13,7 @@ import MapKit
 protocol ServiceDetailVMCoordinatorDelegate: AnyObject {
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
-    func goToServiceRandevu(service: Supplier?, date: Date, tireSupportType: TireSupportType?, towTruck: Bool, appointment: Case?)
+    func goToServiceRandevu(service: Supplier?, date: Date?, tireSupportType: TireSupportType?, towTruck: Bool, appointment: Case?)
 }
 
 protocol ServiceDetailViewModelDelegate: BaseViewModelDelegate {
@@ -29,6 +29,7 @@ protocol ServiceDetailViewModelType: AnyObject {
     var towTruck: Bool { get set }
     func getBack()
     func presentCalendar(delegate: CalendarViewControllerDelegate)
+    func goToTowTruckServiceRandevu()
     func goToServiceRandevu(date: Date, hour: String, minute: String)
     func openGoogleMap(latitude: Double, longitude: Double)
     func openAppleMap(latitude: Double, longitude: Double)
@@ -54,8 +55,14 @@ class ServiceDetailViewModel: ServiceDetailViewModelType {
     func goToServiceRandevu(date: Date, hour: String, minute: String) {
         guard let hour = Int(hour), let min = Int(minute) else { return }
         if let date = date.setTime(hour: hour, min: min),
-        let type = tireSupportType {
-            coordinatorDelegate?.goToServiceRandevu(service: service, date: date, tireSupportType: type, towTruck: towTruck, appointment: appointment)
+           let type = tireSupportType {
+            coordinatorDelegate?.goToServiceRandevu(service: service, date: date, tireSupportType: type, towTruck: false, appointment: appointment)
+        }
+    }
+    
+    func goToTowTruckServiceRandevu() {
+        if let type = tireSupportType {
+            coordinatorDelegate?.goToServiceRandevu(service: service, date: nil, tireSupportType: type, towTruck: true, appointment: nil)
         }
     }
     
