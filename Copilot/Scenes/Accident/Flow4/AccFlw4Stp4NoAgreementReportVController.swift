@@ -73,7 +73,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 10
+            return 3
         }
         
         return 1
@@ -93,6 +93,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
         case 2:
             
             let cell: AccFlw4SelectPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         
         default:
@@ -135,6 +136,17 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension AccFlw4Stp4NoAgreementReportVController: AccFlw4SelectPhotoCellDelegate {
+   
+    func didTapUpload() {
+        
+    }
+    
+    func didTapContinue() {
+        viewModel.goToFlow4Step5()
     }
 }
 

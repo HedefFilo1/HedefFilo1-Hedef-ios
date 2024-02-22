@@ -33,6 +33,7 @@ class AccFlw4SelectPhotoCell: UICollectionViewCell, Reusable {
         uploadView.layer.cornerRadius = 10
         uploadView.layer.borderWidth = 1
         uploadView.layer.borderColor = UIColor.theme.cgColor
+        continueButton.isEnabled = true
     }
     
     func setTexts() {

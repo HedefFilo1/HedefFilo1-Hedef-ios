@@ -78,7 +78,7 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToAccFlw1Stp3Leaks() {
+    func goToAccFlw1Stp5Leaks() {
         let viewController: AccFlw1Stp5LeaksViewController = storyboard.instantiateViewController()
         viewController.viewModel = AccFlw1Stp5LeaksViewModel()
         viewController.viewModel.coordinatorDelegate = self
@@ -179,5 +179,9 @@ extension AccidentCoordinator: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt {
         controller.viewModel = AccFlw4Stp4NoAgreementReportViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToFlow4Step5() {
+        goToAccFlw1Stp5Leaks()
     }
 }

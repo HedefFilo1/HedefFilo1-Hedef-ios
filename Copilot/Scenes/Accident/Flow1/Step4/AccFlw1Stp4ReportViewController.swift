@@ -66,7 +66,7 @@ class AccFlw1Stp4ReportViewController: UIViewController {
     }
     
     @IBAction func didTapContinue() {
-        viewModel.goToAccFlw1Stp3Leaks()
+        viewModel.goToAccFlw1Stp5Leaks()
     }
     
 }
