@@ -62,7 +62,7 @@ class AccFlw2Stp6MovableViewController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        
+        viewModel.goToFlow3Step7()
     }
 
 }

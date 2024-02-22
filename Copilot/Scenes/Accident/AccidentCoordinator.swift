@@ -166,4 +166,8 @@ extension AccidentCoordinator: AccFlw2Stp6MovableVMCrdinatorDlgt {
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+    
+    func goToFlow3Step7() {
+        goToAccFlw1Stp6Confirm()
+    }
 }
