@@ -68,7 +68,7 @@ class AccFlw1Stp3AgreementViewController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        
+        viewModel.goToAccFlw4Stp4NoAgreement()
     }
 
 }

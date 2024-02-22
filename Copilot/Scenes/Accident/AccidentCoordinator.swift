@@ -171,3 +171,13 @@ extension AccidentCoordinator: AccFlw2Stp6MovableVMCrdinatorDlgt {
         goToAccFlw1Stp6Confirm()
     }
 }
+
+// MARK: Flow 4
+extension AccidentCoordinator: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt {
+    func goToAccFlw4Stp4NoAgreement() {
+        let controller: AccFlw4Stp4NoAgreementReportVController = storyboard.instantiateViewController()
+        controller.viewModel = AccFlw4Stp4NoAgreementReportViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+}

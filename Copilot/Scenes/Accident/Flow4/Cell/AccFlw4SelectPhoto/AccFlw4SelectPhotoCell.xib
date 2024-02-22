@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AccFlw4SelectPhotoCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="189"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen aracın olay yeri fotoğraflarını yükleyiniz." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JvQ-E0-r36">
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ON-2v-1fD">
+                        <rect key="frame" x="0.0" y="37" width="332" height="48"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67n-9g-AJG">
+                                <rect key="frame" x="55" y="0.0" width="222" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="P4f-IZ-cub">
+                                        <rect key="frame" x="0.0" y="16" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="R0t-fF-GM4"/>
+                                            <constraint firstAttribute="height" constant="16" id="ovI-ou-TyH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daha Fazla Fotoğraf Yükle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-nE-9tt">
+                                        <rect key="frame" x="24" y="13.666666666666664" width="198" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bCZ-nE-9tt" firstAttribute="leading" secondItem="P4f-IZ-cub" secondAttribute="trailing" constant="8" id="37E-gU-XHF"/>
+                                    <constraint firstItem="bCZ-nE-9tt" firstAttribute="centerY" secondItem="67n-9g-AJG" secondAttribute="centerY" id="9ZP-xr-RVh"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCZ-nE-9tt" secondAttribute="trailing" id="jfh-hN-V6t"/>
+                                    <constraint firstItem="P4f-IZ-cub" firstAttribute="centerY" secondItem="67n-9g-AJG" secondAttribute="centerY" id="x0f-Vd-WsN"/>
+                                    <constraint firstItem="P4f-IZ-cub" firstAttribute="leading" secondItem="67n-9g-AJG" secondAttribute="leading" id="x5J-md-0b3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCk-DY-NKG">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapUpload" destination="gTV-IL-0wX" eventType="touchUpInside" id="EyU-y4-xk7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="67n-9g-AJG" firstAttribute="top" secondItem="0ON-2v-1fD" secondAttribute="top" id="AwT-Y1-90D"/>
+                            <constraint firstItem="67n-9g-AJG" firstAttribute="centerX" secondItem="0ON-2v-1fD" secondAttribute="centerX" id="BXa-IV-vUQ"/>
+                            <constraint firstItem="67n-9g-AJG" firstAttribute="centerY" secondItem="0ON-2v-1fD" secondAttribute="centerY" id="PUA-U6-Mbg"/>
+                            <constraint firstAttribute="bottom" secondItem="67n-9g-AJG" secondAttribute="bottom" id="UR3-T2-jdj"/>
+                            <constraint firstAttribute="height" constant="48" id="Zuq-1X-nak"/>
+                            <constraint firstAttribute="trailing" secondItem="JCk-DY-NKG" secondAttribute="trailing" id="a3i-7m-AY7"/>
+                            <constraint firstItem="JCk-DY-NKG" firstAttribute="leading" secondItem="0ON-2v-1fD" secondAttribute="leading" id="a7q-Qx-lUQ"/>
+                            <constraint firstAttribute="bottom" secondItem="JCk-DY-NKG" secondAttribute="bottom" id="pnP-Af-ZuZ"/>
+                            <constraint firstItem="JCk-DY-NKG" firstAttribute="top" secondItem="0ON-2v-1fD" secondAttribute="top" id="uEP-jl-vQ8"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5i-ej-r7J" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="101" width="332" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="UvT-z4-pS0"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Devam Et"/>
+                        <connections>
+                            <action selector="didTapContinue" destination="gTV-IL-0wX" eventType="touchUpInside" id="2e8-2P-y4W"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JvQ-E0-r36" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0vl-qv-qzJ"/>
+                <constraint firstItem="JvQ-E0-r36" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PAa-Ei-E5F"/>
+                <constraint firstItem="0ON-2v-1fD" firstAttribute="top" secondItem="JvQ-E0-r36" secondAttribute="bottom" constant="16" id="QZP-1m-zIy"/>
+                <constraint firstAttribute="trailing" secondItem="N5i-ej-r7J" secondAttribute="trailing" id="UA5-SC-G6S"/>
+                <constraint firstItem="N5i-ej-r7J" firstAttribute="top" secondItem="0ON-2v-1fD" secondAttribute="bottom" constant="16" id="gci-12-1Vs"/>
+                <constraint firstAttribute="trailing" secondItem="0ON-2v-1fD" secondAttribute="trailing" id="kbR-sD-m7b"/>
+                <constraint firstItem="N5i-ej-r7J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nBH-xz-SCs"/>
+                <constraint firstAttribute="trailing" secondItem="JvQ-E0-r36" secondAttribute="trailing" id="ouO-E2-EhC"/>
+                <constraint firstItem="0ON-2v-1fD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z0O-hx-f6u"/>
+            </constraints>
+            <size key="customSize" width="332" height="189"/>
+            <connections>
+                <outlet property="continueButton" destination="N5i-ej-r7J" id="gjC-x6-ZOj"/>
+                <outlet property="titleLabel" destination="JvQ-E0-r36" id="Ruk-da-Atl"/>
+                <outlet property="uploadLabel" destination="bCZ-nE-9tt" id="iyE-UU-SQM"/>
+                <outlet property="uploadView" destination="0ON-2v-1fD" id="0VQ-kV-Io9"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="59.507042253521128"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="uploadImageIcon" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

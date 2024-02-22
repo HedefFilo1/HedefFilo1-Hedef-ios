@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AccFlw4Stp4HeaderCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="265"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="265"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zabıt Tutma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-nP-qeP">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m0-dO-v3M">
+                        <rect key="frame" x="0.0" y="37" width="339" height="67"/>
+                        <string key="text">Karşı taraf ile anlaşamadıysanız zabıt tutmalısınız. Bu aşamada polisi bilgilendirmeniz gerekmektedir. Aşağıda bulunan buton aracılığı ile polis ile iletişime geçebilirsiniz.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UM-qf-YM2">
+                        <rect key="frame" x="0.0" y="136" width="339" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCM-BN-g2f">
+                                <rect key="frame" x="117.66666666666669" y="0.0" width="104" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitePhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hIq-wL-8je">
+                                        <rect key="frame" x="0.0" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="684-IE-Tc2"/>
+                                            <constraint firstAttribute="height" constant="24" id="Zh7-2G-nSx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="112’yi Ara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb0-R5-yDf">
+                                        <rect key="frame" x="31.999999999999986" y="14.666666666666657" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hIq-wL-8je" firstAttribute="leading" secondItem="sCM-BN-g2f" secondAttribute="leading" id="BYE-sO-3CL"/>
+                                    <constraint firstItem="hIq-wL-8je" firstAttribute="centerY" secondItem="sCM-BN-g2f" secondAttribute="centerY" id="HPQ-5g-mhN"/>
+                                    <constraint firstItem="tb0-R5-yDf" firstAttribute="centerY" secondItem="sCM-BN-g2f" secondAttribute="centerY" id="Ve6-UX-UxY"/>
+                                    <constraint firstAttribute="trailing" secondItem="tb0-R5-yDf" secondAttribute="trailing" id="ZXj-t2-iEZ"/>
+                                    <constraint firstItem="tb0-R5-yDf" firstAttribute="leading" secondItem="hIq-wL-8je" secondAttribute="trailing" constant="8" id="jTJ-0h-Qny"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Np-XGL">
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapCall" destination="gTV-IL-0wX" eventType="touchUpInside" id="p5f-zC-aTF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="theme"/>
+                        <constraints>
+                            <constraint firstItem="XEC-Np-XGL" firstAttribute="top" secondItem="1UM-qf-YM2" secondAttribute="top" id="4pQ-jj-jlE"/>
+                            <constraint firstAttribute="bottom" secondItem="XEC-Np-XGL" secondAttribute="bottom" id="CY0-cO-tgD"/>
+                            <constraint firstItem="sCM-BN-g2f" firstAttribute="top" secondItem="1UM-qf-YM2" secondAttribute="top" id="H85-zV-XeX"/>
+                            <constraint firstItem="sCM-BN-g2f" firstAttribute="centerX" secondItem="1UM-qf-YM2" secondAttribute="centerX" id="Jyj-dd-KcC"/>
+                            <constraint firstAttribute="bottom" secondItem="sCM-BN-g2f" secondAttribute="bottom" id="K9Z-Cl-neG"/>
+                            <constraint firstItem="XEC-Np-XGL" firstAttribute="leading" secondItem="1UM-qf-YM2" secondAttribute="leading" id="cUd-2M-Jnp"/>
+                            <constraint firstAttribute="height" constant="50" id="hA0-WO-TMp"/>
+                            <constraint firstAttribute="trailing" secondItem="XEC-Np-XGL" secondAttribute="trailing" id="qtU-OK-mM0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="0m0-dO-v3M" firstAttribute="top" secondItem="0DG-nP-qeP" secondAttribute="bottom" constant="16" id="2tX-K7-xef"/>
+                <constraint firstItem="0DG-nP-qeP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EPz-Ts-g72"/>
+                <constraint firstAttribute="trailing" secondItem="1UM-qf-YM2" secondAttribute="trailing" id="Hs0-R6-icA"/>
+                <constraint firstItem="1UM-qf-YM2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NLi-9d-d7m"/>
+                <constraint firstItem="0m0-dO-v3M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TdS-sf-7yI"/>
+                <constraint firstItem="1UM-qf-YM2" firstAttribute="top" secondItem="0m0-dO-v3M" secondAttribute="bottom" constant="32" id="YDk-NU-Wvp"/>
+                <constraint firstItem="1UM-qf-YM2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YaM-vf-3NV"/>
+                <constraint firstItem="0DG-nP-qeP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZVR-7H-LiA"/>
+                <constraint firstAttribute="trailing" secondItem="0DG-nP-qeP" secondAttribute="trailing" id="iUY-z5-Gja"/>
+                <constraint firstAttribute="trailing" secondItem="0m0-dO-v3M" secondAttribute="trailing" id="ozJ-Wk-4WD"/>
+            </constraints>
+            <size key="customSize" width="339" height="265"/>
+            <connections>
+                <outlet property="callLabel" destination="tb0-R5-yDf" id="dEa-iF-t8Z"/>
+                <outlet property="callView" destination="1UM-qf-YM2" id="kMd-LS-7sv"/>
+                <outlet property="descriptionLabel" destination="0m0-dO-v3M" id="ddR-Ud-zWO"/>
+                <outlet property="titleLabel" destination="0DG-nP-qeP" id="WGQ-TK-eeb"/>
+            </connections>
+            <point key="canvasLocation" x="121.37404580152672" y="94.718309859154928"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="whitePhoneIcon" width="24.333333969116211" height="24.333333969116211"/>
+        <namedColor name="theme">
+            <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

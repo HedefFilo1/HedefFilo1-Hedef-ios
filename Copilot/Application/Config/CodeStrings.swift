@@ -40,6 +40,7 @@ struct CodeStrings {
     static let vehicleGuideKey = "copilotapp.vehicle_guide_pdf_url"
     static let plateNumberPattern = "## ### ###"
     static let callSupportCenterPhone = "tel://02123683200"
+    static let bullet = "\u{2022}"
 }
 
 // MAKR: Network

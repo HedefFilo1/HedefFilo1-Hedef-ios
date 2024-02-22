@@ -52,5 +52,20 @@ extension Strings {
     static var noCantMove: String {
         return localized(string: "noCantMove")
     }
-
+    
+    static var keepReport: String {
+        return localized(string: "keepReport")
+    }
+    
+    static var cannotRichAgreemntDescription: String {
+        return localized(string: "cannotRichAgreemntDescription")
+    }
+    
+    static var pleaseUploadPhoto: String {
+        return localized(string: "pleaseUploadPhoto")
+    }
+    
+    static var uploadMorePhotos: String {
+        return localized(string: "uploadMorePhotos")
+    }
 }

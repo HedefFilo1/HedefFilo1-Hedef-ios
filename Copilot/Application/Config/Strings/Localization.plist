@@ -2284,36 +2284,36 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>No, Can't Move</string>
         </dict>
         
-        <key></key>
+        <key>keepReport</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Zabıt Tutma</string>
             <key>en</key>
-            <string></string>
+            <string>Keep Report</string>
         </dict>
         
-        <key></key>
+        <key>cannotRichAgreemntDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Karşı taraf ile anlaşamadıysanız zabıt tutmalısınız. Bu aşamada polisi bilgilendirmeniz gerekmektedir. Aşağıda bulunan buton aracılığı ile polis ile iletişime geçebilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>If you cannot reach an agreement with the other party, you should keep a record. At this stage you need to inform the police. You can contact the police via the button below.</string>
         </dict>
         
-        <key></key>
+        <key>pleaseUploadPhoto</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen aracın olay yeri fotoğraflarını yükleyiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please upload crime scene photos of the vehicle.</string>
         </dict>
         
-        <key></key>
+        <key>uploadMorePhotos</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Daha Fazla Fotoğraf Yükle</string>
             <key>en</key>
-            <string></string>
+            <string>Upload More Photos</string>
         </dict>
         
         <key></key>
