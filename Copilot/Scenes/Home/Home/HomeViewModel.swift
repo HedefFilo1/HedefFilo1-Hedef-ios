@@ -79,10 +79,19 @@ class HomeViewModel: HomeViewModelType {
             
             if let model = model, model.count > 0 {
 //                self.appointment = model[0]
+                
                 for item in model where item.appointmentDate != nil {
-                    self.appointment = item
+                    if self.appointment == nil {
+                        self.appointment = item
+                        
+                    } else if let appointment = self.appointment, let current = appointment.date {
+                        if let date = item.date, date < current {
+                            self.appointment = item
+                        }
+                    }
                 }
                 self.delegate?.setAppointment()
+                
             } else
             
             if let error = error {
