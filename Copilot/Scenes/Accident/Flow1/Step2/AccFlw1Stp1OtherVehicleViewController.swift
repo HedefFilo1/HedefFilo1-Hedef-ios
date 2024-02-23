@@ -73,7 +73,7 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     }
     
     @IBAction func didTapNo() {
-        
+        viewModel.goToAccFlw5Stp3Declare()
     }
 
 }

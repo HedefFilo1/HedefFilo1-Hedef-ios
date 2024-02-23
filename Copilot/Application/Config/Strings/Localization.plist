@@ -2324,12 +2324,62 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please Select Service.</string>
         </dict>
         
-        <key></key>
+        <key>declarationNotice</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Beyan Bildirimi</string>
             <key>en</key>
-            <string></string>
+            <string>Declaration Notice</string>
+        </dict>
+        
+        <key>declarationNoticeDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen aracınızda ya da karşı tarafın aracında bulunan tutanak dokümanını uygun şekilde doldurun.
+                Tutanağın nasıl tutulması gerektiğini öğrenmek için lütfen tıklayın.</string>
+            <key>en</key>
+            <string>Please fill out the report document in your vehicle or the other party's vehicle appropriately.
+                Please click to learn how minutes should be kept.</string>
+        </dict>
+        
+        <key>callPoliceDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>LÜTFEN KAZA BOYUTU BÜYÜKSE SİGORTANIN MASRAFLARINIZI KARŞILAMASI İÇİN POLİS ÇAĞIRARAK VEYA KARAKOLA GİDEREK</string>
+            <key>en</key>
+            <string>PLEASE IF THE SIZE OF THE ACCIDENT IS LARGE, CALL THE POLICE OR GO TO THE POLICE STATION SO THAT INSURANCE WILL COVER YOUR COSTS.</string>
+        </dict>
+        
+        <key>KeepAReportUppercased</key>
+        <dict>
+            <key>tr</key>
+            <string>ZABIT TUTTURUN.</string>
+            <key>en</key>
+            <string>KEEP A REPORT.</string>
+        </dict>
+        
+        <key>declaration</key>
+        <dict>
+            <key>tr</key>
+            <string>Beyan</string>
+            <key>en</key>
+            <string>Declaration</string>
+        </dict>
+        
+        <key>drivingLicence</key>
+        <dict>
+            <key>tr</key>
+            <string>Ehliyet</string>
+            <key>en</key>
+            <string>Driving Licence</string>
+        </dict>
+        
+        <key>crimeScenePhotos</key>
+        <dict>
+            <key>tr</key>
+            <string>Olay Yeri Fotoğrafları</string>
+            <key>en</key>
+            <string>Crime Scene Photos</string>
         </dict>
         
         <key></key>
@@ -2380,7 +2430,53 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
         
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
         
     </dict>
 </plist>

@@ -173,7 +173,7 @@ extension AccidentCoordinator: AccFlw2Stp6MovableVMCrdinatorDlgt {
 }
 
 // MARK: Flow 4
-extension AccidentCoordinator: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt {
+extension AccidentCoordinator: AccFlw4Stp4NoAgreementReportVMCrdntrDlgt {
     func goToAccFlw4Stp4NoAgreement() {
         let controller: AccFlw4Stp4NoAgreementReportVController = storyboard.instantiateViewController()
         controller.viewModel = AccFlw4Stp4NoAgreementReportViewModel()
@@ -182,6 +182,21 @@ extension AccidentCoordinator: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt {
     }
     
     func goToFlow4Step5() {
+        goToAccFlw1Stp5Leaks()
+    }
+}
+
+// MARK: Flow 5
+extension AccidentCoordinator: AccFlw5Stp3DeclareVMCrdinatorDlgt {
+    
+    func goToAccFlw5Stp3Declare() {
+        let controller: AccFlw5Stp3DeclareVController = storyboard.instantiateViewController()
+        controller.viewModel = AccFlw5Stp3DeclareViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToAccFlow5Step4() {
         goToAccFlw1Stp5Leaks()
     }
 }

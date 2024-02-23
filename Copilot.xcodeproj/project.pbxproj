@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		8906390C2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */; };
+		890639102B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */; };
+		890639112B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */; };
+		890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890639162B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift */; };
 		8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8907EEEF2B696590004869BE /* Maintenance.storyboard */; };
 		8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */; };
 		8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EEF42B69662A004869BE /* MaintenanceViewController.swift */; };
@@ -150,6 +154,7 @@
 		894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC922B0B707900D369E9 /* GetProfile.swift */; };
 		894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC942B0B7B0F00D369E9 /* Success.swift */; };
 		894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC962B0B7FFA00D369E9 /* Vehicle.swift */; };
+		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
@@ -298,6 +303,9 @@
 		89B191032B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B191012B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.xib */; };
 		89B191052B87B17000AC1171 /* ReportImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B191042B87B17000AC1171 /* ReportImageCell.swift */; };
 		89B553A52B87B33500616732 /* ReportImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B553A42B87B33500616732 /* ReportImageCell.xib */; };
+		89B553AA2B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B553A92B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift */; };
+		89B553AC2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B553AB2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift */; };
+		89B553AF2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B553AE2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift */; };
 		89B610DE2B6CDB0C0052A417 /* GetEligible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B610DD2B6CDB0C0052A417 /* GetEligible.swift */; };
 		89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */; };
 		89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */; };
@@ -412,6 +420,10 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3HeaderCell.xib; sourceTree = "<group>"; };
+		8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3ContentCell.swift; sourceTree = "<group>"; };
+		8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw5Stp3ContentCell.xib; sourceTree = "<group>"; };
+		890639162B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3ButtonsCell.swift; sourceTree = "<group>"; };
 		8907EEEF2B696590004869BE /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maintenance.storyboard; sourceTree = "<group>"; };
 		8907EEF12B69659B004869BE /* MaintenanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCoordinator.swift; sourceTree = "<group>"; };
 		8907EEF42B69662A004869BE /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
@@ -555,6 +567,7 @@
 		894CEC942B0B7B0F00D369E9 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		894CEC962B0B7FFA00D369E9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
+		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -705,6 +718,9 @@
 		89B191012B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw4SelectPhotoCell.xib; sourceTree = "<group>"; };
 		89B191042B87B17000AC1171 /* ReportImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportImageCell.swift; sourceTree = "<group>"; };
 		89B553A42B87B33500616732 /* ReportImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportImageCell.xib; sourceTree = "<group>"; };
+		89B553A92B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3DeclareViewModel.swift; sourceTree = "<group>"; };
+		89B553AB2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3DeclareViewController.swift; sourceTree = "<group>"; };
+		89B553AE2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3HeaderCell.swift; sourceTree = "<group>"; };
 		89B610DD2B6CDB0C0052A417 /* GetEligible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEligible.swift; sourceTree = "<group>"; };
 		89B6F6242B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewController.swift; sourceTree = "<group>"; };
 		89B6F6262B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow3Step2DamageViewModel.swift; sourceTree = "<group>"; };
@@ -846,6 +862,15 @@
 				31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8906390D2B88CA05000A0819 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */,
+				8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		8907EEEE2B69656D004869BE /* Maintenance */ = {
@@ -1801,6 +1826,7 @@
 				89950AA42B7F73D7004537D2 /* Flow1 */,
 				89950AF32B826E21004537D2 /* Flow2 */,
 				89B190F42B87A6A600AC1171 /* Flow4 */,
+				89B553A62B88A97F00616732 /* Flow5 */,
 			);
 			path = Accident;
 			sourceTree = "<group>";
@@ -2165,29 +2191,29 @@
 		89B190F92B87A77600AC1171 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				89B190FA2B87A7BF00AC1171 /* AccFlw4Stp4Header */,
+				89B190FA2B87A7BF00AC1171 /* Header */,
 				89B191082B87B17C00AC1171 /* Image */,
-				89B190FF2B87ADE900AC1171 /* AccFlw4SelectPhoto */,
+				89B190FF2B87ADE900AC1171 /* SelectPhoto */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		89B190FA2B87A7BF00AC1171 /* AccFlw4Stp4Header */ = {
+		89B190FA2B87A7BF00AC1171 /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				89B190FB2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.swift */,
 				89B190FC2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib */,
 			);
-			path = AccFlw4Stp4Header;
+			path = Header;
 			sourceTree = "<group>";
 		};
-		89B190FF2B87ADE900AC1171 /* AccFlw4SelectPhoto */ = {
+		89B190FF2B87ADE900AC1171 /* SelectPhoto */ = {
 			isa = PBXGroup;
 			children = (
 				89B191002B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.swift */,
 				89B191012B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.xib */,
 			);
-			path = AccFlw4SelectPhoto;
+			path = SelectPhoto;
 			sourceTree = "<group>";
 		};
 		89B191082B87B17C00AC1171 /* Image */ = {
@@ -2197,6 +2223,44 @@
 				89B191042B87B17000AC1171 /* ReportImageCell.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		89B553A62B88A97F00616732 /* Flow5 */ = {
+			isa = PBXGroup;
+			children = (
+				89B553A92B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift */,
+				89B553AB2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift */,
+				89B553AD2B88BFA100616732 /* Cell */,
+			);
+			path = Flow5;
+			sourceTree = "<group>";
+		};
+		89B553AD2B88BFA100616732 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89B553B22B88BFF700616732 /* Header */,
+				8906390D2B88CA05000A0819 /* Content */,
+				89B553B32B88C00400616732 /* Buttons */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89B553B22B88BFF700616732 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */,
+				89B553AE2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		89B553B32B88C00400616732 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */,
+				890639162B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		89B6F6202B66DED600F4C3AB /* Step3 */ = {
@@ -2928,10 +2992,12 @@
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
 				89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */,
+				890639112B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib in Resources */,
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */,
 				89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */,
+				8906390C2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib in Resources */,
 				8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				8976B0302B73CA2100E7C58F /* WarningItemsCell.xib in Resources */,
@@ -2940,6 +3006,7 @@
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
 				89B190FE2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
+				8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */,
 				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
@@ -3110,6 +3177,7 @@
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8976B0392B73CD3C00E7C58F /* WarningLightsFooterCell.swift in Sources */,
 				8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */,
+				89B553AA2B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift in Sources */,
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
@@ -3189,6 +3257,7 @@
 				89950AE82B811786004537D2 /* AccidentServicesViewModel.swift in Sources */,
 				8976B0342B73CA5D00E7C58F /* WarningItemCell.swift in Sources */,
 				89950AE62B8116C7004537D2 /* Strings+Part3.swift in Sources */,
+				89B553AF2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift in Sources */,
 				892A8CF82AC4C7160020C1C4 /* SplashViewController.swift in Sources */,
 				89B790CB2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift in Sources */,
 				89F23BC62B29EC220081DD85 /* Document.swift in Sources */,
@@ -3216,12 +3285,14 @@
 				897835CF2B44A0CB00C63AA7 /* CalendarViewController.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				89B553AC2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
 				89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89E29B5C2B3AE52900CCABAD /* VehicleServicesItemCell.swift in Sources */,
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				89F6A0532B584A860052EE15 /* LastikRandevuCell.swift in Sources */,
+				890639102B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift in Sources */,
 				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
 				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
@@ -3338,6 +3409,7 @@
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
+				890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */,
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,

@@ -7,26 +7,26 @@
 
 import Foundation
 
-protocol AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt: AnyObject {
+protocol AccFlw4Stp4NoAgreementReportVMCrdntrDlgt: AnyObject {
     func getBack()
     func goToFlow4Step5()
 }
 
-protocol AccFlw4Stp4NoAgreementReportViewModelDelegate: BaseViewModelDelegate {
+protocol AccFlw4Stp4NoAgreementReportVMDelegate: BaseViewModelDelegate {
     
 }
 
-protocol AccFlw4Stp4NoAgreementReportViewModelType: AnyObject {
-    var coordinatorDelegate: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt? { get set }
-    var delegate: AccFlw4Stp4NoAgreementReportViewModelDelegate? { get set }
+protocol AccFlw4Stp4NoAgreementReportVModelType: AnyObject {
+    var coordinatorDelegate: AccFlw4Stp4NoAgreementReportVMCrdntrDlgt? { get set }
+    var delegate: AccFlw4Stp4NoAgreementReportVMDelegate? { get set }
     func getBack()
     func goToFlow4Step5()
 }
 
-class AccFlw4Stp4NoAgreementReportViewModel: AccFlw4Stp4NoAgreementReportViewModelType {
+class AccFlw4Stp4NoAgreementReportViewModel: AccFlw4Stp4NoAgreementReportVModelType {
     
-    weak var coordinatorDelegate: AccFlw4Stp4NoAgreementReportVMCrdinatorDlgt?
-    weak var delegate: AccFlw4Stp4NoAgreementReportViewModelDelegate?
+    weak var coordinatorDelegate: AccFlw4Stp4NoAgreementReportVMCrdntrDlgt?
+    weak var delegate: AccFlw4Stp4NoAgreementReportVMDelegate?
     
     func getBack() {
         coordinatorDelegate?.getBack()

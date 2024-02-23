@@ -72,4 +72,32 @@ extension Strings {
     static var pleaseSelectService: String {
         return localized(string: "pleaseSelectService")
     }
+    
+    static var declarationNotice: String {
+        return localized(string: "declarationNotice")
+    }
+    
+    static var declarationNoticeDescription: String {
+        return localized(string: "declarationNoticeDescription")
+    }
+    
+    static var callPoliceDescription: String {
+        return localized(string: "callPoliceDescription")
+    }
+    
+    static var KeepAReportUppercased: String {
+        return localized(string: "KeepAReportUppercased")
+    }
+    
+    static var declaration: String {
+        return localized(string: "declaration")
+    }
+    
+    static var drivingLicence: String {
+        return localized(string: "drivingLicence")
+    }
+    
+    static var crimeScenePhotos: String {
+        return localized(string: "crimeScenePhotos")
+    }
 }

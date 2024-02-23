@@ -75,9 +75,9 @@ class TireOperationsViewModel: TireOperationsViewModelType {
             }
             
             if let error = error {
-//                self.delegate?.showError(title: Strings.errorTitle,
-//                                         message: error.message)
-                self.coordinatorDelegate?.goToFlow1Step2NewTire()
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+//                self.coordinatorDelegate?.goToFlow1Step2NewTire()
             }
         }
         //
@@ -93,10 +93,10 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                 self.tire = model[0]
                 self.delegate?.setTire()
             }
-//            if let error = error {
-//                self.delegate?.showError(title: Strings.errorTitle,
-//                                         message: error.message)
-//            }
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
         }
     }
     

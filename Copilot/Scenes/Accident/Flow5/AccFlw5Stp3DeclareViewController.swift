@@ -1,16 +1,16 @@
 //
-//  AccFlw4Stp4NoAgreementReportVController.swift
+//  AccFlw5Stp3DeclareViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 2/22/24.
+//  Created by Jamal on 2/23/24.
 //
 
 import Foundation
 import UIKit
 
-class AccFlw4Stp4NoAgreementReportVController: UIViewController {
+class AccFlw5Stp3DeclareVController: UIViewController {
     
-    var viewModel: AccFlw4Stp4NoAgreementReportVModelType! {
+    var viewModel: AccFlw5Stp3DeclareViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -39,9 +39,10 @@ class AccFlw4Stp4NoAgreementReportVController: UIViewController {
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: AccFlw4Stp4HeaderCell.self)
+        collectionView.register(cellType: AccFlw5Stp3HeaderCell.self)
+        collectionView.register(cellType: AccFlw5Stp3ContentCell.self)
         collectionView.register(cellType: ReportImageCell.self)
-        collectionView.register(cellType: AccFlw4SelectPhotoCell.self)
+        collectionView.register(cellType: AccFlw5Stp3ButtonsCell.self)
         collectionView.contentInset.top = 34
         collectionView.contentInset.bottom = 20
         applyStyle()
@@ -65,14 +66,14 @@ class AccFlw4Stp4NoAgreementReportVController: UIViewController {
     
 }
 
-extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 1 {
+        if section == 2 {
             return 3
         }
         
@@ -83,16 +84,19 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
         
         switch indexPath.section {
         case 0:
-            let cell: AccFlw4Stp4HeaderCell = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: AccFlw5Stp3HeaderCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
             
         case 1:
+            let cell: AccFlw5Stp3ContentCell = collectionView.dequeueReusableCell(for: indexPath)
+            return cell
+            
+        case 2:
             let cell: ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
           return cell
             
-        case 2:
-            
-            let cell: AccFlw4SelectPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+        case 3:
+            let cell: AccFlw5Stp3ButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             return cell
         
@@ -107,9 +111,12 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
         
         switch indexPath.section {
         case 0:
-         height = 210
+         height = 180
             
         case 1:
+         height = 200
+            
+        case 2:
             return CGSize(width: 104, height: 104)
             
         default:
@@ -128,7 +135,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        if section == 1 {
+        if section == 2 {
             return UIEdgeInsets(top: 0, left: 16, bottom: 20, right: 16)
         }
         return .zero
@@ -139,19 +146,17 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     }
 }
 
-extension AccFlw4Stp4NoAgreementReportVController: AccFlw4SelectPhotoCellDelegate {
+extension AccFlw5Stp3DeclareVController: AccFlw5Stp3ButtonsCellDelegate {
    
     func didTapUpload() {
         
     }
     
     func didTapContinue() {
-        viewModel.goToFlow4Step5()
+        viewModel.goToAccFlow5Step4()
     }
 }
 
-extension AccFlw4Stp4NoAgreementReportVController: AccFlw4Stp4NoAgreementReportVMDelegate {
-    func reloadData() {
-        collectionView.reloadData()
-    }
+extension AccFlw5Stp3DeclareVController: AccFlw5Stp3DeclareViewModelDelegate {
+    
 }
