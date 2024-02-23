@@ -100,4 +100,12 @@ extension Strings {
     static var crimeScenePhotos: String {
         return localized(string: "crimeScenePhotos")
     }
+    
+    static var notMaintenancePeriodDescription: String {
+        return localized(string: "notMaintenancePeriodDescription")
+    }
+    
+    static var breakdownAppointmentRequest: String {
+        return localized(string: "breakdownAppointmentRequest")
+    }
 }

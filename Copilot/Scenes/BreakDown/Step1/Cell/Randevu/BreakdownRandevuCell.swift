@@ -47,6 +47,7 @@ class BreakdownRandevuCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyStyles()
+        setTexts()
     }
 
     func applyStyles() {
@@ -65,6 +66,10 @@ class BreakdownRandevuCell: UICollectionViewCell, Reusable {
         statusLabel.apply(.whiteS12B700)
         editLabel.apply(.whiteS12B700)
         editLabel.textColor = .theme
+    }
+    
+    func setTexts() {
+        randevuTitleLabel.text = Strings.breakdownAppointmentRequest
     }
     
     @IBAction func didTapEdit() {

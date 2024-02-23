@@ -1503,7 +1503,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>randevuApproved</key>
         <dict>
             <key>tr</key>
-            <string>Randevu Oluşturuldu</string>
+            <string>Randevu Onaylandı</string>
             <key>en</key>
             <string>Randevu Approved</string>
         </dict>
@@ -1631,9 +1631,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>notMaintenancePeriodDescription</key>
         <dict>
             <key>tr</key>
-            <string>Maalesef henüz bakım randevusu oluşturamazsınız.</string>
+            <string>Aracınızın mevcut kilometresinden daha küçük bir değer giremezsiniz!</string>
             <key>en</key>
-            <string>Unfortunately, you cannot create a maintenance appointment yet.</string>
+            <string>You cannot enter a value less than your vehicle's current mileage!</string>
         </dict>
         
         <key>accordingToVehiclePeriods</key>
@@ -2382,12 +2382,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Crime Scene Photos</string>
         </dict>
         
-        <key></key>
+        <key>breakdownAppointmentRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza Randevusu Talebi</string>
             <key>en</key>
-            <string></string>
+            <string>Breakdown Appointment Request</string>
         </dict>
         
         <key></key>

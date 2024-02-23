@@ -51,7 +51,7 @@ class NotMaintenancePeriodViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.createMaintenanceAppointment
+        titleLabel.text = Strings.notMaintenancePeriodDescription
         periodLabel.text = Strings.accordingToVehiclePeriods
         kmLabel.text = Strings.vehicleMileage
         setPeriodLabels()
