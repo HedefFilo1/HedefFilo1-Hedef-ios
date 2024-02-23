@@ -51,7 +51,7 @@ class BrkdwnFlw4Stp3NoWarningVController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.breakDownOperations
-        warningLabel.text = Strings.onLightWarning
+        warningLabel.text = Strings.pleaseSelectService
         descriptionLabel.text = Strings.turnOffRestartVehicle
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
         serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)

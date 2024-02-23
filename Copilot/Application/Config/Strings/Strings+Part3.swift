@@ -68,4 +68,8 @@ extension Strings {
     static var uploadMorePhotos: String {
         return localized(string: "uploadMorePhotos")
     }
+    
+    static var pleaseSelectService: String {
+        return localized(string: "pleaseSelectService")
+    }
 }
