@@ -51,6 +51,13 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(loginMyAccount), for: .touchUpInside)
         button.setTitle("Login My Account", for: .normal)
         button.backgroundColor = .systemYellow
+        
+        let button2 = UIButton()
+        view.addSubview(button2)
+        button2.align(top: 300, width: 170, height: 40, centerX: 0)
+        button2.addTarget(self, action: #selector(ozlemLogin), for: .touchUpInside)
+        button2.setTitle("Ozlem", for: .normal)
+        button2.backgroundColor = .systemOrange
 #endif
     }
     
@@ -66,6 +73,12 @@ class LoginViewController: UIViewController {
     @objc func loginMyAccount() {
         viewModel.login(email: "jamal.zare@solidict.com",
                         password: "Jj_123456",
+                        rememberMe: rememberCheckBox.isSelected)
+    }
+   
+    @objc func ozlemLogin() {
+        viewModel.login(email: "ozlem.erdem@hedeffilo.com",
+                        password: "tXAya133",
                         rememberMe: rememberCheckBox.isSelected)
     }
     

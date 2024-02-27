@@ -93,10 +93,10 @@ class TireOperationsViewModel: TireOperationsViewModelType {
                 self.tire = model[0]
                 self.delegate?.setTire()
             }
-            if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
-            }
+//            if let error = error {
+//                self.delegate?.showError(title: Strings.errorTitle,
+//                                         message: error.message)
+//            }
         }
     }
     

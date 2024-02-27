@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getAppointment()
+        viewModel.getVehicle(shoudGetCase: true)
     }
     
     private func setupUI() {

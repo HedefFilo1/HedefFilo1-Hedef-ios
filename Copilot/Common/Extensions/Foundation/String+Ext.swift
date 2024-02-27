@@ -109,6 +109,7 @@ extension Date {
     func getServerDate() -> String {
         let formmater = DateFormatter()
 //        formmater.dateFormat = "YYYY-MM-ddTHH:MM:00.000Z"
+        formmater.timeZone = TimeZone(identifier: "UTC")
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm"
         let result = formmater.string(from: self) + ":00.000Z"
         return result
