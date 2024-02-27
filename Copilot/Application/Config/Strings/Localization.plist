@@ -1631,9 +1631,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>notMaintenancePeriodDescription</key>
         <dict>
             <key>tr</key>
-            <string>Aracınızın mevcut kilometresinden daha küçük bir değer giremezsiniz!</string>
+            <string>Maalesef henüz bakım randevusu oluşturamazsınız.</string>
             <key>en</key>
-            <string>You cannot enter a value less than your vehicle's current mileage!</string>
+            <string>Unfortunately, you cannot create a maintenance appointment yet.</string>
         </dict>
         
         <key>accordingToVehiclePeriods</key>
