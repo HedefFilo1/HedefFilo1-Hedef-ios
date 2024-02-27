@@ -79,9 +79,12 @@ class HomeViewModel: HomeViewModelType {
             
             if let model = model, model.count > 0 {
 //                self.appointment = model[0]
+                let next10 = Calendar.current.date(byAdding: .day, value: 10, to: Date()) ?? Date()
                 
-                for item in model where item.appointmentDate != nil {
-                    if self.appointment == nil {
+                for item in model where (item.appointmentDate != nil) {
+                    let itemDate = item.date ?? Date()
+                    
+                    if self.appointment == nil, itemDate < next10 {
                         self.appointment = item
                         
                     } else if let appointment = self.appointment, let current = appointment.date {
