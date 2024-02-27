@@ -108,4 +108,16 @@ extension Strings {
     static var breakdownAppointmentRequest: String {
         return localized(string: "breakdownAppointmentRequest")
     }
+    
+    static var serviceDetailEditDescription: String {
+        return localized(string: "serviceDetailEditDescription")
+    }
+    
+    static var maintenanceEditAppointment: String {
+        return localized(string: "maintenanceEditAppointment")
+    }
+    
+    static var breakdownEditAppointment: String {
+        return localized(string: "breakdownEditAppointment")
+    }
 }

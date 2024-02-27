@@ -144,13 +144,13 @@ class ServiceDetailViewController: UIViewController {
         if type == .appointmentApproved {
             statusView.backgroundColor = .textSuccess
             statusLabel.text = Strings.approved
-            desciptionLabel.text = Strings.tireRepairappointmentCreated
+//            desciptionLabel.text = Strings.tireRepairappointmentCreated
         } else {
             statusView.backgroundColor = .appYellow
             statusLabel.text = Strings.waitingToApprove
-            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
+//            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
         }
-        
+        desciptionLabel.text = Strings.serviceDetailEditDescription
         dateChooseView.setDate(strDate: item.appointmentDate ?? "")
         timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
         setButtonActivation()

@@ -2390,28 +2390,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Breakdown Appointment Request</string>
         </dict>
         
-        <key></key>
+        <key>serviceDetailEditDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lastik randevu talebinizi düzenlemek için lütfen seçim yapınız.</string>
             <key>en</key>
-            <string></string>
+            <string>Please make a selection to arrange your tire appointment request.</string>
         </dict>
         
-        <key></key>
+        <key>maintenanceEditAppointment</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bakım randevu talebinizi düzenlemek için lütfen seçim yapınız. </string>
             <key>en</key>
-            <string></string>
+            <string>Please make a selection to arrange your maintenance appointment request.</string>
         </dict>
         
-        <key></key>
+        <key>breakdownEditAppointment</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza randevu talebinizi düzenlemek için lütfen seçim yapınız.</string>
             <key>en</key>
-            <string></string>
+            <string>Please make a selection to arrange your malfunction appointment request.</string>
         </dict>
         
         <key></key>

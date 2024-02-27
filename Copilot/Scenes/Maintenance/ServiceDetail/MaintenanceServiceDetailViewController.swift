@@ -21,4 +21,10 @@ class MaintenanceServiceDetailViewController: ServiceDetailViewController {
         super.setService()
         desciptionLabel.text = Strings.maintenanceSelectTime
     }
+    
+    override func setAppointment() {
+        guard let item = viewModel.appointment else { return }
+        super.setAppointment()
+        desciptionLabel.text = Strings.maintenanceEditAppointment
+    }
 }
