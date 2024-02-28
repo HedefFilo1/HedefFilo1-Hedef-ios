@@ -94,6 +94,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
                 
             } else {
                 let cell: SelectedWarningsContentCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.donotStartLabel.text = viewModel.message
                 return cell
             }
         case 2:
@@ -117,7 +118,7 @@ extension BrkdwnFlw2Stp4SelectedWarningsVCntlr: UICollectionViewDataSource, UICo
             if !viewModel.isTowTruck {
                 height = 100
             } else {
-                height = 212
+                height = 220
             }
             
         case 2:
