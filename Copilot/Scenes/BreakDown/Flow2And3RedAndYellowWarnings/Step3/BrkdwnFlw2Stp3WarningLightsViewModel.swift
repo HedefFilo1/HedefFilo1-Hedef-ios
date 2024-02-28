@@ -88,7 +88,7 @@ var allWarnings = [
     
     MockWarning(id: 6, title: "ABS", trTitle: "kontağı kapatıp", image: "absWarning", type: .restart, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
     
-    MockWarning(id: 7, title: "Restart", trTitle: "kontağı kapatıp", image: "restartWarning", type: .restart, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
+    MockWarning(id: 7, title: "Restart", trTitle: "kontağı kapatıp", image: "restartWarning", type: .airPressure, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
     
     MockWarning(id: 8, title: "Air pressure", trTitle: "lastik hava", image: "airPressure", type: .airPressure, description: "Lütfen lastik hava basıncını kontrol ediniz"),
     
