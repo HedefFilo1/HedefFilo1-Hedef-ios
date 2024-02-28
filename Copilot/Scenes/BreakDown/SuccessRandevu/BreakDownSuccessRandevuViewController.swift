@@ -74,6 +74,9 @@ class BreakDownSuccessRandevuViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.breakdownRandevuSuccessMessage
         desciptionLabel.text = Strings.breakDownTowTruckSent
+        if viewModel.date != nil {
+            desciptionLabel.text = ""
+        }
         editButton.setTitle(Strings.edit, for: .normal)
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }

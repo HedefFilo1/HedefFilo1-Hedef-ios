@@ -60,10 +60,10 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
     
     func createTowTruckRandevu() {
 #if DEV_DEBUG
-        //        if true {
-        //            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, date: nil)
-        //            return
-        //        }
+        //                if true {
+        //                    self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service!, appointment: nil, date: nil)
+        //                    return
+        //                }
 #endif
         guard let service else { return }
         Loading.shared.show()
@@ -92,6 +92,13 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
         guard let hour = Int(hour), let min = Int(minute),
               let date = date.setTime(hour: hour, min: min),
               let service else { return }
+#if DEV_DEBUG
+        //        if true {
+        //            self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service, appointment: nil, date: date)
+        //            return
+        //        }
+        
+#endif
         Loading.shared.show()
         APIService.createBreakDownCase(supplierId: service.id,
                                        supplierName: service.name,
