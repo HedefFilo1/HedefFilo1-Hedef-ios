@@ -154,6 +154,8 @@
 		894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC922B0B707900D369E9 /* GetProfile.swift */; };
 		894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC942B0B7B0F00D369E9 /* Success.swift */; };
 		894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC962B0B7FFA00D369E9 /* Vehicle.swift */; };
+		89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */; };
+		89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */; };
 		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
@@ -222,8 +224,8 @@
 		89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AA62B7F7422004537D2 /* AccFlw1Stp1ViewController.swift */; };
 		89950AA92B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AA82B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift */; };
 		89950AAB2B7F77DD004537D2 /* AccidentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */; };
-		89950AAE2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAD2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift */; };
-		89950AB02B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAF2B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift */; };
+		89950AAE2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAD2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift */; };
+		89950AB02B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AAF2B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift */; };
 		89950AB32B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB22B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift */; };
 		89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB42B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift */; };
 		89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89950AB72B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift */; };
@@ -567,6 +569,8 @@
 		894CEC942B0B7B0F00D369E9 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		894CEC962B0B7FFA00D369E9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
+		89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewModel.swift; sourceTree = "<group>"; };
+		89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewController.swift; sourceTree = "<group>"; };
 		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
@@ -637,8 +641,8 @@
 		89950AA62B7F7422004537D2 /* AccFlw1Stp1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1ViewController.swift; sourceTree = "<group>"; };
 		89950AA82B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1ViewModel.swift; sourceTree = "<group>"; };
 		89950AAA2B7F77DD004537D2 /* AccidentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentCoordinator.swift; sourceTree = "<group>"; };
-		89950AAD2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1OtherVehicleViewModel.swift; sourceTree = "<group>"; };
-		89950AAF2B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp1OtherVehicleViewController.swift; sourceTree = "<group>"; };
+		89950AAD2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp2OtherVehicleViewModel.swift; sourceTree = "<group>"; };
+		89950AAF2B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp2OtherVehicleViewController.swift; sourceTree = "<group>"; };
 		89950AB22B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3AgreementViewModel.swift; sourceTree = "<group>"; };
 		89950AB42B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp3AgreementViewController.swift; sourceTree = "<group>"; };
 		89950AB72B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw1Stp4ReportViewModel.swift; sourceTree = "<group>"; };
@@ -1501,6 +1505,23 @@
 			path = SearchHeader;
 			sourceTree = "<group>";
 		};
+		89513E5F2B91C15200B05199 /* AccidentGuide */ = {
+			isa = PBXGroup;
+			children = (
+				89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */,
+				89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */,
+				89513E642B91C1C300B05199 /* Cell */,
+			);
+			path = AccidentGuide;
+			sourceTree = "<group>";
+		};
+		89513E642B91C1C300B05199 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -1823,6 +1844,7 @@
 				89950AE22B8115E5004537D2 /* AccidentServices */,
 				89950AE92B812D3D004537D2 /* ServiceDetail */,
 				89950AEE2B813026004537D2 /* SuccessRandevu */,
+				89513E5F2B91C15200B05199 /* AccidentGuide */,
 				89950AA42B7F73D7004537D2 /* Flow1 */,
 				89950AF32B826E21004537D2 /* Flow2 */,
 				89B190F42B87A6A600AC1171 /* Flow4 */,
@@ -1857,8 +1879,8 @@
 		89950AAC2B7F81F5004537D2 /* Step2 */ = {
 			isa = PBXGroup;
 			children = (
-				89950AAD2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift */,
-				89950AAF2B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift */,
+				89950AAD2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift */,
+				89950AAF2B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift */,
 			);
 			path = Step2;
 			sourceTree = "<group>";
@@ -3155,6 +3177,7 @@
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
+				89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */,
 				89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */,
 				89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
@@ -3272,13 +3295,13 @@
 				89950AD52B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
-				89950AAE2B7F8229004537D2 /* AccFlw1Stp1OtherVehicleViewModel.swift in Sources */,
+				89950AAE2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				897835D12B44A0D400C63AA7 /* CalendarViewModel.swift in Sources */,
 				89950AB32B7FA018004537D2 /* AccFlw1Stp3AgreementViewModel.swift in Sources */,
 				89FC51992B6A982200AD37D4 /* BreakDownCell.swift in Sources */,
 				892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */,
-				89950AB02B7F8237004537D2 /* AccFlw1Stp1OtherVehicleViewController.swift in Sources */,
+				89950AB02B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
 				89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */,
 				89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */,
@@ -3329,6 +3352,7 @@
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
 				899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */,
+				89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
 				89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */,

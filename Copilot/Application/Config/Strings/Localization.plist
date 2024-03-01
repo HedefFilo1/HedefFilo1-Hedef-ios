@@ -2100,6 +2100,15 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Go to Accident Guide</string>
         </dict>
         
+        <key>accidentGuide</key>
+        <dict>
+            <key>tr</key>
+            <string>Kaza Rehberi</string>
+            <key>en</key>
+            <string>Accident Guide</string>
+        </dict>
+        
+        
         <key>wereYouAbleAgreement</key>
         <dict>
             <key>tr</key>

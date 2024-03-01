@@ -1,5 +1,5 @@
 //
-//  AccFlw1Stp1OtherVehicleViewController.swift
+//  AccFlw1Stp2OtherVehicleViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 2/16/24.
@@ -76,6 +76,9 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
         viewModel.goToAccFlw5Stp3Declare()
     }
 
+    @IBAction func didTapGuide() {
+        viewModel.goToGuide()
+    }
 }
 
 extension AccFlw1Stp2OtherVehicleViewController: AccFlw1Stp2OtherVehicleViewModelDelegate {

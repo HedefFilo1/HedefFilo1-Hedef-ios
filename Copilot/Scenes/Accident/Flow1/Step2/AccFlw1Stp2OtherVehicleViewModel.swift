@@ -11,6 +11,7 @@ protocol AccFlw1Stp2OtherVehicleVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlw1Stp3Agreement()
     func goToAccFlw5Stp3Declare()
+    func goToGuide()
 }
 
 protocol AccFlw1Stp2OtherVehicleViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +24,7 @@ protocol AccFlw1Stp2OtherVehicleViewModelType: AnyObject {
     func getBack()
     func goToAccFlw1Stp3Agreement()
     func goToAccFlw5Stp3Declare()
+    func goToGuide()
 }
 
 class AccFlw1Stp2OtherVehicleViewModel: AccFlw1Stp2OtherVehicleViewModelType {
@@ -40,5 +42,9 @@ class AccFlw1Stp2OtherVehicleViewModel: AccFlw1Stp2OtherVehicleViewModelType {
     
     func goToAccFlw5Stp3Declare() {
         coordinatorDelegate?.goToAccFlw5Stp3Declare()
+    }
+    
+    func goToGuide() {
+        coordinatorDelegate?.goToGuide()
     }
 }

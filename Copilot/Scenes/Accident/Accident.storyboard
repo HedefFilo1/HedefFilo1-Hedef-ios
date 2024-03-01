@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -451,6 +451,9 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-PK-3qr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="44"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <connections>
+                                                                                    <action selector="didTapGuide" destination="TwA-Mu-bqk" eventType="touchUpInside" id="gPq-FR-7th"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2112,6 +2115,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wN6-1I-0Gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2227" y="2195"/>
+        </scene>
+        <!--Accident Guide View Controller-->
+        <scene sceneID="IK8-47-VLY">
+            <objects>
+                <viewController storyboardIdentifier="AccidentGuideViewController" id="Zpj-5F-LdN" customClass="AccidentGuideViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jzm-nu-Mhe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-r2-T0M">
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="DgE-sf-kgs"/>
+                                    <constraint firstAttribute="height" constant="24" id="Xur-To-Njo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6V-8W-PuX">
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7IS-Y7-fhj"/>
+                                    <constraint firstAttribute="width" constant="40" id="uld-vi-G05"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapBack" destination="Zpj-5F-LdN" eventType="touchUpInside" id="ANg-KV-eD5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaza Rehberi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBA-YG-uph">
+                                <rect key="frame" x="146.66666666666666" y="84" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="01X-wr-EOA">
+                                <rect key="frame" x="0.0" y="117" width="393" height="701"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pwp-bg-atv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hWo-qM-amo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="01X-wr-EOA" firstAttribute="leading" secondItem="hWo-qM-amo" secondAttribute="leading" id="2cg-6e-Ubt"/>
+                            <constraint firstItem="h6V-8W-PuX" firstAttribute="centerY" secondItem="22Q-r2-T0M" secondAttribute="centerY" id="64g-ei-qXk"/>
+                            <constraint firstItem="hWo-qM-amo" firstAttribute="bottom" secondItem="01X-wr-EOA" secondAttribute="bottom" id="F3c-Pi-ygd"/>
+                            <constraint firstItem="SBA-YG-uph" firstAttribute="centerX" secondItem="jzm-nu-Mhe" secondAttribute="centerX" id="Hlf-op-Rqc"/>
+                            <constraint firstItem="SBA-YG-uph" firstAttribute="top" secondItem="hWo-qM-amo" secondAttribute="top" constant="25" id="POt-Yh-Ump"/>
+                            <constraint firstItem="01X-wr-EOA" firstAttribute="top" secondItem="SBA-YG-uph" secondAttribute="bottom" constant="12" id="QYe-I9-beD"/>
+                            <constraint firstItem="hWo-qM-amo" firstAttribute="trailing" secondItem="01X-wr-EOA" secondAttribute="trailing" id="Tay-G1-PIk"/>
+                            <constraint firstItem="h6V-8W-PuX" firstAttribute="centerX" secondItem="22Q-r2-T0M" secondAttribute="centerX" id="VZX-kw-VTL"/>
+                            <constraint firstItem="22Q-r2-T0M" firstAttribute="leading" secondItem="hWo-qM-amo" secondAttribute="leading" constant="24" id="bSY-nn-CEf"/>
+                            <constraint firstItem="22Q-r2-T0M" firstAttribute="top" secondItem="hWo-qM-amo" secondAttribute="top" constant="24" id="g6I-s1-WOr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="01X-wr-EOA" id="U1L-i1-KsO"/>
+                        <outlet property="titleLabel" destination="SBA-YG-uph" id="y2m-no-8V5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvT-uY-kTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="-711"/>
         </scene>
     </scenes>
     <resources>

@@ -46,7 +46,8 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccFlw1Stp4ReportVMCrdinatorDlgt,
                                AccFlw1Stp5LeaksVMCrdinatorDlgt,
                                AccFlw1Stp6ConfirmVMCrdinatorDlgt,
-                               AccFlw1Stp7SelectServiceVMCrdinatorDlgt {
+                               AccFlw1Stp7SelectServiceVMCrdinatorDlgt,
+                               AccidentGuideViewModelCoordinatorDelegate {
     
     func getBack() {
         navigationController.popViewController(animated: true)
@@ -60,6 +61,13 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
     func goToAccFlw1Stp2OtherVehicle() {
         let viewController: AccFlw1Stp2OtherVehicleViewController = storyboard.instantiateViewController()
         viewController.viewModel = AccFlw1Stp2OtherVehicleViewModel()
+        viewController.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToGuide() {
+        let viewController: AccidentGuideViewController = storyboard.instantiateViewController()
+        viewController.viewModel = AccidentGuideViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -120,4 +120,8 @@ extension Strings {
     static var breakdownEditAppointment: String {
         return localized(string: "breakdownEditAppointment")
     }
+    
+    static var accidentGuide: String {
+        return localized(string: "accidentGuide")
+    }
 }
