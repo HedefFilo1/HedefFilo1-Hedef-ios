@@ -81,6 +81,13 @@ extension MenuCoordinator: MenuViewModelCoordinatorDelegate {
         coordinator.startWithHGS()
     }
     
+    func showRequests() {
+        let coordinator = RequestsCoordinator(navigationController: navigationController)
+        coordinator.delegate = self
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
+    
     func showServices() {
         let coordinator = VehicleCoordinator(navigationController: navigationController)
         coordinator.delegate = self
@@ -107,7 +114,7 @@ extension MenuCoordinator: CampaignDetailVMCoordinatorDelegate {
 }
 
 extension MenuCoordinator: DocumentsViewModelCoordinatorDelegate,
-                            DocumentViewModelCoordinatorDelegate {
+                           DocumentViewModelCoordinatorDelegate {
     func goToDocument(document: Document) {
         let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()
@@ -146,7 +153,8 @@ extension MenuCoordinator: PdfViewerViewModelCoordinatorDelegate {
 }
 
 extension MenuCoordinator: ProfileCoordinatorDelegate,
-                           VehicleCoordinatorDelegate {
+                           VehicleCoordinatorDelegate,
+                           RequestsCoordinatorDelegate {
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
     }

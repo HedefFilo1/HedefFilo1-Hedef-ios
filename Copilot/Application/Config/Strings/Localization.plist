@@ -2423,44 +2423,44 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please make a selection to arrange your malfunction appointment request.</string>
         </dict>
         
-        <key></key>
+        <key>requests</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talepler</string>
             <key>en</key>
-            <string></string>
+            <string>Requests</string>
         </dict>
         
-        <key></key>
+        <key>requestsDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ek ürün ve hizmetlerimizi Filo Yöneticinizden talep edebilir veya kiralama sürecinizle ilgili taleplerinizi bize iletebilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>You can request our additional products and services from your Fleet Manager or send us your requests regarding your rental process.</string>
         </dict>
         
-        <key></key>
+        <key>productAndServiceRequests</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ürün/Hizmet Talepleri</string>
             <key>en</key>
-            <string></string>
+            <string>Product/Service Requests</string>
         </dict>
         
-        <key></key>
+        <key>processRequests</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Süreç Talepleri</string>
             <key>en</key>
-            <string></string>
+            <string>Process Requests</string>
         </dict>
         
-        <key></key>
+        <key>requestList</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talep Listesi</string>
             <key>en</key>
-            <string></string>
+            <string>Request List</string>
         </dict>
         
         <key></key>

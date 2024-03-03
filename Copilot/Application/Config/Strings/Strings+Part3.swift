@@ -124,4 +124,25 @@ extension Strings {
     static var accidentGuide: String {
         return localized(string: "accidentGuide")
     }
+    
+    static var requests: String {
+        return localized(string: "requests")
+    }
+    
+    static var requestsDescription: String {
+        return localized(string: "requestsDescription")
+    }
+    
+    static var productAndServiceRequests: String {
+        return localized(string: "productAndServiceRequests")
+    }
+    
+    static var processRequests: String {
+        return localized(string: "processRequests")
+    }
+    
+    static var requestList: String {
+        return localized(string: "requestList")
+    }
+  
 }

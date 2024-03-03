@@ -157,6 +157,12 @@
 		89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */; };
 		89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */; };
 		89513E662B95120200B05199 /* APIService+CreateCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E652B95120200B05199 /* APIService+CreateCase.swift */; };
+		89513E692B9519FA00B05199 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89513E682B9519FA00B05199 /* Requests.storyboard */; };
+		89513E6B2B951A1000B05199 /* RequestsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */; };
+		89513E6E2B951A3400B05199 /* RequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E6D2B951A3400B05199 /* RequestsViewModel.swift */; };
+		89513E702B951A4100B05199 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E6F2B951A4100B05199 /* RequestsViewController.swift */; };
+		89513E742B951FF700B05199 /* RequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E722B951FF700B05199 /* RequestsCell.swift */; };
+		89513E752B951FF700B05199 /* RequestsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89513E732B951FF700B05199 /* RequestsCell.xib */; };
 		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
@@ -573,6 +579,12 @@
 		89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewModel.swift; sourceTree = "<group>"; };
 		89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewController.swift; sourceTree = "<group>"; };
 		89513E652B95120200B05199 /* APIService+CreateCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+CreateCase.swift"; sourceTree = "<group>"; };
+		89513E682B9519FA00B05199 /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
+		89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsCoordinator.swift; sourceTree = "<group>"; };
+		89513E6D2B951A3400B05199 /* RequestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsViewModel.swift; sourceTree = "<group>"; };
+		89513E6F2B951A4100B05199 /* RequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
+		89513E722B951FF700B05199 /* RequestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsCell.swift; sourceTree = "<group>"; };
+		89513E732B951FF700B05199 /* RequestsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsCell.xib; sourceTree = "<group>"; };
 		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
@@ -1524,6 +1536,35 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		89513E672B9519E200B05199 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				89513E682B9519FA00B05199 /* Requests.storyboard */,
+				89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */,
+				89513E6C2B951A1600B05199 /* Requests */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		89513E6C2B951A1600B05199 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				89513E6D2B951A3400B05199 /* RequestsViewModel.swift */,
+				89513E6F2B951A4100B05199 /* RequestsViewController.swift */,
+				89513E712B951FCC00B05199 /* Cell */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		89513E712B951FCC00B05199 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89513E722B951FF700B05199 /* RequestsCell.swift */,
+				89513E732B951FF700B05199 /* RequestsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -2404,6 +2445,7 @@
 				8907EEEE2B69656D004869BE /* Maintenance */,
 				89FC518C2B6A963D00AD37D4 /* BreakDown */,
 				89950AA12B7F71A1004537D2 /* Accident */,
+				89513E672B9519E200B05199 /* Requests */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -3021,7 +3063,9 @@
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
 				89CE080B2B3AE40600C76433 /* VehicleServicesItemsCell.xib in Resources */,
+				89513E752B951FF700B05199 /* RequestsCell.xib in Resources */,
 				89950ACA2B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.xib in Resources */,
+				89513E692B9519FA00B05199 /* Requests.storyboard in Resources */,
 				8906390C2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib in Resources */,
 				8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
@@ -3320,6 +3364,7 @@
 				89B12BB72AD478C0002C70E4 /* MainCoordinator.swift in Sources */,
 				89F6A0532B584A860052EE15 /* LastikRandevuCell.swift in Sources */,
 				890639102B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift in Sources */,
+				89513E6E2B951A3400B05199 /* RequestsViewModel.swift in Sources */,
 				89E045912B04F51C00745E73 /* DocmentViewController.swift in Sources */,
 				896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */,
 				890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */,
@@ -3331,6 +3376,7 @@
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
+				89513E702B951A4100B05199 /* RequestsViewController.swift in Sources */,
 				8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
@@ -3347,6 +3393,7 @@
 				89950AF02B813059004537D2 /* AccidentSuccessRandevuViewController.swift in Sources */,
 				896CB3642AD71D270048025A /* NearMeCell.swift in Sources */,
 				89C55DE72AC4A5FF00C3066A /* UITableView+Reusable.swift in Sources */,
+				89513E6B2B951A1000B05199 /* RequestsCoordinator.swift in Sources */,
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89950AC42B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift in Sources */,
 				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
@@ -3394,6 +3441,7 @@
 				8934D5012B0FFE1000CD0CA7 /* VehicleGuideViewController.swift in Sources */,
 				894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */,
 				891B60CC2AF1107300D6F09C /* PointsCell.swift in Sources */,
+				89513E742B951FF700B05199 /* RequestsCell.swift in Sources */,
 				89941D662AF0110F00CEFD0E /* FilterCell.swift in Sources */,
 				8907EEF72B696653004869BE /* MaintenanceViewModel.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,

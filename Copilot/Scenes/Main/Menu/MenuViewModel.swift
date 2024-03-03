@@ -15,6 +15,7 @@ protocol MenuViewModelCoordinatorDelegate: AnyObject {
     func showDocuments()
     func showVehicleInfo()
     func showVehicleHGS()
+    func showRequests()
     func showServices()
 }
 
@@ -32,6 +33,7 @@ protocol MenuViewModelType: AnyObject {
     func showDocuments()
     func showVehicleInfo()
     func showVehicleHGS()
+    func showRequests()
     func showServices()
 }
 
@@ -61,6 +63,10 @@ class MenuViewModel: MenuViewModelType {
     
     func showVehicleHGS() {
         coordinatorDelegate?.showVehicleHGS()
+    }
+    
+    func showRequests() {
+        coordinatorDelegate?.showRequests()
     }
     
     func showServices() {

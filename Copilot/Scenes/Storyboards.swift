@@ -22,6 +22,7 @@ enum Storyboard: String {
     case maintenance
     case breakDown
     case accident
+    case requests
 
     var filename: String {
         return rawValue.capitalizingFirstLetter()
