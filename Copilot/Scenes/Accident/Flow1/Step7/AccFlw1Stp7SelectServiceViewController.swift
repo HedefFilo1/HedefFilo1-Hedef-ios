@@ -52,7 +52,7 @@ class AccFlw1Stp7SelectServiceViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
+        titleLabel.text = Strings.accidentOperations
         descriptionLabel.text = Strings.getWellSoonDoNotStart
         secondLabel.text = Strings.towTruckSendingDescription
         serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)

@@ -19,7 +19,8 @@ class AccFlw1Stp1VController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var questonLabel: UILabel!
-    @IBOutlet weak var callButton: CPButton!
+    @IBOutlet weak var callView: UIView!
+    @IBOutlet weak var callLabel: UILabel!
     @IBOutlet weak var continueButton: CPGreyButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -40,7 +41,6 @@ class AccFlw1Stp1VController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-        callButton.isEnabled = true
         continueButton.isEnabled = true
     }
     
@@ -51,12 +51,15 @@ class AccFlw1Stp1VController: UIViewController {
         titleLabel.apply(.blackS24B700)
         questonLabel.apply(.blackS20B700)
         descriptionLabel.apply(.greyS12R400)
+        callView.layer.cornerRadius = 10
+        callView.backgroundColor = .theme
+        callLabel.apply(.whiteS16B700)
     }
     
     func setTexts() {
         titleLabel.text = Strings.accidentOperations
         descriptionLabel.text = Strings.medicalHelpQuestion
-        callButton.setTitle(Strings.call112, for: .normal)
+        callLabel.text = Strings.call112
         continueButton.setTitle(Strings.goToAccidentPage, for: .normal)
         descriptionLabel.text = Strings.goToAccidentPageDescription
     }

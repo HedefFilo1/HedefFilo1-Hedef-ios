@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
         
 #if DEV_DEBUG
         // just for test
+        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapTwice))
         tap.numberOfTapsRequired = 3

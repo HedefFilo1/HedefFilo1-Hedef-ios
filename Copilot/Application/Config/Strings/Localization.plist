@@ -1351,7 +1351,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>proceedServiceSelection</key>
         <dict>
             <key>tr</key>
-            <string>Servis Seçimi İle İlerle</string>
+            <string>Servis Seçimi ile İlerle</string>
             <key>en</key>
             <string>Proceed with Service Selection</string>
         </dict>
