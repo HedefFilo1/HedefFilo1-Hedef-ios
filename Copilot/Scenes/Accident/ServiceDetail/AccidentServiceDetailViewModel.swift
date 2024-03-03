@@ -56,21 +56,21 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     }
     
     func createTowTruckRandevu() {
-//#if DEV_DEBUG
-                if true {
-                    self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
-                    return
-                }
-//#endif
+        //#if DEV_DEBUG
+        //                if true {
+        //                    self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
+        //                    return
+        //                }
+        //#endif
         guard let service else { return }
         Loading.shared.show()
-        APIService.createBreakDownCase(supplierId: service.id,
-                                       supplierName: service.name,
-                                       supplierPhone: service.phone ?? "",
-                                       city: service.city ?? "",
-                                       district: service.district ?? "",
-                                       towTruck: true,
-                                       appointmentDate: nil) { [weak self] _, error in
+        APIService.createAccidentCase(supplierId: service.id,
+                                      supplierName: service.name,
+                                      supplierPhone: service.phone ?? "",
+                                      city: service.city ?? "",
+                                      district: service.district ?? "",
+                                      towTruck: true,
+                                      appointmentDate: nil) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
@@ -87,18 +87,18 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         guard let hour = Int(hour), let min = Int(minute),
               let date = date.setTime(hour: hour, min: min),
               let service else { return }
-        if true {
-            self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
-            return
-        }
+        //        if true {
+        //            self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
+        //            return
+        //        }
         Loading.shared.show()
-        APIService.createBreakDownCase(supplierId: service.id,
-                                       supplierName: service.name,
-                                       supplierPhone: service.phone ?? "",
-                                       city: service.city ?? "",
-                                       district: service.district ?? "",
-                                       towTruck: false,
-                                       appointmentDate: date) { [weak self] _, error in
+        APIService.createAccidentCase(supplierId: service.id,
+                                      supplierName: service.name,
+                                      supplierPhone: service.phone ?? "",
+                                      city: service.city ?? "",
+                                      district: service.district ?? "",
+                                      towTruck: false,
+                                      appointmentDate: date) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
             

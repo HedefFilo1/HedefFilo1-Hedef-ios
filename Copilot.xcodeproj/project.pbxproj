@@ -156,6 +156,7 @@
 		894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC962B0B7FFA00D369E9 /* Vehicle.swift */; };
 		89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */; };
 		89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */; };
+		89513E662B95120200B05199 /* APIService+CreateCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E652B95120200B05199 /* APIService+CreateCase.swift */; };
 		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
@@ -571,6 +572,7 @@
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
 		89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewModel.swift; sourceTree = "<group>"; };
 		89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewController.swift; sourceTree = "<group>"; };
+		89513E652B95120200B05199 /* APIService+CreateCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+CreateCase.swift"; sourceTree = "<group>"; };
 		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
@@ -2028,6 +2030,7 @@
 				899CF56A2AE18CD5006D85E4 /* APIClient.swift */,
 				899CF5692AE18CD5006D85E4 /* APIRequest.swift */,
 				899CF5682AE18CD4006D85E4 /* APIService.swift */,
+				89513E652B95120200B05199 /* APIService+CreateCase.swift */,
 				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
 				899CF56F2AE18EE5006D85E4 /* Models */,
 			);
@@ -3241,6 +3244,7 @@
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
 				89E0458B2B04D3EB00745E73 /* DocumentCell.swift in Sources */,
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
+				89513E662B95120200B05199 /* APIService+CreateCase.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
 				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
 				8907EEFB2B696807004869BE /* MaintenanceCell.swift in Sources */,
