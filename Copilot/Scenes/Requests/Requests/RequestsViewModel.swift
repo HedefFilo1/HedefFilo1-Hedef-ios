@@ -9,6 +9,7 @@ import Foundation
 
 protocol RequestsViewModelCoordinatorDelegate: AnyObject {
     func getBack()
+    func goToReqFlw1Stp2()
 }
 
 protocol RequestsViewModelDelegate: BaseViewModelDelegate {
@@ -19,6 +20,7 @@ protocol RequestsViewModelType: AnyObject {
     var coordinatorDelegate: RequestsViewModelCoordinatorDelegate? { get set }
     var delegate: RequestsViewModelDelegate? { get set }
     func getBack()
+    func goToReqFlw1Stp2()
 }
 
 class RequestsViewModel: RequestsViewModelType {
@@ -28,5 +30,9 @@ class RequestsViewModel: RequestsViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToReqFlw1Stp2() {
+        coordinatorDelegate?.goToReqFlw1Stp2()
     }
 }

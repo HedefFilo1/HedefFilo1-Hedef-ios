@@ -30,8 +30,19 @@ class RequestsCoordinator: Coordinator {
     }
 }
 
-extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate {
+// MARK: FLOW 1
+extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
+                               ReqFlw1Stp2ViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func goToReqFlw1Stp2() {
+        
+            let controller: ReqFlw1Stp2ViewController = storyboard.instantiateViewController()
+            controller.viewModel = ReqFlw1Stp2ViewModel()
+            controller.viewModel.coordinatorDelegate = self
+            navigationController.pushViewController(controller, animated: true)
+        
     }
 }

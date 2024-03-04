@@ -130,6 +130,10 @@
 		893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF722AFA5A92004E643E /* NewsTabCell.swift */; };
 		893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893EDF742AFA5A97004E643E /* NewsTabCell.xib */; };
 		893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF772AFA5B0B004E643E /* NewsCell.swift */; };
+		89431D8D2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431D8C2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift */; };
+		89431D8F2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431D8E2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift */; };
+		89431D932B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431D912B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift */; };
+		89431D942B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89431D922B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -551,6 +555,10 @@
 		893EDF722AFA5A92004E643E /* NewsTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTabCell.swift; sourceTree = "<group>"; };
 		893EDF742AFA5A97004E643E /* NewsTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTabCell.xib; sourceTree = "<group>"; };
 		893EDF772AFA5B0B004E643E /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		89431D8C2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw1Stp2ViewModel.swift; sourceTree = "<group>"; };
+		89431D8E2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw1Stp2ViewController.swift; sourceTree = "<group>"; };
+		89431D912B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw1Stp2Cell.swift; sourceTree = "<group>"; };
+		89431D922B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReqFlw1Stp2Cell.xib; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -1391,6 +1399,33 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		89431D8A2B967FC300A6F6B8 /* Flow1 */ = {
+			isa = PBXGroup;
+			children = (
+				89431D8B2B967FD700A6F6B8 /* Step2 */,
+			);
+			path = Flow1;
+			sourceTree = "<group>";
+		};
+		89431D8B2B967FD700A6F6B8 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				89431D8C2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift */,
+				89431D8E2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift */,
+				89431D902B96813600A6F6B8 /* Cell */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		89431D902B96813600A6F6B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89431D912B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift */,
+				89431D922B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8944AB792B74D2D100967CE2 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1542,6 +1577,7 @@
 				89513E682B9519FA00B05199 /* Requests.storyboard */,
 				89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */,
 				89513E6C2B951A1600B05199 /* Requests */,
+				89431D8A2B967FC300A6F6B8 /* Flow1 */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3041,6 +3077,7 @@
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
 				89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */,
 				89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */,
+				89431D942B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
@@ -3222,6 +3259,7 @@
 				8917F5582B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift in Sources */,
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
+				89431D8F2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift in Sources */,
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
 				89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */,
@@ -3253,6 +3291,7 @@
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
+				89431D932B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
 				8976B0212B73BAD800E7C58F /* BrkdwnFlw2Stp2AnyAlarmVController.swift in Sources */,
 				8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */,
@@ -3423,6 +3462,7 @@
 				89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */,
 				896CB35F2AD718F50048025A /* RandevuCell.swift in Sources */,
 				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
+				89431D8D2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
