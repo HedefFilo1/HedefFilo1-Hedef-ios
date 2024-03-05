@@ -20,7 +20,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var noteTextField: UITextView!
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: CPTextField!
     
@@ -103,11 +103,12 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         addFileLabel.apply(.blackS14R400)
         documentNameLabel.apply(.blackS14R400)
         selectFileLabel.apply(.blackS14R400)
+        setDashedBorder()
     }
     
     func setTexts() {
         titleLabel.text = Strings.completedVehicleOperations
-       
+        
         noteLabel.text = Strings.addNote
         noteTextField.toolbarPlaceholder = Strings.addNote
         
@@ -154,6 +155,21 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         documentNameLabel.text = Strings.requiredDocumentName
         selectFileLabel.text = Strings.selectFile
         createButton.setTitle(Strings.createProcessRequest, for: .normal)
+    }
+    
+    func setDashedBorder() {
+        let shapeLayer = CAShapeLayer()
+        let bounds = selectFileView.bounds
+        shapeLayer.bounds = bounds
+        shapeLayer.position = CGPoint(x: bounds.width/2, y: bounds.height/2)
+        shapeLayer.fillColor = nil
+        shapeLayer.strokeColor = UIColor.dashedBorder.cgColor
+        shapeLayer.lineWidth = 1
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round // Updated in swift 4.2
+        shapeLayer.lineDashPattern = [6, 3]
+        shapeLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 6).cgPath
+        
+        selectFileView.layer.addSublayer(shapeLayer)
     }
     
     @IBAction func didTapBack() {

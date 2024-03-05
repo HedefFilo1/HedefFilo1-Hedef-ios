@@ -1002,10 +1002,40 @@
                     <tabBarItem key="tabBarItem" title="Item" id="2zN-y4-GEm"/>
                     <size key="freeformSize" width="393" height="2000"/>
                     <connections>
+                        <outlet property="addFileLabel" destination="CLU-NF-KH9" id="eft-l6-0Mg"/>
                         <outlet property="cityLabel" destination="3Yh-w8-2l0" id="OnL-AO-C7R"/>
+                        <outlet property="cityList" destination="HIx-b2-QvS" id="Wrq-Zj-Uii"/>
+                        <outlet property="createButton" destination="B0L-EV-oKm" id="fOK-Yz-gdh"/>
+                        <outlet property="documentNameLabel" destination="1NA-li-1BE" id="yhN-YP-p9Q"/>
+                        <outlet property="emailLabel" destination="XNv-Ye-cqG" id="hg7-Gg-VIf"/>
+                        <outlet property="emailTextField" destination="EEu-7x-fms" id="zmH-Pc-NJd"/>
+                        <outlet property="nameLabel" destination="5uP-Ij-mXc" id="qT9-6e-WXt"/>
+                        <outlet property="nameTextField" destination="u5j-vV-Sdk" id="iMD-Um-M6h"/>
                         <outlet property="noteLabel" destination="MF3-5L-aM5" id="EAZ-su-vQa"/>
                         <outlet property="noteTextField" destination="7Iv-Ee-8cl" id="T4Z-zJ-ZPQ"/>
+                        <outlet property="parkNameLabel" destination="zrv-X5-Pvf" id="T4V-ja-FOs"/>
+                        <outlet property="parkNameTextField" destination="QOh-6t-b53" id="TQF-Sq-QoE"/>
+                        <outlet property="parkPhoneLabel" destination="odF-7F-Abv" id="wvo-Z4-Bik"/>
+                        <outlet property="parkPhoneTextField" destination="qDQ-Ap-XNf" id="QRJ-u9-kXm"/>
+                        <outlet property="phoneLabel" destination="bvY-5u-ziJ" id="BeI-sZ-FfM"/>
+                        <outlet property="phoneTextField" destination="1yN-63-taC" id="BAM-g7-TuS"/>
+                        <outlet property="plakLabel" destination="Eqt-mF-NdF" id="DzE-NC-pOw"/>
+                        <outlet property="plakTextField" destination="zhm-rk-bFj" id="p6T-QS-2Z9"/>
+                        <outlet property="reasonLabel" destination="aR0-4g-VVN" id="Cov-ET-TKt"/>
+                        <outlet property="reasonTextField" destination="ppS-v4-UGv" id="5N5-Mx-E2C"/>
+                        <outlet property="receiverNameLabel" destination="zcT-bu-WPN" id="QOU-eD-Ree"/>
+                        <outlet property="receiverNameTextField" destination="Qg5-qT-pK8" id="CQA-jF-PcK"/>
+                        <outlet property="receiverPhoneLabel" destination="9u3-hK-yY8" id="cm6-tC-X7Q"/>
+                        <outlet property="receiverPhoneTextField" destination="GC9-3M-AX4" id="gr9-mP-O5p"/>
+                        <outlet property="receiverTCKNLabel" destination="ECO-UX-nU6" id="PcO-RV-CS6"/>
+                        <outlet property="receiverTCKNTextField" destination="OdB-Fe-Iso" id="F0b-Uj-c36"/>
+                        <outlet property="selectFileLabel" destination="4uH-qS-UYb" id="OdD-iZ-msJ"/>
+                        <outlet property="selectFileView" destination="MVk-nu-o1Y" id="dee-z0-KLw"/>
                         <outlet property="titleLabel" destination="IYp-wK-z3f" id="BVg-wX-I7r"/>
+                        <outlet property="trafficNameLabel" destination="M19-ak-bdI" id="8fC-gD-A9x"/>
+                        <outlet property="trafficNameTextField" destination="glR-7F-mMS" id="RTR-yl-fbi"/>
+                        <outlet property="trafficPhoneLabel" destination="9JE-N4-tsU" id="fJn-bB-qPq"/>
+                        <outlet property="trafficPhoneTextField" destination="lld-Vw-EHZ" id="Xzv-ej-eCQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idh-ID-irI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
