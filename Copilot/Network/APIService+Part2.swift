@@ -54,6 +54,7 @@ extension APIService {
         let route = "user/action"
         let params = [
             "sessionId": App.sessionId ?? "",
+            "pageName": pageName,
             "actionName": actionName,
             "platformType": "COPILOT",
             "deviceType": "MOBILE",
