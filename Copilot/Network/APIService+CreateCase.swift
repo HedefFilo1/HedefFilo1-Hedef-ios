@@ -117,7 +117,8 @@ extension APIService {
         req.start()
     }
     
-    static func createAccidentCase(supplierId: String,
+    static func createAccidentCase(accidentType: String,
+                                   supplierId: String,
                                    supplierName: String,
                                    supplierPhone: String,
                                    city: String,
@@ -129,7 +130,7 @@ extension APIService {
         let route = "copilot/case"
         var params = [
             "webCategory": "DAMAGE",
-//            "accidentType": "FAILURE",
+            "accidentType": accidentType,
             "supplierId": supplierId,
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,

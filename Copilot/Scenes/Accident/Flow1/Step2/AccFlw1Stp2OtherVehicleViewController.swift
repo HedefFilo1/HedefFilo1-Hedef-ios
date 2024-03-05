@@ -69,10 +69,12 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
+        AccidentCoordinator.accidentType = "DAMAGE_TWO_SIDES"
         viewModel.goToAccFlw1Stp3Agreement()
     }
     
     @IBAction func didTapNo() {
+        AccidentCoordinator.accidentType = "DAMAGE_ONE_SIDE"
         viewModel.goToAccFlw5Stp3Declare()
     }
 

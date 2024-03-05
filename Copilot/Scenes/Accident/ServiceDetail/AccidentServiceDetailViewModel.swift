@@ -24,6 +24,7 @@ protocol AccidentServiceDetailViewModelType: AnyObject {
     var delegate: AccidentServiceDetailVMdlDlgt? { get set }
     var towTruck: Bool { get set }
     var service: Supplier? { get set }
+    var accidentType: String { get set }
     func getBack()
     func createTowTruckRandevu()
     func createRandevu(with date: Date, hour: String, minute: String)
@@ -38,6 +39,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     
     var towTruck: Bool = false
     var service: Supplier?
+    var accidentType: String = ""
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -64,7 +66,8 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         //#endif
         guard let service else { return }
         Loading.shared.show()
-        APIService.createAccidentCase(supplierId: service.id,
+        APIService.createAccidentCase(accidentType: accidentType,
+                                      supplierId: service.id,
                                       supplierName: service.name,
                                       supplierPhone: service.phone ?? "",
                                       city: service.city ?? "",
@@ -93,7 +96,8 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         //            return
         //        }
         Loading.shared.show()
-        APIService.createAccidentCase(supplierId: service.id,
+        APIService.createAccidentCase(accidentType: accidentType,
+                                      supplierId: service.id,
                                       supplierName: service.name,
                                       supplierPhone: service.phone ?? "",
                                       city: service.city ?? "",
