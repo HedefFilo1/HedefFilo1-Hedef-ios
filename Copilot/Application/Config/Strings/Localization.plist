@@ -2463,6 +2463,150 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Request List</string>
         </dict>
         
+        <key>requestsQuestionDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen aşağıdan ürün seçerek filo yöneticinize talepte bulununuz ve talebinizin onaylanmasını bekleyiniz.</string>
+            <key>en</key>
+            <string>Please select the product below, make a request to your fleet manager and wait for your request to be approved.</string>
+        </dict>
+        
+        <key>completedVehicleOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Bağlanan Araç İşlemleri</string>
+            <key>en</key>
+            <string>Completed Vehicle Operations</string>
+        </dict>
+        
+         <key>hgsOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>HGS İşlemleri</string>
+            <key>en</key>
+            <string>HGS Operations</string>
+        </dict>
+        
+        <key>plateLicenseOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Plaka İşlemleri</string>
+            <key>en</key>
+            <string>Plate License Operations</string>
+        </dict>
+        
+        <key>lostLicenseOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Ruhsat İşlemleri</string>
+            <key>en</key>
+            <string>Lost License Operations</string>
+        </dict>
+        
+        <key>inspectionOperations</key>
+        <dict>
+            <key>tr</key>
+            <string>Muayene İşlemleri</string>
+            <key>en</key>
+            <string>Inspection Operations</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

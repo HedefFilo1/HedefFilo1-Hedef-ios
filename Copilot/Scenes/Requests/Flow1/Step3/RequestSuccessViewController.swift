@@ -37,6 +37,7 @@ class RequestSuccessViewController: UIViewController {
     }
     
     func setupUI() {
+        
         applyStyle()
         setTexts()
         homeButton.isEnabled = true

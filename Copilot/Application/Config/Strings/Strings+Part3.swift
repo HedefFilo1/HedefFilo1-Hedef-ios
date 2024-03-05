@@ -144,5 +144,28 @@ extension Strings {
     static var requestList: String {
         return localized(string: "requestList")
     }
-  
+    
+    static var requestsQuestionDescription: String {
+        return localized(string: "requestsQuestionDescription")
+    }
+    
+    static var completedVehicleOperations: String {
+        return localized(string: "completedVehicleOperations")
+    }
+    
+    static var hgsOperations: String {
+        return localized(string: "hgsOperations")
+    }
+    
+    static var plateLicenseOperations: String {
+        return localized(string: "plateLicenseOperations")
+    }
+    
+    static var lostLicenseOperations: String {
+        return localized(string: "lostLicenseOperations")
+    }
+    
+    static var inspectionOperations: String {
+        return localized(string: "inspectionOperations")
+    }
 }

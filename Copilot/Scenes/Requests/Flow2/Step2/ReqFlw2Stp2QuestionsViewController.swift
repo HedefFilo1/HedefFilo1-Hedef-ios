@@ -1,5 +1,5 @@
 //
-//  ReqFlw1Stp2ViewController.swift
+//  ReqFlw2Stp2QuestionsViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 3/5/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class ReqFlw1Stp2ViewController: UIViewController {
+class ReqFlw2Stp2QuestionsViewController: UIViewController {
     
-    var viewModel: ReqFlw1Stp2ViewModelType! {
+    var viewModel: ReqFlw2Stp2QuestionsViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -20,7 +20,6 @@ class ReqFlw1Stp2ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var createButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -42,11 +41,11 @@ class ReqFlw1Stp2ViewController: UIViewController {
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: ReqFlw1Stp2Cell.self)
+        collectionView.register(cellType: ReqFlw2Stp2QuestionsCell.self)
         collectionView.contentInset.top = 20
+        collectionView.contentInset.bottom = 90
         applyStyle()
         setTexts()
-        createButton.isEnabled = false
     }
     
     func applyStyle() {
@@ -55,39 +54,52 @@ class ReqFlw1Stp2ViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24R400)
-        descriptionLabel.apply(.custom(.black, .regular, 11))
+        descriptionLabel.apply(.greyS14R400)
     }
     
     func setTexts() {
-        //        titleLabel.text = Strings.ReqFlw1Stp2
-        //        descriptionLabel.text = Strings.ReqFlw1Stp2Description
+        titleLabel.text = Strings.processRequests
+        descriptionLabel.text = Strings.requestsQuestionDescription
     }
     
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
     
-    @IBAction func didCreate() {
-        viewModel.goToSuccess()
-    }
-    
 }
 
-extension ReqFlw1Stp2ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.items.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: ReqFlw1Stp2Cell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.label.text = viewModel.items[indexPath.item].title
-        cell.checkBox.isSelected = viewModel.items[indexPath.item].selected
+        let cell: ReqFlw2Stp2QuestionsCell = collectionView.dequeueReusableCell(for: indexPath)
+        switch indexPath.item {
+        case 0:
+            cell.label.text = Strings.completedVehicleOperations
+            
+        case 1:
+            cell.label.text = Strings.hgsOperations
+            
+        case 2:
+            cell.label.text = Strings.plateLicenseOperations
+            
+        case 3:
+            cell.label.text = Strings.lostLicenseOperations
+            
+        case 4:
+            cell.label.text = Strings.inspectionOperations
+            
+        default:
+            break
+        }
         return cell
     }
     
@@ -104,16 +116,21 @@ extension ReqFlw1Stp2ViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? ReqFlw1Stp2Cell {
-            viewModel.items[indexPath.item].selected = !viewModel.items[indexPath.item].selected
-            cell.checkBox.isSelected = viewModel.items[indexPath.item].selected
+        switch indexPath.item {
+//        case 0:
+//            viewModel.goToReqFlw1Stp2()
+            
+//        case 1:
+//
+//        case 2:
+            
+        default:
+            break
         }
-        
-        createButton.isEnabled = viewModel.items.filter({ $0.selected }).count > 0
     }
 }
 
-extension ReqFlw1Stp2ViewController: ReqFlw1Stp2ViewModelDelegate {
+extension ReqFlw2Stp2QuestionsViewController: ReqFlw2Stp2QuestionsViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

@@ -136,6 +136,10 @@
 		89431D942B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89431D922B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib */; };
 		89431D992B968A4F00A6F6B8 /* RequestSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431D982B968A4F00A6F6B8 /* RequestSuccessViewController.swift */; };
 		89431D9B2B968A5800A6F6B8 /* RequestSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431D9A2B968A5800A6F6B8 /* RequestSuccessViewModel.swift */; };
+		89431DA12B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DA02B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift */; };
+		89431DA32B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DA22B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift */; };
+		89431DA62B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DA52B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift */; };
+		89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -563,6 +567,10 @@
 		89431D922B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReqFlw1Stp2Cell.xib; sourceTree = "<group>"; };
 		89431D982B968A4F00A6F6B8 /* RequestSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSuccessViewController.swift; sourceTree = "<group>"; };
 		89431D9A2B968A5800A6F6B8 /* RequestSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSuccessViewModel.swift; sourceTree = "<group>"; };
+		89431DA02B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp2QuestionsViewModel.swift; sourceTree = "<group>"; };
+		89431DA22B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp2QuestionsViewController.swift; sourceTree = "<group>"; };
+		89431DA52B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp2QuestionsCell.swift; sourceTree = "<group>"; };
+		89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReqFlw2Stp2QuestionsCell.xib; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -1440,6 +1448,33 @@
 			path = Step3;
 			sourceTree = "<group>";
 		};
+		89431D9C2B96F36E00A6F6B8 /* Flow2 */ = {
+			isa = PBXGroup;
+			children = (
+				89431D9F2B96F38E00A6F6B8 /* Step2 */,
+			);
+			path = Flow2;
+			sourceTree = "<group>";
+		};
+		89431D9F2B96F38E00A6F6B8 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				89431DA02B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift */,
+				89431DA22B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift */,
+				89431DA42B96F44B00A6F6B8 /* Cell */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		89431DA42B96F44B00A6F6B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89431DA52B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift */,
+				89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8944AB792B74D2D100967CE2 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1592,6 +1627,7 @@
 				89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */,
 				89513E6C2B951A1600B05199 /* Requests */,
 				89431D8A2B967FC300A6F6B8 /* Flow1 */,
+				89431D9C2B96F36E00A6F6B8 /* Flow2 */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3136,6 +3172,7 @@
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				89B553A52B87B33500616732 /* ReportImageCell.xib in Resources */,
+				89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				8976B0352B73CA5D00E7C58F /* WarningItemCell.xib in Resources */,
 				893659412B7BACC600A657B0 /* TireOperationTireCell.xib in Resources */,
@@ -3365,6 +3402,7 @@
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
 				89CE08092B3AE40100C76433 /* VehicleServicesItemsCell.swift in Sources */,
 				89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */,
+				89431DA32B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift in Sources */,
 				89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */,
 				89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */,
 				89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */,
@@ -3408,6 +3446,7 @@
 				89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */,
 				897835CF2B44A0CB00C63AA7 /* CalendarViewController.swift in Sources */,
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
+				89431DA12B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
 				89B553AC2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
@@ -3481,6 +3520,7 @@
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
 				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
+				89431DA62B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift in Sources */,
 				895ADBC32B18C055004C9A4C /* Tire.swift in Sources */,
 				89950ADA2B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,

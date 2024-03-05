@@ -49,6 +49,7 @@ class RequestsViewController: UIViewController {
     }
     
     func applyStyle() {
+        setBasicViews()
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -112,6 +113,9 @@ extension RequestsViewController: UICollectionViewDataSource, UICollectionViewDe
         switch indexPath.item {
         case 0:
             viewModel.goToReqFlw1Stp2()
+            
+        case 1:
+            viewModel.goToReqFlw2Stp2Questions()
             
 //        case 1:
 //            

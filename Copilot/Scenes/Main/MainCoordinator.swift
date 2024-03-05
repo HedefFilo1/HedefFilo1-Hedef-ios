@@ -81,7 +81,7 @@ class MainCoordinator: Coordinator {
         
 #if DEV_DEBUG
         // just for test
-        tabBarController.selectedIndex = 0
+        tabBarController.selectedIndex = 4
 #endif
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
