@@ -90,7 +90,7 @@ var allWarnings = [
     
     MockWarning(id: 7, title: "Restart", trTitle: "kontağı kapatıp", image: "restartWarning", type: .airPressure, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız"),
     
-    MockWarning(id: 8, title: "Air pressure", trTitle: "lastik hava", image: "airPressure", type: .airPressure, description: "Lütfen lastik hava basıncını kontrol ediniz"),
+    MockWarning(id: 8, title: "Air pressure", trTitle: "lastik hava", image: "airPressure", type: .restart, description: "Lütfen kontağı kapatıp aracı yeniden çalıştırınız."),
     
     MockWarning(id: 9, title: "Get Away Vehicle", trTitle: "araçla takip mesafenizi koruyunuz", image: "getAwayVehicle", type: .getAway, description: "Lütfen önünüzdeki araçla takip mesafenizi koruyunuz"),
     
