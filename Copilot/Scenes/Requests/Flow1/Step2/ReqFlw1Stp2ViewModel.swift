@@ -14,6 +14,7 @@ struct MockRequestFlow1Item {
 
 protocol ReqFlw1Stp2ViewModelCoordinatorDelegate: AnyObject {
     func getBack()
+    func goToSuccess()
 }
 
 protocol ReqFlw1Stp2ViewModelDelegate: BaseViewModelDelegate {
@@ -25,6 +26,7 @@ protocol ReqFlw1Stp2ViewModelType: AnyObject {
     var delegate: ReqFlw1Stp2ViewModelDelegate? { get set }
     var items: [MockRequestFlow1Item] { get set }
     func getBack()
+    func goToSuccess()
 }
 
 class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
@@ -45,5 +47,9 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToSuccess() {
+        coordinatorDelegate?.goToSuccess()
     }
 }

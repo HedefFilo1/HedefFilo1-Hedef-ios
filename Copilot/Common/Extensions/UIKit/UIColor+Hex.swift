@@ -72,6 +72,9 @@ extension UIColor {
     /// #CACACA
     static let greyTextLight = UIColor(named: "greyTextLight") ?? .yellow
     
+    /// #C0ECD4
+    static let lightGreen = UIColor(named: "lightGreen") ?? .yellow
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

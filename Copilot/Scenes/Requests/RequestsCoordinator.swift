@@ -32,17 +32,37 @@ class RequestsCoordinator: Coordinator {
 
 // MARK: FLOW 1
 extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
-                               ReqFlw1Stp2ViewModelCoordinatorDelegate {
+                               ReqFlw1Stp2ViewModelCoordinatorDelegate,
+                               RequestSuccessVMCoordinatorDelegate {
+    func getBackToHome() {
+        self.navigationController.select(tab: 2)
+        navigationController.popToRootViewController(animated: true)
+    }
+    
+    func goToRequests() {
+        
+        for item in navigationController.viewControllers where item.isKind(of: RequestsViewController.self) {
+            navigationController.popToViewController(item, animated: true)
+            return
+        }
+        navigationController.popToRootViewController(animated: true)
+    }
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }
     
     func goToReqFlw1Stp2() {
-        
-            let controller: ReqFlw1Stp2ViewController = storyboard.instantiateViewController()
-            controller.viewModel = ReqFlw1Stp2ViewModel()
-            controller.viewModel.coordinatorDelegate = self
-            navigationController.pushViewController(controller, animated: true)
-        
+        let controller: ReqFlw1Stp2ViewController = storyboard.instantiateViewController()
+        controller.viewModel = ReqFlw1Stp2ViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToSuccess() {
+        let controller: RequestSuccessViewController = storyboard.instantiateViewController()
+        controller.viewModel = RequestSuccessViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
 }
