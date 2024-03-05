@@ -67,8 +67,7 @@ extension APIService {
                                       hasToken: true)
         req.identifier = "addUserAction"
         req.log = loggingEnabled || true
-        req.completion = { _, _ in
-        }
+        req.completion = { _, _ in }
         req.start()
     }
 }

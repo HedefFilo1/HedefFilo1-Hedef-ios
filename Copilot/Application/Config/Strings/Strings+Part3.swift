@@ -168,4 +168,137 @@ extension Strings {
     static var inspectionOperations: String {
         return localized(string: "inspectionOperations")
     }
+    
+    static var addNote: String {
+        return localized(string: "addNote")
+    }
+    
+    static var enterNote: String {
+        return localized(string: "enterNote")
+    }
+    
+    static var nameDashSurname: String {
+        return localized(string: "nameDashSurname")
+    }
+    
+    static var enterNameSurname: String {
+        return localized(string: "enterNameSurname")
+    }
+    
+    static var emailAddress: String {
+        return localized(string: "emailAddress")
+    }
+    
+    static var enterYourEmail: String {
+        return localized(string: "enterYourEmail")
+    }
+    
+    static var yourMobilePhone: String {
+        return localized(string: "yourMobilePhone")
+    }
+    
+    static var enterYourMobilePhone: String {
+        return localized(string: "enterYourMobilePhone")
+    }
+    
+    static var yourLicensePlate: String {
+        return localized(string: "yourLicensePlate")
+    }
+    
+    static var enterYourLicensePlate: String {
+        return localized(string: "enterYourLicensePlate")
+    }
+    
+    static var reasonConnectingVehicle: String {
+        return localized(string: "reasonConnectingVehicle")
+    }
+    
+    static var enterReasonConnectingVehicle: String {
+        return localized(string: "enterReasonConnectingVehicle")
+    }
+    
+    static var trafficBranchName: String {
+        return localized(string: "trafficBranchName")
+    }
+    
+    static var enterTrafficBranchName: String {
+        return localized(string: "enterTrafficBranchName")
+    }
+    
+    static var trafficBranchPhone: String {
+        return localized(string: "trafficBranchPhone")
+    }
+    
+    static var enterTrafficBranchPhone: String {
+        return localized(string: "enterTrafficBranchPhone")
+    }
+    
+    static var trusteeParkingName: String {
+        return localized(string: "trusteeParkingName")
+    }
+    
+    static var enterTrusteeParkingName: String {
+        return localized(string: "enterTrusteeParkingName")
+    }
+    
+    static var trusteeParkingPhone: String {
+        return localized(string: "trusteeParkingPhone")
+    }
+    
+    static var enterTrusteeParkingPhone: String {
+        return localized(string: "enterTrusteeParkingPhone")
+    }
+    
+    static var receiverNameSurname: String {
+        return localized(string: "receiverNameSurname")
+    }
+    
+    static var enterReceiverNameSurname: String {
+        return localized(string: "enterReceiverNameSurname")
+    }
+    
+    static var receivingPersonPhone: String {
+        return localized(string: "receivingPersonPhone")
+    }
+    
+    static var enterReceivingPersonPhone: String {
+        return localized(string: "enterReceivingPersonPhone")
+    }
+    
+    static var receivingPersonTRIDNumber: String {
+        return localized(string: "receivingPersonTRIDNumber")
+    }
+    
+    static var enterReceivingPersonTRIDNumber: String {
+        return localized(string: "enterReceivingPersonTRIDNumber")
+    }
+    
+    static var selectProvince: String {
+        return localized(string: "selectProvince")
+    }
+    
+    static var addFile: String {
+        return localized(string: "addFile")
+    }
+    
+    static var requiredDocumentName: String {
+        return localized(string: "requiredDocumentName")
+    }
+    
+    static var selectFile: String {
+        return localized(string: "selectFile")
+    }
+    
+    static var createProcessRequest: String {
+        return localized(string: "createProcessRequest")
+    }
+    
+    //        static var yes: String {
+    //            return localized(string: "yes")
+    //        }
+    //
+    //        static var yes: String {
+    //            return localized(string: "yes")
+    //        }
+    
 }

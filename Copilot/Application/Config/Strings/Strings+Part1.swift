@@ -17,6 +17,10 @@ extension Strings {
         return localized(string: "createProccessRequest")
     }
     
+    static var createProccessRequestSel: String {
+        return localized(string: "createProccessRequestSel")
+    }
+    
     static var fillOutSatisfaction: String {
         return localized(string: "fillOutSatisfaction")
     }

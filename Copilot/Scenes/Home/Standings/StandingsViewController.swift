@@ -71,7 +71,7 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         let cell: StandingItemCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.item {
         case 0:
-            cell.titleLabel.text = Strings.createProccessRequest
+            cell.titleLabel.text = Strings.createProccessRequestSel
             cell.point = 500
         case 1:
             cell.titleLabel.text = Strings.fillOutSatisfaction

@@ -667,7 +667,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Standings</string>
         </dict>
         
-        <key>createProccessRequest</key>
+        <key>createProccessRequestSel</key>
         <dict>
             <key>tr</key>
             <string>Süreçsel Talep Oluştur</string>
@@ -2511,20 +2511,252 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Inspection Operations</string>
         </dict>
         
-        <key></key>
+        <key>addNote</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Not Ekleyin</string>
             <key>en</key>
-            <string></string>
+            <string>Add Note</string>
         </dict>
         
-        <key></key>
+        <key>enterNote</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Not giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Enter note.</string>
+        </dict>
+        
+        <key>nameDashSurname</key>
+        <dict>
+            <key>tr</key>
+            <string>Ad-Soyad</string>
+            <key>en</key>
+            <string>Name Surname</string>
+        </dict>
+        
+        <key>enterNameSurname</key>
+        <dict>
+            <key>tr</key>
+            <string>Ad-Soyad giriniz.</string>
+            <key>en</key>
+            <string>Enter Name-Surname.</string>
+        </dict>
+        
+        <key>emailAddress</key>
+        <dict>
+            <key>tr</key>
+            <string>E-Posta Adresiniz</string>
+            <key>en</key>
+            <string>E-Mail Address</string>
+        </dict>
+        
+        <key>enterYourEmail</key>
+        <dict>
+            <key>tr</key>
+            <string>E-posta giriniz.</string>
+            <key>en</key>
+            <string>Enter your e-mail</string>
+        </dict>
+        
+        <key>yourMobilePhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Cep Telefonunuz</string>
+            <key>en</key>
+            <string>Your Mobile Phone</string>
+        </dict>
+        
+        <key>enterYourMobilePhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Cep Telefonu giriniz.</string>
+            <key>en</key>
+            <string>Enter Your Mobile Phone</string>
+        </dict>
+        
+        <key>yourLicensePlate</key>
+        <dict>
+            <key>tr</key>
+            <string>Plakanız</string>
+            <key>en</key>
+            <string>Your License plate</string>
+        </dict>
+        
+        <key>enterYourLicensePlate</key>
+        <dict>
+            <key>tr</key>
+            <string>Plaka giriniz.</string>
+            <key>en</key>
+            <string>Enter your license plate.</string>
+        </dict>
+        
+        <key>reasonConnectingVehicle</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Bağlanma Sebebi</string>
+            <key>en</key>
+            <string>Reason for Connecting Vehicle</string>
+        </dict>
+        
+        <key>enterReasonConnectingVehicle</key>
+        <dict>
+            <key>tr</key>
+            <string>Araç Bağlama Sebebi giriniz.</string>
+            <key>en</key>
+            <string>Enter the Reason for Connecting Vehicle.</string>
+        </dict>
+        
+        <key>trafficBranchName</key>
+        <dict>
+            <key>tr</key>
+            <string>Trafik Şube Adı</string>
+            <key>en</key>
+            <string>Traffic Branch Name</string>
+        </dict>
+        
+        <key>enterTrafficBranchName</key>
+        <dict>
+            <key>tr</key>
+            <string>Trafik Şube Adı giriniz.</string>
+            <key>en</key>
+            <string>Enter the Traffic Branch Name.</string>
+        </dict>
+
+        <key>trafficBranchPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Trafik Şube Telefonu</string>
+            <key>en</key>
+            <string>Traffic Branch Phone</string>
+        </dict>
+        
+        <key>enterTrafficBranchPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Trafik Şube Telefonu giriniz.</string>
+            <key>en</key>
+            <string>Enter the Traffic Branch Phone.</string>
+        </dict>
+        
+        <key>trusteeParkingName</key>
+        <dict>
+            <key>tr</key>
+            <string>Yediemin Otopark Adı</string>
+            <key>en</key>
+            <string>Trustee Parking Name</string>
+        </dict>
+        
+        <key>enterTrusteeParkingName</key>
+        <dict>
+            <key>tr</key>
+            <string>Yediemin Otopark Adı giriniz.</string>
+            <key>en</key>
+            <string>Enter Trustee Parking Name.</string>
+        </dict>
+        
+        <key>trusteeParkingPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Yediemin Otopark Telefonu</string>
+            <key>en</key>
+            <string>Trustee Parking Phone</string>
+        </dict>
+        
+        <key>enterTrusteeParkingPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Yediemin Otopark Telefonu giriniz.</string>
+            <key>en</key>
+            <string>Enter Trustee Parking Phone.</string>
+        </dict>
+        
+        <key>receiverNameSurname</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Adı Soyadı</string>
+            <key>en</key>
+            <string>Name and Surname of the Person Who Will Receive Delivery</string>
+        </dict>
+        
+        <key>enterReceiverNameSurname</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişi Adı Soyadı giriniz.</string>
+            <key>en</key>
+            <string>Enter the Name and Surname of the Receiver Person.</string>
+        </dict>
+        
+        <key>receivingPersonPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Telefonu</string>
+            <key>en</key>
+            <string>Phone of the Receiving Person</string>
+        </dict>
+        
+        <key>enterReceivingPersonPhone</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişi Telefonu giriniz.</string>
+            <key>en</key>
+            <string>Enter the Receiving Person's Phone.</string>
+        </dict>
+        
+        <key>receivingPersonTRIDNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişi TCKN</string>
+            <key>en</key>
+            <string>Receiving Person TR ID Number</string>
+        </dict>
+        
+        <key>enterReceivingPersonTRIDNumber</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişi TCKN giriniz.</string>
+            <key>en</key>
+            <string>Enter Receiving Person TR ID Number</string>
+        </dict>
+        
+        <key>selectProvince</key>
+        <dict>
+            <key>tr</key>
+            <string>İl Seçiniz</string>
+            <key>en</key>
+            <string>Select Province</string>
+        </dict>
+          
+        <key>addFile</key>
+        <dict>
+            <key>tr</key>
+            <string>Dosya Ekleyin</string>
+            <key>en</key>
+            <string>Add File</string>
+        </dict>
+        
+        <key>requiredDocumentName</key>
+        <dict>
+            <key>tr</key>
+            <string>Gerekli Döküman İsmi</string>
+            <key>en</key>
+            <string>Required Document Name</string>
+        </dict>
+        
+        <key>selectFile</key>
+        <dict>
+            <key>tr</key>
+            <string>Dosya Seç</string>
+            <key>en</key>
+            <string>Select File</string>
+        </dict>
+        
+        <key>createProcessRequest</key>
+        <dict>
+            <key>tr</key>
+            <string>Süreç Talebi Oluştur</string>
+            <key>en</key>
+            <string>Create Process Request</string>
         </dict>
         
         <key></key>
