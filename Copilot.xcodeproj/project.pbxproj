@@ -140,6 +140,8 @@
 		89431DA32B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DA22B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift */; };
 		89431DA62B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DA52B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift */; };
 		89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */; };
+		89431DAB2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */; };
+		89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -571,6 +573,8 @@
 		89431DA22B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp2QuestionsViewController.swift; sourceTree = "<group>"; };
 		89431DA52B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp2QuestionsCell.swift; sourceTree = "<group>"; };
 		89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReqFlw2Stp2QuestionsCell.xib; sourceTree = "<group>"; };
+		89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewModel.swift; sourceTree = "<group>"; };
+		89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewController.swift; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -1452,6 +1456,7 @@
 			isa = PBXGroup;
 			children = (
 				89431D9F2B96F38E00A6F6B8 /* Step2 */,
+				89431DA92B972A4300A6F6B8 /* Step3 */,
 			);
 			path = Flow2;
 			sourceTree = "<group>";
@@ -1473,6 +1478,15 @@
 				89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		89431DA92B972A4300A6F6B8 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */,
+				89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */,
+			);
+			path = Step3;
 			sourceTree = "<group>";
 		};
 		8944AB792B74D2D100967CE2 /* Step4 */ = {
@@ -3328,6 +3342,7 @@
 				89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */,
 				89950AC92B7FB856004537D2 /* AccFlw1Stp4ReportImageCell.swift in Sources */,
 				89950AED2B812D65004537D2 /* AccidentServiceDetailViewController.swift in Sources */,
+				89431DAB2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
 				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */,
@@ -3490,6 +3505,7 @@
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89950AC42B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift in Sources */,
 				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
+				89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
 				89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */,

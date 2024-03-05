@@ -34,7 +34,8 @@ class RequestsCoordinator: Coordinator {
 extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw1Stp2ViewModelCoordinatorDelegate,
                                RequestSuccessVMCoordinatorDelegate,
-                               ReqFlw2Stp2QuestionsViewModelCoordinatorDelegate {
+                               ReqFlw2Stp2QuestionsVMCoordinatorDelegate,
+                               ReqFlw2Stp3VehicleVMCoordinatorDelegate {
     func getBackToHome() {
         self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
@@ -70,6 +71,13 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     func goToReqFlw2Stp2Questions() {
         let controller: ReqFlw2Stp2QuestionsViewController = storyboard.instantiateViewController()
         controller.viewModel = ReqFlw2Stp2QuestionsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToReqFlw2Stp3Vehicle() {
+        let controller: ReqFlw2Stp3VehicleViewController = storyboard.instantiateViewController()
+        controller.viewModel = ReqFlw2Stp3VehicleViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

@@ -117,8 +117,8 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
-//        case 0:
-//            viewModel.goToReqFlw1Stp2()
+        case 0:
+            viewModel.goToReqFlw2Stp3Vehicle()
             
 //        case 1:
 //
