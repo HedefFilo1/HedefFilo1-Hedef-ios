@@ -99,10 +99,32 @@ class LoginViewModel: LoginViewModelType {
                     Persistence.password = nil
                     Persistence.accessToken =  nil
                 }
-                self.loadStrings(email: email)
+                self.getSessionId(email: email)
             }
             
         }
+    }
+    
+    func getSessionId(email: String) {
+        Loading.shared.show(title: Strings.loading)
+        APIService.getSessionId { [weak self] model, error in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+                return
+            }
+            
+            if let model = model {
+                App.sessionId = model.sessionId
+                APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN")
+                self.loadStrings(email: email)
+            }
+        }
+        
     }
     
     func loadStrings(email: String) {

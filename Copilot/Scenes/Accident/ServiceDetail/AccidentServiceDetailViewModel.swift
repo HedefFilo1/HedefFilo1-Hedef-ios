@@ -78,6 +78,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
             }
         }
@@ -106,6 +107,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
             }
         }

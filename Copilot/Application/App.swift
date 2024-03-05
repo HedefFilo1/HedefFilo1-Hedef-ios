@@ -15,6 +15,7 @@ class App {
     static var token: String?
     static var vehicle: Vehicle?
     static var contentStrings: [ContentString]?
+    static var sessionId: String?
     
     static var appLoaded = false {
         didSet {

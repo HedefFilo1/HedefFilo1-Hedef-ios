@@ -24,6 +24,7 @@ class MaintenanceRandevuViewModel: ServiceRandevuViewModel {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.goToConfirmedRandevu()
             }
         }

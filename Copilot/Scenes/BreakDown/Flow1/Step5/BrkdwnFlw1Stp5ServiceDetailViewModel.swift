@@ -81,6 +81,7 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service,
                                                                       appointment: nil,
                                                                       date: nil)
@@ -114,6 +115,7 @@ class BrkdwnFlw1Stp5ServiceDetailViewModel: BrkdwnFlw1Stp5ServiceDetailViewModel
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.coordinatorDelegate?.goToBreakDownSuccessRandevu(service: service,
                                                                       appointment: nil,
                                                                       date: date)

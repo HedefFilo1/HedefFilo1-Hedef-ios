@@ -54,6 +54,7 @@ class Flow1Step3TireTypesViewModel: Flow1Step3TireTypesViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
                 self.coordinatorDelegate?.goToFlow1Step4Result(tireType: type)
             }
         }

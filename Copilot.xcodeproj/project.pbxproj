@@ -142,6 +142,7 @@
 		89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */; };
 		89431DAB2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */; };
 		89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */; };
+		89431DAF2B974EF800A6F6B8 /* GetSessionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -575,6 +576,7 @@
 		89431DA72B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReqFlw2Stp2QuestionsCell.xib; sourceTree = "<group>"; };
 		89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewModel.swift; sourceTree = "<group>"; };
 		89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewController.swift; sourceTree = "<group>"; };
+		89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionId.swift; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -2199,6 +2201,7 @@
 				892B23832B2C40680000E6E1 /* MaintenanceLast.swift */,
 				89B790CE2B5FC54900993933 /* GetTireControl.swift */,
 				89B610DD2B6CDB0C0052A417 /* GetEligible.swift */,
+				89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3290,6 +3293,7 @@
 				8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */,
 				89FC51902B6A966100AD37D4 /* BreakDownCoordinator.swift in Sources */,
 				89DAB8022AC72D450098BA67 /* LoginViewController.swift in Sources */,
+				89431DAF2B974EF800A6F6B8 /* GetSessionId.swift in Sources */,
 				89DBD9D92B72C734007B416A /* BrkdwnFlw1Stp3SelectServiceViewModel.swift in Sources */,
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
