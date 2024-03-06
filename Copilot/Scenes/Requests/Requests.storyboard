@@ -482,7 +482,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Iv-Ee-8cl">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Iv-Ee-8cl" customClass="CPDescriptionTextField" customModule="Copilot" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="32.333333333333343" width="345" height="123"/>
                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                 <constraints>
@@ -532,7 +532,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta giriniz." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEu-7x-fms" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta giriniz." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEu-7x-fms" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333314" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -560,7 +560,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-63-taC" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-63-taC" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -588,7 +588,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-rk-bFj" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-rk-bFj" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -616,7 +616,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppS-v4-UGv" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppS-v4-UGv" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -644,7 +644,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glR-7F-mMS" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glR-7F-mMS" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -672,7 +672,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Vw-EHZ" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Vw-EHZ" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -700,7 +700,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-6t-b53" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-6t-b53" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -728,7 +728,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-Ap-XNf" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-Ap-XNf" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333485" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -757,7 +757,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qg5-qT-pK8" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qg5-qT-pK8" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -786,7 +786,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GC9-3M-AX4" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GC9-3M-AX4" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333485" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -815,7 +815,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdB-Fe-Iso" customClass="CPEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdB-Fe-Iso" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
@@ -1012,7 +1012,7 @@
                         <outlet property="nameLabel" destination="5uP-Ij-mXc" id="qT9-6e-WXt"/>
                         <outlet property="nameTextField" destination="u5j-vV-Sdk" id="iMD-Um-M6h"/>
                         <outlet property="noteLabel" destination="MF3-5L-aM5" id="EAZ-su-vQa"/>
-                        <outlet property="noteTextField" destination="7Iv-Ee-8cl" id="T4Z-zJ-ZPQ"/>
+                        <outlet property="noteTextField" destination="7Iv-Ee-8cl" id="jXx-xW-lvx"/>
                         <outlet property="parkNameLabel" destination="zrv-X5-Pvf" id="T4V-ja-FOs"/>
                         <outlet property="parkNameTextField" destination="QOh-6t-b53" id="TQF-Sq-QoE"/>
                         <outlet property="parkPhoneLabel" destination="odF-7F-Abv" id="wvo-Z4-Bik"/>

@@ -144,6 +144,7 @@
 		89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */; };
 		89431DAF2B974EF800A6F6B8 /* GetSessionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */; };
 		89431DB12B98766000A6F6B8 /* APIService+RequestsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */; };
+		89431DB32B98FF8900A6F6B8 /* CPDescriptionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB22B98FF8900A6F6B8 /* CPDescriptionTextField.swift */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -579,6 +580,7 @@
 		89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewController.swift; sourceTree = "<group>"; };
 		89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionId.swift; sourceTree = "<group>"; };
 		89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+RequestsFlow.swift"; sourceTree = "<group>"; };
+		89431DB22B98FF8900A6F6B8 /* CPDescriptionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDescriptionTextField.swift; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -2571,6 +2573,7 @@
 				89DAB8072AC739EA0098BA67 /* CPEmailTextField.swift */,
 				8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */,
 				899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */,
+				89431DB22B98FF8900A6F6B8 /* CPDescriptionTextField.swift */,
 				89B0D0AD2ACA9CE900754443 /* CPCheckBox.swift */,
 				89C686962B02616D00011897 /* CPRadioBox.swift */,
 				899CF5762AE1915E006D85E4 /* Loading.swift */,
@@ -3605,6 +3608,7 @@
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
+				89431DB32B98FF8900A6F6B8 /* CPDescriptionTextField.swift in Sources */,
 				890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */,
@@ -3755,7 +3759,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3789,7 +3793,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3883,7 +3887,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3971,7 +3975,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

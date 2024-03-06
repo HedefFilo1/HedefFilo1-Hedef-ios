@@ -19,7 +19,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var noteLabel: UILabel!
-    @IBOutlet weak var noteTextField: UITextView!
+    @IBOutlet weak var noteTextField: CPDescriptionTextField!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: CPTextField!
@@ -82,6 +82,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     func setupUI() {
         applyStyle()
         setTexts()
+        addTextFieldsTargets()
     }
     
     func applyStyle() {
@@ -104,13 +105,24 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         documentNameLabel.apply(.blackS14R400)
         selectFileLabel.apply(.blackS14R400)
         setDashedBorder()
+        setTextFieldsStyle()
+    }
+    
+    func setTextFieldsStyle() {
+        var array = [nameTextField, emailTextField, phoneTextField, plakTextField, reasonTextField, trafficNameTextField]
+        
+        array.append(contentsOf: [trafficPhoneTextField, parkNameTextField, parkPhoneTextField, receiverNameTextField, receiverPhoneTextField, receiverTCKNTextField])
+        for item in array {
+            item?.apply(.custom(.textFieldGreyText, .regular, 14))
+            item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        }
     }
     
     func setTexts() {
         titleLabel.text = Strings.completedVehicleOperations
         
         noteLabel.text = Strings.addNote
-        noteTextField.toolbarPlaceholder = Strings.addNote
+        noteTextField.placeholder = Strings.enterNote
         
         nameLabel.text = Strings.nameDashSurname
         nameTextField.placeholder = Strings.enterNameSurname
@@ -172,8 +184,57 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         selectFileView.layer.addSublayer(shapeLayer)
     }
     
+    func addTextFieldsTargets() {
+        
+        noteTextField.delegate = self
+        nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        
+        emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        plakTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        reasonTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        trafficNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        trafficPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        
+        parkNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        parkPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        
+        receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        receiverPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        receiverTCKNTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+    }
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        setButtonActivation()
+    }
+    
+    func setButtonActivation() {
+        let note = noteTextField.text.count > 0
+        let name = nameTextField.pureTextCount > 0
+        let email = emailTextField.pureTextCount > 0
+        let phone = phoneTextField.pureTextCount > 0
+        let plak = plakTextField.pureTextCount > 0
+        let reason = reasonTextField.pureTextCount > 0
+        let trafficName = trafficNameTextField.pureTextCount > 0
+        let trafficPhone = trafficPhoneTextField.pureTextCount > 0
+        let parkName = parkNameTextField.pureTextCount > 0
+        let parkPhone = parkPhoneTextField.pureTextCount > 0
+        let receiverName = receiverNameTextField.pureTextCount > 0
+        let receiverPhone = receiverPhoneTextField.pureTextCount > 0
+        let receiverTCKN = receiverTCKNTextField.pureTextCount > 0
+        
+        let result = note && name && email && phone && plak && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN
+        createButton.isEnabled = result
+    }
+    
     @IBAction func didTapBack() {
         viewModel.getBack()
+    }
+}
+
+extension ReqFlw2Stp3VehicleViewController: CPDescriptionTextFieldDelegate {
+    func didEditingChanged() {
+        setButtonActivation()
     }
 }
 

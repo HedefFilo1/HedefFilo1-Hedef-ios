@@ -24,6 +24,9 @@ extension UIColor {
     /// #EEEEEE
     static let exactGrey = UIColor(named: "exactGrey") ?? .gray
     
+    /// #E1E1E1
+    static let greyBorder = UIColor(named: "greyBorder") ?? .gray
+    
     /// #58595B
     static let textGrey = UIColor(named: "textGrey") ?? .gray
     
@@ -71,6 +74,9 @@ extension UIColor {
     
     /// #CACACA
     static let greyTextLight = UIColor(named: "greyTextLight") ?? .yellow
+    
+    /// #ACACAC
+    static let textFieldGreyText = UIColor(named: "textFieldGreyText") ?? .yellow
     
     /// #C0ECD4
     static let lightGreen = UIColor(named: "lightGreen") ?? .yellow
