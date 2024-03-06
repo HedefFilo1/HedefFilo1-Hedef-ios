@@ -58,12 +58,12 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     }
     
     func createTowTruckRandevu() {
-        //#if DEV_DEBUG
+        // #if DEV_DEBUG
         //                if true {
         //                    self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service!, date: nil)
         //                    return
         //                }
-        //#endif
+        // #endif
         guard let service else { return }
         Loading.shared.show()
         APIService.createAccidentCase(accidentType: accidentType,

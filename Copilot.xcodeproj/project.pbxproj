@@ -143,6 +143,7 @@
 		89431DAB2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */; };
 		89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */; };
 		89431DAF2B974EF800A6F6B8 /* GetSessionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */; };
+		89431DB12B98766000A6F6B8 /* APIService+RequestsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -577,6 +578,7 @@
 		89431DAA2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewModel.swift; sourceTree = "<group>"; };
 		89431DAC2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw2Stp3VehicleViewController.swift; sourceTree = "<group>"; };
 		89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionId.swift; sourceTree = "<group>"; };
+		89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+RequestsFlow.swift"; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -2174,6 +2176,7 @@
 				899CF5692AE18CD5006D85E4 /* APIRequest.swift */,
 				899CF5682AE18CD4006D85E4 /* APIService.swift */,
 				89513E652B95120200B05199 /* APIService+CreateCase.swift */,
+				89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */,
 				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
 				899CF56F2AE18EE5006D85E4 /* Models */,
 			);
@@ -3307,6 +3310,7 @@
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				8976B0232B73BAE500E7C58F /* BreakdownFlow2Step2AnyAlarmViewModel.swift in Sources */,
 				89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */,
+				89431DB12B98766000A6F6B8 /* APIService+RequestsFlow.swift in Sources */,
 				896CB34E2AD5BED40048025A /* SearchCell.swift in Sources */,
 				8907EF092B698B1C004869BE /* MaintenanceStep2KMViewController.swift in Sources */,
 				89FC51932B6A96E700AD37D4 /* BreakDownViewController.swift in Sources */,

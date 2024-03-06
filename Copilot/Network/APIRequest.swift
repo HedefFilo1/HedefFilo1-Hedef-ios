@@ -135,7 +135,7 @@ class APIRequest<T: Decodable> {
     }
     
     var bodyString: String? {
-        guard let data = httpBody else { return nil }
+        guard let data = urlRequest?.httpBody else { return nil }
         return data.prettyPrintedJSONString
     }
     

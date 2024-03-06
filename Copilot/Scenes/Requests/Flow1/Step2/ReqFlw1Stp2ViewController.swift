@@ -68,7 +68,7 @@ class ReqFlw1Stp2ViewController: UIViewController {
     }
     
     @IBAction func didCreate() {
-        viewModel.goToSuccess()
+        viewModel.createTask()
     }
     
 }

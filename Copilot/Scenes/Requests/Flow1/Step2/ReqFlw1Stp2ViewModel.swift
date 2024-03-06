@@ -27,6 +27,7 @@ protocol ReqFlw1Stp2ViewModelType: AnyObject {
     var items: [MockRequestFlow1Item] { get set }
     func getBack()
     func goToSuccess()
+    func createTask()
 }
 
 class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
@@ -44,6 +45,27 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
         MockRequestFlow1Item(title: "Muayene Valesi"),
         MockRequestFlow1Item(title: "İade Valesi")
     ]
+    
+    func createTask() {
+        let selectedItems = items.filter({ $0.selected })
+        guard selectedItems.count > 0 else { return }
+        var subjects = [String]()
+        for item in selectedItems {
+            subjects.append(item.title)
+        }
+        Loading.shared.show()
+        APIService.createTask(subjects: subjects) { [weak self] _, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else {
+                self.goToSuccess()
+            }
+        }
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()
