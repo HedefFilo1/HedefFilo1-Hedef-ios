@@ -78,6 +78,9 @@ class AccidentSuccessRandevuViewController: UIViewController {
             desciptionLabel.text = ""
         }
         messageLabel.text = Strings.keepReportOfAccident
+        if viewModel.accidentType == .oneSide {
+            messageLabel.text = Strings.keepStatementOfAccident
+        }
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }
 

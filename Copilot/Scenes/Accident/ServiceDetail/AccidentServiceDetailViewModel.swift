@@ -9,9 +9,14 @@ import Foundation
 import CoreLocation
 import MapKit
 
+enum AccidentType: String {
+    case oneSide = "DAMAGE_ONE_SIDE"
+    case twoSide = "DAMAGE_TWO_SIDES"
+}
+
 protocol AccidentServiceDetailVMCrdintrDlgt: AnyObject {
     func getBack()
-    func goToAccidentSuccessRandevu(service: Supplier, date: Date?)
+    func goToAccidentSuccessRandevu(service: Supplier, date: Date?, accidentType: AccidentType)
     func presentCalendar(delegate: CalendarViewControllerDelegate)
 }
 
@@ -24,7 +29,7 @@ protocol AccidentServiceDetailViewModelType: AnyObject {
     var delegate: AccidentServiceDetailVMdlDlgt? { get set }
     var towTruck: Bool { get set }
     var service: Supplier? { get set }
-    var accidentType: String { get set }
+    var accidentType: AccidentType { get set }
     func getBack()
     func createTowTruckRandevu()
     func createRandevu(with date: Date, hour: String, minute: String)
@@ -39,7 +44,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     
     var towTruck: Bool = false
     var service: Supplier?
-    var accidentType: String = ""
+    var accidentType: AccidentType = .oneSide
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -66,7 +71,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         // #endif
         guard let service else { return }
         Loading.shared.show()
-        APIService.createAccidentCase(accidentType: accidentType,
+        APIService.createAccidentCase(accidentType: accidentType.rawValue,
                                       supplierId: service.id,
                                       supplierName: service.name,
                                       supplierPhone: service.phone ?? "",
@@ -82,7 +87,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                                          message: error.message)
             } else {
                 APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
-                self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
+                self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil, accidentType: accidentType)
             }
         }
     }
@@ -96,7 +101,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         //            return
         //        }
         Loading.shared.show()
-        APIService.createAccidentCase(accidentType: accidentType,
+        APIService.createAccidentCase(accidentType: accidentType.rawValue,
                                       supplierId: service.id,
                                       supplierName: service.name,
                                       supplierPhone: service.phone ?? "",
@@ -112,7 +117,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                                          message: error.message)
             } else {
                 APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
-                self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil)
+                self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil, accidentType: accidentType)
             }
         }
     }

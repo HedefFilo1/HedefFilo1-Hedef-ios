@@ -2269,6 +2269,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please be sure to keep a report of the accident.</string>
         </dict>
         
+        <key>keepStatementOfAccident</key>
+        <dict>
+            <key>tr</key>
+            <string>Lütfen kazaya ilişkin beyan tutulduğundan emin olunuz.</string>
+            <key>en</key>
+            <string>Please ensure that a statement regarding the accident is kept.</string>
+        </dict>
+        
         <key>isVehicleMovable</key>
         <dict>
             <key>tr</key>

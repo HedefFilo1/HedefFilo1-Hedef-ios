@@ -14,7 +14,7 @@ protocol AccidentCoordinatorDelegate: AnyObject {
 
 class AccidentCoordinator: Coordinator {
     
-    static var accidentType = "DAMAGE_ONE_SIDE"
+    static var accidentType: AccidentType = .oneSide
     lazy var navigationController: UINavigationController = {
         let navVC = UINavigationController()
         return navVC
@@ -157,12 +157,13 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
         navigationController.present(controller, animated: true)
     }
     
-    func goToAccidentSuccessRandevu(service: Supplier, date: Date?) {
+    func goToAccidentSuccessRandevu(service: Supplier, date: Date?, accidentType: AccidentType) {
         let controller: AccidentSuccessRandevuViewController = storyboard.instantiateViewController()
         controller.viewModel = AccidentSuccessRandevuViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.service = service
         controller.viewModel.date = date
+        controller.viewModel.accidentType = accidentType
         navigationController.pushViewController(controller, animated: true)
     }
 }

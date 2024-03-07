@@ -41,6 +41,10 @@ extension Strings {
         return localized(string: "keepReportOfAccident")
     }
     
+    static var keepStatementOfAccident: String {
+        return localized(string: "keepStatementOfAccident")
+    }
+    
     static var isVehicleMovable: String {
         return localized(string: "isVehicleMovable")
     }
