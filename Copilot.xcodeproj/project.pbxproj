@@ -145,6 +145,7 @@
 		89431DAF2B974EF800A6F6B8 /* GetSessionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */; };
 		89431DB12B98766000A6F6B8 /* APIService+RequestsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */; };
 		89431DB32B98FF8900A6F6B8 /* CPDescriptionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB22B98FF8900A6F6B8 /* CPDescriptionTextField.swift */; };
+		89431DB52B9A02D400A6F6B8 /* MultiPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89431DB42B9A02D400A6F6B8 /* MultiPart.swift */; };
 		8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */; };
 		8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */; };
 		8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */; };
@@ -581,6 +582,7 @@
 		89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionId.swift; sourceTree = "<group>"; };
 		89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+RequestsFlow.swift"; sourceTree = "<group>"; };
 		89431DB22B98FF8900A6F6B8 /* CPDescriptionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDescriptionTextField.swift; sourceTree = "<group>"; };
+		89431DB42B9A02D400A6F6B8 /* MultiPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPart.swift; sourceTree = "<group>"; };
 		8944AB7A2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsViewModel.swift; sourceTree = "<group>"; };
 		8944AB7C2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp4SelectedWarningsVController.swift; sourceTree = "<group>"; };
 		8944AB812B74D43100967CE2 /* SelectedWarningsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsContentCell.swift; sourceTree = "<group>"; };
@@ -2180,6 +2182,7 @@
 				89513E652B95120200B05199 /* APIService+CreateCase.swift */,
 				89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */,
 				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
+				89431DB42B9A02D400A6F6B8 /* MultiPart.swift */,
 				899CF56F2AE18EE5006D85E4 /* Models */,
 			);
 			path = Network;
@@ -3343,6 +3346,7 @@
 				89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */,
+				89431DB52B9A02D400A6F6B8 /* MultiPart.swift in Sources */,
 				89B190F62B87A72500AC1171 /* AccFlw4Stp4NoAgreementReportVController.swift in Sources */,
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,
 				8976B01B2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MobileCoreServices
 
 class ReqFlw2Stp3VehicleViewController: UIViewController {
     
@@ -230,12 +231,33 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
+    
+    @IBAction func didTapSendFile() {
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        documentPicker.delegate = self
+        present(documentPicker, animated: true, completion: nil)
+    }
 }
 
 extension ReqFlw2Stp3VehicleViewController: CPDescriptionTextFieldDelegate {
     func didEditingChanged() {
         setButtonActivation()
     }
+}
+
+extension ReqFlw2Stp3VehicleViewController: UIDocumentPickerDelegate {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let selectedFileURL = urls.first else { return }
+        
+        guard let data = try? Data(contentsOf: selectedFileURL) else { return }
+        viewModel.sendFile(data: data) 
+    }
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        // User cancelled the document picker
+    }
+    
 }
 
 extension ReqFlw2Stp3VehicleViewController: ReqFlw2Stp3VehicleViewModelDelegate {

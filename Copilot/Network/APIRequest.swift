@@ -338,7 +338,8 @@ class APIRequest<T: Decodable> {
         let nextLine = CodeStrings.logNextLine
         
         var string = "\(start)\(CodeStrings.logForIdentifier) \(identifier ?? "no id")\(nextLine)"
-        string += "\(CodeStrings.url): \(url)\(nextLine)"
+        let strurl = urlRequest?.url?.absoluteString ?? ""
+        string += "\(CodeStrings.url): \(strurl)\(nextLine)"
         string += "\(CodeStrings.method): \(method.rawValue)\(nextLine)"
         
 //        if let token = headers?[CodeStrings.authorization] {
