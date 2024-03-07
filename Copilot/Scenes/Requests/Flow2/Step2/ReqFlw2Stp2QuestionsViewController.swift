@@ -123,7 +123,8 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
         case 1:
             viewModel.goToReqFlw3Stp3HGS()
             
-            //        case 2:
+        case 2:
+            viewModel.goToReqFlw4Stp3Plate()
             
         default:
             break

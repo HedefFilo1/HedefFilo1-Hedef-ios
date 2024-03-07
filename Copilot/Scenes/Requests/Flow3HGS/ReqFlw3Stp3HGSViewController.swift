@@ -99,7 +99,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.completedVehicleOperations
+        titleLabel.text = Strings.hgsOperations
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote

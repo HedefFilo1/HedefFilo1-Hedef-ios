@@ -328,4 +328,32 @@ extension Strings {
     static var enterDeliveryAddress: String {
         return localized(string: "enterDeliveryAddress")
     }
+    
+    static var lostLicensePlateTransactions: String {
+        return localized(string: "lostLicensePlateTransactions")
+    }
+    
+    static var enterKm: String {
+        return localized(string: "enterKm")
+    }
+    
+    static var numberOfLostPlates: String {
+        return localized(string: "numberOfLostPlates")
+    }
+    
+    static var enterNumberOfLostPlates: String {
+        return localized(string: "enterNumberOfLostPlates")
+    }
+    
+    static var deliveryPlateAddress: String {
+        return localized(string: "deliveryPlateAddress")
+    }
+    
+    static var enterDeliveryPlateAddress: String {
+        return localized(string: "enterDeliveryPlateAddress")
+    }
+    
+//    static var yes: String {
+//        return localized(string: "yes")
+//    }
 }

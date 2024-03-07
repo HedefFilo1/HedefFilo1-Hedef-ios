@@ -2831,20 +2831,52 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter Delivery Address</string>
         </dict>
         
-        <key></key>
+        <key>lostLicensePlateTransactions</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kayıp Plaka İşlemleri</string>
             <key>en</key>
-            <string></string>
+            <string>Lost License Plate Transactions</string>
         </dict>
         
-        <key></key>
+        <key>enterKm</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>KM giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Enter KM</string>
+        </dict>
+        
+        <key>numberOfLostPlates</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Plaka Sayısı</string>
+            <key>en</key>
+            <string>Number of Lost Plates</string>
+        </dict>
+        
+        <key>enterNumberOfLostPlates</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Plaka Sayısı giriniz.</string>
+            <key>en</key>
+            <string>Enter Number of Lost Plates.</string>
+        </dict>
+        
+        <key>deliveryPlateAddress</key>
+        <dict>
+            <key>tr</key>
+            <string>Plakanın Teslim Edileceği Adres</string>
+            <key>en</key>
+            <string>Address to which the plate will be delivered</string>
+        </dict>
+        
+        <key>enterDeliveryPlateAddress</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Plaka Sayısı giriniz.</string>
+            <key>en</key>
+            <string>Enter Address to which the plate will be delivered.</string>
         </dict>
         
         <key></key>
