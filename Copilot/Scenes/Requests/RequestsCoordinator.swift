@@ -30,12 +30,12 @@ class RequestsCoordinator: Coordinator {
     }
 }
 
-// MARK: FLOW 1
 extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw1Stp2ViewModelCoordinatorDelegate,
                                RequestSuccessVMCoordinatorDelegate,
-                               ReqFlw2Stp2QuestionsVMCoordinatorDelegate,
-                               ReqFlw2Stp3VehicleVMCoordinatorDelegate {
+                               ReqFlw2Stp2QuestionsVMCrdintrDelegate,
+                               ReqFlw2Stp3VehicleVMCoordinatorDelegate,
+                               ReqFlw3Stp3HGSVMCoordinatorDelegate {
     func getBackToHome() {
         self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
@@ -78,6 +78,13 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     func goToReqFlw2Stp3Vehicle() {
         let controller: ReqFlw2Stp3VehicleViewController = storyboard.instantiateViewController()
         controller.viewModel = ReqFlw2Stp3VehicleViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToReqFlw3Stp3HGS() {
+        let controller: ReqFlw3Stp3HGSViewController = storyboard.instantiateViewController()
+        controller.viewModel = ReqFlw3Stp3HGSViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

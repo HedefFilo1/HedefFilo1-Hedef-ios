@@ -297,12 +297,35 @@ extension Strings {
         return localized(string: "createProcessRequest")
     }
     
-    //        static var yes: String {
-    //            return localized(string: "yes")
-    //        }
-    //
-    //        static var yes: String {
-    //            return localized(string: "yes")
-    //        }
+    static var processType: String {
+        return localized(string: "processType")
+    }
     
+    static var enterProcessType: String {
+        return localized(string: "enterProcessType")
+    }
+    
+    static var nameSurnameOfHGSPerson: String {
+        return localized(string: "nameSurnameOfHGSPerson")
+    }
+    
+    static var enterNameSurnameOfHGSPerson: String {
+        return localized(string: "enterNameSurnameOfHGSPerson")
+    }
+    
+    static var phoneOfHGSPerson: String {
+        return localized(string: "phoneOfHGSPerson")
+    }
+    
+    static var enterPhoneOfHGSPerson: String {
+        return localized(string: "enterPhoneOfHGSPerson")
+    }
+    
+    static var deliveryAddress: String {
+        return localized(string: "deliveryAddress")
+    }
+    
+    static var enterDeliveryAddress: String {
+        return localized(string: "enterDeliveryAddress")
+    }
 }

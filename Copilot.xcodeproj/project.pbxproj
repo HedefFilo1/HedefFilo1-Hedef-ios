@@ -86,6 +86,8 @@
 		892A8D1B2AC587690020C1C4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1A2AC587690020C1C4 /* Strings.swift */; };
 		892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A8D1C2AC6052F0020C1C4 /* Images.swift */; };
 		892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B23832B2C40680000E6E1 /* MaintenanceLast.swift */; };
+		893259932B9A6871001E4262 /* ReqFlw3Stp3HGSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259922B9A6871001E4262 /* ReqFlw3Stp3HGSViewModel.swift */; };
+		893259952B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259942B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -523,6 +525,8 @@
 		892A8D1A2AC587690020C1C4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		892A8D1C2AC6052F0020C1C4 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		892B23832B2C40680000E6E1 /* MaintenanceLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceLast.swift; sourceTree = "<group>"; };
+		893259922B9A6871001E4262 /* ReqFlw3Stp3HGSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw3Stp3HGSViewModel.swift; sourceTree = "<group>"; };
+		893259942B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw3Stp3HGSViewController.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1189,6 +1193,15 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		893259912B9A6833001E4262 /* Flow3 HGS */ = {
+			isa = PBXGroup;
+			children = (
+				893259922B9A6871001E4262 /* ReqFlw3Stp3HGSViewModel.swift */,
+				893259942B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift */,
+			);
+			path = "Flow3 HGS";
+			sourceTree = "<group>";
+		};
 		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1650,6 +1663,7 @@
 				89513E6C2B951A1600B05199 /* Requests */,
 				89431D8A2B967FC300A6F6B8 /* Flow1 */,
 				89431D9C2B96F36E00A6F6B8 /* Flow2 */,
+				893259912B9A6833001E4262 /* Flow3 HGS */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3520,6 +3534,7 @@
 				896CB36E2AD7273C0048025A /* MaintainInfoCell.swift in Sources */,
 				89950AC42B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.swift in Sources */,
 				89B6F62B2B66F70100F4C3AB /* Flow3Step4TowTruckViewController.swift in Sources */,
+				893259932B9A6871001E4262 /* ReqFlw3Stp3HGSViewModel.swift in Sources */,
 				89431DAD2B972A7400A6F6B8 /* ReqFlw2Stp3VehicleViewController.swift in Sources */,
 				89941D622AF010E500CEFD0E /* FilteresViewController.swift in Sources */,
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
@@ -3541,6 +3556,7 @@
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
+				893259952B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift in Sources */,
 				891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */,
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,

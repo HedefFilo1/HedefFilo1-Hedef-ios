@@ -2767,12 +2767,68 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Create Process Request</string>
         </dict>
         
-        <key></key>
+        <key>processType</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>İşlem Tipi</string>
             <key>en</key>
-            <string></string>
+            <string>Process type</string>
+        </dict>
+        
+        <key>enterProcessType</key>
+        <dict>
+            <key>tr</key>
+            <string>İşlem Tipi giriniz.</string>
+            <key>en</key>
+            <string>Enter Process type</string>
+        </dict>
+        
+        <key>nameSurnameOfHGSPerson</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Adı Soyadı</string>
+            <key>en</key>
+            <string>Name and Surname of the Person Who Will Receive Delivery</string>
+        </dict>
+        
+        <key>enterNameSurnameOfHGSPerson</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Adı Soyadı giriniz.</string>
+            <key>en</key>
+            <string>Enter Name and Surname of the Person Who Will Receive Delivery</string>
+        </dict>
+        
+        <key>phoneOfHGSPerson</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Telefonu</string>
+            <key>en</key>
+            <string>Name and Surname of the Person Who Will Receive Delivery</string>
+        </dict>
+        
+        <key>enterPhoneOfHGSPerson</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak Kişinin Telefonu giriniz.</string>
+            <key>en</key>
+            <string>Enter Name and Surname of the Person Who Will Receive Delivery</string>
+        </dict>
+        
+        <key>deliveryAddress</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslimat Adresi</string>
+            <key>en</key>
+            <string>Delivery Address</string>
+        </dict>
+        
+        <key>enterDeliveryAddress</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslimat Adresi giriniz.</string>
+            <key>en</key>
+            <string>Enter Delivery Address</string>
         </dict>
         
         <key></key>

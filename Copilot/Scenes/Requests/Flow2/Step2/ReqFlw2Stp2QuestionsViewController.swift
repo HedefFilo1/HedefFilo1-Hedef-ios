@@ -120,9 +120,10 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
         case 0:
             viewModel.goToReqFlw2Stp3Vehicle()
             
-//        case 1:
-//
-//        case 2:
+        case 1:
+            viewModel.goToReqFlw3Stp3HGS()
+            
+            //        case 2:
             
         default:
             break
