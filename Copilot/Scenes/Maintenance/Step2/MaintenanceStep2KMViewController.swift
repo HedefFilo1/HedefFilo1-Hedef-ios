@@ -77,7 +77,7 @@ class MaintenanceStep2KMViewController: UIViewController {
     
     @objc
     func editingDidEnd() {
-        if let text = kmTextField.text {
+        if let text = kmTextField.text, text.count > 0 {
             kmTextField.text = "\(text) KM"
         }
     }
