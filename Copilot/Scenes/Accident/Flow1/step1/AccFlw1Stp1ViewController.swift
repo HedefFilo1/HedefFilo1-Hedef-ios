@@ -65,7 +65,10 @@ class AccFlw1Stp1VController: UIViewController {
     }
     
     @IBAction func didTapCall() {
-        
+        guard let url = URL(string: CodeStrings.call112) else {
+            return
+        }
+        UIApplication.shared.open(url)
     }
     
     @IBAction func didTapContinue() {
