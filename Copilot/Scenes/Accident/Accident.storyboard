@@ -13,7 +13,6 @@
         <!--AccFlw1Stp1VController-->
         <scene sceneID="dDq-mz-LOq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tel-FQ-4HC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccFlw1Stp1VController" id="Tzc-Hq-M1h" userLabel="AccFlw1Stp1VController" customClass="AccFlw1Stp1VController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRt-N5-6gV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -34,7 +33,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7z4-Sm-cXg">
                                                                 <rect key="frame" x="24" y="0.0" width="345" height="460"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acil tıbbi yardıma ihtiyacınız var mı?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdx-kB-PBE">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acil tıbbi yardıma ihtiyacınız var mı?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jdx-kB-PBE">
                                                                         <rect key="frame" x="0.0" y="154" width="345" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -231,6 +230,7 @@
                         <outlet property="titleLabel" destination="52D-aE-bbr" id="9SV-9n-2YA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tel-FQ-4HC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762.59541984732823" y="-9.1549295774647899"/>
         </scene>
@@ -2277,7 +2277,7 @@
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

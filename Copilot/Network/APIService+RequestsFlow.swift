@@ -88,7 +88,7 @@ extension APIService {
             multipartFormData.append(data, withName: "file", fileName: "somethin.pdf", mimeType: "pdf")
           
         },
-        to: "https://copilotweb.hedeffilotest.com/api/file").responseDecodable(of: Success.self) { response in
+        to: "https://copilotweb.hedeffilotest.com:4443/api/file").responseDecodable(of: Success.self) { response in
             Loading.shared.hide()
                 debugPrint(response)
         }
