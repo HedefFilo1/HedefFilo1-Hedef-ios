@@ -74,6 +74,9 @@ class AccidentSuccessRandevuViewController: UIViewController {
     func setTexts() {
         titleLabel.text = Strings.accidentSuccessMessage
         desciptionLabel.text = Strings.accidentTowTruckSent
+        if viewModel.date != nil {
+            desciptionLabel.text = ""
+        }
         messageLabel.text = Strings.keepReportOfAccident
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }
