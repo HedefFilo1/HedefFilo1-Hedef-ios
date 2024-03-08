@@ -353,7 +353,19 @@ extension Strings {
         return localized(string: "enterDeliveryPlateAddress")
     }
     
-//    static var yes: String {
-//        return localized(string: "yes")
-//    }
+    static var licenseDeliveryAddress: String {
+        return localized(string: "licenseDeliveryAddress")
+    }
+    
+    static var enterLicenseDeliveryAddress: String {
+        return localized(string: "enterLicenseDeliveryAddress")
+    }
+    
+    //        static var yes: String {
+    //            return localized(string: "yes")
+    //        }
+    //
+    //        static var yes: String {
+    //            return localized(string: "yes")
+    //        }
 }

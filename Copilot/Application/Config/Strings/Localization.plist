@@ -2879,20 +2879,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter Address to which the plate will be delivered.</string>
         </dict>
         
-        <key></key>
+        <key>licenseDeliveryAddress</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ruhsatın Teslim Edileceği Adres</string>
             <key>en</key>
-            <string></string>
+            <string>Address to which the license will be delivered</string>
         </dict>
         
-        <key></key>
+        <key>enterLicenseDeliveryAddress</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ruhsatın Teslim Edileceği Adresi giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Enter the Address to which the license will be delivered.</string>
         </dict>
         
         <key></key>

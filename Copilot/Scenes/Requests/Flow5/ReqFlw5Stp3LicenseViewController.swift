@@ -34,12 +34,6 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var plateTextField: CPTextField!
     
-    @IBOutlet weak var kmLabel: UILabel!
-    @IBOutlet weak var kmTextField: CPTextField!
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var numberTextField: CPTextField!
-    
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: CPTextField!
     
@@ -81,20 +75,18 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         emailLabel.apply(.blackS14R400)
         phoneLabel.apply(.blackS14R400)
         plateLabel.apply(.blackS14R400)
-        kmLabel.apply(.blackS14R400)
         receiverNameLabel.apply(.blackS14R400)
         receiverPhoneLabel.apply(.blackS14R400)
         addFileLabel.apply(.blackS14R400)
         documentNameLabel.apply(.blackS14R400)
         selectFileLabel.apply(.blackS14R400)
         addressLabel.apply(.blackS14R400)
-        numberLabel.apply(.blackS14R400)
         setDashedBorder()
         setTextFieldsStyle()
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, kmTextField, receiverNameTextField, receiverPhoneTextField, numberTextField]
+        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverPhoneTextField]
         
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
@@ -103,7 +95,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.lostLicensePlateTransactions
+        titleLabel.text = Strings.lostLicenseOperations
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote
@@ -120,20 +112,14 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         plateLabel.text = Strings.yourLicensePlate
         plateTextField.placeholder = Strings.enterYourLicensePlate
         
-        kmLabel.text = Strings.ckm
-        kmTextField.placeholder = Strings.enterKm
-        
-        numberLabel.text = Strings.numberOfLostPlates
-        numberTextField.placeholder = Strings.enterNumberOfLostPlates
-        
         receiverNameLabel.text = Strings.receiverNameSurname
         receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
         
         receiverPhoneLabel.text = Strings.receivingPersonPhone
         receiverPhoneTextField.placeholder = Strings.enterReceivingPersonPhone
         
-        addressLabel.text = Strings.deliveryPlateAddress
-        addressTextField.placeholder = Strings.enterDeliveryPlateAddress
+        addressLabel.text = Strings.licenseDeliveryAddress
+        addressTextField.placeholder = Strings.enterLicenseDeliveryAddress
         
         addFileLabel.text = Strings.addFile
         documentNameLabel.text = Strings.requiredDocumentName
@@ -165,8 +151,6 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         plateTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -182,13 +166,11 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         let name = nameTextField.pureTextCount > 0
         let email = emailTextField.pureTextCount > 0
         let phone = phoneTextField.pureTextCount > 0
-        let plak = plateTextField.pureTextCount > 0
-        let proccess = kmTextField.pureTextCount > 0
+        let plate = plateTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.pureTextCount > 0
-        let number = numberTextField.pureTextCount > 0
         
-        let result = note && address && name && email && phone && plak && proccess && receiverName && receiverPhone && number
+        let result = note && address && name && email && phone && plate && receiverName && receiverPhone
         createButton.isEnabled = result
     }
     

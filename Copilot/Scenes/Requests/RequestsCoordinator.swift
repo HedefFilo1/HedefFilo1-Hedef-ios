@@ -36,7 +36,8 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw2Stp2QuestionsVMCrdintrDelegate,
                                ReqFlw2Stp3VehicleVMCoordinatorDelegate,
                                ReqFlw3Stp3HGSVMCoordinatorDelegate,
-                               ReqFlw4Stp3PlateVMCoordinatorDelegate {
+                               ReqFlw4Stp3PlateVMCoordinatorDelegate,
+                               ReqFlw5Stp3LicenseVMCoordinatorDelegate {
     func getBackToHome() {
         self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
@@ -93,6 +94,13 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     func goToReqFlw4Stp3Plate() {
         let controller: ReqFlw4Stp3PlateViewController = storyboard.instantiateViewController()
         controller.viewModel = ReqFlw4Stp3PlateViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToReqFlw5Stp3License() {
+        let controller: ReqFlw5Stp3LicenseViewController = storyboard.instantiateViewController()
+        controller.viewModel = ReqFlw5Stp3LicenseViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

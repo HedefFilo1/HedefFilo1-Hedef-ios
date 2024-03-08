@@ -12,6 +12,7 @@ protocol ReqFlw2Stp2QuestionsVMCrdintrDelegate: AnyObject {
     func goToReqFlw2Stp3Vehicle()
     func goToReqFlw3Stp3HGS()
     func goToReqFlw4Stp3Plate()
+    func goToReqFlw5Stp3License()
 }
 
 protocol ReqFlw2Stp2QuestionsViewModelDelegate: BaseViewModelDelegate {
@@ -25,6 +26,7 @@ protocol ReqFlw2Stp2QuestionsViewModelType: AnyObject {
     func goToReqFlw2Stp3Vehicle()
     func goToReqFlw3Stp3HGS()
     func goToReqFlw4Stp3Plate()
+    func goToReqFlw5Stp3License()
 }
 
 class ReqFlw2Stp2QuestionsViewModel: ReqFlw2Stp2QuestionsViewModelType {
@@ -46,5 +48,9 @@ class ReqFlw2Stp2QuestionsViewModel: ReqFlw2Stp2QuestionsViewModelType {
     
     func goToReqFlw4Stp3Plate() {
         coordinatorDelegate?.goToReqFlw4Stp3Plate()
+    }
+    
+    func goToReqFlw5Stp3License() {
+        coordinatorDelegate?.goToReqFlw5Stp3License()
     }
 }
