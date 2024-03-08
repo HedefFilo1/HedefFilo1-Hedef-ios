@@ -1,17 +1,17 @@
 //
-//  ReqFlw2Stp3HGSViewController.swift
+//  ReqFlw5Stp3LicenseViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 3/5/24.
+//  Created by Jamal on 3/8/24.
 //
 
 import Foundation
 import UIKit
 import MobileCoreServices
 
-class ReqFlw4Stp3PlateViewController: UIViewController {
+class ReqFlw5Stp3LicenseViewController: UIViewController {
     
-    var viewModel: ReqFlw4Stp3PlateViewModelType! {
+    var viewModel: ReqFlw5Stp3LicenseViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -203,13 +203,13 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     }
 }
 
-extension ReqFlw4Stp3PlateViewController: CPDescriptionTextFieldDelegate {
+extension ReqFlw5Stp3LicenseViewController: CPDescriptionTextFieldDelegate {
     func didEditingChanged() {
         setButtonActivation()
     }
 }
 
-extension ReqFlw4Stp3PlateViewController: UIDocumentPickerDelegate {
+extension ReqFlw5Stp3LicenseViewController: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let selectedFileURL = urls.first else { return }
@@ -224,6 +224,6 @@ extension ReqFlw4Stp3PlateViewController: UIDocumentPickerDelegate {
     
 }
 
-extension ReqFlw4Stp3PlateViewController: ReqFlw4Stp3PlateViewModelDelegate {
+extension ReqFlw5Stp3LicenseViewController: ReqFlw5Stp3LicenseViewModelDelegate {
     
 }

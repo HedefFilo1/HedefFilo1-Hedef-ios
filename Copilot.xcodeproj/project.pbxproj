@@ -90,6 +90,8 @@
 		893259952B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259942B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift */; };
 		893259982B9A721F001E4262 /* ReqFlw4Stp4PlateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259972B9A721F001E4262 /* ReqFlw4Stp4PlateViewModel.swift */; };
 		8932599A2B9A7229001E4262 /* ReqFlw4Stp4PlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259992B9A7229001E4262 /* ReqFlw4Stp4PlateViewController.swift */; };
+		8932599D2B9B0E93001E4262 /* ReqFlw4Stp3LicenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932599C2B9B0E93001E4262 /* ReqFlw4Stp3LicenseViewModel.swift */; };
+		8932599F2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932599E2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -531,6 +533,8 @@
 		893259942B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw3Stp3HGSViewController.swift; sourceTree = "<group>"; };
 		893259972B9A721F001E4262 /* ReqFlw4Stp4PlateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw4Stp4PlateViewModel.swift; sourceTree = "<group>"; };
 		893259992B9A7229001E4262 /* ReqFlw4Stp4PlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw4Stp4PlateViewController.swift; sourceTree = "<group>"; };
+		8932599C2B9B0E93001E4262 /* ReqFlw4Stp3LicenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw4Stp3LicenseViewModel.swift; sourceTree = "<group>"; };
+		8932599E2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw5Stp3LicenseViewController.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1215,6 +1219,15 @@
 			path = Flow4Plate;
 			sourceTree = "<group>";
 		};
+		8932599B2B9B0E16001E4262 /* Flow5 */ = {
+			isa = PBXGroup;
+			children = (
+				8932599C2B9B0E93001E4262 /* ReqFlw4Stp3LicenseViewModel.swift */,
+				8932599E2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift */,
+			);
+			path = Flow5;
+			sourceTree = "<group>";
+		};
 		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1678,6 +1691,7 @@
 				89431D9C2B96F36E00A6F6B8 /* Flow2 */,
 				893259912B9A6833001E4262 /* Flow3HGS */,
 				893259962B9A71ED001E4262 /* Flow4Plate */,
+				8932599B2B9B0E16001E4262 /* Flow5 */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3475,7 +3489,9 @@
 				894CEC7C2B0660C900D369E9 /* SignupViewController+Validation.swift in Sources */,
 				892A57D02B753F02002C6CD1 /* BrkdwnFlw4Stp3NoWarningVController.swift in Sources */,
 				89C686942B0260C900011897 /* AvatarCell.swift in Sources */,
+				8932599D2B9B0E93001E4262 /* ReqFlw4Stp3LicenseViewModel.swift in Sources */,
 				89950AE82B811786004537D2 /* AccidentServicesViewModel.swift in Sources */,
+				8932599F2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift in Sources */,
 				8976B0342B73CA5D00E7C58F /* WarningItemCell.swift in Sources */,
 				89950AE62B8116C7004537D2 /* Strings+Part3.swift in Sources */,
 				89B553AF2B88BFCD00616732 /* AccFlw5Stp3HeaderCell.swift in Sources */,
@@ -3795,7 +3811,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 103;
+				CURRENT_PROJECT_VERSION = 104;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3829,7 +3845,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 103;
+				CURRENT_PROJECT_VERSION = 104;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -3923,7 +3939,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 103;
+				CURRENT_PROJECT_VERSION = 104;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4011,7 +4027,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 103;
+				CURRENT_PROJECT_VERSION = 104;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
