@@ -361,6 +361,22 @@ extension Strings {
         return localized(string: "enterLicenseDeliveryAddress")
     }
     
+    static var nameSurnamePersonVehicle: String {
+        return localized(string: "nameSurnamePersonVehicle")
+    }
+    
+    static var enterNameSurnamePersonVehicle: String {
+        return localized(string: "enterNameSurnamePersonVehicle")
+    }
+    
+    static var idNumberPersonVehicle: String {
+        return localized(string: "idNumberPersonVehicle")
+    }
+    
+    static var enterIdNumberPersonVehicle: String {
+        return localized(string: "enterIdNumberPersonVehicle")
+    }
+    
     //        static var yes: String {
     //            return localized(string: "yes")
     //        }
@@ -368,4 +384,5 @@ extension Strings {
     //        static var yes: String {
     //            return localized(string: "yes")
     //        }
+
 }

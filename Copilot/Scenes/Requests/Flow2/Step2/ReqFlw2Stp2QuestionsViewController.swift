@@ -129,6 +129,9 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
         case 3:
             viewModel.goToReqFlw5Stp3License()
             
+        case 4:
+            viewModel.goToReqFlw6Stp3Inspection()
+            
         default:
             break
         }

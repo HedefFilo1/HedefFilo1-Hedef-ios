@@ -92,6 +92,8 @@
 		8932599A2B9A7229001E4262 /* ReqFlw4Stp3PlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259992B9A7229001E4262 /* ReqFlw4Stp3PlateViewController.swift */; };
 		8932599D2B9B0E93001E4262 /* ReqFlw5Stp3LicenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932599C2B9B0E93001E4262 /* ReqFlw5Stp3LicenseViewModel.swift */; };
 		8932599F2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932599E2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift */; };
+		893259A62B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259A52B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift */; };
+		893259A82B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259A72B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -535,6 +537,8 @@
 		893259992B9A7229001E4262 /* ReqFlw4Stp3PlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw4Stp3PlateViewController.swift; sourceTree = "<group>"; };
 		8932599C2B9B0E93001E4262 /* ReqFlw5Stp3LicenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw5Stp3LicenseViewModel.swift; sourceTree = "<group>"; };
 		8932599E2B9B0EB9001E4262 /* ReqFlw5Stp3LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqFlw5Stp3LicenseViewController.swift; sourceTree = "<group>"; };
+		893259A52B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw6Stp3InspectionViewController.swift; sourceTree = "<group>"; };
+		893259A72B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqFlw6Stp3InspectionViewModel.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1228,6 +1232,15 @@
 			path = Flow5;
 			sourceTree = "<group>";
 		};
+		893259A42B9B1A94001E4262 /* Flow6Inspection */ = {
+			isa = PBXGroup;
+			children = (
+				893259A72B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift */,
+				893259A52B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift */,
+			);
+			path = Flow6Inspection;
+			sourceTree = "<group>";
+		};
 		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1692,6 +1705,7 @@
 				893259912B9A6833001E4262 /* Flow3HGS */,
 				893259962B9A71ED001E4262 /* Flow4Plate */,
 				8932599B2B9B0E16001E4262 /* Flow5 */,
+				893259A42B9B1A94001E4262 /* Flow6Inspection */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3481,6 +3495,7 @@
 				89B6F6252B66ED6300F4C3AB /* Flow3Step2DamageViewController.swift in Sources */,
 				89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift in Sources */,
 				89A908B52B31A6E100BC7727 /* ServicesCoordinator.swift in Sources */,
+				893259A62B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
@@ -3621,6 +3636,7 @@
 				89431D9B2B968A5800A6F6B8 /* RequestSuccessViewModel.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
+				893259A82B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift in Sources */,
 				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,
 				89950AEB2B812D57004537D2 /* AccidentServiceDetailViewModel.swift in Sources */,

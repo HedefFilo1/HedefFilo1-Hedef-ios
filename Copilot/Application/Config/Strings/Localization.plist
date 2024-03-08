@@ -2895,28 +2895,36 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter the Address to which the license will be delivered.</string>
         </dict>
         
-        <key></key>
+        <key>nameSurnamePersonVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracı Götürecek Kişinin Adı Soyadı</string>
             <key>en</key>
-            <string></string>
+            <string>Name and Surname of the Person Who Will Take the Vehicle</string>
         </dict>
         
-        <key></key>
+        <key>enterNameSurnamePersonVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracı Götürecek Kişinin Adı Soyadı giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Aracı Götürecek Kişinin Adı Soyadı giriniz.</string>
         </dict>
         
-        <key></key>
+        <key>idNumberPersonVehicle</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracı Götürecek Kişinin TCKN’si</string>
             <key>en</key>
-            <string></string>
+            <string>TR ID number of the person who will take the vehicle</string>
+        </dict>
+        
+        <key>enterIdNumberPersonVehicle</key>
+        <dict>
+            <key>tr</key>
+            <string>Aracı Götürecek TCKN’sini  giriniz.</string>
+            <key>en</key>
+            <string>Enter the ID number of the person who will take the vehicle.</string>
         </dict>
         
         <key></key>
