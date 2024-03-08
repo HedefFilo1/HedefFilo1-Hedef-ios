@@ -2927,5 +2927,36 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string></string>
         </dict>
         
+        <key>supportTitle</key>
+        <dict>
+            <key>tr</key>
+            <string>Yardım</string>
+            <key>en</key>
+            <string>Support</string>
+        </dict>
+        
+        <key>supportDescription</key>
+        <dict>
+            <key>tr</key>
+            <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+            <key>en</key>
+            <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+        </dict>
+        
+        <key>supportGuidesMenuTitle</key>
+        <dict>
+            <key>tr</key>
+            <string>Kılavuzlar</string>
+            <key>en</key>
+            <string>Guides</string>
+        </dict>
+        
+        <key>supportFeedbackMenuTitle</key>
+        <dict>
+            <key>tr</key>
+            <string>Geri Bildirim</string>
+            <key>en</key>
+            <string>Feedback</string>
+        </dict>
     </dict>
 </plist>

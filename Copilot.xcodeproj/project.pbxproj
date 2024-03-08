@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		48A10C8F2B9AE2AE004A2AE8 /* SupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */; };
+		48A10C912B9AE315004A2AE8 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C902B9AE314004A2AE8 /* SupportViewController.swift */; };
+		48A10C932B9AE36D004A2AE8 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A10C922B9AE36D004A2AE8 /* Support.storyboard */; };
+		48A10C952B9AE37E004A2AE8 /* SupportCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C942B9AE37E004A2AE8 /* SupportCoordinator.swift */; };
+		48A10C992B9AE988004A2AE8 /* Strings+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C982B9AE988004A2AE8 /* Strings+Support.swift */; };
+		48A10C9E2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C9C2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift */; };
+		48A10C9F2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A10C9D2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib */; };
 		8906390C2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */; };
 		890639102B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */; };
 		890639112B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */; };
@@ -447,6 +454,13 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewModel.swift; sourceTree = "<group>"; };
+		48A10C902B9AE314004A2AE8 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		48A10C922B9AE36D004A2AE8 /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		48A10C942B9AE37E004A2AE8 /* SupportCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCoordinator.swift; sourceTree = "<group>"; };
+		48A10C982B9AE988004A2AE8 /* Strings+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Support.swift"; sourceTree = "<group>"; };
+		48A10C9C2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		48A10C9D2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportMenuItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3HeaderCell.xib; sourceTree = "<group>"; };
 		8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3ContentCell.swift; sourceTree = "<group>"; };
 		8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw5Stp3ContentCell.xib; sourceTree = "<group>"; };
@@ -916,6 +930,44 @@
 				31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		48A10C8D2B9AE296004A2AE8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				48A10C942B9AE37E004A2AE8 /* SupportCoordinator.swift */,
+				48A10C922B9AE36D004A2AE8 /* Support.storyboard */,
+				48A10C902B9AE314004A2AE8 /* SupportViewController.swift */,
+				48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */,
+				48A10C9A2B9B00AF004A2AE8 /* Views */,
+				48A10C972B9AE962004A2AE8 /* Localization */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		48A10C972B9AE962004A2AE8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				48A10C982B9AE988004A2AE8 /* Strings+Support.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		48A10C9A2B9B00AF004A2AE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48A10C9B2B9B00B6004A2AE8 /* UICollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48A10C9B2B9B00B6004A2AE8 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				48A10C9C2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift */,
+				48A10C9D2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib */,
+			);
+			path = UICollectionViewCell;
 			sourceTree = "<group>";
 		};
 		8906390D2B88CA05000A0819 /* Content */ = {
@@ -2563,6 +2615,7 @@
 				890D7CD62ACEC51000F053DA /* popup */,
 				89B12BB32AD4789D002C70E4 /* Main */,
 				896CB3412AD5BD610048025A /* Home */,
+				48A10C8D2B9AE296004A2AE8 /* Support */,
 				89B07A4F2AD9351700D3BE80 /* Profile */,
 				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
 				89A908B12B31A6C400BC7727 /* Services */,
@@ -3141,11 +3194,13 @@
 				89A908BE2B31A75400BC7727 /* HeaderCell.xib in Resources */,
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,
 				8934D4F72B0FA97D00CD0CA7 /* VehicleInfoItemCell.xib in Resources */,
+				48A10C9F2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib in Resources */,
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
 				89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */,
 				89E29B592B3AE4B300CCABAD /* ServicesItemsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
+				48A10C932B9AE36D004A2AE8 /* Support.storyboard in Resources */,
 				89B191032B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.xib in Resources */,
 				8934D4FC2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.xib in Resources */,
 				8935AC4A2AFA5D39002F1C68 /* SponsorshipTabCell.xib in Resources */,
@@ -3305,6 +3360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
+				48A10C952B9AE37E004A2AE8 /* SupportCoordinator.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */,
@@ -3429,6 +3485,7 @@
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
+				48A10C992B9AE988004A2AE8 /* Strings+Support.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
 				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
 				89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */,
@@ -3492,6 +3549,7 @@
 				89B0D0AE2ACA9CE900754443 /* CPCheckBox.swift in Sources */,
 				89431DA12B96F3B100A6F6B8 /* ReqFlw2Stp2QuestionsViewModel.swift in Sources */,
 				891D1C952ACAB1A500457C17 /* CPButton.swift in Sources */,
+				48A10C8F2B9AE2AE004A2AE8 /* SupportViewModel.swift in Sources */,
 				89B553AC2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
 				89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */,
@@ -3513,6 +3571,7 @@
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
 				89513E702B951A4100B05199 /* RequestsViewController.swift in Sources */,
+				48A10C9E2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift in Sources */,
 				8944AB832B74D43100967CE2 /* SelectedWarningsContentCell.swift in Sources */,
 				892A8D0F2AC4E80F0020C1C4 /* TextStyle.swift in Sources */,
 				891B60D22AF1206500D6F09C /* KMUsedViewController.swift in Sources */,
@@ -3565,6 +3624,7 @@
 				89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */,
 				89431D8D2B96806600A6F6B8 /* ReqFlw1Stp2ViewModel.swift in Sources */,
 				89DAB8062AC738720098BA67 /* CPPasswordTextField.swift in Sources */,
+				48A10C912B9AE315004A2AE8 /* SupportViewController.swift in Sources */,
 				89DBD9DB2B72C813007B416A /* BrkdwnFlw1Stp3SelectServiceVController.swift in Sources */,
 				892A8D1D2AC6052F0020C1C4 /* Images.swift in Sources */,
 				89431DA62B96F46800A6F6B8 /* ReqFlw2Stp2QuestionsCell.swift in Sources */,
