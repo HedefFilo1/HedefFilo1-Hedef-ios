@@ -43,7 +43,7 @@ class SettingsViewController: UIViewController {
         setBasicViews()
         applyStyle()
         setTexts()
-//        pointsView.imageView.image = Images.lastikPoints
+        //        pointsView.imageView.image = Images.lastikPoints
     }
     
     func applyStyle() {
@@ -70,11 +70,17 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func didTapNotification() {
-        
+        viewModel.goToNotificationSettings()
     }
     
     @IBAction func didTapDarkMode() {
         
+//        UIWindowScene.windows.forEach { window in
+//            window.overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
+//        }
+        
+        App.window.overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
+//        overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
     }
     
     @IBAction func didTapAgreemnt() {

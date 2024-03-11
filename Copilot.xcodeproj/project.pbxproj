@@ -98,6 +98,8 @@
 		8934890D2B9E3E9E009A3FBB /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934890C2B9E3E9E009A3FBB /* SettingsCoordinator.swift */; };
 		893489102B9EF918009A3FBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934890F2B9EF918009A3FBB /* SettingsViewController.swift */; };
 		893489122B9EF92A009A3FBB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489112B9EF92A009A3FBB /* SettingsViewModel.swift */; };
+		893489152B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489142B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift */; };
+		893489172B9F1DF0009A3FBB /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -547,6 +549,8 @@
 		8934890C2B9E3E9E009A3FBB /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		8934890F2B9EF918009A3FBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		893489112B9EF92A009A3FBB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		893489142B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewModel.swift; sourceTree = "<group>"; };
+		893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1255,6 +1259,7 @@
 				8934890A2B9E3E94009A3FBB /* Settings.storyboard */,
 				8934890C2B9E3E9E009A3FBB /* SettingsCoordinator.swift */,
 				8934890E2B9EF4A8009A3FBB /* Settings */,
+				893489132B9F1AAF009A3FBB /* Notification */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1266,6 +1271,15 @@
 				8934890F2B9EF918009A3FBB /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		893489132B9F1AAF009A3FBB /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				893489142B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift */,
+				893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
@@ -3418,6 +3432,7 @@
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
 				89B190F82B87A76A00AC1171 /* AccFlw4Stp4NoAgreementReportViewModel.swift in Sources */,
 				89F6A0572B5868950052EE15 /* LastikOperationButtonsCell.swift in Sources */,
+				893489172B9F1DF0009A3FBB /* NotificationSettingsViewController.swift in Sources */,
 				89B07A532AD9361F00D3BE80 /* ProfileCoordinator.swift in Sources */,
 				8934D4EA2B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift in Sources */,
 				8917F5582B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift in Sources */,
@@ -3431,6 +3446,7 @@
 				89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */,
 				89C55DED2AC4A66300C3066A /* Collection+Safe.swift in Sources */,
 				8917F55D2B3AC88C00681AD3 /* Flow4Step3SelectServiceViewModel.swift in Sources */,
+				893489152B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift in Sources */,
 				89431DB52B9A02D400A6F6B8 /* MultiPart.swift in Sources */,
 				89B190F62B87A72500AC1171 /* AccFlw4Stp4NoAgreementReportVController.swift in Sources */,
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,

@@ -39,9 +39,16 @@ class SettingsCoordinator: Coordinator {
     }
 }
 
-extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate {
+extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate,
+                               NotificationSettingsVMCrdinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
     
+    func goToNotificationSettings() {
+        let controller: NotificationSettingsViewController = storyboard.instantiateViewController()
+        controller.viewModel = NotificationSettingsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
 }

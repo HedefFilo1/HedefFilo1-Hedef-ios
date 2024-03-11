@@ -8,6 +8,7 @@
 import Foundation
 protocol SettingsViewModelCoordinatorDelegate: AnyObject {
     func getBack()
+    func goToNotificationSettings()
 }
 
 protocol SettingsViewModelDelegate: BaseViewModelDelegate {
@@ -18,6 +19,7 @@ protocol SettingsViewModelType: AnyObject {
     var coordinatorDelegate: SettingsViewModelCoordinatorDelegate? { get set }
     var delegate: SettingsViewModelDelegate? { get set }
     func getBack()
+    func goToNotificationSettings()
 }
 
 class SettingsViewModel: SettingsViewModelType {
@@ -27,5 +29,9 @@ class SettingsViewModel: SettingsViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToNotificationSettings() {
+        coordinatorDelegate?.goToNotificationSettings()
     }
 }

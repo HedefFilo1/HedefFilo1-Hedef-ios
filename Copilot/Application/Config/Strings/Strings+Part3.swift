@@ -385,13 +385,23 @@ extension Strings {
         return localized(string: "darkMode")
     }
     
-    
     static var seePrivacyAgreement: String {
         return localized(string: "seePrivacyAgreement")
     }
     
-    //            static var yes: String {
-    //                return localized(string: "yes")
-    //            }
+    static var notificationSettingsDescription: String {
+        return localized(string: "notificationSettingsDescription")
+    }
     
+    static var weatherSettings: String {
+        return localized(string: "weatherSettings")
+    }
+    
+    static var appointmentDate: String {
+        return localized(string: "appointmentDate")
+    }
+    
+    static var contractDuration: String {
+        return localized(string: "contractDuration")
+    }
 }
