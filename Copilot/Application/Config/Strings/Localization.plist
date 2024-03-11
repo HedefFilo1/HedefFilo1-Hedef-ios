@@ -2927,28 +2927,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter the ID number of the person who will take the vehicle.</string>
         </dict>
         
-        <key></key>
+        <key>notifications</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Bildirimler</string>
             <key>en</key>
-            <string></string>
+            <string>Notifications</string>
         </dict>
         
-        <key></key>
+        <key>darkMode</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Gece Modu</string>
             <key>en</key>
-            <string></string>
+            <string>Dark Mode</string>
         </dict>
         
-        <key></key>
+        <key>seePrivacyAgreement</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Gizlilik Sözleşmesini Gör</string>
             <key>en</key>
-            <string></string>
+            <string>See Privacy Agreement</string>
         </dict>
         
         <key></key>

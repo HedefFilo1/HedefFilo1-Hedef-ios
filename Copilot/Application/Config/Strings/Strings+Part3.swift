@@ -377,12 +377,21 @@ extension Strings {
         return localized(string: "enterIdNumberPersonVehicle")
     }
     
-    //        static var yes: String {
-    //            return localized(string: "yes")
-    //        }
-    //
-    //        static var yes: String {
-    //            return localized(string: "yes")
-    //        }
-
+    static var notifications: String {
+        return localized(string: "notifications")
+    }
+    
+    static var darkMode: String {
+        return localized(string: "darkMode")
+    }
+    
+    
+    static var seePrivacyAgreement: String {
+        return localized(string: "seePrivacyAgreement")
+    }
+    
+    //            static var yes: String {
+    //                return localized(string: "yes")
+    //            }
+    
 }
