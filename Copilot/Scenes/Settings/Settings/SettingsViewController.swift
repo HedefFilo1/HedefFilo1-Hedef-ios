@@ -84,7 +84,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func didTapAgreemnt() {
-        
+        viewModel.goToAgreement()
     }
     
     @IBAction func didTapLanguages() {

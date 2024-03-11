@@ -100,6 +100,8 @@
 		893489122B9EF92A009A3FBB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489112B9EF92A009A3FBB /* SettingsViewModel.swift */; };
 		893489152B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489142B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift */; };
 		893489172B9F1DF0009A3FBB /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */; };
+		8934891C2B9FAC88009A3FBB /* ContractAgreementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934891B2B9FAC88009A3FBB /* ContractAgreementViewModel.swift */; };
+		8934891E2B9FACA1009A3FBB /* ContractAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934891D2B9FACA1009A3FBB /* ContractAgreementViewController.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -551,6 +553,8 @@
 		893489112B9EF92A009A3FBB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		893489142B9F1DE9009A3FBB /* NotificationSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewModel.swift; sourceTree = "<group>"; };
 		893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
+		8934891B2B9FAC88009A3FBB /* ContractAgreementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAgreementViewModel.swift; sourceTree = "<group>"; };
+		8934891D2B9FACA1009A3FBB /* ContractAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAgreementViewController.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -1260,6 +1264,7 @@
 				8934890C2B9E3E9E009A3FBB /* SettingsCoordinator.swift */,
 				8934890E2B9EF4A8009A3FBB /* Settings */,
 				893489132B9F1AAF009A3FBB /* Notification */,
+				8934891A2B9FAC74009A3FBB /* ContractAgreement */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1280,6 +1285,15 @@
 				893489162B9F1DF0009A3FBB /* NotificationSettingsViewController.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		8934891A2B9FAC74009A3FBB /* ContractAgreement */ = {
+			isa = PBXGroup;
+			children = (
+				8934891B2B9FAC88009A3FBB /* ContractAgreementViewModel.swift */,
+				8934891D2B9FACA1009A3FBB /* ContractAgreementViewController.swift */,
+			);
+			path = ContractAgreement;
 			sourceTree = "<group>";
 		};
 		8934D4DE2B0F913500CD0CA7 /* DocumentPopup */ = {
@@ -3412,6 +3426,7 @@
 				89950AAB2B7F77DD004537D2 /* AccidentCoordinator.swift in Sources */,
 				8934D4E72B0F9F6900CD0CA7 /* VehicleCoordinator.swift in Sources */,
 				8907EEF22B69659B004869BE /* MaintenanceCoordinator.swift in Sources */,
+				8934891E2B9FACA1009A3FBB /* ContractAgreementViewController.swift in Sources */,
 				89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */,
 				8976B0232B73BAE500E7C58F /* BreakdownFlow2Step2AnyAlarmViewModel.swift in Sources */,
 				89FC51852B6A6C8300AD37D4 /* MaintenanceRandevuViewController.swift in Sources */,
@@ -3471,6 +3486,7 @@
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
+				8934891C2B9FAC88009A3FBB /* ContractAgreementViewModel.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				89431D932B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift in Sources */,

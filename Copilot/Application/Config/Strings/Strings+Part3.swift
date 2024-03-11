@@ -404,4 +404,8 @@ extension Strings {
     static var contractDuration: String {
         return localized(string: "contractDuration")
     }
+   
+    static var confidentialityAgreement: String {
+        return localized(string: "confidentialityAgreement")
+    }
 }

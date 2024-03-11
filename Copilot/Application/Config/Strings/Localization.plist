@@ -2951,6 +2951,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>See Privacy Agreement</string>
         </dict>
         
+        <key>confidentialityAgreement</key>
+        <dict>
+            <key>tr</key>
+            <string>Gizlilik Sözleşmesi</string>
+            <key>en</key>
+            <string>Confidentiality Agreement</string>
+        </dict>
+        
         <key>notificationSettingsDescription</key>
         <dict>
             <key>tr</key>

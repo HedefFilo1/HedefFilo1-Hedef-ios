@@ -40,7 +40,8 @@ class SettingsCoordinator: Coordinator {
 }
 
 extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate,
-                               NotificationSettingsVMCrdinatorDelegate {
+                               NotificationSettingsVMCrdinatorDelegate,
+                               ContractAgreementVMCrdinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -48,6 +49,13 @@ extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate,
     func goToNotificationSettings() {
         let controller: NotificationSettingsViewController = storyboard.instantiateViewController()
         controller.viewModel = NotificationSettingsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToAgreement() {
+        let controller: ContractAgreementViewController = storyboard.instantiateViewController()
+        controller.viewModel = ContractAgreementViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

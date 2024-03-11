@@ -29,6 +29,4 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
     func getBack() {
         coordinatorDelegate?.getBack()
     }
-    
-    
 }
