@@ -29,7 +29,7 @@ class MenuViewController: PopupViewController {
         
 #if DEV_DEBUG
 //        viewModel.showDocuments()
-//        viewModel.showRequests()
+        viewModel.showRequests()
 #endif
     }
     
