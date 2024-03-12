@@ -105,6 +105,7 @@
 		893489212BA0375A009A3FBB /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489202BA0375A009A3FBB /* LanguagesViewController.swift */; };
 		893489232BA03761009A3FBB /* LanguagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489222BA03761009A3FBB /* LanguagesViewModel.swift */; };
 		893489252BA0B048009A3FBB /* NotificationPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489242BA0B048009A3FBB /* NotificationPreference.swift */; };
+		893489272BA0F076009A3FBB /* UploadRequestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489262BA0F076009A3FBB /* UploadRequestFile.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -561,6 +562,7 @@
 		893489202BA0375A009A3FBB /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		893489222BA03761009A3FBB /* LanguagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewModel.swift; sourceTree = "<group>"; };
 		893489242BA0B048009A3FBB /* NotificationPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPreference.swift; sourceTree = "<group>"; };
+		893489262BA0F076009A3FBB /* UploadRequestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequestFile.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -2338,6 +2340,7 @@
 				89B610DD2B6CDB0C0052A417 /* GetEligible.swift */,
 				89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */,
 				893489242BA0B048009A3FBB /* NotificationPreference.swift */,
+				893489262BA0F076009A3FBB /* UploadRequestFile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3646,6 +3649,7 @@
 				89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */,
 				89DAB8042AC733F50098BA67 /* CPTextField.swift in Sources */,
 				892A8D002AC4D1650020C1C4 /* OnboardingViewController.swift in Sources */,
+				893489272BA0F076009A3FBB /* UploadRequestFile.swift in Sources */,
 				893489232BA03761009A3FBB /* LanguagesViewModel.swift in Sources */,
 				89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */,
 				8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */,

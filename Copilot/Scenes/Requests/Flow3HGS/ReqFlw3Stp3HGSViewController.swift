@@ -226,9 +226,11 @@ extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImageP
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        picker.dismiss(animated: true)
         guard let data = tempImage.pngData() else { return }
+        Loading.shared.show(presentingView: self.view)
         viewModel.sendFile(data: data)
-//        picker.dismiss(animated: true)
+        
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

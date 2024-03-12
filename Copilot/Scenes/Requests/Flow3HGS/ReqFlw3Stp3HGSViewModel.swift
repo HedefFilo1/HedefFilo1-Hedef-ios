@@ -33,7 +33,6 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
     
     func sendFile(data: Data) {
         
-        Loading.shared.show()
         APIService.sendFile(data: data) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }

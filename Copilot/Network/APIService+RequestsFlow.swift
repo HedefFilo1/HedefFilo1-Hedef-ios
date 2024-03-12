@@ -42,38 +42,32 @@ extension APIService {
         req.start()
     }
     
-    static func sendFile(data: Data, completion: @escaping (Success?, APIResponseError?) -> Void) {
+    static func sendFile(data: Data, completion: @escaping (UploadRequestFile?, APIResponseError?) -> Void) {
         
-        //        let str = data.base64EncodedString()
-        //
-        //        var params = [
-        //            "file": data
-        //        ]
+        let req = APIRequest<UploadRequestFile>(route: "",
+                                                method: .post,
+                                                hasToken: true)
         
-        let req = APIRequest<Success>(route: "",
-                                      method: .post,
-                                      hasToken: true)
-        req.identifier = "Send File"
-        req.log = loggingEnabled || true
-        req.completion = completion
-        req.urlRequest?.timeoutInterval = 70
-        
-        let image = UIImage.init(named: "logo")
-        let imgdata = image!.pngData()
-        var headers = Network.getBasicHeaders()
-        let token = App.token ?? ""
-        headers[CodeStrings.authorization] = "\(CodeStrings.bearer) \(token)"
-        let httpHeader = req.urlRequest!.headers
+        guard let httpHeader = req.urlRequest?.headers else { return }
         
         AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imgdata!, withName: "file", fileName: "logo.png" , mimeType: "image/png")
-        }
-                  , to: "https://copilotweb.hedeffilotest.com/api/file", usingThreshold: UInt64.init(),
+            multipartFormData.append(data,
+                                     withName: "file",
+                                     fileName: "logo.png",
+                                     mimeType: "image/png")
+            
+        }, to: "https://copilotweb.hedeffilotest.com/api/file",
                   method: .post,
-                  headers: httpHeader).responseDecodable(of: Success.self) { response in
-            Loading.shared.hide()
+                  headers: httpHeader).responseDecodable(of: UploadRequestFile.self) { response in
             debugPrint(response)
-            print(response)
+            switch response.result {
+            case .success(let model):
+                completion(model, nil)
+                
+            case .failure(_):
+                let resError = APIResponseError(code: "777", title: "Upload Error", message: "Please Check your file and its Size.")
+                completion(nil, resError)
+            }
         }
     }
     
