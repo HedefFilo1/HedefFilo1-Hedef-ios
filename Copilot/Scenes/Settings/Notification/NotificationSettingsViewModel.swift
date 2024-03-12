@@ -21,6 +21,8 @@ protocol NotificationSettingsViewModelType: AnyObject {
     var prefrences: [NotificationPreference]? { get set }
     var weatherEnabled: Bool { get }
     var campaignEnabled: Bool { get }
+    var appointmentEnabled: Bool { get }
+    var agreementEnabled: Bool { get }
     
     func getBack()
     func getPrefrences()
@@ -44,6 +46,22 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
     
     var campaignEnabled: Bool {
         if let item = prefrences?.filter({ $0.type == .campaign }).first {
+            return item.enabled
+        }
+        
+        return false
+    }
+    
+    var appointmentEnabled: Bool {
+        if let item = prefrences?.filter({ $0.type == .campaign }).first {
+            return item.enabled
+        }
+        
+        return false
+    }
+    
+    var agreementEnabled: Bool {
+        if let item = prefrences?.filter({ $0.type == .agreement }).first {
             return item.enabled
         }
         

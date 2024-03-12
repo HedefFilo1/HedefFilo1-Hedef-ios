@@ -92,7 +92,7 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     @IBAction func didTapContractSwitch() {
-        viewModel.setNotificationPreferences(type: .contractPeriod, enabled: contractSwitch.isOn)
+        viewModel.setNotificationPreferences(type: .agreement, enabled: contractSwitch.isOn)
     }
     
     @IBAction func didTapCancel() {
@@ -108,5 +108,7 @@ extension NotificationSettingsViewController: NotificationSettingsViewModelDeleg
     func setPrefernces() {
         weatherSwitch.isOn = viewModel.weatherEnabled
         campaignsSwitch.isOn = viewModel.campaignEnabled
+        randevueDateSwitch.isOn = viewModel.appointmentEnabled
+        contractSwitch.isOn = viewModel.agreementEnabled
     }
 }

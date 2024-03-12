@@ -11,7 +11,7 @@ enum NotificationPreferenceType: String, Decodable {
     case campaign = "CAMPAIGN"
     case weather = "WEATHER"
     case appointmentDate = "APPOINTMENT"
-    case contractPeriod = "AGREEMENT"
+    case agreement = "AGREEMENT"
 }
 
 struct NotificationPreference: Decodable {
