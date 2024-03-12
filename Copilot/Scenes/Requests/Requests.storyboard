@@ -1424,6 +1424,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="didCreate" destination="vMo-xk-vUv" eventType="touchUpInside" id="4Do-BP-mXV"/>
+                                                                    <action selector="didTapCreate" destination="dAs-Eh-8Vu" eventType="touchUpInside" id="0PK-3t-oqH"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>

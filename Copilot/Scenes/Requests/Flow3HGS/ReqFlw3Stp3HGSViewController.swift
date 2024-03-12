@@ -188,16 +188,25 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         viewModel.getBack()
     }
     
+    @IBAction func didTapCreate() {
+        viewModel.createCase(licensePlate: plakTextField.text ?? "",
+                             note: noteTextField.text,
+                             nameSurname: nameTextField.text ?? "",
+                             receiverPersonName: receiverNameTextField.text ?? "",
+                             receiverPersonPhone: receiverPhoneTextField.text ?? "",
+                             deliveryAddress: addressTextField.text)
+    }
+    
     @IBAction func didTapSendFile() {
-//        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-//        documentPicker.delegate = self
-//        present(documentPicker, animated: true, completion: nil)
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
         
         let imagePickerController = UIImagePickerController()
-           imagePickerController.allowsEditing = false //If you want edit option set "true"
-           imagePickerController.sourceType = .photoLibrary
-           imagePickerController.delegate = self
-           present(imagePickerController, animated: true, completion: nil)
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
     }
 }
 
@@ -224,7 +233,8 @@ extension ReqFlw3Stp3HGSViewController: UIDocumentPickerDelegate {
 
 extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         picker.dismiss(animated: true)
         guard let data = tempImage.pngData() else { return }
@@ -232,7 +242,7 @@ extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImageP
         viewModel.sendFile(data: data)
         
     }
-
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }

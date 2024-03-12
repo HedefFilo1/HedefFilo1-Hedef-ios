@@ -257,9 +257,6 @@ extension ReqFlw2Stp3VehicleViewController: UIDocumentPickerDelegate {
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         // User cancelled the document picker
     }
-    
-
-    
 }
 
 extension ReqFlw2Stp3VehicleViewController: ReqFlw2Stp3VehicleViewModelDelegate {

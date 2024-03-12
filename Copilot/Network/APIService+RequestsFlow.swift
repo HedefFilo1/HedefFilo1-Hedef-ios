@@ -53,7 +53,7 @@ extension APIService {
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(data,
                                      withName: "file",
-                                     fileName: "logo.png",
+                                     fileName: "OriginalFileName.png",
                                      mimeType: "image/png")
             
         }, to: "https://copilotweb.hedeffilotest.com/api/file",
@@ -69,6 +69,42 @@ extension APIService {
                 completion(nil, resError)
             }
         }
+    }
+    
+    static func createHGSCase(licensePlate: String,
+                              note: String,
+                              nameSurname: String,
+                              receiverPersonName: String,
+                              receiverPersonPhone: String,
+                              deliveryAddress: String,
+                              fileInfo: UploadRequestFile?,
+                              completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "case/request"
+        var params = [
+            "webCategory": "OGS_HGS",
+            "licensePlate": licensePlate,
+            "note": note,
+            "nameSurname": nameSurname,
+            "receiverPersonName": receiverPersonName,
+            "receiverPersonPhone": receiverPersonPhone,
+            "deliveryAddress": deliveryAddress
+        ] as [String: Any]
+        
+        if let fileInfo {
+            params["files"] = [
+                "originalFilename": fileInfo.originalFilename,
+                "filename": fileInfo.filename,
+            ]
+        }
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "CreateHGSCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
     }
     
 }
