@@ -10,6 +10,7 @@ protocol SettingsViewModelCoordinatorDelegate: AnyObject {
     func getBack()
     func goToNotificationSettings()
     func goToAgreement()
+    func presentLangauges()
 }
 
 protocol SettingsViewModelDelegate: BaseViewModelDelegate {
@@ -22,6 +23,7 @@ protocol SettingsViewModelType: AnyObject {
     func getBack()
     func goToNotificationSettings()
     func goToAgreement()
+    func presentLangauges()
 }
 
 class SettingsViewModel: SettingsViewModelType {
@@ -39,5 +41,9 @@ class SettingsViewModel: SettingsViewModelType {
     
     func goToAgreement() {
         coordinatorDelegate?.goToAgreement()
+    }
+    
+    func presentLangauges() {
+        coordinatorDelegate?.presentLangauges()
     }
 }

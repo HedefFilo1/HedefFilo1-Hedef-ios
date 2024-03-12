@@ -42,6 +42,8 @@ struct CodeStrings {
     static let callSupportCenterPhone = "tel://02123683200"
     static let call112 = "tel://112"
     static let bullet = "\u{2022}"
+    static let turkish = "Turkish"
+    static let english = "English"
 }
 
 // MAKR: Network

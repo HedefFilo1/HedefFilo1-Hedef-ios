@@ -29,6 +29,14 @@ class App {
 //        
     }
     
+    static func changeLanguage(language: String) {
+        Persistence.language = language
+//        let controller: MainTabBarController = UIStoryboard(storyboard: .main).instantiateViewController()
+//        App.window.rootViewController = controller
+        appCoordinator?.goToMain()
+        
+    }
+    
 //    static var appLanguage: String {
 //        guard let lan = Persistence.language else {
 //            return initialzeAppLanguage()

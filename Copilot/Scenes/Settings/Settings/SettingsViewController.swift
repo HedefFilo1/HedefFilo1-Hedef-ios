@@ -88,7 +88,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func didTapLanguages() {
-        
+        viewModel.presentLangauges()
     }
 }
 

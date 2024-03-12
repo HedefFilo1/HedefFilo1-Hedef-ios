@@ -38,7 +38,8 @@ class SettingsCoordinator: Coordinator {
 
 extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate,
                                NotificationSettingsVMCrdinatorDelegate,
-                               ContractAgreementVMCrdinatorDelegate {
+                               ContractAgreementVMCrdinatorDelegate,
+                               LanguagesVMCrdinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -55,5 +56,13 @@ extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate,
         controller.viewModel = ContractAgreementViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func presentLangauges() {
+        let viewController: LanguagesViewController = storyboard.instantiateViewController()
+        let viewModel = LanguagesViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        navigationController.present(viewController, animated: true)
     }
 }

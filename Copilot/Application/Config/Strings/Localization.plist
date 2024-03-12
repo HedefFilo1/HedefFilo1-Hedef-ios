@@ -2991,28 +2991,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Contract Duration</string>
         </dict>
         
-        <key></key>
+        <key>language</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Dil</string>
             <key>en</key>
-            <string></string>
+            <string>Language</string>
         </dict>
         
-        <key></key>
+        <key>turkish</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Türkçe</string>
             <key>en</key>
-            <string></string>
+            <string>Turkish</string>
         </dict>
         
-        <key></key>
+        <key>english</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>İngilizce</string>
             <key>en</key>
-            <string></string>
+            <string>English</string>
         </dict>
         
         <key></key>

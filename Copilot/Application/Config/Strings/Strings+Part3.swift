@@ -408,4 +408,17 @@ extension Strings {
     static var confidentialityAgreement: String {
         return localized(string: "confidentialityAgreement")
     }
+    
+    static var languageWord: String {
+        return localized(string: "language")
+    }
+    
+    static var turkish: String {
+        return localized(string: "turkish")
+    }
+    
+    static var english: String {
+        return localized(string: "english")
+    }
+    
 }

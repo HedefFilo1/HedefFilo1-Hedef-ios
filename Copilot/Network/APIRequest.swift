@@ -9,7 +9,7 @@ import SystemConfiguration
 
 class Network {
 #if DEV_DEBUG
-    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
+    static let baseUrl: String = "https://copilotapp.hedeffilotest.com:4443/"
 #else
     static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
 #endif

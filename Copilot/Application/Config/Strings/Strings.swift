@@ -337,7 +337,9 @@ struct Strings {
         }
         
         let key = dictionary[string] as? [String: String]
-        let strKey = language == "tr-TR" ? "tr": "tr"
+//        let strKey = language == "tr-TR" ? "tr": "tr"
+        let language = Persistence.language ?? ""
+        let strKey = language == CodeStrings.english ? "en": "tr"
         let value = key?[strKey] ?? ""
         return value
     }

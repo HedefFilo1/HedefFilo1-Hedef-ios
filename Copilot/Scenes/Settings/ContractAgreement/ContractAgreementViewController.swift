@@ -19,7 +19,6 @@ class ContractAgreementViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
 
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
