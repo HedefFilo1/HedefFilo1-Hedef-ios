@@ -10,6 +10,8 @@ import Foundation
 enum NotificationPreferenceType: String, Decodable {
     case campaign = "CAMPAIGN"
     case weather = "WEATHER"
+    case appointmentDate = "APPOINTMENTDATE"
+    case contractPeriod = "CONTRACTPERIOD"
 }
 
 struct NotificationPreference: Decodable {

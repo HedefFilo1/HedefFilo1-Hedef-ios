@@ -88,11 +88,11 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     @IBAction func didTapRandevueSwitch() {
-        
+        viewModel.setNotificationPreferences(type: .appointmentDate, enabled: randevueDateSwitch.isOn)
     }
     
     @IBAction func didTapContractSwitch() {
-        
+        viewModel.setNotificationPreferences(type: .contractPeriod, enabled: contractSwitch.isOn)
     }
     
     @IBAction func didTapCancel() {
@@ -100,7 +100,7 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     @IBAction func didTapSave() {
-        
+        viewModel.getBack()
     }
 }
 
