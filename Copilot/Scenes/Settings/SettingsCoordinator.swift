@@ -27,8 +27,7 @@ class SettingsCoordinator: Coordinator {
         let viewController: SettingsViewController = storyboard.instantiateViewController()
         viewController.viewModel = SettingsViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        navigationController.navigationBar.isHidden = true
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     override func finish() {
