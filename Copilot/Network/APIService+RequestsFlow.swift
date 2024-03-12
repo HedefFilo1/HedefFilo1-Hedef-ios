@@ -43,11 +43,11 @@ extension APIService {
     
     static func sendFile(data: Data, completion: @escaping (Success?, APIResponseError?) -> Void) {
         
-        let str = data.base64EncodedString()
-        
-        var params = [
-            "file": data
-        ]
+//        let str = data.base64EncodedString()
+//        
+//        var params = [
+//            "file": data
+//        ]
         
         let req = APIRequest<Success>(route: "",
                                       method: .post,
@@ -67,7 +67,7 @@ extension APIService {
 //        } catch {
 //            print(error)
 //        }
-        let request =  MultipartRequest.createRequest(data: data)
+//        let request =  MultipartRequest.createRequest(data: data)
 //        req.urlRequest =
 ////        req.start()
 //        AF.upload(multipartFormData: <#T##(MultipartFormData) -> Void#>, to: <#T##URLConvertible#>, requestModifier: <#T##Session.RequestModifier?##Session.RequestModifier?##(inout URLRequest) throws -> Void#>)
@@ -84,8 +84,8 @@ extension APIService {
 //               }
 //           }).resume()
         AF.upload(multipartFormData: { multipartFormData in
-//            multipartFormData.append(data, withName: "file")
-            multipartFormData.append(data, withName: "file", fileName: "somethin.pdf", mimeType: "pdf")
+            multipartFormData.append(data, withName: "file")
+//            multipartFormData.append(data, withName: "file", fileName: "somethin.pdf", mimeType: "pdf")
           
         },
         to: "https://copilotweb.hedeffilotest.com:4443/api/file").responseDecodable(of: Success.self) { response in

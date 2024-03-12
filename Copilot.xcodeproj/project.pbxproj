@@ -104,6 +104,7 @@
 		8934891E2B9FACA1009A3FBB /* ContractAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934891D2B9FACA1009A3FBB /* ContractAgreementViewController.swift */; };
 		893489212BA0375A009A3FBB /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489202BA0375A009A3FBB /* LanguagesViewController.swift */; };
 		893489232BA03761009A3FBB /* LanguagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489222BA03761009A3FBB /* LanguagesViewModel.swift */; };
+		893489252BA0B048009A3FBB /* NotificationPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893489242BA0B048009A3FBB /* NotificationPreference.swift */; };
 		8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */; };
 		8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */; };
 		8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */; };
@@ -559,6 +560,7 @@
 		8934891D2B9FACA1009A3FBB /* ContractAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAgreementViewController.swift; sourceTree = "<group>"; };
 		893489202BA0375A009A3FBB /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		893489222BA03761009A3FBB /* LanguagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewModel.swift; sourceTree = "<group>"; };
+		893489242BA0B048009A3FBB /* NotificationPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPreference.swift; sourceTree = "<group>"; };
 		8934D4DF2B0F917300CD0CA7 /* DocumentPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewModel.swift; sourceTree = "<group>"; };
 		8934D4E12B0F918000CD0CA7 /* DocumentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPopupViewController.swift; sourceTree = "<group>"; };
 		8934D4E42B0F9F6100CD0CA7 /* Vehicle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vehicle.storyboard; sourceTree = "<group>"; };
@@ -2335,6 +2337,7 @@
 				89B790CE2B5FC54900993933 /* GetTireControl.swift */,
 				89B610DD2B6CDB0C0052A417 /* GetEligible.swift */,
 				89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */,
+				893489242BA0B048009A3FBB /* NotificationPreference.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3753,6 +3756,7 @@
 				892A57D22B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
+				893489252BA0B048009A3FBB /* NotificationPreference.swift in Sources */,
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,

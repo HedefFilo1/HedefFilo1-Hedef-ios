@@ -42,6 +42,7 @@ class NotificationSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getPrefrences()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,10 +80,11 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     @IBAction func didTapWeatherSwitch() {
-        
+        viewModel.setNotificationPreferences(type: .weather, enabled: weatherSwitch.isOn)
     }
     
     @IBAction func didTapCampaignSwitch() {
+        viewModel.setNotificationPreferences(type: .campaign, enabled: campaignsSwitch.isOn)
     }
     
     @IBAction func didTapRandevueSwitch() {
@@ -103,5 +105,8 @@ class NotificationSettingsViewController: UIViewController {
 }
 
 extension NotificationSettingsViewController: NotificationSettingsViewModelDelegate {
-    
+    func setPrefernces() {
+        weatherSwitch.isOn = viewModel.weatherEnabled
+        campaignsSwitch.isOn = viewModel.campaignEnabled
+    }
 }

@@ -65,7 +65,7 @@ class LanguagesViewController: SheetViewController {
     }
     
     @IBAction func didTapDismiss() {
-        viewModel.getBack()
+        dismiss(animated: true)
     }
     
     @IBAction func didTapTurkish() {

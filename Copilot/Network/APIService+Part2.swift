@@ -70,4 +70,32 @@ extension APIService {
         req.completion = { _, _ in }
         req.start()
     }
+    
+    static func getNotificationPreferences(completion: @escaping ([NotificationPreference]?, APIResponseError?) -> Void) {
+        let route = "user/notification-preference"
+        let req = APIRequest<[NotificationPreference]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getNotificationPreferences"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
+    static func setNotificationPreferences(type: NotificationPreferenceType,
+                                           enabled: Bool,
+                                           completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "user/notification-preference/\(type.rawValue)"
+        let params = [
+            "enabled": enabled
+        ]
+        
+        let req = APIRequest<Success>(route: route,
+                                      method: .patch,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "setNotificationPreferences"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

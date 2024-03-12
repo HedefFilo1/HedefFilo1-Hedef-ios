@@ -44,6 +44,8 @@ class SettingsViewController: UIViewController {
         applyStyle()
         setTexts()
         //        pointsView.imageView.image = Images.lastikPoints
+        let language = Persistence.language ?? CodeStrings.turkish
+        langaugeLabel.text = language
     }
     
     func applyStyle() {
@@ -79,7 +81,7 @@ class SettingsViewController: UIViewController {
 //            window.overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
 //        }
         
-        App.window.overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
+//        App.window.overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
 //        overrideUserInterfaceStyle = darkModeSwitch.isOn ? .dark: .light
     }
     
