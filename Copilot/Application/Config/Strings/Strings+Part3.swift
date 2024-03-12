@@ -421,4 +421,23 @@ extension Strings {
         return localized(string: "english")
     }
     
+    static var accidentTab: String {
+        return localized(string: "accidentTab")
+    }
+    
+    static var serviceTab: String {
+        return localized(string: "serviceTab")
+    }
+    
+    static var homeTab: String {
+        return localized(string: "homeTab")
+    }
+    
+    static var supportTab: String {
+        return localized(string: "supportTab")
+    }
+    
+    static var moreTab: String {
+        return localized(string: "moreTab")
+    }
 }

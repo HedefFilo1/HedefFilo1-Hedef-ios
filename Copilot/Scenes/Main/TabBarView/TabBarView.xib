@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarView" customModule="Copilot" customModuleProvider="target">
             <connections>
+                <outlet property="accidentLabel" destination="gzW-CS-Rhf" id="swc-0g-0ul"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="DbW-OE-4sb"/>
+                <outlet property="homeLabel" destination="dPj-2O-sOP" id="rDN-b3-lzg"/>
+                <outlet property="moreLabel" destination="dEF-6g-XJk" id="qM6-Z1-U8f"/>
+                <outlet property="serviceLabel" destination="oUG-RT-RvY" id="2Ud-VI-LaB"/>
+                <outlet property="supportLabel" destination="WCr-gI-1Me" id="Xrj-fP-ULt"/>
                 <outletCollection property="imagesViews" destination="x19-YZ-43N" collectionClass="NSMutableArray" id="wiB-W3-d6S"/>
                 <outletCollection property="imagesViews" destination="avJ-Q9-4Id" collectionClass="NSMutableArray" id="grR-WK-UWD"/>
                 <outletCollection property="imagesViews" destination="XVs-Bu-Utw" collectionClass="NSMutableArray" id="7yf-fa-rin"/>

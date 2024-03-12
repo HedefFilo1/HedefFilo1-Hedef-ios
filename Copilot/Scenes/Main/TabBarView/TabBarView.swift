@@ -30,6 +30,11 @@ class TabBarView: UIView {
     
     @IBOutlet var imagesViews: [UIImageView]!
     @IBOutlet var labels: [UILabel]!
+    @IBOutlet weak var accidentLabel: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var supportLabel: UILabel!
+    @IBOutlet weak var moreLabel: UILabel!
     
     private var last = 0
     
@@ -46,6 +51,7 @@ class TabBarView: UIView {
         
         applyStyles()
         changeTab(index: 2)
+        setTexts()
     }
     
     override func awakeFromNib() {
@@ -63,6 +69,14 @@ class TabBarView: UIView {
         for label in labels {
             label.apply(.greyS12R400)
         }
+    }
+    
+    func setTexts() {
+        accidentLabel.text = Strings.accidentTab
+        serviceLabel.text = Strings.serviceTab
+        homeLabel.text = Strings.homeTab
+        supportLabel.text = Strings.supportTab
+        moreLabel.text = Strings.moreTab
     }
     
     func select(tab: Int) {

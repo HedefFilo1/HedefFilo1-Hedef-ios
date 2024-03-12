@@ -3015,44 +3015,45 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>English</string>
         </dict>
         
-        <key></key>
+        <key>accidentTab</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kaza/Hasar</string>
             <key>en</key>
-            <string></string>
+            <string>Accident</string>
         </dict>
         
-        <key></key>
+        <key>serviceTab</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis</string>
             <key>en</key>
-            <string></string>
+            <string>Service</string>
         </dict>
         
-        <key></key>
+        <key>homeTab</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Anasayfa</string>
             <key>en</key>
-            <string></string>
+            <string>Home page</string>
         </dict>
         
-        <key></key>
+        
+        <key>supportTab</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yardım</string>
             <key>en</key>
-            <string></string>
+            <string>Support</string>
         </dict>
         
-        <key></key>
+        <key>moreTab</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Daha Fazla</string>
             <key>en</key>
-            <string></string>
+            <string>More</string>
         </dict>
         
         <key></key>
