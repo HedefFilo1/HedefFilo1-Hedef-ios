@@ -29,7 +29,7 @@ class MenuViewController: PopupViewController {
         
 #if DEV_DEBUG
 //        viewModel.showDocuments()
-        viewModel.showRequests()
+//        viewModel.showRequests()
 #endif
     }
     
@@ -144,6 +144,9 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         case 6:
             viewModel.showServices()
+            
+        case 7:
+            viewModel.showSettings()
             
         default:
             break

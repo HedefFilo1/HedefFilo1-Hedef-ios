@@ -14,16 +14,13 @@ protocol SettingsCoordinatorDelegate: AnyObject {
 
 class SettingsCoordinator: Coordinator {
    
-    lazy var navigationController: UINavigationController = {
-        let navVC = UINavigationController()
-        return navVC
-    }()
+    let navigationController: UINavigationController
     
     let storyboard = UIStoryboard(storyboard: .settings)
-    weak var delegate: AccidentCoordinatorDelegate?
+    weak var delegate: SettingsCoordinatorDelegate?
     
-    init(delegate: AccidentCoordinatorDelegate? = nil) {
-        self.delegate = delegate
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     override func start() {

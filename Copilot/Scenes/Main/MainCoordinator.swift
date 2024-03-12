@@ -54,10 +54,11 @@ class MainCoordinator: Coordinator {
         return viewModel
     }()
     
-    lazy var supportTabCoordinator: SettingsCoordinator = {
-        let coordinator = SettingsCoordinator()
-        coordinator.delegate = self
-        coordinator.start()
+    lazy var supportTabCoordinator: UIViewController = {
+        let coordinator = UIViewController()
+//        coordinator.delegate = self
+//        coordinator.start()
+        coordinator.view.backgroundColor = .white
         return coordinator
     }()
     
@@ -74,7 +75,7 @@ class MainCoordinator: Coordinator {
             accidentCoordinator.navigationController,
             servicesCoordinator.navigationController,
             homeCoordinator.navigationController,
-            supportTabCoordinator.navigationController,
+            supportTabCoordinator,
             menuCoordinator.navigationController
         ]
         addChildCoordinator(homeCoordinator)

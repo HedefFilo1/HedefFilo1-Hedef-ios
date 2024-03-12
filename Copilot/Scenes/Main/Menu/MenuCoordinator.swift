@@ -95,6 +95,13 @@ extension MenuCoordinator: MenuViewModelCoordinatorDelegate {
         coordinator.startWithServices()
     }
     
+    func showSettings() {
+        let coordinator = SettingsCoordinator(navigationController: navigationController)
+        coordinator.delegate = self
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
+    
 }
 
 extension MenuCoordinator: CampaignsViewModelCoordinatorDelegate {
@@ -154,7 +161,8 @@ extension MenuCoordinator: PdfViewerViewModelCoordinatorDelegate {
 
 extension MenuCoordinator: ProfileCoordinatorDelegate,
                            VehicleCoordinatorDelegate,
-                           RequestsCoordinatorDelegate {
+                           RequestsCoordinatorDelegate,
+                           SettingsCoordinatorDelegate {
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
     }
