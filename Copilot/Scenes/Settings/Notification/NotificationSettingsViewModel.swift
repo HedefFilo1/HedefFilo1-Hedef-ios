@@ -41,7 +41,7 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
             return item.enabled
         }
         
-        return false
+        return true
     }
     
     var campaignEnabled: Bool {
@@ -49,7 +49,7 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
             return item.enabled
         }
         
-        return false
+        return true
     }
     
     var appointmentEnabled: Bool {
@@ -57,7 +57,7 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
             return item.enabled
         }
         
-        return false
+        return true
     }
     
     var agreementEnabled: Bool {
@@ -65,7 +65,7 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
             return item.enabled
         }
         
-        return false
+        return true
     }
     
     func getBack() {
