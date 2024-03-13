@@ -6,6 +6,13 @@
 //
 
 import Foundation
+
+enum AccidentReportType: String {
+    case ANLASMALI_TUTANAK = "ANLASMALI_TUTANAK"
+    case ZABIT = "ZABIT"
+    case BEYAN = "BEYAN"
+}
+
 protocol AccidentServicesCrdinatorDlgt: AnyObject {
     
     func getBack()

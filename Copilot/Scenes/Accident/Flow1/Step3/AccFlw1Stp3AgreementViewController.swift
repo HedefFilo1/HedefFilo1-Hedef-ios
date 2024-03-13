@@ -64,10 +64,12 @@ class AccFlw1Stp3AgreementViewController: UIViewController {
     }
     
     @IBAction func didTapYes() {
+        AccidentCoordinator.accidentReportType = .ANLASMALI_TUTANAK
         viewModel.goToAccFlw1Stp4Report()
     }
     
     @IBAction func didTapNo() {
+        AccidentCoordinator.accidentReportType = .ZABIT
         viewModel.goToAccFlw4Stp4NoAgreement()
     }
 

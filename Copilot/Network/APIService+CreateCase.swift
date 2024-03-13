@@ -118,6 +118,7 @@ extension APIService {
     }
     
     static func createAccidentCase(accidentType: String,
+                                   reportType: AccidentReportType,
                                    supplierId: String,
                                    supplierName: String,
                                    supplierPhone: String,
@@ -131,6 +132,7 @@ extension APIService {
         var params = [
             "webCategory": "DAMAGE",
             "accidentType": accidentType,
+            "reportType": reportType.rawValue,
             "supplierId": supplierId,
             "supplierName": supplierName,
             "supplierPhone": supplierPhone,

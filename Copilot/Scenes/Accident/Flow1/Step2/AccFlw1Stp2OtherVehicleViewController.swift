@@ -75,6 +75,7 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     
     @IBAction func didTapNo() {
         AccidentCoordinator.accidentType = .oneSide
+        AccidentCoordinator.accidentReportType = .BEYAN
         viewModel.goToAccFlw5Stp3Declare()
     }
 

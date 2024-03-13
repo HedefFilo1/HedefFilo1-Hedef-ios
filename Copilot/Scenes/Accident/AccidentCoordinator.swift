@@ -15,6 +15,8 @@ protocol AccidentCoordinatorDelegate: AnyObject {
 class AccidentCoordinator: Coordinator {
     
     static var accidentType: AccidentType = .oneSide
+    static var accidentReportType: AccidentReportType = .ANLASMALI_TUTANAK
+    
     lazy var navigationController: UINavigationController = {
         let navVC = UINavigationController()
         return navVC
@@ -133,6 +135,7 @@ extension AccidentCoordinator: AccidentServicesCrdinatorDlgt,
         controller.viewModel.service = service
         controller.viewModel.towTruck = towTruck
         controller.viewModel.accidentType = Self.accidentType
+        controller.viewModel.accidentReportType = Self.accidentReportType
         navigationController.pushViewController(controller, animated: true)
     }
     
