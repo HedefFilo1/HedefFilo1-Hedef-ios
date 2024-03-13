@@ -65,6 +65,11 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var selectFileView: UIView!
     @IBOutlet weak var documentNameLabel: UILabel!
     @IBOutlet weak var selectFileLabel: UILabel!
+    
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var fileNameView: UIView!
+    @IBOutlet weak var closeImageView: UIImageView!
+    
     @IBOutlet weak var createButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -84,6 +89,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         applyStyle()
         setTexts()
         addTextFieldsTargets()
+        hideFileNameView()
     }
     
     func applyStyle() {
@@ -167,6 +173,11 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         addFileLabel.text = Strings.addFile
         documentNameLabel.text = Strings.requiredDocumentName
         selectFileLabel.text = Strings.selectFile
+        
+        fileNameView.layer.cornerRadius = 6
+        fileNameLabel.apply(.blackS14R400)
+        closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
+        closeImageView.tintColor = .greyButton
         createButton.setTitle(Strings.createProcessRequest, for: .normal)
     }
     
@@ -258,6 +269,19 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
                              deliveryPersonPhone: receiverPhoneTextField.text ?? "",
                              deliveryAddress: "")
     }
+    
+    @IBAction func didTapCloseFile() {
+        viewModel.uploadedFileInfo = nil
+        removeSelectedFile()
+    }
+    
+    func hideFileNameView() {
+        fileNameView.heightConstraint?.constant = 0
+    }
+    
+    func showFileNameView() {
+        fileNameView.heightConstraint?.constant = 40
+    }
 }
 
 extension ReqFlw2Stp3VehicleViewController: CPDescriptionTextFieldDelegate {
@@ -271,6 +295,11 @@ extension ReqFlw2Stp3VehicleViewController: UINavigationControllerDelegate, UIIm
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            fileNameLabel.text = url.lastPathComponent
+            showFileNameView()
+            //                fileType = url.pathExtension
+        }
         picker.dismiss(animated: true)
         guard let data = tempImage.pngData() else { return }
         Loading.shared.show(presentingView: self.view)
@@ -298,5 +327,9 @@ extension ReqFlw2Stp3VehicleViewController: UIDocumentPickerDelegate {
 }
 
 extension ReqFlw2Stp3VehicleViewController: ReqFlw2Stp3VehicleViewModelDelegate {
-    
+    func removeSelectedFile() {
+        viewModel.uploadedFileInfo = nil
+        fileNameLabel.text = ""
+        hideFileNameView()
+    }
 }

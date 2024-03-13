@@ -13,12 +13,13 @@ protocol ReqFlw2Stp3VehicleVMCoordinatorDelegate: AnyObject {
 }
 
 protocol ReqFlw2Stp3VehicleViewModelDelegate: BaseViewModelDelegate {
-    
+    func removeSelectedFile()
 }
 
 protocol ReqFlw2Stp3VehicleViewModelType: AnyObject {
     var coordinatorDelegate: ReqFlw2Stp3VehicleVMCoordinatorDelegate? { get set }
     var delegate: ReqFlw2Stp3VehicleViewModelDelegate? { get set }
+    var uploadedFileInfo: UploadRequestFile? { get set }
     func getBack()
     func sendFile(data: Data)
     func createCase(licensePlate: String,
@@ -52,6 +53,7 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
             guard let self = self else { return }
             
             if let error = error {
+                delegate?.removeSelectedFile()
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if let model {

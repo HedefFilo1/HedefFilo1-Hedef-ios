@@ -932,7 +932,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0L-EV-oKm" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="1718.6666666666667" width="345" height="56"/>
+                                                                <rect key="frame" x="0.0" y="1766.6666666666667" width="345" height="56"/>
                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="56" id="Mmk-5i-feW"/>
@@ -946,20 +946,63 @@
                                                                     <action selector="didTapCreate" destination="min-h3-NwR" eventType="touchUpInside" id="sOK-Cy-AKL"/>
                                                                 </connections>
                                                             </button>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNZ-mc-vsj">
+                                                                <rect key="frame" x="0.0" y="1702.6666666666667" width="345" height="40"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-lQ-JTX">
+                                                                        <rect key="frame" x="313" y="8" width="24" height="24"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="24" id="g5V-Tb-xH2"/>
+                                                                            <constraint firstAttribute="width" constant="24" id="kV5-ro-H4d"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVw-VO-yev">
+                                                                        <rect key="frame" x="305" y="0.0" width="40" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="3s3-AB-q55"/>
+                                                                            <constraint firstAttribute="width" constant="40" id="7q9-GP-yHg"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="didTapCloseFile" destination="min-h3-NwR" eventType="touchUpInside" id="gkA-kg-r4E"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AraçTalepBelgesi.png" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-TU-1lW">
+                                                                        <rect key="frame" x="16" y="9.9999999999999982" width="289" height="20.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="lightGreyBackground"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="iVw-VO-yev" firstAttribute="centerY" secondItem="WCw-lQ-JTX" secondAttribute="centerY" id="Jzu-go-O4r"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="Ltp-Zx-zQ7"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="WCw-lQ-JTX" secondAttribute="trailing" constant="8" id="Vg1-c3-nCB"/>
+                                                                    <constraint firstItem="iVw-VO-yev" firstAttribute="leading" secondItem="YRr-TU-1lW" secondAttribute="trailing" id="bzc-HA-Xbf"/>
+                                                                    <constraint firstItem="YRr-TU-1lW" firstAttribute="leading" secondItem="yNZ-mc-vsj" secondAttribute="leading" constant="16" id="c2b-dq-dNN"/>
+                                                                    <constraint firstItem="iVw-VO-yev" firstAttribute="centerX" secondItem="WCw-lQ-JTX" secondAttribute="centerX" id="n7B-Vm-Yba"/>
+                                                                    <constraint firstItem="YRr-TU-1lW" firstAttribute="centerY" secondItem="yNZ-mc-vsj" secondAttribute="centerY" id="qWU-Fi-ar1"/>
+                                                                    <constraint firstItem="WCw-lQ-JTX" firstAttribute="centerY" secondItem="yNZ-mc-vsj" secondAttribute="centerY" id="yEc-iE-4go"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="B0L-EV-oKm" firstAttribute="top" secondItem="yNZ-mc-vsj" secondAttribute="bottom" constant="24" id="3Vr-KY-02u"/>
                                                             <constraint firstItem="MF3-5L-aM5" firstAttribute="top" secondItem="xoh-Sw-ORj" secondAttribute="top" id="6E4-S1-XRm"/>
                                                             <constraint firstAttribute="trailing" secondItem="B0L-EV-oKm" secondAttribute="trailing" id="7iQ-3t-lkc"/>
+                                                            <constraint firstItem="yNZ-mc-vsj" firstAttribute="top" secondItem="MVk-nu-o1Y" secondAttribute="bottom" constant="8" id="GOI-l2-LM2"/>
                                                             <constraint firstAttribute="trailing" secondItem="MVk-nu-o1Y" secondAttribute="trailing" id="Gb4-Fm-jzQ"/>
                                                             <constraint firstItem="7Iv-Ee-8cl" firstAttribute="top" secondItem="MF3-5L-aM5" secondAttribute="bottom" constant="12" id="H0I-L0-49I"/>
                                                             <constraint firstAttribute="trailing" secondItem="4t5-bd-TWj" secondAttribute="trailing" id="Hju-6F-O5n"/>
                                                             <constraint firstItem="CLU-NF-KH9" firstAttribute="top" secondItem="4t5-bd-TWj" secondAttribute="bottom" constant="24" id="KSL-DA-ra7"/>
                                                             <constraint firstItem="MVk-nu-o1Y" firstAttribute="top" secondItem="CLU-NF-KH9" secondAttribute="bottom" constant="12" id="L6F-ng-pOw"/>
                                                             <constraint firstItem="B0L-EV-oKm" firstAttribute="leading" secondItem="xoh-Sw-ORj" secondAttribute="leading" id="LKA-Qe-Bxv"/>
-                                                            <constraint firstItem="B0L-EV-oKm" firstAttribute="top" secondItem="MVk-nu-o1Y" secondAttribute="bottom" constant="24" id="LXn-sQ-BHp"/>
                                                             <constraint firstItem="7Iv-Ee-8cl" firstAttribute="leading" secondItem="xoh-Sw-ORj" secondAttribute="leading" id="MWK-D5-1fs"/>
                                                             <constraint firstItem="4t5-bd-TWj" firstAttribute="top" secondItem="7Iv-Ee-8cl" secondAttribute="bottom" constant="16" id="MsH-ha-uVd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yNZ-mc-vsj" secondAttribute="trailing" id="OTJ-S7-jeI"/>
+                                                            <constraint firstItem="yNZ-mc-vsj" firstAttribute="leading" secondItem="xoh-Sw-ORj" secondAttribute="leading" id="aIv-1X-Dp7"/>
                                                             <constraint firstAttribute="trailing" secondItem="7Iv-Ee-8cl" secondAttribute="trailing" id="eFs-Le-NQo"/>
                                                             <constraint firstItem="MVk-nu-o1Y" firstAttribute="leading" secondItem="xoh-Sw-ORj" secondAttribute="leading" id="iXe-6D-hFp"/>
                                                             <constraint firstItem="4t5-bd-TWj" firstAttribute="leading" secondItem="xoh-Sw-ORj" secondAttribute="leading" id="lZq-y5-0XN"/>
@@ -1017,10 +1060,13 @@
                         <outlet property="addFileLabel" destination="CLU-NF-KH9" id="eft-l6-0Mg"/>
                         <outlet property="cityLabel" destination="3Yh-w8-2l0" id="OnL-AO-C7R"/>
                         <outlet property="cityList" destination="HIx-b2-QvS" id="Wrq-Zj-Uii"/>
+                        <outlet property="closeImageView" destination="WCw-lQ-JTX" id="zia-V2-DkM"/>
                         <outlet property="createButton" destination="B0L-EV-oKm" id="fOK-Yz-gdh"/>
                         <outlet property="documentNameLabel" destination="1NA-li-1BE" id="yhN-YP-p9Q"/>
                         <outlet property="emailLabel" destination="XNv-Ye-cqG" id="hg7-Gg-VIf"/>
                         <outlet property="emailTextField" destination="EEu-7x-fms" id="zmH-Pc-NJd"/>
+                        <outlet property="fileNameLabel" destination="YRr-TU-1lW" id="9La-m5-XJt"/>
+                        <outlet property="fileNameView" destination="yNZ-mc-vsj" id="gC7-UX-VQk"/>
                         <outlet property="nameLabel" destination="5uP-Ij-mXc" id="qT9-6e-WXt"/>
                         <outlet property="nameTextField" destination="u5j-vV-Sdk" id="iMD-Um-M6h"/>
                         <outlet property="noteLabel" destination="MF3-5L-aM5" id="EAZ-su-vQa"/>
@@ -2882,6 +2928,7 @@
     <resources>
         <image name="backIcon" width="24" height="24"/>
         <image name="circleCheck" width="40.333332061767578" height="40"/>
+        <image name="closeIcon" width="24" height="24"/>
         <image name="uploadIcon" width="24.333333969116211" height="24"/>
         <namedColor name="exactGrey">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2891,6 +2938,9 @@
         </namedColor>
         <namedColor name="lightGreen">
             <color red="0.75294117647058822" green="0.92549019607843142" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGreyBackground">
+            <color red="0.96470588235294119" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="theme">
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

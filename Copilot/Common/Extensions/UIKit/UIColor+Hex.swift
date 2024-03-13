@@ -84,6 +84,12 @@ extension UIColor {
     /// #5B6871
     static let dashedBorder = UIColor(named: "dashedBorder") ?? .yellow
     
+    /// #F6F8F9
+    static let lightGreyBackground = UIColor(named: "lightGreyBackground") ?? .yellow
+    
+    /// #9AA6AC
+    static let greyButton = UIColor(named: "greyButton") ?? .yellow
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
