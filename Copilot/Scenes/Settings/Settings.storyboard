@@ -468,7 +468,7 @@
                                                                             <constraint firstAttribute="height" constant="1" id="EW7-GU-FZt"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-gX-48e" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-gX-48e" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="386.66666666666663" width="345" height="56"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="56" id="wSG-2g-PaV"/>

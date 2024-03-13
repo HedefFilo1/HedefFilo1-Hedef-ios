@@ -31,8 +31,8 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var phoneTextField: CPTextField!
     
-    @IBOutlet weak var plakLabel: UILabel!
-    @IBOutlet weak var plakTextField: CPTextField!
+    @IBOutlet weak var plateLabel: UILabel!
+    @IBOutlet weak var plateTextField: CPTextField!
     
     @IBOutlet weak var reasonLabel: UILabel!
     @IBOutlet weak var reasonTextField: CPTextField!
@@ -92,7 +92,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         nameLabel.apply(.blackS14R400)
         emailLabel.apply(.blackS14R400)
         phoneLabel.apply(.blackS14R400)
-        plakLabel.apply(.blackS14R400)
+        plateLabel.apply(.blackS14R400)
         reasonLabel.apply(.blackS14R400)
         trafficNameLabel.apply(.blackS14R400)
         trafficPhoneLabel.apply(.blackS14R400)
@@ -110,7 +110,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        var array = [nameTextField, emailTextField, phoneTextField, plakTextField, reasonTextField, trafficNameTextField]
+        var array = [nameTextField, emailTextField, phoneTextField, plateTextField, reasonTextField, trafficNameTextField]
         
         array.append(contentsOf: [trafficPhoneTextField, parkNameTextField, parkPhoneTextField, receiverNameTextField, receiverPhoneTextField, receiverTCKNTextField])
         for item in array {
@@ -134,8 +134,8 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         phoneLabel.text = Strings.yourMobilePhone
         phoneTextField.placeholder = Strings.enterYourMobilePhone
         
-        plakLabel.text = Strings.yourLicensePlate
-        plakTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = Strings.yourLicensePlate
+        plateTextField.placeholder = Strings.enterYourLicensePlate
         
         reasonLabel.text = Strings.reasonConnectingVehicle
         reasonTextField.placeholder = Strings.enterReasonConnectingVehicle
@@ -192,7 +192,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        plakTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        plateTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         reasonTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         trafficNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         trafficPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -214,7 +214,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         let name = nameTextField.pureTextCount > 0
         let email = emailTextField.pureTextCount > 0
         let phone = phoneTextField.pureTextCount > 0
-        let plak = plakTextField.pureTextCount > 0
+        let plak = plateTextField.pureTextCount > 0
         let reason = reasonTextField.pureTextCount > 0
         let trafficName = trafficNameTextField.pureTextCount > 0
         let trafficPhone = trafficPhoneTextField.pureTextCount > 0
@@ -233,9 +233,30 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     @IBAction func didTapSendFile() {
-        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-        documentPicker.delegate = self
-        present(documentPicker, animated: true, completion: nil)
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCreate() {
+        let reason = reasonTextField.text ?? ""
+        viewModel.createCase(licensePlate: plateTextField.text ?? "",
+                             note: noteTextField.text,
+                             nameSurname: nameTextField.text ?? "",
+                             impoundCarReason: reason,
+                             description: "",
+                             trafficBranchName: trafficNameTextField.text ?? "",
+                             trafficBranchPhone: trafficPhoneLabel.text ?? "",
+                             carParkName: parkNameTextField.text ?? "",
+                             carParkPhone: parkPhoneTextField.text ?? "",
+                             deliveryPersonName: receiverNameTextField.text ?? "",
+                             deliveryPersonPhone: receiverPhoneTextField.text ?? "",
+                             deliveryAddress: "")
     }
 }
 
@@ -245,13 +266,30 @@ extension ReqFlw2Stp3VehicleViewController: CPDescriptionTextFieldDelegate {
     }
 }
 
+extension ReqFlw2Stp3VehicleViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        picker.dismiss(animated: true)
+        guard let data = tempImage.pngData() else { return }
+        Loading.shared.show(presentingView: self.view)
+        viewModel.sendFile(data: data)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
 extension ReqFlw2Stp3VehicleViewController: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let selectedFileURL = urls.first else { return }
         
         guard let data = try? Data(contentsOf: selectedFileURL) else { return }
-        viewModel.sendFile(data: data) 
+        viewModel.sendFile(data: data)
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {

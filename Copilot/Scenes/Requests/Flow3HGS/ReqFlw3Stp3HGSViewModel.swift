@@ -61,6 +61,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                     receiverPersonPhone: String,
                     deliveryAddress: String) {
         
+        Loading.shared.show()
         APIService.createHGSCase(licensePlate: licensePlate,
                                  note: note,
                                  nameSurname: nameSurname,
@@ -74,7 +75,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
             if let error = error {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
-            } else if let model {
+            } else if model != nil {
                 coordinatorDelegate?.goToSuccess()
             }
         }

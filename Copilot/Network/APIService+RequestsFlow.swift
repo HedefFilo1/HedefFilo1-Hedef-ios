@@ -64,7 +64,7 @@ extension APIService {
             case .success(let model):
                 completion(model, nil)
                 
-            case .failure(_):
+            case .failure:
                 let resError = APIResponseError(code: "777", title: "Upload Error", message: "Please Check your file and its Size.")
                 completion(nil, resError)
             }

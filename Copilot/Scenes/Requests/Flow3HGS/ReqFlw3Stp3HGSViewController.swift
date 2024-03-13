@@ -234,7 +234,7 @@ extension ReqFlw3Stp3HGSViewController: UIDocumentPickerDelegate {
 extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         picker.dismiss(animated: true)
         guard let data = tempImage.pngData() else { return }
