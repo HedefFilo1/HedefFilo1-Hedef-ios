@@ -46,7 +46,7 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
     var towTruck: Bool = false
     var service: Supplier?
     var accidentType: AccidentType = .oneSide
-    var accidentReportType: AccidentReportType = .ANLASMALI_TUTANAK
+    var accidentReportType: AccidentReportType = .anlasmalITutanak
     
     func getBack() {
         coordinatorDelegate?.getBack()

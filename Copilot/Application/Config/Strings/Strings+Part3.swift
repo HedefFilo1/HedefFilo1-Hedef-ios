@@ -440,4 +440,8 @@ extension Strings {
     static var moreTab: String {
         return localized(string: "moreTab")
     }
+    
+    static var keepPoliceReport: String {
+        return localized(string: "keepPoliceReport")
+    }
 }

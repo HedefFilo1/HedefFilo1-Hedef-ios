@@ -23,6 +23,7 @@ protocol AccidentSuccessRandevuViewModelType: AnyObject {
     var date: Date? { get set }
     var displayDate: String? { get }
     var accidentType: AccidentType { get set }
+    var accidentReportType: AccidentReportType { get set }
     func getBack()
     func getBackToHome()
 }
@@ -34,6 +35,7 @@ class AccidentSuccessRandevuViewModel: AccidentSuccessRandevuViewModelType {
     var service: Supplier?
     var date: Date?
     var accidentType: AccidentType = .oneSide
+    var accidentReportType: AccidentReportType = .anlasmalITutanak
     
     var displayDate: String? {
         guard let date = date else { return nil }

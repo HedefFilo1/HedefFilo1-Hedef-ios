@@ -3056,12 +3056,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>More</string>
         </dict>
         
-        <key></key>
+        <key>keepPoliceReport</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen kazaya ilişkin polis zabıtı tutulduğundan emin olunuz.</string>
             <key>en</key>
-            <string></string>
+            <string>Please ensure that a police report of the accident is kept.</string>
         </dict>
         
         <key></key>

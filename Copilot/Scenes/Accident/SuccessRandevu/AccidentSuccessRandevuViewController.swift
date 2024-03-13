@@ -77,8 +77,14 @@ class AccidentSuccessRandevuViewController: UIViewController {
         if viewModel.date != nil {
             desciptionLabel.text = ""
         }
-        messageLabel.text = Strings.keepReportOfAccident
-        if viewModel.accidentType == .oneSide {
+        
+        if viewModel.accidentReportType == .anlasmalITutanak {
+            messageLabel.text = Strings.keepReportOfAccident
+            
+        } else if viewModel.accidentReportType == .zabit {
+            messageLabel.text = Strings.keepPoliceReport
+            
+        } else if viewModel.accidentReportType == .beyan {
             messageLabel.text = Strings.keepStatementOfAccident
         }
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)

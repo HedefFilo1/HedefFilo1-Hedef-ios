@@ -8,9 +8,9 @@
 import Foundation
 
 enum AccidentReportType: String {
-    case ANLASMALI_TUTANAK = "ANLASMALI_TUTANAK"
-    case ZABIT = "ZABIT"
-    case BEYAN = "BEYAN"
+    case anlasmalITutanak = "ANLASMALI_TUTANAK"
+    case zabit = "ZABIT"
+    case beyan = "BEYAN"
 }
 
 protocol AccidentServicesCrdinatorDlgt: AnyObject {
