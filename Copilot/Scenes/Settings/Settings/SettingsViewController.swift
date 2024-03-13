@@ -25,6 +25,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var langaugesView: UIView!
     @IBOutlet weak var langaugeLabel: UILabel!
+    @IBOutlet weak var flagImageView: UIImageView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -46,6 +47,7 @@ class SettingsViewController: UIViewController {
         //        pointsView.imageView.image = Images.lastikPoints
         let language = Persistence.language ?? CodeStrings.turkish
         langaugeLabel.text = language
+        flagImageView.image = language == CodeStrings.turkish ? Images.circleTurkeyFlag: Images.circleEnglishFlag
     }
     
     func applyStyle() {

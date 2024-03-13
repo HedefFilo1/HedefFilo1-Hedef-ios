@@ -9,6 +9,7 @@ import Foundation
 
 protocol ReqFlw2Stp3VehicleVMCoordinatorDelegate: AnyObject {
     func getBack()
+    func goToSuccess()
 }
 
 protocol ReqFlw2Stp3VehicleViewModelDelegate: BaseViewModelDelegate {
@@ -26,6 +27,7 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
     
     weak var coordinatorDelegate: ReqFlw2Stp3VehicleVMCoordinatorDelegate?
     weak var delegate: ReqFlw2Stp3VehicleViewModelDelegate?
+    var uploadedFileInfo: UploadRequestFile?
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -33,7 +35,6 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
     
     func sendFile(data: Data) {
         
-        Loading.shared.show()
         APIService.sendFile(data: data) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
@@ -42,8 +43,36 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if let model {
-                print(model)
+                self.uploadedFileInfo = model
             }
         }
     }
+    
+    func createCase(licensePlate: String,
+                    note: String,
+                    nameSurname: String,
+                    receiverPersonName: String,
+                    receiverPersonPhone: String,
+                    deliveryAddress: String) {
+        
+//        APIService.create(licensePlate: licensePlate,
+//                                 note: note,
+//                                 nameSurname: nameSurname,
+//                                 receiverPersonName: receiverPersonName,
+//                                 receiverPersonPhone: receiverPersonPhone,
+//                                 deliveryAddress: deliveryAddress,
+//                                 fileInfo: uploadedFileInfo) { [weak self] model, error in
+//            Loading.shared.hide()
+//            guard let self = self else { return }
+//            
+//            if let error = error {
+//                self.delegate?.showError(title: Strings.errorTitle,
+//                                         message: error.message)
+//            } else if let model {
+//                coordinatorDelegate?.goToSuccess()
+//            }
+//        }
+    }
+    
+    
 }

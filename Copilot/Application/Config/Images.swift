@@ -157,4 +157,12 @@ struct Images {
     static var calendarIcon: UIImage {
         return UIImage(named: "calendarIcon") ?? UIImage()
     }
+    
+    static var circleTurkeyFlag: UIImage {
+        return UIImage(named: "circleTurkeyFlag") ?? UIImage()
+    }
+    
+    static var circleEnglishFlag: UIImage {
+        return UIImage(named: "circleEnglishFlag") ?? UIImage()
+    }
 }

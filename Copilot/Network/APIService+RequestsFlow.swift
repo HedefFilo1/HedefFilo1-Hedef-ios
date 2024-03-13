@@ -107,4 +107,52 @@ extension APIService {
         req.start()
     }
     
+    static func createVehicleCase(licensePlate: String,
+                                  note: String,
+                                  nameSurname: String,
+                                  impoundCarReason: String,
+                                  description: String,
+                                  trafficBranchName: String,
+                                  trafficBranchPhone: String,
+                                  carParkName: String,
+                                  carParkPhone: String,
+                                  deliveryPersonName: String,
+                                  deliveryPersonPhone: String,
+                                  deliveryAddress: String,
+                                  fileInfo: UploadRequestFile?,
+                                  completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "case/request"
+        var params = [
+            "webCategory": "OCCUPIED_VEHICLE",
+            "licensePlate": licensePlate,
+            "note": note,
+            "nameSurname": nameSurname,
+            "impoundCarReason": impoundCarReason,
+            "description": description,
+            "trafficBranchName": trafficBranchName,
+            "trafficBranchPhone": trafficBranchPhone,
+            "carParkName": carParkName,
+            "carParkPhone": carParkPhone,
+            "deliveryPersonName": deliveryPersonName,
+            "deliveryPersonPhone": deliveryPersonPhone,
+            "deliveryAddress": deliveryAddress
+        ] as [String: Any]
+        
+        if let fileInfo {
+            params["files"] = [
+                "originalFilename": fileInfo.originalFilename,
+                "filename": fileInfo.filename,
+            ]
+        }
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "CreateVehicleCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
 }
