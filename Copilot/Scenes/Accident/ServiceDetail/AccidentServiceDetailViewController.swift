@@ -51,7 +51,7 @@ class AccidentServiceDetailVController: UIViewController {
         }
         
         #if DEV_DEBUG
-        viewModel.coordinatorDelegate?.goToAccidentSuccessRandevu(service: viewModel.service!, date: nil, accidentType: viewModel.accidentType)
+//        viewModel.coordinatorDelegate?.goToAccidentSuccessRandevu(service: viewModel.service!, date: nil, accidentType: viewModel.accidentType)
         #endif
     }
     
