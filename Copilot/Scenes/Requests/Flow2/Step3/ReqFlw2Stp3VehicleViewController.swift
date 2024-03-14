@@ -35,7 +35,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var plateTextField: CPTextField!
     
     @IBOutlet weak var reasonLabel: UILabel!
-    @IBOutlet weak var reasonTextField: CPTextField!
+    @IBOutlet weak var reasonList: CPDropDownList!
     
     @IBOutlet weak var trafficNameLabel: UILabel!
     @IBOutlet weak var trafficNameTextField: CPTextField!
@@ -116,13 +116,26 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        var array = [nameTextField, emailTextField, phoneTextField, plateTextField, reasonTextField, trafficNameTextField]
+        var array = [nameTextField, emailTextField, phoneTextField, plateTextField, trafficNameTextField]
         
         array.append(contentsOf: [trafficPhoneTextField, parkNameTextField, parkPhoneTextField, receiverNameTextField, receiverPhoneTextField, receiverTCKNTextField])
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
             item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         }
+        
+        phoneTextField.keyboardType = .phonePad
+        trafficPhoneTextField.keyboardType = .phonePad
+        parkPhoneTextField.keyboardType = .phonePad
+        receiverPhoneTextField.keyboardType = .phonePad
+        
+        reasonList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        reasonList.titleLabelTop?.constant = 16
+        reasonList.titleLabel.apply(.custom(.textFieldGreyText, .regular, 14))
+        
+        cityList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        cityList.titleLabelTop?.constant = 16
+        cityList.titleLabel.apply(.custom(.textFieldGreyText, .regular, 14))
     }
     
     func setTexts() {
@@ -144,7 +157,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         plateTextField.placeholder = Strings.enterYourLicensePlate
         
         reasonLabel.text = Strings.reasonConnectingVehicle
-        reasonTextField.placeholder = Strings.enterReasonConnectingVehicle
+        reasonList.title = Strings.enterReasonConnectingVehicle
         
         trafficNameLabel.text = Strings.trafficBranchName
         trafficNameTextField.placeholder = Strings.enterTrafficBranchName
@@ -199,12 +212,13 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     func addTextFieldsTargets() {
         
         noteTextField.delegate = self
+        reasonList.delegate = self
+        cityList.delegate = self
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         plateTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        reasonTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         trafficNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         trafficPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
@@ -226,7 +240,8 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         let email = emailTextField.pureTextCount > 0
         let phone = phoneTextField.pureTextCount > 0
         let plak = plateTextField.pureTextCount > 0
-        let reason = reasonTextField.pureTextCount > 0
+        let reason = reasonList.hasSelectedItem
+        let city = cityList.hasSelectedItem
         let trafficName = trafficNameTextField.pureTextCount > 0
         let trafficPhone = trafficPhoneTextField.pureTextCount > 0
         let parkName = parkNameTextField.pureTextCount > 0
@@ -235,7 +250,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         let receiverPhone = receiverPhoneTextField.pureTextCount > 0
         let receiverTCKN = receiverTCKNTextField.pureTextCount > 0
         
-        let result = note && name && email && phone && plak && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN
+        let result = note && name && email && phone && plak && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN && city
         createButton.isEnabled = result
     }
     
@@ -255,7 +270,11 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     @IBAction func didTapCreate() {
-        let reason = reasonTextField.text ?? ""
+        guard let reasonIndex = reasonList.selectedIndex,
+        let cityIndex = cityList.selectedIndex else { return }
+        let reason = viewModel.reasons[reasonIndex].field
+        let city = viewModel.cities[cityIndex].name
+        
         viewModel.createCase(licensePlate: plateTextField.text ?? "",
                              note: noteTextField.text,
                              nameSurname: nameTextField.text ?? "",
@@ -267,6 +286,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
                              carParkPhone: parkPhoneTextField.text ?? "",
                              deliveryPersonName: receiverNameTextField.text ?? "",
                              deliveryPersonPhone: receiverPhoneTextField.text ?? "",
+                             city: city,
                              deliveryAddress: "")
     }
     
@@ -323,6 +343,46 @@ extension ReqFlw2Stp3VehicleViewController: UIDocumentPickerDelegate {
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         // User cancelled the document picker
+    }
+}
+
+extension ReqFlw2Stp3VehicleViewController: CPDropDownListDelegate {
+    func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
+        return view
+    }
+    
+    func numberOfItems(in dropDownList: CPDropDownList) -> Int {
+        if dropDownList == cityList {
+            return viewModel.cities.count
+        }
+        return viewModel.reasons.count
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, titleFor index: Int) -> String {
+        if dropDownList == cityList {
+            return viewModel.cities[index].name
+        }
+        return viewModel.reasons[index].title
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, didSelect index: Int) {
+        setButtonActivation()
+    }
+    
+    func willOpen(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func willDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func didDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, shouldSelect index: Int) -> Bool {
+        false
     }
 }
 

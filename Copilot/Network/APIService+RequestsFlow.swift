@@ -92,10 +92,10 @@ extension APIService {
         ] as [String: Any]
         
         if let fileInfo {
-            params["files"] = [
+            params["files"] = [[
                 "originalFilename": fileInfo.originalFilename,
-                "filename": fileInfo.filename,
-            ]
+                "filename": fileInfo.filename
+            ]]
         }
         let req = APIRequest<Success>(route: route,
                                       method: .post,
@@ -118,6 +118,7 @@ extension APIService {
                                   carParkPhone: String,
                                   deliveryPersonName: String,
                                   deliveryPersonPhone: String,
+                                  city: String,
                                   deliveryAddress: String,
                                   fileInfo: UploadRequestFile?,
                                   completion: @escaping (Success?, APIResponseError?) -> Void) {
@@ -129,21 +130,24 @@ extension APIService {
             "note": note,
             "nameSurname": nameSurname,
             "impoundCarReason": impoundCarReason,
-            "description": description,
+//            "description": description,
             "trafficBranchName": trafficBranchName,
             "trafficBranchPhone": trafficBranchPhone,
             "carParkName": carParkName,
             "carParkPhone": carParkPhone,
             "deliveryPersonName": deliveryPersonName,
             "deliveryPersonPhone": deliveryPersonPhone,
-            "deliveryAddress": deliveryAddress
+            "city": city
+//            "deliveryAddress": deliveryAddress
         ] as [String: Any]
         
         if let fileInfo {
-            params["files"] = [
+            let object = [
                 "originalFilename": fileInfo.originalFilename,
-                "filename": fileInfo.filename,
+                "filename": fileInfo.filename
             ]
+            let list = [object]
+            params["files"] = list
         }
         let req = APIRequest<Success>(route: route,
                                       method: .post,

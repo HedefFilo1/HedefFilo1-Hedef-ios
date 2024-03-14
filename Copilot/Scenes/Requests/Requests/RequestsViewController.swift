@@ -30,7 +30,7 @@ class RequestsViewController: UIViewController {
         setupUI()
         
 #if DEV_DEBUG
-        
+        viewModel.goToReqFlw2Stp2Questions()
 #endif
     }
     

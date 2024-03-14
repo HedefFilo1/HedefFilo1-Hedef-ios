@@ -85,7 +85,7 @@ class TireOperationsViewModel: TireOperationsViewModelType {
     
     func getTire() {
         Loading.shared.show()
-        APIService.getTire { [weak self] model, error in
+        APIService.getTire { [weak self] model, _ in
             Loading.shared.hide()
             guard let self = self else { return }
             

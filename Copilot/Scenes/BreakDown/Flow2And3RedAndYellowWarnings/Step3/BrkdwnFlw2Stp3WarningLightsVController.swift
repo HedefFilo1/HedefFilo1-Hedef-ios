@@ -151,7 +151,7 @@ extension BrkdwnFlw2Stp3WarningLightsVController: UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            var item = viewModel.warnings[indexPath.item]
+            let item = viewModel.warnings[indexPath.item]
             item.selected = true
             viewModel.goToBrkdwnFlw2Stp4SelectedWarnings(item: item)
         }

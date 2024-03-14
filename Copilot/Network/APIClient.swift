@@ -34,7 +34,6 @@ final class APIClient {
         }
     }
     
-    // swiftlint:disable cyclomatic_complexity
     func handleRespone<T: Decodable>(request: APIRequest<T>,
                                      data: Data?,
                                      response: HTTPURLResponse?,
@@ -150,7 +149,4 @@ final class APIClient {
         }
         
     }
-    
-    // swiftlint:enable cyclomatic_complexity
-    
 }

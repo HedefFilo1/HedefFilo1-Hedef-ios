@@ -32,7 +32,7 @@ class CPDropDownList: UIView {
     private var hasDropDownAdded = false
     
     let headView = UIView()
-    private let titleLabel = UILabel()
+    let titleLabel = UILabel()
     let valueLabel = UILabel()
     private let chevronImageView = UIImageView()
     var titleLabelTop: NSLayoutConstraint?

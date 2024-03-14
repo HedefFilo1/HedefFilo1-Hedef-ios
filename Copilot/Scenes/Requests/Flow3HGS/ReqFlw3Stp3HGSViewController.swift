@@ -90,7 +90,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        var array = [nameTextField, emailTextField, phoneTextField, plakTextField, proccessTextField, receiverNameTextField, receiverPhoneTextField]
+        let array = [nameTextField, emailTextField, phoneTextField, plakTextField, proccessTextField, receiverNameTextField, receiverPhoneTextField]
         
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
