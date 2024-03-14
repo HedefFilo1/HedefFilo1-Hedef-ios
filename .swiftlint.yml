@@ -10,6 +10,7 @@ function_parameter_count: 20
 type_body_length: 500
 cyclomatic_complexity: 15
 type_name: 50
+file_length: 500
 
 disabled_rules:
   - trailing_whitespace

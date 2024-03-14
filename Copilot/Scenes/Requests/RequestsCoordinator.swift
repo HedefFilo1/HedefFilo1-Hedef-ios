@@ -38,7 +38,11 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw3Stp3HGSVMCoordinatorDelegate,
                                ReqFlw4Stp3PlateVMCoordinatorDelegate,
                                ReqFlw5Stp3LicenseVMCoordinatorDelegate,
-                               ReqFlw6Stp3InspectionVMCoordinatorDelegate {
+                               ReqFlw6Stp3InspectionVMCrdntrDelegate {
+    func goToSuccess() {
+        
+    }
+
     func getBackToHome() {
         self.navigationController.select(tab: 2)
         navigationController.popToRootViewController(animated: true)
@@ -64,7 +68,7 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToSuccess() {
+    func goToSuccess(title: String) {
         let controller: RequestSuccessViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestSuccessViewModel()
         controller.viewModel.coordinatorDelegate = self

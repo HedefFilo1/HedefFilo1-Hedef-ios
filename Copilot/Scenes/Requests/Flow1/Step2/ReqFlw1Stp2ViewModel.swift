@@ -14,7 +14,7 @@ struct MockRequestFlow1Item {
 
 protocol ReqFlw1Stp2ViewModelCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess()
+    func goToSuccess(title: String)
 }
 
 protocol ReqFlw1Stp2ViewModelDelegate: BaseViewModelDelegate {
@@ -72,6 +72,6 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     }
     
     func goToSuccess() {
-        coordinatorDelegate?.goToSuccess()
+        coordinatorDelegate?.goToSuccess(title: Strings.productAndServiceRequests)
     }
 }

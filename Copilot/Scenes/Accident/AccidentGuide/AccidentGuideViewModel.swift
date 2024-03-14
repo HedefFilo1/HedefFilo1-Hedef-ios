@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AccidentGuideViewModelCoordinatorDelegate: AnyObject {
+protocol AccidentGuideVMCoordinatorDelegate: AnyObject {
     func getBack()
 }
 
@@ -16,14 +16,14 @@ protocol AccidentGuideViewModelDelegate: AnyObject {
 }
 
 protocol AccidentGuideViewModelType: AnyObject {
-    var coordinatorDelegate: AccidentGuideViewModelCoordinatorDelegate? { get set }
+    var coordinatorDelegate: AccidentGuideVMCoordinatorDelegate? { get set }
     var delegate: AccidentGuideViewModelDelegate? { get set }
     func getBack()
 }
 
 class AccidentGuideViewModel: AccidentGuideViewModelType {
     
-    weak var coordinatorDelegate: AccidentGuideViewModelCoordinatorDelegate?
+    weak var coordinatorDelegate: AccidentGuideVMCoordinatorDelegate?
     weak var delegate: AccidentGuideViewModelDelegate?
     
     func getBack() {

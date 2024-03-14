@@ -10,6 +10,10 @@ import UIKit
 
 class CPPhoneTextField: CPEmailTextField {
     
+    var number: String {
+        return text?.components(separatedBy: .whitespaces).joined() ?? ""
+    }
+    
     override func validate() -> Bool {
         return pureTextCount == 11
     }

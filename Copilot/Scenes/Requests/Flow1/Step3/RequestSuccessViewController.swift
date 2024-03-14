@@ -55,6 +55,7 @@ class RequestSuccessViewController: UIViewController {
 //        descriptionLabel.text = Strings.requestLastikResultText
 //        requestsButton.setTitle(Strings.goToRequests, for: .normal)
 //        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
+        titleLabel.text = viewModel.title
     }
     
     @IBAction func didTapClose() {

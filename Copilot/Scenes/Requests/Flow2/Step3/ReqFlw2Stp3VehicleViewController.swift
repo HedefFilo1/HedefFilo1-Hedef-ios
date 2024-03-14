@@ -26,10 +26,10 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPTextField!
+    @IBOutlet weak var emailTextField: CPEmailTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var plateTextField: CPTextField!
@@ -41,19 +41,19 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var trafficNameTextField: CPTextField!
     
     @IBOutlet weak var trafficPhoneLabel: UILabel!
-    @IBOutlet weak var trafficPhoneTextField: CPTextField!
+    @IBOutlet weak var trafficPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var parkNameLabel: UILabel!
     @IBOutlet weak var parkNameTextField: CPTextField!
     
     @IBOutlet weak var parkPhoneLabel: UILabel!
-    @IBOutlet weak var parkPhoneTextField: CPTextField!
+    @IBOutlet weak var parkPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: CPTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPTextField!
+    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var receiverTCKNLabel: UILabel!
     @IBOutlet weak var receiverTCKNTextField: CPTextField!
@@ -79,6 +79,10 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        #if DEV_DEBUG
+        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
+        #endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -214,6 +218,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         noteTextField.delegate = self
         reasonList.delegate = self
         cityList.delegate = self
+        receiverTCKNTextField.delegate = self
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -237,17 +242,17 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount > 0
+        let email = emailTextField.isValidText
+        let phone = phoneTextField.isValidText
         let plak = plateTextField.pureTextCount > 0
         let reason = reasonList.hasSelectedItem
         let city = cityList.hasSelectedItem
         let trafficName = trafficNameTextField.pureTextCount > 0
-        let trafficPhone = trafficPhoneTextField.pureTextCount > 0
+        let trafficPhone = trafficPhoneTextField.isValidText
         let parkName = parkNameTextField.pureTextCount > 0
-        let parkPhone = parkPhoneTextField.pureTextCount > 0
+        let parkPhone = parkPhoneTextField.isValidText
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverPhone = receiverPhoneTextField.pureTextCount > 0
+        let receiverPhone = receiverPhoneTextField.isValidText
         let receiverTCKN = receiverTCKNTextField.pureTextCount > 0
         
         let result = note && name && email && phone && plak && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN && city
@@ -271,7 +276,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     
     @IBAction func didTapCreate() {
         guard let reasonIndex = reasonList.selectedIndex,
-        let cityIndex = cityList.selectedIndex else { return }
+              let cityIndex = cityList.selectedIndex else { return }
         let reason = viewModel.reasons[reasonIndex].field
         let city = viewModel.cities[cityIndex].name
         
@@ -281,11 +286,11 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
                              impoundCarReason: reason,
                              description: "",
                              trafficBranchName: trafficNameTextField.text ?? "",
-                             trafficBranchPhone: trafficPhoneLabel.text ?? "",
+                             trafficBranchPhone: trafficPhoneTextField.number,
                              carParkName: parkNameTextField.text ?? "",
-                             carParkPhone: parkPhoneTextField.text ?? "",
+                             carParkPhone: parkPhoneTextField.number,
                              deliveryPersonName: receiverNameTextField.text ?? "",
-                             deliveryPersonPhone: receiverPhoneTextField.text ?? "",
+                             deliveryPersonPhone: receiverPhoneTextField.number,
                              city: city,
                              deliveryAddress: "")
     }
@@ -383,6 +388,13 @@ extension ReqFlw2Stp3VehicleViewController: CPDropDownListDelegate {
     
     func CPDropDownList(_ dropDownList: CPDropDownList, shouldSelect index: Int) -> Bool {
         false
+    }
+}
+
+extension ReqFlw2Stp3VehicleViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.isEmpty { return true }
+        return range.location < 11
     }
 }
 

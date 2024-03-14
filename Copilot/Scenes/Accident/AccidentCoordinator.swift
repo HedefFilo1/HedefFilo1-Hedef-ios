@@ -50,7 +50,7 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccFlw1Stp5LeaksVMCrdinatorDlgt,
                                AccFlw1Stp6ConfirmVMCrdinatorDlgt,
                                AccFlw1Stp7SelectServiceVMCrdinatorDlgt,
-                               AccidentGuideViewModelCoordinatorDelegate {
+                               AccidentGuideVMCoordinatorDelegate {
     
     func getBack() {
         navigationController.popViewController(animated: true)

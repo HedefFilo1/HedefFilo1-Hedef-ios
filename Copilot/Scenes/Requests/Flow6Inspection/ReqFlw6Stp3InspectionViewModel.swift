@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ReqFlw6Stp3InspectionVMCoordinatorDelegate: AnyObject {
+protocol ReqFlw6Stp3InspectionVMCrdntrDelegate: AnyObject {
     func getBack()
 }
 
@@ -16,7 +16,7 @@ protocol ReqFlw6Stp3InspectionViewModelDelegate: BaseViewModelDelegate {
 }
 
 protocol ReqFlw6Stp3InspectionViewModelType: AnyObject {
-    var coordinatorDelegate: ReqFlw6Stp3InspectionVMCoordinatorDelegate? { get set }
+    var coordinatorDelegate: ReqFlw6Stp3InspectionVMCrdntrDelegate? { get set }
     var delegate: ReqFlw6Stp3InspectionViewModelDelegate? { get set }
     func getBack()
     func sendFile(data: Data)
@@ -24,7 +24,7 @@ protocol ReqFlw6Stp3InspectionViewModelType: AnyObject {
 
 class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
     
-    weak var coordinatorDelegate: ReqFlw6Stp3InspectionVMCoordinatorDelegate?
+    weak var coordinatorDelegate: ReqFlw6Stp3InspectionVMCrdntrDelegate?
     weak var delegate: ReqFlw6Stp3InspectionViewModelDelegate?
     
     func getBack() {

@@ -14,7 +14,7 @@ struct ImpoundCarReason {
 
 protocol ReqFlw2Stp3VehicleVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess()
+    func goToSuccess(title: String)
 }
 
 protocol ReqFlw2Stp3VehicleViewModelDelegate: BaseViewModelDelegate {
@@ -115,7 +115,7 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
-                coordinatorDelegate?.goToSuccess()
+                coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
             }
         }
     }
