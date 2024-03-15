@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw3Stp3HGSVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess()
+    func goToSuccess(title: String)
 }
 
 protocol ReqFlw3Stp3HGSViewModelDelegate: BaseViewModelDelegate {
@@ -76,7 +76,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
-                coordinatorDelegate?.goToSuccess()
+                coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
             }
         }
     }
