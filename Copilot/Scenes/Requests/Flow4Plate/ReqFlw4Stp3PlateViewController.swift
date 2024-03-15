@@ -26,10 +26,10 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPTextField!
+    @IBOutlet weak var emailTextField: CPEmailTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var plateTextField: CPTextField!
@@ -37,23 +37,32 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     @IBOutlet weak var kmLabel: UILabel!
     @IBOutlet weak var kmTextField: CPTextField!
     
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var numberTextField: CPTextField!
+    @IBOutlet weak var causeOfLostLabel: UILabel!
+    @IBOutlet weak var causeOfLostList: CPDropDownList!
+    
+    @IBOutlet weak var numberOfLostPlatesLabel: UILabel!
+    @IBOutlet weak var numberOfLostPlatesList: CPDropDownList!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: CPTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPTextField!
+    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
+    
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var fileNameView: UIView!
+    @IBOutlet weak var closeImageView: UIImageView!
     
     @IBOutlet weak var addFileLabel: UILabel!
     @IBOutlet weak var selectFileView: UIView!
     @IBOutlet weak var documentNameLabel: UILabel!
     @IBOutlet weak var selectFileLabel: UILabel!
     @IBOutlet weak var createButton: CPButton!
+    
+    private var openedList: CPDropDownList?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -72,6 +81,7 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         applyStyle()
         setTexts()
         addTextFieldsTargets()
+        hideFileNameView()
     }
     
     func applyStyle() {
@@ -88,18 +98,36 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         documentNameLabel.apply(.blackS14R400)
         selectFileLabel.apply(.blackS14R400)
         addressLabel.apply(.blackS14R400)
-        numberLabel.apply(.blackS14R400)
+        causeOfLostLabel.apply(.blackS14R400)
+        numberOfLostPlatesLabel.apply(.blackS14R400)
         setDashedBorder()
         setTextFieldsStyle()
+        
+        fileNameView.layer.cornerRadius = 6
+        fileNameLabel.apply(.blackS14R400)
+        closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
+        closeImageView.tintColor = .greyButton
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, kmTextField, receiverNameTextField, receiverPhoneTextField, numberTextField]
+        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, kmTextField, receiverNameTextField, receiverPhoneTextField]
         
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
             item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         }
+        
+        kmTextField.keyboardType = .numberPad
+        phoneTextField.keyboardType = .phonePad
+        receiverPhoneTextField.keyboardType = .phonePad
+        
+        causeOfLostList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        causeOfLostList.titleLabelTop?.constant = 16
+        causeOfLostList.titleLabel.apply(.custom(.textFieldGreyText, .regular, 14))
+        
+        numberOfLostPlatesList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        numberOfLostPlatesList.titleLabelTop?.constant = 16
+        numberOfLostPlatesList.titleLabel.apply(.custom(.textFieldGreyText, .regular, 14))
     }
     
     func setTexts() {
@@ -123,8 +151,11 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         kmLabel.text = Strings.ckm
         kmTextField.placeholder = Strings.enterKm
         
-        numberLabel.text = Strings.numberOfLostPlates
-        numberTextField.placeholder = Strings.enterNumberOfLostPlates
+        causeOfLostLabel.text = Strings.numberOfLostPlates
+        causeOfLostList.title = Strings.enterNumberOfLostPlates
+        
+        numberOfLostPlatesLabel.text = Strings.numberOfLostPlates
+        numberOfLostPlatesList.title = Strings.enterNumberOfLostPlates
         
         receiverNameLabel.text = Strings.receiverNameSurname
         receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
@@ -160,6 +191,8 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         
         noteTextField.delegate = self
         addressTextField.delegate = self
+        causeOfLostList.delegate = self
+        numberOfLostPlatesList.delegate = self
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -181,14 +214,15 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         let address = addressTextField.text.count > 0
         let name = nameTextField.pureTextCount > 0
         let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount > 0
-        let plak = plateTextField.pureTextCount > 0
+        let phone = phoneTextField.isValidText
+        let plate = plateTextField.pureTextCount > 0
         let proccess = kmTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverPhone = receiverPhoneTextField.pureTextCount > 0
-        let number = numberTextField.pureTextCount > 0
+        let receiverPhone = receiverPhoneTextField.isValidText
+        let causeOfLoss = causeOfLostList.hasSelectedItem
+        let numberOfLost = numberOfLostPlatesList.hasSelectedItem
         
-        let result = note && address && name && email && phone && plak && proccess && receiverName && receiverPhone && number
+        let result = note && address && name && email && phone && plate && proccess && receiverName && receiverPhone && causeOfLoss && numberOfLost
         createButton.isEnabled = result
     }
     
@@ -197,9 +231,44 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     }
     
     @IBAction func didTapSendFile() {
-        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-        documentPicker.delegate = self
-        present(documentPicker, animated: true, completion: nil)
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCloseFile() {
+        viewModel.uploadedFileInfo = nil
+        removeSelectedFile()
+    }
+    
+    func hideFileNameView() {
+        fileNameView.heightConstraint?.constant = 0
+    }
+    
+    func showFileNameView() {
+        fileNameView.heightConstraint?.constant = 40
+    }
+    
+    @IBAction func didTapCreate() {
+        guard let index = numberOfLostPlatesList.selectedIndex,
+        let kmText = kmTextField.text, let kmValue = Int(kmText) else { return }
+        let number = viewModel.numberOfLostPlates[index]
+        
+        viewModel.createCase(licensePlate: plateTextField.text ?? "",
+                             note: noteTextField.text,
+                             kmValue: kmValue,
+                             description: "",
+                             nameSurname: nameTextField.text ?? "",
+                             numberPlate: number,
+                             deliveryPersonName: receiverNameTextField.text ?? "",
+                             deliveryPersonPhone: receiverPhoneTextField.number,
+                             deliveryAddress: addressTextField.text)
     }
 }
 
@@ -224,6 +293,76 @@ extension ReqFlw4Stp3PlateViewController: UIDocumentPickerDelegate {
     
 }
 
-extension ReqFlw4Stp3PlateViewController: ReqFlw4Stp3PlateViewModelDelegate {
+extension ReqFlw4Stp3PlateViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            fileNameLabel.text = url.lastPathComponent
+            showFileNameView()
+        }
+        picker.dismiss(animated: true)
+        guard let data = tempImage.pngData() else { return }
+        Loading.shared.show(presentingView: self.view)
+        viewModel.sendFile(data: data)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension ReqFlw4Stp3PlateViewController: CPDropDownListDelegate {
+    func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
+        return view
+    }
+    
+    func numberOfItems(in dropDownList: CPDropDownList) -> Int {
+        if dropDownList == causeOfLostList {
+            return viewModel.causeOfLosts.count
+        }
+        return viewModel.numberOfLostPlates.count
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, titleFor index: Int) -> String {
+        if dropDownList == causeOfLostList {
+            return viewModel.causeOfLosts[index]
+        }
+        return "\(viewModel.numberOfLostPlates[index])"
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, didSelect index: Int) {
+        setButtonActivation()
+    }
+    
+    func willOpen(_ dropDownList: CPDropDownList) {
+        if dropDownList == openedList {
+            return
+        }
+        openedList?.dismiss()
+        openedList = dropDownList
+    }
+    
+    func willDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func didDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, shouldSelect index: Int) -> Bool {
+        false
+    }
+}
+
+extension ReqFlw4Stp3PlateViewController: ReqFlw4Stp3PlateViewModelDelegate {
+    func removeSelectedFile() {
+        viewModel.uploadedFileInfo = nil
+        fileNameLabel.text = ""
+        hideFileNameView()
+    }
 }

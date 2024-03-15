@@ -132,6 +132,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         trafficPhoneTextField.keyboardType = .phonePad
         parkPhoneTextField.keyboardType = .phonePad
         receiverPhoneTextField.keyboardType = .phonePad
+        receiverTCKNTextField.keyboardType = .numberPad
         
         reasonList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         reasonList.titleLabelTop?.constant = 16
