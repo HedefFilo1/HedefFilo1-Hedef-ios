@@ -26,22 +26,22 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPTextField!
+    @IBOutlet weak var emailTextField: CPEmailTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     
-    @IBOutlet weak var plakLabel: UILabel!
-    @IBOutlet weak var plakTextField: CPTextField!
+    @IBOutlet weak var plateLabel: UILabel!
+    @IBOutlet weak var plateTextField: CPTextField!
     
     @IBOutlet weak var proccessLabel: UILabel!
-    @IBOutlet weak var proccessTextField: CPTextField!
+    @IBOutlet weak var proccessList: CPDropDownList!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: CPTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPTextField!
+    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
@@ -50,6 +50,11 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     @IBOutlet weak var selectFileView: UIView!
     @IBOutlet weak var documentNameLabel: UILabel!
     @IBOutlet weak var selectFileLabel: UILabel!
+    
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var fileNameView: UIView!
+    @IBOutlet weak var closeImageView: UIImageView!
+    
     @IBOutlet weak var createButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -59,6 +64,10 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        #if DEV_DEBUG
+        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
+        #endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +78,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         applyStyle()
         setTexts()
         addTextFieldsTargets()
+        hideFileNameView()
     }
     
     func applyStyle() {
@@ -77,7 +87,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         nameLabel.apply(.blackS14R400)
         emailLabel.apply(.blackS14R400)
         phoneLabel.apply(.blackS14R400)
-        plakLabel.apply(.blackS14R400)
+        plateLabel.apply(.blackS14R400)
         proccessLabel.apply(.blackS14R400)
         receiverNameLabel.apply(.blackS14R400)
         receiverPhoneLabel.apply(.blackS14R400)
@@ -87,15 +97,27 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         addressLabel.apply(.blackS14R400)
         setDashedBorder()
         setTextFieldsStyle()
+        
+        fileNameView.layer.cornerRadius = 6
+        fileNameLabel.apply(.blackS14R400)
+        closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
+        closeImageView.tintColor = .greyButton
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plakTextField, proccessTextField, receiverNameTextField, receiverPhoneTextField]
+        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverPhoneTextField]
         
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
             item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         }
+        
+        phoneTextField.keyboardType = .phonePad
+        receiverPhoneTextField.keyboardType = .phonePad
+        
+        proccessList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
+        proccessList.titleLabelTop?.constant = 16
+        proccessList.titleLabel.apply(.custom(.textFieldGreyText, .regular, 14))
     }
     
     func setTexts() {
@@ -113,11 +135,11 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         phoneLabel.text = Strings.yourMobilePhone
         phoneTextField.placeholder = Strings.enterYourMobilePhone
         
-        plakLabel.text = Strings.yourLicensePlate
-        plakTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = Strings.yourLicensePlate
+        plateTextField.placeholder = Strings.enterYourLicensePlate
         
         proccessLabel.text = Strings.processType
-        proccessTextField.placeholder = Strings.enterProcessType
+        proccessList.title = Strings.enterProcessType
         
         receiverNameLabel.text = Strings.nameSurnameOfHGSPerson
         receiverNameTextField.placeholder = Strings.enterNameSurnameOfHGSPerson
@@ -153,13 +175,12 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         
         noteTextField.delegate = self
         addressTextField.delegate = self
+        proccessList.delegate = self
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        plakTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        proccessTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        proccessTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        plateTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -173,14 +194,14 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         let note = noteTextField.text.count > 0
         let address = addressTextField.text.count > 0
         let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount > 0
-        let plak = plakTextField.pureTextCount > 0
-        let proccess = proccessTextField.pureTextCount > 0
+        let email = emailTextField.isValidText
+        let phone = phoneTextField.isValidText
+        let plate = plateTextField.pureTextCount > 0
+        let proccess = proccessList.hasSelectedItem
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverPhone = receiverPhoneTextField.pureTextCount > 0
+        let receiverPhone = receiverPhoneTextField.isValidText
         
-        let result = note && address && name && email && phone && plak && proccess && receiverName && receiverPhone
+        let result = note && address && name && email && phone && plate && proccess && receiverName && receiverPhone
         createButton.isEnabled = result
     }
     
@@ -189,11 +210,15 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     }
     
     @IBAction func didTapCreate() {
-        viewModel.createCase(licensePlate: plakTextField.text ?? "",
+        guard let index = proccessList.selectedIndex else { return }
+        let ogsHgsType = viewModel.ogsHgsTypes[index].field
+        
+        viewModel.createCase(licensePlate: plateTextField.text ?? "",
                              note: noteTextField.text,
                              nameSurname: nameTextField.text ?? "",
                              receiverPersonName: receiverNameTextField.text ?? "",
                              receiverPersonPhone: receiverPhoneTextField.text ?? "",
+                             ogsHgsType: ogsHgsType,
                              deliveryAddress: addressTextField.text)
     }
     
@@ -207,6 +232,19 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCloseFile() {
+        viewModel.uploadedFileInfo = nil
+        removeSelectedFile()
+    }
+    
+    func hideFileNameView() {
+        fileNameView.heightConstraint?.constant = 0
+    }
+    
+    func showFileNameView() {
+        fileNameView.heightConstraint?.constant = 40
     }
 }
 
@@ -236,6 +274,10 @@ extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImageP
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            fileNameLabel.text = url.lastPathComponent
+            showFileNameView()
+        }
         picker.dismiss(animated: true)
         guard let data = tempImage.pngData() else { return }
         Loading.shared.show(presentingView: self.view)
@@ -249,6 +291,44 @@ extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImageP
     
 }
 
-extension ReqFlw3Stp3HGSViewController: ReqFlw3Stp3HGSViewModelDelegate {
+extension ReqFlw3Stp3HGSViewController: CPDropDownListDelegate {
+    func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
+        return view
+    }
     
+    func numberOfItems(in dropDownList: CPDropDownList) -> Int {
+        return viewModel.ogsHgsTypes.count
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, titleFor index: Int) -> String {
+        return viewModel.ogsHgsTypes[index].title
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, didSelect index: Int) {
+        setButtonActivation()
+    }
+    
+    func willOpen(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func willDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func didDismiss(_ dropDownList: CPDropDownList) {
+        
+    }
+    
+    func CPDropDownList(_ dropDownList: CPDropDownList, shouldSelect index: Int) -> Bool {
+        false
+    }
+}
+
+extension ReqFlw3Stp3HGSViewController: ReqFlw3Stp3HGSViewModelDelegate {
+    func removeSelectedFile() {
+        viewModel.uploadedFileInfo = nil
+        fileNameLabel.text = ""
+        hideFileNameView()
+    }
 }

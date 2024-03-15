@@ -76,6 +76,7 @@ extension APIService {
                               nameSurname: String,
                               receiverPersonName: String,
                               receiverPersonPhone: String,
+                              ogsHgsType: String,
                               deliveryAddress: String,
                               fileInfo: UploadRequestFile?,
                               completion: @escaping (Success?, APIResponseError?) -> Void) {
@@ -83,6 +84,7 @@ extension APIService {
         let route = "case/request"
         var params = [
             "webCategory": "OGS_HGS",
+            "ogsHgsType": ogsHgsType,
             "licensePlate": licensePlate,
             "note": note,
             "nameSurname": nameSurname,

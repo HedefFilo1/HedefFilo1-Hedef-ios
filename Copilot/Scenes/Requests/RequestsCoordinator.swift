@@ -72,6 +72,7 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         let controller: RequestSuccessViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestSuccessViewModel()
         controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.title = title
         navigationController.pushViewController(controller, animated: true)
     }
     
