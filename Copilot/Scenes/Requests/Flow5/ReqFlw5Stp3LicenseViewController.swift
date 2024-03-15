@@ -26,22 +26,29 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPTextField!
+    @IBOutlet weak var emailTextField: CPEmailTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var plateTextField: CPTextField!
+    
+    @IBOutlet weak var kmLabel: UILabel!
+    @IBOutlet weak var kmTextField: CPTextField!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: CPTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPTextField!
+    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
+    
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var fileNameView: UIView!
+    @IBOutlet weak var closeImageView: UIImageView!
     
     @IBOutlet weak var addFileLabel: UILabel!
     @IBOutlet weak var selectFileView: UIView!
@@ -66,6 +73,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         applyStyle()
         setTexts()
         addTextFieldsTargets()
+        hideFileNameView()
     }
     
     func applyStyle() {
@@ -75,6 +83,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         emailLabel.apply(.blackS14R400)
         phoneLabel.apply(.blackS14R400)
         plateLabel.apply(.blackS14R400)
+        kmLabel.apply(.blackS14R400)
         receiverNameLabel.apply(.blackS14R400)
         receiverPhoneLabel.apply(.blackS14R400)
         addFileLabel.apply(.blackS14R400)
@@ -83,15 +92,24 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         addressLabel.apply(.blackS14R400)
         setDashedBorder()
         setTextFieldsStyle()
+        
+        fileNameView.layer.cornerRadius = 6
+        fileNameLabel.apply(.blackS14R400)
+        closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
+        closeImageView.tintColor = .greyButton
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverPhoneTextField]
+        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverPhoneTextField, kmTextField]
         
         for item in array {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
             item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         }
+        
+        kmTextField.keyboardType = .numberPad
+        phoneTextField.keyboardType = .phonePad
+        receiverPhoneTextField.keyboardType = .phonePad
     }
     
     func setTexts() {
@@ -111,6 +129,9 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         
         plateLabel.text = Strings.yourLicensePlate
         plateTextField.placeholder = Strings.enterYourLicensePlate
+        
+        kmLabel.text = Strings.ckm
+        kmTextField.placeholder = Strings.enterKm
         
         receiverNameLabel.text = Strings.receiverNameSurname
         receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
@@ -152,6 +173,8 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         phoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         plateTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
+        kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        
         receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverPhoneTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
@@ -164,13 +187,14 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
         let note = noteTextField.text.count > 0
         let address = addressTextField.text.count > 0
         let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount > 0
+        let email = emailTextField.isValidText
+        let phone = phoneTextField.isValidText
         let plate = plateTextField.pureTextCount > 0
+        let kmValue = kmTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverPhone = receiverPhoneTextField.pureTextCount > 0
+        let receiverPhone = receiverPhoneTextField.isValidText
         
-        let result = note && address && name && email && phone && plate && receiverName && receiverPhone
+        let result = note && address && name && email && phone && plate && receiverName && receiverPhone && kmValue
         createButton.isEnabled = result
     }
     
@@ -179,9 +203,40 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     }
     
     @IBAction func didTapSendFile() {
-        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-        documentPicker.delegate = self
-        present(documentPicker, animated: true, completion: nil)
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCloseFile() {
+        viewModel.uploadedFileInfo = nil
+        removeSelectedFile()
+    }
+    
+    func hideFileNameView() {
+        fileNameView.heightConstraint?.constant = 0
+    }
+    
+    func showFileNameView() {
+        fileNameView.heightConstraint?.constant = 40
+    }
+    
+    @IBAction func didTapCreate() {
+        guard let kmText = kmTextField.text, let kmValue = Int(kmText) else { return }
+        
+        viewModel.createCase(licensePlate: plateTextField.text ?? "",
+                             note: noteTextField.text,
+                             kmValue: kmValue,
+                             description: "",
+                             nameSurname: nameTextField.text ?? "",
+                             deliveryPersonName: receiverNameTextField.text ?? "",
+                             deliveryPersonPhone: receiverPhoneTextField.number,
+                             deliveryAddress: addressTextField.text)
     }
 }
 
@@ -206,6 +261,32 @@ extension ReqFlw5Stp3LicenseViewController: UIDocumentPickerDelegate {
     
 }
 
-extension ReqFlw5Stp3LicenseViewController: ReqFlw5Stp3LicenseViewModelDelegate {
+extension ReqFlw5Stp3LicenseViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            fileNameLabel.text = url.lastPathComponent
+            showFileNameView()
+        }
+        picker.dismiss(animated: true)
+        guard let data = tempImage.pngData() else { return }
+        Loading.shared.show(presentingView: self.view)
+        viewModel.sendFile(data: data)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension ReqFlw5Stp3LicenseViewController: ReqFlw5Stp3LicenseViewModelDelegate {
+    func removeSelectedFile() {
+        viewModel.uploadedFileInfo = nil
+        fileNameLabel.text = ""
+        hideFileNameView()
+    }
 }

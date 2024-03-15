@@ -207,4 +207,46 @@ extension APIService {
         req.start()
     }
     
+    static func createLicenseCase(licensePlate: String,
+                                note: String,
+                                kmValue: Int,
+                                description: String,
+                                nameSurname: String,
+                                deliveryPersonName: String,
+                                deliveryPersonPhone: String,
+                                deliveryAddress: String,
+                                fileInfo: UploadRequestFile?,
+                                completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "case/request"
+        var params = [
+            "webCategory": "MISSING_LICENSE",
+            "licensePlate": licensePlate,
+            "note": note,
+            "km": kmValue,
+//            "description": description,
+            "nameSurname": nameSurname,
+            "deliveryPersonName": deliveryPersonName,
+            "deliveryPersonPhone": deliveryPersonPhone,
+            "deliveryAddress": deliveryAddress
+        ] as [String: Any]
+        
+        if let fileInfo {
+            let object = [
+                "originalFilename": fileInfo.originalFilename,
+                "filename": fileInfo.filename
+            ]
+            let list = [object]
+            params["files"] = list
+        }
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "CreateLicenseCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
 }
