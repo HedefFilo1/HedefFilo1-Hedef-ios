@@ -208,15 +208,15 @@ extension APIService {
     }
     
     static func createLicenseCase(licensePlate: String,
-                                note: String,
-                                kmValue: Int,
-                                description: String,
-                                nameSurname: String,
-                                deliveryPersonName: String,
-                                deliveryPersonPhone: String,
-                                deliveryAddress: String,
-                                fileInfo: UploadRequestFile?,
-                                completion: @escaping (Success?, APIResponseError?) -> Void) {
+                                  note: String,
+                                  kmValue: Int,
+                                  description: String,
+                                  nameSurname: String,
+                                  deliveryPersonName: String,
+                                  deliveryPersonPhone: String,
+                                  deliveryAddress: String,
+                                  fileInfo: UploadRequestFile?,
+                                  completion: @escaping (Success?, APIResponseError?) -> Void) {
         
         let route = "case/request"
         var params = [
@@ -224,7 +224,7 @@ extension APIService {
             "licensePlate": licensePlate,
             "note": note,
             "km": kmValue,
-//            "description": description,
+            //            "description": description,
             "nameSurname": nameSurname,
             "deliveryPersonName": deliveryPersonName,
             "deliveryPersonPhone": deliveryPersonPhone,
@@ -244,6 +244,43 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreateLicenseCase"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
+    static func createInspectionCase(licensePlate: String,
+                                     note: String,
+                                     nameSurname: String,
+                                     receiverPersonName: String,
+                                     receiverPersonTC: String,
+                                     fileInfo: UploadRequestFile?,
+                                     completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "case/request"
+        var params = [
+            "webCategory": "VEHICLE_INSPECTION",
+            "licensePlate": licensePlate,
+            "note": note,
+            "nameSurname": nameSurname,
+            "receiverPersonName": receiverPersonName,
+            "receiverPersonTC": receiverPersonTC
+            
+        ] as [String: Any]
+        
+        if let fileInfo {
+            let object = [
+                "originalFilename": fileInfo.originalFilename,
+                "filename": fileInfo.filename
+            ]
+            let list = [object]
+            params["files"] = list
+        }
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "CreateInspectionCase"
         req.log = loggingEnabled || true
         req.completion = completion
         req.start()

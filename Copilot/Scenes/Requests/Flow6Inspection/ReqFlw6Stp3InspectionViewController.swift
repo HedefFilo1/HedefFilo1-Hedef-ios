@@ -26,10 +26,10 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     @IBOutlet weak var nameTextField: CPTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPTextField!
+    @IBOutlet weak var emailTextField: CPEmailTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPTextField!
+    @IBOutlet weak var phoneTextField: CPPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var plateTextField: CPTextField!
@@ -39,6 +39,10 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     
     @IBOutlet weak var receiverIdLabel: UILabel!
     @IBOutlet weak var receiverIdTextField: CPTextField!
+    
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var fileNameView: UIView!
+    @IBOutlet weak var closeImageView: UIImageView!
     
     @IBOutlet weak var addFileLabel: UILabel!
     @IBOutlet weak var selectFileView: UIView!
@@ -63,6 +67,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
         applyStyle()
         setTexts()
         addTextFieldsTargets()
+        hideFileNameView()
     }
     
     func applyStyle() {
@@ -79,6 +84,11 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
         selectFileLabel.apply(.blackS14R400)
         setDashedBorder()
         setTextFieldsStyle()
+        
+        fileNameView.layer.cornerRadius = 6
+        fileNameLabel.apply(.blackS14R400)
+        closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
+        closeImageView.tintColor = .greyButton
     }
     
     func setTextFieldsStyle() {
@@ -88,6 +98,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
             item?.apply(.custom(.textFieldGreyText, .regular, 14))
             item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         }
+        phoneTextField.keyboardType = .phonePad
     }
     
     func setTexts() {
@@ -131,7 +142,6 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
         shapeLayer.lineJoin = CAShapeLayerLineJoin.round // Updated in swift 4.2
         shapeLayer.lineDashPattern = [6, 3]
         shapeLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 6).cgPath
-        
         selectFileView.layer.addSublayer(shapeLayer)
     }
     
@@ -146,6 +156,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
         
         receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverIdTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        receiverIdTextField.delegate = self
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -155,8 +166,8 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.pureTextCount > 0
+        let email = emailTextField.isValidText
+        let phone = phoneTextField.isValidText
         let plate = plateTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverId = receiverIdTextField.pureTextCount > 0
@@ -170,9 +181,35 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     }
     
     @IBAction func didTapSendFile() {
-        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-        documentPicker.delegate = self
-        present(documentPicker, animated: true, completion: nil)
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCloseFile() {
+        viewModel.uploadedFileInfo = nil
+        removeSelectedFile()
+    }
+    
+    func hideFileNameView() {
+        fileNameView.heightConstraint?.constant = 0
+    }
+    
+    func showFileNameView() {
+        fileNameView.heightConstraint?.constant = 40
+    }
+    
+    @IBAction func didTapCreate() {
+        viewModel.createCase(licensePlate: plateTextField.text ?? "",
+                             note: noteTextField.text,
+                             nameSurname: nameTextField.text ?? "",
+                             receiverPersonName: receiverNameTextField.text ?? "",
+                             receiverPersonTC: receiverIdTextField.text ?? "")
     }
 }
 
@@ -197,6 +234,39 @@ extension ReqFlw6Stp3InspectionViewController: UIDocumentPickerDelegate {
     
 }
 
-extension ReqFlw6Stp3InspectionViewController: ReqFlw6Stp3InspectionViewModelDelegate {
+extension ReqFlw6Stp3InspectionViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            fileNameLabel.text = url.lastPathComponent
+            showFileNameView()
+        }
+        picker.dismiss(animated: true)
+        guard let data = tempImage.pngData() else { return }
+        Loading.shared.show(presentingView: self.view)
+        viewModel.sendFile(data: data)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension ReqFlw6Stp3InspectionViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.isEmpty { return true }
+        return range.location < 11
+    }
+}
+
+extension ReqFlw6Stp3InspectionViewController: ReqFlw6Stp3InspectionViewModelDelegate {
+    func removeSelectedFile() {
+        viewModel.uploadedFileInfo = nil
+        fileNameLabel.text = ""
+        hideFileNameView()
+    }
 }
