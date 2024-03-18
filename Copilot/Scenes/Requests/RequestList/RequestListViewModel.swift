@@ -20,6 +20,7 @@ protocol RequestListViewModelType: AnyObject {
     var coordinatorDelegate: RequestListVMCrdntrDelegate? { get set }
     var delegate: RequestListViewModelDelegate? { get set }
     var tasks: [Task]? { get set }
+    var requests: [Demand]? { get set }
     func getBack()
     func goToRequestDetail(item: Task)
     func getTasks()
@@ -31,6 +32,7 @@ class RequestListViewModel: RequestListViewModelType {
     weak var coordinatorDelegate: RequestListVMCrdntrDelegate?
     weak var delegate: RequestListViewModelDelegate?
     var tasks: [Task]?
+    var requests: [Demand]?
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -66,7 +68,8 @@ class RequestListViewModel: RequestListViewModelType {
             guard let self = self else {return}
             
             if let model = model {
-//                self.tasks = model
+                self.requests = model
+                self.delegate?.reloadData()
             } else
             
             if let error = error {

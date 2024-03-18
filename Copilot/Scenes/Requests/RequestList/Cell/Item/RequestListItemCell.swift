@@ -16,6 +16,14 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
             statusView.backgroundColor = item?.status.color
         }
     }
+    
+    var request: Demand? {
+        didSet {
+            titleLabel.text = request?.recordType
+            statusLabel.text = item?.status.rawValue
+            statusView.backgroundColor = item?.status.color
+        }
+    }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusView: UIView!

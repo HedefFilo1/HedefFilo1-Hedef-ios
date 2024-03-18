@@ -78,6 +78,9 @@ class RequestListViewController: UIViewController {
         serviceRequestsLabel.textColor = tag == 0 ? .theme: .black
         proccessRequestsLabel.textColor = tag == 1 ? .theme: .black
         collectionView.scrollToItem(at: IndexPath(row: 0, section: tag), at: .centeredHorizontally, animated: true)
+        if tag == 1, viewModel.requests == nil {
+            viewModel.getRequests()
+        }
     }
     
     @IBAction func didTapBack() {
@@ -107,6 +110,8 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
         case 1:
             let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.items = nil
+            cell.requestItems = viewModel.requests
             return cell
             
         default:

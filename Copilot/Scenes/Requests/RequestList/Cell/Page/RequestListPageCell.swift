@@ -19,6 +19,12 @@ class RequestListPageCell: UICollectionViewCell, Reusable {
         }
     }
     
+    var requestItems: [Demand]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     weak var delegate: RequestListPageCellDelegate?
     
     @IBOutlet weak var label: UILabel!
@@ -45,13 +51,20 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items?.count ?? 0
+        if let items {
+            return items.count
+        }
+        return requestItems?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: RequestListItemCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.item = items?[indexPath.item]
+        if let items = items {
+            cell.item = items[indexPath.item]
+        } else {
+            cell.request = requestItems?[indexPath.item]
+        }
         return cell
     }
     

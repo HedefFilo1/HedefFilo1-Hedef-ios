@@ -308,9 +308,9 @@ extension APIService {
         req.start()
     }
     
-    static func getRequests(completion: @escaping (GetSessionId?, APIResponseError?) -> Void) {
+    static func getRequests(completion: @escaping ([Demand]?, APIResponseError?) -> Void) {
         let route = "case?isTask=true"
-        let req = APIRequest<GetSessionId>(route: route, method: .get, hasToken: true)
+        let req = APIRequest<[Demand]>(route: route, method: .get, hasToken: true)
         req.identifier = "getSessionId"
         req.log = loggingEnabled || true
         req.completion = completion

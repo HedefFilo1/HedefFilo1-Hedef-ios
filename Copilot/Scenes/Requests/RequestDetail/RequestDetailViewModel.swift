@@ -12,7 +12,7 @@ protocol RequestDetailVMCrdntrDelegate: AnyObject {
 }
 
 protocol RequestDetailViewModelDelegate: BaseViewModelDelegate {
-
+    
 }
 
 protocol RequestDetailViewModelType: AnyObject {
