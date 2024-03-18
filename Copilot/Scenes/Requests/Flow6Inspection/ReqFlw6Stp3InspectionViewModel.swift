@@ -62,13 +62,15 @@ class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
                     receiverPersonTC: String) {
         
         Loading.shared.show()
-        APIService.createInspectionCase(licensePlate: licensePlate,
-                                        note: note,
-                                        nameSurname: nameSurname,
-                                        receiverPersonName: receiverPersonName,
-                                        receiverPersonTC: receiverPersonTC,
-                                        fileInfo: uploadedFileInfo)
-        { [weak self] model, error in
+        APIService.createInspectionCase(
+            licensePlate: licensePlate,
+            note: note,
+            nameSurname: nameSurname,
+            receiverPersonName: receiverPersonName,
+            receiverPersonTC: receiverPersonTC,
+            fileInfo: uploadedFileInfo
+        ) { [weak self] model, error in
+            
             Loading.shared.hide()
             guard let self = self else { return }
             

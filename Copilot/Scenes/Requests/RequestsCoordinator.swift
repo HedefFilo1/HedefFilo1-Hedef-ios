@@ -38,7 +38,8 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw3Stp3HGSVMCoordinatorDelegate,
                                ReqFlw4Stp3PlateVMCoordinatorDelegate,
                                ReqFlw5Stp3LicenseVMCoordinatorDelegate,
-                               ReqFlw6Stp3InspectionVMCrdntrDelegate {
+                               ReqFlw6Stp3InspectionVMCrdntrDelegate,
+                               RequestListVMCrdntrDelegate {
     func goToSuccess() {
         
     }
@@ -114,6 +115,13 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     func goToReqFlw6Stp3Inspection() {
         let controller: ReqFlw6Stp3InspectionViewController = storyboard.instantiateViewController()
         controller.viewModel = ReqFlw6Stp3InspectionViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToRequestList() {
+        let controller: RequestListViewController = storyboard.instantiateViewController()
+        controller.viewModel = RequestListViewModel()
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

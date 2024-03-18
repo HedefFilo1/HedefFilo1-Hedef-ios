@@ -117,9 +117,8 @@ extension RequestsViewController: UICollectionViewDataSource, UICollectionViewDe
         case 1:
             viewModel.goToReqFlw2Stp2Questions()
             
-//        case 1:
-//            
-//        case 2:
+        case 2:
+            viewModel.goToRequestList()
             
         default:
             break

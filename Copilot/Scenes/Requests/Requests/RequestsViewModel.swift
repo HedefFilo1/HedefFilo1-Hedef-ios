@@ -11,6 +11,7 @@ protocol RequestsViewModelCoordinatorDelegate: AnyObject {
     func getBack()
     func goToReqFlw1Stp2()
     func goToReqFlw2Stp2Questions()
+    func goToRequestList()
 }
 
 protocol RequestsViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +24,7 @@ protocol RequestsViewModelType: AnyObject {
     func getBack()
     func goToReqFlw1Stp2()
     func goToReqFlw2Stp2Questions()
+    func goToRequestList()
 }
 
 class RequestsViewModel: RequestsViewModelType {
@@ -40,5 +42,9 @@ class RequestsViewModel: RequestsViewModelType {
     
     func goToReqFlw2Stp2Questions() {
         coordinatorDelegate?.goToReqFlw2Stp2Questions()
+    }
+    
+    func goToRequestList() {
+        coordinatorDelegate?.goToRequestList()
     }
 }

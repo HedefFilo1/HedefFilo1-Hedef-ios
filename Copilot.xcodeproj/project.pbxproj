@@ -383,6 +383,12 @@
 		89C686942B0260C900011897 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686922B0260C900011897 /* AvatarCell.swift */; };
 		89C686952B0260C900011897 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C686932B0260C900011897 /* AvatarCell.xib */; };
 		89C686972B02616D00011897 /* CPRadioBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686962B02616D00011897 /* CPRadioBox.swift */; };
+		89CC82CE2BA7366300263332 /* RequestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CD2BA7366300263332 /* RequestListViewModel.swift */; };
+		89CC82D02BA7366900263332 /* RequestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CF2BA7366900263332 /* RequestListViewController.swift */; };
+		89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */; };
+		89CC82D52BA7CCFD00263332 /* RequestListPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CC82D32BA7CCFD00263332 /* RequestListPageCell.xib */; };
+		89CC82DA2BA7CD7900263332 /* RequestListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82D82BA7CD7900263332 /* RequestListItemCell.swift */; };
+		89CC82DB2BA7CD7900263332 /* RequestListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CC82D92BA7CD7900263332 /* RequestListItemCell.xib */; };
 		89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE07FE2B3AE2DC00C76433 /* ServicesViewController.swift */; };
 		89CE08012B3AE2E400C76433 /* ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE08002B3AE2E400C76433 /* ServicesViewModel.swift */; };
 		89CE08032B3AE3A300C76433 /* VehicleServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE08022B3AE3A300C76433 /* VehicleServicesSearchCell.swift */; };
@@ -843,6 +849,12 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
+		89CC82CD2BA7366300263332 /* RequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewModel.swift; sourceTree = "<group>"; };
+		89CC82CF2BA7366900263332 /* RequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewController.swift; sourceTree = "<group>"; };
+		89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageCell.swift; sourceTree = "<group>"; };
+		89CC82D32BA7CCFD00263332 /* RequestListPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestListPageCell.xib; sourceTree = "<group>"; };
+		89CC82D82BA7CD7900263332 /* RequestListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListItemCell.swift; sourceTree = "<group>"; };
+		89CC82D92BA7CD7900263332 /* RequestListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestListItemCell.xib; sourceTree = "<group>"; };
 		89CE07FE2B3AE2DC00C76433 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		89CE08002B3AE2E400C76433 /* ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewModel.swift; sourceTree = "<group>"; };
 		89CE08022B3AE3A300C76433 /* VehicleServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesSearchCell.swift; sourceTree = "<group>"; };
@@ -1780,6 +1792,7 @@
 				893259962B9A71ED001E4262 /* Flow4Plate */,
 				8932599B2B9B0E16001E4262 /* Flow5 */,
 				893259A42B9B1A94001E4262 /* Flow6Inspection */,
+				89CC82CC2BA7362B00263332 /* RequestList */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -2816,6 +2829,43 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		89CC82CC2BA7362B00263332 /* RequestList */ = {
+			isa = PBXGroup;
+			children = (
+				89CC82CD2BA7366300263332 /* RequestListViewModel.swift */,
+				89CC82CF2BA7366900263332 /* RequestListViewController.swift */,
+				89CC82D12BA7CCA300263332 /* Cell */,
+			);
+			path = RequestList;
+			sourceTree = "<group>";
+		};
+		89CC82D12BA7CCA300263332 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89CC82D62BA7CD5600263332 /* Page */,
+				89CC82D72BA7CD6300263332 /* Item */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89CC82D62BA7CD5600263332 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */,
+				89CC82D32BA7CCFD00263332 /* RequestListPageCell.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		89CC82D72BA7CD6300263332 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				89CC82D82BA7CD7900263332 /* RequestListItemCell.swift */,
+				89CC82D92BA7CD7900263332 /* RequestListItemCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		89CE07FD2B3AE2CC00C76433 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -3282,6 +3332,7 @@
 				8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89F6A0582B5868950052EE15 /* LastikOperationButtonsCell.xib in Resources */,
+				89CC82DB2BA7CD7900263332 /* RequestListItemCell.xib in Resources */,
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
 				89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */,
 				89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */,
@@ -3298,6 +3349,7 @@
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				899FF41B2B76433900447118 /* JustYellowWarningCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
+				89CC82D52BA7CCFD00263332 /* RequestListPageCell.xib in Resources */,
 				89CE08052B3AE3AC00C76433 /* VehicleServicesSearchCell.xib in Resources */,
 				8934D5062B0FFE7F00CD0CA7 /* VehicleGuideCell.xib in Resources */,
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
@@ -3522,6 +3574,7 @@
 				890D7CDE2ACEC84600F053DA /* SheetViewController.swift in Sources */,
 				8944AB7D2B74D3EA00967CE2 /* BrkdwnFlw2Stp4SelectedWarningsVController.swift in Sources */,
 				899CF5772AE1915E006D85E4 /* Loading.swift in Sources */,
+				89CC82DA2BA7CD7900263332 /* RequestListItemCell.swift in Sources */,
 				8944AB8D2B74F80800967CE2 /* WarningLightsViewModel.swift in Sources */,
 				897835DD2B455FB300C63AA7 /* Strings+Part2.swift in Sources */,
 				897835D92B455D9600C63AA7 /* ConfirmedRandevuViewController.swift in Sources */,
@@ -3565,6 +3618,7 @@
 				89A908BD2B31A75400BC7727 /* HeaderCell.swift in Sources */,
 				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
+				89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */,
 				89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
@@ -3674,6 +3728,7 @@
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
 				899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */,
+				89CC82D02BA7366900263332 /* RequestListViewController.swift in Sources */,
 				89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
@@ -3681,6 +3736,7 @@
 				891BFB6E2B349667009BD793 /* ServiceTabViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */,
+				89CC82CE2BA7366300263332 /* RequestListViewModel.swift in Sources */,
 				8976B0292B73C8D300E7C58F /* WarningLightsHeaderCell.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
 				89950ADF2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift in Sources */,
