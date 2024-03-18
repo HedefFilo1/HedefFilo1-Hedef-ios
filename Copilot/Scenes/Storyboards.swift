@@ -25,6 +25,8 @@ enum Storyboard: String {
     case requests
     case settings
 
+    case support
+    
     var filename: String {
         return rawValue.capitalizingFirstLetter()
     }

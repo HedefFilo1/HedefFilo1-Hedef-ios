@@ -62,6 +62,13 @@ class MainCoordinator: Coordinator {
         return coordinator
     }()
     
+    lazy var supportCoordinator: SupportCoordinator = {
+        let coordinator = SupportCoordinator()
+        coordinator.delegate = self
+        coordinator.start()
+        return coordinator
+    }()
+    
     init(with window: UIWindow) {
         self.window = window
         let tabBarController: MainTabBarController = storyboard.instantiateViewController()
@@ -75,7 +82,7 @@ class MainCoordinator: Coordinator {
             accidentCoordinator.navigationController,
             servicesCoordinator.navigationController,
             homeCoordinator.navigationController,
-            supportTabCoordinator,
+            supportCoordinator.navigationController,
             menuCoordinator.navigationController
         ]
         addChildCoordinator(homeCoordinator)
@@ -108,4 +115,10 @@ extension MainCoordinator: HomeCoordinatorDelegate,
 
 extension MainCoordinator: MainViewModelCoordinatorDelegate {
     
+}
+
+extension MainCoordinator: SupportCoordinatorDelegate {
+    func supportDidFinish(from coordinator: SupportCoordinator) {
+        removeChildCoordinator(coordinator)
+    }
 }
