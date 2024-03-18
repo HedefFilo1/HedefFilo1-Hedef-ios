@@ -31,6 +31,7 @@ class RequestListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getTasks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -100,6 +101,7 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
         case 0:
             let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.items = viewModel.tasks
             return cell
             
         case 1:
@@ -130,11 +132,13 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
 }
 
 extension RequestListViewController: RequestListPageCellDelegate {
-    func didSelect(item: String) {
-        viewModel.goToRequestDetail(title: item)
+    func didSelect(item: Task) {
+        viewModel.goToRequestDetail(item: item)
     }
 }
 
 extension RequestListViewController: RequestListViewModelDelegate {
-    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }

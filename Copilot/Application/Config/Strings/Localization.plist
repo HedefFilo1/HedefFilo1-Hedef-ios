@@ -3112,12 +3112,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Return to Requests Page</string>
         </dict>
         
-        <key></key>
+        <key>canceled</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Reddedildi</string>
             <key>en</key>
-            <string></string>
+            <string>Canceled</string>
         </dict>
         
         <key></key>

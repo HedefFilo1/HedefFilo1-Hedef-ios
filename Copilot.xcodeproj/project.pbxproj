@@ -205,6 +205,7 @@
 		896BAE042BA835FD006D809E /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE032BA835FD006D809E /* RequestDetailViewController.swift */; };
 		896BAE072BA83C47006D809E /* CanceledRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE062BA83C47006D809E /* CanceledRequestViewModel.swift */; };
 		896BAE092BA83C52006D809E /* CanceledRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */; };
+		896BAE0B2BA87418006D809E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE0A2BA87418006D809E /* Task.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -673,6 +674,7 @@
 		896BAE032BA835FD006D809E /* RequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailViewController.swift; sourceTree = "<group>"; };
 		896BAE062BA83C47006D809E /* CanceledRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceledRequestViewModel.swift; sourceTree = "<group>"; };
 		896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceledRequestViewController.swift; sourceTree = "<group>"; };
+		896BAE0A2BA87418006D809E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		896CB3422AD5BD6D0048025A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -2382,6 +2384,7 @@
 				89431DAE2B974EF800A6F6B8 /* GetSessionId.swift */,
 				893489242BA0B048009A3FBB /* NotificationPreference.swift */,
 				893489262BA0F076009A3FBB /* UploadRequestFile.swift */,
+				896BAE0A2BA87418006D809E /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3681,6 +3684,7 @@
 				89B790CB2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift in Sources */,
 				89F23BC62B29EC220081DD85 /* Document.swift in Sources */,
 				8986FCBD2AFCC802006057EA /* Strings+Part1.swift in Sources */,
+				896BAE0B2BA87418006D809E /* Task.swift in Sources */,
 				895ADBC12B177E08004C9A4C /* Case.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,

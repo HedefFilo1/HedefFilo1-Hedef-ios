@@ -18,7 +18,7 @@ protocol RequestDetailViewModelDelegate: BaseViewModelDelegate {
 protocol RequestDetailViewModelType: AnyObject {
     var coordinatorDelegate: RequestDetailVMCrdntrDelegate? { get set }
     var delegate: RequestDetailViewModelDelegate? { get set }
-    var title: String { get set }
+    var item: Task? { get set }
     func getBack()
     func goToCanceledRequest()
 }
@@ -27,13 +27,14 @@ class RequestDetailViewModel: RequestDetailViewModelType {
     
     weak var coordinatorDelegate: RequestDetailVMCrdntrDelegate?
     weak var delegate: RequestDetailViewModelDelegate?
-    var title: String = "title"
+    var item: Task?
     
     func getBack() {
         coordinatorDelegate?.getBack()
     }
     
     func goToCanceledRequest() {
+        let title = item?.subject ?? ""
         coordinatorDelegate?.goToCanceledRequest(title: title)
     }
 }

@@ -8,12 +8,12 @@
 import UIKit
 
 protocol RequestListPageCellDelegate: AnyObject {
-    func didSelect(item: String)
+    func didSelect(item: Task)
 }
 
 class RequestListPageCell: UICollectionViewCell, Reusable {
     
-    var items: [Campaign]? {
+    var items: [Task]? {
         didSet {
             collectionView.reloadData()
         }
@@ -45,18 +45,20 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: RequestListItemCell = collectionView.dequeueReusableCell(for: indexPath)
-        
+        cell.item = items?[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelect(item: "Title")
+        if let item = items?[indexPath.item] {
+            delegate?.didSelect(item: item)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

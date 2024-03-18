@@ -34,6 +34,7 @@ class RequestDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setTask()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,6 +68,15 @@ class RequestDetailViewController: UIViewController {
         addationalLabel.text = Strings.additionalInformation
         cancelButton.setTitle(Strings.cancelRequest, for: .normal)
         
+    }
+    
+    func setTask() {
+        guard let item = viewModel.item else { return }
+        titleLabel.text = item.subject
+        statusView.backgroundColor = item.status.color
+        statusValueLabel.text = item.status.text
+        descriptionTextLabel.text = item.description
+        addationalTextLabel.text = item.additionalInfo
     }
     
     @IBAction func didTapBack() {

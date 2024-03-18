@@ -468,5 +468,8 @@ extension Strings {
     static var returnToRequestsPage: String {
         return localized(string: "returnToRequestsPage")
     }
-
+    
+    static var canceled: String {
+        return localized(string: "canceled")
+    }
 }

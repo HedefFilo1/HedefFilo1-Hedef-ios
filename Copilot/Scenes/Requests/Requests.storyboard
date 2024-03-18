@@ -3465,31 +3465,16 @@ Dolar Sit Amet</string>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-gC-SWW" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="631" width="345" height="56"/>
-                                                                <color key="backgroundColor" name="theme"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="56" id="5Uz-k9-dwS"/>
-                                                                </constraints>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="Talebi İptal Et"/>
-                                                                <connections>
-                                                                    <action selector="didTapCancel" destination="DY1-fU-t7T" eventType="touchUpInside" id="Odt-WK-N2s"/>
-                                                                </connections>
-                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="ulz-gC-SWW" firstAttribute="leading" secondItem="NpY-JT-cWs" secondAttribute="leading" id="AdP-iq-coi"/>
                                                             <constraint firstItem="t0b-mJ-l7H" firstAttribute="top" secondItem="NpY-JT-cWs" secondAttribute="top" id="Es9-De-tu7"/>
                                                             <constraint firstAttribute="trailing" secondItem="t0b-mJ-l7H" secondAttribute="trailing" id="GKy-5a-qaL"/>
                                                             <constraint firstItem="b7G-Ed-QJ7" firstAttribute="top" secondItem="r5O-87-1ee" secondAttribute="bottom" constant="24" id="Ho5-0q-ERH"/>
                                                             <constraint firstItem="r5O-87-1ee" firstAttribute="leading" secondItem="NpY-JT-cWs" secondAttribute="leading" id="J76-fH-wVW"/>
                                                             <constraint firstItem="t0b-mJ-l7H" firstAttribute="leading" secondItem="NpY-JT-cWs" secondAttribute="leading" id="Qhw-Hp-hbE"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ulz-gC-SWW" secondAttribute="trailing" id="Qz0-9h-8yx"/>
                                                             <constraint firstItem="wAe-nO-wfu" firstAttribute="top" secondItem="FF7-wa-3gd" secondAttribute="bottom" constant="32" id="TMY-i7-Egd"/>
                                                             <constraint firstAttribute="trailing" secondItem="r5O-87-1ee" secondAttribute="trailing" id="WVw-cu-fEW"/>
-                                                            <constraint firstItem="ulz-gC-SWW" firstAttribute="top" secondItem="sY3-dh-AVP" secondAttribute="bottom" constant="150" id="YCz-K2-vGg"/>
                                                             <constraint firstItem="sY3-dh-AVP" firstAttribute="top" secondItem="b7G-Ed-QJ7" secondAttribute="bottom" constant="8" id="Ygm-NW-ySu"/>
                                                             <constraint firstItem="J09-mu-FfV" firstAttribute="centerY" secondItem="FF7-wa-3gd" secondAttribute="centerY" id="Zoz-cS-Eqr"/>
                                                             <constraint firstItem="sY3-dh-AVP" firstAttribute="leading" secondItem="NpY-JT-cWs" secondAttribute="leading" id="bhr-49-tPV"/>
@@ -3528,19 +3513,34 @@ Dolar Sit Amet</string>
                                     <constraint firstAttribute="bottom" secondItem="bVy-dS-EdT" secondAttribute="bottom" id="zqa-uO-GRm"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-gC-SWW" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                <rect key="frame" x="24" y="840" width="345" height="56"/>
+                                <color key="backgroundColor" name="theme"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="5Uz-k9-dwS"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Talebi İptal Et"/>
+                                <connections>
+                                    <action selector="didTapCancel" destination="DY1-fU-t7T" eventType="touchUpInside" id="Odt-WK-N2s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3eZ-fM-zut"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ulz-gC-SWW" firstAttribute="leading" secondItem="3eZ-fM-zut" secondAttribute="leading" constant="24" id="50X-0g-OAb"/>
                             <constraint firstItem="ayV-jt-VUy" firstAttribute="top" secondItem="Zsu-du-AmS" secondAttribute="bottom" constant="12" id="8P5-HM-COr"/>
                             <constraint firstItem="vkT-Py-u6e" firstAttribute="top" secondItem="3eZ-fM-zut" secondAttribute="top" constant="24" id="AdB-Ap-4ip"/>
                             <constraint firstItem="3eZ-fM-zut" firstAttribute="trailing" secondItem="ayV-jt-VUy" secondAttribute="trailing" id="Cpi-Uc-YRx"/>
                             <constraint firstItem="vP9-XQ-dhl" firstAttribute="width" secondItem="9PD-As-pHU" secondAttribute="width" id="JY2-o2-DsA"/>
                             <constraint firstItem="Zsu-du-AmS" firstAttribute="centerY" secondItem="vkT-Py-u6e" secondAttribute="centerY" id="VQT-Hu-3OJ"/>
                             <constraint firstItem="Zsu-du-AmS" firstAttribute="centerX" secondItem="vkT-Py-u6e" secondAttribute="centerX" id="j9z-MT-oeO"/>
+                            <constraint firstItem="3eZ-fM-zut" firstAttribute="bottom" secondItem="ulz-gC-SWW" secondAttribute="bottom" constant="70" id="lgU-mi-JrL"/>
                             <constraint firstItem="3eZ-fM-zut" firstAttribute="bottom" secondItem="ayV-jt-VUy" secondAttribute="bottom" id="m8V-Jf-lTJ"/>
                             <constraint firstItem="8XA-On-iga" firstAttribute="top" secondItem="3eZ-fM-zut" secondAttribute="top" constant="24" id="nKd-nW-Ugj"/>
                             <constraint firstItem="ayV-jt-VUy" firstAttribute="leading" secondItem="3eZ-fM-zut" secondAttribute="leading" id="oyU-96-Krq"/>
+                            <constraint firstItem="3eZ-fM-zut" firstAttribute="trailing" secondItem="ulz-gC-SWW" secondAttribute="trailing" constant="24" id="qAF-kW-ckS"/>
                             <constraint firstItem="8XA-On-iga" firstAttribute="centerX" secondItem="9PD-As-pHU" secondAttribute="centerX" id="vPt-GE-USE"/>
                             <constraint firstItem="vkT-Py-u6e" firstAttribute="leading" secondItem="3eZ-fM-zut" secondAttribute="leading" constant="24" id="ypn-VW-cFD"/>
                         </constraints>
@@ -3598,6 +3598,9 @@ Dolar Sit Amet</string>
                                                     <constraint firstAttribute="height" constant="40" id="TJ1-Ab-BgJ"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="didTapClose" destination="ajs-2C-DV7" eventType="touchUpInside" id="8Sf-Hd-HD3"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N33-J4-CDe">
                                                 <rect key="frame" x="24" y="233.66666666666671" width="345" height="444.33333333333326"/>

@@ -8,6 +8,14 @@
 import UIKit
 
 class RequestListItemCell: UICollectionViewCell, Reusable {
+    
+    var item: Task? {
+        didSet {
+            titleLabel.text = item?.subject
+            statusLabel.text = item?.status.text
+            statusView.backgroundColor = item?.status.color
+        }
+    }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusView: UIView!

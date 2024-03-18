@@ -42,6 +42,15 @@ extension APIService {
         req.start()
     }
     
+    static func getTasks(completion: @escaping ([Task]?, APIResponseError?) -> Void) {
+        let route = "task"
+        let req = APIRequest<[Task]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getTasks"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     static func sendFile(data: Data, completion: @escaping (UploadRequestFile?, APIResponseError?) -> Void) {
         
         let req = APIRequest<UploadRequestFile>(route: "",
@@ -286,4 +295,12 @@ extension APIService {
         req.start()
     }
     
+    static func getRequests(completion: @escaping (GetSessionId?, APIResponseError?) -> Void) {
+        let route = "case?isTask=true"
+        let req = APIRequest<GetSessionId>(route: route, method: .get, hasToken: true)
+        req.identifier = "getSessionId"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

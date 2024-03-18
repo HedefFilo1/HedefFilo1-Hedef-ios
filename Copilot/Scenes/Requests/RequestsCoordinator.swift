@@ -128,11 +128,11 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToRequestDetail(title: String) {
+    func goToRequestDetail(item: Task) {
         let controller: RequestDetailViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestDetailViewModel()
         controller.viewModel.coordinatorDelegate = self
-        controller.viewModel.title = title
+        controller.viewModel.item = item
         navigationController.pushViewController(controller, animated: true)
     }
     
