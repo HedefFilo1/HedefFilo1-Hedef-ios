@@ -84,7 +84,7 @@ class RequestDetailViewController: UIViewController {
     }
     
     @IBAction func didTapCancel() {
-        viewModel.goToCanceledRequest()
+        viewModel.cancelTask()
     }
 }
 

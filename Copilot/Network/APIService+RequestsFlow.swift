@@ -51,6 +51,19 @@ extension APIService {
         req.start()
     }
     
+    static func cancelTask(id: String, completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "task/\(id)"
+        let req = APIRequest<Success>(route: route,
+                                      method: .delete,
+                                      hasToken: true)
+        
+        req.identifier = "Cancel Task"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     static func sendFile(data: Data, completion: @escaping (UploadRequestFile?, APIResponseError?) -> Void) {
         
         let req = APIRequest<UploadRequestFile>(route: "",
