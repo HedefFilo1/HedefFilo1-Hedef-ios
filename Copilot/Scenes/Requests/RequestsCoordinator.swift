@@ -39,7 +39,9 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw4Stp3PlateVMCoordinatorDelegate,
                                ReqFlw5Stp3LicenseVMCoordinatorDelegate,
                                ReqFlw6Stp3InspectionVMCrdntrDelegate,
-                               RequestListVMCrdntrDelegate {
+                               RequestListVMCrdntrDelegate,
+                               RequestDetailVMCrdntrDelegate,
+                               CanceledRequestVMCoordinatorDelegate {
     func goToSuccess() {
         
     }
@@ -123,6 +125,22 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         let controller: RequestListViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestListViewModel()
         controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToRequestDetail(title: String) {
+        let controller: RequestDetailViewController = storyboard.instantiateViewController()
+        controller.viewModel = RequestDetailViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.title = title
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToCanceledRequest(title: String) {
+        let controller: CanceledRequestViewController = storyboard.instantiateViewController()
+        controller.viewModel = CanceledRequestViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.title = title
         navigationController.pushViewController(controller, animated: true)
     }
 }

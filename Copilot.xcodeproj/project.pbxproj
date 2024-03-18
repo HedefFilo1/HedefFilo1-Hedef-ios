@@ -201,6 +201,10 @@
 		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
+		896BAE022BA835F5006D809E /* RequestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE012BA835F5006D809E /* RequestDetailViewModel.swift */; };
+		896BAE042BA835FD006D809E /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE032BA835FD006D809E /* RequestDetailViewController.swift */; };
+		896BAE072BA83C47006D809E /* CanceledRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE062BA83C47006D809E /* CanceledRequestViewModel.swift */; };
+		896BAE092BA83C52006D809E /* CanceledRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -665,6 +669,10 @@
 		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
+		896BAE012BA835F5006D809E /* RequestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailViewModel.swift; sourceTree = "<group>"; };
+		896BAE032BA835FD006D809E /* RequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailViewController.swift; sourceTree = "<group>"; };
+		896BAE062BA83C47006D809E /* CanceledRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceledRequestViewModel.swift; sourceTree = "<group>"; };
+		896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceledRequestViewController.swift; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		896CB3422AD5BD6D0048025A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -1564,7 +1572,6 @@
 			isa = PBXGroup;
 			children = (
 				89431D8B2B967FD700A6F6B8 /* Step2 */,
-				89431D952B9689DA00A6F6B8 /* Step3 */,
 			);
 			path = Flow1;
 			sourceTree = "<group>";
@@ -1588,13 +1595,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		89431D952B9689DA00A6F6B8 /* Step3 */ = {
+		89431D952B9689DA00A6F6B8 /* RequestSuccess */ = {
 			isa = PBXGroup;
 			children = (
 				89431D9A2B968A5800A6F6B8 /* RequestSuccessViewModel.swift */,
 				89431D982B968A4F00A6F6B8 /* RequestSuccessViewController.swift */,
 			);
-			path = Step3;
+			path = RequestSuccess;
 			sourceTree = "<group>";
 		};
 		89431D9C2B96F36E00A6F6B8 /* Flow2 */ = {
@@ -1786,6 +1793,7 @@
 				89513E682B9519FA00B05199 /* Requests.storyboard */,
 				89513E6A2B951A1000B05199 /* RequestsCoordinator.swift */,
 				89513E6C2B951A1600B05199 /* Requests */,
+				89431D952B9689DA00A6F6B8 /* RequestSuccess */,
 				89431D8A2B967FC300A6F6B8 /* Flow1 */,
 				89431D9C2B96F36E00A6F6B8 /* Flow2 */,
 				893259912B9A6833001E4262 /* Flow3HGS */,
@@ -1793,6 +1801,8 @@
 				8932599B2B9B0E16001E4262 /* Flow5 */,
 				893259A42B9B1A94001E4262 /* Flow6Inspection */,
 				89CC82CC2BA7362B00263332 /* RequestList */,
+				896BAE002BA835DD006D809E /* RequestDetail */,
+				896BAE052BA83C27006D809E /* CanceledRequest */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1814,6 +1824,24 @@
 				89513E732B951FF700B05199 /* RequestsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		896BAE002BA835DD006D809E /* RequestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				896BAE012BA835F5006D809E /* RequestDetailViewModel.swift */,
+				896BAE032BA835FD006D809E /* RequestDetailViewController.swift */,
+			);
+			path = RequestDetail;
+			sourceTree = "<group>";
+		};
+		896BAE052BA83C27006D809E /* CanceledRequest */ = {
+			isa = PBXGroup;
+			children = (
+				896BAE062BA83C47006D809E /* CanceledRequestViewModel.swift */,
+				896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */,
+			);
+			path = CanceledRequest;
 			sourceTree = "<group>";
 		};
 		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
@@ -3558,6 +3586,8 @@
 				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
 				8934891C2B9FAC88009A3FBB /* ContractAgreementViewModel.swift in Sources */,
+				896BAE022BA835F5006D809E /* RequestDetailViewModel.swift in Sources */,
+				896BAE092BA83C52006D809E /* CanceledRequestViewController.swift in Sources */,
 				893EDF6F2AFA55BA004E643E /* CampaignsTitleCell.swift in Sources */,
 				89C55DE52AC4A5FF00C3066A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				89431D932B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift in Sources */,
@@ -3608,6 +3638,7 @@
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
+				896BAE042BA835FD006D809E /* RequestDetailViewController.swift in Sources */,
 				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
 				89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
@@ -3726,6 +3757,7 @@
 				89F23BBE2B299FDF0081DD85 /* PdfViewerViewController.swift in Sources */,
 				89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */,
 				8935AC542AFA6742002F1C68 /* CampaignDetailViewModel.swift in Sources */,
+				896BAE072BA83C47006D809E /* CanceledRequestViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
 				899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */,
 				89CC82D02BA7366900263332 /* RequestListViewController.swift in Sources */,

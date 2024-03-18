@@ -3064,52 +3064,52 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please ensure that a police report of the accident is kept.</string>
         </dict>
         
-        <key></key>
+        <key>requestStatus</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talep Durumu</string>
             <key>en</key>
-            <string></string>
+            <string>Request Status</string>
         </dict>
         
-        <key></key>
+        <key>explanation</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Açıklama</string>
             <key>en</key>
-            <string></string>
+            <string>Explanation</string>
         </dict>
         
-        <key></key>
+        <key>additionalInformation</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Ek Bilgiler</string>
             <key>en</key>
-            <string></string>
+            <string>Additional Information</string>
         </dict>
         
-        <key></key>
+        <key>cancelRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talebi İptal Et</string>
             <key>en</key>
-            <string></string>
+            <string>Cancel Request</string>
         </dict>
         
-        <key></key>
+        <key>requestCanceledMessage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talebiniz başarıyla iptal edildi.</string>
             <key>en</key>
-            <string></string>
+            <string>Your request has been successfully canceled.</string>
         </dict>
         
-        <key></key>
+        <key>returnToRequestsPage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talepler Sayfasına Dön </string>
             <key>en</key>
-            <string></string>
+            <string>Return to Requests Page</string>
         </dict>
         
         <key></key>

@@ -99,10 +99,12 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
         switch indexPath.section {
         case 0:
             let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 1:
             let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         default:
@@ -124,6 +126,12 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension RequestListViewController: RequestListPageCellDelegate {
+    func didSelect(item: String) {
+        viewModel.goToRequestDetail(title: item)
     }
 }
 

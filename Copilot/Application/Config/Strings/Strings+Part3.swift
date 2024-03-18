@@ -444,4 +444,29 @@ extension Strings {
     static var keepPoliceReport: String {
         return localized(string: "keepPoliceReport")
     }
+    
+    static var requestStatus: String {
+        return localized(string: "requestStatus")
+    }
+    
+    static var explanation: String {
+        return localized(string: "explanation")
+    }
+    
+    static var additionalInformation: String {
+        return localized(string: "additionalInformation")
+    }
+    
+    static var cancelRequest: String {
+        return localized(string: "cancelRequest")
+    }
+    
+    static var requestCanceledMessage: String {
+        return localized(string: "requestCanceledMessage")
+    }
+    
+    static var returnToRequestsPage: String {
+        return localized(string: "returnToRequestsPage")
+    }
+
 }

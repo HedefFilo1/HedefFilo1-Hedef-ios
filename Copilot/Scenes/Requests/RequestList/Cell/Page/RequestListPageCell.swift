@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RequestListPageCellDelegate: AnyObject {
+    func didSelect(item: String)
+}
+
 class RequestListPageCell: UICollectionViewCell, Reusable {
     
     var items: [Campaign]? {
@@ -15,7 +19,7 @@ class RequestListPageCell: UICollectionViewCell, Reusable {
         }
     }
     
-    weak var delegate: CampaignsTabCellDelegate?
+    weak var delegate: RequestListPageCellDelegate?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,6 +56,7 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelect(item: "Title")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

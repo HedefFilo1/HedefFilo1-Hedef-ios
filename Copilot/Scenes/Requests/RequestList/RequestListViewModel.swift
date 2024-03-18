@@ -9,6 +9,7 @@ import Foundation
 
 protocol RequestListVMCrdntrDelegate: AnyObject {
     func getBack()
+    func goToRequestDetail(title: String)
 }
 
 protocol RequestListViewModelDelegate: BaseViewModelDelegate {
@@ -20,6 +21,7 @@ protocol RequestListViewModelType: AnyObject {
     var delegate: RequestListViewModelDelegate? { get set }
 
     func getBack()
+    func goToRequestDetail(title: String)
 }
 
 class RequestListViewModel: RequestListViewModelType {
@@ -29,5 +31,9 @@ class RequestListViewModel: RequestListViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func goToRequestDetail(title: String) {
+        coordinatorDelegate?.goToRequestDetail(title: title)
     }
 }

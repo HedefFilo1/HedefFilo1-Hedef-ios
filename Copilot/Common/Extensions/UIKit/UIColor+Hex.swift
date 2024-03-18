@@ -90,6 +90,9 @@ extension UIColor {
     /// #9AA6AC
     static let greyButton = UIColor(named: "greyButton") ?? .yellow
     
+    /// #C7D244
+    static let lemon = UIColor(named: "lemon") ?? .yellow
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
