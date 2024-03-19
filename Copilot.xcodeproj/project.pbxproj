@@ -214,6 +214,10 @@
 		896BAE092BA83C52006D809E /* CanceledRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */; };
 		896BAE0B2BA87418006D809E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE0A2BA87418006D809E /* Task.swift */; };
 		896BAE0D2BA8847A006D809E /* Demand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE0C2BA8847A006D809E /* Demand.swift */; };
+		896BAE102BA8E580006D809E /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE0F2BA8E580006D809E /* FAQViewModel.swift */; };
+		896BAE122BA8E588006D809E /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE112BA8E588006D809E /* FAQViewController.swift */; };
+		896BAE192BA8E722006D809E /* SupportItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAE182BA8E722006D809E /* SupportItemCell.swift */; };
+		896BAE1B2BA8E727006D809E /* SupportItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896BAE1A2BA8E727006D809E /* SupportItemCell.xib */; };
 		896CB33E2AD5B25C0048025A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */; };
 		896CB3402AD5B5CF0048025A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */; };
 		896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896CB3422AD5BD6D0048025A /* Home.storyboard */; };
@@ -691,6 +695,10 @@
 		896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanceledRequestViewController.swift; sourceTree = "<group>"; };
 		896BAE0A2BA87418006D809E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		896BAE0C2BA8847A006D809E /* Demand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demand.swift; sourceTree = "<group>"; };
+		896BAE0F2BA8E580006D809E /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		896BAE112BA8E588006D809E /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		896BAE182BA8E722006D809E /* SupportItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportItemCell.swift; sourceTree = "<group>"; };
+		896BAE1A2BA8E727006D809E /* SupportItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupportItemCell.xib; sourceTree = "<group>"; };
 		896CB33D2AD5B25C0048025A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		896CB33F2AD5B5CF0048025A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		896CB3422AD5BD6D0048025A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -1000,6 +1008,7 @@
 				48A10C902B9AE314004A2AE8 /* SupportViewController.swift */,
 				48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */,
 				48A10C9A2B9B00AF004A2AE8 /* Views */,
+				896BAE0E2BA8E572006D809E /* FAQ */,
 				48A10C972B9AE962004A2AE8 /* Localization */,
 			);
 			path = Support;
@@ -1898,6 +1907,25 @@
 				896BAE082BA83C52006D809E /* CanceledRequestViewController.swift */,
 			);
 			path = CanceledRequest;
+			sourceTree = "<group>";
+		};
+		896BAE0E2BA8E572006D809E /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				896BAE0F2BA8E580006D809E /* FAQViewModel.swift */,
+				896BAE112BA8E588006D809E /* FAQViewController.swift */,
+				896BAE132BA8E6A8006D809E /* Cell */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		896BAE132BA8E6A8006D809E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				896BAE182BA8E722006D809E /* SupportItemCell.swift */,
+				896BAE1A2BA8E727006D809E /* SupportItemCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		896CB33C2AD5B22E0048025A /* ForgotPassword */ = {
@@ -3462,6 +3490,7 @@
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
 				89B190FE2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
+				896BAE1B2BA8E727006D809E /* SupportItemCell.xib in Resources */,
 				8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */,
 				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
@@ -3714,6 +3743,7 @@
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */,
 				89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */,
+				896BAE102BA8E580006D809E /* FAQViewModel.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
@@ -3774,6 +3804,7 @@
 				48A10C8F2B9AE2AE004A2AE8 /* SupportViewModel.swift in Sources */,
 				89B553AC2B88B28000616732 /* AccFlw5Stp3DeclareViewController.swift in Sources */,
 				894CEC7F2B078F8300D369E9 /* SearchViewModel.swift in Sources */,
+				896BAE122BA8E588006D809E /* FAQViewController.swift in Sources */,
 				89A908D02B31ADF600BC7727 /* ServicesItemsCell.swift in Sources */,
 				8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */,
 				89E29B5C2B3AE52900CCABAD /* VehicleServicesItemCell.swift in Sources */,
@@ -3899,6 +3930,7 @@
 				8976B02F2B73CA2100E7C58F /* WarningItemsCell.swift in Sources */,
 				89950AA92B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift in Sources */,
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
+				896BAE192BA8E722006D809E /* SupportItemCell.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
 				89B610DE2B6CDB0C0052A417 /* GetEligible.swift in Sources */,

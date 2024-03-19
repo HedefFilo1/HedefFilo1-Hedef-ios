@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
-fileprivate enum SupportMenuItems: CaseIterable {
+ 
+enum SupportMenuItems: CaseIterable {
     case guides
     case feedback
     

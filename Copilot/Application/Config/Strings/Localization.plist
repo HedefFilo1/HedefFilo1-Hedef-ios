@@ -3120,62 +3120,6 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Canceled</string>
         </dict>
         
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
-        <key></key>
-        <dict>
-            <key>tr</key>
-            <string></string>
-            <key>en</key>
-            <string></string>
-        </dict>
-        
         <key>supportTitle</key>
         <dict>
             <key>tr</key>
@@ -3206,6 +3150,62 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Geri Bildirim</string>
             <key>en</key>
             <string>Feedback</string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
+        </dict>
+        
+        <key></key>
+        <dict>
+            <key>tr</key>
+            <string></string>
+            <key>en</key>
+            <string></string>
         </dict>
     </dict>
 </plist>
