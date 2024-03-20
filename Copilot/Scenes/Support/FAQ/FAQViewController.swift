@@ -27,6 +27,7 @@ class FAQViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getQuestions()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +35,7 @@ class FAQViewController: UIViewController {
     }
     
     func setupUI() {
+        setBasicViews()
         applyStyle()
         setTexts()
         collectionView.delegate = self
@@ -47,11 +49,10 @@ class FAQViewController: UIViewController {
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS18B700)
-        
     }
     
     func setTexts() {
-        titleLabel.text = Strings.requests
+        titleLabel.text = Strings.frequentlyAskedQuestions
         
     }
     
@@ -67,12 +68,12 @@ extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.items.count
+        return viewModel.items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SupportItemCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.titleLabel.text = viewModel.items[indexPath.item].title
+        cell.item = viewModel.items?[indexPath.item]
         return cell
     }
     
@@ -93,6 +94,7 @@ extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegat
 }
 
 extension FAQViewController: FAQViewModelDelegate {
-    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }
-

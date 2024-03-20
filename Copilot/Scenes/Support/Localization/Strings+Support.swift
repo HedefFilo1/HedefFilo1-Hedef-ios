@@ -23,4 +23,8 @@ extension Strings {
     static var supportFeedbackMenuTitle: String {
         return localized(string: "supportFeedbackMenuTitle")
     }
+    
+    static var frequentlyAskedQuestions: String {
+        return localized(string: "frequentlyAskedQuestions")
+    }
 }

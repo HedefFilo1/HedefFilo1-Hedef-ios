@@ -144,6 +144,8 @@
 		8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */; };
 		8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */; };
 		893659412B7BACC600A657B0 /* TireOperationTireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893659402B7BACC600A657B0 /* TireOperationTireCell.xib */; };
+		893AC48E2BAAFA45003FB9E6 /* APIService+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */; };
+		893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */; };
 		893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */; };
 		893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */; };
 		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
@@ -624,6 +626,8 @@
 		8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
 		8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TireOperationTireCell.swift; sourceTree = "<group>"; };
 		893659402B7BACC600A657B0 /* TireOperationTireCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TireOperationTireCell.xib; sourceTree = "<group>"; };
+		893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Support.swift"; sourceTree = "<group>"; };
+		893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestion.swift; sourceTree = "<group>"; };
 		893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
 		893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
@@ -1007,9 +1011,9 @@
 				48A10C922B9AE36D004A2AE8 /* Support.storyboard */,
 				48A10C902B9AE314004A2AE8 /* SupportViewController.swift */,
 				48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */,
+				48A10C972B9AE962004A2AE8 /* Localization */,
 				48A10C9A2B9B00AF004A2AE8 /* Views */,
 				896BAE0E2BA8E572006D809E /* FAQ */,
-				48A10C972B9AE962004A2AE8 /* Localization */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -2434,9 +2438,10 @@
 				899CF56A2AE18CD5006D85E4 /* APIClient.swift */,
 				899CF5692AE18CD5006D85E4 /* APIRequest.swift */,
 				899CF5682AE18CD4006D85E4 /* APIService.swift */,
+				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
 				89513E652B95120200B05199 /* APIService+CreateCase.swift */,
 				89431DB02B98766000A6F6B8 /* APIService+RequestsFlow.swift */,
-				899FF41C2B766BC100447118 /* APIService+Part2.swift */,
+				893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */,
 				899CF56F2AE18EE5006D85E4 /* Models */,
 			);
 			path = Network;
@@ -2468,6 +2473,7 @@
 				893489262BA0F076009A3FBB /* UploadRequestFile.swift */,
 				896BAE0A2BA87418006D809E /* Task.swift */,
 				896BAE0C2BA8847A006D809E /* Demand.swift */,
+				893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3611,6 +3617,7 @@
 				89DAB80A2AC73BD50098BA67 /* CodeStrings.swift in Sources */,
 				89B6F6272B66ED8100F4C3AB /* Flow3Step2DamageViewModel.swift in Sources */,
 				89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */,
+				893AC48E2BAAFA45003FB9E6 /* APIService+Support.swift in Sources */,
 				89B12BB92AD47902002C70E4 /* MainTabBarController.swift in Sources */,
 				890D7CD32ACE99BC00F053DA /* SignupViewController.swift in Sources */,
 				8976B03C2B73CF2000E7C58F /* BrkdwnFlw2Stp3WarningLightsVController.swift in Sources */,
@@ -3784,6 +3791,7 @@
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
 				89E045872B04D2F000745E73 /* DocumentsViewController.swift in Sources */,
 				89950AD52B7FCBC8004537D2 /* AccFlw1Stp5LeaksViewController.swift in Sources */,
+				893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
 				89950AAE2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift in Sources */,

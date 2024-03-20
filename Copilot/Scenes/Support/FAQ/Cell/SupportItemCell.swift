@@ -9,6 +9,12 @@ import UIKit
 
 class SupportItemCell: UICollectionViewCell, Reusable {
 
+    var item: FAQQuestion? {
+        didSet {
+            titleLabel.text = item?.name
+        }
+    }
+    
     // MARK: - IBOutlets
     // MARK: - UILabels
     @IBOutlet weak var titleLabel: UILabel!

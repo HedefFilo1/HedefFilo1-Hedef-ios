@@ -3152,12 +3152,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Feedback</string>
         </dict>
         
-        <key></key>
+        <key>frequentlyAskedQuestions</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Sık Sorulan Sorular</string>
             <key>en</key>
-            <string></string>
+            <string>Frequently asked Questions</string>
         </dict>
         
         <key></key>

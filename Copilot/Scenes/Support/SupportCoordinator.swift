@@ -46,4 +46,10 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate {
     func supportDidFinish() {
         finish()
     }
+    
+    func goToFAQ() {
+        let controller: FAQViewController = storyboard.instantiateViewController()
+        controller.viewModel = FAQViewModel()
+        navigationController.pushViewController(controller, animated: true)
+    }
 }

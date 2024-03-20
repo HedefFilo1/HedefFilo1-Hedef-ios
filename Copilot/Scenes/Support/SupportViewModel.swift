@@ -10,6 +10,7 @@ import Foundation
 enum SupportMenuItems: CaseIterable {
     case guides
     case feedback
+    case faq
     
     var title: String {
         switch self {
@@ -17,12 +18,15 @@ enum SupportMenuItems: CaseIterable {
             Strings.supportGuidesMenuTitle
         case .feedback:
             Strings.supportFeedbackMenuTitle
+        case .faq:
+            Strings.frequentlyAskedQuestions
         }
     }
 }
 
 protocol SupportViewModelCoordinatorDelegate: AnyObject {
     func supportDidFinish()
+    func goToFAQ()
 }
 
 protocol SupportViewModelViewDelegate: AnyObject {
@@ -38,6 +42,7 @@ protocol SupportViewModelType: AnyObject {
     
     func numberOfItems() -> Int
     func title(for item: Int) -> String
+    func goToFAQ()
 }
 
 class SupportViewModel: SupportViewModelType {
@@ -62,6 +67,10 @@ class SupportViewModel: SupportViewModelType {
     
     func title(for item: Int) -> String {
         items[item].title
+    }
+    
+    func goToFAQ() {
+        coordinatorDelegate?.goToFAQ()
     }
 
 }
