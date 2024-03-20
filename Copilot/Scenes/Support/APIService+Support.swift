@@ -18,4 +18,13 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getFAQQuestion(categoryId: Int, completion: @escaping ([FAQQuestionDetail]?, APIResponseError?) -> Void) {
+        let route = "faq/category/\(categoryId)/question"
+        let req = APIRequest<[FAQQuestionDetail]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getFAQQuestion"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

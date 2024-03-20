@@ -1,16 +1,16 @@
 //
-//  FAQViewController.swift
+//  FAQQeustionViewController.swift
 //  Copilot
 //
-//  Created by Jamal on 3/19/24.
+//  Created by Jamal on 3/20/24.
 //
 
 import Foundation
 import UIKit
 
-class FAQViewController: UIViewController {
+class FAQQeustionViewController: UIViewController {
     
-    var viewModel: FAQViewModelType! {
+    var viewModel: FAQQuestionViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -27,7 +27,7 @@ class FAQViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.getQuestions()
+        viewModel.getQuestion()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +40,7 @@ class FAQViewController: UIViewController {
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: SupportItemCell.self)
+        collectionView.register(cellType: FAQQeustionItemCell.self)
         collectionView.contentInset.bottom = 70
     }
     
@@ -52,8 +52,7 @@ class FAQViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.frequentlyAskedQuestions
-        
+        titleLabel.text = viewModel.item?.name
     }
     
     @IBAction func didTapBack() {
@@ -61,7 +60,7 @@ class FAQViewController: UIViewController {
     }
 }
 
-extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FAQQeustionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -72,7 +71,7 @@ extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: SupportItemCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: FAQQeustionItemCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.item = viewModel.items?[indexPath.item]
         return cell
     }
@@ -90,13 +89,10 @@ extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let item = viewModel.items?[indexPath.item] {
-            viewModel.goToFAQQuestion(item: item)
-        }
     }
 }
 
-extension FAQViewController: FAQViewModelDelegate {
+extension FAQQeustionViewController: FAQQuestionViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

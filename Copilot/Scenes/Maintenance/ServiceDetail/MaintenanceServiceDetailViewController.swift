@@ -23,7 +23,7 @@ class MaintenanceServiceDetailViewController: ServiceDetailViewController {
     }
     
     override func setAppointment() {
-        guard let item = viewModel.appointment else { return }
+//        guard let item = viewModel.appointment else { return }
         super.setAppointment()
         desciptionLabel.text = Strings.maintenanceEditAppointment
     }
