@@ -27,4 +27,13 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getSupportGuides(completion: @escaping ([SupportGuide]?, APIResponseError?) -> Void) {
+        let route = "guide"
+        let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getFAQQuestions"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

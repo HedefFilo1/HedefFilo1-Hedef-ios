@@ -90,6 +90,9 @@ extension SupportViewController: UICollectionViewDataSource {
 extension SupportViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
+        case 0:
+            viewModel.goToSupportGuide()
+            
         case 2:
             viewModel.goToFAQ()
         default:

@@ -27,6 +27,7 @@ enum SupportMenuItems: CaseIterable {
 protocol SupportViewModelCoordinatorDelegate: AnyObject {
     func supportDidFinish()
     func goToFAQ()
+    func goToSupportGuide()
 }
 
 protocol SupportViewModelViewDelegate: AnyObject {
@@ -43,6 +44,7 @@ protocol SupportViewModelType: AnyObject {
     func numberOfItems() -> Int
     func title(for item: Int) -> String
     func goToFAQ()
+    func goToSupportGuide()
 }
 
 class SupportViewModel: SupportViewModelType {
@@ -72,5 +74,8 @@ class SupportViewModel: SupportViewModelType {
     func goToFAQ() {
         coordinatorDelegate?.goToFAQ()
     }
-
+    
+    func goToSupportGuide() {
+        coordinatorDelegate?.goToSupportGuide()
+    }
 }

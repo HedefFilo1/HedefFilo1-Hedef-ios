@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol FAQQuestionDetailVMCrdinatorDlgt: AnyObject {
     func getBack()
 }
