@@ -89,6 +89,9 @@ extension FAQQeustionViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = viewModel.items?[indexPath.item] {
+            viewModel.goToFAQQuestionDetail(item: item)
+        }
     }
 }
 

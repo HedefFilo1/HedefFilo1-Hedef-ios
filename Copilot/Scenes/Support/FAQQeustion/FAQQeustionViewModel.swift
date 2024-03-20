@@ -9,6 +9,7 @@ import Foundation
 
 protocol FAQQuestionVMCrdinatorDlgt: AnyObject {
     func getBack()
+    func goToFAQQuestionDetail(item: FAQQuestionDetail)
 }
 
 protocol FAQQuestionViewModelDelegate: BaseViewModelDelegate {
@@ -22,6 +23,7 @@ protocol FAQQuestionViewModelType: AnyObject {
     var items: [FAQQuestionDetail]? { get set }
     func getBack()
     func getQuestion()
+    func goToFAQQuestionDetail(item: FAQQuestionDetail)
 }
 
 class FAQQuestionViewModel: FAQQuestionViewModelType {
@@ -50,5 +52,9 @@ class FAQQuestionViewModel: FAQQuestionViewModelType {
                 self.delegate?.reloadData()
             }
         }
+    }
+    
+    func goToFAQQuestionDetail(item: FAQQuestionDetail) {
+        coordinatorDelegate?.goToFAQQuestionDetail(item: item)
     }
 }

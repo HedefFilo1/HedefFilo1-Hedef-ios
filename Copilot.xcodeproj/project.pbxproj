@@ -151,6 +151,8 @@
 		893AC4972BAB04D2003FB9E6 /* FAQQuestionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4962BAB04D2003FB9E6 /* FAQQuestionDetail.swift */; };
 		893AC4992BAB05AB003FB9E6 /* FAQQeustionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4982BAB05AB003FB9E6 /* FAQQeustionItemCell.swift */; };
 		893AC49B2BAB05AF003FB9E6 /* FAQQeustionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893AC49A2BAB05AF003FB9E6 /* FAQQeustionItemCell.xib */; };
+		893AC49F2BAB1272003FB9E6 /* FAQQuestionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC49E2BAB1272003FB9E6 /* FAQQuestionDetailViewModel.swift */; };
+		893AC4A12BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4A02BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift */; };
 		893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */; };
 		893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */; };
 		893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */; };
@@ -638,6 +640,8 @@
 		893AC4962BAB04D2003FB9E6 /* FAQQuestionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestionDetail.swift; sourceTree = "<group>"; };
 		893AC4982BAB05AB003FB9E6 /* FAQQeustionItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQQeustionItemCell.swift; sourceTree = "<group>"; };
 		893AC49A2BAB05AF003FB9E6 /* FAQQeustionItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQQeustionItemCell.xib; sourceTree = "<group>"; };
+		893AC49E2BAB1272003FB9E6 /* FAQQuestionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestionDetailViewModel.swift; sourceTree = "<group>"; };
+		893AC4A02BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestionDetailViewController.swift; sourceTree = "<group>"; };
 		893B95972B59C3C200B1F0F4 /* ServicesSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesSearchCell.swift; sourceTree = "<group>"; };
 		893B95992B59C3C900B1F0F4 /* ServicesSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesSearchCell.xib; sourceTree = "<group>"; };
 		893EDF5D2AF924D8004E643E /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
@@ -1026,6 +1030,7 @@
 				48A10C9A2B9B00AF004A2AE8 /* Views */,
 				896BAE0E2BA8E572006D809E /* FAQ */,
 				893AC4932BAAFFB6003FB9E6 /* FAQQeustion */,
+				893AC49D2BAB1259003FB9E6 /* FAQQeustionDetail */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -1597,6 +1602,15 @@
 				893AC49A2BAB05AF003FB9E6 /* FAQQeustionItemCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		893AC49D2BAB1259003FB9E6 /* FAQQeustionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				893AC49E2BAB1272003FB9E6 /* FAQQuestionDetailViewModel.swift */,
+				893AC4A02BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift */,
+			);
+			path = FAQQeustionDetail;
 			sourceTree = "<group>";
 		};
 		893EDF5C2AF924A7004E643E /* Campaigns */ = {
@@ -3683,6 +3697,7 @@
 				8917F5582B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift in Sources */,
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
+				893AC4A12BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift in Sources */,
 				89431D8F2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift in Sources */,
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
@@ -3827,6 +3842,7 @@
 				893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */,
 				89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */,
 				8917F5472B39EC2900681AD3 /* Flow1Step4ResultViewController.swift in Sources */,
+				893AC49F2BAB1272003FB9E6 /* FAQQuestionDetailViewModel.swift in Sources */,
 				89950AAE2B7F8229004537D2 /* AccFlw1Stp2OtherVehicleViewModel.swift in Sources */,
 				890D7CDA2ACEC7D600F053DA /* SuccessPopupViewController.swift in Sources */,
 				897835D12B44A0D400C63AA7 /* CalendarViewModel.swift in Sources */,

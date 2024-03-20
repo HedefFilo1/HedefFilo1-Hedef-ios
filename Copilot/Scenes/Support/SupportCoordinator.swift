@@ -44,7 +44,8 @@ class SupportCoordinator: Coordinator {
 
 extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
                               FAQVMCrdinatorDlgt,
-                              FAQQuestionVMCrdinatorDlgt {
+                              FAQQuestionVMCrdinatorDlgt,
+                              FAQQuestionDetailVMCrdinatorDlgt {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -63,6 +64,14 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
     func goToFAQQuestion(item: FAQQuestion) {
         let controller: FAQQeustionViewController = storyboard.instantiateViewController()
         controller.viewModel = FAQQuestionViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.item = item
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToFAQQuestionDetail(item: FAQQuestionDetail) {
+        let controller: FAQQuestionDetailViewController = storyboard.instantiateViewController()
+        controller.viewModel = FAQQuestionDetailViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.item = item
         navigationController.pushViewController(controller, animated: true)
