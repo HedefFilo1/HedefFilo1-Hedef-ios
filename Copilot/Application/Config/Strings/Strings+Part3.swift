@@ -472,4 +472,8 @@ extension Strings {
     static var canceled: String {
         return localized(string: "canceled")
     }
+    
+    static var serviceOperations: String {
+        return localized(string: "serviceOperations")
+    }
 }

@@ -3160,12 +3160,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Frequently asked Questions</string>
         </dict>
         
-        <key></key>
+        <key>serviceOperations</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Servis İşlemleri</string>
             <key>en</key>
-            <string></string>
+            <string>Service Operations</string>
         </dict>
         
         <key></key>

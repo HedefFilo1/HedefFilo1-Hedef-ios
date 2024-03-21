@@ -448,6 +448,10 @@
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
 		89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCE86F2B21E03100AB1114 /* Campaign.swift */; };
+		89DF05332BACCA9D00C8B37E /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05322BACCA9D00C8B37E /* FeedbackViewModel.swift */; };
+		89DF05352BACCAA600C8B37E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05342BACCAA600C8B37E /* FeedbackViewController.swift */; };
+		89DF05372BACCC4700C8B37E /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05362BACCC4700C8B37E /* FeedbackCell.swift */; };
+		89DF05392BACCC4C00C8B37E /* FeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF05382BACCC4C00C8B37E /* FeedbackCell.xib */; };
 		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
 		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
 		89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07072AF0122A00892B1D /* SubFiltersCell.xib */; };
@@ -947,6 +951,10 @@
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
 		89DCE86F2B21E03100AB1114 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		89DF05322BACCA9D00C8B37E /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		89DF05342BACCAA600C8B37E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		89DF05362BACCC4700C8B37E /* FeedbackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackCell.swift; sourceTree = "<group>"; };
+		89DF05382BACCC4C00C8B37E /* FeedbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackCell.xib; sourceTree = "<group>"; };
 		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
 		89DF07072AF0122A00892B1D /* SubFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFiltersCell.xib; sourceTree = "<group>"; };
@@ -1047,6 +1055,7 @@
 				893AC49D2BAB1259003FB9E6 /* FAQQeustionDetail */,
 				893AC4A22BAB46BF003FB9E6 /* SupportGuide */,
 				893AC4B42BAB4C39003FB9E6 /* SupportGuideDetail */,
+				89DF05312BACCA8F00C8B37E /* Feedback */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -3209,6 +3218,25 @@
 			path = ServiceFilter;
 			sourceTree = "<group>";
 		};
+		89DF05312BACCA8F00C8B37E /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05322BACCA9D00C8B37E /* FeedbackViewModel.swift */,
+				89DF05342BACCAA600C8B37E /* FeedbackViewController.swift */,
+				89DF053A2BACCC5000C8B37E /* Cell */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		89DF053A2BACCC5000C8B37E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05382BACCC4C00C8B37E /* FeedbackCell.xib */,
+				89DF05362BACCC4700C8B37E /* FeedbackCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		89DF07052AF011C200892B1D /* SubFilters */ = {
 			isa = PBXGroup;
 			children = (
@@ -3523,6 +3551,7 @@
 				89F6A0542B584A860052EE15 /* LastikRandevuCell.xib in Resources */,
 				89F67DA92B7D399E0040DF15 /* BreakdownRandevuCell.xib in Resources */,
 				89C686952B0260C900011897 /* AvatarCell.xib in Resources */,
+				89DF05392BACCC4C00C8B37E /* FeedbackCell.xib in Resources */,
 				8976B02A2B73C8D300E7C58F /* WarningLightsHeaderCell.xib in Resources */,
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
 				893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */,
@@ -3709,6 +3738,7 @@
 			files = (
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				48A10C952B9AE37E004A2AE8 /* SupportCoordinator.swift in Sources */,
+				89DF05372BACCC4700C8B37E /* FeedbackCell.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */,
@@ -3758,6 +3788,7 @@
 				8934D4EA2B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift in Sources */,
 				8917F5582B3A04E500681AD3 /* Flow3Step3ConfirmViewModel.swift in Sources */,
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
+				89DF05332BACCA9D00C8B37E /* FeedbackViewModel.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
 				893AC4A62BAB46D7003FB9E6 /* SupportGuideViewController.swift in Sources */,
 				893AC4A12BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift in Sources */,
@@ -4001,6 +4032,7 @@
 				893259952B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift in Sources */,
 				891D78332B4443CC008FC722 /* CPTimeChooseView.swift in Sources */,
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
+				89DF05352BACCAA600C8B37E /* FeedbackViewController.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
 				893489212BA0375A009A3FBB /* LanguagesViewController.swift in Sources */,
 				893AC4952BAAFFC9003FB9E6 /* FAQQeustionViewModel.swift in Sources */,

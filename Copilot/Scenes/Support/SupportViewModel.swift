@@ -28,6 +28,7 @@ protocol SupportViewModelCoordinatorDelegate: AnyObject {
     func supportDidFinish()
     func goToFAQ()
     func goToSupportGuide()
+    func goToFeedback()
 }
 
 protocol SupportViewModelViewDelegate: AnyObject {
@@ -45,6 +46,7 @@ protocol SupportViewModelType: AnyObject {
     func title(for item: Int) -> String
     func goToFAQ()
     func goToSupportGuide()
+    func goToFeedback()
 }
 
 class SupportViewModel: SupportViewModelType {
@@ -77,5 +79,9 @@ class SupportViewModel: SupportViewModelType {
     
     func goToSupportGuide() {
         coordinatorDelegate?.goToSupportGuide()
+    }
+    
+    func goToFeedback() {
+        coordinatorDelegate?.goToFeedback()
     }
 }

@@ -47,7 +47,8 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
                               FAQQuestionVMCrdinatorDlgt,
                               FAQQuestionDetailVMCrdinatorDlgt,
                               SupportGuideVMCrdinatorDlgt,
-                              SupportGuideDetailVMCrdinatorDlgt {
+                              SupportGuideDetailVMCrdinatorDlgt,
+                              FeedbackViewModelCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -91,6 +92,13 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         controller.viewModel = SupportGuideDetailViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.item = item
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToFeedback() {
+        let controller: FeedbackViewController = storyboard.instantiateViewController()
+        controller.viewModel = FeedbackViewModel()
+        controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
 }

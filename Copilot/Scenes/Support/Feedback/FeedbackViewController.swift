@@ -1,44 +1,36 @@
 //
-//  SupportViewController.swift
+//  FeedbackViewController.swift
 //  Copilot
 //
-//  Created by Fikri Can Cankurtaran on 8.03.2024.
+//  Created by Jamal on 3/21/24.
 //
 
+import Foundation
 import UIKit
 
-class SupportViewController: UIViewController {
+class FeedbackViewController: UIViewController {
 
     // MARK: - IBOutlets
     // MARK: - UIViews
     @IBOutlet weak var contentView: UIView!
     // MARK: - UILabels
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     // MARK: - UIButtons
     @IBOutlet weak var callHelpCenterButton: UIButton!
     
     // MARK: - UICollectionView
-    @IBOutlet weak var menuListCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: - ViewModel
-    var viewModel: SupportViewModelType! {
+    var viewModel: FeedbackViewModelType! {
         didSet {
             viewModel.viewDelegate = self
         }
     }
 
-    // MARK: Lifecylce Methods
-    deinit {
-        viewModel.finish()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setupUI()
-        viewModel.start()
     }
 
     // MARK: - Setup
@@ -53,56 +45,53 @@ class SupportViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        menuListCollectionView.register(cellType: SupportMenuItemCollectionViewCell.self)
-        menuListCollectionView.delegate = self
-        menuListCollectionView.dataSource = self
-        menuListCollectionView.contentInset.top = 20
-        menuListCollectionView.contentInset.bottom = 60
+        collectionView.register(cellType: FeedbackCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.contentInset.top = 20
+        collectionView.contentInset.bottom = 60
     }
 
     private func applyStyles() {
         titleLabel.apply(.blackS24R400)
-        descriptionLabel.apply(.custom(.black, .regular, 11.0))
         callHelpCenterButton.apply(.custom(.white, .regular, 16.0))
     }
 
     private func configure() {
-        titleLabel.text = Strings.supportTitle
-        descriptionLabel.text = Strings.supportDescription
+        titleLabel.text = Strings.supportFeedbackMenuTitle
     }
 
 }
 
-extension SupportViewController: UICollectionViewDataSource {
+extension FeedbackViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItems()
+        return viewModel.items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: SupportMenuItemCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let titleText = viewModel.title(for: indexPath.item)
+        let cell: FeedbackCell = collectionView.dequeueReusableCell(for: indexPath)
+        let titleText = viewModel.items[indexPath.item].title
         cell.configure(titleText: titleText)
         return cell
     }
 }
 
-extension SupportViewController: UICollectionViewDelegate {
+extension FeedbackViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
-        case 0:
-            viewModel.goToSupportGuide()
-        case 1:
-            viewModel.goToFeedback()
-        case 2:
-            viewModel.goToFAQ()
+//        case 0:
+//            viewModel.goToFeedbackGuide()
+//            
+//        case 2:
+//            viewModel.goToFAQ()
         default:
             break
         }
     }
 }
 
-extension SupportViewController: UICollectionViewDelegateFlowLayout {
+extension FeedbackViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width - 48, height: 57)
     }
@@ -116,6 +105,6 @@ extension SupportViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension SupportViewController: SupportViewModelViewDelegate {
+extension FeedbackViewController: FeedbackViewModelViewDelegate {
 
 }
