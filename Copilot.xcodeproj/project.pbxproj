@@ -452,6 +452,18 @@
 		89DF05352BACCAA600C8B37E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05342BACCAA600C8B37E /* FeedbackViewController.swift */; };
 		89DF05372BACCC4700C8B37E /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05362BACCC4700C8B37E /* FeedbackCell.swift */; };
 		89DF05392BACCC4C00C8B37E /* FeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF05382BACCC4C00C8B37E /* FeedbackCell.xib */; };
+		89DF053D2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF053C2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift */; };
+		89DF053F2BACD0D200C8B37E /* ProccessRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF053E2BACD0D200C8B37E /* ProccessRequestsViewController.swift */; };
+		89DF05422BACD14400C8B37E /* ServiceOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05412BACD14400C8B37E /* ServiceOperationsViewModel.swift */; };
+		89DF05442BACD14C00C8B37E /* ServiceOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05432BACD14C00C8B37E /* ServiceOperationsViewController.swift */; };
+		89DF05482BACD18B00C8B37E /* ServiceOperationsSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF05472BACD18B00C8B37E /* ServiceOperationsSearchCell.xib */; };
+		89DF054A2BACD19200C8B37E /* ServiceOperationsSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05492BACD19200C8B37E /* ServiceOperationsSearchCell.swift */; };
+		89DF054C2BACD1C300C8B37E /* ServicesOperationItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF054B2BACD1C300C8B37E /* ServicesOperationItemsCell.xib */; };
+		89DF054E2BACD1CD00C8B37E /* ServicesOperationItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF054D2BACD1CD00C8B37E /* ServicesOperationItemsCell.swift */; };
+		89DF05522BACD20F00C8B37E /* ServicesOperationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05512BACD20F00C8B37E /* ServicesOperationItemCell.swift */; };
+		89DF05542BACD21300C8B37E /* ServicesOperationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF05532BACD21300C8B37E /* ServicesOperationItemCell.xib */; };
+		89DF05572BACDF1600C8B37E /* LiveSupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05562BACDF1600C8B37E /* LiveSupportViewModel.swift */; };
+		89DF05592BACDF1E00C8B37E /* LiveSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF05582BACDF1E00C8B37E /* LiveSupportViewController.swift */; };
 		89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07032AF011BC00892B1D /* FilterCell.xib */; };
 		89DF07082AF0122A00892B1D /* SubFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF07062AF0122A00892B1D /* SubFiltersCell.swift */; };
 		89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF07072AF0122A00892B1D /* SubFiltersCell.xib */; };
@@ -955,6 +967,18 @@
 		89DF05342BACCAA600C8B37E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		89DF05362BACCC4700C8B37E /* FeedbackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackCell.swift; sourceTree = "<group>"; };
 		89DF05382BACCC4C00C8B37E /* FeedbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackCell.xib; sourceTree = "<group>"; };
+		89DF053C2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProccessRequestsViewModel.swift; sourceTree = "<group>"; };
+		89DF053E2BACD0D200C8B37E /* ProccessRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProccessRequestsViewController.swift; sourceTree = "<group>"; };
+		89DF05412BACD14400C8B37E /* ServiceOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOperationsViewModel.swift; sourceTree = "<group>"; };
+		89DF05432BACD14C00C8B37E /* ServiceOperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOperationsViewController.swift; sourceTree = "<group>"; };
+		89DF05472BACD18B00C8B37E /* ServiceOperationsSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceOperationsSearchCell.xib; sourceTree = "<group>"; };
+		89DF05492BACD19200C8B37E /* ServiceOperationsSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperationsSearchCell.swift; sourceTree = "<group>"; };
+		89DF054B2BACD1C300C8B37E /* ServicesOperationItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesOperationItemsCell.xib; sourceTree = "<group>"; };
+		89DF054D2BACD1CD00C8B37E /* ServicesOperationItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesOperationItemsCell.swift; sourceTree = "<group>"; };
+		89DF05512BACD20F00C8B37E /* ServicesOperationItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesOperationItemCell.swift; sourceTree = "<group>"; };
+		89DF05532BACD21300C8B37E /* ServicesOperationItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesOperationItemCell.xib; sourceTree = "<group>"; };
+		89DF05562BACDF1600C8B37E /* LiveSupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSupportViewModel.swift; sourceTree = "<group>"; };
+		89DF05582BACDF1E00C8B37E /* LiveSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSupportViewController.swift; sourceTree = "<group>"; };
 		89DF07032AF011BC00892B1D /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		89DF07062AF0122A00892B1D /* SubFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFiltersCell.swift; sourceTree = "<group>"; };
 		89DF07072AF0122A00892B1D /* SubFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFiltersCell.xib; sourceTree = "<group>"; };
@@ -1056,6 +1080,9 @@
 				893AC4A22BAB46BF003FB9E6 /* SupportGuide */,
 				893AC4B42BAB4C39003FB9E6 /* SupportGuideDetail */,
 				89DF05312BACCA8F00C8B37E /* Feedback */,
+				89DF053B2BACD0AD00C8B37E /* ProccessRequests */,
+				89DF05402BACD10900C8B37E /* ServiceOperations */,
+				89DF05552BACDEFE00C8B37E /* LiveSupport */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -3237,6 +3264,71 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		89DF053B2BACD0AD00C8B37E /* ProccessRequests */ = {
+			isa = PBXGroup;
+			children = (
+				89DF053C2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift */,
+				89DF053E2BACD0D200C8B37E /* ProccessRequestsViewController.swift */,
+			);
+			path = ProccessRequests;
+			sourceTree = "<group>";
+		};
+		89DF05402BACD10900C8B37E /* ServiceOperations */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05412BACD14400C8B37E /* ServiceOperationsViewModel.swift */,
+				89DF05432BACD14C00C8B37E /* ServiceOperationsViewController.swift */,
+				89DF05452BACD15F00C8B37E /* Cell */,
+			);
+			path = ServiceOperations;
+			sourceTree = "<group>";
+		};
+		89DF05452BACD15F00C8B37E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05462BACD17100C8B37E /* Search */,
+				89DF054F2BACD1D900C8B37E /* Items */,
+				89DF05502BACD1FA00C8B37E /* Item */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89DF05462BACD17100C8B37E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05472BACD18B00C8B37E /* ServiceOperationsSearchCell.xib */,
+				89DF05492BACD19200C8B37E /* ServiceOperationsSearchCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		89DF054F2BACD1D900C8B37E /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				89DF054B2BACD1C300C8B37E /* ServicesOperationItemsCell.xib */,
+				89DF054D2BACD1CD00C8B37E /* ServicesOperationItemsCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		89DF05502BACD1FA00C8B37E /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05512BACD20F00C8B37E /* ServicesOperationItemCell.swift */,
+				89DF05532BACD21300C8B37E /* ServicesOperationItemCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		89DF05552BACDEFE00C8B37E /* LiveSupport */ = {
+			isa = PBXGroup;
+			children = (
+				89DF05562BACDF1600C8B37E /* LiveSupportViewModel.swift */,
+				89DF05582BACDF1E00C8B37E /* LiveSupportViewController.swift */,
+			);
+			path = LiveSupport;
+			sourceTree = "<group>";
+		};
 		89DF07052AF011C200892B1D /* SubFilters */ = {
 			isa = PBXGroup;
 			children = (
@@ -3587,6 +3679,7 @@
 				892A8D142AC4EB050020C1C4 /* DIN-Medium.ttf in Resources */,
 				894CEC912B07A68600D369E9 /* SearchHeaderCell.xib in Resources */,
 				894CEC872B0790A400D369E9 /* PastSearchCell.xib in Resources */,
+				89DF05542BACD21300C8B37E /* ServicesOperationItemCell.xib in Resources */,
 				8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */,
 				8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
@@ -3631,6 +3724,7 @@
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
 				899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */,
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
+				89DF05482BACD18B00C8B37E /* ServiceOperationsSearchCell.xib in Resources */,
 				89B190FE2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
 				896BAE1B2BA8E727006D809E /* SupportItemCell.xib in Resources */,
@@ -3642,6 +3736,7 @@
 				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
 				89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
+				89DF054C2BACD1C300C8B37E /* ServicesOperationItemsCell.xib in Resources */,
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				89B553A52B87B33500616732 /* ReportImageCell.xib in Resources */,
 				89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */,
@@ -3818,6 +3913,7 @@
 				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
+				89DF05572BACDF1600C8B37E /* LiveSupportViewModel.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8976B0392B73CD3C00E7C58F /* WarningLightsFooterCell.swift in Sources */,
 				8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */,
@@ -3876,7 +3972,9 @@
 				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
 				8907EEFB2B696807004869BE /* MaintenanceCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,
+				89DF05442BACD14C00C8B37E /* ServiceOperationsViewController.swift in Sources */,
 				894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */,
+				89DF05522BACD20F00C8B37E /* ServicesOperationItemCell.swift in Sources */,
 				89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */,
 				48A10C992B9AE988004A2AE8 /* Strings+Support.swift in Sources */,
 				8934D50B2B0FFF6100CD0CA7 /* VehicleDescriptionCell.swift in Sources */,
@@ -3892,6 +3990,7 @@
 				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */,
+				89DF054A2BACD19200C8B37E /* ServiceOperationsSearchCell.swift in Sources */,
 				89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */,
 				896BAE102BA8E580006D809E /* FAQViewModel.swift in Sources */,
 				894CEC902B07A68600D369E9 /* SearchHeaderCell.swift in Sources */,
@@ -3928,6 +4027,7 @@
 				896BAE0B2BA87418006D809E /* Task.swift in Sources */,
 				895ADBC12B177E08004C9A4C /* Case.swift in Sources */,
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
+				89DF05422BACD14400C8B37E /* ServiceOperationsViewModel.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,
 				8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */,
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
@@ -3972,6 +4072,7 @@
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				8917F54E2B39FBBD00681AD3 /* LastikPointsView.swift in Sources */,
 				897835D42B454F3900C63AA7 /* ServiceRandevuViewController.swift in Sources */,
+				89DF053D2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
 				899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */,
@@ -4090,7 +4191,9 @@
 				8976B02F2B73CA2100E7C58F /* WarningItemsCell.swift in Sources */,
 				89950AA92B7F7429004537D2 /* AccFlw1Stp1ViewModel.swift in Sources */,
 				893EDF6A2AF92C39004E643E /* CampaignOfferCell.swift in Sources */,
+				89DF05592BACDF1E00C8B37E /* LiveSupportViewController.swift in Sources */,
 				896BAE192BA8E722006D809E /* SupportItemCell.swift in Sources */,
+				89DF053F2BACD0D200C8B37E /* ProccessRequestsViewController.swift in Sources */,
 				89C55DE32AC4A5FF00C3066A /* UIApplication+EXT.swift in Sources */,
 				893EDF5E2AF924D8004E643E /* CampaignsViewModel.swift in Sources */,
 				89B610DE2B6CDB0C0052A417 /* GetEligible.swift in Sources */,
@@ -4105,6 +4208,7 @@
 				8934D50F2B10FD7300CD0CA7 /* HGSViewModel.swift in Sources */,
 				8986FCB72AFBCC82006057EA /* PersistenceType.swift in Sources */,
 				89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */,
+				89DF054E2BACD1CD00C8B37E /* ServicesOperationItemsCell.swift in Sources */,
 				892A57D22B753F0B002C6CD1 /* BrkdwnFlw4Stp3NoWarningViewModel.swift in Sources */,
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,

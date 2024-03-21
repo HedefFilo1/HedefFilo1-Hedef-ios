@@ -53,7 +53,7 @@ class FeedbackViewController: UIViewController {
     }
 
     private func applyStyles() {
-        titleLabel.apply(.blackS24R400)
+        titleLabel.apply(.blackS24B700)
         callHelpCenterButton.apply(.custom(.white, .regular, 16.0))
     }
 

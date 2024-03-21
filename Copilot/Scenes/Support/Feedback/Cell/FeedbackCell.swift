@@ -25,7 +25,7 @@ class FeedbackCell: UICollectionViewCell, Reusable {
     }
     
     private func setup() {
-        titleLabel.apply(.blackS14R400)
+        titleLabel.apply(.blackS14M500)
     }
     
     public func configure(titleText: String) {

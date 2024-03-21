@@ -40,6 +40,11 @@ class SupportViewController: UIViewController {
         setupUI()
         viewModel.start()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showTabbarView()
+    }
 
     // MARK: - Setup
     private func setupUI() {
@@ -71,6 +76,10 @@ class SupportViewController: UIViewController {
         descriptionLabel.text = Strings.supportDescription
     }
 
+    @IBAction func didTapLiveSupport() {
+        viewModel.goToLiveSupport()
+    }
+    
 }
 
 extension SupportViewController: UICollectionViewDataSource {
