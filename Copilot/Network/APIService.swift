@@ -207,7 +207,7 @@ class APIService {
     }
     
     static func getSupplier(type: SupplierType? = nil, mark: String, lat: Double? = nil, lon: Double? = nil, completion: @escaping ([Supplier]?, APIResponseError?) -> Void) {
-        var route = "copilot/supplier"
+        var route = "supplier"
         
         let shoudAddMark = type != .tire
         if shoudAddMark {
@@ -270,7 +270,7 @@ class APIService {
     }
     
     static func getDocument(id: String, completion: @escaping (DocumentContent?, APIResponseError?) -> Void) {
-        let route = "copilot/document/\(id)"
+        let route = "document/\(id)"
         let req = APIRequest<DocumentContent>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Document"
         req.log = loggingEnabled
