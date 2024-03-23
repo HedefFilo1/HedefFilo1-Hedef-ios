@@ -31,6 +31,7 @@ class ServiceOperationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getServices()
 #if DEV_DEBUG
         
 #endif

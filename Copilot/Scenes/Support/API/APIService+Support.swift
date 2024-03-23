@@ -36,4 +36,13 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getServiceOperations(completion: @escaping ([SupportGuide]?, APIResponseError?) -> Void) {
+        let route = "case?status=SOLVED&appointmentStatus=APPOINTMENT_APPROVED"
+        let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
+        req.identifier = "GetServiceOperations"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

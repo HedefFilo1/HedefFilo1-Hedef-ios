@@ -30,6 +30,7 @@ protocol ServiceOperationsViewModelType: AnyObject {
     func getBack()
     func presentFitlers()
     func presentFeedbackRate()
+    func getServices()
 }
 
 class ServiceOperationsViewModel: ServiceOperationsViewModelType {
@@ -53,6 +54,24 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     
     func presentFeedbackRate() {
         coordinatorDelegate?.presentFeedbackRate()
+    }
+    
+    func getServices() {
+        Loading.shared.show()
+        APIService.getServiceOperations { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+            if let model {
+//                self.items = model
+                print(model)
+                self.delegate?.reloadData()
+            }
+        }
     }
 }
 
