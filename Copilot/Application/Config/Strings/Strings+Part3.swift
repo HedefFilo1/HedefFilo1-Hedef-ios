@@ -500,4 +500,16 @@ extension Strings {
     static var pastServiceSatisfactionSurvey: String {
         return localized(string: "pastServiceSatisfactionSurvey")
     }
+    
+    static var enterAnswer: String {
+        return localized(string: "enterAnswer")
+    }
+    
+    static var send: String {
+        return localized(string: "send")
+    }
+    
+    static var feedbackCommentDescription: String {
+        return localized(string: "feedbackCommentDescription")
+    }
 }

@@ -24,6 +24,8 @@ class SupportCoordinator: Coordinator {
     
     weak var delegate: SupportCoordinatorDelegate?
     
+    lazy var feedbackRateNavigation = UINavigationController()
+    
     private lazy var supportViewModel: SupportViewModel = {
         let viewModel = SupportViewModel()
         viewModel.coordinatorDelegate = self
@@ -117,7 +119,12 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
-    
+
+}
+
+// MARK: Presentations, Rate and comment
+extension SupportCoordinator: UIViewControllerTransitioningDelegate,
+FeedbackRateVMCoordinatorDelegate, FeedbackCommentVMCoordinatorDelegate {
     func presentFitlers(delegate: FeedbackFilterViewControllerDelegate, items: [FeedbackFilterItem]) {
         let controller: FeedbackFilterViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackFilterViewModel()
@@ -131,6 +138,30 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         let controller: FeedbackRateViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackRateViewModel()
         controller.viewModel = viewModel
-        navigationController.present(controller, animated: true)
+        viewModel.coordinatorDelegate = self
+//        navigationController.present(controller, animated: true)
+        
+        feedbackRateNavigation.viewControllers = [controller]
+        feedbackRateNavigation.isNavigationBarHidden = true
+        feedbackRateNavigation.modalPresentationStyle = .custom
+        feedbackRateNavigation.transitioningDelegate = self
+        navigationController.present(feedbackRateNavigation, animated: true)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? { 
+        let controller = FeedbackRatePresentationController(presentedViewController: presented, presenting: presenting)
+        return controller
+    }
+    
+    func goToFeedbackComment() {
+        let controller: FeedbackCommentViewController = storyboard.instantiateViewController()
+        let viewModel = FeedbackCommentViewModel()
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        feedbackRateNavigation.pushViewController(controller, animated: true)
+    }
+    
+    func getBackFromFeedbackComment() {
+        feedbackRateNavigation.popViewController(animated: true)
     }
 }

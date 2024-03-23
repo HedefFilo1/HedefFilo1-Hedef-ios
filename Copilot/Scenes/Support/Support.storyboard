@@ -1233,6 +1233,134 @@
             </objects>
             <point key="canvasLocation" x="6215" y="3232"/>
         </scene>
+        <!--Feedback Comment View Controller-->
+        <scene sceneID="7UR-fa-Nff">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackCommentViewController" id="JZw-z9-ekl" customClass="FeedbackCommentViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B97-6U-vS1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-3N-hbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DAv-dQ-da8">
+                                        <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="E33-GP-00w"/>
+                                            <constraint firstAttribute="height" constant="24" id="mUP-20-3h3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-RS-0iT">
+                                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="DbB-GP-wzQ"/>
+                                            <constraint firstAttribute="height" constant="40" id="e93-qV-eiR"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack" destination="JZw-z9-ekl" eventType="touchUpInside" id="SJI-Dv-hvn"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geçmiş Servis Memnuniyet Anketi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pb-gA-Aaw">
+                                        <rect key="frame" x="16" y="64" width="361" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-j8-hIJ">
+                                        <rect key="frame" x="345" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="LBr-rq-9eo"/>
+                                            <constraint firstAttribute="width" constant="24" id="M71-oj-4AO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-Zn-ORd">
+                                        <rect key="frame" x="337" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="atS-1E-J2U"/>
+                                            <constraint firstAttribute="height" constant="40" id="pXA-hS-Xc3"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapClose" destination="JZw-z9-ekl" eventType="touchUpInside" id="3hN-vs-Fh6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aldığınız hizmeti geliştirmek için ne öneriniz olur?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-8B-1cS">
+                                        <rect key="frame" x="16" y="108.33333333333333" width="361" height="40.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLh-n1-37L" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="262.33333333333331" width="361" height="56"/>
+                                        <color key="backgroundColor" name="disabled"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="PIt-0O-dcm"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Değerlendir">
+                                            <color key="titleColor" name="textGrey"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapButton" destination="JZw-z9-ekl" eventType="touchUpInside" id="f8m-KD-MJ8"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-6x-cIt" customClass="CPTextField" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="166.33333333333334" width="361" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="d3x-MV-Gzo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Yw4-RS-0iT" firstAttribute="centerY" secondItem="DAv-dQ-da8" secondAttribute="centerY" id="1ph-aa-1X5"/>
+                                    <constraint firstItem="hLh-n1-37L" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="16" id="5RD-Mq-R0u"/>
+                                    <constraint firstItem="Yw4-RS-0iT" firstAttribute="centerX" secondItem="DAv-dQ-da8" secondAttribute="centerX" id="6ex-qe-I5s"/>
+                                    <constraint firstAttribute="trailing" secondItem="FSx-j8-hIJ" secondAttribute="trailing" constant="24" id="6yX-8A-aP2"/>
+                                    <constraint firstItem="DAv-dQ-da8" firstAttribute="top" secondItem="tBg-3N-hbJ" secondAttribute="top" constant="24" id="Dbv-re-tMt"/>
+                                    <constraint firstItem="dtZ-6x-cIt" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="16" id="Dkp-Ce-pz6"/>
+                                    <constraint firstItem="6pb-gA-Aaw" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="16" id="FO8-l6-hBR"/>
+                                    <constraint firstAttribute="trailing" secondItem="hLh-n1-37L" secondAttribute="trailing" constant="16" id="Fbj-y6-G6t"/>
+                                    <constraint firstItem="FSx-j8-hIJ" firstAttribute="top" secondItem="tBg-3N-hbJ" secondAttribute="top" constant="24" id="GMp-T6-eaq"/>
+                                    <constraint firstItem="hLh-n1-37L" firstAttribute="top" secondItem="dtZ-6x-cIt" secondAttribute="bottom" constant="40" id="Gcd-mY-hjH"/>
+                                    <constraint firstItem="DAv-dQ-da8" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="24" id="MB4-Nd-eRo"/>
+                                    <constraint firstAttribute="trailing" secondItem="6pb-gA-Aaw" secondAttribute="trailing" constant="16" id="NQK-Kb-qwU"/>
+                                    <constraint firstItem="oXH-Zn-ORd" firstAttribute="centerY" secondItem="FSx-j8-hIJ" secondAttribute="centerY" id="QtS-Y0-qyQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtZ-6x-cIt" secondAttribute="trailing" constant="16" id="ReX-rF-29p"/>
+                                    <constraint firstItem="Uot-8B-1cS" firstAttribute="top" secondItem="6pb-gA-Aaw" secondAttribute="bottom" constant="24" id="TTJ-n3-wsO"/>
+                                    <constraint firstItem="Uot-8B-1cS" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="16" id="eRM-7u-TQJ"/>
+                                    <constraint firstItem="oXH-Zn-ORd" firstAttribute="centerX" secondItem="FSx-j8-hIJ" secondAttribute="centerX" id="iJI-d5-fro"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uot-8B-1cS" secondAttribute="trailing" constant="16" id="jTJ-85-IDS"/>
+                                    <constraint firstItem="dtZ-6x-cIt" firstAttribute="top" secondItem="6pb-gA-Aaw" secondAttribute="bottom" constant="82" id="qd0-la-tVb"/>
+                                    <constraint firstItem="6pb-gA-Aaw" firstAttribute="top" secondItem="tBg-3N-hbJ" secondAttribute="top" constant="64" id="xVd-gd-jDW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jZH-Gf-CCu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tBg-3N-hbJ" secondAttribute="bottom" id="EkK-SQ-jJe"/>
+                            <constraint firstItem="jZH-Gf-CCu" firstAttribute="trailing" secondItem="tBg-3N-hbJ" secondAttribute="trailing" id="RK3-Cj-h14"/>
+                            <constraint firstItem="tBg-3N-hbJ" firstAttribute="top" secondItem="B97-6U-vS1" secondAttribute="top" id="ZG3-mp-uPq"/>
+                            <constraint firstItem="tBg-3N-hbJ" firstAttribute="leading" secondItem="B97-6U-vS1" secondAttribute="leading" id="kse-vS-zIc"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="answerTextFeild" destination="dtZ-6x-cIt" id="qkP-Hj-hFJ"/>
+                        <outlet property="descriptionLabel" destination="Uot-8B-1cS" id="DvI-sA-NPX"/>
+                        <outlet property="sendButton" destination="hLh-n1-37L" id="F5Y-ZV-JQX"/>
+                        <outlet property="titleLabel" destination="6pb-gA-Aaw" id="GgN-uy-OoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvp-BD-an8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6888" y="3232"/>
+        </scene>
     </scenes>
     <resources>
         <image name="attachIcon" width="24.333333969116211" height="24.333333969116211"/>

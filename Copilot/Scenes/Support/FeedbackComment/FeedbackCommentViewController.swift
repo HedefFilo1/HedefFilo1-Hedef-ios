@@ -1,5 +1,5 @@
 //
-//  FeedbackRateViewController.swift
+//  FeedbackCommentViewController.swift
 //  Copilot
 //
 //  Created by Jamal on 3/24/24.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class FeedbackRateViewController: SheetViewController {
+class FeedbackCommentViewController: SheetViewController {
     
-    var viewModel: FeedbackRateViewModelType! {
+    var viewModel: FeedbackCommentViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -22,8 +22,8 @@ class FeedbackRateViewController: SheetViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet var starButtons: [UIButton]!
-    @IBOutlet weak var evaluateButton: CPButton!
+    @IBOutlet weak var answerTextFeild: CPTextField!
+    @IBOutlet weak var sendButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,6 +39,7 @@ class FeedbackRateViewController: SheetViewController {
     }
     
     func setupUI() {
+        answerTextFeild.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         applyStyle()
         setTexts()
     }
@@ -51,32 +52,32 @@ class FeedbackRateViewController: SheetViewController {
     func setTexts() {
         view.backgroundColor = .white
         titleLabel.text = Strings.pastServiceSatisfactionSurvey
-        descriptionLabel.text = Strings.pastServiceSatisfactionSurveyDescription
+        descriptionLabel.text = Strings.feedbackCommentDescription
+        answerTextFeild.placeholder = Strings.enterAnswer
+        sendButton.setTitle(Strings.send, for: .normal)
     }
     
     func setButtonActivation() {
-        evaluateButton.isEnabled = viewModel.rate > 0
+        sendButton.isEnabled = answerTextFeild.pureTextCount > 0
+    }
+    
+    @objc func editingChanged() {
+        setButtonActivation()
+    }
+    
+    @IBAction func didTapBack() {
+        viewModel.getBackFromFeedbackComment()
     }
     
     @IBAction func didTapClose() {
         dismiss(animated: true)
     }
     
-    @IBAction func didTapStars(sender: UIButton) {
-        let tag = sender.tag
-        for (index, item) in starButtons.enumerated() {
-            item.setImage(index < tag ? Images.starFilled: Images.star, for: .normal)
-            item.tintColor = index < tag ? .theme: .greyTextLight
-        }
-        viewModel.rate = tag
-        setButtonActivation()
-    }
-    
     @IBAction func didTapButton() {
-        viewModel.goToFeedbackComment()
+        
     }
 }
 
-extension FeedbackRateViewController: FeedbackRateViewModelDelegate {
+extension FeedbackCommentViewController: FeedbackCommentViewModelDelegate {
     
 }

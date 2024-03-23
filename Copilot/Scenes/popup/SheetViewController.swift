@@ -88,7 +88,7 @@ class SheetViewController: UIViewController, UIViewControllerTransitioningDelega
 
 class SheetPresentationController: UIPresentationController {
     
-    private var height: CGFloat {
+    var height: CGFloat {
         if let presentd = presentedViewController as? SheetViewController {
             return presentd.presentationHeight
         }

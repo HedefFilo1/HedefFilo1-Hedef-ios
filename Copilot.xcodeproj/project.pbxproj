@@ -342,6 +342,9 @@
 		899D34AB2BAF78C50090DA7B /* FeedbackFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34AA2BAF78C50090DA7B /* FeedbackFilterViewController.swift */; };
 		899D34AE2BAF85B20090DA7B /* FeedbackRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34AD2BAF85B20090DA7B /* FeedbackRateViewModel.swift */; };
 		899D34B02BAF85B90090DA7B /* FeedbackRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34AF2BAF85B90090DA7B /* FeedbackRateViewController.swift */; };
+		899D34B32BAF908B0090DA7B /* FeedbackCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34B22BAF908B0090DA7B /* FeedbackCommentViewModel.swift */; };
+		899D34B52BAF90960090DA7B /* FeedbackCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34B42BAF90960090DA7B /* FeedbackCommentViewController.swift */; };
+		899D34B72BAF94120090DA7B /* FeedbackRatePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34B62BAF94120090DA7B /* FeedbackRatePresentationController.swift */; };
 		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
 		899FF4152B76405500447118 /* SelectedWarningsButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */; };
 		899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */; };
@@ -861,6 +864,9 @@
 		899D34AA2BAF78C50090DA7B /* FeedbackFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackFilterViewController.swift; sourceTree = "<group>"; };
 		899D34AD2BAF85B20090DA7B /* FeedbackRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRateViewModel.swift; sourceTree = "<group>"; };
 		899D34AF2BAF85B90090DA7B /* FeedbackRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRateViewController.swift; sourceTree = "<group>"; };
+		899D34B22BAF908B0090DA7B /* FeedbackCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCommentViewModel.swift; sourceTree = "<group>"; };
+		899D34B42BAF90960090DA7B /* FeedbackCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCommentViewController.swift; sourceTree = "<group>"; };
+		899D34B62BAF94120090DA7B /* FeedbackRatePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRatePresentationController.swift; sourceTree = "<group>"; };
 		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
 		899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsButtonsCell.swift; sourceTree = "<group>"; };
 		899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsButtonsCell.xib; sourceTree = "<group>"; };
@@ -1093,6 +1099,7 @@
 				89DF05402BACD10900C8B37E /* ServiceOperations */,
 				89DF05552BACDEFE00C8B37E /* LiveSupport */,
 				899D34AC2BAF85990090DA7B /* FeedbackRate */,
+				899D34B12BAF90760090DA7B /* FeedbackComment */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -2642,10 +2649,20 @@
 		899D34AC2BAF85990090DA7B /* FeedbackRate */ = {
 			isa = PBXGroup;
 			children = (
+				899D34B62BAF94120090DA7B /* FeedbackRatePresentationController.swift */,
 				899D34AD2BAF85B20090DA7B /* FeedbackRateViewModel.swift */,
 				899D34AF2BAF85B90090DA7B /* FeedbackRateViewController.swift */,
 			);
 			path = FeedbackRate;
+			sourceTree = "<group>";
+		};
+		899D34B12BAF90760090DA7B /* FeedbackComment */ = {
+			isa = PBXGroup;
+			children = (
+				899D34B22BAF908B0090DA7B /* FeedbackCommentViewModel.swift */,
+				899D34B42BAF90960090DA7B /* FeedbackCommentViewController.swift */,
+			);
+			path = FeedbackComment;
 			sourceTree = "<group>";
 		};
 		899FF4122B76403600447118 /* Button */ = {
@@ -3915,6 +3932,7 @@
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
 				893AC4A62BAB46D7003FB9E6 /* SupportGuideViewController.swift in Sources */,
 				893AC4A12BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift in Sources */,
+				899D34B72BAF94120090DA7B /* FeedbackRatePresentationController.swift in Sources */,
 				89431D8F2B9680A900A6F6B8 /* ReqFlw1Stp2ViewController.swift in Sources */,
 				8934D4F02B0F9FE800CD0CA7 /* VehicleCell.swift in Sources */,
 				8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */,
@@ -4120,6 +4138,7 @@
 				8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
 				8976B03E2B73CF2600E7C58F /* BrkdwnFlw2Stp3WarningLightsViewModel.swift in Sources */,
+				899D34B32BAF908B0090DA7B /* FeedbackCommentViewModel.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
 				89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */,
 				8932599A2B9A7229001E4262 /* ReqFlw4Stp3PlateViewController.swift in Sources */,
@@ -4255,6 +4274,7 @@
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
 				893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */,
+				899D34B52BAF90960090DA7B /* FeedbackCommentViewController.swift in Sources */,
 				89950ABF2B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.swift in Sources */,
 				89B790CD2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift in Sources */,
 				89950AF22B813062004537D2 /* AccidentSuccessRandevuViewModel.swift in Sources */,

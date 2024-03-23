@@ -3216,28 +3216,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Could you please evaluate your satisfaction with the vehicle maintenance service completed on 27.04.2023?</string>
         </dict>
         
-        <key></key>
+        <key>enterAnswer</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Cevap Giriniz.</string>
             <key>en</key>
-            <string></string>
+            <string>Enter Answer.</string>
         </dict>
         
-        <key></key>
+        <key>send</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Gönder</string>
             <key>en</key>
-            <string></string>
+            <string>Send</string>
         </dict>
         
-        <key></key>
+        <key>feedbackCommentDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aldığınız hizmeti geliştirmek için ne öneriniz olur?</string>
             <key>en</key>
-            <string></string>
+            <string>What suggestion would you have to improve the service you receive?</string>
         </dict>
         
         <key></key>

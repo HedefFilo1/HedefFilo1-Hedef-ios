@@ -38,7 +38,7 @@ class PopupViewController: UIViewController, UIViewControllerTransitioningDelega
 
 class PopupPresentationController: SheetPresentationController {
     
-    var height: CGFloat = 0
+//    var height: CGFloat = 0
     
     override var dismissByTap: Bool {
         return false
