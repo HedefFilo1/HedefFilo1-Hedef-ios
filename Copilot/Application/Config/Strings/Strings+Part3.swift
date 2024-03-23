@@ -488,4 +488,8 @@ extension Strings {
     static var processRequestFound: String {
         return localized(string: "processRequestFound")
     }
+    
+    static var serviceProcess: String {
+        return localized(string: "serviceProcess")
+    }
 }

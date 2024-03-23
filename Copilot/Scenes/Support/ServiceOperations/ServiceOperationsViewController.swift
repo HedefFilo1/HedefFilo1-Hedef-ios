@@ -133,7 +133,7 @@ extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
     }
     
     func didTapFilter() {
-        
+        viewModel.presentFitlers()
     }
 }
 

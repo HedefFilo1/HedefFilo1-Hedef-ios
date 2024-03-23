@@ -338,6 +338,8 @@
 		899CF5732AE18F47006D85E4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5722AE18F47006D85E4 /* Login.swift */; };
 		899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */; };
 		899CF5772AE1915E006D85E4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CF5762AE1915E006D85E4 /* Loading.swift */; };
+		899D34A92BAF78BE0090DA7B /* FeedbackFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34A82BAF78BE0090DA7B /* FeedbackFilterViewModel.swift */; };
+		899D34AB2BAF78C50090DA7B /* FeedbackFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D34AA2BAF78C50090DA7B /* FeedbackFilterViewController.swift */; };
 		899DB4682AF38CF200002BEE /* CPPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */; };
 		899FF4152B76405500447118 /* SelectedWarningsButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */; };
 		899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */; };
@@ -853,6 +855,8 @@
 		899CF5722AE18F47006D85E4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		899CF5742AE18F7B006D85E4 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		899CF5762AE1915E006D85E4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		899D34A82BAF78BE0090DA7B /* FeedbackFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackFilterViewModel.swift; sourceTree = "<group>"; };
+		899D34AA2BAF78C50090DA7B /* FeedbackFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackFilterViewController.swift; sourceTree = "<group>"; };
 		899DB4672AF38CF200002BEE /* CPPhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPhoneTextField.swift; sourceTree = "<group>"; };
 		899FF4132B76405500447118 /* SelectedWarningsButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedWarningsButtonsCell.swift; sourceTree = "<group>"; };
 		899FF4142B76405500447118 /* SelectedWarningsButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedWarningsButtonsCell.xib; sourceTree = "<group>"; };
@@ -1080,6 +1084,7 @@
 				893AC4A22BAB46BF003FB9E6 /* SupportGuide */,
 				893AC4B42BAB4C39003FB9E6 /* SupportGuideDetail */,
 				89DF05312BACCA8F00C8B37E /* Feedback */,
+				899D34A72BAF78950090DA7B /* FeedbackFilter */,
 				89DF053B2BACD0AD00C8B37E /* ProccessRequests */,
 				89DF05402BACD10900C8B37E /* ServiceOperations */,
 				89DF05552BACDEFE00C8B37E /* LiveSupport */,
@@ -2620,6 +2625,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		899D34A72BAF78950090DA7B /* FeedbackFilter */ = {
+			isa = PBXGroup;
+			children = (
+				899D34A82BAF78BE0090DA7B /* FeedbackFilterViewModel.swift */,
+				899D34AA2BAF78C50090DA7B /* FeedbackFilterViewController.swift */,
+			);
+			path = FeedbackFilter;
+			sourceTree = "<group>";
+		};
 		899FF4122B76403600447118 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -3913,6 +3927,7 @@
 				89DBD9DE2B72CAC1007B416A /* BrkdwnFlw1Stp4ServicesVController.swift in Sources */,
 				899CF5732AE18F47006D85E4 /* Login.swift in Sources */,
 				8907EF062B6971CE004869BE /* MaintenanceRandevuCell.swift in Sources */,
+				899D34AB2BAF78C50090DA7B /* FeedbackFilterViewController.swift in Sources */,
 				89DF05572BACDF1600C8B37E /* LiveSupportViewModel.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
 				8976B0392B73CD3C00E7C58F /* WarningLightsFooterCell.swift in Sources */,
@@ -4168,6 +4183,7 @@
 				893AC4AF2BAB4A65003FB9E6 /* SupportGuide.swift in Sources */,
 				892A8CFC2AC4D1510020C1C4 /* OnboardingCoordinator.swift in Sources */,
 				89E045852B04D2E800745E73 /* DocumentsViewModel.swift in Sources */,
+				899D34A92BAF78BE0090DA7B /* FeedbackFilterViewModel.swift in Sources */,
 				893259A82B9B1B24001E4262 /* ReqFlw6Stp3InspectionViewModel.swift in Sources */,
 				893B95982B59C3C200B1F0F4 /* ServicesSearchCell.swift in Sources */,
 				894CEC8B2B07933600D369E9 /* GuideCell.swift in Sources */,

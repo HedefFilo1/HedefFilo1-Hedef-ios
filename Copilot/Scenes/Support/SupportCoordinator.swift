@@ -117,4 +117,13 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
+    
+    func presentFitlers(delegate: FeedbackFilterViewControllerDelegate, items: [FeedbackFilterItem]) {
+        let controller: FeedbackFilterViewController = storyboard.instantiateViewController()
+        let viewModel = FeedbackFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.items = items
+        controller.delegate = delegate
+        navigationController.present(controller, animated: true)
+    }
 }
