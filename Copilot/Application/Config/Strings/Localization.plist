@@ -3199,21 +3199,21 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <key>en</key>
             <string>Service Process</string>
         </dict>
-        
-        <key></key>
+    
+        <key>pastServiceSatisfactionSurvey</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geçmiş Servis Memnuniyet Anketi</string>
             <key>en</key>
-            <string></string>
+            <string>Past Service Satisfaction Survey</string>
         </dict>
         
-        <key></key>
+        <key>pastServiceSatisfactionSurveyDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>27.04.2023 tarihinde tamamlanan araç bakım hizmetinden memnuniyetinizi değerlendirir misiniz?</string>
             <key>en</key>
-            <string></string>
+            <string>Could you please evaluate your satisfaction with the vehicle maintenance service completed on 27.04.2023?</string>
         </dict>
         
         <key></key>

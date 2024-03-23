@@ -165,4 +165,12 @@ struct Images {
     static var circleEnglishFlag: UIImage {
         return UIImage(named: "circleEnglishFlag") ?? UIImage()
     }
+    
+    static var star: UIImage {
+        return UIImage(systemName: "star") ?? UIImage()
+    }
+    
+    static var starFilled: UIImage {
+        return UIImage(systemName: "star.fill") ?? UIImage()
+    }
 }

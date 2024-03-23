@@ -492,4 +492,12 @@ extension Strings {
     static var serviceProcess: String {
         return localized(string: "serviceProcess")
     }
+    
+    static var pastServiceSatisfactionSurveyDescription: String {
+        return localized(string: "pastServiceSatisfactionSurveyDescription")
+    }
+    
+    static var pastServiceSatisfactionSurvey: String {
+        return localized(string: "pastServiceSatisfactionSurvey")
+    }
 }

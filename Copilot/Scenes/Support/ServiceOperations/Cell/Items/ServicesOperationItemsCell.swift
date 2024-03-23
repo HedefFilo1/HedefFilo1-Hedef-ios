@@ -8,12 +8,12 @@
 import UIKit
 
 protocol ServicesOperationItemsCellDelegate: AnyObject {
-    func didSelect(item: Supplier)
+    func didSelect(item: ServiceOperationsItem)
 }
 
 class ServicesOperationItemsCell: UICollectionViewCell, Reusable {
     
-    var items: [Supplier]? {
+    var items: [ServiceOperationsItem]? {
         didSet {
             let count = items?.count ?? 0
             titleLabel.text = "\(count) \(Strings.processRequestFound)"
@@ -52,7 +52,7 @@ extension ServicesOperationItemsCell: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2///items?.count ?? 0
+        return items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

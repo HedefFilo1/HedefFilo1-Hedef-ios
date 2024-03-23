@@ -9,9 +9,9 @@ import UIKit
 
 class ServicesOperationItemCell: UICollectionViewCell, Reusable {
 
-    var item: Supplier? {
+    var item: ServiceOperationsItem? {
         didSet {
-           
+            nameLabel.text = item?.title
         }
     }
     

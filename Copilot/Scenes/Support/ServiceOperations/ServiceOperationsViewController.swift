@@ -86,7 +86,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         }
         
         let cell: ServicesOperationItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-//        cell.items = viewModel.filteredServices
+        cell.items = viewModel.filteredServices
         cell.delegate = self
         return cell
     }
@@ -138,8 +138,8 @@ extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
 }
 
 extension ServiceOperationsViewController: ServicesOperationItemsCellDelegate {
-    func didSelect(item: Supplier) {
-        
+    func didSelect(item: ServiceOperationsItem) {
+        viewModel.presentFeedbackRate()
     }
 }
 

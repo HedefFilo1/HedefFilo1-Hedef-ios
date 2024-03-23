@@ -126,4 +126,11 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         controller.delegate = delegate
         navigationController.present(controller, animated: true)
     }
+    
+    func presentFeedbackRate() {
+        let controller: FeedbackRateViewController = storyboard.instantiateViewController()
+        let viewModel = FeedbackRateViewModel()
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
+    }
 }
