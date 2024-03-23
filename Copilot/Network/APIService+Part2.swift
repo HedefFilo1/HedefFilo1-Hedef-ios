@@ -15,7 +15,7 @@ extension APIService {
         
         let serverdate = appointmentDate.getServerDate()
         
-        let route = "copilot/case"
+        let route = "case/appointment"
         let params = [
             "caseId": caseId,
             "appointmentDate": serverdate

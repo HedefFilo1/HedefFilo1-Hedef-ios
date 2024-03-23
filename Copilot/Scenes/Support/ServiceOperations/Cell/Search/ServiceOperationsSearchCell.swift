@@ -40,6 +40,10 @@ class ServiceOperationsSearchCell: UICollectionViewCell, Reusable {
         searchTextField.apply(.blackS14R400)
     }
     
+    func setTexts() {
+        searchTextField.placeholder = Strings.searchRequest
+    }
+    
     @objc func editingChanged() {
         let text = searchTextField.text ?? ""
         delegate?.didChangeSearch(text: text)

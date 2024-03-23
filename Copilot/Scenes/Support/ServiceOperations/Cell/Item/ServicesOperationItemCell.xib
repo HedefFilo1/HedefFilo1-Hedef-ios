@@ -5,13 +5,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServicesItemCell" customModule="Copilot" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServicesOperationItemCell" customModule="Copilot" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="365" height="117"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -39,42 +38,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnl-tm-DEO">
-                                <rect key="frame" x="309" y="61" width="24" height="24"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="randevuIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-IE-tEZ">
-                                        <rect key="frame" x="5.6666666666666856" y="5.6666666666666714" width="13" height="13"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="13" id="Lxw-cN-mp1"/>
-                                            <constraint firstAttribute="width" constant="13" id="NIU-Hw-h9K"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJA-4h-hMu">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <connections>
-                                            <action selector="didTapLocation" destination="gTV-IL-0wX" eventType="touchUpInside" id="ETf-Ot-2nm"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="27j-1R-Q2d"/>
-                                    <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerY" secondItem="Tnl-tm-DEO" secondAttribute="centerY" id="Gjb-2l-jCK"/>
-                                    <constraint firstItem="uJA-4h-hMu" firstAttribute="leading" secondItem="Tnl-tm-DEO" secondAttribute="leading" id="TmC-r6-G4j"/>
-                                    <constraint firstAttribute="bottom" secondItem="uJA-4h-hMu" secondAttribute="bottom" id="bxd-Sk-gC7"/>
-                                    <constraint firstItem="uJA-4h-hMu" firstAttribute="top" secondItem="Tnl-tm-DEO" secondAttribute="top" id="ldp-mw-Nl7"/>
-                                    <constraint firstItem="lNG-IE-tEZ" firstAttribute="centerX" secondItem="Tnl-tm-DEO" secondAttribute="centerX" id="mZe-U5-61x"/>
-                                    <constraint firstAttribute="height" constant="24" id="vZS-Sj-s5n"/>
-                                    <constraint firstAttribute="trailing" secondItem="uJA-4h-hMu" secondAttribute="trailing" id="xlk-36-VLM"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Tnl-tm-DEO" secondAttribute="bottom" id="DqB-th-V5J"/>
                             <constraint firstItem="Ai0-aM-JCU" firstAttribute="top" secondItem="fBh-Ql-r4t" secondAttribute="bottom" constant="8" id="LeN-Xa-swf"/>
-                            <constraint firstAttribute="trailing" secondItem="Tnl-tm-DEO" secondAttribute="trailing" id="RQ7-v5-C38"/>
                             <constraint firstItem="Qc1-Nm-PDM" firstAttribute="centerY" secondItem="fBh-Ql-r4t" secondAttribute="centerY" id="alP-Li-dFy"/>
                             <constraint firstItem="Qc1-Nm-PDM" firstAttribute="leading" secondItem="fBh-Ql-r4t" secondAttribute="trailing" constant="4" id="bAX-ot-Dbi"/>
                             <constraint firstAttribute="trailing" secondItem="Qc1-Nm-PDM" secondAttribute="trailing" id="dBH-Kn-Ubv"/>
@@ -95,18 +62,11 @@
             </constraints>
             <size key="customSize" width="365" height="117"/>
             <connections>
-                <outlet property="addressLabel" destination="Ai0-aM-JCU" id="dbo-vK-XFm"/>
-                <outlet property="iconView" destination="Tnl-tm-DEO" id="Y3q-ud-jKO"/>
+                <outlet property="dateLabel" destination="Ai0-aM-JCU" id="ccp-lD-BP9"/>
                 <outlet property="nameLabel" destination="fBh-Ql-r4t" id="XlX-3k-B1Z"/>
-                <outlet property="numberLabel" destination="Qc1-Nm-PDM" id="omQ-23-m8y"/>
+                <outlet property="typeLabel" destination="Qc1-Nm-PDM" id="G9J-Eb-zM4"/>
             </connections>
             <point key="canvasLocation" x="121.37404580152672" y="42.605633802816904"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="randevuIcon" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

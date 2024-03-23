@@ -83,8 +83,8 @@ extension FeedbackViewController: UICollectionViewDelegate {
 //        case 0:
 //            viewModel.goToFeedbackGuide()
 //            
-//        case 2:
-//            viewModel.goToFAQ()
+        case 1:
+            viewModel.goToServiceOperations()
         default:
             break
         }

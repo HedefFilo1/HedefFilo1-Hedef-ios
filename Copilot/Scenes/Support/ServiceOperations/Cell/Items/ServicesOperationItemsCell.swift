@@ -16,7 +16,7 @@ class ServicesOperationItemsCell: UICollectionViewCell, Reusable {
     var items: [Supplier]? {
         didSet {
             let count = items?.count ?? 0
-            titleLabel.text = "\(count) \(Strings.servicesFound)"
+            titleLabel.text = "\(count) \(Strings.processRequestFound)"
             collectionView.reloadData()
         }
     }
@@ -52,7 +52,7 @@ extension ServicesOperationItemsCell: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items?.count ?? 0
+        return 2///items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

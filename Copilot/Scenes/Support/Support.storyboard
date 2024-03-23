@@ -666,7 +666,7 @@
         <!--Services View Controller-->
         <scene sceneID="JQt-Bj-pcS">
             <objects>
-                <viewController storyboardIdentifier="ServicesViewController" id="ouU-ap-OIG" userLabel="Services View Controller" customClass="ServicesViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceOperationsViewController" id="ouU-ap-OIG" userLabel="Services View Controller" customClass="ServiceOperationsViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xha-az-kmt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -747,7 +747,6 @@
                     <tabBarItem key="tabBarItem" title="Item" id="og0-Jk-RCs"/>
                     <connections>
                         <outlet property="collectionView" destination="iK1-Cm-f8V" id="Qv2-Kj-Fib"/>
-                        <outlet property="contentView" destination="QGf-aN-DZu" id="dmI-Xd-89h"/>
                         <outlet property="descriptionLabel" destination="RZJ-sk-MBr" id="UmZ-64-Alb"/>
                         <outlet property="titleLabel" destination="arm-gd-PMy" id="bIU-yV-L6Y"/>
                     </connections>

@@ -18,7 +18,7 @@ extension APIService {
                            appointmentDate: Date?,
                            completion: @escaping (Success?, APIResponseError?) -> Void) {
         
-        let route = "copilot/case"
+        let route = "case/appointment"
         var params = [
             "webCategory": "TIRE",
             "accidentType": "TIRE_BREAK",
@@ -59,7 +59,7 @@ extension APIService {
         
         let serverdate = appointmentDate.getServerDate()
         
-        let route = "copilot/case"
+        let route = "case/appointment"
         let params = [
             "webCategory": "MAINTENANCE",
             "accidentType": "MAINTENANCE",
@@ -90,7 +90,7 @@ extension APIService {
                                     appointmentDate: Date?,
                                     completion: @escaping (Success?, APIResponseError?) -> Void) {
         
-        let route = "copilot/case"
+        let route = "case/appointment"
         var params = [
             "webCategory": "FAILURE",
             "accidentType": "FAILURE",
@@ -128,7 +128,7 @@ extension APIService {
                                    appointmentDate: Date?,
                                    completion: @escaping (Success?, APIResponseError?) -> Void) {
         
-        let route = "copilot/case"
+        let route = "case/appointment"
         var params = [
             "webCategory": "DAMAGE",
             "accidentType": accidentType,

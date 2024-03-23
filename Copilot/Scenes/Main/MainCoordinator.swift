@@ -17,7 +17,7 @@ class MainCoordinator: Coordinator {
     let window: UIWindow
     let storyboard = UIStoryboard(storyboard: .main)
     weak var delegate: MainCoordinatorDelegate?
-
+    
     var tabBarController: MainTabBarController
     
     lazy var homeCoordinator: HomeCoordinator = {
@@ -56,8 +56,8 @@ class MainCoordinator: Coordinator {
     
     lazy var supportTabCoordinator: UIViewController = {
         let coordinator = UIViewController()
-//        coordinator.delegate = self
-//        coordinator.start()
+        //        coordinator.delegate = self
+        //        coordinator.start()
         coordinator.view.backgroundColor = .white
         return coordinator
     }()
@@ -86,11 +86,12 @@ class MainCoordinator: Coordinator {
             menuCoordinator.navigationController
         ]
         addChildCoordinator(homeCoordinator)
-        tabBarController.selectedIndex = 2
         
 #if DEV_DEBUG
         // just for test
         tabBarController.selectedIndex = 3
+#else
+        tabBarController.selectedIndex = 2
 #endif
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()

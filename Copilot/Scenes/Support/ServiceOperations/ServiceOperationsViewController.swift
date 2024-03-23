@@ -11,7 +11,7 @@ import CoreLocation
 
 class ServiceOperationsViewController: UIViewController {
     
-    var viewModel: ServicesViewModelType! {
+    var viewModel: ServiceOperationsViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -32,7 +32,6 @@ class ServiceOperationsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
 #if DEV_DEBUG
-        viewModel.getServices(lat: nil, lon: nil)
         
 #endif
     }
@@ -47,8 +46,8 @@ class ServiceOperationsViewController: UIViewController {
         setTexts()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellType: ServicesSearchCell.self)
-        collectionView.register(cellType: ServicesItemsCell.self)
+        collectionView.register(cellType: ServiceOperationsSearchCell.self)
+        collectionView.register(cellType: ServicesOperationItemsCell.self)
         collectionView.contentInset.bottom = 12
         collectionView.contentInset.bottom = 70
     }
@@ -59,8 +58,8 @@ class ServiceOperationsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.services
-        descriptionLabel.text = Strings.servicesFixTireDescription
+        titleLabel.text = Strings.processRequests
+        descriptionLabel.text = Strings.proccessRequestServicesDescription
     }
     
     @IBAction func didTapBack() {
@@ -87,7 +86,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         }
         
         let cell: ServicesOperationItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.items = viewModel.filteredServices
+//        cell.items = viewModel.filteredServices
         cell.delegate = self
         return cell
     }
@@ -98,7 +97,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
             return CGSize(width: collectionView.frame.width, height: height)
         } else {
             
-            let count = viewModel.filteredServices?.count ?? 0
+            let count = viewModel.filteredServices.count + 2
             let height = CGFloat(count * 102 + (count * 8)) - 8 + 44
             return CGSize(width: collectionView.frame.width, height: height)
         }
@@ -134,17 +133,17 @@ extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
     }
     
     func didTapFilter() {
-        viewModel.presentFilters()
+        
     }
 }
 
 extension ServiceOperationsViewController: ServicesOperationItemsCellDelegate {
     func didSelect(item: Supplier) {
-        viewModel.goToServiceDetail(service: item)
+        
     }
 }
 
-extension ServiceOperationsViewController: ServicesViewModelDelegate {
+extension ServiceOperationsViewController: ServiceOperationsViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

@@ -27,8 +27,8 @@ class ServicesOperationItemCell: UICollectionViewCell, Reusable {
     func applyStyles() {
         layer.cornerRadius = 10
         backgroundColor = .disabled
-        nameLabel.apply(.blackS16R400)
-        typeLabel.apply(.blackS16R400)
+        nameLabel.apply(.blackS16B700)
+        typeLabel.apply(.blackS16B700)
         dateLabel.apply(.greyS14R400)
     }
 }

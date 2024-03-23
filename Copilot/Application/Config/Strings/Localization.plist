@@ -3168,28 +3168,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Service Operations</string>
         </dict>
         
-        <key></key>
+        <key>proccessRequestServicesDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Değerlendirmek istediğiniz hizmeti seçebilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>You can choose the service you want to evaluate.</string>
         </dict>
         
-        <key></key>
+        <key>searchRequest</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Talep Ara</string>
             <key>en</key>
-            <string></string>
+            <string>Search Request</string>
         </dict>
         
-        <key></key>
+        <key>processRequestFound</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Süreç Talebi Bulundu</string>
             <key>en</key>
-            <string></string>
+            <string>Process Request Found</string>
         </dict>
         
         <key></key>

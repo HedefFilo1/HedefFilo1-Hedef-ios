@@ -476,4 +476,16 @@ extension Strings {
     static var serviceOperations: String {
         return localized(string: "serviceOperations")
     }
+    
+    static var proccessRequestServicesDescription: String {
+        return localized(string: "proccessRequestServicesDescription")
+    }
+    
+    static var searchRequest: String {
+        return localized(string: "searchRequest")
+    }
+    
+    static var processRequestFound: String {
+        return localized(string: "processRequestFound")
+    }
 }
