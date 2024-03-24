@@ -512,4 +512,8 @@ extension Strings {
     static var feedbackCommentDescription: String {
         return localized(string: "feedbackCommentDescription")
     }
+    
+    static var proceduralRequestProcess: String {
+        return localized(string: "proceduralRequestProcess")
+    }
 }

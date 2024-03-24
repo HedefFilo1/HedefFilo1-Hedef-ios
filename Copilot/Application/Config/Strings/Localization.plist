@@ -3240,12 +3240,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>What suggestion would you have to improve the service you receive?</string>
         </dict>
         
-        <key></key>
+        <key>proceduralRequestProcess</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Süreçsel Talep İşlemi</string>
             <key>en</key>
-            <string></string>
+            <string>Procedural Request Process</string>
         </dict>
         
         <key></key>

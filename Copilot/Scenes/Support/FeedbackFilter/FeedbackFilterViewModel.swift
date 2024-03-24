@@ -24,6 +24,7 @@ protocol FeedbackFilterViewModelType: AnyObject {
     var delegate: FeedbackFilterViewModelDelegate? { get set }
     var items: [FeedbackFilterItem] { get set }
     var selectedItem: FeedbackFilterItem? { get set }
+    var title: String { get set }
 }
 
 class FeedbackFilterViewModel: FeedbackFilterViewModelType {
@@ -33,5 +34,6 @@ class FeedbackFilterViewModel: FeedbackFilterViewModelType {
    
     var items: [FeedbackFilterItem] = []
     var selectedItem: FeedbackFilterItem?
+    var title: String = ""
 
 }

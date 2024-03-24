@@ -500,6 +500,12 @@
 		89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */; };
 		89F23BC42B29C0E30081DD85 /* ContentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC32B29C0E30081DD85 /* ContentString.swift */; };
 		89F23BC62B29EC220081DD85 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F23BC52B29EC220081DD85 /* Document.swift */; };
+		89F65DF92BB08EF700A1FAF2 /* ProccessRequestsSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F65DF82BB08EF700A1FAF2 /* ProccessRequestsSearchCell.xib */; };
+		89F65DFB2BB08EFB00A1FAF2 /* ProccessRequestsSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F65DFA2BB08EFB00A1FAF2 /* ProccessRequestsSearchCell.swift */; };
+		89F65E002BB08F5B00A1FAF2 /* ProccessRequestsItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F65DFF2BB08F5B00A1FAF2 /* ProccessRequestsItemsCell.xib */; };
+		89F65E022BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F65E012BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift */; };
+		89F65E052BB08F8400A1FAF2 /* ProccessRequestsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F65E042BB08F8400A1FAF2 /* ProccessRequestsItemCell.swift */; };
+		89F65E072BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F65E062BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib */; };
 		89F67DA72B7D39920040DF15 /* BreakdownRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F67DA62B7D39920040DF15 /* BreakdownRandevuCell.swift */; };
 		89F67DA92B7D399E0040DF15 /* BreakdownRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F67DA82B7D399E0040DF15 /* BreakdownRandevuCell.xib */; };
 		89F6A0532B584A860052EE15 /* LastikRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */; };
@@ -1022,6 +1028,12 @@
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		89F23BC32B29C0E30081DD85 /* ContentString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentString.swift; sourceTree = "<group>"; };
 		89F23BC52B29EC220081DD85 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		89F65DF82BB08EF700A1FAF2 /* ProccessRequestsSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProccessRequestsSearchCell.xib; sourceTree = "<group>"; };
+		89F65DFA2BB08EFB00A1FAF2 /* ProccessRequestsSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProccessRequestsSearchCell.swift; sourceTree = "<group>"; };
+		89F65DFF2BB08F5B00A1FAF2 /* ProccessRequestsItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProccessRequestsItemsCell.xib; sourceTree = "<group>"; };
+		89F65E012BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProccessRequestsItemsCell.swift; sourceTree = "<group>"; };
+		89F65E042BB08F8400A1FAF2 /* ProccessRequestsItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProccessRequestsItemCell.swift; sourceTree = "<group>"; };
+		89F65E062BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProccessRequestsItemCell.xib; sourceTree = "<group>"; };
 		89F67DA62B7D39920040DF15 /* BreakdownRandevuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownRandevuCell.swift; sourceTree = "<group>"; };
 		89F67DA82B7D399E0040DF15 /* BreakdownRandevuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreakdownRandevuCell.xib; sourceTree = "<group>"; };
 		89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuCell.swift; sourceTree = "<group>"; };
@@ -3314,6 +3326,7 @@
 			children = (
 				89DF053C2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift */,
 				89DF053E2BACD0D200C8B37E /* ProccessRequestsViewController.swift */,
+				89F65DFC2BB08F0000A1FAF2 /* Cell */,
 			);
 			path = ProccessRequests;
 			sourceTree = "<group>";
@@ -3501,6 +3514,43 @@
 				89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */,
 			);
 			path = PdfViewer;
+			sourceTree = "<group>";
+		};
+		89F65DFC2BB08F0000A1FAF2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89F65DFD2BB08F0600A1FAF2 /* Search */,
+				89F65DFE2BB08F3100A1FAF2 /* Items */,
+				89F65E032BB08F6F00A1FAF2 /* Item */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		89F65DFD2BB08F0600A1FAF2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				89F65DF82BB08EF700A1FAF2 /* ProccessRequestsSearchCell.xib */,
+				89F65DFA2BB08EFB00A1FAF2 /* ProccessRequestsSearchCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		89F65DFE2BB08F3100A1FAF2 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				89F65DFF2BB08F5B00A1FAF2 /* ProccessRequestsItemsCell.xib */,
+				89F65E012BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		89F65E032BB08F6F00A1FAF2 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				89F65E062BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib */,
+				89F65E042BB08F8400A1FAF2 /* ProccessRequestsItemCell.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		89F67DAA2B7D39C30040DF15 /* Breakdown */ = {
@@ -3729,6 +3779,7 @@
 				8907EEF02B696590004869BE /* Maintenance.storyboard in Resources */,
 				89B12BB52AD478A8002C70E4 /* Main.storyboard in Resources */,
 				89F6A0582B5868950052EE15 /* LastikOperationButtonsCell.xib in Resources */,
+				89F65DF92BB08EF700A1FAF2 /* ProccessRequestsSearchCell.xib in Resources */,
 				89CC82DB2BA7CD7900263332 /* RequestListItemCell.xib in Resources */,
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
 				89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */,
@@ -3753,6 +3804,7 @@
 				892A8D092AC4E5820020C1C4 /* OnboardingCell.xib in Resources */,
 				89DF07092AF0122A00892B1D /* SubFiltersCell.xib in Resources */,
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
+				89F65E072BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib in Resources */,
 				89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */,
 				890639112B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib in Resources */,
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
@@ -3784,6 +3836,7 @@
 				89DF054C2BACD1C300C8B37E /* ServicesOperationItemsCell.xib in Resources */,
 				8917F54C2B39FBB600681AD3 /* LastikPointsView.xib in Resources */,
 				89B553A52B87B33500616732 /* ReportImageCell.xib in Resources */,
+				89F65E002BB08F5B00A1FAF2 /* ProccessRequestsItemsCell.xib in Resources */,
 				89431DA82B96F46D00A6F6B8 /* ReqFlw2Stp2QuestionsCell.xib in Resources */,
 				896CB3652AD71D270048025A /* NearMeCell.xib in Resources */,
 				8976B0352B73CA5D00E7C58F /* WarningItemCell.xib in Resources */,
@@ -3994,6 +4047,7 @@
 				89C55DE62AC4A5FF00C3066A /* UICollectionView+Reusable.swift in Sources */,
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
+				89F65E022BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift in Sources */,
 				8934890D2B9E3E9E009A3FBB /* SettingsCoordinator.swift in Sources */,
 				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
 				893259982B9A721F001E4262 /* ReqFlw4Stp3PlateViewModel.swift in Sources */,
@@ -4226,6 +4280,7 @@
 				893AC4A42BAB46D1003FB9E6 /* SupportGuideViewModel.swift in Sources */,
 				89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */,
 				899FF4152B76405500447118 /* SelectedWarningsButtonsCell.swift in Sources */,
+				89F65E052BB08F8400A1FAF2 /* ProccessRequestsItemCell.swift in Sources */,
 				89DBD9D32B72C2D4007B416A /* BreakdownFlow1Step2TowTruckVController.swift in Sources */,
 				893AC4A92BAB476B003FB9E6 /* SupportGuideCell.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift in Sources */,
@@ -4264,6 +4319,7 @@
 				89941D5B2AEEF0FD00CEFD0E /* PasswordResetViewController.swift in Sources */,
 				892A8CF62AC4C6E50020C1C4 /* SplashViewModel.swift in Sources */,
 				893489252BA0B048009A3FBB /* NotificationPreference.swift in Sources */,
+				89F65DFB2BB08EFB00A1FAF2 /* ProccessRequestsSearchCell.swift in Sources */,
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,

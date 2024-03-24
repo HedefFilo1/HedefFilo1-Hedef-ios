@@ -56,7 +56,7 @@ class FeedbackFilterViewController: SheetViewController {
     func setTexts() {
         view.backgroundColor = .white
         titleLabel.text = Strings.filter
-        filterList.title = Strings.serviceProcess
+        filterList.title = viewModel.title
     }
     
     func setButtonActivation() {

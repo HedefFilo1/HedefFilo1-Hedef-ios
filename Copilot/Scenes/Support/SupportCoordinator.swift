@@ -52,7 +52,8 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
                               SupportGuideDetailVMCrdinatorDlgt,
                               FeedbackViewModelCoordinatorDelegate,
                               LiveSupportViewModelCoordinatorDelegate,
-                              ServiceOperationsVMCoordinatorDelegate {
+                              ServiceOperationsVMCoordinatorDelegate,
+                              ProccessRequestsVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -119,18 +120,29 @@ extension SupportCoordinator: SupportViewModelCoordinatorDelegate,
         controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }
-
+    
+    func goToProccessRequests() {
+        let controller: ProccessRequestsViewController = storyboard.instantiateViewController()
+        controller.viewModel = ProccessRequestsViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
 }
 
 // MARK: Presentations, Rate and comment
 extension SupportCoordinator: UIViewControllerTransitioningDelegate,
-FeedbackRateVMCoordinatorDelegate, FeedbackCommentVMCoordinatorDelegate {
-    func presentFitlers(delegate: FeedbackFilterViewControllerDelegate, items: [FeedbackFilterItem]) {
+                              FeedbackRateVMCoordinatorDelegate, FeedbackCommentVMCoordinatorDelegate {
+    
+    func presentFitlers(title: String,
+                        delegate: FeedbackFilterViewControllerDelegate,
+                        items: [FeedbackFilterItem]) {
         let controller: FeedbackFilterViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackFilterViewModel()
         controller.viewModel = viewModel
         viewModel.items = items
         controller.delegate = delegate
+        viewModel.title = title
         navigationController.present(controller, animated: true)
     }
     
@@ -139,7 +151,7 @@ FeedbackRateVMCoordinatorDelegate, FeedbackCommentVMCoordinatorDelegate {
         let viewModel = FeedbackRateViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
-//        navigationController.present(controller, animated: true)
+        //        navigationController.present(controller, animated: true)
         
         feedbackRateNavigation.viewControllers = [controller]
         feedbackRateNavigation.isNavigationBarHidden = true
@@ -148,7 +160,7 @@ FeedbackRateVMCoordinatorDelegate, FeedbackCommentVMCoordinatorDelegate {
         navigationController.present(feedbackRateNavigation, animated: true)
     }
     
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? { 
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let controller = FeedbackRatePresentationController(presentedViewController: presented, presenting: presenting)
         return controller
     }

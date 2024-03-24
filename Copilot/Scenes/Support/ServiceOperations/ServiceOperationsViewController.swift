@@ -59,7 +59,7 @@ class ServiceOperationsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.processRequests
+        titleLabel.text = Strings.serviceOperations
         descriptionLabel.text = Strings.proccessRequestServicesDescription
     }
     

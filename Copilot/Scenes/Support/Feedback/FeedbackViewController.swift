@@ -80,9 +80,9 @@ extension FeedbackViewController: UICollectionViewDataSource {
 extension FeedbackViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
-//        case 0:
-//            viewModel.goToFeedbackGuide()
-//            
+        case 0:
+            viewModel.goToProccessRequests()
+           
         case 1:
             viewModel.goToServiceOperations()
         default:

@@ -24,6 +24,7 @@ enum FeedbackItems: CaseIterable {
 protocol FeedbackViewModelCoordinatorDelegate: AnyObject {
     func getBack()
     func goToServiceOperations()
+    func goToProccessRequests()
 }
 
 protocol FeedbackViewModelViewDelegate: AnyObject {
@@ -36,6 +37,7 @@ protocol FeedbackViewModelType: AnyObject {
     var items: [FeedbackItems] { get set }
     func getBack()
     func goToServiceOperations()
+    func goToProccessRequests()
 }
 
 class FeedbackViewModel: FeedbackViewModelType {
@@ -52,5 +54,9 @@ class FeedbackViewModel: FeedbackViewModelType {
     
     func goToServiceOperations() {
         coordinatorDelegate?.goToServiceOperations()
+    }
+    
+    func goToProccessRequests() {
+        coordinatorDelegate?.goToProccessRequests()
     }
 }

@@ -14,7 +14,9 @@ struct ServiceOperationsItem {
 
 protocol ServiceOperationsVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func presentFitlers(delegate: FeedbackFilterViewControllerDelegate, items: [FeedbackFilterItem])
+    func presentFitlers(title: String,
+                        delegate: FeedbackFilterViewControllerDelegate,
+                        items: [FeedbackFilterItem])
     func presentFeedbackRate()
 }
 
@@ -45,11 +47,12 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     }
     
     func presentFitlers() {
-        var filterItems = [
+        let filterItems = [
             FeedbackFilterItem(title: "BAKIM"),
             FeedbackFilterItem(title: "Ariza")
         ]
-        coordinatorDelegate?.presentFitlers(delegate: self, items: filterItems)
+        coordinatorDelegate?.presentFitlers(title: Strings.serviceProcess,
+                                            delegate: self, items: filterItems)
     }
     
     func presentFeedbackRate() {
