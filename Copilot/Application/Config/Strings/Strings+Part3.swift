@@ -520,4 +520,24 @@ extension Strings {
     static var pleaseEnterValid: String {
         return localized(string: "pleaseEnterValid")
     }
+    
+    static var drinkingAndDriving: String {
+        return localized(string: "drinkingAndDriving")
+    }
+    
+    static var other: String {
+        return localized(string: "other")
+    }
+    
+    static var missingDocument: String {
+        return localized(string: "missingDocument")
+    }
+    
+    static var incorrectParking: String {
+        return localized(string: "incorrectParking")
+    }
+    
+    static var injuryFatalAccident: String {
+        return localized(string: "injuryFatalAccident")
+    }
 }

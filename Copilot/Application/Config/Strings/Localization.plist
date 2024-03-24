@@ -3256,44 +3256,44 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Please Enter a Valid</string>
         </dict>
         
-        <key></key>
+        <key>drinkingAndDriving</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Alkollü Araç Kullanımı</string>
             <key>en</key>
-            <string></string>
+            <string>Drinking and Driving</string>
         </dict>
         
-        <key></key>
+        <key>other</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Diğer</string>
             <key>en</key>
-            <string></string>
+            <string>Other</string>
         </dict>
         
-        <key></key>
+        <key>missingDocument</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Eksik Evrak</string>
             <key>en</key>
-            <string></string>
+            <string>Missing document</string>
         </dict>
         
-        <key></key>
+        <key>incorrectParking</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Hatalı Park</string>
             <key>en</key>
-            <string></string>
+            <string>Incorrect Parking</string>
         </dict>
         
-        <key></key>
+        <key>injuryFatalAccident</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yaralanma / Ölümlü Kaza</string>
             <key>en</key>
-            <string></string>
+            <string>Injury/Fatal Accident</string>
         </dict>
         
         <key></key>
