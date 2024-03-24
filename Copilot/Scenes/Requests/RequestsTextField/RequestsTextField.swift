@@ -44,6 +44,9 @@ class RequestsTextField: CPValidatableTextField, RequestsTextFieldType {
     }
     
     override func validate() -> Bool {
+        if let validationDelegate {
+            return validationDelegate.validate(textField: self)
+        }
         let string = text ?? ""
         return string.count > 0 
     }

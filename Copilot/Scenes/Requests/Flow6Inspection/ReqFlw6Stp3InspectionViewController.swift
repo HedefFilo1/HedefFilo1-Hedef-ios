@@ -151,6 +151,8 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
         receiverNameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverIdTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         receiverIdTextField.delegate = self
+        receiverIdTextField.validationDelegate = self
+        
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -160,7 +162,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverId = receiverIdTextField.pureTextCount == 11
+        let receiverId = receiverIdTextField.isValidText
         
         let result = note && receiverName && receiverId
         createButton.isEnabled = result
@@ -246,7 +248,13 @@ extension ReqFlw6Stp3InspectionViewController: UINavigationControllerDelegate, U
     
 }
 
-extension ReqFlw6Stp3InspectionViewController: UITextFieldDelegate {
+extension ReqFlw6Stp3InspectionViewController: UITextFieldDelegate, CPValidatableTextFieldDelegate {
+    
+    func validate(textField: UITextField) -> Bool {
+        let count = textField.text?.count ?? 0
+        return count == 11
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
         return range.location < 11

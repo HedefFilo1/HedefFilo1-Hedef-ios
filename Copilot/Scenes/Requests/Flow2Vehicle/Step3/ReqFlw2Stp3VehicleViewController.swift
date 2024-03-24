@@ -208,6 +208,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         reasonList.delegate = self
         cityList.delegate = self
         receiverTCKNTextField.delegate = self
+        receiverTCKNTextField.validationDelegate = self
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
@@ -238,7 +239,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         let parkPhone = parkPhoneTextField.isValidText
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
-        let receiverTCKN = receiverTCKNTextField.pureTextCount == 11
+        let receiverTCKN = receiverTCKNTextField.isValidText
         
         let result = note && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN && city
         createButton.isEnabled = result
@@ -376,7 +377,13 @@ extension ReqFlw2Stp3VehicleViewController: CPDropDownListDelegate {
     }
 }
 
-extension ReqFlw2Stp3VehicleViewController: UITextFieldDelegate {
+extension ReqFlw2Stp3VehicleViewController: UITextFieldDelegate, CPValidatableTextFieldDelegate {
+   
+    func validate(textField: UITextField) -> Bool {
+        let count = textField.text?.count ?? 0
+        return count == 11
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
         return range.location < 11
