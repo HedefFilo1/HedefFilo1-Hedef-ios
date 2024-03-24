@@ -355,7 +355,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copilot Nedir?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbG-rp-74c">
-                                <rect key="frame" x="56" y="84" width="321" height="20.333333333333329"/>
+                                <rect key="frame" x="52" y="84" width="325" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -376,7 +376,7 @@
                             <constraint firstItem="CbM-C8-kqc" firstAttribute="centerY" secondItem="mba-oA-ncp" secondAttribute="centerY" id="64D-ZW-FR6"/>
                             <constraint firstItem="cbG-rp-74c" firstAttribute="top" secondItem="EXa-nq-fv3" secondAttribute="top" constant="25" id="M4c-NV-iaq"/>
                             <constraint firstItem="AKS-If-pNC" firstAttribute="leading" secondItem="EXa-nq-fv3" secondAttribute="leading" constant="16" id="NKn-QK-xI9"/>
-                            <constraint firstItem="cbG-rp-74c" firstAttribute="leading" secondItem="CbM-C8-kqc" secondAttribute="trailing" id="Nyj-pT-jTe"/>
+                            <constraint firstItem="cbG-rp-74c" firstAttribute="leading" secondItem="mba-oA-ncp" secondAttribute="trailing" constant="4" id="Nyj-pT-jTe"/>
                             <constraint firstItem="mba-oA-ncp" firstAttribute="leading" secondItem="EXa-nq-fv3" secondAttribute="leading" constant="24" id="WQ6-Nm-MSM"/>
                             <constraint firstItem="CbM-C8-kqc" firstAttribute="centerX" secondItem="mba-oA-ncp" secondAttribute="centerX" id="X2y-K1-A0i"/>
                             <constraint firstItem="AKS-If-pNC" firstAttribute="top" secondItem="cbG-rp-74c" secondAttribute="bottom" constant="25" id="cYj-qI-M9o"/>
