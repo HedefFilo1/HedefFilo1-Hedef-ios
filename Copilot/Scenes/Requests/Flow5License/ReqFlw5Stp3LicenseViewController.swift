@@ -23,25 +23,25 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     @IBOutlet weak var noteTextField: CPDescriptionTextField!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var nameTextField: RequestsTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPEmailTextField!
+    @IBOutlet weak var emailTextField: RequestsTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPPhoneTextField!
+    @IBOutlet weak var phoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
-    @IBOutlet weak var plateTextField: CPTextField!
+    @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var kmLabel: UILabel!
-    @IBOutlet weak var kmTextField: CPTextField!
+    @IBOutlet weak var kmTextField: RequestsTextField!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
-    @IBOutlet weak var receiverNameTextField: CPTextField!
+    @IBOutlet weak var receiverNameTextField: RequestsTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
+    @IBOutlet weak var receiverPhoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
@@ -63,6 +63,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -100,16 +101,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverPhoneTextField, kmTextField]
-        
-        for item in array {
-            item?.apply(.custom(.textFieldGreyText, .regular, 14))
-            item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
-        }
-        
         kmTextField.keyboardType = .numberPad
-        phoneTextField.keyboardType = .phonePad
-        receiverPhoneTextField.keyboardType = .phonePad
     }
     
     func setTexts() {
@@ -186,15 +178,11 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let address = addressTextField.text.count > 0
-        let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.isValidText
-        let phone = phoneTextField.isValidText
-        let plate = plateTextField.pureTextCount > 0
         let kmValue = kmTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
         
-        let result = note && address && name && email && phone && plate && receiverName && receiverPhone && kmValue
+        let result = note && address && receiverName && receiverPhone && kmValue
         createButton.isEnabled = result
     }
     
@@ -284,6 +272,14 @@ extension ReqFlw5Stp3LicenseViewController: UINavigationControllerDelegate, UIIm
 }
 
 extension ReqFlw5Stp3LicenseViewController: ReqFlw5Stp3LicenseViewModelDelegate {
+    func setProfile() {
+        guard let profile = viewModel.profile else { return }
+        nameTextField.disable(withText: profile.nameSurname)
+        emailTextField.disable(withText: profile.email)
+        phoneTextField.disable(withText: profile.phoneNumber)
+        plateTextField.disable(withText: profile.plateNumber)
+    }
+    
     func removeSelectedFile() {
         viewModel.uploadedFileInfo = nil
         fileNameLabel.text = ""

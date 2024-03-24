@@ -14,12 +14,15 @@ protocol ReqFlw5Stp3LicenseVMCoordinatorDelegate: AnyObject {
 
 protocol ReqFlw5Stp3LicenseViewModelDelegate: BaseViewModelDelegate {
     func removeSelectedFile()
+    func setProfile()
 }
 
 protocol ReqFlw5Stp3LicenseViewModelType: AnyObject {
     var coordinatorDelegate: ReqFlw5Stp3LicenseVMCoordinatorDelegate? { get set }
     var delegate: ReqFlw5Stp3LicenseViewModelDelegate? { get set }
     var uploadedFileInfo: UploadRequestFile? { get set }
+    var profile: GetProfile? { get set }
+    func getProfile()
     func getBack()
     func sendFile(data: Data)
     func createCase(licensePlate: String,
@@ -37,6 +40,27 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
     weak var coordinatorDelegate: ReqFlw5Stp3LicenseVMCoordinatorDelegate?
     weak var delegate: ReqFlw5Stp3LicenseViewModelDelegate?
     var uploadedFileInfo: UploadRequestFile?
+    var cities: [TurkeyCity] = turkeyCitiesList
+    var profile: GetProfile?
+    
+    func getProfile() {
+        Loading.shared.show()
+        APIService.getProfile { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let profile = model {
+                self.profile = profile
+                self.delegate?.setProfile()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+                return
+            }
+        }
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()

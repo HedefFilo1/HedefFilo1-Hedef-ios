@@ -49,7 +49,6 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
     var cities: [TurkeyCity] = turkeyCitiesList
     var profile: GetProfile?
     
-    
     func getProfile() {
         Loading.shared.show()
         APIService.getProfile { [weak self] model, error in

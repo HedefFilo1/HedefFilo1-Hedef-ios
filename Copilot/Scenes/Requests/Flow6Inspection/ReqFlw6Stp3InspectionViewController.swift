@@ -23,22 +23,22 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     @IBOutlet weak var noteTextField: CPDescriptionTextField!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var nameTextField: RequestsTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPEmailTextField!
+    @IBOutlet weak var emailTextField: RequestsTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPPhoneTextField!
+    @IBOutlet weak var phoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
-    @IBOutlet weak var plateTextField: CPTextField!
+    @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
-    @IBOutlet weak var receiverNameTextField: CPTextField!
+    @IBOutlet weak var receiverNameTextField: RequestsTextField!
     
     @IBOutlet weak var receiverIdLabel: UILabel!
-    @IBOutlet weak var receiverIdTextField: CPTextField!
+    @IBOutlet weak var receiverIdTextField: RequestsTextField!
     
     @IBOutlet weak var fileNameLabel: UILabel!
     @IBOutlet weak var fileNameView: UIView!
@@ -57,6 +57,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,13 +93,6 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, receiverNameTextField, receiverIdTextField]
-        
-        for item in array {
-            item?.apply(.custom(.textFieldGreyText, .regular, 14))
-            item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
-        }
-        phoneTextField.keyboardType = .phonePad
     }
     
     func setTexts() {
@@ -165,14 +159,10 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
-        let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.isValidText
-        let phone = phoneTextField.isValidText
-        let plate = plateTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
-        let receiverId = receiverIdTextField.pureTextCount > 0
+        let receiverId = receiverIdTextField.pureTextCount == 11
         
-        let result = note && name && email && phone && plate && receiverName && receiverId
+        let result = note && receiverName && receiverId
         createButton.isEnabled = result
     }
     
@@ -264,6 +254,15 @@ extension ReqFlw6Stp3InspectionViewController: UITextFieldDelegate {
 }
 
 extension ReqFlw6Stp3InspectionViewController: ReqFlw6Stp3InspectionViewModelDelegate {
+    
+    func setProfile() {
+        guard let profile = viewModel.profile else { return }
+        nameTextField.disable(withText: profile.nameSurname)
+        emailTextField.disable(withText: profile.email)
+        phoneTextField.disable(withText: profile.phoneNumber)
+        plateTextField.disable(withText: profile.plateNumber)
+    }
+    
     func removeSelectedFile() {
         viewModel.uploadedFileInfo = nil
         fileNameLabel.text = ""
