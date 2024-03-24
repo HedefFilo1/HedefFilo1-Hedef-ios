@@ -18,6 +18,7 @@ protocol ReqFlw3Stp3HGSVMCoordinatorDelegate: AnyObject {
 }
 
 protocol ReqFlw3Stp3HGSViewModelDelegate: BaseViewModelDelegate {
+    func setProfile()
     func removeSelectedFile()
 }
 
@@ -26,6 +27,8 @@ protocol ReqFlw3Stp3HGSViewModelType: AnyObject {
     var delegate: ReqFlw3Stp3HGSViewModelDelegate? { get set }
     var ogsHgsTypes: [OgsHgsType] { get set }
     var uploadedFileInfo: UploadRequestFile? { get set }
+    var profile: GetProfile? { get set }
+    func getProfile()
     func getBack()
     func sendFile(data: Data)
     func createCase(licensePlate: String,
@@ -61,6 +64,30 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
         OgsHgsType(field: "FOREIGN_EXIT", title: "FOREIGN_EXIT"),
         OgsHgsType(field: "OTHER", title: "OTHER")
     ]
+    
+    var cities: [TurkeyCity] = turkeyCitiesList
+    var profile: GetProfile?
+    
+    
+    func getProfile() {
+        Loading.shared.show()
+        APIService.getProfile { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let profile = model {
+                self.profile = profile
+                self.delegate?.setProfile()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+                return
+            }
+        }
+    }
+    
     
     func getBack() {
         coordinatorDelegate?.getBack()
