@@ -12,10 +12,10 @@ class APIService {
     static var loggingEnabled = true
     
     static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
-        let route = "content-string"
+        let route = "content-string/client"
         let req = APIRequest<[ContentString]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Strings"
-        req.log = loggingEnabled
+        req.log = false
         req.completion = completion
         req.start()
     }

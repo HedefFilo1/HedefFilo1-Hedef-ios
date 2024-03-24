@@ -18,6 +18,9 @@ class CPDescriptionTextField: UIView {
     private let placeholderLabel = UILabel()
     private var placeholderTopConstraint: NSLayoutConstraint!
     private let countLabel = UILabel()
+    private lazy var errorView = CPErrorView()
+    private var errorViewAdded = false
+    var errorMessage = ""
     var max = 300
     
     var text: String {
@@ -31,8 +34,9 @@ class CPDescriptionTextField: UIView {
     
     var placeholder: String? {
         didSet {
-            placeholderLabel.text = placeholder
-            
+            let text = placeholder ?? ""
+            placeholderLabel.text = text
+            errorMessage = "\(Strings.pleaseEnterValid) \(text)"
         }
     }
     
@@ -50,6 +54,7 @@ class CPDescriptionTextField: UIView {
         applyConstraints()
         applyStyles()
         textView.delegate = self
+        clipsToBounds = false
     }
     
     func applyConstraints() {
@@ -58,7 +63,7 @@ class CPDescriptionTextField: UIView {
         
         addSubview(placeholderLabel)
         placeholderLabel.align(leading: 20, trailing: 16)
-        placeholderTopConstraint = placeholderLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20)
+        placeholderTopConstraint = placeholderLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16)
         placeholderLabel.adjustsFontSizeToFitWidth = true
         placeholderTopConstraint.isActive = true
         
@@ -73,15 +78,16 @@ class CPDescriptionTextField: UIView {
         layer.cornerRadius = 8
         layer.borderWidth = 1
         layer.borderColor = UIColor.greyBorder.cgColor
-        textView.apply(.custom(.textFieldGreyText, .regular, 14))
+        textView.apply(.custom(.black, .regular, 14))
         placeholderLabel.apply(.greyS15B400)
         countLabel.apply(.greyS12R400)
         textView.backgroundColor = .clear
     }
     
     func resetTextField() {
-        placeholderTopConstraint.constant = 19
+//        placeholderTopConstraint.constant = 19
         placeholderLabel.apply(.greyS15B400)
+        placeholderLabel.text = placeholder
         animate()
     }
     
@@ -94,21 +100,30 @@ extension CPDescriptionTextField: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeholderLabel.apply(.greyS12R400)
-        placeholderTopConstraint.constant = 6
+//        placeholderTopConstraint.constant = 6
+        placeholderLabel.text = ""
         animate()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         let text = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
         if text.count == 0 {
+            showError(message: errorMessage)
             resetTextField()
+        } else {
+            
+            hideError()
         }
     }
     
     func textViewDidChange(_ textView: UITextView) {
         countLabel.text = "Max: \(max - textView.text.count)"
+        if textView.text.count > 0 {
+            hideError()
+        }
         delegate?.didEditingChanged()
     }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text.isEmpty { return true }
         
@@ -138,4 +153,22 @@ extension CPDescriptionTextField {
         return text.components(separatedBy: .whitespaces).joined()
     }
     
+}
+
+extension CPDescriptionTextField {
+    func showError(message: String) {
+        if !errorViewAdded {
+            errorView.message = message
+            addSubview(errorView)
+            errorView.align(leading: 0, trailing: 0, bottom: -18, height: 16)
+            errorViewAdded = true
+        }
+        self.layer.borderColor = UIColor.theme.cgColor
+        errorView.isHidden = false
+    }
+    
+    func hideError() {
+        errorView.isHidden = true
+        self.layer.borderColor = UIColor.borderColor.cgColor
+    }
 }

@@ -516,4 +516,8 @@ extension Strings {
     static var proceduralRequestProcess: String {
         return localized(string: "proceduralRequestProcess")
     }
+    
+    static var pleaseEnterValid: String {
+        return localized(string: "pleaseEnterValid")
+    }
 }

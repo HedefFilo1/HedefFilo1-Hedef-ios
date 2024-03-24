@@ -3248,12 +3248,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Procedural Request Process</string>
         </dict>
         
-        <key></key>
+        <key>pleaseEnterValid</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lütfen geçerli bir</string>
             <key>en</key>
-            <string></string>
+            <string>Please Enter a Valid</string>
         </dict>
         
         <key></key>

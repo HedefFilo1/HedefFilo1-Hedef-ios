@@ -15,4 +15,12 @@ struct GetProfile: Decodable {
     let plateNumber: String
     let licenseNumber: String
     let taxId: String?
+    
+    var nameSurname: String {
+        var text = name ?? ""
+        if let surname {
+            text += " \(surname)"
+        }
+        return text
+    }
 }

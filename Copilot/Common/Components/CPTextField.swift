@@ -11,15 +11,13 @@ import UIKit
 class CPTextField: UITextField {
     
     let contentView = UIView()
-    private let placeholderLabel = UILabel()
+    let placeholderLabel = UILabel()
     private var validationLabel: UILabel?
     private var placeholderTopConstraint: NSLayoutConstraint!
     private lazy var errorView = CPErrorView()
     private var errorViewAdded = false
     
-    var textPadding: UIEdgeInsets {
-        return UIEdgeInsets(top: 25, left: 16, bottom: 12, right: 16)
-    }
+    var textPadding = UIEdgeInsets(top: 25, left: 16, bottom: 12, right: 16)
     
     var preText: String? {
         didSet {

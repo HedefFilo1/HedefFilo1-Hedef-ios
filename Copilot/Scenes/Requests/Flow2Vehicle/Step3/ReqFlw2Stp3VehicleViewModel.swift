@@ -19,6 +19,7 @@ protocol ReqFlw2Stp3VehicleVMCoordinatorDelegate: AnyObject {
 
 protocol ReqFlw2Stp3VehicleViewModelDelegate: BaseViewModelDelegate {
     func removeSelectedFile()
+    func setProfile()
 }
 
 protocol ReqFlw2Stp3VehicleViewModelType: AnyObject {
@@ -27,6 +28,8 @@ protocol ReqFlw2Stp3VehicleViewModelType: AnyObject {
     var uploadedFileInfo: UploadRequestFile? { get set }
     var reasons: [ImpoundCarReason] { get set }
     var cities: [TurkeyCity] { get set }
+    var profile: GetProfile? { get set }
+    func getProfile()
     func getBack()
     func sendFile(data: Data)
     func createCase(licensePlate: String,
@@ -59,9 +62,25 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
     ]
     
     var cities: [TurkeyCity] = turkeyCitiesList
+    var profile: GetProfile?
     
-    func getBack() {
-        coordinatorDelegate?.getBack()
+    func getProfile() {
+        Loading.shared.show()
+        APIService.getProfile { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let profile = model {
+                self.profile = profile
+                self.delegate?.setProfile()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+                return
+            }
+        }
     }
     
     func sendFile(data: Data) {
@@ -118,5 +137,9 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                 coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
             }
         }
+    }
+    
+    func getBack() {
+        coordinatorDelegate?.getBack()
     }
 }

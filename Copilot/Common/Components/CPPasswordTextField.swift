@@ -10,11 +10,11 @@ import UIKit
 
 class CPPasswordTextField: CPTextField {
     
-    override var textPadding: UIEdgeInsets {
-        var padding = super.textPadding
-        padding.right = 48
-        return padding
-    }
+//    override var textPadding: UIEdgeInsets {
+//        var padding = super.textPadding
+//        padding.right = 48
+//        return padding
+//    }
     
     private let imageView = UIImageView()
     private let showButton = UIButton()
@@ -23,7 +23,7 @@ class CPPasswordTextField: CPTextField {
     override func setup() {
         super.setup()
         isSecureTextEntry = true
-        
+        textPadding.right = 48
         addSubviews(views: imageView, showButton)
         imageView.image = Images.passwordMask
         imageView.align(trailing: 16, widthAndHeight: 24, centerY: 0)

@@ -23,40 +23,40 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var noteTextField: CPDescriptionTextField!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var nameTextField: RequestsTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPEmailTextField!
+    @IBOutlet weak var emailTextField: RequestsTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPPhoneTextField!
+    @IBOutlet weak var phoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
-    @IBOutlet weak var plateTextField: CPTextField!
+    @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var reasonLabel: UILabel!
     @IBOutlet weak var reasonList: CPDropDownList!
     
     @IBOutlet weak var trafficNameLabel: UILabel!
-    @IBOutlet weak var trafficNameTextField: CPTextField!
+    @IBOutlet weak var trafficNameTextField: RequestsTextField!
     
     @IBOutlet weak var trafficPhoneLabel: UILabel!
-    @IBOutlet weak var trafficPhoneTextField: CPPhoneTextField!
+    @IBOutlet weak var trafficPhoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var parkNameLabel: UILabel!
-    @IBOutlet weak var parkNameTextField: CPTextField!
+    @IBOutlet weak var parkNameTextField: RequestsTextField!
     
     @IBOutlet weak var parkPhoneLabel: UILabel!
-    @IBOutlet weak var parkPhoneTextField: CPPhoneTextField!
+    @IBOutlet weak var parkPhoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
-    @IBOutlet weak var receiverNameTextField: CPTextField!
+    @IBOutlet weak var receiverNameTextField: RequestsTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
+    @IBOutlet weak var receiverPhoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var receiverTCKNLabel: UILabel!
-    @IBOutlet weak var receiverTCKNTextField: CPTextField!
+    @IBOutlet weak var receiverTCKNTextField: RequestsTextField!
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityList: CPDropDownList!
@@ -79,9 +79,9 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        viewModel.getProfile()
         #if DEV_DEBUG
-        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
+//        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
         #endif
     }
     
@@ -120,18 +120,6 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        var array = [nameTextField, emailTextField, phoneTextField, plateTextField, trafficNameTextField]
-        
-        array.append(contentsOf: [trafficPhoneTextField, parkNameTextField, parkPhoneTextField, receiverNameTextField, receiverPhoneTextField, receiverTCKNTextField])
-        for item in array {
-            item?.apply(.custom(.textFieldGreyText, .regular, 14))
-            item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
-        }
-        
-        phoneTextField.keyboardType = .phonePad
-        trafficPhoneTextField.keyboardType = .phonePad
-        parkPhoneTextField.keyboardType = .phonePad
-        receiverPhoneTextField.keyboardType = .phonePad
         receiverTCKNTextField.keyboardType = .numberPad
         
         reasonList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
@@ -242,10 +230,6 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
-        let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.isValidText
-        let phone = phoneTextField.isValidText
-        let plak = plateTextField.pureTextCount > 0
         let reason = reasonList.hasSelectedItem
         let city = cityList.hasSelectedItem
         let trafficName = trafficNameTextField.pureTextCount > 0
@@ -254,9 +238,9 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         let parkPhone = parkPhoneTextField.isValidText
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
-        let receiverTCKN = receiverTCKNTextField.pureTextCount > 0
+        let receiverTCKN = receiverTCKNTextField.pureTextCount == 11
         
-        let result = note && name && email && phone && plak && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN && city
+        let result = note && reason && trafficName && trafficPhone && parkName && parkPhone && receiverName && receiverPhone && receiverTCKN && city
         createButton.isEnabled = result
     }
     
@@ -400,6 +384,15 @@ extension ReqFlw2Stp3VehicleViewController: UITextFieldDelegate {
 }
 
 extension ReqFlw2Stp3VehicleViewController: ReqFlw2Stp3VehicleViewModelDelegate {
+    
+    func setProfile() {
+        guard let profile = viewModel.profile else { return }
+        nameTextField.disable(withText: profile.nameSurname)
+        emailTextField.disable(withText: profile.email)
+        phoneTextField.disable(withText: profile.phoneNumber)
+        plateTextField.disable(withText: profile.plateNumber)
+    }
+    
     func removeSelectedFile() {
         viewModel.uploadedFileInfo = nil
         fileNameLabel.text = ""
