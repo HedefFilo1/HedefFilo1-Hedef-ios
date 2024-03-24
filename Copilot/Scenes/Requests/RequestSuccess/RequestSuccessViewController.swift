@@ -21,7 +21,7 @@ class RequestSuccessViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var requestsButton: CPLightButton!
-    @IBOutlet weak var homeButton: CPButton!
+    @IBOutlet weak var homeButton: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -48,6 +48,10 @@ class RequestSuccessViewController: UIViewController {
         headLabel.apply(.blackS18R400)
         titleLabel.apply(.blackS18R400)
         descriptionLabel.apply(.greyS14R400)
+        requestsButton.apply(.custom(.theme, .regular, 20))
+        homeButton.backgroundColor = .theme
+        homeButton.apply(.custom(.white, .regular, 20))
+        homeButton.layer.cornerRadius = 10
     }
     
     func setTexts() {
