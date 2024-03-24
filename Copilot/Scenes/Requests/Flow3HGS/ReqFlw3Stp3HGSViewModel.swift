@@ -68,7 +68,6 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
     var cities: [TurkeyCity] = turkeyCitiesList
     var profile: GetProfile?
     
-    
     func getProfile() {
         Loading.shared.show()
         APIService.getProfile { [weak self] model, error in
@@ -87,7 +86,6 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
             }
         }
     }
-    
     
     func getBack() {
         coordinatorDelegate?.getBack()

@@ -14,6 +14,7 @@ protocol ReqFlw4Stp3PlateVMCoordinatorDelegate: AnyObject {
 
 protocol ReqFlw4Stp3PlateViewModelDelegate: BaseViewModelDelegate {
     func removeSelectedFile()
+    func setProfile()
 }
 
 protocol ReqFlw4Stp3PlateViewModelType: AnyObject {
@@ -22,6 +23,8 @@ protocol ReqFlw4Stp3PlateViewModelType: AnyObject {
     var uploadedFileInfo: UploadRequestFile? { get set }
     var causeOfLosts: [String] { get set }
     var numberOfLostPlates: [Int] { get set }
+    var profile: GetProfile? { get set }
+    func getProfile()
     func getBack()
     func sendFile(data: Data)
     func createCase(licensePlate: String,
@@ -42,6 +45,29 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
     var uploadedFileInfo: UploadRequestFile?
     var causeOfLosts = ["Kayıp", "Değişim"]
     var numberOfLostPlates = [1, 2]
+    
+    var cities: [TurkeyCity] = turkeyCitiesList
+    var profile: GetProfile?
+    
+    
+    func getProfile() {
+        Loading.shared.show()
+        APIService.getProfile { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let profile = model {
+                self.profile = profile
+                self.delegate?.setProfile()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+                return
+            }
+        }
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()

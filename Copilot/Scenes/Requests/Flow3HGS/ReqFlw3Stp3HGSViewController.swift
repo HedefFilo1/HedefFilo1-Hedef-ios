@@ -66,9 +66,9 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         setupUI()
         viewModel.getProfile()
         
-        #if DEV_DEBUG
-//        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
-        #endif
+#if DEV_DEBUG
+        //        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
+#endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -184,10 +184,10 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let address = addressTextField.text.count > 0
-//        let name = nameTextField.pureTextCount > 0
-//        let email = emailTextField.isValidText
-//        let phone = phoneTextField.isValidText
-//        let plate = plateTextField.pureTextCount > 0
+        //        let name = nameTextField.pureTextCount > 0
+        //        let email = emailTextField.isValidText
+        //        let phone = phoneTextField.isValidText
+        //        let plate = plateTextField.pureTextCount > 0
         let proccess = proccessList.hasSelectedItem
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
@@ -318,12 +318,12 @@ extension ReqFlw3Stp3HGSViewController: CPDropDownListDelegate {
 
 extension ReqFlw3Stp3HGSViewController: ReqFlw3Stp3HGSViewModelDelegate {
     func setProfile() {
-          guard let profile = viewModel.profile else { return }
-          nameTextField.disable(withText: profile.nameSurname)
-          emailTextField.disable(withText: profile.email)
-          phoneTextField.disable(withText: profile.phoneNumber)
-          plateTextField.disable(withText: profile.plateNumber)
-      }
+        guard let profile = viewModel.profile else { return }
+        nameTextField.disable(withText: profile.nameSurname)
+        emailTextField.disable(withText: profile.email)
+        phoneTextField.disable(withText: profile.phoneNumber)
+        plateTextField.disable(withText: profile.plateNumber)
+    }
     
     func removeSelectedFile() {
         viewModel.uploadedFileInfo = nil

@@ -23,19 +23,19 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     @IBOutlet weak var noteTextField: CPDescriptionTextField!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var nameTextField: CPTextField!
+    @IBOutlet weak var nameTextField: RequestsTextField!
     
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: CPEmailTextField!
+    @IBOutlet weak var emailTextField: RequestsTextField!
     
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneTextField: CPPhoneTextField!
+    @IBOutlet weak var phoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var plateLabel: UILabel!
-    @IBOutlet weak var plateTextField: CPTextField!
+    @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var kmLabel: UILabel!
-    @IBOutlet weak var kmTextField: CPTextField!
+    @IBOutlet weak var kmTextField: RequestsTextField!
     
     @IBOutlet weak var causeOfLostLabel: UILabel!
     @IBOutlet weak var causeOfLostList: CPDropDownList!
@@ -44,10 +44,10 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     @IBOutlet weak var numberOfLostPlatesList: CPDropDownList!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
-    @IBOutlet weak var receiverNameTextField: CPTextField!
+    @IBOutlet weak var receiverNameTextField: RequestsTextField!
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
-    @IBOutlet weak var receiverPhoneTextField: CPPhoneTextField!
+    @IBOutlet weak var receiverPhoneTextField: RequestsPhoneTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
@@ -71,6 +71,7 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,16 +111,8 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
-        let array = [nameTextField, emailTextField, phoneTextField, plateTextField, kmTextField, receiverNameTextField, receiverPhoneTextField]
-        
-        for item in array {
-            item?.apply(.custom(.textFieldGreyText, .regular, 14))
-            item?.contentView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
-        }
         
         kmTextField.keyboardType = .numberPad
-        phoneTextField.keyboardType = .phonePad
-        receiverPhoneTextField.keyboardType = .phonePad
         
         causeOfLostList.headView.backgroundColor = .greyBorder.withAlphaComponent(0.4)
         causeOfLostList.titleLabelTop?.constant = 16
@@ -212,17 +205,13 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     func setButtonActivation() {
         let note = noteTextField.text.count > 0
         let address = addressTextField.text.count > 0
-        let name = nameTextField.pureTextCount > 0
-        let email = emailTextField.pureTextCount > 0
-        let phone = phoneTextField.isValidText
-        let plate = plateTextField.pureTextCount > 0
         let proccess = kmTextField.pureTextCount > 0
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
         let causeOfLoss = causeOfLostList.hasSelectedItem
         let numberOfLost = numberOfLostPlatesList.hasSelectedItem
         
-        let result = note && address && name && email && phone && plate && proccess && receiverName && receiverPhone && causeOfLoss && numberOfLost
+        let result = note && address && proccess && receiverName && receiverPhone && causeOfLoss && numberOfLost
         createButton.isEnabled = result
     }
     
@@ -257,7 +246,7 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     
     @IBAction func didTapCreate() {
         guard let index = numberOfLostPlatesList.selectedIndex,
-        let kmText = kmTextField.text, let kmValue = Int(kmText) else { return }
+              let kmText = kmTextField.text, let kmValue = Int(kmText) else { return }
         let number = viewModel.numberOfLostPlates[index]
         
         viewModel.createCase(licensePlate: plateTextField.text ?? "",
@@ -360,6 +349,14 @@ extension ReqFlw4Stp3PlateViewController: CPDropDownListDelegate {
 }
 
 extension ReqFlw4Stp3PlateViewController: ReqFlw4Stp3PlateViewModelDelegate {
+    func setProfile() {
+        guard let profile = viewModel.profile else { return }
+        nameTextField.disable(withText: profile.nameSurname)
+        emailTextField.disable(withText: profile.email)
+        phoneTextField.disable(withText: profile.phoneNumber)
+        plateTextField.disable(withText: profile.plateNumber)
+    }
+    
     func removeSelectedFile() {
         viewModel.uploadedFileInfo = nil
         fileNameLabel.text = ""
