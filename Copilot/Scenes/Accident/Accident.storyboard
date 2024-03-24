@@ -1708,7 +1708,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="f9i-O4-g7l">
-                                                        <rect key="frame" x="0.0" y="77.666666666666686" width="329" height="20.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="85.666666666666686" width="329" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1733,8 +1733,8 @@
                                                     <constraint firstAttribute="bottom" secondItem="RZf-jM-SV3" secondAttribute="bottom" constant="16" id="6OT-db-VDH"/>
                                                     <constraint firstAttribute="trailing" secondItem="E4f-0j-FnC" secondAttribute="trailing" id="8o8-4A-4B9"/>
                                                     <constraint firstItem="tLC-IP-b88" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="G6S-Lb-bhA"/>
-                                                    <constraint firstItem="E4f-0j-FnC" firstAttribute="top" secondItem="f9i-O4-g7l" secondAttribute="bottom" constant="24" id="JF4-Ix-YI4"/>
-                                                    <constraint firstItem="f9i-O4-g7l" firstAttribute="top" secondItem="tLC-IP-b88" secondAttribute="bottom" constant="8" id="K4P-g2-E6G"/>
+                                                    <constraint firstItem="E4f-0j-FnC" firstAttribute="top" secondItem="f9i-O4-g7l" secondAttribute="bottom" constant="16" id="JF4-Ix-YI4"/>
+                                                    <constraint firstItem="f9i-O4-g7l" firstAttribute="top" secondItem="tLC-IP-b88" secondAttribute="bottom" constant="16" id="K4P-g2-E6G"/>
                                                     <constraint firstAttribute="trailing" secondItem="RZf-jM-SV3" secondAttribute="trailing" id="P8R-Bw-Bzc"/>
                                                     <constraint firstItem="E4f-0j-FnC" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="W5j-gC-pWg"/>
                                                     <constraint firstAttribute="trailing" secondItem="f9i-O4-g7l" secondAttribute="trailing" id="aXp-74-BBr"/>
@@ -2277,7 +2277,7 @@
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
