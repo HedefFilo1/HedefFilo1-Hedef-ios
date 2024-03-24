@@ -20,7 +20,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
     var request: Demand? {
         didSet {
             titleLabel.text = request?.recordType
-            statusLabel.text = item?.status.rawValue
+            statusLabel.text = request?.status
             statusView.backgroundColor = item?.status.color
         }
     }

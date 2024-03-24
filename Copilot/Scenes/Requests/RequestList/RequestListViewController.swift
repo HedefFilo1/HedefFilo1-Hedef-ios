@@ -51,7 +51,7 @@ class RequestListViewController: UIViewController {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 40
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        titleLabel.apply(.blackS18B700)
+        titleLabel.apply(.blackS24R400)
         serviceRequestsLabel.apply(.blackS18R400)
         proccessRequestsLabel.apply(.blackS18R400)
         for view in borderViews {

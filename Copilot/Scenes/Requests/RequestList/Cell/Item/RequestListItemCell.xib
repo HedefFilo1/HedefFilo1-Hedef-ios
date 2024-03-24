@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konfor Paket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39v-YL-qrh">
-                        <rect key="frame" x="16" y="26" width="97" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Konfor Paket Konfor Paket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39v-YL-qrh">
+                        <rect key="frame" x="16" y="26" width="151.33333333333334" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-Cg-c5R">
-                        <rect key="frame" x="135" y="24.666666666666671" width="120.66666666666669" height="24"/>
+                        <rect key="frame" x="189.33333333333334" y="24.666666666666671" width="120.66666666666666" height="24"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onaylanmış" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-eY-0mb">
                                 <rect key="frame" x="16" y="1.3333333333333321" width="88.666666666666671" height="21"/>
@@ -50,6 +50,7 @@
                 <constraint firstItem="39v-YL-qrh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6Yy-RW-Tkz"/>
                 <constraint firstItem="u7E-Cg-c5R" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DqH-qT-PYi"/>
                 <constraint firstItem="u7E-Cg-c5R" firstAttribute="leading" secondItem="39v-YL-qrh" secondAttribute="trailing" constant="22" id="K13-Fe-WpN"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7E-Cg-c5R" secondAttribute="trailing" constant="4" id="uaA-aR-LVE"/>
             </constraints>
             <size key="customSize" width="314" height="73"/>
             <connections>

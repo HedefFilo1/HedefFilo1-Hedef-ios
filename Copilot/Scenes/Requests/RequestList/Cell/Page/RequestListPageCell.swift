@@ -72,6 +72,18 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
         if let item = items?[indexPath.item] {
             delegate?.didSelect(item: item)
         }
+        
+        if let item = requestItems?[indexPath.item] {
+            let type = item.status
+            let status = TaskStatus(rawValue: type) ?? .other
+            let task = Task(id: item.id,
+                            subject: item.recordType ?? "",
+                            additionalInfo: item.webCategoryEnum ?? "",
+                            description: "",
+                            statusText: item.status,
+                            status: status)
+            delegate?.didSelect(item: task)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
