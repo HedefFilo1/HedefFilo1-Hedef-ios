@@ -35,7 +35,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var proccessLabel: UILabel!
-    @IBOutlet weak var proccessList: CPDropDownList!
+    @IBOutlet weak var proccessList: RequestsDropDownList!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: RequestsTextField!

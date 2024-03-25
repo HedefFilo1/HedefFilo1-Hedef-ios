@@ -38,10 +38,10 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     @IBOutlet weak var kmTextField: RequestsTextField!
     
     @IBOutlet weak var causeOfLostLabel: UILabel!
-    @IBOutlet weak var causeOfLostList: CPDropDownList!
+    @IBOutlet weak var causeOfLostList: RequestsDropDownList!
     
     @IBOutlet weak var numberOfLostPlatesLabel: UILabel!
-    @IBOutlet weak var numberOfLostPlatesList: CPDropDownList!
+    @IBOutlet weak var numberOfLostPlatesList: RequestsDropDownList!
     
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var receiverNameTextField: RequestsTextField!

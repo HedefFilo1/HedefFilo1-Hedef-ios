@@ -34,7 +34,7 @@ class CPDropDownList: UIView {
     let headView = UIView()
     let titleLabel = UILabel()
     let valueLabel = UILabel()
-    private let chevronImageView = UIImageView()
+    let chevronImageView = UIImageView()
     var titleLabelTop: NSLayoutConstraint?
     private let bottomBorderView = UIView()
     private let dropDownView = UIView()
@@ -127,7 +127,7 @@ class CPDropDownList: UIView {
         titleLabel.apply(TextStyle(fontStyle: .regular, size: 12), color: .fieldsTitle)
     }
     
-    private func setValueLabel() {
+    func setValueLabel() {
         headView.addSubview(valueLabel)
         valueLabel.align(top: 25, leading: 16)
         valueLabel.align(toView: chevronImageView, lessThanOrEqualTraling: 10)

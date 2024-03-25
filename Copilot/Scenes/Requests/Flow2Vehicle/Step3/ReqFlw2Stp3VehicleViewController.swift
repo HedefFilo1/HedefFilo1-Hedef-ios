@@ -35,7 +35,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var plateTextField: RequestsTextField!
     
     @IBOutlet weak var reasonLabel: UILabel!
-    @IBOutlet weak var reasonList: CPDropDownList!
+    @IBOutlet weak var reasonList: RequestsDropDownList!
     
     @IBOutlet weak var trafficNameLabel: UILabel!
     @IBOutlet weak var trafficNameTextField: RequestsTextField!
@@ -59,7 +59,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     @IBOutlet weak var receiverTCKNTextField: RequestsTextField!
     
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var cityList: CPDropDownList!
+    @IBOutlet weak var cityList: RequestsDropDownList!
     
     @IBOutlet weak var addFileLabel: UILabel!
     @IBOutlet weak var selectFileView: UIView!
