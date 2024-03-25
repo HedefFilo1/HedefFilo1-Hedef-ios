@@ -144,8 +144,8 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         kmLabel.text = Strings.ckm
         kmTextField.placeholder = Strings.enterKm
         
-        causeOfLostLabel.text = Strings.numberOfLostPlates
-        causeOfLostList.title = Strings.enterNumberOfLostPlates
+        causeOfLostLabel.text = Strings.causeOfLoss
+        causeOfLostList.title = Strings.enterCauseOfLoss
         
         numberOfLostPlatesLabel.text = Strings.numberOfLostPlates
         numberOfLostPlatesList.title = Strings.enterNumberOfLostPlates

@@ -93,6 +93,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     }
     
     func setTextFieldsStyle() {
+        receiverIdTextField.keyboardType = .numberPad
     }
     
     func setTexts() {

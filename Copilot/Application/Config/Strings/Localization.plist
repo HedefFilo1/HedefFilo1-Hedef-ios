@@ -2863,6 +2863,22 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter Number of Lost Plates.</string>
         </dict>
         
+        <key>causeOfLoss</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Sebebi</string>
+            <key>en</key>
+            <string>Number of Lost Plates</string>
+        </dict>
+        
+        <key>enterCauseOfLoss</key>
+        <dict>
+            <key>tr</key>
+            <string>Kayıp Sebebi giriniz.</string>
+            <key>en</key>
+            <string>Enter Cause of Loss.</string>
+        </dict>
+        
         <key>deliveryPlateAddress</key>
         <dict>
             <key>tr</key>
@@ -2874,7 +2890,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>enterDeliveryPlateAddress</key>
         <dict>
             <key>tr</key>
-            <string>Kayıp Plaka Sayısı giriniz.</string>
+            <string>Plakanın Teslim Edileceği Adres giriniz.</string>
             <key>en</key>
             <string>Enter Address to which the plate will be delivered.</string>
         </dict>

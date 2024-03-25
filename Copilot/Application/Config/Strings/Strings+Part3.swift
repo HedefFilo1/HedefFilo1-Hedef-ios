@@ -345,6 +345,14 @@ extension Strings {
         return localized(string: "enterNumberOfLostPlates")
     }
     
+    static var causeOfLoss: String {
+        return localized(string: "causeOfLoss")
+    }
+    
+    static var enterCauseOfLoss: String {
+        return localized(string: "enterCauseOfLoss")
+    }
+    
     static var deliveryPlateAddress: String {
         return localized(string: "deliveryPlateAddress")
     }
