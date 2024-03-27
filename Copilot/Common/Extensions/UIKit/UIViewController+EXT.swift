@@ -51,6 +51,10 @@ extension UIViewController {
         imageView.image = Images.notificationIcon
         header.addSubview(imageView)
         imageView.align(trailing: 0, widthAndHeight: 24, centerY: 0)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToNotifications))
+        tap.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(tap)
+        imageView.isUserInteractionEnabled = true
     }
     
     func setSearchView(to header: UIView) {
@@ -76,6 +80,12 @@ extension UIViewController {
         if let tabbar = self.tabBarController as? MainTabBarController {
             tabbar.tabBarView.select(tab: tab)
         }
+    }
+    
+    @objc func goToNotifications() {
+        let controller: NotificationsViewController = UIStoryboard(storyboard: .notification).instantiateViewController()
+        controller.viewModel = NotificationsViewModel()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

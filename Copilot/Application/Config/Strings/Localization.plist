@@ -3312,6 +3312,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Injury/Fatal Accident</string>
         </dict>
         
+        <key>deleteSelectedNotifications</key>
+        <dict>
+            <key>tr</key>
+            <string>Seçili count Bildirimi Sil</string>
+            <key>en</key>
+            <string>Delete count Selected Notifications</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

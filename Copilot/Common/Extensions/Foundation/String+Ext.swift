@@ -108,7 +108,7 @@ extension String {
 extension Date {
     func getServerDate() -> String {
         let formmater = DateFormatter()
-//        formmater.dateFormat = "YYYY-MM-ddTHH:MM:00.000Z"
+        //        formmater.dateFormat = "YYYY-MM-ddTHH:MM:00.000Z"
         formmater.timeZone = TimeZone(identifier: "UTC")
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm"
         let result = formmater.string(from: self) + ":00.000Z"
@@ -130,6 +130,14 @@ extension Date {
     
     func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
         return calendar.component(component, from: self)
+    }
+    
+    func relativeDateAsString() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        formatter.locale = Locale(identifier: "tr_TR")
+        let string = formatter.localizedString(for: self, relativeTo: Date())
+        return string
     }
     
 }

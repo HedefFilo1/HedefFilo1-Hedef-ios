@@ -89,7 +89,7 @@ class MainCoordinator: Coordinator {
         
 #if DEV_DEBUG
         // just for test
-        tabBarController.selectedIndex = 4
+        tabBarController.selectedIndex = 3
 #else
         tabBarController.selectedIndex = 2
 #endif
@@ -101,6 +101,7 @@ class MainCoordinator: Coordinator {
     override func finish() {
         delegate?.didFinish(from: self)
     }
+    
 }
 
 extension MainCoordinator: HomeCoordinatorDelegate,

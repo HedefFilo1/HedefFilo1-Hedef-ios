@@ -36,10 +36,18 @@ class SupportCoordinator: Coordinator {
         let viewController: SupportViewController = storyboard.instantiateViewController()
         viewController.viewModel = supportViewModel
         navigationController.setViewControllers([viewController], animated: true)
+        goToNotifications()
     }
     
     override func finish() {
         delegate?.supportDidFinish(from: self)
+    }
+    
+    func goToNotifications() {
+        let controller: NotificationsViewController = UIStoryboard(storyboard: .notification).instantiateViewController()
+        controller.viewModel = NotificationsViewModel()
+//        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
     }
     
 }

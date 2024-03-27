@@ -363,6 +363,10 @@
 		89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */; };
 		89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */; };
 		89A909202B31CB3A00BC7727 /* HeaderParluxLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */; };
+		89A92BFE2BB45DDA00D13F04 /* SelectableNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A92BFD2BB45DDA00D13F04 /* SelectableNotificationCell.xib */; };
+		89A92C002BB45DE100D13F04 /* SelectableNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92BFF2BB45DE100D13F04 /* SelectableNotificationCell.swift */; };
+		89A92C042BB483A000D13F04 /* APIService+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92C032BB483A000D13F04 /* APIService+Notifications.swift */; };
+		89A92C062BB483C800D13F04 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92C052BB483C800D13F04 /* UserNotification.swift */; };
 		89B03B732BB09E8A007B4A72 /* RequestsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B03B722BB09E8A007B4A72 /* RequestsTextField.swift */; };
 		89B03B8D2BB2184D007B4A72 /* RequestsDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B03B8C2BB2184D007B4A72 /* RequestsDropDownList.swift */; };
 		89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */; };
@@ -401,6 +405,12 @@
 		89B790CD2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CC2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift */; };
 		89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CE2B5FC54900993933 /* GetTireControl.swift */; };
 		89B9034D2BB366A100E7301C /* LiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9034C2BB366A100E7301C /* LiveSupport.swift */; };
+		89B903502BB3A7C600E7301C /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B9034F2BB3A7C600E7301C /* Notification.storyboard */; };
+		89B903522BB3A7DF00E7301C /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B903512BB3A7DF00E7301C /* NotificationCoordinator.swift */; };
+		89B903552BB3A89800E7301C /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B903542BB3A89800E7301C /* NotificationsViewModel.swift */; };
+		89B903572BB3A8A500E7301C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B903562BB3A8A500E7301C /* NotificationViewController.swift */; };
+		89B903632BB3AB7800E7301C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B903612BB3AB7800E7301C /* NotificationCell.swift */; };
+		89B903642BB3AB7800E7301C /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B903622BB3AB7800E7301C /* NotificationCell.xib */; };
 		89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB3812AD955F5003D5717 /* CPErrorView.swift */; };
 		89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BED9752AFE3C810068E087 /* VerifyToken.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
@@ -894,6 +904,10 @@
 		89A908D32B31AF0300BC7727 /* ServicesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesItemCell.swift; sourceTree = "<group>"; };
 		89A908D42B31AF0300BC7727 /* ServicesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesItemCell.xib; sourceTree = "<group>"; };
 		89A9091F2B31CB3A00BC7727 /* HeaderParluxLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderParluxLayout.swift; sourceTree = "<group>"; };
+		89A92BFD2BB45DDA00D13F04 /* SelectableNotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectableNotificationCell.xib; sourceTree = "<group>"; };
+		89A92BFF2BB45DE100D13F04 /* SelectableNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableNotificationCell.swift; sourceTree = "<group>"; };
+		89A92C032BB483A000D13F04 /* APIService+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Notifications.swift"; sourceTree = "<group>"; };
+		89A92C052BB483C800D13F04 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 		89B03B722BB09E8A007B4A72 /* RequestsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTextField.swift; sourceTree = "<group>"; };
 		89B03B8C2BB2184D007B4A72 /* RequestsDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsDropDownList.swift; sourceTree = "<group>"; };
 		89B07A3F2AD85A6100D3BE80 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
@@ -932,6 +946,12 @@
 		89B790CC2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow5Step2TireChangeViewController.swift; sourceTree = "<group>"; };
 		89B790CE2B5FC54900993933 /* GetTireControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTireControl.swift; sourceTree = "<group>"; };
 		89B9034C2BB366A100E7301C /* LiveSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSupport.swift; sourceTree = "<group>"; };
+		89B9034F2BB3A7C600E7301C /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		89B903512BB3A7DF00E7301C /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		89B903542BB3A89800E7301C /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		89B903562BB3A8A500E7301C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		89B903612BB3AB7800E7301C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		89B903622BB3AB7800E7301C /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		89BDB3812AD955F5003D5717 /* CPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPErrorView.swift; sourceTree = "<group>"; };
 		89BED9752AFE3C810068E087 /* VerifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyToken.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -2766,6 +2786,33 @@
 			path = ServicesItem;
 			sourceTree = "<group>";
 		};
+		89A92BFB2BB448A400D13F04 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				89B903622BB3AB7800E7301C /* NotificationCell.xib */,
+				89B903612BB3AB7800E7301C /* NotificationCell.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		89A92BFC2BB448AF00D13F04 /* SelectableItem */ = {
+			isa = PBXGroup;
+			children = (
+				89A92BFD2BB45DDA00D13F04 /* SelectableNotificationCell.xib */,
+				89A92BFF2BB45DE100D13F04 /* SelectableNotificationCell.swift */,
+			);
+			path = SelectableItem;
+			sourceTree = "<group>";
+		};
+		89A92C022BB4839000D13F04 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				89A92C032BB483A000D13F04 /* APIService+Notifications.swift */,
+				89A92C052BB483C800D13F04 /* UserNotification.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		89B03B712BB09E5E007B4A72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2992,6 +3039,36 @@
 			path = Flow5ChangeTire;
 			sourceTree = "<group>";
 		};
+		89B9034E2BB3A7A600E7301C /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				89A92C022BB4839000D13F04 /* API */,
+				89B903512BB3A7DF00E7301C /* NotificationCoordinator.swift */,
+				89B9034F2BB3A7C600E7301C /* Notification.storyboard */,
+				89B903532BB3A88B00E7301C /* Notifications */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		89B903532BB3A88B00E7301C /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				89B903542BB3A89800E7301C /* NotificationsViewModel.swift */,
+				89B903562BB3A8A500E7301C /* NotificationViewController.swift */,
+				89B903582BB3A8B200E7301C /* Cell */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		89B903582BB3A8B200E7301C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89A92BFB2BB448A400D13F04 /* Item */,
+				89A92BFC2BB448AF00D13F04 /* SelectableItem */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		89C55DC92AC4A4E000C3066A /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -3030,6 +3107,7 @@
 				89B12BB32AD4789D002C70E4 /* Main */,
 				896CB3412AD5BD610048025A /* Home */,
 				48A10C8D2B9AE296004A2AE8 /* Support */,
+				89B9034E2BB3A7A600E7301C /* Notification */,
 				89B07A4F2AD9351700D3BE80 /* Profile */,
 				8934D4E32B0F9F2600CD0CA7 /* Vehicle */,
 				89A908B12B31A6C400BC7727 /* Services */,
@@ -3773,6 +3851,7 @@
 				8935AC472AFA5B30002F1C68 /* NewsCell.xib in Resources */,
 				893AC49B2BAB05AF003FB9E6 /* FAQQeustionItemCell.xib in Resources */,
 				89950ACF2B7FBAA2004537D2 /* UploadPhotoCell.xib in Resources */,
+				89A92BFE2BB45DDA00D13F04 /* SelectableNotificationCell.xib in Resources */,
 				89E29B592B3AE4B300CCABAD /* ServicesItemsCell.xib in Resources */,
 				8934D4F12B0F9FE800CD0CA7 /* VehicleCell.xib in Resources */,
 				89A908D62B31AF0300BC7727 /* ServicesItemCell.xib in Resources */,
@@ -3800,6 +3879,7 @@
 				89CC82DB2BA7CD7900263332 /* RequestListItemCell.xib in Resources */,
 				8935AC4F2AFA5D7F002F1C68 /* SponsorshipCell.xib in Resources */,
 				89950AC52B7FB7AF004537D2 /* AccFlw1Stp4ReportTitleCell.xib in Resources */,
+				89B903642BB3AB7800E7301C /* NotificationCell.xib in Resources */,
 				89E0458C2B04D3EB00745E73 /* DocumentCell.xib in Resources */,
 				89431D942B96815100A6F6B8 /* ReqFlw1Stp2Cell.xib in Resources */,
 				89C55DF52AC4A91500C3066A /* Color.xcassets in Resources */,
@@ -3847,6 +3927,7 @@
 				892A8D162AC4EB2A0020C1C4 /* DIN-Bold.ttf in Resources */,
 				89DAB7FB2AC72D0E0098BA67 /* Login.storyboard in Resources */,
 				89DF07042AF011BC00892B1D /* FilterCell.xib in Resources */,
+				89B903502BB3A7C600E7301C /* Notification.storyboard in Resources */,
 				8934D4E52B0F9F6100CD0CA7 /* Vehicle.storyboard in Resources */,
 				89FC517E2B6A39EB00AD37D4 /* MaintenanceServicesViewModel.swift in Resources */,
 				896CB3432AD5BD6E0048025A /* Home.storyboard in Resources */,
@@ -3950,6 +4031,7 @@
 				48A10C952B9AE37E004A2AE8 /* SupportCoordinator.swift in Sources */,
 				89DF05372BACCC4700C8B37E /* FeedbackCell.swift in Sources */,
 				899BF5B42B2087150058123C /* Supplier.swift in Sources */,
+				89B903522BB3A7DF00E7301C /* NotificationCoordinator.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */,
 				899FF41D2B766BC100447118 /* APIService+Part2.swift in Sources */,
@@ -3989,6 +4071,7 @@
 				892B23842B2C40680000E6E1 /* MaintenanceLast.swift in Sources */,
 				89950AE42B811622004537D2 /* AccidentServicesViewController.swift in Sources */,
 				8917F5492B39F91A00681AD3 /* CPPointButton.swift in Sources */,
+				89A92C062BB483C800D13F04 /* UserNotification.swift in Sources */,
 				89C55DDF2AC4A5FF00C3066A /* UIColor+Hex.swift in Sources */,
 				893EDF732AFA5A92004E643E /* NewsTabCell.swift in Sources */,
 				89B190F82B87A76A00AC1171 /* AccFlw4Stp4NoAgreementReportViewModel.swift in Sources */,
@@ -4016,6 +4099,7 @@
 				897835D62B454F3F00C63AA7 /* ServiceRandevuViewModel.swift in Sources */,
 				8976B01B2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift in Sources */,
 				89B12BBB2AD4790B002C70E4 /* MainViewModel.swift in Sources */,
+				89A92C002BB45DE100D13F04 /* SelectableNotificationCell.swift in Sources */,
 				8934D5052B0FFE7F00CD0CA7 /* VehicleGuideCell.swift in Sources */,
 				8986FCB82AFBCC82006057EA /* Persistence.swift in Sources */,
 				89FC517C2B6A39E000AD37D4 /* MaintenanceServicesViewController.swift in Sources */,
@@ -4081,6 +4165,7 @@
 				899D34B02BAF85B90090DA7B /* FeedbackRateViewController.swift in Sources */,
 				89DCE8702B21E03100AB1114 /* Campaign.swift in Sources */,
 				896CB3492AD5BDE50048025A /* HomeViewController.swift in Sources */,
+				89A92C042BB483A000D13F04 /* APIService+Notifications.swift in Sources */,
 				89C55DF02AC4A7CD00C3066A /* App.swift in Sources */,
 				89950AF82B826E87004537D2 /* AccFlw2Stp6MovableViewModel.swift in Sources */,
 				89DAB8002AC72D3D0098BA67 /* LoginViewModel.swift in Sources */,
@@ -4193,6 +4278,7 @@
 				89DAB8082AC739EA0098BA67 /* CPEmailTextField.swift in Sources */,
 				8917F54E2B39FBBD00681AD3 /* LastikPointsView.swift in Sources */,
 				897835D42B454F3900C63AA7 /* ServiceRandevuViewController.swift in Sources */,
+				89B903572BB3A8A500E7301C /* NotificationViewController.swift in Sources */,
 				89DF053D2BACD0CB00C8B37E /* ProccessRequestsViewModel.swift in Sources */,
 				899CF56C2AE18CD5006D85E4 /* APIService.swift in Sources */,
 				8934D4FF2B0FFE0800CD0CA7 /* VehicleGuideViewModel.swift in Sources */,
@@ -4247,9 +4333,11 @@
 				893AC4972BAB04D2003FB9E6 /* FAQQuestionDetail.swift in Sources */,
 				8976B0292B73C8D300E7C58F /* WarningLightsHeaderCell.swift in Sources */,
 				89C6868E2B025C1800011897 /* AvatarViewController.swift in Sources */,
+				89B903632BB3AB7800E7301C /* NotificationCell.swift in Sources */,
 				89950ADF2B81141A004537D2 /* AccFlw1Stp7SelectServiceViewModel.swift in Sources */,
 				8934D4EC2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift in Sources */,
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
+				89B903552BB3A89800E7301C /* NotificationsViewModel.swift in Sources */,
 				89C5CA8D2BA3033E0099836B /* CitiesList.swift in Sources */,
 				89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,

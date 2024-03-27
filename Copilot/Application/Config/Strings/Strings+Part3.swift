@@ -548,4 +548,8 @@ extension Strings {
     static var injuryFatalAccident: String {
         return localized(string: "injuryFatalAccident")
     }
+    
+    static var deleteSelectedNotifications: String {
+        return localized(string: "deleteSelectedNotifications")
+    }
 }

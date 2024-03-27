@@ -24,6 +24,7 @@ enum Storyboard: String {
     case accident
     case requests
     case settings
+    case notification
 
     case support
     
