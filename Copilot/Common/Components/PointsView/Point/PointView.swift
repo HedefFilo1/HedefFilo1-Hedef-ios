@@ -1,13 +1,14 @@
 //
-//  PointsView.swift
+//  PointView.swift
 //  Copilot
 //
-//  Created by Jamal on 10/31/23.
+//  Created by Jamal on 3/27/24.
 //
 
+import Foundation
 import UIKit
 
-class PointsView: UIView {
+class PointView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +21,9 @@ class PointsView: UIView {
     }
     
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     
     private var nibName: String {
         return String(describing: type(of: self))
@@ -28,15 +31,20 @@ class PointsView: UIView {
     
     private func setupUI() {
         Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
-        
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = bounds
-        
         applyStyles()
     }
     
     private func applyStyles() {
-
+        backgroundColor = .clear
+        circleView.layer.cornerRadius = 12
+        circleView.layer.borderWidth = 1
+        circleView.layer.borderColor = UIColor.pink.cgColor
+        circleView.backgroundColor = .white
+        titleLabel.apply(.blackS12B700)
+        valueLabel.apply(.blackS12R400)
     }
+    
 }

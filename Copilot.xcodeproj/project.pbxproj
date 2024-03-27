@@ -42,6 +42,8 @@
 		89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */; };
 		89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */; };
 		8914E5512B7D39E9000E26DB /* BreakDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8914E5502B7D39E9000E26DB /* BreakDownCell.xib */; };
+		8916C24C2BB4B5E50006B2E9 /* PointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8916C24B2BB4B5E50006B2E9 /* PointView.xib */; };
+		8916C24E2BB4B5EE0006B2E9 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916C24D2BB4B5EE0006B2E9 /* PointView.swift */; };
 		8917F5402B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */; };
 		8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */; };
 		8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */; };
@@ -580,6 +582,8 @@
 		89108A9D2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewModel.swift; sourceTree = "<group>"; };
 		89108A9F2B39E01700C8F400 /* Flow1Step2NewTireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step2NewTireViewController.swift; sourceTree = "<group>"; };
 		8914E5502B7D39E9000E26DB /* BreakDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreakDownCell.xib; sourceTree = "<group>"; };
+		8916C24B2BB4B5E50006B2E9 /* PointView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointView.xib; sourceTree = "<group>"; };
+		8916C24D2BB4B5EE0006B2E9 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewModel.swift; sourceTree = "<group>"; };
 		8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewController.swift; sourceTree = "<group>"; };
 		8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step4ResultViewModel.swift; sourceTree = "<group>"; };
@@ -1284,6 +1288,15 @@
 				89F67DA82B7D399E0040DF15 /* BreakdownRandevuCell.xib */,
 			);
 			path = Randevu;
+			sourceTree = "<group>";
+		};
+		8916C24A2BB4B5C20006B2E9 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				8916C24B2BB4B5E50006B2E9 /* PointView.xib */,
+				8916C24D2BB4B5EE0006B2E9 /* PointView.swift */,
+			);
+			path = Point;
 			sourceTree = "<group>";
 		};
 		8917F5432B39EC0300681AD3 /* Step4 */ = {
@@ -2813,6 +2826,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		89A92C072BB4AF7900D13F04 /* Points */ = {
+			isa = PBXGroup;
+			children = (
+				89DF071D2AF0F8B900892B1D /* PointsView.swift */,
+				89DF071B2AF0F8A100892B1D /* PointsView.xib */,
+			);
+			path = Points;
+			sourceTree = "<group>";
+		};
 		89B03B712BB09E5E007B4A72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -3531,8 +3553,8 @@
 		89DF071A2AF0F87E00892B1D /* PointsView */ = {
 			isa = PBXGroup;
 			children = (
-				89DF071B2AF0F8A100892B1D /* PointsView.xib */,
-				89DF071D2AF0F8B900892B1D /* PointsView.swift */,
+				8916C24A2BB4B5C20006B2E9 /* Point */,
+				89A92C072BB4AF7900D13F04 /* Points */,
 			);
 			path = PointsView;
 			sourceTree = "<group>";
@@ -3836,6 +3858,7 @@
 				89DF05392BACCC4C00C8B37E /* FeedbackCell.xib in Resources */,
 				8976B02A2B73C8D300E7C58F /* WarningLightsHeaderCell.xib in Resources */,
 				892A8D122AC4EAFA0020C1C4 /* DIN-Regular.ttf in Resources */,
+				8916C24C2BB4B5E50006B2E9 /* PointView.xib in Resources */,
 				893EDF702AFA55BA004E643E /* CampaignsTitleCell.xib in Resources */,
 				8907EF042B6971BE004869BE /* MaintenanceRandevuCell.xib in Resources */,
 				892A8D192AC4EDB20020C1C4 /* Localization.plist in Resources */,
@@ -4034,6 +4057,7 @@
 				89B903522BB3A7DF00E7301C /* NotificationCoordinator.swift in Sources */,
 				89E045952B04FA3F00745E73 /* DocumentPageTitleCell.swift in Sources */,
 				89950AB82B7FA93F004537D2 /* AccFlw1Stp4ReportViewModel.swift in Sources */,
+				8916C24E2BB4B5EE0006B2E9 /* PointView.swift in Sources */,
 				899FF41D2B766BC100447118 /* APIService+Part2.swift in Sources */,
 				891D78362B445C13008FC722 /* ServiceDetailViewController.swift in Sources */,
 				8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */,
@@ -4583,7 +4607,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 121;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4617,7 +4641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 121;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4711,7 +4735,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 121;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4799,7 +4823,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 121;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -168,6 +168,13 @@
                                             <constraint firstAttribute="trailing" secondItem="YcO-O6-TrT" secondAttribute="trailing" id="x1Z-he-FbT"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-T0-1ZP" customClass="PointsView" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="345" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="9Zn-vq-0Xk"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -184,6 +191,7 @@
                                     <constraint firstItem="zvU-6Z-Mlt" firstAttribute="centerX" secondItem="lVE-He-aWP" secondAttribute="centerX" id="KUc-La-V5O"/>
                                     <constraint firstItem="x3j-Yl-Hpe" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="KgC-zU-Aua"/>
                                     <constraint firstItem="Gbu-8g-V5Z" firstAttribute="centerY" secondItem="A6e-Wg-ptY" secondAttribute="centerY" id="LdN-XM-zf9"/>
+                                    <constraint firstItem="Odv-T0-1ZP" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="O9i-DQ-ioS"/>
                                     <constraint firstAttribute="trailing" secondItem="kX0-dx-Iqp" secondAttribute="trailing" id="SAA-jD-PlS"/>
                                     <constraint firstItem="A6e-Wg-ptY" firstAttribute="leading" secondItem="DWE-3e-VcI" secondAttribute="trailing" constant="8" id="Sbe-wG-5xk"/>
                                     <constraint firstItem="kY6-wv-oTk" firstAttribute="top" secondItem="mfa-4K-FZW" secondAttribute="bottom" priority="703" constant="40" id="TfJ-Ur-Ee3"/>
@@ -193,6 +201,7 @@
                                     <constraint firstItem="mfa-4K-FZW" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="cWH-Pt-Shv"/>
                                     <constraint firstItem="mvn-A2-qE9" firstAttribute="centerX" secondItem="lVE-He-aWP" secondAttribute="centerX" id="cjP-T3-Jax"/>
                                     <constraint firstItem="VLj-6b-9pd" firstAttribute="top" secondItem="lVE-He-aWP" secondAttribute="top" constant="16" id="cnd-Wo-Auf"/>
+                                    <constraint firstItem="Odv-T0-1ZP" firstAttribute="top" secondItem="lVE-He-aWP" secondAttribute="top" constant="60" id="cww-Ow-gvC"/>
                                     <constraint firstItem="kX0-dx-Iqp" firstAttribute="centerY" secondItem="A6e-Wg-ptY" secondAttribute="centerY" id="fGc-rf-86v"/>
                                     <constraint firstItem="Gdd-3m-ycC" firstAttribute="leading" secondItem="lVE-He-aWP" secondAttribute="leading" id="fsq-hO-Ekv"/>
                                     <constraint firstItem="mvn-A2-qE9" firstAttribute="top" secondItem="VLj-6b-9pd" secondAttribute="bottom" constant="40" id="gCF-2O-sDz"/>
@@ -200,6 +209,7 @@
                                     <constraint firstItem="mfa-4K-FZW" firstAttribute="top" secondItem="mvn-A2-qE9" secondAttribute="bottom" priority="701" constant="40" id="lpr-F0-gIG"/>
                                     <constraint firstItem="VLj-6b-9pd" firstAttribute="centerX" secondItem="lVE-He-aWP" secondAttribute="centerX" id="pFf-wb-pW5"/>
                                     <constraint firstItem="A6e-Wg-ptY" firstAttribute="centerY" secondItem="DWE-3e-VcI" secondAttribute="centerY" id="vRc-3c-ps9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Odv-T0-1ZP" secondAttribute="trailing" id="vhk-XR-lpb"/>
                                     <constraint firstAttribute="trailing" secondItem="kY6-wv-oTk" secondAttribute="trailing" id="voh-yX-UAA"/>
                                     <constraint firstItem="Gbu-8g-V5Z" firstAttribute="leading" secondItem="DWE-3e-VcI" secondAttribute="leading" id="wwx-Np-AIO"/>
                                     <constraint firstItem="Gdd-3m-ycC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kX0-dx-Iqp" secondAttribute="bottom" constant="12" id="z31-V1-KbY"/>

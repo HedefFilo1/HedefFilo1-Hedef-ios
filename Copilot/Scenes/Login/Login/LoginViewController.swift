@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(loginMyAccount), for: .touchUpInside)
         button.setTitle("Login My Account", for: .normal)
         button.backgroundColor = .systemYellow
+        button.isHidden = true
         
         let button2 = UIButton()
         view.addSubview(button2)
