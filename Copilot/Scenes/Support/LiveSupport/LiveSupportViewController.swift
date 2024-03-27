@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 class LiveSupportViewController: UIViewController {
     
@@ -17,14 +18,7 @@ class LiveSupportViewController: UIViewController {
     }
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var headsetView: UIView!
-    @IBOutlet weak var headsetImageView: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var textFieldView: UIView!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var sendView: UIView!
+    @IBOutlet weak var container: UIView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -34,6 +28,7 @@ class LiveSupportViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         hideTabbarView()
+        viewModel.getLiveSupport()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,21 +38,11 @@ class LiveSupportViewController: UIViewController {
     func setupUI() {
         applyStyle()
         setTexts()
-        
     }
     
     func applyStyle() {
         titleLabel.apply(.blackS18B700)
-        headsetView.layer.cornerRadius = 40
-        headsetImageView.image = headsetImageView.image?.withRenderingMode(.alwaysTemplate)
-        headsetImageView.tintColor = .theme
-        userLabel.apply(.blackS18B700)
-        statusLabel.apply(.custom(.textSuccess, .bold, 12))
-        textFieldView.layer.cornerRadius = 10
-        textFieldView.layer.borderWidth = 1
-        textFieldView.layer.borderColor = UIColor.borderColor.cgColor
-        sendView.layer.cornerRadius = 10
-        textField.borderStyle = .none
+     
     }
     
     func setTexts() {
@@ -68,15 +53,29 @@ class LiveSupportViewController: UIViewController {
         viewModel.getBack()
     }
     
-    @IBAction func didTapSend() {
-        
-    }
-    
-    @IBAction func didTapAttach() {
-        
-    }
 }
 
 extension LiveSupportViewController: LiveSupportViewModelDelegate {
-   
+    func loadWebView() {
+        guard let string = viewModel.model?.url,
+              let data = viewModel.model?.postData else { return }
+                
+        guard let url = URL(string: string) else {
+            return
+        }
+        let webView = WKWebView()
+        container.addSubview(webView)
+        webView.frame = container.bounds
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+
+        let post: String = "sourceId=44574fdsf01e-e4da-4e8c-a897-17722d00e1fe&sourceType=abc"
+        let postData: Data = post.data(using: String.Encoding.ascii, allowLossyConversion: true)!
+
+        request.httpBody = postData
+        webView.load(request as URLRequest)
+    }
 }

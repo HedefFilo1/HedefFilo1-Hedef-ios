@@ -400,6 +400,7 @@
 		89B790CB2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CA2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift */; };
 		89B790CD2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CC2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift */; };
 		89B790CF2B5FC54900993933 /* GetTireControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B790CE2B5FC54900993933 /* GetTireControl.swift */; };
+		89B9034D2BB366A100E7301C /* LiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9034C2BB366A100E7301C /* LiveSupport.swift */; };
 		89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB3812AD955F5003D5717 /* CPErrorView.swift */; };
 		89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BED9752AFE3C810068E087 /* VerifyToken.swift */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
@@ -930,6 +931,7 @@
 		89B790CA2B5FBB5400993933 /* Flow5Step2TireChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow5Step2TireChangeViewModel.swift; sourceTree = "<group>"; };
 		89B790CC2B5FBB5C00993933 /* Flow5Step2TireChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow5Step2TireChangeViewController.swift; sourceTree = "<group>"; };
 		89B790CE2B5FC54900993933 /* GetTireControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTireControl.swift; sourceTree = "<group>"; };
+		89B9034C2BB366A100E7301C /* LiveSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSupport.swift; sourceTree = "<group>"; };
 		89BDB3812AD955F5003D5717 /* CPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPErrorView.swift; sourceTree = "<group>"; };
 		89BED9752AFE3C810068E087 /* VerifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyToken.swift; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -1732,6 +1734,7 @@
 				893AC4962BAB04D2003FB9E6 /* FAQQuestionDetail.swift */,
 				893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */,
 				893AC4AE2BAB4A65003FB9E6 /* SupportGuide.swift */,
+				89B9034C2BB366A100E7301C /* LiveSupport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4048,6 +4051,7 @@
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				894CEC812B078F9300D369E9 /* SearchViewController.swift in Sources */,
 				8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */,
+				89B9034D2BB366A100E7301C /* LiveSupport.swift in Sources */,
 				89CE08032B3AE3A300C76433 /* VehicleServicesSearchCell.swift in Sources */,
 				89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */,
 				8907EF0B2B698B24004869BE /* MaintenanceStep2KMViewModel.swift in Sources */,

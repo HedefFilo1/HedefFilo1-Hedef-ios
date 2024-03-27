@@ -54,4 +54,13 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getLiveSupport(completion: @escaping (LiveSupport?, APIResponseError?) -> Void) {
+        let route = "live-support"
+        let req = APIRequest<LiveSupport>(route: route, method: .get, hasToken: true)
+        req.identifier = "GetLiveSupport"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }
