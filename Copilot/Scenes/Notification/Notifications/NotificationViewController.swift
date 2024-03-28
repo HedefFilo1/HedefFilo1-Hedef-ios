@@ -68,7 +68,8 @@ class NotificationsViewController: UIViewController {
     }
     
     @IBAction func didTapBack() {
-        viewModel.getBack()
+        showTabbarView()
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func didTapDeleteIcon() {
@@ -89,7 +90,7 @@ class NotificationsViewController: UIViewController {
     
     @IBAction func didTapDelete() {
         isSelectable = true
-        var ids:[Int] = []
+        var ids: [Int] = []
         guard let items = viewModel.items else { return }
         for item in items {
             let selected = item.selected ?? false
