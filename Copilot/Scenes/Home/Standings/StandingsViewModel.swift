@@ -64,7 +64,7 @@ class StandingsViewModel: StandingsViewModelType {
             if let model = model {
                 self.barPoints = model
                 self.delegate?.setBarPoints()
-                self.getCarPoint()
+//                self.getCarPoint()
             } else
             
             if let error = error {
@@ -91,5 +91,4 @@ class StandingsViewModel: StandingsViewModelType {
             }
         }
     }
-    
 }

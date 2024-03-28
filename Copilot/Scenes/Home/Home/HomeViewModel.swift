@@ -21,6 +21,8 @@ protocol HomeViewModelViewDelegate: AnyObject {
     func setLastMaintenance()
     func showError(title: String, message: String)
     func showSuccess(title: String, message: String)
+    func setTotalPoints()
+    func setBarPoints()
 }
 
 protocol HomeViewModelType: AnyObject {
@@ -30,6 +32,8 @@ protocol HomeViewModelType: AnyObject {
     var appointment: Case? { get set}
     var tire: Tire? { get set }
     var last: MaintenanceLast? { get set }
+    var totalPoints: Int { get set }
+    var barPoints: [BarPoint] { get set }
     func getVehicle(shoudGetCase: Bool)
     func goToNearMe()
     func goToStandings()
@@ -48,6 +52,8 @@ class HomeViewModel: HomeViewModelType {
     var tire: Tire?
     var last: MaintenanceLast?
     var mark: String = ""
+    var totalPoints: Int = 0
+    var barPoints: [BarPoint] = []
     
     func getVehicle(shoudGetCase: Bool) {
         Loading.shared.show()
@@ -129,6 +135,63 @@ class HomeViewModel: HomeViewModelType {
             if let model = model {
                 self.last = model
                 self.delegate?.setLastMaintenance()
+                self.getTotalPoints()
+            }
+        }
+    }
+    
+    func getTotalPoints() {
+        Loading.shared.show()
+        APIService.getTotalPoints { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.totalPoints = model.totalPoints
+                self.delegate?.setTotalPoints()
+                self.getBarPoints()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
+    }
+    
+    func getBarPoints() {
+        Loading.shared.show()
+        APIService.getBarPoints { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.barPoints = model
+                self.delegate?.setBarPoints()
+//                self.getCarPoint()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
+    }
+    
+    func getCarPoint() {
+        Loading.shared.show()
+        APIService.getCarPoint { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.barPoints = model
+                self.delegate?.setBarPoints()
+            } else
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
             }
         }
     }

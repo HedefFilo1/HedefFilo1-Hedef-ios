@@ -64,11 +64,12 @@ class PointsView: UIView {
     }
     
     func startAnimate() {
+        progressConstraint.constant = 0
         progressConstraint.constant = progressContainerView.frame.width * 0.2
         if progressConstraint.constant < 40 {
             progressConstraint.constant = 45
         }
-        UIView.animate(withDuration: 2, delay: 0) {
+        UIView.animate(withDuration: 3 , delay: 0) {
             self.progressContainerView.layoutIfNeeded()
             self.layoutIfNeeded()
         }

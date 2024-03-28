@@ -99,6 +99,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.appointment = viewModel.appointment
             cell.tire = viewModel.tire
             cell.last = viewModel.last
+            cell.totalPoints = viewModel.totalPoints
+            cell.barPoints = viewModel.barPoints
             return cell
         
         default:
@@ -176,6 +178,7 @@ extension HomeViewController: KMUsedViewControllerDelegate {
 }
 
 extension HomeViewController: HomeViewModelViewDelegate {
+    
     func setVehicle() {
         collectionView.reloadData()
     }
@@ -189,6 +192,14 @@ extension HomeViewController: HomeViewModelViewDelegate {
     }
     
     func setLastMaintenance() {
+        collectionView.reloadData()
+    }
+    
+    func setTotalPoints() {
+        collectionView.reloadData()
+    }
+    
+    func setBarPoints() {
         collectionView.reloadData()
     }
 }

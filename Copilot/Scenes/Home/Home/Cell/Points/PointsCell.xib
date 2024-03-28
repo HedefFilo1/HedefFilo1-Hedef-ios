@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-O0-F8u" customClass="PointsView" customModule="Copilot" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="50" width="363" height="82"/>
+                        <rect key="frame" x="0.0" y="50" width="333" height="82"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="82" id="I3b-M0-kcM"/>
@@ -74,7 +74,7 @@
                 <constraint firstItem="dew-Fz-YbC" firstAttribute="centerY" secondItem="Ou0-LW-dBa" secondAttribute="centerY" id="Zfg-pX-jZf"/>
                 <constraint firstAttribute="trailing" secondItem="rjY-vg-CfF" secondAttribute="trailing" id="d9q-ej-Via"/>
                 <constraint firstItem="ajW-zG-rFV" firstAttribute="top" secondItem="dew-Fz-YbC" secondAttribute="top" id="deQ-5n-JkU"/>
-                <constraint firstAttribute="trailing" secondItem="zRq-O0-F8u" secondAttribute="trailing" id="fJV-ao-ffw"/>
+                <constraint firstAttribute="trailing" secondItem="zRq-O0-F8u" secondAttribute="trailing" constant="30" id="fJV-ao-ffw"/>
                 <constraint firstItem="ajW-zG-rFV" firstAttribute="leading" secondItem="dew-Fz-YbC" secondAttribute="leading" id="gc3-ru-bI2"/>
                 <constraint firstItem="VtC-hZ-kLM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iAr-Pp-nXO"/>
                 <constraint firstItem="VtC-hZ-kLM" firstAttribute="top" secondItem="Ou0-LW-dBa" secondAttribute="bottom" constant="8" id="jM3-gy-gmP"/>

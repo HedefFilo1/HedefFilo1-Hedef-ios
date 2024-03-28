@@ -35,6 +35,18 @@ class HomeContentCell: UICollectionViewCell, Reusable {
         }
     }
     
+    var totalPoints: Int = 0 {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    var barPoints: [BarPoint]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -107,6 +119,8 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         case 4:
             let cell: PointsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = delegate
+            cell.totalPoints = totalPoints
+            cell.barPoints = barPoints
             return cell
             
         default:

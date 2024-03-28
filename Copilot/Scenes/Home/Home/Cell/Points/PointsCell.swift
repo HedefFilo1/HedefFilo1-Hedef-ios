@@ -13,6 +13,18 @@ protocol PointsCellDelegate: AnyObject {
 
 class PointsCell: UICollectionViewCell, Reusable {
     
+    var totalPoints: Int = 0 {
+        didSet {
+            setPointsLabel(point: totalPoints)
+        }
+    }
+    
+    var barPoints: [BarPoint]? {
+        didSet {
+            pointsView.barPoints = barPoints
+        }
+    }
+    
     weak var delegate: PointsCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var howLabel: UILabel!
