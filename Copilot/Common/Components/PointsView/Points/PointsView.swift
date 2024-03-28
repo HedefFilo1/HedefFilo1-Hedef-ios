@@ -8,6 +8,11 @@
 import UIKit
 
 class PointsView: UIView {
+    var barPoints: [BarPoint]? {
+        didSet {
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,7 +41,7 @@ class PointsView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = bounds
         applyStyles()
-        progressConstraint.constant = progressContainerView.frame.width * 0.02
+        progressConstraint.constant = 45
         clipsToBounds = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
         self.addGestureRecognizer(tap)

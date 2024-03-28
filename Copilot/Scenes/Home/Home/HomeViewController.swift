@@ -26,6 +26,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+#if DEV_DEBUG
+
+        viewModel.coordinatorDelegate?.goToStandings()
+        return
+#endif
         viewModel.getVehicle(shoudGetCase: true)
     }
     

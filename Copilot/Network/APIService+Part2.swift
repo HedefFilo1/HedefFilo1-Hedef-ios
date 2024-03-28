@@ -98,4 +98,31 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func getTotalPoints(completion: @escaping (TotalPoints?, APIResponseError?) -> Void) {
+        let route = "user/point/sum"
+        let req = APIRequest<TotalPoints>(route: route, method: .get, hasToken: true)
+        req.identifier = "getTotalPoints"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
+    static func getBarPoints(completion: @escaping ([BarPoint]?, APIResponseError?) -> Void) {
+        let route = "point/bar"
+        let req = APIRequest<[BarPoint]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getCarPoints"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
+    static func getCarPoint(completion: @escaping ([BarPoint]?, APIResponseError?) -> Void) {
+        let route = "user/point/all-sum"
+        let req = APIRequest<[BarPoint]>(route: route, method: .get, hasToken: true)
+        req.identifier = "getCarPoint"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
 }

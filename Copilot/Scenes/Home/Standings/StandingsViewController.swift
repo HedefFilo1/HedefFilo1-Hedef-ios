@@ -22,7 +22,7 @@ class StandingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        viewModel.getTotalPoints()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +65,7 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         
         if indexPath.section == 0 {
             let cell: StandingCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.totalPoints = viewModel.totalPoints
             return cell
         }
         
@@ -110,5 +111,11 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
 }
 
 extension StandingsViewController: StandingsViewModelDelegate {
+    func setTotalPoints() {
+        collectionView.reloadData()
+    }
     
+    func setBarPoints() {
+        collectionView.reloadData()
+    }
 }

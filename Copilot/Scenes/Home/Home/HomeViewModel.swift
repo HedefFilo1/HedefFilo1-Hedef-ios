@@ -25,6 +25,7 @@ protocol HomeViewModelViewDelegate: AnyObject {
 
 protocol HomeViewModelType: AnyObject {
     var delegate: HomeViewModelViewDelegate? { get set }
+    var coordinatorDelegate: HomeViewModelCoordinatorDelegate? { get set }
     var vehicle: Vehicle? { get set}
     var appointment: Case? { get set}
     var tire: Tire? { get set }

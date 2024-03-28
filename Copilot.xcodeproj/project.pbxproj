@@ -44,6 +44,7 @@
 		8914E5512B7D39E9000E26DB /* BreakDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8914E5502B7D39E9000E26DB /* BreakDownCell.xib */; };
 		8916C24C2BB4B5E50006B2E9 /* PointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8916C24B2BB4B5E50006B2E9 /* PointView.xib */; };
 		8916C24E2BB4B5EE0006B2E9 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916C24D2BB4B5EE0006B2E9 /* PointView.swift */; };
+		8916C2502BB4F9670006B2E9 /* TotalPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916C24F2BB4F9670006B2E9 /* TotalPoints.swift */; };
 		8917F5402B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */; };
 		8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */; };
 		8917F5452B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */; };
@@ -584,6 +585,7 @@
 		8914E5502B7D39E9000E26DB /* BreakDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreakDownCell.xib; sourceTree = "<group>"; };
 		8916C24B2BB4B5E50006B2E9 /* PointView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointView.xib; sourceTree = "<group>"; };
 		8916C24D2BB4B5EE0006B2E9 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
+		8916C24F2BB4F9670006B2E9 /* TotalPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPoints.swift; sourceTree = "<group>"; };
 		8917F53F2B39E52500681AD3 /* Flow1Step3TireTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewModel.swift; sourceTree = "<group>"; };
 		8917F5412B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step3TireTypesViewController.swift; sourceTree = "<group>"; };
 		8917F5442B39EC2100681AD3 /* Flow1Step4ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow1Step4ResultViewModel.swift; sourceTree = "<group>"; };
@@ -2686,6 +2688,7 @@
 				893489262BA0F076009A3FBB /* UploadRequestFile.swift */,
 				896BAE0A2BA87418006D809E /* Task.swift */,
 				896BAE0C2BA8847A006D809E /* Demand.swift */,
+				8916C24F2BB4F9670006B2E9 /* TotalPoints.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -4140,6 +4143,7 @@
 				899D34AB2BAF78C50090DA7B /* FeedbackFilterViewController.swift in Sources */,
 				89DF05572BACDF1600C8B37E /* LiveSupportViewModel.swift in Sources */,
 				896CB3512AD5BF7C0048025A /* CPSearchTextField.swift in Sources */,
+				8916C2502BB4F9670006B2E9 /* TotalPoints.swift in Sources */,
 				8976B0392B73CD3C00E7C58F /* WarningLightsFooterCell.swift in Sources */,
 				8944AB872B74DB6E00967CE2 /* SelectedWarningItemCell.swift in Sources */,
 				89B553AA2B88AB2A00616732 /* AccFlw5Stp3DeclareViewModel.swift in Sources */,

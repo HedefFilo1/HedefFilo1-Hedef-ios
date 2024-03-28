@@ -9,6 +9,18 @@ import UIKit
 
 class StandingCell: UICollectionViewCell, Reusable {
     
+    var totalPoints: Int = 0 {
+        didSet {
+            setPointsLabel(point: totalPoints)
+        }
+    }
+    
+    var barPoints: [BarPoint]? {
+        didSet {
+            
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var pointsView: PointsView!
