@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointsView" customModule="Copilot" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="0JR-9j-Mhc"/>
+                <outlet property="pointsContainer" destination="iyd-gx-Ums" id="nvm-MR-eAM"/>
                 <outlet property="progressConstraint" destination="F27-I8-40Y" id="kEL-Tw-EIx"/>
                 <outlet property="progressContainerView" destination="vrM-g2-a5z" id="5pt-3U-nJI"/>
                 <outlet property="progressView" destination="7pr-Rx-jdU" id="lac-gc-s9Y"/>
@@ -27,10 +28,10 @@
                     <rect key="frame" x="0.0" y="30" width="471" height="12"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-Rx-jdU">
-                            <rect key="frame" x="0.0" y="0.0" width="120" height="12"/>
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="12"/>
                             <color key="backgroundColor" name="theme"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="120" id="F27-I8-40Y"/>
+                                <constraint firstAttribute="width" constant="40" id="F27-I8-40Y"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -43,20 +44,28 @@
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movableCar" translatesAutoresizingMaskIntoConstraints="NO" id="5od-r6-Q6W">
-                    <rect key="frame" x="80" y="2" width="40" height="40"/>
+                    <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="5DF-gC-45L"/>
                         <constraint firstAttribute="height" constant="40" id="nYA-O6-ij0"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-gx-Ums">
+                    <rect key="frame" x="75" y="12" width="396" height="143"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vrM-g2-a5z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2nu-1C-vhn"/>
                 <constraint firstItem="vrM-g2-a5z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Dys-7b-D9B"/>
+                <constraint firstItem="iyd-gx-Ums" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Jk1-UT-Oyw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iyd-gx-Ums" secondAttribute="trailing" id="MVo-4u-MXv"/>
                 <constraint firstItem="5od-r6-Q6W" firstAttribute="bottom" secondItem="7pr-Rx-jdU" secondAttribute="bottom" id="P6k-zx-fCM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vrM-g2-a5z" secondAttribute="trailing" id="SJt-0j-3fk"/>
+                <constraint firstItem="iyd-gx-Ums" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="75" id="kDT-KK-hBF"/>
+                <constraint firstAttribute="bottom" secondItem="iyd-gx-Ums" secondAttribute="bottom" id="mAs-gg-4w2"/>
                 <constraint firstItem="5od-r6-Q6W" firstAttribute="trailing" secondItem="7pr-Rx-jdU" secondAttribute="trailing" id="tkO-YZ-icK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -10,7 +10,9 @@ import UIKit
 class PointsView: UIView {
     var barPoints: [BarPoint]? {
         didSet {
-            
+            guard let barPoints, barPoints.count > 0 else { return }
+            addPointView()
+            startAnimate()
         }
     }
     
@@ -27,9 +29,11 @@ class PointsView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var animationContainerView: UIView!
     @IBOutlet weak var progressContainerView: UIView!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var progressConstraint: NSLayoutConstraint!
+    @IBOutlet weak var pointsContainer: UIView!
     
     private var nibName: String {
         return String(describing: type(of: self))
@@ -41,12 +45,11 @@ class PointsView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = bounds
         applyStyles()
-        progressConstraint.constant = 45
+        progressConstraint.constant = 4
         clipsToBounds = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
         self.addGestureRecognizer(tap)
-        
-        addPointView()
+        contentView.clipsToBounds = false
 //        startAnimate()
     }
     
@@ -57,21 +60,37 @@ class PointsView: UIView {
     }
     
     @objc func didTap() {
-        progressConstraint.constant = progressContainerView.frame.width * 0.7
-        startAnimate()
+//        startAnimate()
     }
     
     func startAnimate() {
-        UIView.animate(withDuration: 2, delay: 2) {
+        progressConstraint.constant = progressContainerView.frame.width * 0.2
+        if progressConstraint.constant < 40 {
+            progressConstraint.constant = 45
+        }
+        UIView.animate(withDuration: 2, delay: 0) {
+            self.progressContainerView.layoutIfNeeded()
             self.layoutIfNeeded()
         }
     }
     
     func addPointView() {
-        let pointView = PointView(frame: .zero)
-        addSubview(pointView)
-        pointView.align(trailing: -50, bottom: 0, width: 100)
-        pointView.align(toView: progressContainerView, top: -6)
-        startAnimate()
+        
+        guard let barPoints else { return }
+        let width = pointsContainer.frame.width
+        let count = barPoints.count
+        let distance = width/CGFloat(count - 1)
+        var lastTrailing: CGFloat = -40
+        let reversed = barPoints.reversed()
+        
+        for item in reversed {
+            let pointView = PointView(frame: .zero)
+            pointsContainer.addSubview(pointView)
+            pointView.align(top: 10, trailing: lastTrailing, bottom: 0, width: 70)
+            lastTrailing += distance
+            pointView.titleLabel.text = item.name
+            pointView.valueLabel.text = "\(item.point) \(Strings.point)"
+        }
+//        startAnimate()
     }
 }

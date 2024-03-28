@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75G-mV-ubh" customClass="PointsView" customModule="Copilot" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="93.666666666666686" width="455" height="82"/>
+                        <rect key="frame" x="0.0" y="93.666666666666686" width="425" height="82"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="82" id="sw5-EU-2tV"/>
@@ -67,7 +67,7 @@
                 <constraint firstAttribute="trailing" secondItem="t76-sZ-qgh" secondAttribute="trailing" constant="8" id="em9-NY-5W1"/>
                 <constraint firstItem="75G-mV-ubh" firstAttribute="top" secondItem="a39-jI-AQ4" secondAttribute="bottom" constant="8" id="kdA-IE-pEX"/>
                 <constraint firstItem="t76-sZ-qgh" firstAttribute="top" secondItem="75G-mV-ubh" secondAttribute="bottom" constant="40" id="qf7-58-FxX"/>
-                <constraint firstAttribute="trailing" secondItem="75G-mV-ubh" secondAttribute="trailing" id="w99-DJ-Z53"/>
+                <constraint firstAttribute="trailing" secondItem="75G-mV-ubh" secondAttribute="trailing" constant="30" id="w99-DJ-Z53"/>
                 <constraint firstItem="a39-jI-AQ4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xG9-pv-oEG"/>
             </constraints>
             <size key="customSize" width="455" height="419"/>

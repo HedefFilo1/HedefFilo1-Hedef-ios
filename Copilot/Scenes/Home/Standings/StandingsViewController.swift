@@ -66,6 +66,7 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         if indexPath.section == 0 {
             let cell: StandingCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.totalPoints = viewModel.totalPoints
+            cell.barPoints = viewModel.barPoints
             return cell
         }
         

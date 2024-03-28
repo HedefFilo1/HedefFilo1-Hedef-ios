@@ -17,7 +17,7 @@ class StandingCell: UICollectionViewCell, Reusable {
     
     var barPoints: [BarPoint]? {
         didSet {
-            
+            pointsView.barPoints = barPoints
         }
     }
     
