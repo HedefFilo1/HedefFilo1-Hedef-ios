@@ -53,7 +53,7 @@ class NotificationSettingsViewModel: NotificationSettingsViewModelType {
     }
     
     var appointmentEnabled: Bool {
-        if let item = prefrences?.filter({ $0.type == .campaign }).first {
+        if let item = prefrences?.filter({ $0.type == .appointmentDate }).first {
             return item.enabled
         }
         

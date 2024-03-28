@@ -3320,28 +3320,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Delete count Selected Notifications</string>
         </dict>
         
-        <key></key>
+        <key>deviceLabelFailure</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Cihaz Etiket Arızası</string>
             <key>en</key>
-            <string></string>
+            <string>Device Label Failure</string>
         </dict>
         
-        <key></key>
+        <key>usageDetails</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Kullanım Detayı</string>
             <key>en</key>
-            <string></string>
+            <string>Usage Details</string>
         </dict>
         
-        <key></key>
+        <key>newDemand</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yeni Talep</string>
             <key>en</key>
-            <string></string>
+            <string>New Demand</string>
         </dict>
         
         <key></key>

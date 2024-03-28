@@ -552,4 +552,16 @@ extension Strings {
     static var deleteSelectedNotifications: String {
         return localized(string: "deleteSelectedNotifications")
     }
+    
+    static var deviceLabelFailure: String {
+        return localized(string: "deviceLabelFailure")
+    }
+    
+    static var usageDetails: String {
+        return localized(string: "usageDetails")
+    }
+    
+    static var newDemand: String {
+        return localized(string: "newDemand")
+    }
 }

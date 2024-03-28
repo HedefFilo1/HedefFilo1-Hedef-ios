@@ -74,3 +74,26 @@ class RequestsPhoneTextField: CPPhoneTextField, RequestsTextFieldType {
 //        }
     }
 }
+
+class RequestsEmailTextField: CPEmailTextField, RequestsTextFieldType {
+
+    override var placeholder: String? {
+        didSet {
+            let text = placeholderLabel.text ?? ""
+            attributedPlaceholder = NSAttributedString(string: text, attributes: [.foregroundColor: UIColor.textFieldGreyText])
+        }
+    }
+    
+    override func setup() {
+        super.setup()
+        customize()
+        keyboardType = .emailAddress
+    }
+    
+    override func didEnd() {
+//        super.didEnd()
+//        if let text, text.count == 0 {
+//            placeholder = Strings.phoneNumber
+//        }
+    }
+}
