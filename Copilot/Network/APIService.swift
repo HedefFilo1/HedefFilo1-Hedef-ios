@@ -9,7 +9,7 @@ import UIKit
 
 class APIService {
     
-    static var loggingEnabled = true
+    static var loggingEnabled = false
     
     static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
         let route = "content-string/client"
@@ -175,7 +175,7 @@ class APIService {
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Home Case"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -191,8 +191,8 @@ class APIService {
         route += "&recordTypes=MAINTENANCE&recordTypes=MECHANICAL_FAILURE&recordTypes=TIRE_CHANGE&appointmentStatuses=APPOINTMENT_REQUESTED&appointmentStatuses=APPOINTMENT_APPROVED&returnLast=true"
         
         let req = APIRequest<[Case]>(route: route, method: .get, hasToken: true)
-        req.identifier = "Get Sevices Tab Case"
-        req.log = loggingEnabled || true
+        req.identifier = "Get Services Tab Case"
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -291,7 +291,7 @@ class APIService {
         let route = "copilot/tire/control"
         let req = APIRequest<[TireControl]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetTireControl"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }

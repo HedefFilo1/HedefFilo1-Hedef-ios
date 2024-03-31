@@ -44,7 +44,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -76,7 +76,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createMaintenanceCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -112,7 +112,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createBreakDownCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -151,7 +151,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createBreakDownCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }

@@ -11,6 +11,7 @@ protocol ServiceTabViewModelCoordinatorDelegate: AnyObject {
     func goToLastikOperations(appointment: Case?)
     func goToMiantenance(appointment: Case?)
     func goToBreakDown(appointment: Case?)
+    func goToPastServices()
 }
 
 protocol ServiceTabViewModelDelegate: BaseViewModelDelegate {
@@ -29,6 +30,7 @@ protocol ServiceTabViewModelType: AnyObject {
     func getAppointments()
     func goToMaintenance()
     func goToBreakDown()
+    func goToPastServices()
 }
 
 class ServiceTabViewModel: ServiceTabViewModelType {
@@ -50,6 +52,10 @@ class ServiceTabViewModel: ServiceTabViewModelType {
     
     func goToBreakDown() {
         coordinatorDelegate?.goToBreakDown(appointment: breakdownAppointment)
+    }
+    
+    func goToPastServices() {
+        coordinatorDelegate?.goToPastServices()
     }
     
     func getAppointments() {

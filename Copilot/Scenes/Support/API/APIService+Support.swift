@@ -14,7 +14,7 @@ extension APIService {
         let route = "faq/category"
         let req = APIRequest<[FAQQuestion]>(route: route, method: .get, hasToken: true)
         req.identifier = "getFAQQuestions"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -23,7 +23,7 @@ extension APIService {
         let route = "faq/category/\(categoryId)/question"
         let req = APIRequest<[FAQQuestionDetail]>(route: route, method: .get, hasToken: true)
         req.identifier = "getFAQQuestion"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -32,7 +32,7 @@ extension APIService {
         let route = "guide"
         let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
         req.identifier = "getFAQQuestions"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -41,7 +41,7 @@ extension APIService {
         let route = "case?isTask=true&status=SOLVED"
         let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
         req.identifier = "getProccessRequests"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -50,7 +50,7 @@ extension APIService {
         let route = "case?status=SOLVED&appointmentStatus=APPOINTMENT_APPROVED"
         let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetServiceOperations"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -59,7 +59,7 @@ extension APIService {
         let route = "live-support"
         let req = APIRequest<LiveSupport>(route: route, method: .get, hasToken: true)
         req.identifier = "GetLiveSupport"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }

@@ -26,6 +26,7 @@ protocol LoginViewModelType: AnyObject {
     func goToSignup()
     func checkRememberMe()
     func goToNextScene(email: String)
+    func loginDidFinish()
 }
 
 class LoginViewModel: LoginViewModelType {

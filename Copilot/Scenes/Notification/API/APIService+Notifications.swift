@@ -13,7 +13,7 @@ extension APIService {
         let route = "user/notification"
         let req = APIRequest<[UserNotification]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetNotifications"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -22,7 +22,7 @@ extension APIService {
         let route = "user/notification/\(id)/read"
         let req = APIRequest<Success>(route: route, method: .patch, hasToken: true)
         req.identifier = "readNotification"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -31,7 +31,7 @@ extension APIService {
         let route = "user/notification"
         let req = APIRequest<Success>(route: route, method: .delete, hasToken: true)
         req.identifier = "deleteNotifications"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }

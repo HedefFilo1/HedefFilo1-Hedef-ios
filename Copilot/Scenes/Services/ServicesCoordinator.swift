@@ -54,6 +54,12 @@ extension ServicesCoordinator: ServiceTabViewModelCoordinatorDelegate {
         addChildCoordinator(coordinator)
         coordinator.start(appointment: appointment)
     }
+    
+    func goToPastServices() {
+        let coordinator = PastServicesCoordinator(navigationController: navigationController, delegate: self)
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
 }
 
 extension ServicesCoordinator {
@@ -69,7 +75,8 @@ extension ServicesCoordinator {
 
 extension ServicesCoordinator: TireCoordinatorDelegate,
                                MaintenanceCoordinatorDelegate,
-                               BreakDownCoordinatorDelegate {
+                               BreakDownCoordinatorDelegate,
+                               PastServicesCoordinatorDelegate {
     
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)

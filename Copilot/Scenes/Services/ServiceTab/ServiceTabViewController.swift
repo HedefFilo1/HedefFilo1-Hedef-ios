@@ -119,7 +119,7 @@ class ServiceTabViewController: UIViewController {
     }
     
     @IBAction func didTapPastServicesButton() {
-        
+        viewModel.goToPastServices()
     }
 }
 

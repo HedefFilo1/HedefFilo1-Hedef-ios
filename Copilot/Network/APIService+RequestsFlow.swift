@@ -37,7 +37,7 @@ extension APIService {
         }
         
         req.identifier = "Create Task"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -46,7 +46,7 @@ extension APIService {
         let route = "task"
         let req = APIRequest<[Task]>(route: route, method: .get, hasToken: true)
         req.identifier = "getTasks"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -59,7 +59,7 @@ extension APIService {
                                       hasToken: true)
         
         req.identifier = "Cancel Task"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -128,7 +128,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreateHGSCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -180,7 +180,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreateVehicleCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -224,7 +224,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreatePlateCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -266,7 +266,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreateLicenseCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -303,7 +303,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "CreateInspectionCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -312,7 +312,7 @@ extension APIService {
         let route = "case?isTask=true"
         let req = APIRequest<[Demand]>(route: route, method: .get, hasToken: true)
         req.identifier = "getSessionId"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }

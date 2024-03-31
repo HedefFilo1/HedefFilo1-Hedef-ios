@@ -26,7 +26,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createMaintenanceCase"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -35,7 +35,7 @@ extension APIService {
         let route = "copilot/maintenance-eligible?km=\(kmeter)"
         let req = APIRequest<GetEligible>(route: route, method: .get, hasToken: true)
         req.identifier = "getMaintenanceEligible"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -44,7 +44,7 @@ extension APIService {
         let route = "user/action/session"
         let req = APIRequest<GetSessionId>(route: route, method: .get, hasToken: true)
         req.identifier = "getSessionId"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -66,7 +66,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "addUserAction"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = { _, _ in }
         req.start()
     }
@@ -75,7 +75,7 @@ extension APIService {
         let route = "user/notification-preference"
         let req = APIRequest<[NotificationPreference]>(route: route, method: .get, hasToken: true)
         req.identifier = "getNotificationPreferences"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -94,7 +94,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "setNotificationPreferences"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -103,7 +103,7 @@ extension APIService {
         let route = "user/point/sum"
         let req = APIRequest<TotalPoints>(route: route, method: .get, hasToken: true)
         req.identifier = "getTotalPoints"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -112,7 +112,7 @@ extension APIService {
         let route = "point/bar"
         let req = APIRequest<[BarPoint]>(route: route, method: .get, hasToken: true)
         req.identifier = "getCarPoints"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
@@ -121,7 +121,7 @@ extension APIService {
         let route = "user/point/all-sum"
         let req = APIRequest<[BarPoint]>(route: route, method: .get, hasToken: true)
         req.identifier = "getCarPoint"
-        req.log = loggingEnabled || true
+        req.log = loggingEnabled 
         req.completion = completion
         req.start()
     }
