@@ -68,14 +68,15 @@ extension LiveSupportViewController: LiveSupportViewModelDelegate {
         webView.frame = container.bounds
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        let request = NSMutableURLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
 
-        let post: String = "sourceId=44574fdsf01e-e4da-4e8c-a897-17722d00e1fe&sourceType=abc"
-        let postData: Data = post.data(using: String.Encoding.ascii, allowLossyConversion: true)!
+//        let post: String = "sourceId=44574fdsf01e-e4da-4e8c-a897-17722d00e1fe&sourceType=abc"
+//        let postData: Data = post.data(using: String.Encoding.ascii, allowLossyConversion: true)!
 
-        request.httpBody = postData
-        webView.load(request as URLRequest)
+//        request.httpBody = postData
+        webView.load(request)
+//        webView.load
     }
 }

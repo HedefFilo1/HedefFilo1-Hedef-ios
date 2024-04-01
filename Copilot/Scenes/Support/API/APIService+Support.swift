@@ -59,7 +59,7 @@ extension APIService {
         let route = "live-support"
         let req = APIRequest<LiveSupport>(route: route, method: .get, hasToken: true)
         req.identifier = "GetLiveSupport"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled || true
         req.completion = completion
         req.start()
     }
