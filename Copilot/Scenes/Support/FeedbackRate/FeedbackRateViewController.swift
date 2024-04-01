@@ -73,6 +73,7 @@ class FeedbackRateViewController: SheetViewController {
     }
     
     @IBAction func didTapButton() {
+        self.dismiss(animated: true)
         viewModel.goToFeedbackComment()
     }
 }

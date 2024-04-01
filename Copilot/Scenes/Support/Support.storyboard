@@ -1092,7 +1092,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-3N-hbJ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DAv-dQ-da8">
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DAv-dQ-da8">
                                         <rect key="frame" x="24" y="24" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="E33-GP-00w"/>
@@ -1183,7 +1183,7 @@
                                     <constraint firstItem="Uot-8B-1cS" firstAttribute="leading" secondItem="tBg-3N-hbJ" secondAttribute="leading" constant="16" id="eRM-7u-TQJ"/>
                                     <constraint firstItem="oXH-Zn-ORd" firstAttribute="centerX" secondItem="FSx-j8-hIJ" secondAttribute="centerX" id="iJI-d5-fro"/>
                                     <constraint firstAttribute="trailing" secondItem="Uot-8B-1cS" secondAttribute="trailing" constant="16" id="jTJ-85-IDS"/>
-                                    <constraint firstItem="dtZ-6x-cIt" firstAttribute="top" secondItem="6pb-gA-Aaw" secondAttribute="bottom" constant="82" id="qd0-la-tVb"/>
+                                    <constraint firstItem="dtZ-6x-cIt" firstAttribute="top" secondItem="Uot-8B-1cS" secondAttribute="bottom" constant="17.333333333333343" id="qd0-la-tVb"/>
                                     <constraint firstItem="6pb-gA-Aaw" firstAttribute="top" secondItem="tBg-3N-hbJ" secondAttribute="top" constant="64" id="xVd-gd-jDW"/>
                                 </constraints>
                             </view>

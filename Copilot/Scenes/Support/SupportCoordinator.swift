@@ -168,17 +168,19 @@ extension SupportCoordinator: UIViewControllerTransitioningDelegate,
         navigationController.present(feedbackRateNavigation, animated: true)
     }
     
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        let controller = FeedbackRatePresentationController(presentedViewController: presented, presenting: presenting)
-        return controller
-    }
-    
     func goToFeedbackComment() {
         let controller: FeedbackCommentViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackCommentViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
-        feedbackRateNavigation.pushViewController(controller, animated: true)
+        controller.modalPresentationStyle = .custom
+        controller.transitioningDelegate = self
+        navigationController.present(controller, animated: true)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let controller = FeedbackRatePresentationController(presentedViewController: presented, presenting: presenting)
+        return controller
     }
     
     func getBackFromFeedbackComment() {

@@ -74,7 +74,7 @@ class FeedbackCommentViewController: SheetViewController {
     }
     
     @IBAction func didTapButton() {
-        
+        dismiss(animated: true)
     }
 }
 
