@@ -28,11 +28,17 @@ class PastServicesCoordinator: Coordinator {
         let controller: PastMaintenancesViewController = storyboard.instantiateViewController()
         controller.viewModel = PastMaintenancesViewModel()
         page.setViewControllers([controller], direction: .forward, animated: true)
-//        controller.viewModel.coordinatorDelegate = self
+        controller.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(page, animated: true)
     }
     
     override func finish() {
         delegate?.didFinish(from: self)
+    }
+}
+
+extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate {
+    func getBack() {
+        navigationController.popViewController(animated: true)
     }
 }

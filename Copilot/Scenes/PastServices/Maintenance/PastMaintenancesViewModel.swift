@@ -35,7 +35,7 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     }
     
     func getServices() {
-        Loading.shared.show()
+        Loading.shared.show(presented: true)
         APIService.getPastMaintenaces { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }

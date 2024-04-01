@@ -539,6 +539,8 @@
 		89F67DA72B7D39920040DF15 /* BreakdownRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F67DA62B7D39920040DF15 /* BreakdownRandevuCell.swift */; };
 		89F67DA92B7D399E0040DF15 /* BreakdownRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F67DA82B7D399E0040DF15 /* BreakdownRandevuCell.xib */; };
 		89F68CE92BB9A4A200B79B42 /* PastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CE82BB9A4A200B79B42 /* PastService.swift */; };
+		89F68CEC2BBA83B800B79B42 /* PastServicesFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CEB2BBA83B800B79B42 /* PastServicesFilterViewModel.swift */; };
+		89F68CEE2BBA83C000B79B42 /* PastServicesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CED2BBA83C000B79B42 /* PastServicesFilterViewController.swift */; };
 		89F6A0532B584A860052EE15 /* LastikRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */; };
 		89F6A0542B584A860052EE15 /* LastikRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F6A0522B584A860052EE15 /* LastikRandevuCell.xib */; };
 		89F6A0572B5868950052EE15 /* LastikOperationButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6A0552B5868950052EE15 /* LastikOperationButtonsCell.swift */; };
@@ -1098,6 +1100,8 @@
 		89F67DA62B7D39920040DF15 /* BreakdownRandevuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownRandevuCell.swift; sourceTree = "<group>"; };
 		89F67DA82B7D399E0040DF15 /* BreakdownRandevuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreakdownRandevuCell.xib; sourceTree = "<group>"; };
 		89F68CE82BB9A4A200B79B42 /* PastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastService.swift; sourceTree = "<group>"; };
+		89F68CEB2BBA83B800B79B42 /* PastServicesFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesFilterViewModel.swift; sourceTree = "<group>"; };
+		89F68CED2BBA83C000B79B42 /* PastServicesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesFilterViewController.swift; sourceTree = "<group>"; };
 		89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuCell.swift; sourceTree = "<group>"; };
 		89F6A0522B584A860052EE15 /* LastikRandevuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastikRandevuCell.xib; sourceTree = "<group>"; };
 		89F6A0552B5868950052EE15 /* LastikOperationButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationButtonsCell.swift; sourceTree = "<group>"; };
@@ -1339,6 +1343,7 @@
 				8916C2542BB5DF560006B2E9 /* PastServicesCoordinator.swift */,
 				8916C2562BB5DF880006B2E9 /* PastServicesPageController.swift */,
 				8916C2582BB5E2000006B2E9 /* Maintenance */,
+				89F68CEA2BBA834E00B79B42 /* Filter */,
 			);
 			path = PastServices;
 			sourceTree = "<group>";
@@ -3791,6 +3796,15 @@
 			path = Breakdown;
 			sourceTree = "<group>";
 		};
+		89F68CEA2BBA834E00B79B42 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				89F68CEB2BBA83B800B79B42 /* PastServicesFilterViewModel.swift */,
+				89F68CED2BBA83C000B79B42 /* PastServicesFilterViewController.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		89F6A04D2B5849E80052EE15 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4331,6 +4345,7 @@
 				89B6F62D2B66F76400F4C3AB /* Flow3Step4TowTruckViewModel.swift in Sources */,
 				89950AA72B7F7422004537D2 /* AccFlw1Stp1ViewController.swift in Sources */,
 				89B07A452AD86CF200D3BE80 /* MenuViewModel.swift in Sources */,
+				89F68CEC2BBA83B800B79B42 /* PastServicesFilterViewModel.swift in Sources */,
 				89FC51952B6A96F000AD37D4 /* BreakDownViewModel.swift in Sources */,
 				89108A9E2B39E01100C8F400 /* Flow1Step2NewTireViewModel.swift in Sources */,
 				89A908C22B31A92B00BC7727 /* ContentCell.swift in Sources */,
@@ -4400,6 +4415,7 @@
 				89950AB02B7F8237004537D2 /* AccFlw1Stp2OtherVehicleViewController.swift in Sources */,
 				89A40AD22BB765C000257D9C /* APIService+PastServices.swift in Sources */,
 				89A908D52B31AF0300BC7727 /* ServicesItemCell.swift in Sources */,
+				89F68CEE2BBA83C000B79B42 /* PastServicesFilterViewController.swift in Sources */,
 				89CE07FF2B3AE2DC00C76433 /* ServicesViewController.swift in Sources */,
 				89108AA02B39E01700C8F400 /* Flow1Step2NewTireViewController.swift in Sources */,
 				897835CF2B44A0CB00C63AA7 /* CalendarViewController.swift in Sources */,
@@ -4735,7 +4751,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 121;
+				CURRENT_PROJECT_VERSION = 122;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4769,7 +4785,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 121;
+				CURRENT_PROJECT_VERSION = 122;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4863,7 +4879,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 121;
+				CURRENT_PROJECT_VERSION = 122;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4951,7 +4967,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 121;
+				CURRENT_PROJECT_VERSION = 122;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

@@ -77,7 +77,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-PU-RHX" customClass="CPSearchTextField" customModule="Copilot" customModuleProvider="target">
-                        <rect key="frame" x="16" y="8" width="253" height="50"/>
+                        <rect key="frame" x="0.0" y="8" width="269" height="50"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="B1w-Sk-bLY"/>
@@ -92,7 +92,7 @@
                 <constraint firstItem="ztm-vN-8cc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="J1L-S6-KhQ"/>
                 <constraint firstItem="ztm-vN-8cc" firstAttribute="leading" secondItem="5On-dJ-yrI" secondAttribute="trailing" constant="8" id="MBw-6U-riQ"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="top" secondItem="h8P-PU-RHX" secondAttribute="top" id="Mug-5D-K4f"/>
-                <constraint firstItem="h8P-PU-RHX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="aY0-r8-zJ7"/>
+                <constraint firstItem="h8P-PU-RHX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aY0-r8-zJ7"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="leading" secondItem="h8P-PU-RHX" secondAttribute="trailing" constant="8" id="sdf-lG-44E"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="bottom" secondItem="h8P-PU-RHX" secondAttribute="bottom" id="zaI-ym-jDH"/>
             </constraints>
