@@ -10,7 +10,7 @@ import UIKit
 import FSCalendar
 
 protocol CalendarViewControllerDelegate: AnyObject {
-    func didSelect(date: Date)
+    func didSelect(_: CalendarViewController, date: Date)
 }
 
 class CalendarViewController: SheetViewController {
@@ -93,7 +93,7 @@ class CalendarViewController: SheetViewController {
     
     @IBAction func didTapApply(_ sender: UIButton) {
         if let date = calendar.selectedDate {
-            delegate?.didSelect(date: date)
+            delegate?.didSelect(self, date: date)
         }
         dismiss(animated: true)
     }
@@ -106,6 +106,10 @@ extension CalendarViewController: FSCalendarDelegate,
     }
     
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+        if !viewModel.shouldSelectSpecificDays {
+            return true
+        }
+        
         let next15 = Calendar.current.date(byAdding: .day, value: 15, to: Date()) ?? Date()
         if isWeekend(date: date) || date < Date() || date > next15 {
             return false

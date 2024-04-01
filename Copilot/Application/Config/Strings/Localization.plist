@@ -3344,12 +3344,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>New Demand</string>
         </dict>
         
-        <key></key>
+        <key>selectDate</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tarih Seçiniz</string>
             <key>en</key>
-            <string></string>
+            <string>Select Date</string>
         </dict>
         
         <key></key>

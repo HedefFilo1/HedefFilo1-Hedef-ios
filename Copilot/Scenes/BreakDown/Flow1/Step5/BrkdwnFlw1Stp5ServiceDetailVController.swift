@@ -214,7 +214,7 @@ extension BrkdwnFlw1Stp5ServiceDetailVController: CPTimeChooseViewDelegate,
         return view
     }
     
-    func didSelect(date: Date) {
+    func didSelect(_: CalendarViewController, date: Date) {
         dateChooseView.date = date
         setButtonActivation()
     }

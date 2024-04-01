@@ -38,13 +38,6 @@ class TireOperationsViewController: UIViewController {
         //                    coordintor.presentCalendar(delegate: Del())
         //                }
         
-        class Del: CalendarViewControllerDelegate {
-            func didSelect(date: Date) {
-                
-            }
-            
-        }
-        
 #endif
     }
     

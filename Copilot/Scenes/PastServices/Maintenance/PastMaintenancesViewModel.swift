@@ -9,6 +9,7 @@ import Foundation
 
 protocol PastMaintenancesVMCrdinatorDelegate: AnyObject {
     func getBack()
+    func presentFilters(services: [PastService], delegate: PastServicesFilterViewControllerDelegate)
 }
 
 protocol PastMaintenancesViewModelDelegate: BaseViewModelDelegate {
@@ -22,6 +23,7 @@ protocol PastMaintenancesViewModelType: AnyObject {
     
     func getBack()
     func getServices()
+    func presentFilters()
 }
 
 class PastMaintenancesViewModel: PastMaintenancesViewModelType {
@@ -49,5 +51,17 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
                 self.delegate?.reloadData()
             }
         }
+    }
+    
+    func presentFilters() {
+        coordinatorDelegate?.presentFilters(services: items ?? [], delegate: self)
+    }
+}
+
+extension PastMaintenancesViewModel: PastServicesFilterViewControllerDelegate {
+    func didTapApply(city: String?, district: String?, date: Date?) {
+//        filterCity = city
+//        filterDistrict = district
+        delegate?.reloadData()
     }
 }

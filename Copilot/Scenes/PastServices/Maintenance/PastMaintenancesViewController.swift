@@ -157,7 +157,7 @@ extension PastMaintenancesViewController: PastServicesSearchCellDelegate, PastSe
     }
     
     func didTapFilter() {
-        
+        viewModel.presentFilters()
     }
     
     func didChangeSearch(text: String) {

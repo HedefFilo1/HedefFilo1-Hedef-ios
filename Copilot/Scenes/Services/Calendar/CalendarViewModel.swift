@@ -19,6 +19,7 @@ protocol CalendarViewModelType: AnyObject {
     var coordinatorDelegate: CalendarVMCoordinatorDelegate? { get set }
     var delegate: CalendarViewModelDelegate? { get set }
     var service: Supplier? { get set }
+    var shouldSelectSpecificDays: Bool { get set }
     func getBack()
 }
 
@@ -27,6 +28,7 @@ class CalendarViewModel: CalendarViewModelType {
     weak var delegate: CalendarViewModelDelegate?
     
     var service: Supplier?
+    var shouldSelectSpecificDays = true
     
     func getBack() {
         coordinatorDelegate?.getBack()

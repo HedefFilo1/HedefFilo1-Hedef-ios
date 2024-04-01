@@ -19,12 +19,18 @@ class CPDateChooseView: UIView {
     var stringDate: String {
         return label.text ?? ""
     }
+    var dateFormat = "d MMMM EEEE"
+    var title = Strings.selectDay {
+        didSet {
+            label.text = title
+        }
+    }
     
     var date: Date? {
         didSet {
             guard let date = date else { return }
             let formmater = DateFormatter()
-            formmater.dateFormat = "d MMMM EEEE"
+            formmater.dateFormat = dateFormat
             formmater.locale = Locale(identifier: "tr_TR")
             label.text = formmater.string(from: date)
         }

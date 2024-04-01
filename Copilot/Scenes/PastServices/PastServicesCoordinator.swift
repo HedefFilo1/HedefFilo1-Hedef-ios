@@ -18,6 +18,8 @@ class PastServicesCoordinator: Coordinator {
     let storyboard = UIStoryboard(storyboard: .pastServices)
     weak var delegate: PastServicesCoordinatorDelegate?
     
+    weak var filterViewController: UIViewController?
+    
     init(navigationController: UINavigationController, delegate: PastServicesCoordinatorDelegate? = nil) {
         self.navigationController = navigationController
         self.delegate = delegate
@@ -37,8 +39,29 @@ class PastServicesCoordinator: Coordinator {
     }
 }
 
-extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate {
+extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
+                                   PastServicesFilterVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func presentFilters(services: [PastService], delegate: PastServicesFilterViewControllerDelegate) {
+        let controller: PastServicesFilterViewController = storyboard.instantiateViewController()
+        let viewModel = PastServicesFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.services = services
+        controller.delegate = delegate
+        viewModel.coordinatorDelegate = self
+        filterViewController = controller
+        navigationController.present(controller, animated: true)
+    }
+    
+    func presentCalendar(delegate: CalendarViewControllerDelegate) {
+        let controller: CalendarViewController = UIStoryboard(storyboard: .services).instantiateViewController()
+        let viewModel = CalendarViewModel()
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        viewModel.shouldSelectSpecificDays = false
+        filterViewController?.present(controller, animated: true)
     }
 }

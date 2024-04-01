@@ -564,4 +564,8 @@ extension Strings {
     static var newDemand: String {
         return localized(string: "newDemand")
     }
+    
+    static var selectDate: String {
+        return localized(string: "selectDate")
+    }
 }
