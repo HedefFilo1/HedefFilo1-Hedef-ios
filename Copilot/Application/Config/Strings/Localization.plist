@@ -1163,7 +1163,6 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Tire Operations</string>
         </dict>
        
-        
         <key>requestNewTire</key>
         <dict>
             <key>tr</key>
@@ -3392,12 +3391,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>You can view all maintenance procedures for your vehicle below.</string>
         </dict>
         
-        <key></key>
+        <key>emailAddressOfRecipient</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Teslim Alacak kişinin email adresi</string>
             <key>en</key>
-            <string></string>
+            <string>Email address of the recipient</string>
+        </dict>
+        
+        <key>enterEmailAddressOfRecipient</key>
+        <dict>
+            <key>tr</key>
+            <string>Teslim Alacak kişinin email adresi giriniz.</string>
+            <key>en</key>
+            <string>Enter Email address of the recipient.</string>
         </dict>
         
         <key></key>

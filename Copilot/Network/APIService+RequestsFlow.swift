@@ -98,6 +98,7 @@ extension APIService {
                               nameSurname: String,
                               receiverPersonName: String,
                               receiverPersonPhone: String,
+                              receiverPersonEmail: String,
                               ogsHgsType: String,
                               deliveryAddress: String,
                               fileInfo: UploadRequestFile?,
@@ -112,6 +113,7 @@ extension APIService {
             "nameSurname": nameSurname,
             "receiverPersonName": receiverPersonName,
             "receiverPersonPhone": receiverPersonPhone,
+            "receiverPersonEmail": receiverPersonEmail,
             "deliveryAddress": deliveryAddress
         ] as [String: Any]
         

@@ -81,6 +81,7 @@ class RequestsEmailTextField: CPEmailTextField, RequestsTextFieldType {
         didSet {
             let text = placeholderLabel.text ?? ""
             attributedPlaceholder = NSAttributedString(string: text, attributes: [.foregroundColor: UIColor.textFieldGreyText])
+            errorMessage = "\(Strings.pleaseEnterValid) \(text)"
         }
     }
     

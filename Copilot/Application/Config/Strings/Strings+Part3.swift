@@ -588,5 +588,13 @@ extension Strings {
     static var pastMaintenanceDescription: String {
         return localized(string: "pastMaintenanceDescription")
     }
+    
+    static var emailAddressOfRecipient: String {
+        return localized(string: "emailAddressOfRecipient")
+    }
+    
+    static var enterEmailAddressOfRecipient: String {
+        return localized(string: "enterEmailAddressOfRecipient")
+    }
   
 }

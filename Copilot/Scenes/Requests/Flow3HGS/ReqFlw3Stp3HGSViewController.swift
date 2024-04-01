@@ -42,6 +42,9 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     
     @IBOutlet weak var receiverPhoneLabel: UILabel!
     @IBOutlet weak var receiverPhoneTextField: RequestsPhoneTextField!
+
+    @IBOutlet weak var receiverEmailLabel: UILabel!
+    @IBOutlet weak var receiverEmailTextField: RequestsEmailTextField!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTextField: CPDescriptionTextField!
@@ -92,6 +95,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         proccessLabel.apply(.blackS14R400)
         receiverNameLabel.apply(.blackS14R400)
         receiverPhoneLabel.apply(.blackS14R400)
+        receiverEmailLabel.apply(.blackS14R400)
         addFileLabel.apply(.blackS14R400)
         documentNameLabel.apply(.blackS14R400)
         selectFileLabel.apply(.blackS14R400)
@@ -137,6 +141,9 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         
         receiverPhoneLabel.text = Strings.phoneOfHGSPerson
         receiverPhoneTextField.placeholder = Strings.enterPhoneOfHGSPerson
+        
+        receiverEmailLabel.text = Strings.emailAddressOfRecipient
+        receiverEmailTextField.placeholder = Strings.enterEmailAddressOfRecipient
         
         addressLabel.text = Strings.deliveryAddress
         addressTextField.placeholder = Strings.enterDeliveryAddress
@@ -191,8 +198,8 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         let proccess = proccessList.hasSelectedItem
         let receiverName = receiverNameTextField.pureTextCount > 0
         let receiverPhone = receiverPhoneTextField.isValidText
-        
-        let result = note && address && proccess && receiverName && receiverPhone
+        let receiverEmail = receiverEmailTextField.isValidText
+        let result = note && address && proccess && receiverName && receiverPhone && receiverEmail
         createButton.isEnabled = result
     }
     
@@ -209,6 +216,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
                              nameSurname: nameTextField.text ?? "",
                              receiverPersonName: receiverNameTextField.text ?? "",
                              receiverPersonPhone: receiverPhoneTextField.text ?? "",
+                             receiverPersonEmail: receiverEmailTextField.text ?? "",
                              ogsHgsType: ogsHgsType,
                              deliveryAddress: addressTextField.text)
     }

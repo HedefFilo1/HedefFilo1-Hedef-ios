@@ -1160,10 +1160,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1427"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-KG-xgk">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1440"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1570"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-jr-1FM">
-                                                        <rect key="frame" x="24" y="0.0" width="345" height="1440"/>
+                                                        <rect key="frame" x="24" y="0.0" width="345" height="1570"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Ekleyin." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-yb-sru">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="20.333333333333332"/>
@@ -1182,10 +1182,10 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="w6w-tQ-zZk">
-                                                                <rect key="frame" x="0.0" y="175.33333333333326" width="345" height="730"/>
+                                                                <rect key="frame" x="0.0" y="175.33333333333326" width="345" height="840"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFh-dZ-fJC">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="101"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="101.66666666666667"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Soyad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-5m-TvQ">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="20.333333333333332"/>
@@ -1213,7 +1213,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSD-ou-qlk">
-                                                                        <rect key="frame" x="0.0" y="105" width="345" height="100.66666666666669"/>
+                                                                        <rect key="frame" x="0.0" y="105.66666666666669" width="345" height="101.33333333333331"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Posta Adresiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdu-W9-hEI">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="134.33333333333334" height="20.333333333333332"/>
@@ -1222,7 +1222,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta giriniz." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paa-qr-Yvi" customClass="RequestsTextField" customModule="Copilot" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
+                                                                                <rect key="frame" x="0.0" y="32.333333333333314" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="56" id="bX3-Zc-sv1"/>
@@ -1241,7 +1241,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gK-nO-Myz">
-                                                                        <rect key="frame" x="0.0" y="209.66666666666669" width="345" height="101"/>
+                                                                        <rect key="frame" x="0.0" y="211.00000000000003" width="345" height="101.66666666666666"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cep Telefonunuz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-bl-dmq">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="128.33333333333334" height="20.333333333333332"/>
@@ -1250,7 +1250,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-eu-6xu" customClass="RequestsPhoneTextField" customModule="Copilot" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
+                                                                                <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="56" id="UtB-1g-dI3"/>
@@ -1269,7 +1269,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF1-yV-fmC">
-                                                                        <rect key="frame" x="0.0" y="314.66666666666669" width="345" height="100.66666666666669"/>
+                                                                        <rect key="frame" x="0.0" y="316.66666666666669" width="345" height="101.33333333333331"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plakanız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIh-DP-Q9s">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="20.333333333333332"/>
@@ -1297,7 +1297,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gq2-sx-V1U">
-                                                                        <rect key="frame" x="0.0" y="419.33333333333331" width="345" height="100.99999999999994"/>
+                                                                        <rect key="frame" x="0.0" y="422.00000000000006" width="345" height="101.66666666666669"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İşlem Tipi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-6c-r1H">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="20.333333333333332"/>
@@ -1306,7 +1306,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hna-dG-tH4" customClass="RequestsDropDownList" customModule="Copilot" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="32.333333333333371" width="345" height="56"/>
+                                                                                <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
                                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="56" id="AG3-II-NrM"/>
@@ -1323,7 +1323,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-Nq-vd9">
-                                                                        <rect key="frame" x="0.0" y="524.33333333333326" width="345" height="100.66666666666663"/>
+                                                                        <rect key="frame" x="0.0" y="527.66666666666674" width="345" height="101.33333333333337"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teslim Alacak Kişinin Adı Soyadı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMP-Hf-bfs">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="241.33333333333334" height="20.333333333333332"/>
@@ -1351,7 +1351,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-vU-HBK">
-                                                                        <rect key="frame" x="0.0" y="629" width="345" height="101"/>
+                                                                        <rect key="frame" x="0.0" y="633" width="345" height="101.66666666666663"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teslim Alacak Kişinin Telefonu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pix-LG-lzI">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="227" height="20.333333333333332"/>
@@ -1378,13 +1378,41 @@
                                                                             <constraint firstItem="96e-7E-OSZ" firstAttribute="top" secondItem="pix-LG-lzI" secondAttribute="bottom" constant="12" id="xeK-HI-h45"/>
                                                                         </constraints>
                                                                     </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkQ-pX-RvB">
+                                                                        <rect key="frame" x="0.0" y="738.66666666666674" width="345" height="101.33333333333337"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teslim Alacak kişinin email adresi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvY-lt-tIf">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250.66666666666666" height="20.333333333333332"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-aZ-nyA" customClass="RequestsEmailTextField" customModule="Copilot" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="32.333333333333258" width="345" height="56"/>
+                                                                                <color key="backgroundColor" name="exactGrey"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="56" id="Tg2-8G-ff2"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="hdb-aZ-nyA" secondAttribute="trailing" id="AFG-UK-bf2"/>
+                                                                            <constraint firstItem="hdb-aZ-nyA" firstAttribute="top" secondItem="KvY-lt-tIf" secondAttribute="bottom" constant="12" id="Dd2-JZ-i0Q"/>
+                                                                            <constraint firstItem="KvY-lt-tIf" firstAttribute="top" secondItem="MkQ-pX-RvB" secondAttribute="top" id="eM4-h0-8Lf"/>
+                                                                            <constraint firstItem="KvY-lt-tIf" firstAttribute="leading" secondItem="MkQ-pX-RvB" secondAttribute="leading" id="mqh-Z2-LHi"/>
+                                                                            <constraint firstItem="hdb-aZ-nyA" firstAttribute="leading" secondItem="MkQ-pX-RvB" secondAttribute="leading" id="oum-gk-0M6"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="730" id="j6e-LM-DDF"/>
+                                                                    <constraint firstAttribute="height" constant="840" id="j6e-LM-DDF"/>
                                                                 </constraints>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxY-7Y-gyy">
-                                                                <rect key="frame" x="0.0" y="921.33333333333326" width="345" height="153"/>
+                                                                <rect key="frame" x="0.0" y="1031.3333333333333" width="345" height="153"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teslimat Adresi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-NW-dL7">
                                                                         <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="20.333333333333332"/>
@@ -1414,13 +1442,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosya Ekleyin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2C-t2-BCW">
-                                                                <rect key="frame" x="0.0" y="1098.3333333333333" width="105.33333333333333" height="20.333333333333258"/>
+                                                                <rect key="frame" x="0.0" y="1208.3333333333333" width="105.33333333333333" height="20.333333333333258"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itS-zm-HFM">
-                                                                <rect key="frame" x="0.0" y="1130.6666666666667" width="345" height="120"/>
+                                                                <rect key="frame" x="0.0" y="1240.6666666666667" width="345" height="120"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oty-dT-9Iz">
                                                                         <rect key="frame" x="160.66666666666666" y="18" width="24" height="24"/>
@@ -1478,7 +1506,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3y-8D-h1G">
-                                                                <rect key="frame" x="0.0" y="1258.6666666666667" width="345" height="40"/>
+                                                                <rect key="frame" x="0.0" y="1368.6666666666667" width="345" height="40"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="geR-hJ-MHt">
                                                                         <rect key="frame" x="313" y="8" width="24" height="24"/>
@@ -1519,7 +1547,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVD-sm-50y" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="1322.6666666666667" width="345" height="56"/>
+                                                                <rect key="frame" x="0.0" y="1432.6666666666667" width="345" height="56"/>
                                                                 <color key="backgroundColor" name="exactGrey"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="56" id="Prb-kz-xOl"/>
@@ -1565,7 +1593,7 @@
                                                 <constraints>
                                                     <constraint firstItem="gnS-jr-1FM" firstAttribute="leading" secondItem="hq1-KG-xgk" secondAttribute="leading" constant="24" id="3Rt-TB-PWA"/>
                                                     <constraint firstItem="gnS-jr-1FM" firstAttribute="top" secondItem="hq1-KG-xgk" secondAttribute="top" id="4aY-XR-Vrk"/>
-                                                    <constraint firstAttribute="height" constant="1440" id="TcR-4A-9kH"/>
+                                                    <constraint firstAttribute="height" constant="1570" id="TcR-4A-9kH"/>
                                                     <constraint firstAttribute="bottom" secondItem="gnS-jr-1FM" secondAttribute="bottom" id="VZe-k8-8Ba"/>
                                                     <constraint firstAttribute="trailing" secondItem="gnS-jr-1FM" secondAttribute="trailing" constant="24" id="XZh-FG-dCF"/>
                                                 </constraints>
@@ -1627,6 +1655,8 @@
                         <outlet property="plateTextField" destination="O1b-gL-tpC" id="H7C-5n-gBf"/>
                         <outlet property="proccessLabel" destination="H9S-6c-r1H" id="Eia-ET-Alj"/>
                         <outlet property="proccessList" destination="hna-dG-tH4" id="aRB-ZI-LqE"/>
+                        <outlet property="receiverEmailLabel" destination="KvY-lt-tIf" id="SzI-ih-i4u"/>
+                        <outlet property="receiverEmailTextField" destination="hdb-aZ-nyA" id="7PY-Ip-uR3"/>
                         <outlet property="receiverNameLabel" destination="LMP-Hf-bfs" id="zl5-WV-n4g"/>
                         <outlet property="receiverNameTextField" destination="DJL-7L-LUZ" id="YSf-Op-pk0"/>
                         <outlet property="receiverPhoneLabel" destination="pix-LG-lzI" id="KZA-ta-G1g"/>

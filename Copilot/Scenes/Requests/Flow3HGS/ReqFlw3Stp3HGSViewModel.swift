@@ -36,6 +36,7 @@ protocol ReqFlw3Stp3HGSViewModelType: AnyObject {
                     nameSurname: String,
                     receiverPersonName: String,
                     receiverPersonPhone: String,
+                    receiverPersonEmail: String,
                     ogsHgsType: String,
                     deliveryAddress: String)
 }
@@ -99,6 +100,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                     nameSurname: String,
                     receiverPersonName: String,
                     receiverPersonPhone: String,
+                    receiverPersonEmail: String,
                     ogsHgsType: String,
                     deliveryAddress: String) {
         
@@ -108,6 +110,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                                  nameSurname: nameSurname,
                                  receiverPersonName: receiverPersonName,
                                  receiverPersonPhone: receiverPersonPhone,
+                                 receiverPersonEmail: receiverPersonEmail,
                                  ogsHgsType: ogsHgsType,
                                  deliveryAddress: deliveryAddress,
                                  fileInfo: uploadedFileInfo) { [weak self] model, error in
