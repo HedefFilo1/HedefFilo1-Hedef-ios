@@ -24,6 +24,9 @@ class PastMaintenancesViewController: UIViewController {
     @IBOutlet weak var accidentButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var headTitle = Strings.pastMaintenanceOperations
+    private var message = Strings.pastMaintenanceDescription
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -51,7 +54,7 @@ class PastMaintenancesViewController: UIViewController {
     }
     
     func applyStyle() {
-        titleLabel.apply(.blackS24R400)
+        titleLabel.apply(.blackS18B700)
         maintenanceButton.apply(.blackS18R400)
         maintenanceButton.setTitleColor(.theme, for: .normal)
         breakdownButton.apply(.blackS18R400)
@@ -65,15 +68,76 @@ class PastMaintenancesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.requests
+        titleLabel.text = Strings.pastServiceTransactions
         maintenanceButton.setTitle(Strings.care, for: .normal)
         breakdownButton.setTitle(Strings.fault, for: .normal)
         tireButton.setTitle(Strings.lastik, for: .normal)
         accidentButton.setTitle(Strings.accidentTab, for: .normal)
     }
     
-    @IBAction func didTab(_ sender: UIView) {
+    func setButtonsColor(tab: Int) {
+        
+        for view in borderViews {
+            view.backgroundColor = .disabled
+        }
+        borderViews[tab].backgroundColor = .theme
+        maintenanceButton.setTitleColor(tab == 0 ? .theme: .black, for: .normal)
+        breakdownButton.setTitleColor(tab == 1 ? .theme: .black, for: .normal)
+        tireButton.setTitleColor(tab == 2 ? .theme: .black, for: .normal)
+        accidentButton.setTitleColor(tab == 3 ? .theme: .black, for: .normal)
+    }
+    
+    func setTitleTexts(tab: Int) {
+        var title =  Strings.pastMaintenanceOperations
+        var message = Strings.pastMaintenanceDescription
+        var replaceTitle = Strings.care
+        switch tab {
+        case 0:
+            replaceTitle = Strings.care
+            
+        case 1:
+            replaceTitle = Strings.fault
+            
+        case 2:
+            replaceTitle = Strings.lastik
+            
+        case 3:
+            replaceTitle = Strings.accidentTab
+            
+        default:
+            break
+        }
+        headTitle = title.replacingOccurrences(of: Strings.care, with: replaceTitle)
+        self.message = message.replacingOccurrences(of: Strings.care.lowercaseFirstLetter(), with: replaceTitle.lowercaseFirstLetter())
+    }
+    
+    func setServiceType(tab: Int) {
+        switch tab {
+        case 0:
+            viewModel.type = .maintenance
+            
+        case 1:
+            viewModel.type = .mechanicalFailure
+            
+        case 2:
+            viewModel.type = .tireChange
+            
+        case 3:
+            viewModel.type = .damage
+            
+        default:
+            break
+        }
+    }
+    
+    @IBAction func didTabOnTap(_ sender: UIView) {
         let tag = sender.tag
+        setButtonsColor(tab: tag)
+        setTitleTexts(tab: tag)
+        viewModel.items = []
+        collectionView.reloadData()
+        setServiceType(tab: tag)
+        viewModel.getServices()
     }
     
     @IBAction func didTapBack() {
@@ -96,6 +160,8 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
         switch indexPath.section {
         case 0:
             let cell: PastServicesHeaderCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.titleLabel.text = headTitle
+            cell.descriptionLabel.text = message
             return cell
             
         case 1:

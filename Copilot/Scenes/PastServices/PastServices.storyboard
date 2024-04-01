@@ -57,6 +57,9 @@
                                                         <state key="normal" title="Bakım">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTabOnTap:" destination="mOw-Va-2gE" eventType="touchUpInside" id="hak-Pz-vdF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,6 +89,9 @@
                                                         <state key="normal" title="Arıza">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTabOnTap:" destination="mOw-Va-2gE" eventType="touchUpInside" id="iOX-x2-Epu"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,6 +121,9 @@
                                                         <state key="normal" title="Lastik">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTabOnTap:" destination="mOw-Va-2gE" eventType="touchUpInside" id="QAS-qs-5Fu"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,12 +147,15 @@
                                                             <constraint firstAttribute="height" constant="2" id="gTA-1O-hGP"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-Wu-kHz">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-Wu-kHz">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Kaza/Hasar">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTabOnTap:" destination="mOw-Va-2gE" eventType="touchUpInside" id="GZa-PS-SbK"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -580,4 +580,13 @@ extension Strings {
     static var sort: String {
         return localized(string: "sort")
     }
+    
+    static var pastMaintenanceOperations: String {
+        return localized(string: "pastMaintenanceOperations")
+    }
+    
+    static var pastMaintenanceDescription: String {
+        return localized(string: "pastMaintenanceDescription")
+    }
+  
 }

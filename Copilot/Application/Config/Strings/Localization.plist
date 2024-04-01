@@ -3376,20 +3376,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Sort</string>
         </dict>
         
-        <key></key>
+        <key>pastMaintenanceOperations</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geçmiş Bakım İşlemleri</string>
             <key>en</key>
-            <string></string>
+            <string>Past Maintenance Operations</string>
         </dict>
         
-        <key></key>
+        <key>pastMaintenanceDescription</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Aracınızın tüm bakım işlemlerini aşağıda görüntüleyebilirsiniz.</string>
             <key>en</key>
-            <string></string>
+            <string>You can view all maintenance procedures for your vehicle below.</string>
         </dict>
         
         <key></key>

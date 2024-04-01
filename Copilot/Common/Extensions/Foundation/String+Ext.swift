@@ -18,6 +18,10 @@ extension String {
         return prefix(1).capitalized + dropFirst()
     }
     
+    func lowercaseFirstLetter() -> String {
+        return prefix(1).lowercased() + dropFirst()
+    }
+    
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }

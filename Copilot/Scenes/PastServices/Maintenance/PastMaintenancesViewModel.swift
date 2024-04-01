@@ -21,6 +21,7 @@ protocol PastMaintenancesViewModelType: AnyObject {
     var coordinatorDelegate: PastMaintenancesVMCrdinatorDelegate? { get set }
     var delegate: PastMaintenancesViewModelDelegate? { get set }
     var items: [PastService]? { get set}
+    var type: PastServiceRecordType { get set }
     
     func getBack()
     func getServices()
@@ -33,6 +34,7 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     weak var coordinatorDelegate: PastMaintenancesVMCrdinatorDelegate?
     weak var delegate: PastMaintenancesViewModelDelegate?
     var items: [PastService]?
+    var type: PastServiceRecordType = .maintenance
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -40,7 +42,7 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     
     func getServices() {
         Loading.shared.show(presented: true)
-        APIService.getPastMaintenaces { [weak self] model, error in
+        APIService.getPastServices(type: type.rawValue) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
