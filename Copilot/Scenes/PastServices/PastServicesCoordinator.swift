@@ -40,7 +40,8 @@ class PastServicesCoordinator: Coordinator {
 }
 
 extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
-                                   PastServicesFilterVMCoordinatorDelegate {
+                                   PastServicesFilterVMCoordinatorDelegate,
+                                   PastServicesSortVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -63,5 +64,14 @@ extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
         controller.delegate = delegate
         viewModel.shouldSelectSpecificDays = false
         filterViewController?.present(controller, animated: true)
+    }
+    
+    func presentSort(delegate: PastServicesSortViewControllerDelegate) {
+        let controller: PastServicesSortViewController = storyboard.instantiateViewController()
+        let viewModel = PastServicesSortViewModel()
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        viewModel.coordinatorDelegate = self
+        navigationController.present(controller, animated: true)
     }
 }

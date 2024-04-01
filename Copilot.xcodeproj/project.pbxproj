@@ -541,6 +541,8 @@
 		89F68CE92BB9A4A200B79B42 /* PastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CE82BB9A4A200B79B42 /* PastService.swift */; };
 		89F68CEC2BBA83B800B79B42 /* PastServicesFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CEB2BBA83B800B79B42 /* PastServicesFilterViewModel.swift */; };
 		89F68CEE2BBA83C000B79B42 /* PastServicesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CED2BBA83C000B79B42 /* PastServicesFilterViewController.swift */; };
+		89F68CF12BBAA93F00B79B42 /* PastServicesSortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CF02BBAA93F00B79B42 /* PastServicesSortViewModel.swift */; };
+		89F68CF32BBAA94700B79B42 /* PastServicesSortViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F68CF22BBAA94700B79B42 /* PastServicesSortViewContorller.swift */; };
 		89F6A0532B584A860052EE15 /* LastikRandevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */; };
 		89F6A0542B584A860052EE15 /* LastikRandevuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F6A0522B584A860052EE15 /* LastikRandevuCell.xib */; };
 		89F6A0572B5868950052EE15 /* LastikOperationButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6A0552B5868950052EE15 /* LastikOperationButtonsCell.swift */; };
@@ -1102,6 +1104,8 @@
 		89F68CE82BB9A4A200B79B42 /* PastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastService.swift; sourceTree = "<group>"; };
 		89F68CEB2BBA83B800B79B42 /* PastServicesFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesFilterViewModel.swift; sourceTree = "<group>"; };
 		89F68CED2BBA83C000B79B42 /* PastServicesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesFilterViewController.swift; sourceTree = "<group>"; };
+		89F68CF02BBAA93F00B79B42 /* PastServicesSortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesSortViewModel.swift; sourceTree = "<group>"; };
+		89F68CF22BBAA94700B79B42 /* PastServicesSortViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServicesSortViewContorller.swift; sourceTree = "<group>"; };
 		89F6A0512B584A860052EE15 /* LastikRandevuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikRandevuCell.swift; sourceTree = "<group>"; };
 		89F6A0522B584A860052EE15 /* LastikRandevuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastikRandevuCell.xib; sourceTree = "<group>"; };
 		89F6A0552B5868950052EE15 /* LastikOperationButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastikOperationButtonsCell.swift; sourceTree = "<group>"; };
@@ -1344,6 +1348,7 @@
 				8916C2562BB5DF880006B2E9 /* PastServicesPageController.swift */,
 				8916C2582BB5E2000006B2E9 /* Maintenance */,
 				89F68CEA2BBA834E00B79B42 /* Filter */,
+				89F68CEF2BBAA92900B79B42 /* Sort */,
 			);
 			path = PastServices;
 			sourceTree = "<group>";
@@ -3805,6 +3810,15 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		89F68CEF2BBAA92900B79B42 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				89F68CF02BBAA93F00B79B42 /* PastServicesSortViewModel.swift */,
+				89F68CF22BBAA94700B79B42 /* PastServicesSortViewContorller.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
 		89F6A04D2B5849E80052EE15 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4239,6 +4253,7 @@
 				89DF07182AF0F4FE00892B1D /* StandingItemCell.swift in Sources */,
 				89DF05332BACCA9D00C8B37E /* FeedbackViewModel.swift in Sources */,
 				8935AC4C2AFA5D48002F1C68 /* SponsorshipTabCell.swift in Sources */,
+				89F68CF12BBAA93F00B79B42 /* PastServicesSortViewModel.swift in Sources */,
 				893AC4A62BAB46D7003FB9E6 /* SupportGuideViewController.swift in Sources */,
 				893AC4A12BAB1279003FB9E6 /* FAQQuestionDetailViewController.swift in Sources */,
 				899D34B72BAF94120090DA7B /* FeedbackRatePresentationController.swift in Sources */,
@@ -4332,6 +4347,7 @@
 				899CF56D2AE18CD5006D85E4 /* APIRequest.swift in Sources */,
 				89513E662B95120200B05199 /* APIService+CreateCase.swift in Sources */,
 				896CB35A2AD715CE0048025A /* HomeContentCell.swift in Sources */,
+				89F68CF32BBAA94700B79B42 /* PastServicesSortViewContorller.swift in Sources */,
 				89DF07132AF0F4DA00892B1D /* StandingCell.swift in Sources */,
 				8907EEFB2B696807004869BE /* MaintenanceCell.swift in Sources */,
 				89C55DE42AC4A5FF00C3066A /* UIViewController+EXT.swift in Sources */,

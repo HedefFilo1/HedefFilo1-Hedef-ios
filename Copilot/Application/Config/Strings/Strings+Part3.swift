@@ -568,4 +568,16 @@ extension Strings {
     static var selectDate: String {
         return localized(string: "selectDate")
     }
+    
+    static var ascending: String {
+        return localized(string: "ascending")
+    }
+    
+    static var descending: String {
+        return localized(string: "descending")
+    }
+    
+    static var sort: String {
+        return localized(string: "sort")
+    }
 }

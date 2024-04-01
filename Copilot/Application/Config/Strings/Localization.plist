@@ -3352,28 +3352,28 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Select Date</string>
         </dict>
         
-        <key></key>
+        <key>ascending</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Yeniden Eskiye</string>
             <key>en</key>
-            <string></string>
+            <string>Ascending</string>
         </dict>
         
-        <key></key>
+        <key>descending</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Eskiden Yeniye</string>
             <key>en</key>
-            <string></string>
+            <string>Descending</string>
         </dict>
         
-        <key></key>
+        <key>sort</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Sırala</string>
             <key>en</key>
-            <string></string>
+            <string>Sort</string>
         </dict>
         
         <key></key>

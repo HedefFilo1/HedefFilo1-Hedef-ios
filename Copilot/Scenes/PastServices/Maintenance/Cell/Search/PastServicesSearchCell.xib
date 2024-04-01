@@ -31,7 +31,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="74" height="50"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
-                                    <action selector="didTapFilter" destination="gTV-IL-0wX" eventType="touchUpInside" id="psJ-ga-GW8"/>
                                     <action selector="didTapSort" destination="gTV-IL-0wX" eventType="touchUpInside" id="K1l-Kn-KOQ"/>
                                 </connections>
                             </button>

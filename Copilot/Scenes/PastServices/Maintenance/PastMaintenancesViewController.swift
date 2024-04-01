@@ -153,7 +153,7 @@ extension PastMaintenancesViewController: PastServicesSearchCellDelegate, PastSe
     }
     
     func didTapSort() {
-        
+        viewModel.presentSort()
     }
     
     func didTapFilter() {

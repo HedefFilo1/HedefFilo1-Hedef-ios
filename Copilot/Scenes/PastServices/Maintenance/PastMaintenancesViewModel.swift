@@ -9,6 +9,7 @@ import Foundation
 
 protocol PastMaintenancesVMCrdinatorDelegate: AnyObject {
     func getBack()
+    func presentSort(delegate: PastServicesSortViewControllerDelegate)
     func presentFilters(services: [PastService], delegate: PastServicesFilterViewControllerDelegate)
 }
 
@@ -24,6 +25,7 @@ protocol PastMaintenancesViewModelType: AnyObject {
     func getBack()
     func getServices()
     func presentFilters()
+    func presentSort()
 }
 
 class PastMaintenancesViewModel: PastMaintenancesViewModelType {
@@ -53,12 +55,29 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
         }
     }
     
+    func presentSort() {
+        coordinatorDelegate?.presentSort(delegate: self)
+    }
+    
     func presentFilters() {
         coordinatorDelegate?.presentFilters(services: items ?? [], delegate: self)
     }
 }
 
-extension PastMaintenancesViewModel: PastServicesFilterViewControllerDelegate {
+extension PastMaintenancesViewModel: PastServicesFilterViewControllerDelegate,
+                                     PastServicesSortViewControllerDelegate {
+    func didTapApply(ascending: Bool) {
+        if ascending {
+            let sorted = items?.sorted { $0.date ?? Date() < $1.date ?? Date() }
+            items = sorted
+        } else {
+            let sorted = items?.sorted { $0.date ?? Date() > $1.date ?? Date() }
+            items = sorted
+        }
+        
+        delegate?.reloadData()
+    }
+    
     func didTapApply(city: String?, district: String?, date: Date?) {
 //        filterCity = city
 //        filterDistrict = district

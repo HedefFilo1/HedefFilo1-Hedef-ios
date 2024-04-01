@@ -58,6 +58,15 @@ struct PastService: Decodable {
         return str ?? ""
     }
     
+    var date: Date? {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
+            return date
+        }
+        return nil
+    }
+    
     var displayDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
