@@ -164,6 +164,17 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let item = viewModel.visibleItems?[indexPath.item],
+                let index = viewModel.getItemIndex(id: item.id) {
+                viewModel.items?.remove(at: index)
+                viewModel.deleteNotifications(ids: [item.id])
+                reloadData()
+            }
+        }
+    }
 }
 
 extension NotificationsViewController: NotificationsViewModelDelegate {
