@@ -596,5 +596,12 @@ extension Strings {
     static var enterEmailAddressOfRecipient: String {
         return localized(string: "enterEmailAddressOfRecipient")
     }
-  
+    
+    static var showAllOfThem: String {
+        return localized(string: "showAllOfThem")
+    }
+    
+    static var showUnread: String {
+        return localized(string: "showUnread")
+    }
 }

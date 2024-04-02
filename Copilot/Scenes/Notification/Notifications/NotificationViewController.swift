@@ -63,6 +63,7 @@ class NotificationsViewController: UIViewController {
     func setTexts() {
         view.backgroundColor = .white
         titleLabel.text = Strings.notifications
+        sortLabel.text = Strings.showAllOfThem
         cancelButton.setTitle(Strings.cancel, for: .normal)
         deleteButton.setTitle(Strings.deleteSelectedNotifications, for: .normal)
     }
@@ -101,8 +102,15 @@ class NotificationsViewController: UIViewController {
         viewModel.deleteNotifications(ids: ids)
     }
     
+    @IBAction func didTapSort() {
+        sortLabel.text = Strings.showUnread
+        viewModel.showUnreads = !viewModel.showUnreads
+        sortLabel.text = viewModel.showUnreads ? Strings.showUnread: Strings.showAllOfThem
+        reloadData()
+    }
+    
     func setSelectedItemsCount() {
-        let count = viewModel.items?.filter({$0.selected ?? false}).count ?? 0
+        let count = viewModel.visibleItems?.filter({$0.selected ?? false}).count ?? 0
         if count > 0 {
             cancelButton.isHidden = false
             deleteButton.isHidden = false
@@ -118,28 +126,37 @@ class NotificationsViewController: UIViewController {
 extension NotificationsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.items?.count ?? 0
+        return viewModel.visibleItems?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if isSelectable {
             let cell: SelectableNotificationCell = tableView.dequeueReusableCell(for: indexPath)
             cell.selectionStyle = .none
-            cell.item = viewModel.items?[indexPath.item]
+            cell.item = viewModel.visibleItems?[indexPath.item]
             return cell
         }
         let cell: NotificationCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.item = viewModel.items?[indexPath.item]
+        cell.item = viewModel.visibleItems?[indexPath.item]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isSelectable {
             if let cell = tableView.cellForRow(at: indexPath) as? SelectableNotificationCell {
-                let selected = viewModel.items?[indexPath.item].selected ?? false
-                viewModel.items?[indexPath.item].selected = !selected
-                cell.checkBox.isSelected = !selected
-                setSelectedItemsCount()
+                
+                if let item = viewModel.visibleItems?[indexPath.item] {
+                    let selected = item.selected ?? false
+                    if let index = viewModel.getItemIndex(id: item.id) {
+                        viewModel.items?[index].selected = !selected
+                        cell.checkBox.isSelected = !selected
+                        setSelectedItemsCount()
+                    }
+                }
+            }
+        } else {
+            if let id = viewModel.visibleItems?[indexPath.item].id {
+                viewModel.readNotification(id: id)
             }
         }
     }

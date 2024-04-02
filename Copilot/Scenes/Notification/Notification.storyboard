@@ -91,12 +91,23 @@
                                             <constraint firstItem="NUv-3J-ZW7" firstAttribute="leading" secondItem="MHi-DK-igW" secondAttribute="leading" id="zMz-jz-FWU"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjA-p4-0lC">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapSort" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YoI-BR-GoU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aas-2K-DCd"/>
+                                    <constraint firstAttribute="trailing" secondItem="tjA-p4-0lC" secondAttribute="trailing" id="Abm-2P-fMd"/>
+                                    <constraint firstItem="tjA-p4-0lC" firstAttribute="top" secondItem="bjZ-N6-tyr" secondAttribute="top" id="DF1-N8-Ywp"/>
                                     <constraint firstAttribute="bottom" secondItem="MHi-DK-igW" secondAttribute="bottom" id="Dgx-Ns-40Y"/>
                                     <constraint firstItem="MHi-DK-igW" firstAttribute="top" secondItem="bjZ-N6-tyr" secondAttribute="top" id="T2p-iW-Sc2"/>
+                                    <constraint firstItem="tjA-p4-0lC" firstAttribute="leading" secondItem="bjZ-N6-tyr" secondAttribute="leading" id="VTj-dP-mhn"/>
+                                    <constraint firstAttribute="bottom" secondItem="tjA-p4-0lC" secondAttribute="bottom" id="tjz-uR-CzA"/>
                                     <constraint firstItem="MHi-DK-igW" firstAttribute="centerX" secondItem="bjZ-N6-tyr" secondAttribute="centerX" id="zjK-rh-0UF"/>
                                 </constraints>
                             </view>
@@ -180,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="-2"/>
+            <point key="canvasLocation" x="49.618320610687022" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

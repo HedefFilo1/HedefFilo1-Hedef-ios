@@ -3407,20 +3407,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Enter Email address of the recipient.</string>
         </dict>
         
-        <key></key>
+        <key>showAllOfThem</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tümünü Göster</string>
             <key>en</key>
-            <string></string>
+            <string>Show all of them</string>
         </dict>
         
-        <key></key>
+        <key>showUnread</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Okunmamışları Göster</string>
             <key>en</key>
-            <string></string>
+            <string>Show Unread</string>
         </dict>
         
         <key></key>

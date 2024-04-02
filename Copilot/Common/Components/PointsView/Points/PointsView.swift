@@ -12,7 +12,7 @@ class PointsView: UIView {
         didSet {
             guard let barPoints, barPoints.count > 0 else { return }
             addPointView()
-            startAnimate()
+            //            startAnimate()
         }
     }
     
@@ -50,7 +50,7 @@ class PointsView: UIView {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
         self.addGestureRecognizer(tap)
         contentView.clipsToBounds = false
-//        startAnimate()
+        //        startAnimate()
     }
     
     private func applyStyles() {
@@ -60,7 +60,7 @@ class PointsView: UIView {
     }
     
     @objc func didTap() {
-//        startAnimate()
+        //        startAnimate()
     }
     
     func startAnimate() {
@@ -69,7 +69,7 @@ class PointsView: UIView {
         if progressConstraint.constant < 40 {
             progressConstraint.constant = 45
         }
-        UIView.animate(withDuration: 3 , delay: 0) {
+        UIView.animate(withDuration: 3, delay: 0) {
             self.progressContainerView.layoutIfNeeded()
             self.layoutIfNeeded()
         }
@@ -92,6 +92,9 @@ class PointsView: UIView {
             pointView.titleLabel.text = item.name
             pointView.valueLabel.text = "\(item.point) \(Strings.point)"
         }
-//        startAnimate()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.startAnimate()
+        }
     }
 }
