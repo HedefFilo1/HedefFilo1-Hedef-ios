@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqz-5x-yUw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqz-5x-yUw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,6 +53,17 @@
                                     <constraint firstAttribute="width" constant="24" id="PQT-cJ-yV2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uag-Uh-NEm">
+                                <rect key="frame" x="301" y="77" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D6c-Sw-m2S"/>
+                                    <constraint firstAttribute="width" constant="40" id="nTC-7g-0NU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapNotificationButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C8r-lp-atq"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7Ww-8R-pvw">
                                 <rect key="frame" x="345" y="85" width="24" height="24"/>
                                 <constraints>
@@ -107,7 +118,9 @@
                             <constraint firstItem="XjV-tw-7Ly" firstAttribute="top" secondItem="CYg-66-gBc" secondAttribute="bottom" constant="12" id="Ual-xP-q5E"/>
                             <constraint firstItem="och-Ah-yVW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="W1f-fQ-ImJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AT1-35-ITz" secondAttribute="trailing" id="hqv-Ic-FAY"/>
+                            <constraint firstItem="uag-Uh-NEm" firstAttribute="centerX" secondItem="oHo-f8-1y9" secondAttribute="centerX" id="nli-UW-Qb3"/>
                             <constraint firstItem="XjV-tw-7Ly" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oOj-5c-qae"/>
+                            <constraint firstItem="uag-Uh-NEm" firstAttribute="centerY" secondItem="oHo-f8-1y9" secondAttribute="centerY" id="pwh-KU-LiQ"/>
                             <constraint firstItem="7Ww-8R-pvw" firstAttribute="centerY" secondItem="oHo-f8-1y9" secondAttribute="centerY" id="qLS-tb-Ws2"/>
                             <constraint firstAttribute="trailing" secondItem="oHo-f8-1y9" secondAttribute="trailing" constant="60" id="t2d-5j-Xrl"/>
                             <constraint firstItem="YFa-05-lg2" firstAttribute="centerY" secondItem="7Ww-8R-pvw" secondAttribute="centerY" id="wXx-ic-Cnf"/>

@@ -67,6 +67,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapNotificationButton() {
+        goToNotifications()
     }
     
     @IBAction func didTapLogoutButton() {
