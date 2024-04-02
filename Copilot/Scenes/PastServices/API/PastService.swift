@@ -15,13 +15,24 @@ enum PastServiceRecordType: String, Decodable {
     case none = "NONE"
 }
 
+enum PastServiceStatusType: String, Decodable {
+    case approved = "APPOINTMENT_APPROVED"
+    case workInProgress = "WORK_IN_PROGRESS"
+    case new = "NEW"
+    case owned = "OWNED"
+    case waitingForInformation = "WAITING_FOR_INFORMATION"
+    case responseReceived = "RESPONSE_RECEIVED"
+    case closed = "CLOSED"
+    case none
+}
+
 struct PastService: Decodable {
     let id: String?
     let caseNumber: String
     let serviceName: String?
     let appointmentDate: String?
     let recordType: PastServiceRecordType
-    let statusEnum: CaseStatusType
+//    let statusEnum: PastServiceStatusType?
     let appointmentStatusEnum: AppointmentStatus
     
     let address: String?
