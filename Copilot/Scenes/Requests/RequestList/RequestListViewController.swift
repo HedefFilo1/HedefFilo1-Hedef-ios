@@ -41,6 +41,7 @@ class RequestListViewController: UIViewController {
     func setupUI() {
         applyStyle()
         setTexts()
+        setBasicViews()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: RequestListPageCell.self)

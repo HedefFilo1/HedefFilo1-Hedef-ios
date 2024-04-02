@@ -49,7 +49,7 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     func presentFitlers() {
         let filterItems = [
             FeedbackFilterItem(title: "BAKIM"),
-            FeedbackFilterItem(title: "Ariza")
+            FeedbackFilterItem(title: "Arıza")
         ]
         coordinatorDelegate?.presentFitlers(title: Strings.serviceProcess,
                                             delegate: self, items: filterItems)

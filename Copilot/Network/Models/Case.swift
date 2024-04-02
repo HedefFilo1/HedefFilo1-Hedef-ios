@@ -60,8 +60,8 @@ struct Case: Decodable {
         case .maintenance: // Bakim
             //            str = App.getString(key: CodeStrings.maintenaceKey)
             return "Bakım"
-        case .mechanicalFailure: // Ariza
-            str = "Ariza" // App.getString(key: CodeStrings.mechanicalFailurKey)
+        case .mechanicalFailure: // Arıza
+            str = "Arıza" // App.getString(key: CodeStrings.mechanicalFailurKey)
         case .damage:
 //            str = App.getString(key: CodeStrings.damageKey)
             str = "Tamir"

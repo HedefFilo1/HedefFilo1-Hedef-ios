@@ -3394,7 +3394,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>emailAddressOfRecipient</key>
         <dict>
             <key>tr</key>
-            <string>Teslim Alacak kişinin email adresi</string>
+            <string>Teslim Alacak Kişinin Email Adresi</string>
             <key>en</key>
             <string>Email address of the recipient</string>
         </dict>
@@ -3402,7 +3402,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>enterEmailAddressOfRecipient</key>
         <dict>
             <key>tr</key>
-            <string>Teslim Alacak kişinin email adresi giriniz.</string>
+            <string>Teslim Alacak Kişinin Email Adresi giriniz.</string>
             <key>en</key>
             <string>Enter Email address of the recipient.</string>
         </dict>

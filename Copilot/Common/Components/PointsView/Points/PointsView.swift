@@ -65,7 +65,7 @@ class PointsView: UIView {
     
     func startAnimate() {
         progressConstraint.constant = 0
-        progressConstraint.constant = progressContainerView.frame.width * 0.2
+        progressConstraint.constant = progressContainerView.frame.width * 0.45
         if progressConstraint.constant < 40 {
             progressConstraint.constant = 45
         }
@@ -81,14 +81,13 @@ class PointsView: UIView {
         let width = pointsContainer.frame.width
         let count = barPoints.count
         let distance = width/CGFloat(count - 1)
-        var lastTrailing: CGFloat = -40
-        let reversed = barPoints.reversed()
+        var lastLeading: CGFloat = -40
         
-        for item in reversed {
+        for item in barPoints {
             let pointView = PointView(frame: .zero)
             pointsContainer.addSubview(pointView)
-            pointView.align(top: 10, trailing: lastTrailing, bottom: 0, width: 70)
-            lastTrailing += distance
+            pointView.align(top: 10, leading: lastLeading, bottom: 0, width: 70)
+            lastLeading += distance
             pointView.titleLabel.text = item.name
             pointView.valueLabel.text = "\(item.point) \(Strings.point)"
         }

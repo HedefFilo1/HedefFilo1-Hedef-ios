@@ -51,7 +51,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-gx-Ums">
-                    <rect key="frame" x="75" y="12" width="396" height="143"/>
+                    <rect key="frame" x="45" y="12" width="426" height="143"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -64,7 +64,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iyd-gx-Ums" secondAttribute="trailing" id="MVo-4u-MXv"/>
                 <constraint firstItem="5od-r6-Q6W" firstAttribute="bottom" secondItem="7pr-Rx-jdU" secondAttribute="bottom" id="P6k-zx-fCM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vrM-g2-a5z" secondAttribute="trailing" id="SJt-0j-3fk"/>
-                <constraint firstItem="iyd-gx-Ums" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="75" id="kDT-KK-hBF"/>
+                <constraint firstItem="iyd-gx-Ums" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="kDT-KK-hBF"/>
                 <constraint firstAttribute="bottom" secondItem="iyd-gx-Ums" secondAttribute="bottom" id="mAs-gg-4w2"/>
                 <constraint firstItem="5od-r6-Q6W" firstAttribute="trailing" secondItem="7pr-Rx-jdU" secondAttribute="trailing" id="tkO-YZ-icK"/>
             </constraints>
