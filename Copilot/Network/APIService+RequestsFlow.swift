@@ -37,7 +37,7 @@ extension APIService {
         }
         
         req.identifier = "Create Task"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled || true
         req.completion = completion
         req.start()
     }

@@ -80,6 +80,12 @@ class SupportViewController: UIViewController {
         viewModel.goToLiveSupport()
     }
     
+    @IBAction func didTapCall() {
+        guard let url = URL(string: CodeStrings.callSupportCenterPhone) else {
+        return
+        }
+        UIApplication.shared.open(url)
+    }
 }
 
 extension SupportViewController: UICollectionViewDataSource {

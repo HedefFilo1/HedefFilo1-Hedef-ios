@@ -193,15 +193,26 @@
                                             <constraint firstAttribute="height" constant="24" id="jxc-p1-geU"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoY-Dm-uo5">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapChat" destination="Tzc-Hq-M1h" eventType="touchUpInside" id="Onl-on-65p"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Rgl-fA-zCY" firstAttribute="top" secondItem="7BK-l2-Noq" secondAttribute="top" id="4Jn-hV-9fg"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZoY-Dm-uo5" secondAttribute="trailing" id="P55-19-P33"/>
                                     <constraint firstAttribute="bottom" secondItem="Rgl-fA-zCY" secondAttribute="bottom" id="V8D-K2-e80"/>
                                     <constraint firstAttribute="height" constant="56" id="dVD-kd-3mO"/>
+                                    <constraint firstItem="ZoY-Dm-uo5" firstAttribute="leading" secondItem="7BK-l2-Noq" secondAttribute="leading" id="dxP-pg-qq9"/>
                                     <constraint firstAttribute="width" constant="56" id="dzH-aN-zpF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZoY-Dm-uo5" secondAttribute="bottom" id="fFD-Mw-Tha"/>
                                     <constraint firstItem="TvT-W8-gaE" firstAttribute="centerX" secondItem="7BK-l2-Noq" secondAttribute="centerX" id="gzh-QT-PSX"/>
                                     <constraint firstAttribute="trailing" secondItem="Rgl-fA-zCY" secondAttribute="trailing" id="ibA-Gv-8fO"/>
+                                    <constraint firstItem="ZoY-Dm-uo5" firstAttribute="top" secondItem="7BK-l2-Noq" secondAttribute="top" id="l6F-pg-5Za"/>
                                     <constraint firstItem="TvT-W8-gaE" firstAttribute="centerY" secondItem="7BK-l2-Noq" secondAttribute="centerY" id="nga-x1-SH2"/>
                                     <constraint firstItem="Rgl-fA-zCY" firstAttribute="leading" secondItem="7BK-l2-Noq" secondAttribute="leading" id="sw5-uF-MJ0"/>
                                 </constraints>
@@ -2277,7 +2288,7 @@
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

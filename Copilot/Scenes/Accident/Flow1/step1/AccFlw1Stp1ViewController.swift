@@ -74,6 +74,13 @@ class AccFlw1Stp1VController: UIViewController {
     @IBAction func didTapContinue() {
         viewModel.goToAccFlw1Stp2OtherVehicle()
     }
+    
+    @IBAction func didTapChat() {
+        guard let url = URL(string: CodeStrings.callSupportCenterPhone) else {
+        return
+        }
+        UIApplication.shared.open(url)
+    }
 }
 
 extension AccFlw1Stp1VController: AccFlw1Stp1ViewModelDelegate {

@@ -57,6 +57,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="icon_phone_white" title="Çözüm Merkezini Ara" imagePadding="24" titleAlignment="center">
                                             <color key="baseForegroundColor" name="white"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCall" destination="pLj-fe-akT" eventType="touchUpInside" id="ivc-Yl-rUI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mer-Rp-x7C">
                                         <rect key="frame" x="312" y="481" width="57" height="56"/>
@@ -604,6 +607,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="icon_phone_white" title="Çözüm Merkezini Ara" imagePadding="24" titleAlignment="center">
                                             <color key="baseForegroundColor" name="white"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCall" destination="dZc-Sa-Ti8" eventType="touchUpInside" id="muN-50-M2q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-dO-lnS">
                                         <rect key="frame" x="312" y="481" width="57" height="56"/>

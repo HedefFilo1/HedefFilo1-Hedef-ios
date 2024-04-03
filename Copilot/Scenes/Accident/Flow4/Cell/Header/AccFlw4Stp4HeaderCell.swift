@@ -36,6 +36,9 @@ class AccFlw4Stp4HeaderCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapCall() {
-        
+        guard let url = URL(string: CodeStrings.call112) else {
+            return
+        }
+        UIApplication.shared.open(url)
     }
 }

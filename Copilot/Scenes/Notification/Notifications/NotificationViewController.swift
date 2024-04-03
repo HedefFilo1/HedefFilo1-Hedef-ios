@@ -165,15 +165,26 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
         return 110
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            if let item = viewModel.visibleItems?[indexPath.item],
-                let index = viewModel.getItemIndex(id: item.id) {
-                viewModel.items?.remove(at: index)
-                viewModel.deleteNotifications(ids: [item.id])
-                reloadData()
-            }
+    func deleteRow(indexPath: IndexPath) {
+        if let item = viewModel.visibleItems?[indexPath.item],
+           let index = viewModel.getItemIndex(id: item.id) {
+            viewModel.items?.remove(at: index)
+            viewModel.deleteNotifications(ids: [item.id])
+            //            reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "", handler: {[weak self]_, _, _ in
+            // example of your delete function
+            self?.deleteRow(indexPath: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        })
+        
+        let image = Images.whiteDeleteIcon
+        deleteAction.image = image
+        deleteAction.backgroundColor = .theme
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 

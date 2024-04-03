@@ -60,6 +60,13 @@ class FeedbackViewController: UIViewController {
     private func configure() {
         titleLabel.text = Strings.supportFeedbackMenuTitle
     }
+    
+    @IBAction func didTapCall() {
+        guard let url = URL(string: CodeStrings.callSupportCenterPhone) else {
+        return
+        }
+        UIApplication.shared.open(url)
+    }
 
 }
 

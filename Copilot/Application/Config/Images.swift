@@ -173,4 +173,12 @@ struct Images {
     static var starFilled: UIImage {
         return UIImage(systemName: "star.fill") ?? UIImage()
     }
+    
+    static var recyclebinIcon: UIImage {
+        return UIImage(named: "recyclebinIcon") ?? UIImage()
+    }
+    
+    static var whiteDeleteIcon: UIImage {
+        return UIImage(named: "whiteDeleteIcon") ?? UIImage()
+    }
 }
