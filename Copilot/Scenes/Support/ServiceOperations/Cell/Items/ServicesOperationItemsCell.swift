@@ -8,12 +8,12 @@
 import UIKit
 
 protocol ServicesOperationItemsCellDelegate: AnyObject {
-    func didSelect(item: ServiceOperationsItem)
+    func didSelect(item: ServiceOperation)
 }
 
 class ServicesOperationItemsCell: UICollectionViewCell, Reusable {
     
-    var items: [ServiceOperationsItem]? {
+    var items: [ServiceOperation]? {
         didSet {
             let count = items?.count ?? 0
             titleLabel.text = "\(count) \(Strings.processRequestFound)"

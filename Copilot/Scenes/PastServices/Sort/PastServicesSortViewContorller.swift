@@ -85,7 +85,7 @@ class PastServicesSortViewController: SheetViewController {
     @IBAction func didTapApply() {
         dismiss(animated: true) { [weak self] in
             guard let self else { return }
-            let ascending = ascendingRadio.isSelected
+            let ascending = !ascendingRadio.isSelected
             self.delegate?.didTapApply(ascending: ascending)
         }
     }

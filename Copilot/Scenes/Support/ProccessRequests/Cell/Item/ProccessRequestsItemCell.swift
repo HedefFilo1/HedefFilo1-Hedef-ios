@@ -9,9 +9,10 @@ import UIKit
 
 class ProccessRequestsItemCell: UICollectionViewCell, Reusable {
 
-    var item: ProccessRequestsItem? {
+    var item: ProccessRequest? {
         didSet {
-            nameLabel.text = item?.title
+            nameLabel.text = item?.supplierName
+            dateLabel.text = item?.displayDate
         }
     }
     

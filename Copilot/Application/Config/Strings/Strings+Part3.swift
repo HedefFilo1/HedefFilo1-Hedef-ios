@@ -589,6 +589,10 @@ extension Strings {
         return localized(string: "pastMaintenanceDescription")
     }
     
+    static var pastMaintenanceFound: String {
+        return localized(string: "pastMaintenanceFound")
+    }
+    
     static var emailAddressOfRecipient: String {
         return localized(string: "emailAddressOfRecipient")
     }
@@ -604,4 +608,5 @@ extension Strings {
     static var showUnread: String {
         return localized(string: "showUnread")
     }
+
 }

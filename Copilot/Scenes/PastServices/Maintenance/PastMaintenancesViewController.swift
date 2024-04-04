@@ -26,6 +26,7 @@ class PastMaintenancesViewController: UIViewController {
     
     private var headTitle = Strings.pastMaintenanceOperations
     private var message = Strings.pastMaintenanceDescription
+    private var foundMessage = Strings.pastMaintenanceFound
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -90,6 +91,7 @@ class PastMaintenancesViewController: UIViewController {
     func setTitleTexts(tab: Int) {
         var title =  Strings.pastMaintenanceOperations
         var message = Strings.pastMaintenanceDescription
+        var foundMessage = Strings.pastMaintenanceFound
         var replaceTitle = Strings.care
         switch tab {
         case 0:
@@ -109,6 +111,8 @@ class PastMaintenancesViewController: UIViewController {
         }
         headTitle = title.replacingOccurrences(of: Strings.care, with: replaceTitle)
         self.message = message.replacingOccurrences(of: Strings.care.lowercaseFirstLetter(), with: replaceTitle.lowercaseFirstLetter())
+        self.foundMessage = foundMessage.replacingOccurrences(of: Strings.care, with: replaceTitle)
+        
     }
     
     func setServiceType(tab: Int) {
@@ -171,8 +175,10 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
             
         case 2:
             let cell: PastServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.foundMessage = foundMessage
             cell.delegate = self
             cell.items = viewModel.items
+            
             return cell
             
         default:

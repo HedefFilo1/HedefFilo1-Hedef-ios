@@ -3391,6 +3391,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>You can view all maintenance procedures for your vehicle below.</string>
         </dict>
         
+        <key>pastMaintenanceFound</key>
+        <dict>
+            <key>tr</key>
+            <string>Geçmiş Bakım İşlemi Bulundu</string>
+            <key>en</key>
+            <string>Past Maintenance Found</string>
+        </dict>
+        
         <key>emailAddressOfRecipient</key>
         <dict>
             <key>tr</key>

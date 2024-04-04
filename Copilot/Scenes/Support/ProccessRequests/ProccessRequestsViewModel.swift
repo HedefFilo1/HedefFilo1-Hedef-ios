@@ -27,7 +27,8 @@ protocol ProccessRequestsViewModelDelegate: BaseViewModelDelegate {
 protocol ProccessRequestsViewModelType: AnyObject {
     var coordinatorDelegate: ProccessRequestsVMCoordinatorDelegate? { get set }
     var delegate: ProccessRequestsViewModelDelegate? { get set }
-    var filteredServices: [ProccessRequestsItem] { get}
+    var items: [ProccessRequest] { get set }
+    var filteredServices: [ProccessRequest] { get}
     var searchText: String { get set }
     func getBack()
     func presentFitlers()
@@ -39,9 +40,20 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
     weak var coordinatorDelegate: ProccessRequestsVMCoordinatorDelegate?
     weak var delegate: ProccessRequestsViewModelDelegate?
     var searchText: String = ""
-    var filteredServices: [ProccessRequestsItem] {
-        return [ProccessRequestsItem(title: "something")]
+    var items: [ProccessRequest] = []
+    
+    var filteredServices: [ProccessRequest] {
+        var notNulls = items.filter({ $0.supplierName != nil })
+        if searchText.isEmpty {
+            return notNulls
+        }
+        let arr = notNulls.filter {
+//            guard let supplier = $0.supplierName else { return false }
+            return ($0.supplierName ?? "").lowercased().contains(searchText.lowercased())
+        }
+        return arr
     }
+    
     func getBack() {
         coordinatorDelegate?.getBack()
     }
@@ -69,8 +81,7 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
                                          message: error.message)
             }
             if let model {
-//                self.items = model
-                print(model)
+                self.items = model
                 self.delegate?.reloadData()
             }
         }

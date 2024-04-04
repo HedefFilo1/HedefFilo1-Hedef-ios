@@ -13,10 +13,11 @@ protocol PastServicesItemsCellDelegate: AnyObject {
 
 class PastServicesItemsCell: UICollectionViewCell, Reusable {
     
+    var foundMessage = Strings.pastMaintenanceFound
     var items: [PastService]? {
         didSet {
             let count = items?.count ?? 0
-            titleLabel.text = "\(count) \(Strings.processRequestFound)"
+            titleLabel.text = "\(count) \(foundMessage)"
             collectionView.reloadData()
         }
     }

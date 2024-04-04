@@ -8,12 +8,12 @@
 import UIKit
 
 protocol ProccessRequestsItemsCellDelegate: AnyObject {
-    func didSelect(item: ProccessRequestsItem)
+    func didSelect(item: ProccessRequest)
 }
 
 class ProccessRequestsItemsCell: UICollectionViewCell, Reusable {
     
-    var items: [ProccessRequestsItem]? {
+    var items: [ProccessRequest]? {
         didSet {
             let count = items?.count ?? 0
             titleLabel.text = "\(count) \(Strings.processRequestFound)"

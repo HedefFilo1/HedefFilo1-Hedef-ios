@@ -27,7 +27,8 @@ protocol ServiceOperationsViewModelDelegate: BaseViewModelDelegate {
 protocol ServiceOperationsViewModelType: AnyObject {
     var coordinatorDelegate: ServiceOperationsVMCoordinatorDelegate? { get set }
     var delegate: ServiceOperationsViewModelDelegate? { get set }
-    var filteredServices: [ServiceOperationsItem] { get}
+    var items: [ServiceOperation] { get set }
+    var filteredServices: [ServiceOperation] { get}
     var searchText: String { get set }
     func getBack()
     func presentFitlers()
@@ -39,9 +40,17 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     weak var coordinatorDelegate: ServiceOperationsVMCoordinatorDelegate?
     weak var delegate: ServiceOperationsViewModelDelegate?
     var searchText: String = ""
-    var filteredServices: [ServiceOperationsItem] {
-        return [ServiceOperationsItem(title: "something")]
+    var items: [ServiceOperation] = []
+    var filteredServices: [ServiceOperation] {
+        if searchText.isEmpty {
+            return items
+        }
+        let arr = items.filter {
+            $0.supplierName.lowercased().contains(searchText.lowercased())
+        }
+        return arr
     }
+    
     func getBack() {
         coordinatorDelegate?.getBack()
     }
@@ -70,8 +79,7 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
                                          message: error.message)
             }
             if let model {
-//                self.items = model
-                print(model)
+                self.items = model
                 self.delegate?.reloadData()
             }
         }

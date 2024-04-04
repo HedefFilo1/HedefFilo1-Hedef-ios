@@ -139,7 +139,7 @@ extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
 }
 
 extension ServiceOperationsViewController: ServicesOperationItemsCellDelegate {
-    func didSelect(item: ServiceOperationsItem) {
+    func didSelect(item: ServiceOperation) {
         viewModel.presentFeedbackRate()
     }
 }

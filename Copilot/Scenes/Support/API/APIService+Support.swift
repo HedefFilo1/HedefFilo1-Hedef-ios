@@ -37,18 +37,18 @@ extension APIService {
         req.start()
     }
     
-    static func getProccessRequests(completion: @escaping ([SupportGuide]?, APIResponseError?) -> Void) {
+    static func getProccessRequests(completion: @escaping ([ProccessRequest]?, APIResponseError?) -> Void) {
         let route = "case?isTask=true&status=SOLVED"
-        let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
+        let req = APIRequest<[ProccessRequest]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetProccessRequests"
         req.log = loggingEnabled || true
         req.completion = completion
         req.start()
     }
     
-    static func getServiceOperations(completion: @escaping ([SupportGuide]?, APIResponseError?) -> Void) {
+    static func getServiceOperations(completion: @escaping ([ServiceOperation]?, APIResponseError?) -> Void) {
         let route = "case?status=SOLVED&appointmentStatus=APPOINTMENT_APPROVED"
-        let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
+        let req = APIRequest<[ServiceOperation]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetServiceOperations"
         req.log = loggingEnabled || true
         req.completion = completion
