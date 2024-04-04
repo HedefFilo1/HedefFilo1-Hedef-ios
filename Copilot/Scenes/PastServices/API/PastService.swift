@@ -81,7 +81,7 @@ struct PastService: Decodable {
     var displayDate: String {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        
+        formmater.locale = Locale(identifier: "tr_TR")
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE"
             return formmater.string(from: date)
