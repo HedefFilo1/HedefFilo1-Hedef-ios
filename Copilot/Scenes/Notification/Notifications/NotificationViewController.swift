@@ -19,11 +19,22 @@ class NotificationsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sortView: UIView!
     @IBOutlet weak var sortLabel: UILabel!
+    @IBOutlet weak var selectAllContainer: UIView!
+    @IBOutlet weak var selectAllView: UIView!
+    @IBOutlet weak var selectAllLineView: UIView!
+    @IBOutlet weak var selectAllLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cancelButton: CPLightButton!
+    @IBOutlet weak var deleteIcon: UIImageView!
     @IBOutlet weak var deleteButton: CPButton!
     
-    private var isSelectable = false
+    private var isSelectable = false {
+        didSet {
+            deleteIcon.tintColor = isSelectable ? .theme: .lightBlack
+        }
+    }
+    
+    private var selectAll = false
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -50,6 +61,12 @@ class NotificationsViewController: UIViewController {
         cancelButton.isHidden = true
         deleteButton.isHidden = true
         deleteButton.isEnabled = true
+        deleteIcon.image = deleteIcon.image?.withRenderingMode(.alwaysTemplate)
+        deleteIcon.tintColor = .lightBlack
+        selectAllContainer.clipsToBounds = true
+        isSelectable = false
+        selectAllContainer.heightConstraint?.constant = 0
+        selectAllLineView.isHidden = true
     }
     
     func applyStyle() {
@@ -58,6 +75,10 @@ class NotificationsViewController: UIViewController {
         sortView.layer.borderWidth = 1
         sortView.layer.borderColor = UIColor.textGrey.cgColor
         sortLabel.apply(.greyS12B700)
+        selectAllView.layer.borderColor = UIColor.borderColor.cgColor
+        selectAllView.layer.borderWidth = 1
+        selectAllView.layer.cornerRadius = 4
+        selectAllLabel.apply(.blackS12R400)
     }
     
     func setTexts() {
@@ -75,6 +96,7 @@ class NotificationsViewController: UIViewController {
     
     @IBAction func didTapDeleteIcon() {
         isSelectable = true
+        selectAllContainer.heightConstraint?.constant = 24
         tableView.reloadData()
     }
     
@@ -86,6 +108,10 @@ class NotificationsViewController: UIViewController {
         }
         cancelButton.isHidden = true
         deleteButton.isHidden = true
+        selectAllContainer.heightConstraint?.constant = 0
+        selectAllView.layer.borderColor = UIColor.borderColor.cgColor
+        selectAllLineView.isHidden = true
+        
         tableView.reloadData()
     }
     
@@ -100,6 +126,21 @@ class NotificationsViewController: UIViewController {
             }
         }
         viewModel.deleteNotifications(ids: ids)
+    }
+    
+    @IBAction func didTapSelectAll() {
+        selectAll = !selectAll
+        
+        let color: UIColor = selectAll ? .theme: .borderColor
+        selectAllView.layer.borderColor = color.cgColor
+        selectAllLineView.isHidden = !selectAll
+        
+        guard let items = viewModel.items else { return }
+        for (index, item) in items.enumerated() {
+            viewModel.items?[index].selected = selectAll
+        }
+        setSelectedItemsCount()
+        tableView.reloadData()
     }
     
     @IBAction func didTapSort() {
