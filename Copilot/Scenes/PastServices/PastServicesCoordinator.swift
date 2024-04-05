@@ -70,6 +70,7 @@ extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
     func presentSort(delegate: PastServicesSortViewControllerDelegate) {
         let controller: PastServicesSortViewController = storyboard.instantiateViewController()
         let viewModel = PastServicesSortViewModel()
+        
         controller.viewModel = viewModel
         controller.delegate = delegate
         viewModel.coordinatorDelegate = self
