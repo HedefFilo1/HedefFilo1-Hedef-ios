@@ -228,6 +228,10 @@
 		894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC922B0B707900D369E9 /* GetProfile.swift */; };
 		894CEC952B0B7B0F00D369E9 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC942B0B7B0F00D369E9 /* Success.swift */; };
 		894CEC972B0B7FFA00D369E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CEC962B0B7FFA00D369E9 /* Vehicle.swift */; };
+		8950B7382BBFC45600F269AF /* PastServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950B7372BBFC45600F269AF /* PastServiceDetailViewModel.swift */; };
+		8950B73A2BBFC45C00F269AF /* PastServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950B7392BBFC45C00F269AF /* PastServiceDetailViewController.swift */; };
+		8950B73F2BBFC4DA00F269AF /* PastServiceDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950B73D2BBFC4DA00F269AF /* PastServiceDetailCell.swift */; };
+		8950B7402BBFC4DA00F269AF /* PastServiceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8950B73E2BBFC4DA00F269AF /* PastServiceDetailCell.xib */; };
 		89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */; };
 		89513E632B91C19A00B05199 /* AccidentGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */; };
 		89513E662B95120200B05199 /* APIService+CreateCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E652B95120200B05199 /* APIService+CreateCase.swift */; };
@@ -791,6 +795,10 @@
 		894CEC942B0B7B0F00D369E9 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
 		894CEC962B0B7FFA00D369E9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		894E20DA2AC6A51900F69C27 /* Copilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Copilot.entitlements; sourceTree = "<group>"; };
+		8950B7372BBFC45600F269AF /* PastServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServiceDetailViewModel.swift; sourceTree = "<group>"; };
+		8950B7392BBFC45C00F269AF /* PastServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServiceDetailViewController.swift; sourceTree = "<group>"; };
+		8950B73D2BBFC4DA00F269AF /* PastServiceDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastServiceDetailCell.swift; sourceTree = "<group>"; };
+		8950B73E2BBFC4DA00F269AF /* PastServiceDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastServiceDetailCell.xib; sourceTree = "<group>"; };
 		89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewModel.swift; sourceTree = "<group>"; };
 		89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentGuideViewController.swift; sourceTree = "<group>"; };
 		89513E652B95120200B05199 /* APIService+CreateCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+CreateCase.swift"; sourceTree = "<group>"; };
@@ -1351,6 +1359,7 @@
 				8916C2542BB5DF560006B2E9 /* PastServicesCoordinator.swift */,
 				8916C2562BB5DF880006B2E9 /* PastServicesPageController.swift */,
 				8916C2582BB5E2000006B2E9 /* Maintenance */,
+				8950B7362BBFC44200F269AF /* Detail */,
 				89F68CEA2BBA834E00B79B42 /* Filter */,
 				89F68CEF2BBAA92900B79B42 /* Sort */,
 			);
@@ -2158,6 +2167,33 @@
 				894CEC8F2B07A68600D369E9 /* SearchHeaderCell.xib */,
 			);
 			path = SearchHeader;
+			sourceTree = "<group>";
+		};
+		8950B7362BBFC44200F269AF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8950B7372BBFC45600F269AF /* PastServiceDetailViewModel.swift */,
+				8950B7392BBFC45C00F269AF /* PastServiceDetailViewController.swift */,
+				8950B73B2BBFC4A100F269AF /* Cell */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8950B73B2BBFC4A100F269AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8950B73C2BBFC4C800F269AF /* Detail */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8950B73C2BBFC4C800F269AF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8950B73D2BBFC4DA00F269AF /* PastServiceDetailCell.swift */,
+				8950B73E2BBFC4DA00F269AF /* PastServiceDetailCell.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		89513E5F2B91C15200B05199 /* AccidentGuide */ = {
@@ -4095,6 +4131,7 @@
 				89DF05482BACD18B00C8B37E /* ServiceOperationsSearchCell.xib in Resources */,
 				89B190FE2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,
+				8950B7402BBFC4DA00F269AF /* PastServiceDetailCell.xib in Resources */,
 				896BAE1B2BA8E727006D809E /* SupportItemCell.xib in Resources */,
 				8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */,
 				896CB3562AD5D46D0048025A /* VehicleInfoCell.xib in Resources */,
@@ -4301,6 +4338,7 @@
 				8934D5152B10FE0900CD0CA7 /* HGSCell.swift in Sources */,
 				8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */,
 				89B03B8D2BB2184D007B4A72 /* RequestsDropDownList.swift in Sources */,
+				8950B73A2BBFC45C00F269AF /* PastServiceDetailViewController.swift in Sources */,
 				89FC51892B6A6CCF00AD37D4 /* MaintenanceConfirmViewController.swift in Sources */,
 				8934891C2B9FAC88009A3FBB /* ContractAgreementViewModel.swift in Sources */,
 				896BAE022BA835F5006D809E /* RequestDetailViewModel.swift in Sources */,
@@ -4330,6 +4368,7 @@
 				89DF070C2AF0F18000892B1D /* StandingsViewModel.swift in Sources */,
 				89C55DF22AC4A83400C3066A /* Storyboards.swift in Sources */,
 				89F65E022BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift in Sources */,
+				8950B73F2BBFC4DA00F269AF /* PastServiceDetailCell.swift in Sources */,
 				8934890D2B9E3E9E009A3FBB /* SettingsCoordinator.swift in Sources */,
 				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
 				893259982B9A721F001E4262 /* ReqFlw4Stp3PlateViewModel.swift in Sources */,
@@ -4419,6 +4458,7 @@
 				892A8D0B2AC4E6600020C1C4 /* ScrollTouchHandler.swift in Sources */,
 				89DF05422BACD14400C8B37E /* ServiceOperationsViewModel.swift in Sources */,
 				89E0459B2B04FAD200745E73 /* YourDocumentsTabCell.swift in Sources */,
+				8950B7382BBFC45600F269AF /* PastServiceDetailViewModel.swift in Sources */,
 				8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */,
 				8934D5112B10FD7D00CD0CA7 /* HGSViewController.swift in Sources */,
 				892A8D0D2AC4E6FF0020C1C4 /* CPLightButton.swift in Sources */,
@@ -4775,7 +4815,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 129;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4809,7 +4849,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 129;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4903,7 +4943,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 129;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -4991,7 +5031,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 129;
+				CURRENT_PROJECT_VERSION = 130;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

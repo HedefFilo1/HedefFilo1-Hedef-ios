@@ -608,5 +608,9 @@ extension Strings {
     static var showUnread: String {
         return localized(string: "showUnread")
     }
+    
+    static var detail: String {
+        return localized(string: "detail")
+    }
 
 }

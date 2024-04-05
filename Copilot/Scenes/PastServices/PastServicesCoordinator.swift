@@ -41,7 +41,8 @@ class PastServicesCoordinator: Coordinator {
 
 extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
                                    PastServicesFilterVMCoordinatorDelegate,
-                                   PastServicesSortVMCoordinatorDelegate {
+                                   PastServicesSortVMCoordinatorDelegate,
+                                   PastServiceDetailVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -73,5 +74,15 @@ extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
         controller.delegate = delegate
         viewModel.coordinatorDelegate = self
         navigationController.present(controller, animated: true)
+    }
+    
+    func goToPastServiceDetail(service: PastService, title: String) {
+        let controller: PastServiceDetailViewController = storyboard.instantiateViewController()
+        let viewModel = PastServiceDetailViewModel()
+        controller.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        viewModel.title = title
+        viewModel.service = service
+        navigationController.pushViewController(controller, animated: true)
     }
 }

@@ -27,6 +27,7 @@ class PastMaintenancesViewController: UIViewController {
     private var headTitle = Strings.pastMaintenanceOperations
     private var message = Strings.pastMaintenanceDescription
     private var foundMessage = Strings.pastMaintenanceFound
+    var currentTab = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -136,6 +137,7 @@ class PastMaintenancesViewController: UIViewController {
     
     @IBAction func didTabOnTap(_ sender: UIView) {
         let tag = sender.tag
+        currentTab = tag
         setButtonsColor(tab: tag)
         setTitleTexts(tab: tag)
         viewModel.items = []
@@ -221,7 +223,23 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
 extension PastMaintenancesViewController: PastServicesSearchCellDelegate, PastServicesItemsCellDelegate {
     
     func didSelect(item: PastService) {
-        
+        var title = Strings.care
+        switch currentTab {
+        case 0:
+            title = Strings.care
+            
+        case 1:
+            title = Strings.fault
+            
+        case 2:
+            title = Strings.lastik
+            
+        case 3:
+            title = Strings.accidentTab
+        default:
+            break
+        }
+        viewModel.goToPastServiceDetail(service: item, title: title)
     }
     
     func didTapSort() {

@@ -11,6 +11,7 @@ protocol PastMaintenancesVMCrdinatorDelegate: AnyObject {
     func getBack()
     func presentSort(delegate: PastServicesSortViewControllerDelegate)
     func presentFilters(services: [PastService], delegate: PastServicesFilterViewControllerDelegate)
+    func goToPastServiceDetail(service: PastService, title: String)
 }
 
 protocol PastMaintenancesViewModelDelegate: BaseViewModelDelegate {
@@ -27,6 +28,7 @@ protocol PastMaintenancesViewModelType: AnyObject {
     func getServices()
     func presentFilters()
     func presentSort()
+    func goToPastServiceDetail(service: PastService, title: String)
 }
 
 class PastMaintenancesViewModel: PastMaintenancesViewModelType {
@@ -63,6 +65,10 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     
     func presentFilters() {
         coordinatorDelegate?.presentFilters(services: items ?? [], delegate: self)
+    }
+    
+    func goToPastServiceDetail(service: PastService, title: String) {
+        coordinatorDelegate?.goToPastServiceDetail(service: service, title: title)
     }
 }
 
