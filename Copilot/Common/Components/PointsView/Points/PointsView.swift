@@ -92,7 +92,7 @@ class PointsView: UIView {
         if progressConstraint.constant < 40 {
             progressConstraint.constant = 45
         }
-        UIView.animate(withDuration: 3, delay: 0) {
+        UIView.animate(withDuration: 0, delay: 0) {
             self.progressContainerView.layoutIfNeeded()
             self.layoutIfNeeded()
         }

@@ -78,7 +78,7 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
 //        formmater.timeZone = TimeZone(identifier: "UTC")
-//        formmater.locale = Locale(identifier: "tr_TR")
+        formmater.locale = Locale(identifier: "tr_TR")
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             return date
         }
@@ -89,11 +89,11 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
 //        formmater.timeZone = TimeZone(identifier: "UTC")
-//        formmater.locale = Locale(identifier: "tr_TR")
+        formmater.locale = Locale(identifier: "tr_TR")
         
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE HH:mm"
-//            formmater.locale = Locale(identifier: "tr_TR")
+            formmater.locale = Locale(identifier: "tr_TR")
             return formmater.string(from: date)
         }
         return ""
@@ -103,7 +103,7 @@ struct Case: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
 //        formmater.timeZone = TimeZone(identifier: "UTC")
-//        formmater.locale = Locale(identifier: "tr_TR")
+        formmater.locale = Locale(identifier: "tr_TR")
         // 2023-12-06T09:00:00.000Z
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"

@@ -11,7 +11,7 @@ import UIKit
 extension APIService {
     
     static func getPastServices(type: String, completion: @escaping ([PastService]?, APIResponseError?) -> Void) {
-        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date()) ?? Date()
+        let date = Calendar.current.date( byAdding: .day, value: -180, to: Date()) ?? Date()
         let startDate = date.getServerDate()
         let route = "case?recordTypes=\(type)&startDate=\(startDate)"
         let req = APIRequest<[PastService]>(route: route, method: .get, hasToken: true)
