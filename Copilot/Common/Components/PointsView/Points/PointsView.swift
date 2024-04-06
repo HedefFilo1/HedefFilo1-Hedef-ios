@@ -8,12 +8,30 @@
 import UIKit
 
 class PointsView: UIView {
+    var currentPoint = 0
+    
     var barPoints: [BarPoint]? {
         didSet {
             guard let barPoints, barPoints.count > 0 else { return }
             addPointView()
             //            startAnimate()
         }
+    }
+    
+    var maxPoint: Int {
+        if let barPoints, barPoints.count > 0 {
+            let max = barPoints.max(by: { $0.point < $1.point })
+            var value = max?.point ?? 0
+            if currentPoint > value {
+                value = currentPoint
+            }
+            return value
+        }
+        return 200
+    }
+    
+    var pointFrameRate: CGFloat {
+        return pointsContainer.frame.width / CGFloat(maxPoint)
     }
     
     override init(frame: CGRect) {
@@ -65,7 +83,12 @@ class PointsView: UIView {
     
     func startAnimate() {
         progressConstraint.constant = 0
-        progressConstraint.constant = progressContainerView.frame.width * 0.45
+        var point = pointFrameRate * CGFloat(currentPoint) + 40
+        if point < 40 {
+            point = 40
+        }
+        progressConstraint.constant = point
+        
         if progressConstraint.constant < 40 {
             progressConstraint.constant = 45
         }
@@ -81,13 +104,12 @@ class PointsView: UIView {
         let width = pointsContainer.frame.width
         let count = barPoints.count
         let distance = width/CGFloat(count - 1)
-        var lastLeading: CGFloat = -40
         
         for item in barPoints {
             let pointView = PointView(frame: .zero)
             pointsContainer.addSubview(pointView)
-            pointView.align(top: 10, leading: lastLeading, bottom: 0, width: 70)
-            lastLeading += distance
+            let leading = CGFloat(item.point) * pointFrameRate
+            pointView.align(top: 10, leading: leading - 40, bottom: 0, width: 70)
             pointView.titleLabel.text = item.name
             pointView.valueLabel.text = "\(item.point) \(Strings.point)"
         }

@@ -16,6 +16,7 @@ class PointsCell: UICollectionViewCell, Reusable {
     var totalPoints: Int = 0 {
         didSet {
             setPointsLabel(point: totalPoints)
+            pointsView.currentPoint = totalPoints
         }
     }
     
