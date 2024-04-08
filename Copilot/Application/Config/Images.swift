@@ -102,6 +102,10 @@ struct Images {
         return UIImage(named: "percentIcon") ?? UIImage()
     }
     
+    static var percentRedIcon: UIImage {
+        return UIImage(named: "percentRedIcon") ?? UIImage()
+    }
+    
     static var settingsIcon: UIImage {
         return UIImage(named: "settingsIcon") ?? UIImage()
     }
@@ -180,5 +184,17 @@ struct Images {
     
     static var whiteDeleteIcon: UIImage {
         return UIImage(named: "whiteDeleteIcon") ?? UIImage()
+    }
+    
+    static var vehicleReturnIcon: UIImage {
+        return UIImage(named: "vehicleReturnIcon") ?? UIImage()
+    }
+    
+    static var cloudsIcon: UIImage {
+        return UIImage(named: "cloudsIcon") ?? UIImage()
+    }
+    
+    static var servisRandevuIcon: UIImage {
+        return UIImage(named: "servisRandevuIcon") ?? UIImage()
     }
 }

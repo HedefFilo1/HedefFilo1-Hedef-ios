@@ -14,6 +14,7 @@ class NotificationCell: UITableViewCell, Reusable {
             unreadView.isHidden = item?.isRead ?? false
             notifLabel.text = item?.body
             timeLabel.text = item?.displayDate
+            iconImageView.image = item?.type.image
         }
     }
     
