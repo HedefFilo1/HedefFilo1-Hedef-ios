@@ -200,7 +200,7 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
             
         case 2:
             let count = viewModel.items?.count ?? 0
-            height = CGFloat(count * 168)
+            height = CGFloat(count * 168) + 30
         default:
             break
         }

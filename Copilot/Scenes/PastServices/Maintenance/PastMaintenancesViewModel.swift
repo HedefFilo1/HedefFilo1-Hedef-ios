@@ -44,7 +44,20 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     
     func getServices() {
         Loading.shared.show(presented: true)
-        APIService.getPastServices(type: type.rawValue) { [weak self] model, error in
+        var value = ""
+        switch type {
+        case .maintenance:
+             value = "MAINTENANCE"
+        case .tireChange:
+            value = "TIRE"
+        case .mechanicalFailure:
+            value = "FAILURE"
+        case .damage:
+            value = "DAMAGE"
+        case .none:
+            value = ""
+        }
+        APIService.getPastServices(type: value) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
