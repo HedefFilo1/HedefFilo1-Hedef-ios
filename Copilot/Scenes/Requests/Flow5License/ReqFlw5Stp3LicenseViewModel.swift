@@ -91,6 +91,7 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
                     deliveryPersonPhone: String,
                     deliveryAddress: String) {
         
+        let phone = deliveryPersonPhone.components(separatedBy: .whitespaces).joined()
         Loading.shared.show()
         APIService.createLicenseCase(licensePlate: licensePlate,
                                      note: note,
@@ -98,7 +99,7 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
                                      description: description,
                                      nameSurname: nameSurname,
                                      deliveryPersonName: deliveryPersonName,
-                                     deliveryPersonPhone: deliveryPersonPhone,
+                                     deliveryPersonPhone: phone,
                                      deliveryAddress: deliveryAddress,
                                      fileInfo: uploadedFileInfo) { [weak self] model, error in
             Loading.shared.hide()

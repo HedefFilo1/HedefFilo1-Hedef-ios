@@ -112,6 +112,10 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                     deliveryPersonPhone: String,
                     city: String,
                     deliveryAddress: String) {
+        
+        let branchPhone = trafficBranchPhone.components(separatedBy: .whitespaces).joined()
+        let phone = deliveryPersonPhone.components(separatedBy: .whitespaces).joined()
+        let parkPhone = carParkPhone.components(separatedBy: .whitespaces).joined()
         Loading.shared.show()
         APIService.createVehicleCase(licensePlate: licensePlate,
                                      note: note,
@@ -119,11 +123,11 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                                      impoundCarReason: impoundCarReason,
                                      description: description,
                                      trafficBranchName: trafficBranchName,
-                                     trafficBranchPhone: trafficBranchPhone,
+                                     trafficBranchPhone: branchPhone,
                                      carParkName: carParkName,
-                                     carParkPhone: carParkPhone,
+                                     carParkPhone: parkPhone,
                                      deliveryPersonName: deliveryPersonName,
-                                     deliveryPersonPhone: deliveryPersonPhone,
+                                     deliveryPersonPhone: phone,
                                      city: city,
                                      deliveryAddress: deliveryAddress,
                                      fileInfo: uploadedFileInfo) { [weak self] model, error in

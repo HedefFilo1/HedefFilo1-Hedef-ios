@@ -103,13 +103,13 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                     receiverPersonEmail: String,
                     ogsHgsType: String,
                     deliveryAddress: String) {
-        
+        let phone = receiverPersonPhone.components(separatedBy: .whitespaces).joined()
         Loading.shared.show()
         APIService.createHGSCase(licensePlate: licensePlate,
                                  note: note,
                                  nameSurname: nameSurname,
                                  receiverPersonName: receiverPersonName,
-                                 receiverPersonPhone: receiverPersonPhone,
+                                 receiverPersonPhone: phone,
                                  receiverPersonEmail: receiverPersonEmail,
                                  ogsHgsType: ogsHgsType,
                                  deliveryAddress: deliveryAddress,
