@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,13 +48,26 @@
                             <constraint firstItem="VVy-NC-bGX" firstAttribute="centerX" secondItem="feX-fu-u61" secondAttribute="centerX" id="uJO-df-LiH"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z22-5g-Yle">
+                        <rect key="frame" x="235" y="-2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="O4c-Ri-ffF"/>
+                            <constraint firstAttribute="height" constant="40" id="dNZ-8G-ONI"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="didTapDelete" destination="gTV-IL-0wX" eventType="touchUpInside" id="Faa-6A-pld"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Zqa-9C-ETK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Yo-wB-4dG"/>
                 <constraint firstAttribute="trailing" secondItem="Zqa-9C-ETK" secondAttribute="trailing" id="PuC-jh-jNY"/>
+                <constraint firstItem="z22-5g-Yle" firstAttribute="centerY" secondItem="feX-fu-u61" secondAttribute="centerY" id="UR5-Gy-1if"/>
                 <constraint firstAttribute="trailing" secondItem="feX-fu-u61" secondAttribute="trailing" constant="6" id="WQD-V2-ylg"/>
+                <constraint firstItem="z22-5g-Yle" firstAttribute="centerX" secondItem="feX-fu-u61" secondAttribute="centerX" id="XdT-hK-yJa"/>
                 <constraint firstItem="Zqa-9C-ETK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eMS-aj-15n"/>
                 <constraint firstAttribute="bottom" secondItem="Zqa-9C-ETK" secondAttribute="bottom" id="pf6-g3-f8s"/>
                 <constraint firstItem="feX-fu-u61" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="vLP-1V-fCs"/>

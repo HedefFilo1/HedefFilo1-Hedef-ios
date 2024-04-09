@@ -20,6 +20,12 @@ class AccFlw1Stp4ReportViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var button: CPButton!
     
+    private var selectedFiles: [UIImage?] = [
+        nil, nil, nil, nil, nil
+    ]
+    
+    private var currentIndex = 1
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -99,8 +105,16 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if let image = selectedFiles[0] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = 0
+                return cell
+            } else {
+                let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            }
             
         case 2:
             if indexPath.item == 0 {
@@ -109,8 +123,16 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if let image = selectedFiles[1] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = 1
+                return cell
+            } else {
+                let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            }
             
         case 3:
             if indexPath.item == 0 {
@@ -119,8 +141,16 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if let image = selectedFiles[2] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = 2
+                return cell
+            } else {
+                let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            }
             
         case 4:
             if indexPath.item == 0 {
@@ -129,8 +159,16 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if let image = selectedFiles[3] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = 3
+                return cell
+            } else {
+                let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            }
             
         case 5:
             if indexPath.item == 0 {
@@ -139,8 +177,16 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if let image = selectedFiles[4] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = 4
+                return cell
+            } else {
+                let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            }
         
         default:
             return UICollectionViewCell()
@@ -150,15 +196,19 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var height: CGFloat = 353
-        switch indexPath.section {
-        case 0:
-         height = 191
-            
-        case 1:
-            height = indexPath.item == 0 ? 17: 120
-            
-        default:
-            height = indexPath.item == 0 ? 17: 32
+        
+        if indexPath.section == 0 {
+            return CGSize(width: collectionView.frame.width-32, height: 191)
+        }
+        
+        if indexPath.item == 0 {
+            return CGSize(width: collectionView.frame.width-32, height: 27)
+        }
+        
+        if selectedFiles[indexPath.section - 1] != nil {
+            height = 120
+        } else {
+            height = 37
         }
         
         return CGSize(width: collectionView.frame.width-32, height: height)
@@ -174,12 +224,19 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? UploadPhotoCell {
+            currentIndex = indexPath.section - 1
            didTapSendFile()
         }
     }
 }
 
-extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, AccFlw1Stp4ReportImageCellDelegate {
+   
+    func didTapDelete(index: Int) {
+        selectedFiles[index] = nil
+        collectionView.reloadData()
+    }
+    
     
     func didTapSendFile() {
         //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
@@ -195,6 +252,8 @@ extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate, UIIma
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        selectedFiles[currentIndex] = tempImage
+        collectionView.reloadData()
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
 //            fileNameLabel.text = url.lastPathComponent
 //            showFileNameView()

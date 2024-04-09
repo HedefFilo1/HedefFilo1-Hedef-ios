@@ -78,6 +78,7 @@ class PdfViewerViewController: UIViewController {
     
     @IBAction func didTapDowndload(_ sender: UIButton) {
         if viewModel.document == nil, let url = URL(string: CodeStrings.vehicleGuidPdfUrl) {
+            print(url.absoluteString)
             showShareView(url: url)
         } else {
             viewModel.downloadDoc()
@@ -94,6 +95,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
 
     func loadDocument() {
         let string = CodeStrings.vehicleGuidPdfUrl
+        print(string)
         guard let url = URL(string: string) else {
             return
         }
