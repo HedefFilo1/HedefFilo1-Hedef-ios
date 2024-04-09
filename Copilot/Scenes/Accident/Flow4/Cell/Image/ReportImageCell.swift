@@ -7,15 +7,19 @@
 
 import UIKit
 
+protocol ReportImageCellDelegate: AnyObject {
+    func didTapDelete(at index: Int)
+}
+
 class ReportImageCell: UICollectionViewCell, Reusable {
-    
+    weak var delegate: ReportImageCellDelegate?
+    var index = 0
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var deleteView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
-        
     }
     
     func setup() {
@@ -24,4 +28,7 @@ class ReportImageCell: UICollectionViewCell, Reusable {
         deleteView.layer.borderColor = UIColor.black.cgColor
     }
 
+    @IBAction func didTapDelete() {
+        delegate?.didTapDelete(at: index)
+    }
 }

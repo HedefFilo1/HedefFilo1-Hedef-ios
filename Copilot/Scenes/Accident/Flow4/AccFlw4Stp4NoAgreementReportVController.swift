@@ -19,6 +19,8 @@ class AccFlw4Stp4NoAgreementReportVController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var selectedFiles = [UIImage]()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -73,7 +75,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 3
+            return selectedFiles.count
         }
         
         return 1
@@ -88,12 +90,16 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
             
         case 1:
             let cell: ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.imageView.image = selectedFiles[indexPath.item]
+            cell.index = indexPath.item
+            cell.delegate = self
           return cell
             
         case 2:
             
             let cell: AccFlw4SelectPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.uploadLabel.text = selectedFiles.count > 0 ? Strings.uploadMorePhotos: Strings.uploadPhoto
             return cell
         
         default:
@@ -150,7 +156,15 @@ extension AccFlw4Stp4NoAgreementReportVController: AccFlw4SelectPhotoCellDelegat
     }
 }
 
-extension AccFlw4Stp4NoAgreementReportVController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension AccFlw4Stp4NoAgreementReportVController:
+    UINavigationControllerDelegate,
+    UIImagePickerControllerDelegate,
+    ReportImageCellDelegate {
+    
+    func didTapDelete(at index: Int) {
+        selectedFiles.remove(at: index)
+        collectionView.reloadData()
+    }
     
     func didTapSendFile() {
         //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
@@ -166,6 +180,9 @@ extension AccFlw4Stp4NoAgreementReportVController: UINavigationControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        selectedFiles.append(tempImage)
+        collectionView.reloadData()
+        
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
 //            fileNameLabel.text = url.lastPathComponent
 //            showFileNameView()
