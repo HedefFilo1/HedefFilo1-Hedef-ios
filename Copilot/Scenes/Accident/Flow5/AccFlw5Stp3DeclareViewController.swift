@@ -18,6 +18,7 @@ class AccFlw5Stp3DeclareVController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    private var selectedFiles = [UIImage]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -74,7 +75,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 2 {
-            return 3
+            return selectedFiles.count
         }
         
         return 1
@@ -93,6 +94,9 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
             
         case 2:
             let cell: ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.imageView.image = selectedFiles[indexPath.item]
+            cell.index = indexPath.item
+            cell.delegate = self
           return cell
             
         case 3:
@@ -157,8 +161,14 @@ extension AccFlw5Stp3DeclareVController: AccFlw5Stp3ButtonsCellDelegate {
     }
 }
 
-extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate,
+                                         UIImagePickerControllerDelegate,
+                                         ReportImageCellDelegate {
     
+    func didTapDelete(at index: Int) {
+        selectedFiles.remove(at: index)
+        collectionView.reloadData()
+    }
     func didTapSendFile() {
         //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
         //        documentPicker.delegate = self
@@ -173,6 +183,9 @@ extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate, UIImage
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        selectedFiles.append(tempImage)
+        collectionView.reloadData()
+        
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
 //            fileNameLabel.text = url.lastPathComponent
 //            showFileNameView()
