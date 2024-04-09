@@ -149,12 +149,45 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
 extension AccFlw5Stp3DeclareVController: AccFlw5Stp3ButtonsCellDelegate {
    
     func didTapUpload() {
-        
+        didTapSendFile()
     }
     
     func didTapContinue() {
         viewModel.goToAccFlow5Step4()
     }
+}
+
+extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func didTapSendFile() {
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+//            fileNameLabel.text = url.lastPathComponent
+//            showFileNameView()
+            //                fileType = url.pathExtension
+        }
+        picker.dismiss(animated: true)
+//        guard let data = tempImage.pngData() else { return }
+
+//        viewModel.sendFile(data: data)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AccFlw5Stp3DeclareVController: AccFlw5Stp3DeclareViewModelDelegate {

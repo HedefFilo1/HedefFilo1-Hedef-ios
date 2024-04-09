@@ -173,8 +173,43 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let cell = collectionView.cellForItem(at: indexPath) as? UploadPhotoCell {
+           didTapSendFile()
+        }
     }
+}
+
+extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func didTapSendFile() {
+        //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        //        documentPicker.delegate = self
+        //        present(documentPicker, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+//            fileNameLabel.text = url.lastPathComponent
+//            showFileNameView()
+            //                fileType = url.pathExtension
+        }
+        picker.dismiss(animated: true)
+//        guard let data = tempImage.pngData() else { return }
+
+//        viewModel.sendFile(data: data)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AccFlw1Stp4ReportViewController: AccFlw1Stp4ReportViewModelDelegate {
