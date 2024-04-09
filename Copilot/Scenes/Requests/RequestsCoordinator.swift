@@ -16,7 +16,7 @@ class RequestsCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     let storyboard = UIStoryboard(storyboard: .requests)
-    weak var delegate: VehicleCoordinatorDelegate?
+    weak var delegate: RequestsCoordinatorDelegate?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

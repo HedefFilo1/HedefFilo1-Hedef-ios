@@ -10,6 +10,7 @@ import Foundation
 protocol VehicleInfoViewModelCoordinatorDelegate: AnyObject {
     func goToDocument(document: Document)
     func goToVehicleGuide()
+    func goToRequests()
     
 }
 
@@ -26,6 +27,7 @@ protocol VehicleInfoViewModelType: AnyObject {
     func getDocuments()
     func getDocument(document: Document)
     func goToVehicleGuide()
+    func goToRequests()
 }
 
 class VehicleInfoViewModel: VehicleInfoViewModelType {
@@ -59,6 +61,10 @@ class VehicleInfoViewModel: VehicleInfoViewModelType {
                                          message: error.message)
             }
         }
+    }
+    
+    func goToRequests() {
+        coordinatorDelegate?.goToRequests()
     }
 }
 

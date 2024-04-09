@@ -48,7 +48,9 @@ class VehicleCoordinator: Coordinator {
     }
 }
 
-extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
+extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate,
+                              RequestsCoordinatorDelegate {
+    
     func goToDocument(document: Document) {
         
         let viewController: PdfViewerViewController = storyboard.instantiateViewController()
@@ -63,6 +65,17 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate {
         viewController.viewModel = PdfViewerViewModel()
         viewController.viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToRequests() {
+        let coordinator = RequestsCoordinator(navigationController: navigationController)
+        coordinator.delegate = self
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
+    
+    func didFinish(from coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
     }
 }
 

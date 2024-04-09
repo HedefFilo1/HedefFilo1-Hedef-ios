@@ -140,7 +140,7 @@ extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate, VehicleInfo
     }
     
     func didTapRequests() {
-        
+        viewModel.goToRequests()
     }
     
     func didTapDownload(document: Document) {
