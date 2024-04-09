@@ -21,7 +21,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
         didSet {
             titleLabel.text = request?.recordType
             statusLabel.text = request?.status
-            statusView.backgroundColor = item?.status.color
+            statusView.backgroundColor = request?.statusEnum.color
         }
     }
 
