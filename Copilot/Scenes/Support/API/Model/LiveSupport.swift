@@ -9,5 +9,4 @@ import Foundation
 
 struct LiveSupport: Decodable {
     let url: String
-    let postData: String
 }

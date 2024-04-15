@@ -57,8 +57,7 @@ class LiveSupportViewController: UIViewController {
 
 extension LiveSupportViewController: LiveSupportViewModelDelegate {
     func loadWebView() {
-        guard let string = viewModel.model?.url,
-              let data = viewModel.model?.postData else { return }
+        guard let string = viewModel.model?.url else { return }
                 
         guard let url = URL(string: string) else {
             return
