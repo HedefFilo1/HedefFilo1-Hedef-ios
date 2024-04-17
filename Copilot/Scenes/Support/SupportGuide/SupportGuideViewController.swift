@@ -91,6 +91,21 @@ extension SupportGuideViewController: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = viewModel.items?[indexPath.item] {
             viewModel.goToSupportGuideDetail(item: item)
+            switch indexPath.item { 
+            case 0:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_GUIDE_VEHICLE_USER_MANUAL")
+            case 1:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_GUIDE_VEHICLE_RETURN_GUIDE")
+            case 2:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_GUIDE_WARNING_LIGHTS_GUIDE")
+                
+            case 3:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_GUIDE_ACCIDENT_GUIDE")
+            case 4:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_GUIDE_PRODUCT_CATALOG")
+            default:
+                break
+            }
         }
     }
 }

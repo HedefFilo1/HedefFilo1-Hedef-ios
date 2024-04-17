@@ -121,6 +121,8 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                                          message: error.message)
             } else {
                 APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
+                
+                APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_MAKE_SERVICE_APPOINTMENT")
                 self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: date, accidentType: accidentType)
             }
         }

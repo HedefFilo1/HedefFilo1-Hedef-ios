@@ -92,6 +92,40 @@ extension FAQViewController: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = viewModel.items?[indexPath.item] {
             viewModel.goToFAQQuestion(item: item)
+            switch indexPath.item {
+            case 0:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_CONDITION_LEASE")
+               
+            case 1:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_VEHICLE_OPERATION")
+                
+            case 2:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_HGS")
+                
+            case 3:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_MAINTENANCE_BREAKDOWN")
+                
+            case 4:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_ACCIDENT_DAMAGE")
+                
+            case 5:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_TIRE")
+                
+            case 6:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_SUBSTITUTE_VEHICLE")
+                
+            case 7:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_HEDEFNET_COPILOT")
+                
+            case 8:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_ACCOUNTING_TRANSACTION")
+                
+            case 9:
+                APIService.addUserAction(pageName: "Help", actionName: "HELP_FAQ_VEHICLE_RETURN_PROCEDURES")
+                
+            default:
+                break
+            }
         }
     }
 }

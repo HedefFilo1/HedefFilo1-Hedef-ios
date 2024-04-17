@@ -77,10 +77,12 @@ class SupportViewController: UIViewController {
     }
 
     @IBAction func didTapLiveSupport() {
+        APIService.addUserAction(pageName: "Help", actionName: "HELP_WEBCHAT")
         viewModel.goToLiveSupport()
     }
     
     @IBAction func didTapCall() {
+        APIService.addUserAction(pageName: "Help", actionName: "HELP_CALL_SOLUTION_CENTER")
         guard let url = URL(string: CodeStrings.callSupportCenterPhone) else {
         return
         }

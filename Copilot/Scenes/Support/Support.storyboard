@@ -580,11 +580,29 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8l-gr-SyR">
                                 <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-cL-4k0">
+                                        <rect key="frame" x="24" y="27" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="AXI-rA-bKe"/>
+                                            <constraint firstAttribute="width" constant="24" id="Px5-Mj-Emp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97x-5X-Adz">
+                                        <rect key="frame" x="16" y="19" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1Pa-0l-dOC"/>
+                                            <constraint firstAttribute="width" constant="40" id="NVp-nn-9jj"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapBack" destination="dZc-Sa-Ti8" eventType="touchUpInside" id="PhO-jH-cjG"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k9-Zm-mL1">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geri Bildirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-n7-qpF">
-                                                <rect key="frame" x="150" y="24" width="93" height="21"/>
+                                                <rect key="frame" x="150" y="24" width="93.333333333333314" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -637,8 +655,11 @@
                                     <constraint firstAttribute="trailing" secondItem="Qxs-3S-BUp" secondAttribute="trailing" constant="24" id="0Gq-TJ-VDr"/>
                                     <constraint firstItem="fj7-dO-lnS" firstAttribute="top" secondItem="GHC-az-Igd" secondAttribute="bottom" constant="14" id="1Ga-oD-Xls"/>
                                     <constraint firstItem="Qxs-3S-BUp" firstAttribute="leading" secondItem="a8l-gr-SyR" secondAttribute="leading" constant="24" id="1RN-Mj-JOi"/>
+                                    <constraint firstItem="Zqk-cL-4k0" firstAttribute="top" secondItem="a8l-gr-SyR" secondAttribute="top" constant="27" id="8NQ-YQ-RUg"/>
                                     <constraint firstAttribute="trailing" secondItem="GHC-az-Igd" secondAttribute="trailing" id="AK7-4y-sEY"/>
                                     <constraint firstItem="9k9-Zm-mL1" firstAttribute="top" secondItem="a8l-gr-SyR" secondAttribute="top" id="ArZ-UN-Qpb"/>
+                                    <constraint firstItem="97x-5X-Adz" firstAttribute="centerX" secondItem="Zqk-cL-4k0" secondAttribute="centerX" id="IPR-eJ-aiA"/>
+                                    <constraint firstItem="97x-5X-Adz" firstAttribute="centerY" secondItem="Zqk-cL-4k0" secondAttribute="centerY" id="N0s-Te-a8a"/>
                                     <constraint firstAttribute="trailing" secondItem="fj7-dO-lnS" secondAttribute="trailing" constant="24" id="U0w-C9-43q"/>
                                     <constraint firstItem="Qxs-3S-BUp" firstAttribute="top" secondItem="fj7-dO-lnS" secondAttribute="bottom" constant="16" id="WCU-Gl-uYL"/>
                                     <constraint firstItem="GHC-az-Igd" firstAttribute="leading" secondItem="a8l-gr-SyR" secondAttribute="leading" id="aKe-67-cqx"/>
@@ -646,6 +667,7 @@
                                     <constraint firstItem="GHC-az-Igd" firstAttribute="top" secondItem="9k9-Zm-mL1" secondAttribute="bottom" constant="24" id="eoK-Nk-8jP"/>
                                     <constraint firstAttribute="trailing" secondItem="9k9-Zm-mL1" secondAttribute="trailing" id="xhV-mh-JfM"/>
                                     <constraint firstAttribute="bottom" secondItem="Qxs-3S-BUp" secondAttribute="bottom" constant="72" id="xpb-jW-npq"/>
+                                    <constraint firstItem="Zqk-cL-4k0" firstAttribute="leading" secondItem="a8l-gr-SyR" secondAttribute="leading" constant="24" id="z6b-rH-deW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -667,7 +689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL8-GD-E2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782" y="3233"/>
+            <point key="canvasLocation" x="3780.9160305343512" y="3232.3943661971834"/>
         </scene>
         <!--ServiceOperationsViewController-->
         <scene sceneID="JQt-Bj-pcS">

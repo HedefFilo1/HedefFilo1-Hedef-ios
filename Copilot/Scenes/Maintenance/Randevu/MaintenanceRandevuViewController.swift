@@ -24,5 +24,4 @@ class MaintenanceRandevuViewController: ServiceRandevuViewController {
         confirmButton.setTitle(Strings.confirm, for: .normal)
     }
     
-    updat
 }

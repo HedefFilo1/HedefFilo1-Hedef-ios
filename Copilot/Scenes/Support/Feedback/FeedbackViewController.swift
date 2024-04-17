@@ -67,6 +67,10 @@ class FeedbackViewController: UIViewController {
         }
         UIApplication.shared.open(url)
     }
+    
+    @IBAction func didTapBack() {
+        viewModel.getBack()
+    }
 
 }
 
@@ -88,9 +92,11 @@ extension FeedbackViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
+            APIService.addUserAction(pageName: "Help", actionName: "HELP_FEEDBACK_PROCESS_REQUEST")
             viewModel.goToProccessRequests()
            
         case 1:
+            APIService.addUserAction(pageName: "Help", actionName: "HELP_FEEDBACK_SERVICE OPERATION")
             viewModel.goToServiceOperations()
         default:
             break

@@ -80,6 +80,7 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     }
 
     @IBAction func didTapGuide() {
+        APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_GO_ACCIDENT_GUIDE")
         viewModel.goToGuide()
     }
 }

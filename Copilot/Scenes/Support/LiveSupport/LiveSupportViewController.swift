@@ -29,6 +29,7 @@ class LiveSupportViewController: UIViewController {
         setupUI()
         hideTabbarView()
         viewModel.getLiveSupport()
+        APIService.addUserAction(pageName: "Help", actionName: "HELP_WEBCHAT")
     }
     
     override func viewDidAppear(_ animated: Bool) {

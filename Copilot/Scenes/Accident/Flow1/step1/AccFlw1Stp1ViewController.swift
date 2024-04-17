@@ -65,6 +65,7 @@ class AccFlw1Stp1VController: UIViewController {
     }
     
     @IBAction func didTapCall() {
+        APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_URGENT_CALL")
         guard let url = URL(string: CodeStrings.call112) else {
             return
         }
