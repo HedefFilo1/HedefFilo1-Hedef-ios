@@ -79,6 +79,19 @@ class CampaignsViewController: UIViewController {
         if tag == currentTab {
             return
         }
+        
+        APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_TAB_CLICK")
+        if tag == 0 {
+            APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_BENEFIT_CAMPAIGN")
+        }
+        if tag == 1 {
+            APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_NEWS_TAB_CLICK")
+        }
+        
+        if tag == 2 {
+            APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_SPONSORSHIP_TAB_CLICK")
+        }
+        
         borderViews[currentTab].backgroundColor = .disabled
         currentTab = tag
         borderViews[tag].backgroundColor = .theme
@@ -141,6 +154,8 @@ extension CampaignsViewController: UICollectionViewDataSource, UICollectionViewD
 
 extension CampaignsViewController: CampaignsTabCellDelegate {
     func didSelectItem(campaign: Campaign) {
+        
+        APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_GO_DETAIL")
         viewModel.goToCampaignDetail(campaign: campaign)
     }
 }

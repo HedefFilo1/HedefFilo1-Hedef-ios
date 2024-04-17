@@ -93,6 +93,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func didTapResetPassword(_ sender: UIButton) {
+        APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_PASSWORD_CHANGE_CLICK")
         viewModel.goToResetPassword()
     }
     
@@ -102,6 +103,7 @@ class ProfileViewController: UIViewController {
                          email: emailTextFiled.text ?? "",
                          id: idTextField.text ?? "",
                          licence: licenseTextField.text ?? "")
+        APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_UPDATE_INFORMATION")
     }
 }
 

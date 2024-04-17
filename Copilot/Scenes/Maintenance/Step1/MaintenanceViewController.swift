@@ -115,6 +115,8 @@ extension MaintenanceViewController: UICollectionViewDataSource, UICollectionVie
 extension MaintenanceViewController: MaintenanceCellDelegate,
                                      MaintenanceRandevuCellDelegate {
     func didTapRandevu() {
+        
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_MAINTENANCE_MAKE_MAINTENANCE_APPOINTMENT")
         viewModel.goToMaintenanceStep2KM()
     }
     

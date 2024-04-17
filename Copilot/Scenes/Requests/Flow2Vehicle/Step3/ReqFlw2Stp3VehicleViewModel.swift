@@ -138,6 +138,7 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
+                APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_CONNECTED_VEHICLE_OPERATION")
                 coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
             }
         }

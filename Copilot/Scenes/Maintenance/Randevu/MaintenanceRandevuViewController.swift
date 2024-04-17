@@ -23,4 +23,6 @@ class MaintenanceRandevuViewController: ServiceRandevuViewController {
         editButton.setTitle(Strings.edit, for: .normal)
         confirmButton.setTitle(Strings.confirm, for: .normal)
     }
+    
+    updat
 }

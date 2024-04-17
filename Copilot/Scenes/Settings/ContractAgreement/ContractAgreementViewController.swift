@@ -26,6 +26,7 @@ class ContractAgreementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        APIService.addUserAction(pageName: "Settings", actionName: "SETTING_CONFIDENTIALITY_AGREEMENT")
     }
     
     override func viewDidAppear(_ animated: Bool) {

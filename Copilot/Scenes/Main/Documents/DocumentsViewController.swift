@@ -30,6 +30,8 @@ class DocumentsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getDocuments()
+        APIService.addUserAction(pageName: "Documents", actionName: "DOCUMENT_TAB_CLICK")
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -100,6 +102,7 @@ extension DocumentsViewController: YourDocumentsTabDelegate {
     }
     
     func didTapDownload(item: Document) {
+        APIService.addUserAction(pageName: "Documents", actionName: "DOCUMENT_DOWNLOAD_DOCUMENT")
         viewModel.getDocument(document: item)
     }
 }

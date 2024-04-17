@@ -116,6 +116,7 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
+                APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_PLATE_PROCESS")
                 coordinatorDelegate?.goToSuccess(title: Strings.lostLicensePlateTransactions)
             }
         }

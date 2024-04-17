@@ -90,6 +90,7 @@ class PasswordResetViewController: UIViewController {
     }
     
     @IBAction func didTapSave(_ sender: UIButton) {
+        APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_PASSWORD_CHANGE_CLICK")
         viewModel.setPassword(old: oldPasswordTextField.pureText,
                               new: newPasswordTextField.pureText)
     }

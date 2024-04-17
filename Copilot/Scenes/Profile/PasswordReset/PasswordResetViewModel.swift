@@ -65,7 +65,7 @@ class PasswordResetViewModel: PasswordResetViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
-            
+            APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_SAVE")
             self.delegate?.showSuccess(title: Strings.passwordUpdated, message: "", delegate: self)
         }
     }

@@ -144,6 +144,21 @@ class PastMaintenancesViewController: UIViewController {
         collectionView.reloadData()
         setServiceType(tab: tag)
         viewModel.getServices()
+        if tag == 0 {
+            APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_MAINTENANCE_TAB_CLICK")
+        }
+        
+        if tag == 1 {
+            APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_BREAKDOWN_TAB_CLICK")
+        }
+        
+        if tag == 2 {
+            APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_TIRE_TAB_CLICK")
+        }
+        
+        if tag == 3 {
+            APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_ACCIDENT_DAMAGE_TAB_CLICK")
+        }
     }
     
     @IBAction func didTapBack() {

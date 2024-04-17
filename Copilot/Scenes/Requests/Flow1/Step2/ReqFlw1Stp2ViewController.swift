@@ -29,7 +29,7 @@ class ReqFlw1Stp2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PRODUCT_SERVICE_REQUEST")
 #if DEV_DEBUG
         
 #endif

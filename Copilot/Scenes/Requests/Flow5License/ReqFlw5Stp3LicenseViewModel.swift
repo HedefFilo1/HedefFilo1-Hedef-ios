@@ -109,6 +109,7 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
+                APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_LICENSE_PROCESS")
                 coordinatorDelegate?.goToSuccess(title: Strings.lostLicenseOperations)
             }
         }

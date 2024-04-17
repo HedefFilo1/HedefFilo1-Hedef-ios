@@ -136,10 +136,12 @@ extension BreakDownViewController: BreakDownCellDelegate, BreakdownRandevuCellDe
     }
     
     func didTapYes() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_BREAKDOWN_MAKE_BREAKDOWN_APPOINTMENT")
         viewModel.goToBreakdownFlow2Step2AnyAlarm()
     }
     
     func didTapNo() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_BREAKDOWN_MAKE_BREAKDOWN_APPOINTMENT_TOWING_TRUCK_REQUEST")
         viewModel.goToFlow1BreakDownStep2TowTruck()
     }
     

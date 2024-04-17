@@ -81,6 +81,11 @@ class LanguagesViewController: SheetViewController {
     @IBAction func didTapApply() {
         let language = turkeyRadio.isSelected ? CodeStrings.turkish: CodeStrings.english
         App.changeLanguage(language: language)
+        if turkeyRadio.isSelected {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTING_LANGUAGE_SELECTION_TR")
+        } else {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTING_LANGUAGE_SELECTION_ENG")
+        }
     }
     
 }

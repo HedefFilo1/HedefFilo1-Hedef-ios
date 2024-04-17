@@ -144,6 +144,7 @@ extension VehicleInfoViewController: VehicleInfoButtonsCellDelegate, VehicleInfo
     }
     
     func didTapDownload(document: Document) {
+        APIService.addUserAction(pageName: "Car Informations", actionName: "CAR_INFORMATION_PRIVATE_VEHICLE_CONTRACT_DOWNLOAD")
         viewModel.getDocument(document: document)
     }
 }

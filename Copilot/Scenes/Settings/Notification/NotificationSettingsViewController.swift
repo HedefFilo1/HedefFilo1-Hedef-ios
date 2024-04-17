@@ -43,6 +43,7 @@ class NotificationSettingsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getPrefrences()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,18 +82,39 @@ class NotificationSettingsViewController: UIViewController {
     
     @IBAction func didTapWeatherSwitch() {
         viewModel.setNotificationPreferences(type: .weather, enabled: weatherSwitch.isOn)
+        if weatherSwitch.isOn {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_WEATHER_ACTIVE_SWITCH")
+        } else {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_WEATHER_PASSIVE_SWITCH")
+        }
     }
     
     @IBAction func didTapCampaignSwitch() {
         viewModel.setNotificationPreferences(type: .campaign, enabled: campaignsSwitch.isOn)
+        if weatherSwitch.isOn {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_CAMPAIGN_ACTIVE_SWITCH")
+        } else {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_CAMPAIGN_PASSIVE_SWITCH")
+        }
     }
     
     @IBAction func didTapRandevueSwitch() {
         viewModel.setNotificationPreferences(type: .appointmentDate, enabled: randevueDateSwitch.isOn)
+        
+        if weatherSwitch.isOn {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_APPOINTMEN_DATE_ACTIVE_SWITCH")
+        } else {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_APPOINTMEN_DATE_PASSIVE_SWITCH")
+        }
     }
     
     @IBAction func didTapContractSwitch() {
         viewModel.setNotificationPreferences(type: .agreement, enabled: contractSwitch.isOn)
+        if weatherSwitch.isOn {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_CONTRACT_TERM_ACTIVE_SWITCH")
+        } else {
+            APIService.addUserAction(pageName: "Settings", actionName: "SETTINGS_NOTIFICATION_CONTRACT_TERM_PASSIVE_SWITCH")
+        }
     }
     
     @IBAction func didTapCancel() {

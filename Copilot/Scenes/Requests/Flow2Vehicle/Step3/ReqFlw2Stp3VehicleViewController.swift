@@ -80,6 +80,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getProfile()
+        
         #if DEV_DEBUG
 //        viewModel.coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
         #endif

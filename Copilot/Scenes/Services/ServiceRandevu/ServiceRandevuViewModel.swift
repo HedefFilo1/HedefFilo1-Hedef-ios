@@ -77,6 +77,17 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
                                          message: error.message)
             } else {
                 APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
+                if towTruck {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_APPOINTMENT_TOWING_TRUCK_REQUEST")
+                }
+                if tireSupportType == .damage {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_CONFIRM_TIRE_DAMAGE_APPOINTMENT")
+                }
+                
+                if tireSupportType == .change {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_REPLACEMENT_APPOINTMENT")
+                }
+                
                 self.goToConfirmedRandevu()
             }
         }
@@ -84,6 +95,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     
     func updateRandevu() {
         guard let appointment, let date else { return }
+        
         Loading.shared.show()
         APIService.updateCase(caseId: appointment.id ?? "",
                               appointmentDate: date) { [weak self] _, error in
@@ -94,6 +106,18 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
+                if self is MaintenanceRandevuViewModel {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_MAINTENANCE_SCHEDULE_MAINTENANCE_APPOINTMENT")
+                }
+                
+                if tireSupportType == .damage {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_SCHEDULE_TIRE_DAMAGE_APPOINTMENT")
+                }
+                
+                if tireSupportType == .change {
+                    APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_REPLACEMENT_APPOINTMENT")
+                }
+                
                 self.coordinatorDelegate?.goToConfirmedRandevu(service: nil, date: date, appointment: appointment)
             }
         }

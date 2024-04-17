@@ -84,6 +84,7 @@ class RequestDetailViewController: UIViewController {
     }
     
     @IBAction func didTapCancel() {
+        APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_DEMAND_LIST_PRODUCT_SERVICE_REQUEST_REQUEST_CANCEL")
         viewModel.cancelTask()
     }
 }

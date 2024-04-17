@@ -121,6 +121,7 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else if model != nil {
+                APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_HGS_PROCESS")
                 coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
             }
         }

@@ -32,6 +32,8 @@ class HGSViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.getTransitions()
+        
+        APIService.addUserAction(pageName: "Car Informations", actionName: "VEHICLE_HGS_TRANSITION")
     }
     
     func setupUI() {

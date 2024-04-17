@@ -149,18 +149,22 @@ extension TireOperationsViewController: UICollectionViewDataSource, UICollection
 extension TireOperationsViewController: LastikRandevuCellDelegate, LastikOperationButtonsCellDelegate {
     
     func didTapEdit() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_SCHEDULE_TIRE_DAMAGE_APPOINTMENT")
         viewModel.goToServiceDetail()
     }
     
     func goToRequestNewLastik() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_BREAKDOWN_REQUEST_NEW_TIRE")
         viewModel.goToRequestNewLastik()
     }
     
     func goToLastikRandevu() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_DAMAGE_APPOINTMENT")
         viewModel.goToFlow3Step2Damage()
     }
     
     func didTapChange() {
+        APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_CHANGE_APPOINTMENT")
         viewModel.goToFlow5Step2TireChange()
     }
 }
