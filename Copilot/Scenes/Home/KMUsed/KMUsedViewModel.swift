@@ -42,7 +42,7 @@ class KMUsedViewModel: KMUsedViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
-            APIService.addUserAction(pageName: "HOMEPAGE", actionName: "UPDATE_KM")
+            APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_UPDATE_KM_USED_SAVE")
             self.delegate?.setDistance()
         }
     }

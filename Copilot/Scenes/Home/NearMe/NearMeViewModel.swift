@@ -45,7 +45,7 @@ class NearMeViewModel: NearMeViewModelType {
         APIService.getSupplier(mark: mark) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
-            
+            APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_NEAR")
             if let model = model {
                 self.suppliers = model.filter({
                     return $0.lon != nil && $0.lat != nil

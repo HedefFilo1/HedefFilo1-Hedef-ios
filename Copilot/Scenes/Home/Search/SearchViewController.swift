@@ -29,6 +29,7 @@ class SearchViewController: PopupViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_PAST_SEARCH")
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -23,6 +23,8 @@ class StandingsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getTotalPoints()
+         
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_HOW_EARN_POINTS")
     }
     
     override func viewDidAppear(_ animated: Bool) {

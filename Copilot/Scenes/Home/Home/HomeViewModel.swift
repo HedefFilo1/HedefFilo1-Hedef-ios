@@ -66,6 +66,7 @@ class HomeViewModel: HomeViewModelType {
                 App.vehicle = model
                 self.mark = model.make
                 self.delegate?.setVehicle()
+                APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_LOAD")
             } else
             
             if let error = error {

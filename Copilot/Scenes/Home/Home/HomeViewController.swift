@@ -67,6 +67,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapNotificationButton() {
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_NOTIFICATION")
         goToNotifications()
     }
     
@@ -157,6 +158,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 extension HomeViewController: VehicleInfoCellDelegate {
     func didTapKmUsed() {
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_MAKE_CHANGE_CLICK")
         viewModel.presentKMUsed(delegate: self)
     }
 }

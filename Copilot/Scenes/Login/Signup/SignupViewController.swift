@@ -58,6 +58,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        APIService.addUserAction(pageName: "Sign up", actionName: "LOGIN_PAGE_LOAD_SIGN_UP")
     }
     
     func setupUI() {

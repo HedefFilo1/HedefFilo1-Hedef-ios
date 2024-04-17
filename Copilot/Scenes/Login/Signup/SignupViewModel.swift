@@ -103,7 +103,7 @@ class SignupViewModel: SignupViewModelType {
                                          message: error.message)
                 return
             }
-            
+            APIService.addUserAction(pageName: "Sign up", actionName: "SIGN_UP")
             self.delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage, delegate: self)
         }
     }

@@ -44,6 +44,7 @@ class NotificationsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getNotification()
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_NOTIFICATION_SHOW_UNREAD")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -125,11 +126,17 @@ class NotificationsViewController: UIViewController {
                 ids.append(item.id)
             }
         }
+        if ids.count == items.count {
+            APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_DELETE_ALL")
+        }
         viewModel.deleteNotifications(ids: ids)
     }
     
     @IBAction func didTapSelectAll() {
         selectAll = !selectAll
+        if selectAll {
+            APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_SELECT_ALL")
+        }
         
         let color: UIColor = selectAll ? .theme: .borderColor
         selectAllView.layer.borderColor = color.cgColor

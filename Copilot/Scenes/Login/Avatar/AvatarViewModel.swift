@@ -45,6 +45,7 @@ class AvatarViewModel: AvatarViewModelType {
     func selectAvatar(name: String) {
         Persistence.avatarSelected = email
         Persistence.avatarName = name
+        APIService.addUserAction(pageName: "Choose Avatar", actionName: "CHOOSE_AVATAR")
         coordinatorDelegate?.loginDidFinish()
     }
     

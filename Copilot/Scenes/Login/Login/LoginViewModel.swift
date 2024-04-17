@@ -122,6 +122,8 @@ class LoginViewModel: LoginViewModelType {
             if let model = model {
                 App.sessionId = model.sessionId
                 APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN")
+                APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN_PAGE_LOAD")
+                APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN_PAGE_LOAD_LOG_IN")
                 self.loadStrings(email: email)
             }
         }

@@ -9,7 +9,7 @@ import UIKit
 
 class APIService {
     
-    static var loggingEnabled = false
+    static var loggingEnabled = true
     
     static func getStrings(completion: @escaping ([ContentString]?, APIResponseError?) -> Void) {
         let route = "content-string/client"

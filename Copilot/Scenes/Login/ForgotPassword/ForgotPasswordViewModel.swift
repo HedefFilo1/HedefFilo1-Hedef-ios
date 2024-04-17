@@ -46,7 +46,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle, message: error.message)
                 return
             }
-            
+            APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN_PAGE_LOAD_FORGOT_PASSWORD")
             self.delegate?.showSuccess(title: Strings.passwordHasBeenSent,
                                        message: Strings.passwordSentToEmail)
         }

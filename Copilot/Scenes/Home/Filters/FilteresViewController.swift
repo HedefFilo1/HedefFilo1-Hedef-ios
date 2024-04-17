@@ -36,6 +36,7 @@ class FiltersViewController: SheetViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_NEAR_FILTER")
     }
     
     override func viewDidAppear(_ animated: Bool) {
