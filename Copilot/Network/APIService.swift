@@ -243,10 +243,10 @@ class APIService {
     }
     
     static func getCampaigns(completion: @escaping ([Campaign]?, APIResponseError?) -> Void) {
-        let route = "campaign"
+        let route = "campaign/active"
         let req = APIRequest<[Campaign]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Campaign"
-        req.log = loggingEnabled
+        req.log = loggingEnabled || true
         req.completion = completion
         req.start()
     }
