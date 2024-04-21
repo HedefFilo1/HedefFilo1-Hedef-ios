@@ -612,5 +612,8 @@ extension Strings {
     static var detail: String {
         return localized(string: "detail")
     }
-
+    
+    static var goToPastServices: String {
+        return localized(string: "goToPastServices")
+    }
 }

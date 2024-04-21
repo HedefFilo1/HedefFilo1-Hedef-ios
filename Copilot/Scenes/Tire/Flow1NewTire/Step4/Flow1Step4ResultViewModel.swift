@@ -11,6 +11,7 @@ protocol Flow1Step4ResultVMCoordinatorDelegate: AnyObject {
     func getBack()
     func getBackToHome()
     func goToRequests()
+    func goToPastServices(tab: PastServiceRecordType)
 }
 
 protocol Flow1Step4ResultViewModelDelegate: AnyObject {
@@ -24,6 +25,7 @@ protocol Flow1Step4ResultViewModelType: AnyObject {
     func getBack()
     func getBackToHome()
     func goToRequests()
+    func goToPastServices()
 }
 
 class Flow1Step4ResultViewModel: Flow1Step4ResultViewModelType {
@@ -43,5 +45,9 @@ class Flow1Step4ResultViewModel: Flow1Step4ResultViewModelType {
     
     func goToRequests() {
         coordinatorDelegate?.goToRequests()
+    }
+    
+    func goToPastServices() {
+        coordinatorDelegate?.goToPastServices(tab: .tireChange)
     }
 }

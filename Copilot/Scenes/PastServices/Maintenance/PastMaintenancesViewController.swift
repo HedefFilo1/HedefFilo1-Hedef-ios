@@ -53,6 +53,7 @@ class PastMaintenancesViewController: UIViewController {
         collectionView.register(cellType: PastServicesItemsCell.self)
         collectionView.contentInset.top = 24
         collectionView.contentInset.bottom = 70
+        changeTab(tab: viewModel.tab)
     }
     
     func applyStyle() {
@@ -90,9 +91,9 @@ class PastMaintenancesViewController: UIViewController {
     }
     
     func setTitleTexts(tab: Int) {
-        var title =  Strings.pastMaintenanceOperations
-        var message = Strings.pastMaintenanceDescription
-        var foundMessage = Strings.pastMaintenanceFound
+        let title =  Strings.pastMaintenanceOperations
+        let message = Strings.pastMaintenanceDescription
+        let foundMessage = Strings.pastMaintenanceFound
         var replaceTitle = Strings.care
         switch tab {
         case 0:
@@ -135,30 +136,34 @@ class PastMaintenancesViewController: UIViewController {
         }
     }
     
-    @IBAction func didTabOnTap(_ sender: UIView) {
-        let tag = sender.tag
-        currentTab = tag
-        setButtonsColor(tab: tag)
-        setTitleTexts(tab: tag)
+    func changeTab(tab: Int) {
+        currentTab = tab
+        setButtonsColor(tab: tab)
+        setTitleTexts(tab: tab)
         viewModel.items = []
         collectionView.reloadData()
-        setServiceType(tab: tag)
+        setServiceType(tab: tab)
         viewModel.getServices()
-        if tag == 0 {
+        if tab == 0 {
             APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_MAINTENANCE_TAB_CLICK")
         }
         
-        if tag == 1 {
+        if tab == 1 {
             APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_BREAKDOWN_TAB_CLICK")
         }
         
-        if tag == 2 {
+        if tab == 2 {
             APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_TIRE_TAB_CLICK")
         }
         
-        if tag == 3 {
+        if tab == 3 {
             APIService.addUserAction(pageName: "Services", actionName: "SERVICE_PAST_SERVICE_OPERATIONS_ACCIDENT_DAMAGE_TAB_CLICK")
         }
+    }
+    
+    @IBAction func didTabOnTap(_ sender: UIView) {
+        let tag = sender.tag
+        changeTab(tab: tag)
     }
     
     @IBAction func didTapBack() {

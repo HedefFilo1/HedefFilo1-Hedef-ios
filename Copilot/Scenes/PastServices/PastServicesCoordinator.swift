@@ -34,6 +34,16 @@ class PastServicesCoordinator: Coordinator {
         navigationController.pushViewController(page, animated: true)
     }
     
+    func start(tab: PastServiceRecordType) {
+        let page: PageViewController = PageViewController()
+        let controller: PastMaintenancesViewController = storyboard.instantiateViewController()
+        controller.viewModel = PastMaintenancesViewModel()
+        controller.viewModel.type = tab
+        page.setViewControllers([controller], direction: .forward, animated: true)
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(page, animated: true)
+    }
+    
     override func finish() {
         delegate?.didFinish(from: self)
     }

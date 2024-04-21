@@ -23,6 +23,7 @@ protocol PastMaintenancesViewModelType: AnyObject {
     var delegate: PastMaintenancesViewModelDelegate? { get set }
     var items: [PastService]? { get set}
     var type: PastServiceRecordType { get set }
+    var tab: Int { get }
     
     func getBack()
     func getServices()
@@ -37,6 +38,21 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     weak var delegate: PastMaintenancesViewModelDelegate?
     var items: [PastService]?
     var type: PastServiceRecordType = .maintenance
+    
+    var tab: Int {
+        switch type {
+        case .maintenance:
+            return 0
+        case .tireChange:
+            return 2
+        case .mechanicalFailure:
+            return 1
+        case .damage:
+            return 3
+        case .none:
+            return 0
+        }
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()

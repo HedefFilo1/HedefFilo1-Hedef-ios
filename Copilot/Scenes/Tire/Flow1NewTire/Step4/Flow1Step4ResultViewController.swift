@@ -39,6 +39,7 @@ class Flow1Step4ResultViewController: UIViewController {
         applyStyle()
         setTexts()
         homeButton.isEnabled = true
+        requestsButton.isHidden = false
     }
     
     func applyStyle() {
@@ -50,7 +51,7 @@ class Flow1Step4ResultViewController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.tireType == .winter ? Strings.winterTireRequestReceived: Strings.summerTireRequestReceived
         descriptionLabel.text = Strings.requestLastikResultText
-        requestsButton.setTitle(Strings.goToRequests, for: .normal)
+        requestsButton.setTitle(Strings.goToPastServices, for: .normal)
         homeButton.setTitle(Strings.returnToHomePage, for: .normal)
     }
     
@@ -59,7 +60,7 @@ class Flow1Step4ResultViewController: UIViewController {
     }
     
     @IBAction func didTapRequests() {
-        viewModel.goToRequests()
+        viewModel.goToPastServices()
     }
     
     @IBAction func didTapHome() {

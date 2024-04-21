@@ -51,6 +51,12 @@ extension TireCoordinator: TireOperationsVMCoordinatorDelegate,
         
     }
     
+    func goToPastServices(tab: PastServiceRecordType) {
+        let coordinator = PastServicesCoordinator(navigationController: navigationController, delegate: self)
+        addChildCoordinator(coordinator)
+        coordinator.start(tab: tab)
+    }
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }
@@ -214,5 +220,11 @@ extension TireCoordinator: ServiceRandevuVMCoordinatorDelegate,
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension TireCoordinator: PastServicesCoordinatorDelegate {
+    func didFinish(from coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
     }
 }
