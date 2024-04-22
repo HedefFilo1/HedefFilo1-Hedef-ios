@@ -62,6 +62,7 @@ class LanguagesViewController: SheetViewController {
         titleLabel.text = Strings.languageWord
         turkeyLabel.text = Strings.turkish
         englishLabel.text = Strings.english
+        applyButton.setTitle(Strings.apply, for: .normal)
     }
     
     @IBAction func didTapDismiss() {
