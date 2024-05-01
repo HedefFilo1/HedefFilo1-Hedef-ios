@@ -15,6 +15,6 @@ struct FAQQuestionDetail: Decodable {
     let description: String
     let descriptionTr: String
     let descriptionEn: String
-    let orderIndex: Int
+//    let orderIndex: Int?
     let status: String
 }

@@ -61,10 +61,10 @@ class SplashViewModel: SplashViewModelType {
     }
     
     func getSessionId() {
-        Loading.shared.show(title: Strings.loading)
+//        Loading.shared.show(title: Strings.loading)
         APIService.getSessionId { [weak self] model, error in
             
-            Loading.shared.hide()
+//            Loading.shared.hide()
             guard let self = self else {return}
             
             if let error = error {
