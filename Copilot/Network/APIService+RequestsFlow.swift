@@ -113,7 +113,7 @@ extension APIService {
             "nameSurname": nameSurname,
             "receiverPersonName": receiverPersonName,
             "receiverPersonPhone": receiverPersonPhone,
-            "deliveryPersonEmail": receiverPersonEmail,
+            "receiverPersonEmail": receiverPersonEmail,
             "deliveryAddress": deliveryAddress
         ] as [String: Any]
         

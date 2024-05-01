@@ -45,7 +45,7 @@ class SplashViewModel: SplashViewModelType {
     
     func verifyToken() {
         guard let token = Persistence.accessToken, token.count > 3 else {
-            goToNextScene()
+            self.getSessionId()
             return
         }
         App.token = token
@@ -56,8 +56,27 @@ class SplashViewModel: SplashViewModelType {
             if error != nil {
                 Persistence.accessToken = nil
             }
+            self.getSessionId()
+        }
+    }
+    
+    func getSessionId() {
+        Loading.shared.show(title: Strings.loading)
+        APIService.getSessionId { [weak self] model, error in
+            
+            Loading.shared.hide()
+            guard let self = self else {return}
+            
+            if let error = error {
+                print(error)
+            }
+            
+            if let model = model {
+                App.sessionId = model.sessionId
+            }
             self.goToNextScene()
         }
+        
     }
     
     func goToNextScene() {

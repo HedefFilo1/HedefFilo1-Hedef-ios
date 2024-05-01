@@ -29,7 +29,7 @@ extension APIService {
     }
     
     static func getSupportGuides(completion: @escaping ([SupportGuide]?, APIResponseError?) -> Void) {
-        let route = "guide"
+        let route = "guide/active"
         let req = APIRequest<[SupportGuide]>(route: route, method: .get, hasToken: true)
         req.identifier = "getFAQQuestions"
         req.log = loggingEnabled 
