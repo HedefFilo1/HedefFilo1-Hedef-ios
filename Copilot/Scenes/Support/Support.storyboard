@@ -580,6 +580,23 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8l-gr-SyR">
                                 <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k9-Zm-mL1">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geri Bildirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-n7-qpF">
+                                                <rect key="frame" x="150" y="24" width="93.333333333333314" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="EsW-n7-qpF" firstAttribute="top" secondItem="9k9-Zm-mL1" secondAttribute="top" constant="24" id="82p-lx-LxS"/>
+                                            <constraint firstItem="EsW-n7-qpF" firstAttribute="centerX" secondItem="9k9-Zm-mL1" secondAttribute="centerX" id="IZ6-kt-Clh"/>
+                                            <constraint firstAttribute="bottom" secondItem="EsW-n7-qpF" secondAttribute="bottom" id="psR-Cp-Z0m"/>
+                                        </constraints>
+                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-cL-4k0">
                                         <rect key="frame" x="24" y="27" width="24" height="24"/>
                                         <constraints>
@@ -598,23 +615,6 @@
                                             <action selector="didTapBack" destination="dZc-Sa-Ti8" eventType="touchUpInside" id="PhO-jH-cjG"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k9-Zm-mL1">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geri Bildirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-n7-qpF">
-                                                <rect key="frame" x="150" y="24" width="93.333333333333314" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="EsW-n7-qpF" firstAttribute="top" secondItem="9k9-Zm-mL1" secondAttribute="top" constant="24" id="82p-lx-LxS"/>
-                                            <constraint firstItem="EsW-n7-qpF" firstAttribute="centerX" secondItem="9k9-Zm-mL1" secondAttribute="centerX" id="IZ6-kt-Clh"/>
-                                            <constraint firstAttribute="bottom" secondItem="EsW-n7-qpF" secondAttribute="bottom" id="psR-Cp-Z0m"/>
-                                        </constraints>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-3S-BUp">
                                         <rect key="frame" x="24" y="553" width="345" height="50"/>
                                         <color key="backgroundColor" name="appRed"/>
