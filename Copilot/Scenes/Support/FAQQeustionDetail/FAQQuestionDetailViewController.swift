@@ -36,6 +36,7 @@ class FAQQuestionDetailViewController: UIViewController {
         applyStyle()
         setTexts()
         textView.text = viewModel.item?.description ?? ""
+        textView.isEditable = false
     }
     
     func applyStyle() {
