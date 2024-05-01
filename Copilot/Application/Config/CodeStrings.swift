@@ -39,7 +39,7 @@ struct CodeStrings {
     }
     static let vehicleGuideKey = "copilotapp.vehicle_guide_pdf_url"
     static let plateNumberPattern = "## ### ###"
-    static let callSupportCenterPhone = "tel://02123683200"
+    static let callSupportCenterPhone = "tel://4441433"
     static let call112 = "tel://112"
     static let bullet = "\u{2022}"
     static let turkish = "Turkish"
