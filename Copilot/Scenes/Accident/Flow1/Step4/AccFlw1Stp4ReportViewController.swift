@@ -96,6 +96,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         switch indexPath.section {
         case 0:
             let cell: AccFlw1Stp4ReportHeaderCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 1:
@@ -230,13 +231,21 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     }
 }
 
-extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, AccFlw1Stp4ReportImageCellDelegate {
+extension AccFlw1Stp4ReportViewController: AccFlw1Stp4ReportHeaderCellDelegate {
+    func didTapGuilde() {
+        APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_GO_ACCIDENT_GUIDE")
+        viewModel.goToGuide()
+    }
+}
+
+extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate,
+                                           UIImagePickerControllerDelegate,
+                                           AccFlw1Stp4ReportImageCellDelegate {
    
     func didTapDelete(index: Int) {
         selectedFiles[index] = nil
         collectionView.reloadData()
     }
-    
     
     func didTapSendFile() {
         //        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])

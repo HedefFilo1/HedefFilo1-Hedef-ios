@@ -11,6 +11,7 @@ protocol AccFlw1Stp3AgreementVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlw1Stp4Report()
     func goToAccFlw4Stp4NoAgreement()
+    func goToGuide()
 }
 
 protocol AccFlw1Stp3AgreementViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +24,7 @@ protocol AccFlw1Stp3AgreementViewModelType: AnyObject {
     func getBack()
     func goToAccFlw1Stp4Report()
     func goToAccFlw4Stp4NoAgreement()
+    func goToGuide()
 }
 
 class AccFlw1Stp3AgreementViewModel: AccFlw1Stp3AgreementViewModelType {
@@ -40,6 +42,10 @@ class AccFlw1Stp3AgreementViewModel: AccFlw1Stp3AgreementViewModelType {
     
     func goToAccFlw4Stp4NoAgreement() {
         coordinatorDelegate?.goToAccFlw4Stp4NoAgreement()
+    }
+    
+    func goToGuide() {
+        coordinatorDelegate?.goToGuide()
     }
     
 }

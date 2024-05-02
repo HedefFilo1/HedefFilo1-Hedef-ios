@@ -97,6 +97,7 @@ class ServiceDetailViewController: UIViewController {
         selectDayLabel.text = Strings.selectDay
         selectTimeLabel.text = Strings.selectTime
         continueButton.setTitle(Strings.devamEt, for: .normal)
+        dateLabel.text = Strings.serviceWorkingHours
     }
     
     func setButtonActivation() {

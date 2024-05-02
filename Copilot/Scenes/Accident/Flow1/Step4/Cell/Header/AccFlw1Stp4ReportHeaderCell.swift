@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol AccFlw1Stp4ReportHeaderCellDelegate: AnyObject {
+    func didTapGuilde()
+}
+
 class AccFlw1Stp4ReportHeaderCell: UICollectionViewCell, Reusable {
+    weak var delegate: AccFlw1Stp4ReportHeaderCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -30,5 +35,9 @@ class AccFlw1Stp4ReportHeaderCell: UICollectionViewCell, Reusable {
         titleLabel.text = Strings.keepReports
         descriptionLabel.text = "\(Strings.fillReportDocuments)/n\(Strings.clickHelpReport)"
         guideLabel.text = Strings.recordKeepingGuide
+    }
+    
+    @IBAction func didTapGuide() {
+        delegate?.didTapGuilde()
     }
 }

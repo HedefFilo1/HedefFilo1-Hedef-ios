@@ -616,4 +616,8 @@ extension Strings {
     static var goToPastServices: String {
         return localized(string: "goToPastServices")
     }
+    
+    static var serviceWorkingHours: String {
+        return localized(string: "serviceWorkingHours")
+    }
 }

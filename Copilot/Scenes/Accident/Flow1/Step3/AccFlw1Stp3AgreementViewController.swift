@@ -73,6 +73,10 @@ class AccFlw1Stp3AgreementViewController: UIViewController {
         viewModel.goToAccFlw4Stp4NoAgreement()
     }
 
+    @IBAction func didTapGuide() {
+        APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_GO_ACCIDENT_GUIDE")
+        viewModel.goToGuide()
+    }
 }
 
 extension AccFlw1Stp3AgreementViewController: AccFlw1Stp3AgreementViewModelDelegate {

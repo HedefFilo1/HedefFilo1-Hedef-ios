@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol AccFlw5Stp3HeaderCellDelegate: AnyObject {
+    func didTapGuilde()
+}
+
 class AccFlw5Stp3HeaderCell: UICollectionViewCell, Reusable {
     
+    weak var delegate: AccFlw5Stp3HeaderCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var guidLabel: UILabel!
@@ -33,6 +38,6 @@ class AccFlw5Stp3HeaderCell: UICollectionViewCell, Reusable {
     }
     
     @IBAction func didTapGuide() {
-        
+        delegate?.didTapGuilde()
     }
 }

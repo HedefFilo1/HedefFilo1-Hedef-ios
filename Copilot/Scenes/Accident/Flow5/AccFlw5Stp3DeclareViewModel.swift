@@ -10,6 +10,7 @@ import Foundation
 protocol AccFlw5Stp3DeclareVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlow5Step4()
+    func goToGuide()
 }
 
 protocol AccFlw5Stp3DeclareViewModelDelegate: BaseViewModelDelegate {
@@ -21,6 +22,7 @@ protocol AccFlw5Stp3DeclareViewModelType: AnyObject {
     var delegate: AccFlw5Stp3DeclareViewModelDelegate? { get set }
     func getBack()
     func goToAccFlow5Step4()
+    func goToGuide()
 }
 
 class AccFlw5Stp3DeclareViewModel: AccFlw5Stp3DeclareViewModelType {
@@ -36,4 +38,7 @@ class AccFlw5Stp3DeclareViewModel: AccFlw5Stp3DeclareViewModelType {
         coordinatorDelegate?.goToAccFlow5Step4()
     }
     
+    func goToGuide() {
+        coordinatorDelegate?.goToGuide()
+    }
 }

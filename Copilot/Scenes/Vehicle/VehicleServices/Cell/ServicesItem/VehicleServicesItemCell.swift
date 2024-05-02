@@ -31,6 +31,7 @@ class VehicleServicesItemCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyStyles()
+        setTexts()
     }
 
     func applyStyles() {
@@ -44,6 +45,10 @@ class VehicleServicesItemCell: UICollectionViewCell, Reusable {
         iconView.layer.cornerRadius = 5
         iconView.layer.borderWidth = 1
         iconView.layer.borderColor = UIColor.theme.cgColor
+    }
+    
+    func setTexts() {
+        dateLabel.text = Strings.serviceWorkingHours
     }
     
     @IBAction func didTapLocation() {

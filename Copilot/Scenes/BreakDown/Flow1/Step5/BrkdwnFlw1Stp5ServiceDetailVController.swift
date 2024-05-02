@@ -98,6 +98,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         selectTimeLabel.text = Strings.selectTime
         continueButton.setTitle(Strings.devamEt, for: .normal)
         continueButton.isSmallFontSize = true
+        dateLabel.text = Strings.serviceWorkingHours
     }
     
     func setButtonActivation() {

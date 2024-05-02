@@ -86,6 +86,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
         switch indexPath.section {
         case 0:
             let cell: AccFlw5Stp3HeaderCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
             
         case 1:
@@ -151,8 +152,14 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
     }
 }
 
-extension AccFlw5Stp3DeclareVController: AccFlw5Stp3ButtonsCellDelegate {
+extension AccFlw5Stp3DeclareVController: AccFlw5Stp3HeaderCellDelegate,
+                                         AccFlw5Stp3ButtonsCellDelegate {
    
+    func didTapGuilde() {
+        APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_GO_ACCIDENT_GUIDE")
+        viewModel.goToGuide()
+    }
+    
     func didTapUpload() {
         didTapSendFile()
     }
