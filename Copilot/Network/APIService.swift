@@ -15,7 +15,7 @@ class APIService {
         let route = "content-string/client"
         let req = APIRequest<[ContentString]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Strings"
-        req.log = false
+        req.log = true
         req.completion = completion
         req.start()
     }
