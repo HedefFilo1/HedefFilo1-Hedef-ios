@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "icon_support_floating.png",
+      "filename" : "icon_support_floating@3x 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icon_support_floating@2x.png",
+      "filename" : "icon_support_floating@3x 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
