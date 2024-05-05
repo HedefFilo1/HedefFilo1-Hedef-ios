@@ -45,7 +45,7 @@ class SplashViewModel: SplashViewModelType {
     
     func verifyToken() {
         guard let token = Persistence.accessToken, token.count > 3 else {
-            self.getSessionId()
+            self.loadStrings()
             return
         }
         App.token = token

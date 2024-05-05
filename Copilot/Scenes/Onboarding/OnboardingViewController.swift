@@ -98,10 +98,11 @@ class OnboardingViewController: UIViewController {
     }
     
     func setTexts() {
-        nextButton.setTitle(Strings.moveForward, for: .normal)
-        skipButton.setAttributedTitle(Strings.skip.underLined, for: .normal)
-        notMemberLabel.text = Strings.ifNotMember
-        becomeMemberButton.setAttributedTitle(Strings.becomeMember.underLined, for: .normal)
+        nextButton.setTitle(App.getString(key: "copilotapp.onboarding.button"), for: .normal)
+        skipButton.setAttributedTitle(App.getString(key: "copilotapp.onboarding.bottom.button")?.underLined, for: .normal)
+        notMemberLabel.text = App.getString(key: "copilotapp.onboarding.four.bottom.description")
+        
+        becomeMemberButton.setAttributedTitle(App.getString(key: "copilotapp.onboarding.four.bottom.button")?.underLined, for: .normal)
     }
     
     @IBAction func didTapNextButton() {
@@ -127,40 +128,41 @@ class OnboardingViewController: UIViewController {
     
     func setIndexContent() {
         
-        nextButton.setTitle(Strings.moveForward, for: .normal)
+        nextButton.setTitle(App.getString(key: "copilotapp.onboarding.button"), for: .normal)
         nextButton.backgroundColor = .white
         nextButton.setTitleColor(.theme, for: .normal)
-        skipButton.setAttributedTitle(Strings.skip.underLined, for: .normal)
+        skipButton.setAttributedTitle(App.getString(key: "copilotapp.onboarding.bottom.button")?.underLined, for: .normal)
         skipButton.isHidden = false
         membershipView.isHidden = true
         
         if viewModel.currentIndex == 0 {
             backContainer.widthConstraint?.constant = 0
-            titleLabel.text = Strings.welcomeToCopilot
-            descriptionLabel.text = Strings.welcomeMessage
+            titleLabel.text = App.getString(key: "copilotapp.onboarding.one.title")
+            descriptionLabel.text = App.getString(key: "copilotapp.onboarding.one.description")
             return
         }
         
         backContainer.widthConstraint?.constant = 66
         if viewModel.currentIndex == 1 {
-            titleLabel.text = Strings.carService
-            descriptionLabel.text = Strings.welcomeMessage
+            titleLabel.text = App.getString(key: "copilotapp.onboarding.two.title")
+            descriptionLabel.text = App.getString(key: "copilotapp.onboarding.two.description")
             return
         }
         
         if viewModel.currentIndex == 2 {
-            titleLabel.text = Strings.support
-            descriptionLabel.text = Strings.welcomeMessage
+            titleLabel.text = App.getString(key: "copilotapp.onboarding.three.title")
+            descriptionLabel.text = App.getString(key: "copilotapp.onboarding.three.description")
             return
         }
         
         if viewModel.currentIndex == 3 {
-            titleLabel.text = Strings.roadAssistance
-            descriptionLabel.text = Strings.welcomeMessage
-            nextButton.setTitle(Strings.login, for: .normal)
+            
+            titleLabel.text = App.getString(key: "copilotapp.onboarding.four.title")
+            descriptionLabel.text = App.getString(key: "copilotapp.onboarding.four.description")
+            nextButton.setTitle(App.getString(key: "copilotapp.onboarding.four.title"), for: .normal)
             nextButton.backgroundColor = .theme
             nextButton.setTitleColor(.white, for: .normal)
-            skipButton.setTitle(Strings.ifNotMember, for: .normal)
+            skipButton.setTitle(App.getString(key: "copilotapp.onboarding.four.bottom.description"), for: .normal)
             skipButton.isHidden = true
             membershipView.isHidden = false
             return
