@@ -121,10 +121,10 @@ class LoginViewController: UIViewController {
     }
     
     func setTexts() {
-        descriptionLabel.text = Strings.loginDescription
-        rememberLabel.text = Strings.rememberMe
-        forgotPasswordButton.setAttributedTitle(Strings.forgotMyPassword.underLined, for: .normal)
-        loginButton.setTitle(Strings.login, for: .normal)
+        descriptionLabel.text = App.getString(key: "copilotapp.sign.in.title")
+        rememberLabel.text = App.getString(key: "copilotapp.sign.in.remember.button")
+        forgotPasswordButton.setAttributedTitle(App.getString(key: "copilotapp.sign.in.forgot.password.button")?.underLined, for: .normal)
+        loginButton.setTitle(App.getString(key: "copilotapp.sign.up.bottom.button"), for: .normal)
         notMemberLabel.text = Strings.ifNotMember
         becomeMemberButton.setAttributedTitle(Strings.becomeMember.underLined, for: .normal)
     }

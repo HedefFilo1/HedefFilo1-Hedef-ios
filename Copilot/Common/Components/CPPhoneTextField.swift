@@ -21,7 +21,7 @@ class CPPhoneTextField: CPEmailTextField {
     override func setup() {
         super.setup()
         keyboardType = .phonePad
-        placeholder = Strings.phoneNumber
+        placeholder = App.getString(key: "copilotapp.sign.up.phone.input.description")
         errorMessage = Strings.enterValidPhone
         delegate = self
     }

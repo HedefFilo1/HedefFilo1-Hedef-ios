@@ -57,9 +57,9 @@ class AvatarViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.selectYourAvatar
-        descriptionLabel.text = Strings.selectAvatarDescription
-        selectButton.setTitle(Strings.select, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.choose.avatar.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.choose.avatar.description")
+        selectButton.setTitle(App.getString(key: "copilotapp.choose.avatar.button"), for: .normal)
     }
     
     @IBAction func didTapSelect() {

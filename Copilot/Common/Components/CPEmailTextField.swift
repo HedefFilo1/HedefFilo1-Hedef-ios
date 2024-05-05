@@ -19,7 +19,7 @@ class CPEmailTextField: CPValidatableTextField {
     override func setup() {
         super.setup()
         keyboardType = .emailAddress
-        placeholder = Strings.yourEmailAdress
+        placeholder = App.getString(key: "copilotapp.sign.in.email.input.description")
         errorMessage = Strings.emailIncorrect
     }
 }

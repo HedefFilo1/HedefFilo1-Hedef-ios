@@ -30,7 +30,7 @@ class CPPasswordTextField: CPTextField {
         imageView.contentMode = .scaleAspectFit
         showButton.align(toView: imageView, widthAndHeight: 40, centerX: 0, centerY: 0)
         showButton.addTarget(self, action: #selector(didTapShowPassword), for: .touchUpInside)
-        placeholder  = Strings.password
+        placeholder  = App.getString(key: "copilotapp.sign.in.password.input.description")
     }
     
     @objc func didTapShowPassword() {

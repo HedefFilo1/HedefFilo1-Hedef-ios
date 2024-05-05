@@ -165,7 +165,7 @@ extension UIViewController {
     
     func showError(errorTitle: String,
                    message: String,
-                   buttonTitle: String = Strings.okay,
+                   buttonTitle: String = App.getString(key: "copilotapp.sign.up.success.button") ?? "",
                    attributedMessage: NSAttributedString? = nil,
                    delegate: MessagePopupViewControllerDelegate? = nil) {
         

@@ -49,9 +49,9 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.forgotMyPassword
+        titleLabel.text = App.getString(key: "copilotapp.sign.in.forgot.password.button")
         descriptionLabel.text = Strings.forgotPasswordDescription
-        phoneTextField.placeholder = Strings.phoneNumber
+        phoneTextField.placeholder = App.getString(key: "copilotapp.sign.up.phone.input.description")
         sendButton.setTitle(Strings.sendNewPassword, for: .normal)
     }
     

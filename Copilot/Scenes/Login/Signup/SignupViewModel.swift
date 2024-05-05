@@ -104,7 +104,9 @@ class SignupViewModel: SignupViewModelType {
                 return
             }
             APIService.addUserAction(pageName: "Sign up", actionName: "SIGN_UP")
-            self.delegate?.showSuccess(title: Strings.registrationTitle, message: Strings.registerationMessage, delegate: self)
+            let title = App.getString(key: "copilotapp.sign.up.success.title") ?? ""
+            let message = App.getString(key: "copilotapp.sign.up.success.description") ?? ""
+            self.delegate?.showSuccess(title: title, message: message, delegate: self)
         }
     }
 }

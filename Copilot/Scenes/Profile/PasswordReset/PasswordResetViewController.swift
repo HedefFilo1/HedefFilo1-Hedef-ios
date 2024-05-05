@@ -77,7 +77,8 @@ class PasswordResetViewController: UIViewController {
         oldPasswordTextField.placeholder = Strings.oldPassword
         newPasswordTextField.placeholder = Strings.newPassword
         repeatPasswordTextField.placeholder = Strings.repeatPasswordAgain
-        minLabel.text = Strings.min8Characters
+        let minText = App.getString(key: "copilotapp.sign.up.password.warning.one") ?? ""
+        minLabel.text = "*\(minText)"
         uppercaseLabel.text = Strings.uppercaseLetter
         lowercaseLabel.text = Strings.lowerCase
         numberLabel.text = Strings.number

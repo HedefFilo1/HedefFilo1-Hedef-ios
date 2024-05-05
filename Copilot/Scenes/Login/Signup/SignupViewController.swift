@@ -150,39 +150,46 @@ class SignupViewController: UIViewController {
     }
     
     func setTexts() {
-        descriptionLabel.text = Strings.signupDescription
-        nameTextField.placeholder = Strings.name
-        surnameTextField.placeholder = Strings.surname
-        phoneTextField.placeholder = Strings.phoneNumber
-        emailTextFiled.placeholder = Strings.yourEmailAdress
-        taxTextField.placeholder = Strings.taxIdNumber
-        plateNumberTextField.placeholder = Strings.plateNumber
-        licenseTextField.placeholder = Strings.vehicleLicenseNumber
-        passwordTextFiled.placeholder = Strings.password
-        repeatPasswordTextFiled.placeholder = Strings.repeatPassword
+        descriptionLabel.text = App.getString(key: "copilotapp.sign.up.title")
+        nameTextField.placeholder = App.getString(key: "copilotapp.sign.up.name.input.description")
+        surnameTextField.placeholder = App.getString(key: "copilotapp.sign.up.surname.input.description")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.sign.up.phone.input.description")
+        emailTextFiled.placeholder = App.getString(key: "copilotapp.sign.in.email.input.description")
+        taxTextField.placeholder = App.getString(key: "copilotapp.sign.up.tax.number.input.description")
+        plateNumberTextField.placeholder = App.getString(key: "copilotapp.sign.up.plate.input.description")
+        licenseTextField.placeholder = App.getString(key: "copilotapp.sign.up.vehicle.licence.input.description")
+        passwordTextFiled.placeholder = App.getString(key: "copilotapp.sign.in.password.input.description")
+        repeatPasswordTextFiled.placeholder = App.getString(key: "copilotapp.sign.up.password.again.input.description")
         setClarificationText()
-        marketingLabel.text = Strings.marketingApprovement
-        signupButton.setTitle(Strings.becomeMember, for: .normal)
+        marketingLabel.text = App.getString(key: "copilotapp.sign.up.checkbox.two.description")
+        signupButton.setTitle(App.getString(key: "copilotapp.sign.up.button"), for: .normal)
         
-        isMemberLabel.text = Strings.areYouMember
+        isMemberLabel.text = App.getString(key: "copilotapp.sign.up.bottom.button.description")
         clarificationErrorView.message = Strings.clarificationError
-        smsLabel.text = Strings.sms
-        telephoneLabel.text = Strings.telefon
-        emailLabel.text = Strings.emailPlaceholder
+        smsLabel.text = App.getString(key: "copilotapp.sign.up.checkbox.three.description")
+        telephoneLabel.text = App.getString(key: "copilotapp.sign.up.checkbox.four.description")
+        emailLabel.text = App.getString(key: "copilotapp.sign.up.checkbox.five.description")
         
-        loginButton.setAttributedTitle(Strings.login.underLined, for: .normal)
+        loginButton.setAttributedTitle(App.getString(key: "copilotapp.sign.up.bottom.button")?.underLined, for: .normal)
         setTextFieldWarnings()
-        
-        minLabel.text = Strings.min8Characters
-        uppercaseLabel.text = Strings.uppercaseLetter
-        lowercaseLabel.text = Strings.lowerCase
-        numberLabel.text = Strings.number
-        specialLabel.text = Strings.specialCharacter
+        let minText = App.getString(key: "copilotapp.sign.up.password.warning.one") ?? ""
+        minLabel.text = "*\(minText)"
+        let uppercase = App.getString(key: "copilotapp.sign.up.password.warning.two") ?? ""
+        uppercaseLabel.text = "*\(uppercase)"
+        let lowercase = App.getString(key: "copilotapp.sign.up.password.warning.three") ?? ""
+        lowercaseLabel.text = "*\(lowercase)"
+        let number = App.getString(key: "copilotapp.sign.up.password.warning.four") ?? ""
+        numberLabel.text = "*\(number)"
+        let special = App.getString(key: "copilotapp.sign.up.password.warning.five") ?? ""
+        specialLabel.text = "*\(special)"
     }
     
     func setClarificationText(color: UIColor = .textGrey) {
-        let calrification = AttributedText(text: Strings.clarificationDescription, fontSize: 12, style: .regular, textColor: color)
-        let calrificationUnderlined = AttributedText(text: Strings.clarificationText, fontSize: 12, style: .bold, textColor: color)
+        let text1 = App.getString(key: "copilotapp.sign.up.checkbox.one.button") ?? ""
+        let text2 = App.getString(key: "copilotapp.sign.up.checkbox.one.description") ?? ""
+        let text3 = text1+text2
+        let calrification = AttributedText(text: text3, fontSize: 12, style: .regular, textColor: color)
+        let calrificationUnderlined = AttributedText(text: text1, fontSize: 12, style: .bold, textColor: color)
         clarificationLabel.attributedText = AttributedText.createUnderlinedString(mainText: calrification, underlinedText: calrificationUnderlined)
     }
     
