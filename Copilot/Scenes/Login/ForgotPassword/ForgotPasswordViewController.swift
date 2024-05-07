@@ -49,10 +49,11 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.sign.in.forgot.password.button")
-        descriptionLabel.text = Strings.forgotPasswordDescription
+        titleLabel.text = App.getString(key: "copilotapp.forgot.password.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.forgot.password.description")
         phoneTextField.placeholder = App.getString(key: "copilotapp.sign.up.phone.input.description")
-        sendButton.setTitle(Strings.sendNewPassword, for: .normal)
+        emailTextFiled.placeholder = App.getString(key: "copilotapp.forgot.password.email.input.description")
+        sendButton.setTitle(App.getString(key: "copilotapp.forgot.password.button"), for: .normal)
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -72,5 +73,7 @@ class ForgotPasswordViewController: UIViewController {
 }
 
 extension ForgotPasswordViewController: ForgotPasswordViewModelDelegate {
-
+    func showSuccess(title: String, message: String, buttonTitle: String) {
+        showSuccess(successTitle: title, message: message, buttonTitle: buttonTitle)
+    }
 }

@@ -12,7 +12,7 @@ protocol ForgotPasswordVMCoordinatorDelegate: AnyObject {
 }
 
 protocol ForgotPasswordViewModelDelegate: AnyObject {
-    func showSuccess(title: String, message: String)
+    func showSuccess(title: String, message: String, buttonTitle: String)
     func showError(title: String, message: String)
 }
 
@@ -47,8 +47,12 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
                 return
             }
             APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN_PAGE_LOAD_FORGOT_PASSWORD")
-            self.delegate?.showSuccess(title: Strings.passwordHasBeenSent,
-                                       message: Strings.passwordSentToEmail)
+            let title = App.getString(key: "copilotapp.forgot.password.success.title") ?? ""
+            let message = App.getString(key: "copilotapp.forgot.password.success.description") ?? ""
+            let button = App.getString(key: "copilotapp.forgot.password.success.button") ?? ""
+            self.delegate?.showSuccess(title: title,
+                                       message: message, 
+                                       buttonTitle: button)
         }
         
     }
