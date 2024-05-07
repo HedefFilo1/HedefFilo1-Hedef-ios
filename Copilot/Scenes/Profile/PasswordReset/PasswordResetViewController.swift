@@ -73,17 +73,21 @@ class PasswordResetViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.resetPassword
-        oldPasswordTextField.placeholder = Strings.oldPassword
-        newPasswordTextField.placeholder = Strings.newPassword
-        repeatPasswordTextField.placeholder = Strings.repeatPasswordAgain
-        let minText = App.getString(key: "copilotapp.sign.up.password.warning.one") ?? ""
+        titleLabel.text = App.getString(key: "copilotapp.profile.password.renewal")
+        oldPasswordTextField.placeholder = App.getString(key: "copilotapp.profile.password.renewal.input.title")
+        newPasswordTextField.placeholder = App.getString(key: "copilotapp.profile.password.renewal.new.password.title")
+        repeatPasswordTextField.placeholder = App.getString(key: "copilotapp.profile.password.renewal.new.password.again.title")
+        let minText = App.getString(key: "copilotapp.profile.password.warning.one") ?? ""
         minLabel.text = "*\(minText)"
-        uppercaseLabel.text = Strings.uppercaseLetter
-        lowercaseLabel.text = Strings.lowerCase
-        numberLabel.text = Strings.number
-        specialLabel.text = Strings.specialCharacter
-        saveButton.setTitle(Strings.save, for: .normal)
+        let uppercase = App.getString(key: "copilotapp.profile.password.warning.two") ?? ""
+        uppercaseLabel.text = "*\(uppercase)"
+        let lowercase = App.getString(key: "copilotapp.profile.password.warning.three") ?? ""
+        lowercaseLabel.text = "*\(lowercase)"
+        let number = App.getString(key: "copilotapp.profile.password.warning.four") ?? ""
+        numberLabel.text = "*\(number)"
+        let special = App.getString(key: "copilotapp.profile.password.warning.five") ?? ""
+        specialLabel.text = "*\(special)"
+        saveButton.setTitle(App.getString(key: "copilotapp.profile.password.renewal.button"), for: .normal)
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {

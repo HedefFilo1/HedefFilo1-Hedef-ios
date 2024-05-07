@@ -66,7 +66,8 @@ class PasswordResetViewModel: PasswordResetViewModelType {
                 return
             }
             APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_SAVE")
-            self.delegate?.showSuccess(title: Strings.passwordUpdated, message: "", delegate: self)
+            let title = App.getString(key: "copilotapp.profile.success.update") ?? ""
+            self.delegate?.showSuccess(title: title, message: "", delegate: self)
         }
     }
     

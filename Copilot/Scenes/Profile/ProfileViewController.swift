@@ -72,14 +72,15 @@ class ProfileViewController: UIViewController {
     }
     
     func setTexts() {
-        phoneTextField.placeholder = Strings.mobilePhone
-        emailTextFiled.placeholder = Strings.email
-        nameTextField.placeholder = Strings.name
-        surnameTextField.placeholder = Strings.surname
-        idTextField.placeholder = Strings.taxIdNumber
-        licenseTextField.placeholder = Strings.vehicleLicenseNumber
-        passwordLabel.text = Strings.resetPassword
-        submitButton.setTitle(Strings.updateInformation, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.profile.title")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.profile.phone.input")
+        emailTextFiled.placeholder = App.getString(key: "copilotapp.profile.email.input")
+        nameTextField.placeholder = App.getString(key: "copilotapp.profile.name.input")
+        surnameTextField.placeholder = App.getString(key: "copilotapp.profile.surname.input")
+        idTextField.placeholder = App.getString(key: "copilotapp.profile.id.tax.number.input")
+        licenseTextField.placeholder = App.getString(key: "copilotapp.profile.vehicle.license.number")
+        passwordLabel.text = App.getString(key: "copilotapp.profile.password.renewal")
+        submitButton.setTitle(App.getString(key: "copilotapp.profile.button"), for: .normal)
     }
     
     func setButtonActivation() {
