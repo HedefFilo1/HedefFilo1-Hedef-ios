@@ -63,7 +63,7 @@ class SplashViewModel: SplashViewModelType {
     func loadStrings() {
         APIService.getStrings { [weak self] model, _ in
             
-            guard let self = self else {return}
+            guard let self = self else { return }
             
             if let model = model {
                 App.contentStrings = model
