@@ -37,7 +37,7 @@ class NearMeCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.nearMe
+        titleLabel.text = App.getString(key: "copilotapp.homepage.near")
     }
     
     func setMap() {

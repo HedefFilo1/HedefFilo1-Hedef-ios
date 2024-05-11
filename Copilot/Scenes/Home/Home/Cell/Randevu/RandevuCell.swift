@@ -44,6 +44,6 @@ class RandevuCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.upcomingAppointment
+        titleLabel.text = App.getString(key: "copilotapp.homepage.upcoming.appointment.title")
     }
 }

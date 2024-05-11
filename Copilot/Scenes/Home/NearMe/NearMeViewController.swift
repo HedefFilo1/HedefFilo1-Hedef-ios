@@ -71,8 +71,8 @@ class NearMeViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.nearMe
-        filterLabel.text = Strings.filters
+        titleLabel.text = App.getString(key: "copilotapp.homepage.near")
+        filterLabel.text = App.getString(key: "copilotapp.homepage.near.button")
     }
     
     func setupMap() {

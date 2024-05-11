@@ -44,7 +44,7 @@ class MaintainInfoCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.latestMaintenanceInformation
+        titleLabel.text = App.getString(key: "copilotapp.homepage.last.maintenance.information")
         partLabel.text = Strings.periodicMaintenance
     }
 }

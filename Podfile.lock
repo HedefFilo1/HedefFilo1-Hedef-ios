@@ -1,17 +1,17 @@
 PODS:
-  - Alamofire (5.6.4)
+  - Alamofire (5.9.1)
   - FSCalendar (2.8.4)
   - GoogleMaps (8.3.1):
     - GoogleMaps/Maps (= 8.3.1)
   - GoogleMaps/Base (8.3.1)
   - GoogleMaps/Maps (8.3.1):
     - GoogleMaps/Base
-  - IQKeyboardManagerSwift (6.5.11)
+  - IQKeyboardManagerSwift (7.0.2)
   - netfox (1.21.0)
-  - SDWebImage (5.17.0):
-    - SDWebImage/Core (= 5.17.0)
-  - SDWebImage/Core (5.17.0)
-  - SwiftLint (0.52.2)
+  - SDWebImage (5.19.1):
+    - SDWebImage/Core (= 5.19.1)
+  - SDWebImage/Core (5.19.1)
+  - SwiftLint (0.54.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -33,14 +33,14 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   GoogleMaps: b47b67bd63d708477d6ff457da2d695c0d8ceb5f
-  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
-  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
-  SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
+  SDWebImage: 40b0b4053e36c660a764958bff99eed16610acbb
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
 PODFILE CHECKSUM: 7f8908290ca0531bacdcbc88ffe3629c43026451
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

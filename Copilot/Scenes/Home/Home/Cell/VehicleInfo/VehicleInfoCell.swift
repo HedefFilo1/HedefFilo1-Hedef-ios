@@ -77,11 +77,11 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.vehicleInformation
-        rentLabel.text = Strings.rentalPeriod
-        limitLabel.text = Strings.kmLimit
-        usedLabel.text = Strings.kmUsed
-        changeButton.setTitle(Strings.makeChange, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.homepage.title")
+        rentLabel.text = App.getString(key: "copilotapp.homepage.lease_term")
+        limitLabel.text = App.getString(key: "copilotapp.homepage.km.limit")
+        usedLabel.text = App.getString(key: "copilotapp.homepage.km.used")
+        changeButton.setTitle(App.getString(key: "copilotapp.homepage.button.make.change"), for: .normal)
     }
     
     @IBAction func didTapChangeButton() {

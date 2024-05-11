@@ -28,8 +28,8 @@ class HomeViewController: UIViewController {
         setupUI()
 #if DEV_DEBUG
 
-        viewModel.coordinatorDelegate?.goToStandings()
-        return
+//        viewModel.coordinatorDelegate?.goToStandings()
+//        return
 #endif
         viewModel.getVehicle(shoudGetCase: true)
     }

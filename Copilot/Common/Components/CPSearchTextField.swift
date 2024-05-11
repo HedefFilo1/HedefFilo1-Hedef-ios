@@ -13,6 +13,8 @@ class CPSearchTextField: UITextField {
     let searchIcon = UIImageView()
     
     var textPadding = UIEdgeInsets(top: 16, left: 54, bottom: 16, right: 20)
+    var color = UIColor.white
+    var title = Strings.searchFilter
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,10 +68,16 @@ class CPSearchTextField: UITextField {
     }
     
     func setTint(color: UIColor) {
+        self.color = color
         searchIcon.image = Images.search.withRenderingMode(.alwaysTemplate)
         searchIcon.tintColor = color
+        setPlaceholder(title: title)
+    }
+    
+    func setPlaceholder(title: String) {
+        self.title = title
         let font = FontTypographyType.custom(color, .regular, 14).font
-        attributedPlaceholder = NSAttributedString(string: Strings.searchFilter, attributes: [
+        attributedPlaceholder = NSAttributedString(string: title, attributes: [
             .foregroundColor: color,
             .font: font
         ])
