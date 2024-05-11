@@ -13,7 +13,7 @@ class DocumentPageTitleCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.apply(.greyS14R400)
-        titleLabel.text = Strings.documentsSavedInCopilot
+        titleLabel.text = App.getString(key: "copilotapp.document.description")
     }
 
 }

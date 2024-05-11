@@ -27,10 +27,6 @@ class DocumentViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -46,7 +42,7 @@ class DocumentViewController: UIViewController {
     }
     
     func setTexts() {
-        downloadLabel.text = Strings.download
+        downloadLabel.text = App.getString(key: "copilotapp.document.download.button")
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {

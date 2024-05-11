@@ -55,7 +55,7 @@ class DocumentsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.yourDocuments
+        titleLabel.text = App.getString(key: "copilotapp.document.title")
     }
 }
 
