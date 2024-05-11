@@ -35,8 +35,8 @@ class VehicleInfoButtonsCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        goLabel.text = Strings.goToVehicleGuide
-        goButton.setTitle(Strings.goToVehicleRequests, for: .normal)
+        goLabel.text = App.getString(key: "copilotapp.vehicleinfo.go.vehicle.guide.button")
+        goButton.setTitle(App.getString(key: "copilotapp.vehicleinfo.go.vehicle.related.request.button"), for: .normal)
     }
     
     @IBAction func didTapGuide() {

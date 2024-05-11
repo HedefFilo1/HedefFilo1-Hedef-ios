@@ -30,10 +30,6 @@ class VehicleInfoViewController: UIViewController {
         viewModel.getDocuments()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         setBasicViews()
         applyStyle()
@@ -54,7 +50,7 @@ class VehicleInfoViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.vehicleInformation
+        titleLabel.text = App.getString(key: "copilotapp.vehicleinfo.title")
     }
 }
 

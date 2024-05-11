@@ -70,6 +70,8 @@ class PdfViewerViewController: UIViewController {
         if let title = viewModel.document?.name {
             titleLabel.text = title
         }
+
+        downloadLabel.text = App.getString(key: "copilotapp.vehicleinfo.download.button")
     }
     
     @IBAction func didTapBack() {

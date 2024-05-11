@@ -37,7 +37,7 @@ class VehicleInfoItemCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        downloadLabel.text = Strings.download
+        downloadLabel.text = App.getString(key: "copilotapp.vehicleinfo.download.button")
     }
     
     @IBAction func didTapDownload() {

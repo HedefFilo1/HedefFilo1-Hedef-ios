@@ -63,9 +63,9 @@ class VehicleCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         infoLabel.text = Strings.vehicleInfoDetails
-        rentLabel.text = Strings.rentalPeriod
-        limitLabel.text = Strings.kmLimit
-        usedLabel.text = Strings.vehicleUsedKm
+        rentLabel.text = App.getString(key: "copilotapp.vehicleinfo.lease.duration")
+        limitLabel.text = App.getString(key: "copilotapp.vehicleinfo.km.limit")
+        usedLabel.text = App.getString(key: "copilotapp.vehicleinfo.vehicle.used.km")
     }
     
 }
