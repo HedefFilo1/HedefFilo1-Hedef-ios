@@ -140,7 +140,8 @@ extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
 
 extension ServiceOperationsViewController: ServicesOperationItemsCellDelegate {
     func didSelect(item: ServiceOperation) {
-        viewModel.presentFeedbackRate()
+        let id = item.id ?? ""
+        viewModel.presentFeedbackRate(caseId: id)
     }
 }
 

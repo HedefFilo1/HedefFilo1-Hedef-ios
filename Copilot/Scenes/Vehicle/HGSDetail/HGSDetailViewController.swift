@@ -28,10 +28,6 @@ class HGSDetailViewController: UIViewController {
         APIService.addUserAction(pageName: "Car Informations", actionName: "VEHICLE_HGS_TRANSITION_DETAILED_INFO")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()

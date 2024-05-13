@@ -620,4 +620,8 @@ extension Strings {
     static var serviceWorkingHours: String {
         return localized(string: "serviceWorkingHours")
     }
+    
+    static var feedbackCreatedSuccessfully: String {
+        return localized(string: "feedbackCreatedSuccessfully")
+    }
 }

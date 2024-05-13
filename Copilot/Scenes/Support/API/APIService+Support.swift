@@ -55,6 +55,27 @@ extension APIService {
         req.start()
     }
     
+    static func sendFeedBack(caseId: String,
+                             rate: Int,
+                             comment: String,
+                             completion: @escaping (Success?, APIResponseError?) -> Void) {
+        let route = "user/feedback"
+        let params = [
+            "caseId": caseId,
+            "rate": rate,
+            "comment": comment
+        ] as [String: Any]
+        
+        let req = APIRequest<Success>(route: route,
+                                                 method: .post,
+                                                 parameters: params,
+                                                 hasToken: true)
+        req.identifier = "sendFeedBack"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     static func getLiveSupport(completion: @escaping (LiveSupport?, APIResponseError?) -> Void) {
         let route = "live-support"
         let req = APIRequest<LiveSupport>(route: route, method: .get, hasToken: true)

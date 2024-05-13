@@ -51,13 +51,15 @@ class HGSCell: UICollectionViewCell, Reusable {
     }
     
     func setEntranceLabel(text: String) {
-        let entrance = [AttributedText(text: "\(Strings.entrance): ", type: .blackS16R400),
+        let first = App.getString(key: "copilotapp.hgstransition.enter") ?? ""
+        let entrance = [AttributedText(text: "\(first): ", type: .blackS16R400),
                         AttributedText(text: text, type: .blackS16B700)]
         enteranceLabel.attributedText = AttributedText.createString(texts: entrance)
     }
     
     func setExitLabel(text: String) {
-        let exit = [AttributedText(text: "\(Strings.exit): ", type: .blackS16R400),
+        let first = App.getString(key: "copilotapp.hgstransition.exit") ?? ""
+        let exit = [AttributedText(text: "\(first): ", type: .blackS16R400),
                         AttributedText(text: text, type: .blackS16B700)]
         exitLabel.attributedText = AttributedText.createString(texts: exit)
     }

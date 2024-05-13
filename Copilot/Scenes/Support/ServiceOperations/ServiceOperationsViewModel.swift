@@ -17,7 +17,7 @@ protocol ServiceOperationsVMCoordinatorDelegate: AnyObject {
     func presentFitlers(title: String,
                         delegate: FeedbackFilterViewControllerDelegate,
                         items: [FeedbackFilterItem])
-    func presentFeedbackRate()
+    func presentFeedbackRate(caseId: String)
 }
 
 protocol ServiceOperationsViewModelDelegate: BaseViewModelDelegate {
@@ -32,7 +32,7 @@ protocol ServiceOperationsViewModelType: AnyObject {
     var searchText: String { get set }
     func getBack()
     func presentFitlers()
-    func presentFeedbackRate()
+    func presentFeedbackRate(caseId: String)
     func getServices()
 }
 
@@ -46,7 +46,7 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
             return items
         }
         let arr = items.filter {
-            $0.supplierName.lowercased().contains(searchText.lowercased())
+            $0.dispayTitle.lowercased().contains(searchText.lowercased())
         }
         return arr
     }
@@ -64,8 +64,8 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
                                             delegate: self, items: filterItems)
     }
     
-    func presentFeedbackRate() {
-        coordinatorDelegate?.presentFeedbackRate()
+    func presentFeedbackRate(caseId: String) {
+        coordinatorDelegate?.presentFeedbackRate(caseId: caseId)
     }
     
     func getServices() {

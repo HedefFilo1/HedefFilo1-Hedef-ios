@@ -140,7 +140,8 @@ extension ProccessRequestsViewController: ProccessRequestsSearchCellDelegate {
 
 extension ProccessRequestsViewController: ProccessRequestsItemsCellDelegate {
     func didSelect(item: ProccessRequest) {
-        viewModel.presentFeedbackRate()
+        let id = item.id ?? ""
+        viewModel.presentFeedbackRate(caseId: id)
     }
 }
 

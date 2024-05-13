@@ -11,7 +11,7 @@ class ProccessRequestsItemCell: UICollectionViewCell, Reusable {
 
     var item: ProccessRequest? {
         didSet {
-            nameLabel.text = item?.supplierName
+            nameLabel.text = item?.displayTitle
             dateLabel.text = item?.displayDate
         }
     }

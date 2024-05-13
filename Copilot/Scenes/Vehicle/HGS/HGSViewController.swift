@@ -55,7 +55,7 @@ class HGSViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.vehicleHGSPasses
+        titleLabel.text = App.getString(key: "copilotapp.hgstransition.title")
     }
     
 }

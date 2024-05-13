@@ -153,10 +153,11 @@ extension SupportCoordinator: UIViewControllerTransitioningDelegate,
         navigationController.present(controller, animated: true)
     }
     
-    func presentFeedbackRate() {
+    func presentFeedbackRate(caseId: String) {
         let controller: FeedbackRateViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackRateViewModel()
         controller.viewModel = viewModel
+        viewModel.caseId = caseId
         viewModel.coordinatorDelegate = self
         //        navigationController.present(controller, animated: true)
         
@@ -167,13 +168,15 @@ extension SupportCoordinator: UIViewControllerTransitioningDelegate,
         navigationController.present(feedbackRateNavigation, animated: true)
     }
     
-    func goToFeedbackComment() {
+    func goToFeedbackComment(caseId: String, rate: Int) {
         let controller: FeedbackCommentViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackCommentViewModel()
         controller.viewModel = viewModel
         viewModel.coordinatorDelegate = self
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self
+        viewModel.caseId = caseId
+        viewModel.rate = rate
         navigationController.present(controller, animated: true)
     }
     

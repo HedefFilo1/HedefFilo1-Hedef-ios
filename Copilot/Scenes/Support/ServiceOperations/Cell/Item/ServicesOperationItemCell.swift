@@ -11,7 +11,7 @@ class ServicesOperationItemCell: UICollectionViewCell, Reusable {
 
     var item: ServiceOperation? {
         didSet {
-            nameLabel.text = item?.supplierName
+            nameLabel.text = item?.dispayTitle
             typeLabel.text = item?.type
             dateLabel.text = item?.displayDate
         }

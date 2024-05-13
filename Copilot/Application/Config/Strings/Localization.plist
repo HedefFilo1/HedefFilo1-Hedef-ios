@@ -3455,12 +3455,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Working Hours: 09:00-17:00</string>
         </dict>
         
-        <key></key>
+        <key>feedbackCreatedSuccessfully</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Geri Bildirim Başarıyla Oluşturuldu</string>
             <key>en</key>
-            <string></string>
+            <string>Feedback Created Successfully</string>
         </dict>
         
         <key></key>

@@ -8,9 +8,26 @@
 import Foundation
 
 struct ProccessRequest: Decodable {
-    
+    let id: String?
     let supplierName: String?
+    let contactName: String?
+    let plateNumber: String?
     let appointmentDate: String?
+    
+    var displayTitle: String {
+        if let supplierName {
+            return supplierName
+        }
+        
+        if let contactName {
+            return contactName
+        }
+        
+        if let plateNumber {
+            return plateNumber
+        }
+        return ""
+    }
     
     var displayDate: String {
         let formmater = DateFormatter()

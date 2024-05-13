@@ -16,10 +16,22 @@ enum ServiceOperationType: String, Decodable {
 }
 
 struct ServiceOperation: Decodable {
-    
-    let supplierName: String
+    let id: String?
+    let supplierName: String?
+    let serviceName: String?
     let appointmentDate: String?
     let recordType: ServiceOperationType
+    
+    var dispayTitle: String {
+        if let supplierName {
+            return supplierName
+        }
+        
+        if let serviceName {
+            return serviceName
+        }
+        return ""
+    }
     
     var type: String {
         var str: String?

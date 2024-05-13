@@ -74,10 +74,19 @@ class FeedbackCommentViewController: SheetViewController {
     }
     
     @IBAction func didTapButton() {
-        dismiss(animated: true)
+        let comment = answerTextFeild.text ?? ""
+        viewModel.sendFeedBack(comment: comment)
     }
 }
 
-extension FeedbackCommentViewController: FeedbackCommentViewModelDelegate {
+extension FeedbackCommentViewController: FeedbackCommentViewModelDelegate,
+                                         MessagePopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        dismiss(animated: true)
+    }
     
+    func didFinishSendFeedBack() {
+        showSuccess(title: "", message: Strings.feedbackCreatedSuccessfully, delegate: self)
+        
+    }
 }
