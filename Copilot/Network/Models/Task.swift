@@ -37,7 +37,7 @@ enum TaskStatus: String, Decodable {
 }
 
 struct Task: Decodable {
-    let id: String
+    let id: String?
     let subject: String
     let additionalInfo: String
     let description: String

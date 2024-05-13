@@ -37,10 +37,6 @@ class RequestDetailViewController: UIViewController {
         setTask()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()

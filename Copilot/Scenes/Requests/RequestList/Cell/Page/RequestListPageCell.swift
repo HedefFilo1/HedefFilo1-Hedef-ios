@@ -76,7 +76,7 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
         if let item = requestItems?[indexPath.item] {
             let type = item.status
             let status = TaskStatus(rawValue: type) ?? .other
-            let task = Task(id: item.id,
+            let task = Task(id: item.id ?? "",
                             subject: item.recordType ?? "",
                             additionalInfo: item.webCategoryEnum ?? "",
                             description: "",

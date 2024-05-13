@@ -33,7 +33,7 @@ enum DemandStatusType: String, Decodable {
 }
 
 struct Demand: Decodable {
-    let id: String
+    let id: String?
     let status: String
     let statusEnum: DemandStatusType
     let webCategoryEnum: String?
