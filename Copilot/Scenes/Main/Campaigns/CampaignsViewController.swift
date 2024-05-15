@@ -68,10 +68,11 @@ class CampaignsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.campaigns
-        offerButton.setTitle(Strings.offer, for: .normal)
-        newsButton.setTitle(Strings.news, for: .normal)
-        sponsorshipButton.setTitle(Strings.sponsorship, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.campaign.title")
+        
+        offerButton.setTitle(App.getString(key: "copilotapp.campaign.tab.campaign"), for: .normal)
+        newsButton.setTitle(App.getString(key: "copilotapp.campaign.tab.news"), for: .normal)
+        sponsorshipButton.setTitle(App.getString(key: "copilotapp.campaign.tab.sponsorship"), for: .normal)
     }
     
     @IBAction func didTab(_ sender: UIView) {

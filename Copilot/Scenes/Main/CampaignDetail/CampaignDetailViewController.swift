@@ -49,7 +49,7 @@ class CampaignDetailViewController: UIViewController {
     }
     
     func setTexts() {
-        benefitButton.setTitle(Strings.takeAdvantageCampaign, for: .normal)
+        benefitButton.setTitle(App.getString(key: "copilotapp.campaign.benefit.campaign.button"), for: .normal)
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {

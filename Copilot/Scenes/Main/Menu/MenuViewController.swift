@@ -82,7 +82,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         case 1:
             cell.imageView.image = Images.percentIcon
-            cell.titleLabel.text = Strings.campaigns
+            cell.titleLabel.text = App.getString(key: "copilotapp.campaign.title")
             
         case 2:
             cell.imageView.image = Images.documentIcon

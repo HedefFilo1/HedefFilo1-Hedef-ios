@@ -46,6 +46,7 @@ extension NewsTabCell: UICollectionViewDataSource, UICollectionViewDelegateFlowL
         
         if indexPath.section == 0 {
             let cell: CampaignsTitleCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.titleLabel.text = App.getString(key: "copilotapp.campaign.tab.description")
             return cell
         }
         
