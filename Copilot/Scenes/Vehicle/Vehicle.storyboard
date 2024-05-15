@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hDA-i5-Fix">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hDA-i5-Fix">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,20 +31,20 @@
             <objects>
                 <viewController storyboardIdentifier="VehicleInfoViewController" id="gjF-V1-FHA" userLabel="Vehicle Info View Controller" customClass="VehicleInfoViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4Y-vI-6Wh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atB-ww-1B9">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
+                                <rect key="frame" x="0.0" y="187" width="393" height="665"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokümanlarınız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-R6-Szj">
-                                        <rect key="frame" x="241.33333333333334" y="24" width="117.33333333333334" height="20.333333333333329"/>
+                                        <rect key="frame" x="138" y="24" width="117.33333333333331" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-nE-Pqh">
-                                        <rect key="frame" x="0.0" y="56.333333333333343" width="600" height="415.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="56.333333333333314" width="393" height="574.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G2U-FC-mrW">
                                             <size key="itemSize" width="128" height="128"/>
@@ -89,18 +91,18 @@
             <objects>
                 <viewController storyboardIdentifier="VehicleGuideViewController" id="NzZ-Em-u2M" customClass="VehicleGuideViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E0K-yw-JxH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0gX-2j-o4Y">
-                                <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="bS3-kF-Fq6"/>
                                     <constraint firstAttribute="width" constant="24" id="uuS-qw-1vC"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0F-RW-nCF">
-                                <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1xe-0z-KKH"/>
                                     <constraint firstAttribute="width" constant="40" id="Bts-FP-I53"/>
@@ -111,13 +113,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Araç Rehberi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-fp-8G0">
-                                <rect key="frame" x="251" y="25" width="98" height="21"/>
+                                <rect key="frame" x="147.66666666666666" y="84" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-PV-LUf">
-                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                                <rect key="frame" x="0.0" y="117" width="393" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hxI-a4-cOd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -157,20 +159,20 @@
             <objects>
                 <viewController storyboardIdentifier="HGSViewController" id="uhi-Sb-ABp" userLabel="HGS ViewController" customClass="HGSViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6H-yN-oTJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-W9-uTO">
-                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="709"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Araç HGS Geçişleri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-c4-xms">
-                                        <rect key="frame" x="227.66666666666663" y="24" width="145" height="21"/>
+                                        <rect key="frame" x="124" y="24" width="145" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-xR-wKz">
-                                        <rect key="frame" x="0.0" y="57" width="600" height="459"/>
+                                        <rect key="frame" x="0.0" y="57" width="393" height="618"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OEY-lc-vHR">
                                             <size key="itemSize" width="128" height="128"/>
@@ -212,23 +214,23 @@
             </objects>
             <point key="canvasLocation" x="-115" y="875"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--HGSDetailViewController-->
         <scene sceneID="iW9-ZF-lzv">
             <objects>
-                <viewController storyboardIdentifier="HGSDetailViewController" id="gXt-1K-1kC" customClass="HGSDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HGSDetailViewController" id="gXt-1K-1kC" userLabel="HGSDetailViewController" customClass="HGSDetailViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eHp-mB-cUv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Usi-7Q-CTx">
-                                <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BLs-a1-AT3"/>
                                     <constraint firstAttribute="width" constant="24" id="uD2-hq-G0v"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yad-oR-Rs8">
-                                <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="clj-DG-Emw"/>
                                     <constraint firstAttribute="width" constant="40" id="poZ-W9-7IY"/>
@@ -239,23 +241,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HGS Geçiş Detayı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bH-O8-wuB">
-                                <rect key="frame" x="232.66666666666669" y="25" width="134.66666666666669" height="20.333333333333329"/>
+                                <rect key="frame" x="129.33333333333337" y="84" width="134.66666666666663" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-1y-GDB">
-                                <rect key="frame" x="239.33333333333334" y="540" width="121.66666666666666" height="44"/>
+                                <rect key="frame" x="135.66666666666666" y="758" width="121.66666666666666" height="44"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MCX-WX-r8f">
-                                        <rect key="frame" x="31.999999999999972" y="14" width="16" height="16"/>
+                                        <rect key="frame" x="32" y="14" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Vv2-qh-cSz"/>
                                             <constraint firstAttribute="width" constant="16" id="pzO-b6-Yxp"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İndir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2r-1I-Eeq">
-                                        <rect key="frame" x="55.999999999999972" y="11.999999999999998" width="33.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="56" y="11.999999999999998" width="33.666666666666657" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -284,19 +286,19 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nnu-iH-7aW">
-                                <rect key="frame" x="24" y="69.333333333333314" width="552" height="315"/>
+                                <rect key="frame" x="24" y="128.33333333333337" width="345" height="315"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCr-Jq-aBf">
-                                        <rect key="frame" x="0.0" y="0.0" width="552" height="31.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="31.666666666666668"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0M-De-gyc">
-                                                <rect key="frame" x="0.0" y="5.6666666666666714" width="39" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="5.6666666666666572" width="39" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewg-RO-um4">
-                                                <rect key="frame" x="47" y="5.6666666666666714" width="60.333333333333343" height="20.333333333333332"/>
+                                                <rect key="frame" x="47" y="5.6666666666666572" width="60.333333333333343" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -311,16 +313,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvO-0W-M0N">
-                                        <rect key="frame" x="0.0" y="31.666666666666671" width="552" height="31.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="31.666666666666657" width="345" height="31.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-Ao-bmP">
-                                                <rect key="frame" x="0.0" y="5.3333333333333286" width="41.333333333333336" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="5.3333333333333428" width="41.333333333333336" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İzmit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL9-dn-T3h">
-                                                <rect key="frame" x="49.333333333333329" y="5.3333333333333286" width="37" height="20.333333333333332"/>
+                                                <rect key="frame" x="49.333333333333329" y="5.3333333333333428" width="37" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -335,7 +337,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97r-Ds-9me">
-                                        <rect key="frame" x="0.0" y="63.000000000000007" width="552" height="31.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="62.999999999999993" width="345" height="31.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İşlem Tarihi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXZ-Ku-rAy">
                                                 <rect key="frame" x="0.0" y="5.6666666666666572" width="90" height="20.333333333333332"/>
@@ -359,7 +361,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCy-yg-cKN">
-                                        <rect key="frame" x="0.0" y="94.666666666666671" width="552" height="31.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="94.666666666666657" width="345" height="31.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İşlem Saati:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVC-z8-n7c">
                                                 <rect key="frame" x="0.0" y="5.3333333333333428" width="87" height="20.333333333333332"/>
@@ -383,7 +385,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xD-C7-rWp">
-                                        <rect key="frame" x="0.0" y="126.00000000000001" width="552" height="31.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="126.00000000000001" width="345" height="31.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İşlem ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-qV-2rI">
                                                 <rect key="frame" x="0.0" y="5.6666666666666572" width="65.333333333333329" height="20.333333333333332"/>
@@ -407,16 +409,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvT-SQ-qBt">
-                                        <rect key="frame" x="0.0" y="157.66666666666669" width="552" height="31.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="157.66666666666666" width="345" height="31.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Tarihi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-7E-cpR">
-                                                <rect key="frame" x="0.0" y="5.3333333333333428" width="84" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="5.3333333333333144" width="84" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.07.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11z-1F-b7j">
-                                                <rect key="frame" x="92" y="5.3333333333333428" width="85.333333333333314" height="20.333333333333332"/>
+                                                <rect key="frame" x="92" y="5.3333333333333144" width="85.333333333333314" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -431,7 +433,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xS1-0d-YI0">
-                                        <rect key="frame" x="0.0" y="189" width="552" height="31.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="188.99999999999997" width="345" height="31.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Saati:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-wp-lUo">
                                                 <rect key="frame" x="0.0" y="5.6666666666666856" width="81.333333333333329" height="20.333333333333332"/>
@@ -455,7 +457,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih4-jc-Sh7">
-                                        <rect key="frame" x="0.0" y="220.66666666666669" width="552" height="31.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="220.66666666666666" width="345" height="31.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış Tarihi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-6e-Ng5">
                                                 <rect key="frame" x="0.0" y="5.3333333333333144" width="86.333333333333329" height="20.333333333333332"/>
@@ -479,7 +481,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noD-DZ-Tqq">
-                                        <rect key="frame" x="0.0" y="251.99999999999997" width="552" height="31.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="251.99999999999997" width="345" height="31.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış Saati:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-wn-MfR">
                                                 <rect key="frame" x="0.0" y="5.6666666666666856" width="83.333333333333329" height="20.333333333333332"/>
@@ -503,7 +505,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXK-Hu-BOq">
-                                        <rect key="frame" x="0.0" y="283.66666666666669" width="552" height="31.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="283.66666666666663" width="345" height="31.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-rm-hKd">
                                                 <rect key="frame" x="0.0" y="5.3333333333333144" width="44" height="20.333333333333332"/>
@@ -582,18 +584,18 @@
             <objects>
                 <viewController storyboardIdentifier="PdfViewerViewController" id="36K-GW-lJL" customClass="PdfViewerViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdj-Fb-Ptu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lm9-sV-VjJ">
-                                <rect key="frame" x="24" y="24" width="24" height="24"/>
+                                <rect key="frame" x="24" y="83" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="Fnh-eP-hYZ"/>
                                     <constraint firstAttribute="height" constant="24" id="zbP-WA-HN1"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-1C-6FZ">
-                                <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="95d-Z0-q0u"/>
                                     <constraint firstAttribute="height" constant="40" id="a6u-Xg-MrC"/>
@@ -604,16 +606,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Araç Rehberi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YA-M1-mMp">
-                                <rect key="frame" x="60" y="25" width="528" height="21"/>
+                                <rect key="frame" x="60" y="84" width="321" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OP-l7-wBK">
-                                <rect key="frame" x="0.0" y="58" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="117" width="393" height="645"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB2-zk-whu">
-                                        <rect key="frame" x="262.66666666666669" y="232.66666666666669" width="74.666666666666686" height="21"/>
+                                        <rect key="frame" x="159.33333333333334" y="312" width="74.666666666666657" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -626,17 +628,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E58-7o-r1V">
-                                <rect key="frame" x="239.33333333333334" y="548" width="121.66666666666666" height="44"/>
+                                <rect key="frame" x="135.66666666666666" y="766" width="121.66666666666666" height="44"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-dl-K5p">
-                                        <rect key="frame" x="31.999999999999972" y="14" width="16" height="16"/>
+                                        <rect key="frame" x="32" y="14" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Wtn-Da-aQm"/>
                                             <constraint firstAttribute="width" constant="16" id="z33-xq-lbl"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İndir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-xl-Gqa">
-                                        <rect key="frame" x="55.999999999999972" y="11.666666666666629" width="33.666666666666657" height="21"/>
+                                        <rect key="frame" x="56" y="11.666666666666629" width="33.666666666666657" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -700,20 +702,20 @@
             <objects>
                 <viewController restorationIdentifier="VehicleServicesViewController" storyboardIdentifier="VehicleServicesViewController" id="atY-3W-Fmp" userLabel="Services View Controller" customClass="VehicleServicesViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EvJ-W7-e53">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-rx-84q">
-                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="709"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hedef Filo Anlaşmalı Servisler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lz-hA-hn5">
-                                        <rect key="frame" x="16" y="24" width="568" height="21"/>
+                                        <rect key="frame" x="16" y="24" width="361" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Srx-wE-uuL">
-                                        <rect key="frame" x="0.0" y="57" width="600" height="459"/>
+                                        <rect key="frame" x="0.0" y="57" width="393" height="618"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJY-cL-SoQ">
                                             <size key="itemSize" width="128" height="128"/>

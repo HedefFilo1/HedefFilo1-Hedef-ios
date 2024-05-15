@@ -47,7 +47,16 @@ class HGSDetailViewController: UIViewController {
     }
     
     func setTexts() {
-        
+        fieldLabels[0].text = App.getString(key: "copilotapp.hgstransition.enter")
+        fieldLabels[1].text = App.getString(key: "copilotapp.hgstransition.exit")
+        fieldLabels[2].text = App.getString(key: "copilotapp.hgstransition.detail.transaction.date")
+        fieldLabels[3].text = App.getString(key: "copilotapp.hgstransition.detail.transaction.time")
+        fieldLabels[4].text = App.getString(key: "copilotapp.hgstransition.detail.transaction.id")
+        fieldLabels[5].text = App.getString(key: "copilotapp.hgstransition.detail.entry.date")
+        fieldLabels[6].text = App.getString(key: "copilotapp.hgstransition.detail.entry.time")
+        fieldLabels[7].text = App.getString(key: "copilotapp.hgstransition.detail.release.date")
+        fieldLabels[8].text = App.getString(key: "copilotapp.hgstransition.detail.release.time")
+        fieldLabels[9].text = App.getString(key: "copilotapp.hgstransition.detail.amount")
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {
