@@ -59,8 +59,8 @@ class ProccessRequestsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.processRequests
-        descriptionLabel.text = Strings.proccessRequestServicesDescription
+        titleLabel.text = App.getString(key: "copilotapp.help.feedback.process.demand")
+        descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.process.demand.body")
     }
     
     @IBAction func didTapBack() {

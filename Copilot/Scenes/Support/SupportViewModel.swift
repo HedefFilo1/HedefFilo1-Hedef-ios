@@ -15,11 +15,11 @@ enum SupportMenuItems: CaseIterable {
     var title: String {
         switch self {
         case .guides:
-            Strings.supportGuidesMenuTitle
+            App.getString(key: "copilotapp.help.guide") ?? ""
         case .feedback:
-            Strings.supportFeedbackMenuTitle
+            App.getString(key: "copilotapp.help.feedback") ?? ""
         case .faq:
-            Strings.frequentlyAskedQuestions
+            App.getString(key: "copilotapp.help.faq") ?? ""
         }
     }
 }

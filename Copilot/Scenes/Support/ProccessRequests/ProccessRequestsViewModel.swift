@@ -63,7 +63,8 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
             FeedbackFilterItem(title: "Bağlanan Araç İşlemi"),
             FeedbackFilterItem(title: "Bağlanan Araç İşlemi")
         ]
-        coordinatorDelegate?.presentFitlers(title: Strings.proceduralRequestProcess, delegate: self, items: filterItems)
+        let text = App.getString(key: "copilotapp.help.feedback.process.demand.button_search") ?? ""
+        coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
     }
     
     func presentFeedbackRate(caseId: String) {

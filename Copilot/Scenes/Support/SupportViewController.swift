@@ -72,8 +72,9 @@ class SupportViewController: UIViewController {
     }
 
     private func configure() {
-        titleLabel.text = Strings.supportTitle
+        titleLabel.text = App.getString(key: "copilotapp.help")
         descriptionLabel.text = Strings.supportDescription
+        callHelpCenterButton.setTitle(App.getString(key: "copilotapp.help.button"), for: .normal)
     }
 
     @IBAction func didTapLiveSupport() {

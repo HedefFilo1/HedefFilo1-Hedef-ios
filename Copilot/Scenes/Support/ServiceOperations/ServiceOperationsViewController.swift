@@ -59,8 +59,8 @@ class ServiceOperationsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.serviceOperations
-        descriptionLabel.text = Strings.proccessRequestServicesDescription
+        titleLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation")
+        descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.body")
     }
     
     @IBAction func didTapBack() {

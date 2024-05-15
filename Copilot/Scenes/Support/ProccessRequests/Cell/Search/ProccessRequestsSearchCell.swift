@@ -41,7 +41,7 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        searchTextField.placeholder = Strings.searchRequest
+        searchTextField.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.button_search")
     }
     
     @objc func editingChanged() {

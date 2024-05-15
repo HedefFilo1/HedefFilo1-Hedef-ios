@@ -42,6 +42,7 @@ class FeedbackViewController: UIViewController {
         setupCollectionView()
         setBasicViews()
         applyStyles()
+        setTexts()
     }
     
     private func setupCollectionView() {
@@ -57,8 +58,9 @@ class FeedbackViewController: UIViewController {
         callHelpCenterButton.apply(.custom(.white, .regular, 16.0))
     }
 
-    private func configure() {
-        titleLabel.text = Strings.supportFeedbackMenuTitle
+    private func setTexts() {
+        titleLabel.text = App.getString(key: "copilotapp.help.feedback")
+        callHelpCenterButton.setTitle(App.getString(key: "copilotapp.help.button"), for: .normal)
     }
     
     @IBAction func didTapCall() {

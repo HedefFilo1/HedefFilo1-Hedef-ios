@@ -52,9 +52,10 @@ class FeedbackCommentViewController: SheetViewController {
     func setTexts() {
         view.backgroundColor = .white
         titleLabel.text = Strings.pastServiceSatisfactionSurvey
-        descriptionLabel.text = Strings.feedbackCommentDescription
-        answerTextFeild.placeholder = Strings.enterAnswer
-        sendButton.setTitle(Strings.send, for: .normal)
+        descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey_question")
+        
+        answerTextFeild.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey_input")
+        sendButton.setTitle( App.getString(key: "copilotapp.help.feedback.process.demand.button_send"), for: .normal)
     }
     
     func setButtonActivation() {

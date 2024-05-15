@@ -14,9 +14,9 @@ enum FeedbackItems: CaseIterable {
     var title: String {
         switch self {
         case .processRequests:
-            Strings.processRequests
+            App.getString(key: "copilotapp.help.feedback.process.demand") ?? ""
         case .service:
-            Strings.serviceOperations
+            App.getString(key: "copilotapp.help.feedback.service.operation") ?? ""
         }
     }
 }

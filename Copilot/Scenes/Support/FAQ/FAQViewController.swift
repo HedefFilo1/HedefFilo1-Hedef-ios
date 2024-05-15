@@ -52,7 +52,7 @@ class FAQViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.frequentlyAskedQuestions
+        titleLabel.text = App.getString(key: "copilotapp.help.faq")
         
     }
     

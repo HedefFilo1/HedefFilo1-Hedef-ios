@@ -78,7 +78,8 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
             cell.titleLabel.text = Strings.createProccessRequestSel
             cell.point = 500
         case 1:
-            cell.titleLabel.text = Strings.fillOutSatisfaction
+            cell.titleLabel.text =
+            App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey")
             cell.point = 50
             
         case 2:

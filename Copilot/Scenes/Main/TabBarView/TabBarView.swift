@@ -54,11 +54,6 @@ class TabBarView: UIView {
         setTexts()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     private func applyStyles() {
         boxShadow(xValue: 0, yValue: -15, radius: 25, color: .black, opacity: 0.05)
         contentView.layer.cornerRadius = 27
@@ -75,7 +70,7 @@ class TabBarView: UIView {
         accidentLabel.text = Strings.accidentTab
         serviceLabel.text = Strings.serviceTab
         homeLabel.text = Strings.homeTab
-        supportLabel.text = Strings.supportTab
+        supportLabel.text = App.getString(key: "copilotapp.help")
         moreLabel.text = Strings.moreTab
     }
     
