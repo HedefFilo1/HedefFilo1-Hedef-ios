@@ -34,8 +34,8 @@ class SelectedWarningsContentCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        getWellLabel.text = Strings.getWellSoon
-        donotStartLabel.text = Strings.donotStartVehicle
+        getWellLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.chosen.get.well.soon")
+        donotStartLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.chosen.warning")
         descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.description")
     }
   

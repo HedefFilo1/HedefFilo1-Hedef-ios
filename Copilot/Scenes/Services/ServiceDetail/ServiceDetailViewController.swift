@@ -91,8 +91,8 @@ class ServiceDetailViewController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.service?.name
         desciptionLabel.text = Strings.selectTimeToRepair
-        mapButtonLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.open.map")
-        selectRandevuLabel.text = Strings.selectAppointmentDay
+        mapButtonLabel.text = App.getString(key: "copilotapp.servicetire.service.open.map.button")
+        selectRandevuLabel.text = App.getString(key: "copilotapp.servicetire.select.appointment.day.title")
         randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
         selectDayLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
         selectTimeLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.hour")

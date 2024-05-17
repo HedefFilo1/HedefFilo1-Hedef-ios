@@ -15,6 +15,9 @@ class SelectedWarningItemCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.apply(.blackS18B700)
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.chosen.title")
     }
+    
+    
 
 }

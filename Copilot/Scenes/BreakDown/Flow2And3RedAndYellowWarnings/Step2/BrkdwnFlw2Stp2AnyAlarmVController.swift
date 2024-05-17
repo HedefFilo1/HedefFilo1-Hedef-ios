@@ -56,10 +56,10 @@ class BrkdwnFlw2Stp2AnyAlarmVController: UIViewController {
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
         descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.description")
-        questionLabel.text = Strings.anyWarningLightOn
-        yesButton.setTitle(Strings.lightOn, for: .normal)
-        noButton.setTitle(Strings.lightOff, for: .normal)
-        warningsLabel.text = Strings.goToWarningLightsGuide
+        questionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.yes.button"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.no.button"), for: .normal)
+        warningsLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.go.warning.light.guide.button")
     }
     
     @IBAction func didTapBack() {

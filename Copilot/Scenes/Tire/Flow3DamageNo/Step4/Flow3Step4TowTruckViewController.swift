@@ -53,9 +53,9 @@ class Flow3Step4TowTruckViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.getWellSoonDoNotStart
-        secondLabel.text = Strings.towTruckSendingDescription
-        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.get.well.soon.title")
+        secondLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.chosen.service.list")
+        serviceButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.get.well.soon.proceed.service.selection.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

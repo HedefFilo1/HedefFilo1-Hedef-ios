@@ -72,13 +72,13 @@ class BreakDownSuccessRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakdownRandevuSuccessMessage
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.success.title")
         desciptionLabel.text = Strings.breakDownTowTruckSent
         if viewModel.date != nil {
             desciptionLabel.text = ""
         }
-        editButton.setTitle(Strings.edit, for: .normal)
-        homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
+        editButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.service.success.edit.button"), for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.service.success.back.homepage.button"), for: .normal)
     }
 
     @IBAction func didTapClose() {

@@ -56,7 +56,7 @@ class BrkdwnFlw4Stp3NoWarningVController: UIViewController {
         descriptionLabel.text = ""
         homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
         serviceButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.service.choice.button"), for: .normal)
-        guidLabel.text = Strings.goToWarningLightsGuide
+        guidLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.go.warning.light.guide.button")
     }
     
     @IBAction func didTapHome() {

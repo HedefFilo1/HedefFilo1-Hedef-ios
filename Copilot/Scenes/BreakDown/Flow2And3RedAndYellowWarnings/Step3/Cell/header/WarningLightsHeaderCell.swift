@@ -26,6 +26,6 @@ class WarningLightsHeaderCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.description")
-        selectLabel.text = Strings.selectWarningLight
+        selectLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.go.warning.light.title")
     }
 }

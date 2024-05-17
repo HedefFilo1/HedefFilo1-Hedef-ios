@@ -25,8 +25,8 @@ class WarningLightsFooterCell: UICollectionViewCell, Reusable {
     
     func setup() {
         guidLabel.apply(.themeS14B700)
-        backButton.setTitle(Strings.turnBack, for: .normal)
-        guidLabel.text = Strings.goToWarningLightsGuide
+        backButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.go.warning.light.go.back.button"), for: .normal)
+        guidLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.warning.light.go.warning.light.guide.button")
     }
     
     @IBAction func didTapBack() {

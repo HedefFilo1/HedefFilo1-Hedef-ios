@@ -91,10 +91,10 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
         titleLabel.text = viewModel.service?.name
 //        desciptionLabel.text = Strings.breakdownServicesDescription
         desciptionLabel.text = ""
-        mapButtonLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.open.map")
-        selectRandevuLabel.text = Strings.selectAppointmentDay
+        mapButtonLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.open.map.button")
+        selectRandevuLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.day.title")
         randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
-        selectDayLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
+        selectDayLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.day")
         selectTimeLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.hour")
     
         continueButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.detail.button"), for: .normal)
