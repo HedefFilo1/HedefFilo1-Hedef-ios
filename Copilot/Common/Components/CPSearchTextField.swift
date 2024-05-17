@@ -14,7 +14,7 @@ class CPSearchTextField: UITextField {
     
     var textPadding = UIEdgeInsets(top: 16, left: 54, bottom: 16, right: 20)
     var color = UIColor.white
-    var title = Strings.searchFilter
+    var title = App.getString(key: "copilotapp.servicemaintenance.service.input") ?? ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)

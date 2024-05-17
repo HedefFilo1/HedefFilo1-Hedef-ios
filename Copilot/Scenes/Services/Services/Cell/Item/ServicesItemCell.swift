@@ -48,7 +48,7 @@ class ServicesItemCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        dateLabel.text = Strings.serviceWorkingHours
+        dateLabel.text = (App.getString(key: "copilotapp.servicemaintenance.service.work.hour") ?? "") + Strings.serviceWorkingHours
     }
     
     @IBAction func didTapLocation() {

@@ -91,13 +91,13 @@ class ServiceDetailViewController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.service?.name
         desciptionLabel.text = Strings.selectTimeToRepair
-        mapButtonLabel.text = Strings.showOnMap
+        mapButtonLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.open.map")
         selectRandevuLabel.text = Strings.selectAppointmentDay
-        randevuDescriptionLabel.text = Strings.oneAppointment15Days
-        selectDayLabel.text = Strings.selectDay
-        selectTimeLabel.text = Strings.selectTime
-        continueButton.setTitle(Strings.devamEt, for: .normal)
-        dateLabel.text = Strings.serviceWorkingHours
+        randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
+        selectDayLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
+        selectTimeLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.hour")
+        continueButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.detail.button"), for: .normal)
+        dateLabel.text = (App.getString(key: "copilotapp.servicemaintenance.service.work.hour") ?? "") + Strings.serviceWorkingHours
     }
     
     func setButtonActivation() {
@@ -137,7 +137,7 @@ class ServiceDetailViewController: UIViewController {
     
     func setAppointment() {
         guard let item = viewModel.appointment else { return }
-        titleLabel.text = item.supplierName ?? Strings.service
+        titleLabel.text = item.supplierName ?? App.getString(key: "copilotapp.servicemaintenance.title")
         nameLabel.text = item.supplierName
         addressLabel.text = item.address
         phoneLabel.text = item.supplierPhone

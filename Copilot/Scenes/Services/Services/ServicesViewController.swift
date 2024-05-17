@@ -75,7 +75,7 @@ class ServicesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.services
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.title")
         if viewModel.tireSupportType == .damage {
             descriptionLabel.text = Strings.servicesFixTireDescription
         } else {

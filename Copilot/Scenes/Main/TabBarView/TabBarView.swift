@@ -68,7 +68,7 @@ class TabBarView: UIView {
     
     func setTexts() {
         accidentLabel.text = Strings.accidentTab
-        serviceLabel.text = Strings.serviceTab
+        serviceLabel.text = App.getString(key: "copilotapp.servicemaintenance.title")
         homeLabel.text = Strings.homeTab
         supportLabel.text = App.getString(key: "copilotapp.help")
         moreLabel.text = Strings.moreTab

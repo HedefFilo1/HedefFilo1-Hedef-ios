@@ -17,13 +17,8 @@ class MaintenanceServicesViewController: ServicesViewController {
     //        }
     //    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        viewModel.goToServiceDetail(service: Supplier(id: "", name: "name of sr", address: "addres", lon: nil, lat: nil, district: "sud", city: "cit", phone: "87347039"))
-    }
-    
     override func setTexts() {
         super.setTexts()
-        descriptionLabel.text = Strings.maintenanceServicesDescription
+        descriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.description")
     }
 }

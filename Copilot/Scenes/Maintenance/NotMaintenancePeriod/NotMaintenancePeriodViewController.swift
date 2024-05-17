@@ -51,19 +51,22 @@ class NotMaintenancePeriodViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.notMaintenancePeriodDescription
-        periodLabel.text = Strings.accordingToVehiclePeriods
-        kmLabel.text = Strings.vehicleMileage
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.title")
+        periodLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.description")
+        kmLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
         setPeriodLabels()
-        getBackButton.setTitle(Strings.returnToHomePage, for: .normal)
+        getBackButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }
     
     func setPeriodLabels() {
-        setAttributedText(label: daysLabel, title: Strings.timeToMaintenance, value: "365 Gün")
+        let text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.time.left.maintenance") ?? ""
+        setAttributedText(label: daysLabel, title: text, value: "365 Gün")
         let str = "\(viewModel.nextMaintenanceKm)".getFormattedIntNumber()
-        setAttributedText(label: kmLabel, title: Strings.mileageToBeMaintained, value: "\(str) KM")
+        let text2 = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.km.to.maintenance") ?? ""
+        setAttributedText(label: kmLabel, title: text2, value: "\(str) KM")
         let remaining = "\(viewModel.remainingKM)".getFormattedIntNumber()
-        setAttributedText(label: remainedKmLabel, title: Strings.kmRemainingForMaintenance, value: "\(remaining) KM")
+        let text3 = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.left.maintenance") ?? ""
+        setAttributedText(label: remainedKmLabel, title: text3, value: "\(remaining) KM")
     }
     
     func setAttributedText(label: UILabel, title: String, value: String) {

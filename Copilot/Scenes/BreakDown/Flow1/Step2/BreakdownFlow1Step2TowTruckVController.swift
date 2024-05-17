@@ -50,10 +50,10 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
-        descriptionLabel.text = Strings.breakdownTowTruckDescription
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.paid.tow.truck.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.paid.tow.truck.yes.button"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.paid.tow.truck.no.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

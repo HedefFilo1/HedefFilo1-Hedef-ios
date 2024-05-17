@@ -60,7 +60,7 @@ class BrkdwnFlw2Stp3WarningLightsVController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
     }
     
     @IBAction func didTapBack() {

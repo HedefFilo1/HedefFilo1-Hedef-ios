@@ -31,8 +31,8 @@ class MaintenanceCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel?.text = Strings.noMaintenanceAppointment
-        descriptionLabel?.text = Strings.makeAnAppointment
+        titleLabel?.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.result")
+        descriptionLabel?.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
         randevuButton.setTitle(Strings.createMaintenanceAppointment, for: .normal)
     }
     

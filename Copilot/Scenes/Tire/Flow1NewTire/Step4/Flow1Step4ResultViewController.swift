@@ -52,7 +52,7 @@ class Flow1Step4ResultViewController: UIViewController {
         titleLabel.text = viewModel.tireType == .winter ? Strings.winterTireRequestReceived: Strings.summerTireRequestReceived
         descriptionLabel.text = Strings.requestLastikResultText
         requestsButton.setTitle(Strings.goToPastServices, for: .normal)
-        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }
     
     @IBAction func didTapClose() {

@@ -50,12 +50,12 @@ class BrkdwnFlw4Stp3NoWarningVController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
         warningLabel.text = Strings.pleaseSelectService
 //        descriptionLabel.text = Strings.turnOffRestartVehicle
         descriptionLabel.text = ""
-        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
-        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
+        serviceButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.service.choice.button"), for: .normal)
         guidLabel.text = Strings.goToWarningLightsGuide
     }
     

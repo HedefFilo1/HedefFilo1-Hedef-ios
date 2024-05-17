@@ -57,7 +57,7 @@ class MaintenanceViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.maintenanceOperations
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.title") 
     }
     
     @IBAction func didTapBack() {

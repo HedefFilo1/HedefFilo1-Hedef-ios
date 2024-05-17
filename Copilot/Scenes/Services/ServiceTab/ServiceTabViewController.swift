@@ -95,15 +95,16 @@ class ServiceTabViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.service
-        descriptionLabel.text = Strings.selectService
-        careButton.setTitle(Strings.care, for: .normal)
-        faultButton.setTitle(Strings.fault, for: .normal)
-        lastikButton.setTitle(Strings.lastik, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.description")
+        careButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.button"), for: .normal)
+        faultButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.breakdown.button"), for: .normal)
+        lastikButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.tire.button"), for: .normal)
         tireRandevuLabel.text = Strings.appointmentRequestReceived
         breakdownRandevuLabel.text = Strings.appointmentRequestReceived
         maintenanceRandevuLabel.text = Strings.appointmentRequestReceived
-        pastServicesButton.setTitle(Strings.pastServiceTransactions, for: .normal)
+        
+        pastServicesButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.past.service.operation"), for: .normal)
     }
     
     @IBAction func didTapCareButton() {

@@ -53,11 +53,11 @@ class MaintenanceStep2KMViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.createMaintenanceAppointment
-        kmLabel.text = Strings.vehicleMileage
-        kmTextField.placeholder = Strings.enterVehicleMileage
-        desciptionLabel.text = Strings.maintenanceKMDescription
-        continueButton.setTitle(Strings.devamEt, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.button")
+        kmLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
+        kmTextField.placeholder = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.input")
+        desciptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.description")
+        continueButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.continue"), for: .normal)
     }
     
     func setButtonActivation() {

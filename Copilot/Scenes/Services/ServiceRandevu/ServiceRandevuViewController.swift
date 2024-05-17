@@ -63,11 +63,11 @@ class ServiceRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.randevuConfirmation
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.title")
         desciptionLabel.text = Strings.pleaseConfirmRandevu
-        confirmationLabel.text = Strings.randevuRequestConfirmation
+        confirmationLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.detail")
         
-        editButton.setTitle(Strings.edit, for: .normal)
+        editButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.edit.button"), for: .normal)
         confirmButton.setTitle(Strings.confirm, for: .normal)
     }
     

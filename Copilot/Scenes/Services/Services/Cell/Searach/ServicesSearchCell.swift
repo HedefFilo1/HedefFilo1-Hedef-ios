@@ -36,6 +36,7 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
     func setup() {
         searchTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         applyStyles()
+        setTexts()
     }
     
     func applyStyles() {
@@ -58,6 +59,10 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
         removFilterLabel.apply(.blackS12B700)
         filterCityLabel.apply(.blackS12B700)
         filterDistrictLabel.apply(.blackS12B700)
+    }
+    
+    func setTexts() {
+        filterLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.filter.button")
     }
     
     @objc func editingChanged() {

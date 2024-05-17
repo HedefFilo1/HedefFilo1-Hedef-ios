@@ -87,7 +87,7 @@ class AccidentSuccessRandevuViewController: UIViewController {
         } else if viewModel.accidentReportType == .beyan {
             messageLabel.text = Strings.keepStatementOfAccident
         }
-        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }
 
     @IBAction func didTapClose() {

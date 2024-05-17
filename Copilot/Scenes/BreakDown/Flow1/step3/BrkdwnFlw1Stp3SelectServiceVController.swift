@@ -31,10 +31,6 @@ class BrkdwnFlw1Stp3SelectServiceVController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         setBasicViews()
         applyStyle()
@@ -52,10 +48,10 @@ class BrkdwnFlw1Stp3SelectServiceVController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
-        descriptionLabel.text = Strings.getWellSoonDoNotStart
-        secondLabel.text = Strings.towTruckSendingDescription
-        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.title")
+        secondLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.description")
+        serviceButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.service.choice.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

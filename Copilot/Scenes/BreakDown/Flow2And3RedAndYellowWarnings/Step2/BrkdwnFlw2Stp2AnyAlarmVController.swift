@@ -54,8 +54,8 @@ class BrkdwnFlw2Stp2AnyAlarmVController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.breakDownOperations
-        descriptionLabel.text = Strings.followTheInstructions
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.description")
         questionLabel.text = Strings.anyWarningLightOn
         yesButton.setTitle(Strings.lightOn, for: .normal)
         noButton.setTitle(Strings.lightOff, for: .normal)

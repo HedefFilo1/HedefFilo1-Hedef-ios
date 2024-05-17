@@ -31,9 +31,9 @@ class BreakDownCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel?.text = Strings.isVehicleEngineWorking
-        yesButton.setTitle(Strings.yesItWorks, for: .normal)
-        noButton.setTitle(Strings.noItDoesntWork, for: .normal)
+        titleLabel?.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.yes.button"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.yes.button"), for: .normal)
     }
     
     @IBAction func didTapYes() {

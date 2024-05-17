@@ -94,14 +94,14 @@ class AccidentServiceDetailVController: UIViewController {
         titleLabel.text = viewModel.service?.name
 //        desciptionLabel.text = Strings.breakdownServicesDescription
         desciptionLabel.text = ""
-        mapButtonLabel.text = Strings.showOnMap
-        selectRandevuLabel.text = Strings.selectAppointmentDay
-        randevuDescriptionLabel.text = Strings.oneAppointment15Days
-        selectDayLabel.text = Strings.selectDay
-        selectTimeLabel.text = Strings.selectTime
-        continueButton.setTitle(Strings.devamEt, for: .normal)
+        mapButtonLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.open.map")
+        selectRandevuLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day")
+        randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
+        selectDayLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
+        selectTimeLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.hour")
+        continueButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.detail.button"), for: .normal)
         continueButton.isSmallFontSize = true
-        dateLabel.text = Strings.serviceWorkingHours
+        dateLabel.text = (App.getString(key: "copilotapp.servicemaintenance.service.work.hour") ?? "") + Strings.serviceWorkingHours
     }
     
     func setButtonActivation() {

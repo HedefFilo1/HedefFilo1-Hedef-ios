@@ -19,7 +19,7 @@ class MaintenanceServiceDetailViewController: ServiceDetailViewController {
     
     override func setService() {
         super.setService()
-        desciptionLabel.text = Strings.maintenanceSelectTime
+        desciptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.description")
     }
     
     override func setAppointment() {

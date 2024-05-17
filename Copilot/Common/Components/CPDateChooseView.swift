@@ -20,7 +20,7 @@ class CPDateChooseView: UIView {
         return label.text ?? ""
     }
     var dateFormat = "d MMMM EEEE"
-    var title = Strings.selectDay {
+    var title = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day") ?? "" {
         didSet {
             label.text = title
         }
@@ -58,7 +58,7 @@ class CPDateChooseView: UIView {
         addSubview(label)
         label.align(leading: 16, centerY: 0)
         label.apply(.custom(.fieldsText, .regular, 16))
-        label.text = Strings.selectDay
+        label.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
         
         addSubview(icon)
         icon.align(trailing: 20, widthAndHeight: 24, centerY: 0)

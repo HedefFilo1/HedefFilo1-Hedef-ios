@@ -83,8 +83,8 @@ class CalendarViewController: SheetViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.selectDay
-        applyButton.setTitle(Strings.apply, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.day")
+        applyButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.service.filter.apply.button"), for: .normal)
     }
     
     @IBAction func didTapClose(_ sender: UIButton) {

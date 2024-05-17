@@ -19,9 +19,9 @@ class MaintenanceRandevuViewController: ServiceRandevuViewController {
     
     override func setTexts() {
         super.setTexts()
-        desciptionLabel.text = Strings.maintenancePleaseConfirmRandevu
-        editButton.setTitle(Strings.edit, for: .normal)
-        confirmButton.setTitle(Strings.confirm, for: .normal)
+        desciptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.description")
+        editButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.edit.button"), for: .normal)
+        confirmButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.confirm.button"), for: .normal)
     }
     
 }

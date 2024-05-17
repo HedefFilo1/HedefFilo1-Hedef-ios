@@ -52,7 +52,7 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
         super.awakeFromNib()
         applyStyles()
         
-        createRandevuLabel?.text = Strings.makeAnAppointment
+        createRandevuLabel?.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
         randevuButton.setTitle(Strings.createMaintenanceAppointment, for: .normal)
     }
 

@@ -75,7 +75,7 @@ class ConfirmedRandevuViewController: UIViewController {
         titleLabel.text = Strings.randevuRequestSuccessMessage
         desciptionLabel.text = Strings.randevuRequestSuccessDescriptin
         editButton.setTitle(Strings.edit, for: .normal)
-        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }
 
     @IBAction func didTapClose() {

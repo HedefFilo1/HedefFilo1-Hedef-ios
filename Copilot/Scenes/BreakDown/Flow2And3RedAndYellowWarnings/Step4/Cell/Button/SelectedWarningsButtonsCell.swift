@@ -43,7 +43,7 @@ class SelectedWarningsButtonsCell: UICollectionViewCell, Reusable {
     func setTexts() {
         callLabel.text = Strings.callSolutionCenter
         chooseLightButton.setTitle(Strings.chooseAnotherLight, for: .normal)
-        servicesButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        servicesButton.setTitle(App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.engine.service.choice.button"), for: .normal)
         
         let text1 = AttributedText(text: "\(Strings.warning): ", type: .themeS12B700)
         let text2 = AttributedText(text: Strings.breakdownWarrningMessage, type: .greyS12R400)

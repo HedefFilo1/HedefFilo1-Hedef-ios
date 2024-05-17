@@ -26,6 +26,7 @@ class BrkdwnFlw1Stp4ServicesVController: ServicesViewController {
     
     override func setTexts() {
         super.setTexts()
-        descriptionLabel.text = Strings.breakdownServicesDescription
+        titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.description")
     }
 }
