@@ -139,7 +139,8 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                                          message: error.message)
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_CONNECTED_VEHICLE_OPERATION")
-                coordinatorDelegate?.goToSuccess(title: Strings.completedVehicleOperations)
+                let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.button") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title)
             }
         }
     }

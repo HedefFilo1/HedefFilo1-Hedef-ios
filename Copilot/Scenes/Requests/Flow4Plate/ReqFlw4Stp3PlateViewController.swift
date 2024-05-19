@@ -74,10 +74,6 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         viewModel.getProfile()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -124,7 +120,7 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.lostLicensePlateTransactions
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.button") 
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote

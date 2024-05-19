@@ -105,7 +105,8 @@ class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
                                          message: error.message)
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_EXAMINATION_PROCESS")
-                coordinatorDelegate?.goToSuccess(title: Strings.inspectionOperations)
+                let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title)
             }
         }
         

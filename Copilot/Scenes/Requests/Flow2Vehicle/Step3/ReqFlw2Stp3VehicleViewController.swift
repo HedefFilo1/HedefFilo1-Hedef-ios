@@ -86,10 +86,6 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         #endif
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -133,59 +129,62 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.completedVehicleOperations
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.button")
         
-        noteLabel.text = Strings.addNote
-        noteTextField.placeholder = Strings.enterNote
+        noteLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.note")
+        noteTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.note.enter")
+        nameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.name.surname")
+        nameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.name.surname.enter")
         
-        nameLabel.text = Strings.nameDashSurname
-        nameTextField.placeholder = Strings.enterNameSurname
+        emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.email")
+        emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.email.enter")
         
-        emailLabel.text = Strings.emailAddress
-        emailTextField.placeholder = Strings.enterYourEmail
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.phone")
         
-        phoneLabel.text = Strings.yourMobilePhone
-        phoneTextField.placeholder = Strings.enterYourMobilePhone
+        plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.plate")
+        plateTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.plate.enter")
         
-        plateLabel.text = Strings.yourLicensePlate
-        plateTextField.placeholder = Strings.enterYourLicensePlate
+        reasonLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.reason.vehicle.attachment")
+        reasonList.title = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.reason.vehicle.attachment.enter") ?? ""
         
-        reasonLabel.text = Strings.reasonConnectingVehicle
-        reasonList.title = Strings.enterReasonConnectingVehicle
+        trafficNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.traffic.department")
+        trafficNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.traffic.department.enter")
         
-        trafficNameLabel.text = Strings.trafficBranchName
-        trafficNameTextField.placeholder = Strings.enterTrafficBranchName
+        trafficPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.traffic.department.phone")
         
-        trafficPhoneLabel.text = Strings.trafficBranchPhone
-        trafficPhoneTextField.placeholder = Strings.enterTrafficBranchPhone
+        let text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.traffic.department.phone.enter")
+        trafficPhoneTextField.placeholder = text
         
-        parkNameLabel.text = Strings.trusteeParkingName
-        parkNameTextField.placeholder = Strings.enterTrusteeParkingName
+        parkNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.parking.name")
+        parkNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.parking.name.enter")
         
-        parkPhoneLabel.text = Strings.trusteeParkingPhone
-        parkPhoneTextField.placeholder = Strings.enterTrusteeParkingPhone
+        parkPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.parking.name.phone")
+        parkPhoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.parking.name.phone.enter")
         
-        receiverNameLabel.text = Strings.receiverNameSurname
-        receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
+        receiverNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.name.surname")
+        receiverNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.name.surname.enter")
         
-        receiverPhoneLabel.text = Strings.receivingPersonPhone
-        receiverPhoneTextField.placeholder = Strings.enterReceivingPersonPhone
+        receiverPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.name.surname.phone")
+        receiverPhoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.name.surname.phone.enter")
         
-        receiverTCKNLabel.text = Strings.receivingPersonTRIDNumber
-        receiverTCKNTextField.placeholder = Strings.enterReceivingPersonTRIDNumber
+        receiverTCKNLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.id")
+        receiverTCKNTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.person.receive.id.enter")
         
-        cityLabel.text = Strings.selectProvince
-        cityList.title = Strings.selectProvince
+        cityLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.select.province")
+        cityList.title = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.select.province") ?? ""
         
-        addFileLabel.text = Strings.addFile
-        documentNameLabel.text = Strings.requiredDocumentName
-        selectFileLabel.text = Strings.selectFile
+        addFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.attach.file.document.select")
+        
+        documentNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.attach.file.document.name")
+        selectFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.attach.file.document.select")
         
         fileNameView.layer.cornerRadius = 6
         fileNameLabel.apply(.blackS14R400)
         closeImageView.image = closeImageView.image?.withRenderingMode(.alwaysTemplate)
         closeImageView.tintColor = .greyButton
-        createButton.setTitle(Strings.createProcessRequest, for: .normal)
+        let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.create.process.request.button")
+        createButton.setTitle(title, for: .normal)
     }
     
     func setDashedBorder() {

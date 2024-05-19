@@ -74,10 +74,6 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
 #endif
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -116,7 +112,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.hgsOperations
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote

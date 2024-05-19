@@ -97,7 +97,7 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.inspectionOperations
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button")
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote

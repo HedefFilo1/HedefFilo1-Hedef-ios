@@ -72,6 +72,7 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     }
     
     func goToSuccess() {
-        coordinatorDelegate?.goToSuccess(title: Strings.productAndServiceRequests)
+        let title = App.getString(key: "copilotapp.demandproductservice.product.service.button") ?? ""
+        coordinatorDelegate?.goToSuccess(title: title)
     }
 }

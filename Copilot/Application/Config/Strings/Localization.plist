@@ -3130,7 +3130,7 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>returnToRequestsPage</key>
         <dict>
             <key>tr</key>
-            <string>Talepler Sayfasına Dön </string>
+            <string>Talepler Sayfasına Dön</string>
             <key>en</key>
             <string>Return to Requests Page</string>
         </dict>

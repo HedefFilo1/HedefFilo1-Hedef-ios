@@ -61,6 +61,7 @@ class ReqFlw1Stp2ViewController: UIViewController {
     func setTexts() {
         //        titleLabel.text = Strings.ReqFlw1Stp2
         //        descriptionLabel.text = Strings.ReqFlw1Stp2Description
+        descriptionLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.description")
     }
     
     @IBAction func didTapBack() {

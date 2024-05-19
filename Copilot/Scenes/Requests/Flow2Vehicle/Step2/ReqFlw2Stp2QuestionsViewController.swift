@@ -58,8 +58,8 @@ class ReqFlw2Stp2QuestionsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.processRequests
-        descriptionLabel.text = Strings.requestsQuestionDescription
+        titleLabel.text = App.getString(key: "copilotapp.demandproductservice.process.demand.button")
+        descriptionLabel.text = App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.description")
     }
     
     @IBAction func didTapBack() {
@@ -83,19 +83,19 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
         let cell: ReqFlw2Stp2QuestionsCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.item {
         case 0:
-            cell.label.text = Strings.completedVehicleOperations
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.button")
             
         case 1:
-            cell.label.text = Strings.hgsOperations
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
             
         case 2:
-            cell.label.text = Strings.plateLicenseOperations
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
             
         case 3:
-            cell.label.text = Strings.lostLicenseOperations
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button")
             
         case 4:
-            cell.label.text = Strings.inspectionOperations
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button")
             
         default:
             break

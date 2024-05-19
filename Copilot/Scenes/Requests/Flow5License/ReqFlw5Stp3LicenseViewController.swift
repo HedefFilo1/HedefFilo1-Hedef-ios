@@ -105,7 +105,7 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.lostLicenseOperations
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button")
         
         noteLabel.text = Strings.addNote
         noteTextField.placeholder = Strings.enterNote

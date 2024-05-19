@@ -41,7 +41,7 @@ class RequestListPageCell: UICollectionViewCell, Reusable {
         collectionView.dataSource = self
         collectionView.register(cellType: RequestListItemCell.self)
         collectionView.contentInset.bottom = 90
-        label.text = Strings.requestsQuestionDescription
+        label.text = App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.description")
     }
 }
 

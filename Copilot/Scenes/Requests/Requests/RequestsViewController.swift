@@ -34,10 +34,6 @@ class RequestsViewController: UIViewController {
 #endif
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -58,8 +54,8 @@ class RequestsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.requests
-        descriptionLabel.text = Strings.requestsDescription
+        titleLabel.text = App.getString(key: "copilotapp.demandproductservice.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.description")
     }
     
     @IBAction func didTapBack() {
@@ -83,13 +79,13 @@ extension RequestsViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell: RequestsCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.item {
         case 0:
-            cell.label.text = Strings.productAndServiceRequests
+            cell.label.text = App.getString(key: "copilotapp.demandproductservice.product.service.button")
             
         case 1:
-            cell.label.text = Strings.processRequests
+            cell.label.text = App.getString(key: "copilotapp.demandproductservice.process.demand.button")
             
         case 2:
-            cell.label.text = Strings.requestList
+            cell.label.text = App.getString(key: "copilotapp.demandproductservice.demand.list.button")
             
         default:
             break

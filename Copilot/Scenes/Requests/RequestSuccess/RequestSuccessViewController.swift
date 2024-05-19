@@ -32,10 +32,6 @@ class RequestSuccessViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         
         applyStyle()
@@ -55,11 +51,10 @@ class RequestSuccessViewController: UIViewController {
     }
     
     func setTexts() {
-//        titleLabel.text = viewModel.tireType == .winter ? Strings.winterTireRequestReceived: Strings.summerTireRequestReceived
-//        descriptionLabel.text = Strings.requestLastikResultText
-//        requestsButton.setTitle(Strings.goToRequests, for: .normal)
-//        homeButton.setTitle(Strings.returnToHomePage, for: .normal)
         headLabel.text = viewModel.title
+        descriptionLabel.text = App.getString(key: "copilotapp.demandproductservice.success.description")
+        requestsButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.request.page.button"), for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.homepage.button"), for: .normal)
     }
     
     @IBAction func didTapClose() {

@@ -63,9 +63,9 @@ class RequestListViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.requests
-        serviceRequestsLabel.text = Strings.productAndServiceRequests
-        proccessRequestsLabel.text = Strings.processRequests
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.title")
+        serviceRequestsLabel.text = App.getString(key: "copilotapp.demandproductservice.product.service.button")
+        proccessRequestsLabel.text = App.getString(key: "copilotapp.demandproductservice.process.demand.button")
     }
     
     @IBAction func didTab(_ sender: UIView) {

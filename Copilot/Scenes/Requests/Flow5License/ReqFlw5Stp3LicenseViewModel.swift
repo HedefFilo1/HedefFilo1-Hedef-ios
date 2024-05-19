@@ -110,7 +110,8 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
                                          message: error.message)
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_LICENSE_PROCESS")
-                coordinatorDelegate?.goToSuccess(title: Strings.lostLicenseOperations)
+                let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title)
             }
         }
     }
