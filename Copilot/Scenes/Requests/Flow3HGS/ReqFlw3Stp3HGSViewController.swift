@@ -112,42 +112,42 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.title")
         
-        noteLabel.text = Strings.addNote
-        noteTextField.placeholder = Strings.enterNote
+        noteLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.note")
+        noteTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.note.enter")
         
-        nameLabel.text = Strings.nameDashSurname
-        nameTextField.placeholder = Strings.enterNameSurname
+        nameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.name.surname")
+        nameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.name.surname.enter")
         
-        emailLabel.text = Strings.emailAddress
-        emailTextField.placeholder = Strings.enterYourEmail
+        emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.email")
+        emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.email.enter")
         
-        phoneLabel.text = Strings.yourMobilePhone
-        phoneTextField.placeholder = Strings.enterYourMobilePhone
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.phone")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.phone.enter")
         
-        plateLabel.text = Strings.yourLicensePlate
-        plateTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.plate")
+        plateTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.plate.enter")
         
-        proccessLabel.text = Strings.processType
-        proccessList.title = Strings.enterProcessType
+        proccessLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.operation.type")
+        proccessList.title = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.operation.type.enter") ?? ""
         
-        receiverNameLabel.text = Strings.nameSurnameOfHGSPerson
-        receiverNameTextField.placeholder = Strings.enterNameSurnameOfHGSPerson
+        receiverNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname")
+        receiverNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname.enter")
         
-        receiverPhoneLabel.text = Strings.phoneOfHGSPerson
-        receiverPhoneTextField.placeholder = Strings.enterPhoneOfHGSPerson
+        receiverPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname.phone")
+        receiverPhoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname.phone.enter")
         
-        receiverEmailLabel.text = Strings.emailAddressOfRecipient
-        receiverEmailTextField.placeholder = Strings.enterEmailAddressOfRecipient
+        receiverEmailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname.email")
+        receiverEmailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.person.receive.name.surname.email.enter")
         
-        addressLabel.text = Strings.deliveryAddress
-        addressTextField.placeholder = Strings.enterDeliveryAddress
+        addressLabel.text =  App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.delivery.address")
+        addressTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.delivery.address.enter")
         
-        addFileLabel.text = Strings.addFile
-        documentNameLabel.text = Strings.requiredDocumentName
-        selectFileLabel.text = Strings.selectFile
-        createButton.setTitle(Strings.createProcessRequest, for: .normal)
+        addFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.attach.file")
+        documentNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.hgs.vehicle.operation.attach.file.document.name")
+        selectFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.attach.file.document.select")
+        createButton.setTitle(App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.create.process.request.button"), for: .normal)
     }
     
     func setDashedBorder() {
