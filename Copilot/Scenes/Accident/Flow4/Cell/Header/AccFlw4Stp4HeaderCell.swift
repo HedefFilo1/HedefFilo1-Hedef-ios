@@ -30,9 +30,9 @@ class AccFlw4Stp4HeaderCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.keepReport
-        descriptionLabel.text = Strings.cannotRichAgreemntDescription
-        callLabel.text = Strings.call112
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.zabit.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.zabit.description")
+        callLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.zabit.call.emergency.button")
     }
     
     @IBAction func didTapCall() {

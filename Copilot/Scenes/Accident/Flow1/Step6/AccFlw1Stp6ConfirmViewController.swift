@@ -50,10 +50,10 @@ class AccFlw1Stp6ConfirmViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentOperations
-        questonLabel.text = Strings.accidentTowTruckDescription
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.paid.tow.truck")
+        yesButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.paid.tow.truck.yes"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.paid.tow.truck.no"), for: .normal)
     }
     
     @IBAction func didTapBack() {

@@ -52,11 +52,10 @@ class AccFlw1Stp7SelectServiceViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentOperations
-        descriptionLabel.text = Strings.getWellSoonDoNotStart
-        secondLabel.text = Strings.towTruckSendingDescription
-        
-        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.get.well.soon.title")
+        secondLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.get.well.soon.description")
+        serviceButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.proceed.service.selection.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

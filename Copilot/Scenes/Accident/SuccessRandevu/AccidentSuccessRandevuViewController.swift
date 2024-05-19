@@ -72,14 +72,14 @@ class AccidentSuccessRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentSuccessMessage
-        desciptionLabel.text = Strings.accidentTowTruckSent
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.success.title")
+        desciptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.success.description")
         if viewModel.date != nil {
             desciptionLabel.text = ""
         }
         
         if viewModel.accidentReportType == .anlasmalITutanak {
-            messageLabel.text = Strings.keepReportOfAccident
+            messageLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.success.minute.warning")
             
         } else if viewModel.accidentReportType == .zabit {
             messageLabel.text = Strings.keepPoliceReport

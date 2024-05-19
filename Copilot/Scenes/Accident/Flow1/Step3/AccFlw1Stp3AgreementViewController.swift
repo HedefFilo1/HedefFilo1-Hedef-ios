@@ -52,11 +52,11 @@ class AccFlw1Stp3AgreementViewController: UIViewController {
     }
     
     func setTexts() {
-        questonLabel.text = Strings.wereYouAbleAgreement
-        yesButton.setTitle(Strings.weAgreed, for: .normal)
-        noButton.setTitle(Strings.weCouldntAgreed, for: .normal)
-        descriptionLabel.text = Strings.getInfoAfter
-        guidLabel.text = Strings.goToAccidentGuide
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.agreement.other.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.agreement.other.question.yes"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.agreement.other.question.no"), for: .normal)
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.info.after.accident")
+        guidLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.go.accident.guide.button")
     }
     
     @IBAction func didTapBack() {

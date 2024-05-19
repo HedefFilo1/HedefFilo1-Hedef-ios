@@ -32,9 +32,9 @@ class AccFlw5Stp3HeaderCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.declarationNotice
-        descriptionLabel.text = Strings.declarationNoticeDescription
-        guidLabel.text = Strings.goToAccidentGuide
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.description")
+        guidLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.go.accident.guide.button")
     }
     
     @IBAction func didTapGuide() {

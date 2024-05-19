@@ -103,7 +103,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
         case 3:
             let cell: AccFlw5Stp3ButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
-            cell.uploadLabel.text = selectedFiles.count > 0 ? Strings.uploadMorePhotos: Strings.uploadPhoto
+            cell.uploadLabel.text = selectedFiles.count > 0 ? Strings.uploadMorePhotos: App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button")
             return cell
         
         default:

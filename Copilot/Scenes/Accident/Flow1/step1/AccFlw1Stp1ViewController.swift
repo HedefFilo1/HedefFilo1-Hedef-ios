@@ -57,11 +57,11 @@ class AccFlw1Stp1VController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentOperations
-        descriptionLabel.text = Strings.medicalHelpQuestion
-        callLabel.text = Strings.call112
-        continueButton.setTitle(Strings.goToAccidentPage, for: .normal)
-        descriptionLabel.text = Strings.goToAccidentPageDescription
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.emergency.help.question")
+        callLabel.text = App.getString(key: "copilotapp.accidentdamage.call.emergency.button")
+        continueButton.setTitle(App.getString(key: "copilotapp.accidentdamage.fine.go.accident.page.button"), for: .normal)
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.description")
     }
     
     @IBAction func didTapCall() {

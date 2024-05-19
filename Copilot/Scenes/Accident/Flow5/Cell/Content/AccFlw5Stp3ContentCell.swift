@@ -31,11 +31,17 @@ class AccFlw5Stp3ContentCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = "\(Strings.warning)!"
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.warning")
         setDescriptionLabel()
-        declareLabel.text = "\(CodeStrings.bullet) \(Strings.declaration)"
-        licenceLabel.text = "\(CodeStrings.bullet) \(Strings.drivingLicence)"
-        photoLabel.text = "\(CodeStrings.bullet) \(Strings.crimeScenePhotos)"
+       
+        let str = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.declaration") ?? ""
+        declareLabel.text = "\(CodeStrings.bullet) \(str)"
+        
+        let str2 = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.driving.license") ?? ""
+        licenceLabel.text = "\(CodeStrings.bullet) \(str2)"
+        
+        let str3 = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.crime.scene.photo") ?? ""
+        photoLabel.text = "\(CodeStrings.bullet) \(str3)"
     }
     
     func setDescriptionLabel() {

@@ -56,12 +56,13 @@ class AccFlw1Stp2OtherVehicleViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentOperations
-        descriptionLabel.text = Strings.getWellAndFillInfo
-        yesButton.setTitle(Strings.yesThereIs, for: .normal)
-        noButton.setTitle(Strings.noThereIsNot, for: .normal)
-        footerLabel.text = Strings.getInfoAfter
-        guidLabel.text = Strings.goToAccidentGuide
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.description")
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.other.vehicle.accident.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.other.vehicle.accident.yes"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.other.vehicle.accident.no"), for: .normal)
+        footerLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.info.after")
+        guidLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.go.accident.guide.button")
     }
     
     @IBAction func didTapBack() {

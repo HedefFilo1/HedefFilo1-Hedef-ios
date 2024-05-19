@@ -48,9 +48,9 @@ class AccFlw1Stp5LeaksViewController: UIViewController {
     }
     
     func setTexts() {
-        questonLabel.text = Strings.areThereAnyFluidLeaks
-        yesButton.setTitle(Strings.yesThereIs, for: .normal)
-        noButton.setTitle(Strings.noThereIsNot, for: .normal)
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.oil.leak.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.oil.leak.question.yes"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.oil.leak.question.no"), for: .normal)
     }
     
     @IBAction func didTapBack() {

@@ -29,7 +29,7 @@ class AccidentServicesViewController: ServicesViewController {
     
     override func setTexts() {
         super.setTexts()
-        titleLabel.text = Strings.accidentOperations
-        descriptionLabel.text = Strings.accidentServicesDescription
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.proceed.service.selection.description")
     }
 }

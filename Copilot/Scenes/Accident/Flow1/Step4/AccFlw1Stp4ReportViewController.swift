@@ -102,7 +102,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         case 1:
             if indexPath.item == 0 {
                 let cell: AccFlw1Stp4ReportTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.label.text = Strings.report
+                cell.label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.minute")
                 return cell
             }
             
@@ -120,7 +120,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         case 2:
             if indexPath.item == 0 {
                 let cell: AccFlw1Stp4ReportTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.label.text = Strings.competenceOfOtherParty
+                cell.label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.other.driver.license")
                 return cell
             }
             
@@ -138,7 +138,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         case 3:
             if indexPath.item == 0 {
                 let cell: AccFlw1Stp4ReportTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.label.text = Strings.insurancePolicyOfOtherParty
+                cell.label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.other.insurance.policy.other")
                 return cell
             }
             
@@ -156,7 +156,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         case 4:
             if indexPath.item == 0 {
                 let cell: AccFlw1Stp4ReportTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.label.text = Strings.otherPartysLicense
+                cell.label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.license.other")
                 return cell
             }
             
@@ -174,7 +174,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
         case 5:
             if indexPath.item == 0 {
                 let cell: AccFlw1Stp4ReportTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.label.text = Strings.photosOfVehicle
+                cell.label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.photo.vehicle")
                 return cell
             }
             

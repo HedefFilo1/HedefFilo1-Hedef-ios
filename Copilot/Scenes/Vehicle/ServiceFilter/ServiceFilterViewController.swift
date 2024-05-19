@@ -41,10 +41,6 @@ class ServiceFilterViewController: SheetViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         citiesList.delegate = self
         districtList.delegate = self

@@ -32,7 +32,7 @@ class AccFlw1Stp4ReportHeaderCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.keepReports
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.title")
         descriptionLabel.text = "\(Strings.fillReportDocuments)/n\(Strings.clickHelpReport)"
         guideLabel.text = Strings.recordKeepingGuide
     }

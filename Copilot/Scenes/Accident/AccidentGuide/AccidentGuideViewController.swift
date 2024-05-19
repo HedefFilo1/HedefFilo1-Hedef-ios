@@ -47,7 +47,7 @@ class AccidentGuideViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.accidentGuide
+        titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.go.accident.guide.title")
     }
     
     @IBAction func didTapBack() {

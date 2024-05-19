@@ -48,9 +48,9 @@ class AccFlw2Stp6MovableViewController: UIViewController {
     }
     
     func setTexts() {
-        questonLabel.text = Strings.isVehicleMovable
-        yesButton.setTitle(Strings.yesCanMove, for: .normal)
-        noButton.setTitle(Strings.noCantMove, for: .normal)
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.drivable.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.drivable.question.yes"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.accidentdamage.accident.process.vehicle.drivable.question.no"), for: .normal)
     }
     
     @IBAction func didTapBack() {
