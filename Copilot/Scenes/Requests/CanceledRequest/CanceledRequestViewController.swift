@@ -53,7 +53,7 @@ class CanceledRequestViewController: UIViewController {
     func setTexts() {
         headLabel.text = viewModel.title
         titleLabel.text = Strings.requestCanceledMessage
-        requestsButton.setTitle(Strings.goToRequests, for: .normal)
+        requestsButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.winter.tire.request.received.go.request.button"), for: .normal)
         homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }
     

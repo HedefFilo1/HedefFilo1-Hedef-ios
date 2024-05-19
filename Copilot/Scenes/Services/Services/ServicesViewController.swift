@@ -44,12 +44,7 @@ class ServicesViewController: UIViewController {
         
 #endif
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
+ 
     func setupUI() {
         applyStyle()
         setTexts()
@@ -75,9 +70,9 @@ class ServicesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.title")
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.service.title")
         if viewModel.tireSupportType == .damage {
-            descriptionLabel.text = Strings.servicesFixTireDescription
+            descriptionLabel.text = App.getString(key: "copilotapp.servicetire.service.description")
         } else {
             descriptionLabel.text = Strings.servicesChangeTireDescription
         }

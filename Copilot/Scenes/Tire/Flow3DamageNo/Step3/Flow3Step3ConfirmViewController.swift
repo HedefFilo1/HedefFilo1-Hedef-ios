@@ -50,10 +50,10 @@ class Flow3Step3ConfirmViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.lastikRandevuAcceptionTextStep3
-        yesButton.setTitle(Strings.yesAndAccept, for: .normal)
-        noButton.setTitle(Strings.noDontAccept, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.yes.button"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.no.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

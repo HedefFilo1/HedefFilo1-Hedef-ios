@@ -51,10 +51,10 @@ class Flow1Step2NewTireViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        messageLabel.text = Strings.notHaveRightToTire
-        descriptionLabel.text = Strings.requestFromMangerText
-        requestButton.setTitle(Strings.requestFromManger, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
+        messageLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.no.tire.right.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.no.tire.right.description")
+        requestButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.no.tire.right.request.tire.manager.button"), for: .normal)
         
     }
     

@@ -50,10 +50,10 @@ class Flow1Step3TireTypesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.requestLastkFromMangerText
-        summerButton.setTitle(Strings.submitSummerTireRequest, for: .normal)
-        winterButton.setTitle(Strings.submitWinterTireRequest, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.description")
+        summerButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.send.request.new.summer.tire.button"), for: .normal)
+        winterButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.send.request.new.winter.tire.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

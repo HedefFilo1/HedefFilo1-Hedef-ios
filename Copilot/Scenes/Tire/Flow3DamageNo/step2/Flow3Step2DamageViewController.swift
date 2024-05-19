@@ -50,10 +50,10 @@ class Flow3Step2DamageViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.lastikRandevuAcceptionText
-        yesButton.setTitle(Strings.yes, for: .normal)
-        noButton.setTitle(Strings.noNo, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.take.vehicle.service.yourself.question")
+        yesButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.vehicle.service.yourself.yes.button"), for: .normal)
+        noButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.vehicle.service.yourself.no.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {

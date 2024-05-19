@@ -50,7 +50,7 @@ class LastikRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
         descriptionLabel.text = Strings.randevuDescription
         oneIssueButton.setTitle(Strings.oneTireIssue, for: .normal)
         moreIssuesButton.setTitle(Strings.moreTireIssues, for: .normal)

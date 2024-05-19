@@ -73,7 +73,7 @@ class BreakDownSuccessRandevuViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.success.title")
-        desciptionLabel.text = Strings.breakDownTowTruckSent
+        desciptionLabel.text = App.getString(key: "copilotapp.servicetire.appointment.confirmation.confirm.success.description")
         if viewModel.date != nil {
             desciptionLabel.text = ""
         }

@@ -62,7 +62,7 @@ class ServicesSearchCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        filterLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.filter.button")
+        filterLabel.text = App.getString(key: "copilotapp.servicetire.service.filter.button")
     }
     
     @objc func editingChanged() {

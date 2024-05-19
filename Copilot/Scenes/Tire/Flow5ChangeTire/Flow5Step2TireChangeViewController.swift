@@ -56,7 +56,7 @@ class Flow5Step2TireChangeViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
     }
     
     @IBAction func didTapBack() {

@@ -40,6 +40,6 @@ class TireOperationTireCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireInformation
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.tire.information.storage.title")
     }
 }

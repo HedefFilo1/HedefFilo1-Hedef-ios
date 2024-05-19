@@ -30,9 +30,9 @@ class LastikOperationButtonsCell: UICollectionViewCell, Reusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        requestNewButton?.setTitle(Strings.requestNewTire, for: .normal)
-        randevuButton.setTitle(Strings.tireDamageAppointment, for: .normal)
-        changeButton.setTitle(Strings.tireChangeAppointment, for: .normal)
+        requestNewButton?.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.request.new.tire.button"), for: .normal)
+        randevuButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.request.tire.damage.appointment.button"), for: .normal)
+        changeButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.request.tire.change.appointment.button"), for: .normal)
     }
     
     @IBAction func didTapRequestNew() {

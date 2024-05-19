@@ -49,9 +49,9 @@ class Flow4Step3SelectServiceViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.tireOperations
-        descriptionLabel.text = Strings.lastikConfirmInfoText
-        serviceButton.setTitle(Strings.proceedServiceSelection, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.get.well.soon.description")
+        serviceButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.take.paid.tow.truck.get.well.soon.proceed.service.selection.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {
