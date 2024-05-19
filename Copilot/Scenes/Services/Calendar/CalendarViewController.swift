@@ -38,10 +38,6 @@ class CalendarViewController: SheetViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()

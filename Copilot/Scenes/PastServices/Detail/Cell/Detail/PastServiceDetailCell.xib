@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PastServiceDetailCell" customModule="Copilot" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="432" height="421"/>
+            <rect key="frame" x="0.0" y="0.0" width="432" height="455"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="432" height="421"/>
+                <rect key="frame" x="0.0" y="0.0" width="432" height="455"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07 Nisan 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjS-TS-eab">
@@ -95,6 +95,12 @@ Silecek Değişimi</string>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-8i-ZIX">
+                        <rect key="frame" x="0.0" y="398.33333333333331" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -122,13 +128,15 @@ Silecek Değişimi</string>
                 <constraint firstItem="WOb-og-rMb" firstAttribute="top" secondItem="KdI-z7-Jif" secondAttribute="bottom" constant="8" id="mPl-XZ-oqf"/>
                 <constraint firstItem="hHa-Ku-ILU" firstAttribute="top" secondItem="VAy-CR-w2Y" secondAttribute="bottom" constant="16" id="npJ-ww-3SX"/>
                 <constraint firstItem="FCv-OA-jCU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rKY-37-RuY"/>
+                <constraint firstItem="Nrp-8i-ZIX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="s6U-os-X15"/>
                 <constraint firstItem="WOb-og-rMb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t11-KQ-SoM"/>
                 <constraint firstItem="qFH-yZ-b7R" firstAttribute="top" secondItem="vGZ-yO-66l" secondAttribute="bottom" constant="24" id="tda-Xh-gS8"/>
                 <constraint firstAttribute="trailing" secondItem="qFH-yZ-b7R" secondAttribute="trailing" id="uED-UH-MCN"/>
                 <constraint firstAttribute="trailing" secondItem="WOb-og-rMb" secondAttribute="trailing" id="wFo-Vr-u3F"/>
+                <constraint firstItem="Nrp-8i-ZIX" firstAttribute="top" secondItem="IDM-eZ-Vtv" secondAttribute="bottom" constant="4" id="xMv-qm-C8j"/>
                 <constraint firstItem="KSm-X8-sw4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xUp-er-jKq"/>
             </constraints>
-            <size key="customSize" width="432" height="421"/>
+            <size key="customSize" width="432" height="455"/>
             <connections>
                 <outlet property="addressLabel" destination="WOb-og-rMb" id="gT1-Fx-lOO"/>
                 <outlet property="addressTitleLabel" destination="KdI-z7-Jif" id="Cf8-8S-7JH"/>
@@ -139,10 +147,11 @@ Silecek Değişimi</string>
                 <outlet property="operationTitleLabel" destination="DSW-mp-d5s" id="mO1-Ip-TMl"/>
                 <outlet property="phoneLabel" destination="KSm-X8-sw4" id="09d-DR-64n"/>
                 <outlet property="serviceLabel" destination="qFH-yZ-b7R" id="b3Q-pX-UU7"/>
-                <outlet property="statusLabel" destination="IDM-eZ-Vtv" id="9lN-DP-0v4"/>
+                <outlet property="statusLabel" destination="Nrp-8i-ZIX" id="aPz-bu-1ma"/>
+                <outlet property="statusTitleLabel" destination="IDM-eZ-Vtv" id="0yb-yk-ySc"/>
                 <outlet property="timeLabel" destination="GCG-kq-N46" id="eVg-4c-Zpr"/>
             </connections>
-            <point key="canvasLocation" x="270.2290076335878" y="150.35211267605635"/>
+            <point key="canvasLocation" x="270.2290076335878" y="162.32394366197184"/>
         </collectionViewCell>
     </objects>
     <resources>

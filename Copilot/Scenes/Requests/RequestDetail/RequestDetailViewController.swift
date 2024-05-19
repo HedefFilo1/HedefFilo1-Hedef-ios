@@ -60,7 +60,7 @@ class RequestDetailViewController: UIViewController {
     
     func setTexts() {
         statusLabel.text = Strings.requestStatus
-        descriptionLabel.text = Strings.explanation
+        descriptionLabel.text = App.getString(key: "copilotapp.pastserviceaccidentdamage.accident.damage.detail.description")
         addationalLabel.text = Strings.additionalInformation
         cancelButton.setTitle(Strings.cancelRequest, for: .normal)
         

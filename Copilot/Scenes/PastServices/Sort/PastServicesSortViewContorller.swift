@@ -62,10 +62,10 @@ class PastServicesSortViewController: SheetViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.sort
-        ascendingLabel.text = Strings.ascending
-        descendingLabel.text = Strings.descending
-        applyButton.setTitle(Strings.apply, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.button")
+        ascendingLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.new.old")
+        descendingLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.old.new")
+        applyButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.apply.button"), for: .normal)
     }
 
     @IBAction func didTapClose() {

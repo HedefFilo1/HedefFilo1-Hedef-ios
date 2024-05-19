@@ -17,7 +17,8 @@ class PastServicesItemsCell: UICollectionViewCell, Reusable {
     var items: [PastService]? {
         didSet {
             let count = items?.count ?? 0
-            titleLabel.text = "\(count) \(foundMessage)"
+            let text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.found")?.replacingOccurrences(of: "{number}", with: "") ?? ""
+            titleLabel.text = "\(count) \(text)"
             collectionView.reloadData()
         }
     }

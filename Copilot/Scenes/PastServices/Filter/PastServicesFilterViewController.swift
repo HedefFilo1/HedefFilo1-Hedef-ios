@@ -42,10 +42,6 @@ class PastServicesFilterViewController: SheetViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         citiesList.delegate = self
         districtList.delegate = self
@@ -63,12 +59,12 @@ class PastServicesFilterViewController: SheetViewController {
     
     func setTexts() {
         view.backgroundColor = .white
-        titleLabel.text = Strings.filter
-        citiesList.title = Strings.province
-        districtList.title = Strings.district
-        citiesList.valueLabel.text = Strings.choose
-        districtList.valueLabel.text = Strings.choose
-        dateChooseView.title = Strings.selectDate
+        titleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.title")
+        citiesList.title = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.province") ?? ""
+        districtList.title = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.district") ?? ""
+        citiesList.valueLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select")
+        districtList.valueLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select")
+        dateChooseView.title = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select.date") ?? ""
     }
     
     func setButtonActivation() {

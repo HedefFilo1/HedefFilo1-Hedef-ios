@@ -24,8 +24,8 @@ class PastMaintenancesViewController: UIViewController {
     @IBOutlet weak var accidentButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var headTitle = Strings.pastMaintenanceOperations
-    private var message = Strings.pastMaintenanceDescription
+    private var headTitle = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.past.maintenance.operation.title") ?? Strings.pastMaintenanceOperations
+    private var message =  App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.description") ?? Strings.pastMaintenanceDescription
     private var foundMessage = Strings.pastMaintenanceFound
     var currentTab = 0
     
@@ -38,11 +38,7 @@ class PastMaintenancesViewController: UIViewController {
         setupUI()
         viewModel.getServices()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
+
     func setupUI() {
         applyStyle()
         setTexts()
@@ -71,11 +67,12 @@ class PastMaintenancesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.pastServiceTransactions
-        maintenanceButton.setTitle(Strings.care, for: .normal)
-        breakdownButton.setTitle(Strings.fault, for: .normal)
-        tireButton.setTitle(Strings.lastik, for: .normal)
-        accidentButton.setTitle(Strings.accidentTab, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.service.operation.button")
+        
+        maintenanceButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.maintenance"), for: .normal)
+        breakdownButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.breakdown"), for: .normal)
+        tireButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.tire"), for: .normal)
+        accidentButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.accident.damage"), for: .normal)
     }
     
     func setButtonsColor(tab: Int) {

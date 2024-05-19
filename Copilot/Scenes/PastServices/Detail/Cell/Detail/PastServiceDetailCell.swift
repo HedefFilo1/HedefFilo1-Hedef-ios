@@ -29,11 +29,13 @@ class PastServiceDetailCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var operationLabel: UILabel!
     @IBOutlet weak var kmTitleLabel: UILabel!
     @IBOutlet weak var kmLabel: UILabel!
+    @IBOutlet weak var statusTitleLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         applyStyles()
+        setTexts()
     }
 
     func applyStyles() {
@@ -50,6 +52,14 @@ class PastServiceDetailCell: UICollectionViewCell, Reusable {
         kmTitleLabel.apply(.blackS14B700)
         kmLabel.apply(.greyS12R400)
         
+        statusTitleLabel.apply(.blackS14B700)
         statusLabel.apply(.blackS14B700)
+    }
+    
+    func setTexts() {
+        addressTitleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.maintenance.detail.address")
+        operationTitleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.maintenance.detail.process")
+        kmTitleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.maintenance.detail.km.info")
+        statusTitleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.maintenance.detail.status")
     }
 }
