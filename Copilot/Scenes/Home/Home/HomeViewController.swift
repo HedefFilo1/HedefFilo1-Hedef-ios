@@ -34,13 +34,10 @@ class HomeViewController: UIViewController {
         viewModel.getVehicle(shoudGetCase: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.getVehicle(shoudGetCase: true)
+        APIService.addUserAction(pageName: "device_detail", actionName: "device_os_detail")
     }
     
     private func setupUI() {

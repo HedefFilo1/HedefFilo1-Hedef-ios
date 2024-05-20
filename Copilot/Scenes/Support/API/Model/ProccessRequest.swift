@@ -13,6 +13,9 @@ struct ProccessRequest: Decodable {
     let contactName: String?
     let plateNumber: String?
     let appointmentDate: String?
+    let createdDate: String?
+    let recordType: String?
+    let invoiceNumber: String?
     
     var displayTitle: String {
         if let supplierName {
@@ -26,6 +29,25 @@ struct ProccessRequest: Decodable {
         if let plateNumber {
             return plateNumber
         }
+        
+        if let recordType {
+            return recordType
+        }
+        
+        if let invoiceNumber {
+            return invoiceNumber
+        }
+        return ""
+    }
+    
+    var existDate: String {
+        if let appointmentDate {
+            return appointmentDate
+        }
+        if let createdDate {
+            return createdDate
+        }
+        
         return ""
     }
     
@@ -33,7 +55,7 @@ struct ProccessRequest: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         formmater.locale = Locale(identifier: "tr_TR")
-        if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
+        if let date = formmater.date(from: existDate) {
             formmater.dateFormat = "dd.MM.yyyy"
             return formmater.string(from: date)
         }
