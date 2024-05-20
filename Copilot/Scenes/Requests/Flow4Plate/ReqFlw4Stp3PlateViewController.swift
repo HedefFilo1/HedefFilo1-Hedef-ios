@@ -120,45 +120,46 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.button") 
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.title")
         
-        noteLabel.text = Strings.addNote
-        noteTextField.placeholder = Strings.enterNote
+        noteLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.note")
+        noteTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.note.enter")
         
-        nameLabel.text = Strings.nameDashSurname
-        nameTextField.placeholder = Strings.enterNameSurname
+        nameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.name.surname")
+        nameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.name.surname.enter")
         
-        emailLabel.text = Strings.emailAddress
-        emailTextField.placeholder = Strings.enterYourEmail
+        emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.email")
+        emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.email.enter")
         
-        phoneLabel.text = Strings.yourMobilePhone
-        phoneTextField.placeholder = Strings.enterYourMobilePhone
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.phone")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.phone.enter")
         
-        plateLabel.text = Strings.yourLicensePlate
-        plateTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.plate")
+        plateTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.plate.enter")
         
-        kmLabel.text = Strings.ckm
-        kmTextField.placeholder = Strings.enterKm
+        kmLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.km")
+        kmTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.km.enter")
         
-        causeOfLostLabel.text = Strings.causeOfLoss
-        causeOfLostList.title = Strings.enterCauseOfLoss
+        causeOfLostLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.cause.loss")
+        causeOfLostList.title = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.cause.loss.enter") ?? ""
         
-        numberOfLostPlatesLabel.text = Strings.numberOfLostPlates
-        numberOfLostPlatesList.title = Strings.enterNumberOfLostPlates
+        numberOfLostPlatesLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.number.lost.plate")
+        numberOfLostPlatesList.title = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.number.lost.enter") ?? ""
         
-        receiverNameLabel.text = Strings.receiverNameSurname
-        receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
+        receiverNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.person.receive.name.surname")
+        receiverNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.person.receive.name.surname.enter")
         
-        receiverPhoneLabel.text = Strings.receivingPersonPhone
-        receiverPhoneTextField.placeholder = Strings.enterReceivingPersonPhone
+        receiverPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.person.receive.name.surname.phone")
+        receiverPhoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.person.receive.name.surname.phone.enter")
         
-        addressLabel.text = Strings.deliveryPlateAddress
-        addressTextField.placeholder = Strings.enterDeliveryPlateAddress
+        addressLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.person.plate.deliver.address")
+        addressTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.address.plate.deliver.enter") ?? Strings.enterDeliveryPlateAddress
         
-        addFileLabel.text = Strings.addFile
-        documentNameLabel.text = Strings.requiredDocumentName
-        selectFileLabel.text = Strings.selectFile
-        createButton.setTitle(Strings.createProcessRequest, for: .normal)
+        addFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.attach.file")
+        documentNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.lost.plate.vehicle.operation.attach.file.document.name")
+        
+        selectFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.attach.file.document.select")
+        createButton.setTitle(App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.create.process.request.button"), for: .normal)
     }
     
     func setDashedBorder() {
