@@ -934,9 +934,9 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
         <key>pastSearches</key>
         <dict>
             <key>tr</key>
-            <string>Geçmiş Aramalar</string>
+            <string>Result</string>
             <key>en</key>
-            <string>Past Searches</string>
+            <string>Result</string>
         </dict>
         
         <key>help</key>

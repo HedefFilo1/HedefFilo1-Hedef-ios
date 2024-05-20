@@ -21,6 +21,7 @@ class HomeCoordinator: Coordinator {
     
     let storyboard = UIStoryboard(storyboard: .home)
     weak var delegate: HomeCoordinatorDelegate?
+    weak var mainCoordinator: MainCoordinator?
     
     var filtersViewController: FiltersViewController?
     var kmUsedViewController: KMUsedViewController?
@@ -78,12 +79,13 @@ extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
         let viewController: SearchViewController = storyboard.instantiateViewController()
         let viewModel = SearchViewModel()
         viewController.viewModel = viewModel
-        viewModel.coordinatorDelegate = self
+        viewModel.coordinatorDelegate = mainCoordinator
         navigationController.pushViewController(viewController, animated: true)
     }
 }
 
-extension HomeCoordinator: NearMeViewModelCoordinatorDelegate, SearchViewModelCoordinatorDelegate {
+extension HomeCoordinator: NearMeViewModelCoordinatorDelegate {
+    
     func getBack() {
         navigationController.popViewController(animated: true)
     }

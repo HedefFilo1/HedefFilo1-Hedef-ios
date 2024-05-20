@@ -86,10 +86,10 @@ class MainCoordinator: Coordinator {
             menuCoordinator.navigationController
         ]
         addChildCoordinator(homeCoordinator)
-        
+        homeCoordinator.mainCoordinator = self
 #if DEV_DEBUG
         // just for test
-        tabBarController.selectedIndex = 0
+        tabBarController.selectedIndex = 2
 #else
         tabBarController.selectedIndex = 2
 #endif
@@ -117,6 +117,54 @@ extension MainCoordinator: HomeCoordinatorDelegate,
 
 extension MainCoordinator: MainViewModelCoordinatorDelegate {
     
+}
+
+extension MainCoordinator: SearchViewModelCoordinatorDelegate {
+    
+    func getBack() {
+        homeCoordinator.navigationController.popViewController(animated: true)
+    }
+    
+    func goToMenu() {
+        homeCoordinator.navigationController.select(tab: 4)
+    }
+    
+    func goToSupport() {
+        homeCoordinator.navigationController.select(tab: 3)
+    }
+    
+    func goToService() {
+        homeCoordinator.navigationController.select(tab: 1)
+    }
+    
+    func goToAccident() {
+        homeCoordinator.navigationController.select(tab: 0)
+    }
+    
+    func goToSettings() {
+        homeCoordinator.navigationController.select(tab: 4)
+        menuCoordinator.showSettings()
+    }
+    
+    func goToGuides() {
+        homeCoordinator.navigationController.select(tab: 3)
+        supportCoordinator.goToSupportGuide()
+    }
+    
+    func goToFeedback() {
+        homeCoordinator.navigationController.select(tab: 3)
+        supportCoordinator.goToFeedback()
+    }
+    
+    func goToFAQ() {
+        homeCoordinator.navigationController.select(tab: 3)
+        supportCoordinator.goToFAQ()
+    }
+    
+    func goToCallCenter() {
+        homeCoordinator.navigationController.select(tab: 3)
+        supportCoordinator.goToSupportGuide()
+    }
 }
 
 extension MainCoordinator: SupportCoordinatorDelegate {

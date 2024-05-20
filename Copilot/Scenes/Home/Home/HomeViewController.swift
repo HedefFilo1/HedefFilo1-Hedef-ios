@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
 #if DEV_DEBUG
 
 //        viewModel.coordinatorDelegate?.goToStandings()
+        viewModel.goToSearch()
+        return
 //        return
 #endif
         viewModel.getVehicle(shoudGetCase: true)
@@ -36,8 +38,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+#if DEV_DEBUG
+        return
+        #endif
         viewModel.getVehicle(shoudGetCase: true)
-        APIService.addUserAction(pageName: "device_detail", actionName: "device_os_detail")
     }
     
     private func setupUI() {

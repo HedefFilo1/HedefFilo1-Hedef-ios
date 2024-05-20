@@ -37,11 +37,6 @@ class SearchViewController: PopupViewController {
         hideTabbarView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         showTabbarView()
@@ -83,6 +78,7 @@ class SearchViewController: PopupViewController {
     @objc func editingChanged() {
         let count = searchTextField.text?.count ?? 0
         clearView.isHidden = count == 0
+        viewModel.searchText = searchTextField.text ?? ""
         collectionView.reloadData()
     }
     
@@ -106,21 +102,22 @@ class SearchViewController: PopupViewController {
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let count = searchTextField.text?.count ?? 0
+//        let count = searchTextField.text?.count ?? 0
         if section == 0 {
-            return count > 0 ? 0: 4
+            return viewModel.filteredItems.count
         }
-        return count > 0 ? 2: 0
+//        return count > 0 ? 2: 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell: PastSearchCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.titleLabel.text = viewModel.pastSeraches[indexPath.item]
+            cell.titleLabel.text = viewModel.filteredItems[indexPath.item].title
             return cell
         }
         
@@ -160,7 +157,8 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         let count = searchTextField.text?.count ?? 0
         var height: CGFloat = 37
         if section == 0 {
-            height = count > 0 ? 0: 37
+//            height = count > 0 ? 0: 37
+            height = 0
         } else {
             height = count > 0 ? 37: 0
         }
@@ -168,6 +166,8 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel.filteredItems[indexPath.row]
+        viewModel.didSelect(item: item)
     }
 }
 
