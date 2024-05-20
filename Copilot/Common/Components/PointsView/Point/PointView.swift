@@ -47,4 +47,8 @@ class PointView: UIView {
         valueLabel.apply(.blackS12R400)
     }
     
+    func setTexts() {
+        titleLabel.text = App.getString(key: "copilotapp.gamification.standings.congratulations")
+    }
+    
 }

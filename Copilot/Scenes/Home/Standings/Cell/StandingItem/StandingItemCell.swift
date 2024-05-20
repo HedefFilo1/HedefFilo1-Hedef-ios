@@ -12,7 +12,8 @@ class StandingItemCell: UICollectionViewCell, Reusable {
     var point: Int = 0 {
         didSet {
             let first = titleLabel.text ?? ""
-            let second = "(\(point) \(Strings.point))"
+            let text = App.getString(key: "copilotapp.gamification.point")?.replacingOccurrences(of: "{point}", with: "") ?? ""
+            let second = "(\(point) \(text))"
             let main = AttributedText(text: "\(first) \(second)", type: .blackS14M500)
             let point = AttributedText(text: "\(second)", type: .blackS14R400)
             titleLabel.attributedText = AttributedText.createMultiplePartString(mainText: main, texts: [point])

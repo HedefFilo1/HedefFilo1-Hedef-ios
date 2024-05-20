@@ -49,11 +49,13 @@ class PointsCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.standings
+        titleLabel.text = App.getString(key: "copilotapp.gamification.standings")
+        howLabel.text = App.getString(key: "copilotapp.gamification.standings.how_to_earn_points")
     }
     
     func setPointsLabel(point: Int) {
-        let main = AttributedText(text: "\(Strings.yourScore): \(point)",
+        let score = App.getString(key: "copilotapp.gamification.your_point") ?? ""
+        let main = AttributedText(text: "\(score): \(point)",
                                   type: .greyS12R400)
         let point = AttributedText(text: "\(point)", type: .blackS12B700)
         pointsLabel.attributedText = AttributedText.createMultiplePartString(mainText: main, texts: [point])

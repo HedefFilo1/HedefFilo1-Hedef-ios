@@ -111,7 +111,8 @@ class PointsView: UIView {
             let leading = CGFloat(item.point) * pointFrameRate
             pointView.align(top: 10, leading: leading - 40, bottom: 0, width: 70)
             pointView.titleLabel.text = item.name
-            pointView.valueLabel.text = "\(item.point) \(Strings.point)"
+            let text = App.getString(key: "copilotapp.gamification.point")?.replacingOccurrences(of: "{point}", with: "") ?? ""
+            pointView.valueLabel.text = "\(item.point)\(text)"
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

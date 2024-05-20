@@ -45,7 +45,7 @@ class StandingsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.standings
+        titleLabel.text = App.getString(key: "copilotapp.gamification.standings")
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {
@@ -75,19 +75,18 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         let cell: StandingItemCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.item {
         case 0:
-            cell.titleLabel.text = Strings.createProccessRequestSel
+            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_process_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
             cell.point = 500
         case 1:
-            cell.titleLabel.text =
-            App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey")
+            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.complete_satisfaction_survey")?.replacingOccurrences(of: "({point} Puan)", with: "")
             cell.point = 50
             
         case 2:
-            cell.titleLabel.text = Strings.createServiceRequest
+            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_service_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
             cell.point = 100
             
         case 3:
-            cell.titleLabel.text = Strings.createProductRequest
+            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_product_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
             cell.point = 200
             
         default:
