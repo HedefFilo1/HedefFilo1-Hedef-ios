@@ -105,39 +105,40 @@ class ReqFlw5Stp3LicenseViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button")
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.title")
         
-        noteLabel.text = Strings.addNote
-        noteTextField.placeholder = Strings.enterNote
+        noteLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.note")
+        noteTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.note.enter")
         
-        nameLabel.text = Strings.nameDashSurname
-        nameTextField.placeholder = Strings.enterNameSurname
+        nameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.name.surname")
+        nameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.name.surname.enter")
         
-        emailLabel.text = Strings.emailAddress
-        emailTextField.placeholder = Strings.enterYourEmail
+        emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.email")
+        emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.email.enter")
         
-        phoneLabel.text = Strings.yourMobilePhone
-        phoneTextField.placeholder = Strings.enterYourMobilePhone
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.phone")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.phone.enter")
         
-        plateLabel.text = Strings.yourLicensePlate
-        plateTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.plate")
+        plateTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.plate.enter")
         
-        kmLabel.text = Strings.ckm
-        kmTextField.placeholder = Strings.enterKm
+        kmLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.km")
+        kmTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.km.enter")
         
-        receiverNameLabel.text = Strings.receiverNameSurname
-        receiverNameTextField.placeholder = Strings.enterReceiverNameSurname
+        receiverNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.person.receive.name.surname")
+        receiverNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.person.receive.name.surname.enter")
         
-        receiverPhoneLabel.text = Strings.receivingPersonPhone
-        receiverPhoneTextField.placeholder = Strings.enterReceivingPersonPhone
+        receiverPhoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.person.receive.name.surname.phone")
+        receiverPhoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.person.receive.name.surname.phone.enter")
         
-        addressLabel.text = Strings.licenseDeliveryAddress
-        addressTextField.placeholder = Strings.enterLicenseDeliveryAddress
+        addressLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.address.license.deliver")
+        addressTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.address.license.deliver.enter")
         
-        addFileLabel.text = Strings.addFile
-        documentNameLabel.text = Strings.requiredDocumentName
-        selectFileLabel.text = Strings.selectFile
-        createButton.setTitle(Strings.createProcessRequest, for: .normal)
+        addFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.attach.file")
+        documentNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.lost.license.vehicle.operation.attach.file.document.name")
+        
+        selectFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.attach.file.document.select")
+        createButton.setTitle(App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.create.process.request.button"), for: .normal)
     }
     
     func setDashedBorder() {
