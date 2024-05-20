@@ -68,7 +68,7 @@ class SettingsViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = Strings.settings
-        notifiationsLabel.text = Strings.notifications
+        notifiationsLabel.text = App.getString(key: "copilotapp.notification.title")
         darkModeLabel.text = Strings.darkMode
         agreementLabel.text = Strings.seePrivacyAgreement
     }

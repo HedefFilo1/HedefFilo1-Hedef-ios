@@ -12,6 +12,7 @@ class VehicleServicesItemsCell: UICollectionViewCell, Reusable {
     var items: [Supplier]? {
         didSet {
             let count = items?.count ?? 0
+            let text = App.getString(key: "copilotapp.service.found.service.description")?.replacingOccurrences(of: "{number}", with: "")
             titleLabel.text = "\(count) \(Strings.servicesFound)"
             collectionView.reloadData()
         }

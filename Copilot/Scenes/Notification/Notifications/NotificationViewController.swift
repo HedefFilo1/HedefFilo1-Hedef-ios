@@ -84,9 +84,9 @@ class NotificationsViewController: UIViewController {
     
     func setTexts() {
         view.backgroundColor = .white
-        titleLabel.text = Strings.notifications
-        sortLabel.text = Strings.showAllOfThem
-        cancelButton.setTitle(Strings.cancel, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.notification.title")
+        sortLabel.text = App.getString(key: "copilotapp.notification.show.all")
+        cancelButton.setTitle(App.getString(key: "copilotapp.notification.giveup.button"), for: .normal)
         deleteButton.setTitle(Strings.deleteSelectedNotifications, for: .normal)
     }
     
@@ -151,9 +151,11 @@ class NotificationsViewController: UIViewController {
     }
     
     @IBAction func didTapSort() {
-        sortLabel.text = Strings.showUnread
+        sortLabel.text = App.getString(key: "copilotapp.notification.show.unread")
+        let unreadText = App.getString(key: "copilotapp.notification.show.unread") ?? ""
+        let allText = App.getString(key: "copilotapp.notification.show.all")
         viewModel.showUnreads = !viewModel.showUnreads
-        sortLabel.text = viewModel.showUnreads ? Strings.showUnread: Strings.showAllOfThem
+        sortLabel.text = viewModel.showUnreads ? unreadText: allText
         reloadData()
     }
     
@@ -162,7 +164,7 @@ class NotificationsViewController: UIViewController {
         if count > 0 {
             cancelButton.isHidden = false
             deleteButton.isHidden = false
-            let string = Strings.deleteSelectedNotifications.replacingOccurrences(of: "count", with: "\(count)")
+            let string = App.getString(key: "copilotapp.notification.delete.choose.notification.button")?.replacingOccurrences(of: "{number}", with: "\(count)") ?? ""
             deleteButton.setTitle(string, for: .normal)
         } else {
             cancelButton.isHidden = true

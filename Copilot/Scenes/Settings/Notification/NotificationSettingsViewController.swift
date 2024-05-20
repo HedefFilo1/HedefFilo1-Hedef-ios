@@ -70,7 +70,7 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.notifications
+        titleLabel.text = App.getString(key: "copilotapp.notification.title")
         descriptionLabel.text = Strings.notificationSettingsDescription
         weatherLabel.text = Strings.weatherSettings
         campaignsLabel.text = Strings.campaigns

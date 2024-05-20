@@ -62,7 +62,7 @@ class VehicleServicesViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.contractedServices
+        titleLabel.text = App.getString(key: "copilotapp.service.title")
     }
 }
 
