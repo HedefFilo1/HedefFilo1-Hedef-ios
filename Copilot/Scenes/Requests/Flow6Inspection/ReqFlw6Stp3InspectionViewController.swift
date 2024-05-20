@@ -97,33 +97,33 @@ class ReqFlw6Stp3InspectionViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button")
+        titleLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.title")
         
-        noteLabel.text = Strings.addNote
-        noteTextField.placeholder = Strings.enterNote
+        noteLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.note")
+        noteTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.note.enter")
         
-        nameLabel.text = Strings.nameDashSurname
-        nameTextField.placeholder = Strings.enterNameSurname
+        nameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname")
+        nameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname.enter")
         
-        emailLabel.text = Strings.emailAddress
-        emailTextField.placeholder = Strings.enterYourEmail
+        emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.email")
+        emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.email.enter")
         
-        phoneLabel.text = Strings.yourMobilePhone
-        phoneTextField.placeholder = Strings.enterYourMobilePhone
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.phone")
+        phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.phone.enter")
         
-        plateLabel.text = Strings.yourLicensePlate
-        plateTextField.placeholder = Strings.enterYourLicensePlate
+        plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.plate")
+        plateTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.plate.enter")
         
-        receiverNameLabel.text = Strings.nameSurnamePersonVehicle
-        receiverNameTextField.placeholder = Strings.enterNameSurnamePersonVehicle
+        receiverNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname.person.drive.vehicle")
+        receiverNameTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname.person.drive.vehicle.enter")
         
-        receiverIdLabel.text = Strings.idNumberPersonVehicle
-        receiverIdTextField.placeholder = Strings.enterIdNumberPersonVehicle
+        receiverIdLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname.person.drive.vehicle.id")
+        receiverIdTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.name.surname.person.drive.vehicle.id.enter")
         
-        addFileLabel.text = Strings.addFile
-        documentNameLabel.text = Strings.requiredDocumentName
-        selectFileLabel.text = Strings.selectFile
-        createButton.setTitle(Strings.createProcessRequest, for: .normal)
+        addFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.attach.file")
+        documentNameLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.inspection.operation.attach.file.document.name")
+        selectFileLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.attach.file.document.select")
+        createButton.setTitle(App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.create.process.request.button"), for: .normal)
     }
     
     func setDashedBorder() {

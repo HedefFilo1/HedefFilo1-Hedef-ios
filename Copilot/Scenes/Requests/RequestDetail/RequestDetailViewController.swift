@@ -59,10 +59,10 @@ class RequestDetailViewController: UIViewController {
     }
     
     func setTexts() {
-        statusLabel.text = Strings.requestStatus
-        descriptionLabel.text = App.getString(key: "copilotapp.pastserviceaccidentdamage.accident.damage.detail.description")
-        addationalLabel.text = Strings.additionalInformation
-        cancelButton.setTitle(Strings.cancelRequest, for: .normal)
+        statusLabel.text =  App.getString(key: "copilotapp.demandlist.demand.status")
+        descriptionLabel.text = App.getString(key: "copilotapp.demandlist.explanation")
+        addationalLabel.text = App.getString(key: "copilotapp.demandlist.additional.info")
+        cancelButton.setTitle(App.getString(key: "copilotapp.demandlist.cancel.request.button"), for: .normal)
         
     }
     

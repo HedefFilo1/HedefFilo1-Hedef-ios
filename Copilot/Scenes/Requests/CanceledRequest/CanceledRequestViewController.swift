@@ -52,9 +52,9 @@ class CanceledRequestViewController: UIViewController {
     
     func setTexts() {
         headLabel.text = viewModel.title
-        titleLabel.text = Strings.requestCanceledMessage
-        requestsButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.request.page.button"), for: .normal)
-        homeButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.homepage.button"), for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.demandlist.cancel.request.title")
+        requestsButton.setTitle(App.getString(key: "copilotapp.demandlist.back.request.page.button"), for: .normal)
+        homeButton.setTitle(App.getString(key: "copilotapp.demandlist.back.homepage.button"), for: .normal)
     }
     
     @IBAction func didTapClose() {
