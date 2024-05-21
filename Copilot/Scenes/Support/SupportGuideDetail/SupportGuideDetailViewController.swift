@@ -17,7 +17,9 @@ class SupportGuideDetailViewController: UIViewController {
     }
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textlabel: UILabel!
+    @IBOutlet weak var downloadLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -28,19 +30,17 @@ class SupportGuideDetailViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
-        textView.text = viewModel.item?.description ?? ""
+        textlabel.text = viewModel.item?.description ?? ""
+        imageView.loadImageFrom(url: viewModel.item?.imageFile)
     }
     
     func applyStyle() {
         titleLabel.apply(.blackS18B700)
-        textView.apply(.greyS14R400)
+        textlabel.apply(.greyS14R400)
+        downloadLabel.apply(.themeS16B700)
     }
     
     func setTexts() {
@@ -49,6 +49,19 @@ class SupportGuideDetailViewController: UIViewController {
     
     @IBAction func didTapBack() {
         viewModel.getBack()
+    }
+    
+    @IBAction func didTapDowndload(_ sender: UIButton) {
+        let stringURL = viewModel.item?.documentFile ?? ""
+        if let url = URL(string: stringURL) {
+            print(url.absoluteString)
+            showShareView(url: url)
+        }
+    }
+    
+    func showShareView(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
 }
 

@@ -34,10 +34,6 @@ class DocumentsViewController: UIViewController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         setBasicViews()
         applyStyle()

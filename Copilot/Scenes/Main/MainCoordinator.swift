@@ -89,7 +89,7 @@ class MainCoordinator: Coordinator {
         homeCoordinator.mainCoordinator = self
 #if DEV_DEBUG
         // just for test
-        tabBarController.selectedIndex = 2
+        tabBarController.selectedIndex = 3
 #else
         tabBarController.selectedIndex = 2
 #endif
