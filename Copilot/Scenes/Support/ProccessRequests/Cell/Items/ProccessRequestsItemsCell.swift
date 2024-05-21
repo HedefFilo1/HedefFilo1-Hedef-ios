@@ -34,7 +34,7 @@ class ProccessRequestsItemsCell: UICollectionViewCell, Reusable {
         collectionView.dataSource = self
         collectionView.register(cellType: ProccessRequestsItemCell.self)
         collectionView.contentInset.top = 12
-        collectionView.contentInset.bottom = 24
+//        collectionView.contentInset.bottom = 24
         backgroundColor = .white
         applyStyles()
     }

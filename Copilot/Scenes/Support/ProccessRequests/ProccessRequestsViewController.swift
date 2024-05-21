@@ -37,11 +37,6 @@ class ProccessRequestsViewController: UIViewController {
 #endif
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -99,7 +94,7 @@ extension ProccessRequestsViewController: UICollectionViewDataSource, UICollecti
         } else {
             
             let count = viewModel.filteredServices.count + 2
-            let height = CGFloat(count * 102 + (count * 8)) - 8 + 44
+            let height = CGFloat(count * 77 + (count * 12)) - 12 + 44
             return CGSize(width: collectionView.frame.width, height: height)
         }
     }

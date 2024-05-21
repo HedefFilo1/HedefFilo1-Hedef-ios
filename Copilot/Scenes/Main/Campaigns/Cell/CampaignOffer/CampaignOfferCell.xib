@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,58 +12,58 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CampaignOfferCell" customModule="Copilot" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="317" height="331"/>
+            <rect key="frame" x="0.0" y="0.0" width="349" height="507"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="317" height="331"/>
+                <rect key="frame" x="0.0" y="0.0" width="349" height="507"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp1-Up-kSA">
-                        <rect key="frame" x="0.0" y="0.0" width="317" height="331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="507"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-7Y-m3L">
-                                <rect key="frame" x="16" y="16" width="285" height="299"/>
+                                <rect key="frame" x="16" y="16" width="317" height="475"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum Dolar Sit Amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-Uu-qCA">
-                                        <rect key="frame" x="0.0" y="136" width="285" height="21"/>
+                                        <rect key="frame" x="0.0" y="286" width="317" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockCampaignImage" translatesAutoresizingMaskIntoConstraints="NO" id="7so-Wp-N0H">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="270"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="OeB-DX-zel"/>
+                                            <constraint firstAttribute="height" constant="270" id="OeB-DX-zel"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-VK-Dy7">
-                                        <rect key="frame" x="0.0" y="161" width="285" height="61"/>
+                                        <rect key="frame" x="0.0" y="311" width="317" height="61"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kampanya Geçerlilik Tarihi: 31.12.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-bu-zTU">
-                                        <rect key="frame" x="0.0" y="230" width="285" height="21"/>
+                                        <rect key="frame" x="0.0" y="380" width="317" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Devamını Oku" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-LW-U7b" userLabel="Devamını Oku">
-                                        <rect key="frame" x="0.0" y="265" width="105.33333333333333" height="34"/>
+                                        <rect key="frame" x="0.0" y="441" width="105.33333333333333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRedRight" translatesAutoresizingMaskIntoConstraints="NO" id="mvS-6o-pJp">
-                                        <rect key="frame" x="111.33333333333333" y="276" width="16" height="16"/>
+                                        <rect key="frame" x="111.33333333333333" y="452" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="QQU-gb-fbC"/>
                                             <constraint firstAttribute="width" constant="16" id="uKU-Ka-fat"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-bb-RZ3">
-                                        <rect key="frame" x="0.0" y="265" width="127.33333333333333" height="34"/>
+                                        <rect key="frame" x="0.0" y="441" width="127.33333333333333" height="34"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
                                             <action selector="didTapContiune" destination="gTV-IL-0wX" eventType="touchUpInside" id="scZ-A8-xr4"/>
@@ -113,7 +113,7 @@
                 <constraint firstItem="gp1-Up-kSA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="heT-WV-BSU"/>
                 <constraint firstItem="gp1-Up-kSA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w0x-UI-v9b"/>
             </constraints>
-            <size key="customSize" width="317" height="331"/>
+            <size key="customSize" width="349" height="507"/>
             <connections>
                 <outlet property="continueLabel" destination="8t0-LW-U7b" id="lzx-EU-2OB"/>
                 <outlet property="dateLabel" destination="2Ow-bu-zTU" id="hNS-au-fey"/>
@@ -121,7 +121,7 @@
                 <outlet property="textLabel" destination="LL2-VK-Dy7" id="Fp2-oG-euY"/>
                 <outlet property="titleLabel" destination="7tk-Uu-qCA" id="ajS-BM-EiT"/>
             </connections>
-            <point key="canvasLocation" x="66.412213740458014" y="118.66197183098592"/>
+            <point key="canvasLocation" x="90.839694656488547" y="180.63380281690141"/>
         </collectionViewCell>
     </objects>
     <resources>

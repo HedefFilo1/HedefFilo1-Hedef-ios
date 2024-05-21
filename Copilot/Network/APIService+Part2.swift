@@ -83,7 +83,18 @@ extension APIService {
             }
             #endif
         }
-        req.start()
+        
+        let sessionId = App.sessionId ?? ""
+        if sessionId == "" {
+            APIService.getSessionId { model, _ in
+                if let model = model {
+                    App.sessionId = model.sessionId
+                    req.start()
+                }
+            }
+        } else {
+            req.start()
+        }
     }
     
     static func getNotificationPreferences(completion: @escaping ([NotificationPreference]?, APIResponseError?) -> Void) {

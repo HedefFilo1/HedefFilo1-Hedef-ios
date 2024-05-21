@@ -73,8 +73,12 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginMyAccount() {
-        viewModel.login(email: "jamal.zare@solidict.com",
-                        password: "Jj_123456",
+//        viewModel.login(email: "jamal.zare@solidict.com",
+//                        password: "Jj_123456",
+//                        rememberMe: rememberCheckBox.isSelected)
+        
+        viewModel.login(email: "yunus.simsiki@solidict.com",
+                        password: "asd",
                         rememberMe: rememberCheckBox.isSelected)
     }
    
@@ -87,11 +91,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.checkRememberMe()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
     }
     
     override func viewDidDisappear(_ animated: Bool) {
