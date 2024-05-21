@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension APIService {
     
@@ -50,7 +51,8 @@ extension APIService {
     }
     
     static func addUserAction(pageName: String, actionName: String) {
-        
+        let phoneModel = UIDevice.modelName
+        let osVersion = UIDevice.current.systemVersion
         let route = "user/action"
         let params = [
             "sessionId": App.sessionId ?? "",
@@ -58,7 +60,9 @@ extension APIService {
             "actionName": actionName,
             "platformType": "COPILOT",
             "deviceType": "MOBILE",
-            "deviceOS": "IOS"
+            "deviceOS": "IOS",
+            "deviceDetail": phoneModel,
+            "deviceOsDetail": osVersion
         ] as [String: Any]
         
         let req = APIRequest<Success>(route: route,
@@ -66,10 +70,13 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "addUserAction"
-        req.log = false // loggingEnabled 
+        req.log = true // loggingEnabled 
         req.completion = { _, error in
         
             #if DEV_DEBUG
+            if let error = error {
+                fatalError("user acction 500 error")
+            }
             if let error = error, error.code.contains("500") {
                 fatalError("user acction 500 error")
             }

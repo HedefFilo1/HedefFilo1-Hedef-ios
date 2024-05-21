@@ -241,6 +241,7 @@
 		89513E702B951A4100B05199 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E6F2B951A4100B05199 /* RequestsViewController.swift */; };
 		89513E742B951FF700B05199 /* RequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89513E722B951FF700B05199 /* RequestsCell.swift */; };
 		89513E752B951FF700B05199 /* RequestsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89513E732B951FF700B05199 /* RequestsCell.xib */; };
+		8953A47E2BFC6982003D46C8 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953A47D2BFC6982003D46C8 /* DeviceModel.swift */; };
 		8958DDCC2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */; };
 		895ADBC12B177E08004C9A4C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC02B177E08004C9A4C /* Case.swift */; };
 		895ADBC32B18C055004C9A4C /* Tire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895ADBC22B18C055004C9A4C /* Tire.swift */; };
@@ -808,6 +809,7 @@
 		89513E6F2B951A4100B05199 /* RequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
 		89513E722B951FF700B05199 /* RequestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsCell.swift; sourceTree = "<group>"; };
 		89513E732B951FF700B05199 /* RequestsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsCell.xib; sourceTree = "<group>"; };
+		8953A47D2BFC6982003D46C8 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		8958DDCB2B88D2A700A5522F /* AccFlw5Stp3ButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3ButtonsCell.xib; sourceTree = "<group>"; };
 		895ADBC02B177E08004C9A4C /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		895ADBC22B18C055004C9A4C /* Tire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tire.swift; sourceTree = "<group>"; };
@@ -3397,6 +3399,7 @@
 				8986FCAF2AFBCC6A006057EA /* Persistence */,
 				892A8D0E2AC4E80F0020C1C4 /* TextStyle.swift */,
 				890D7CD42ACEB60D00F053DA /* AttributedText.swift */,
+				8953A47D2BFC6982003D46C8 /* DeviceModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -4348,6 +4351,7 @@
 				89431D932B96815100A6F6B8 /* ReqFlw1Stp2Cell.swift in Sources */,
 				896CB3692AD722590048025A /* TireInfoCell.swift in Sources */,
 				8976B0212B73BAD800E7C58F /* BrkdwnFlw2Stp2AnyAlarmVController.swift in Sources */,
+				8953A47E2BFC6982003D46C8 /* DeviceModel.swift in Sources */,
 				8917F5422B39E52E00681AD3 /* Flow1Step3TireTypesViewController.swift in Sources */,
 				892A8CF42AC4C6D10020C1C4 /* SplashCoordinator.swift in Sources */,
 				894CEC812B078F9300D369E9 /* SearchViewController.swift in Sources */,
