@@ -30,10 +30,6 @@ class CampaignDetailViewController: UIViewController {
         hideTabbarView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         benefitButton.isEnabled = true
         applyStyle()
@@ -64,9 +60,9 @@ class CampaignDetailViewController: UIViewController {
 extension CampaignDetailViewController: CampaignDetailViewModelDelegate {
     
     func setCampaign() {
-        imageView.loadImageFrom(url: viewModel.campaign?.imageUrlTr)
-        titleLabel.text = viewModel.campaign?.titleTr
-        nameLabel.text = viewModel.campaign?.titleTr
-        textLabel.text = viewModel.campaign?.contentTr
+        imageView.loadImageFrom(url: viewModel.campaign?.imageFile)
+        titleLabel.text = viewModel.campaign?.title
+        nameLabel.text = viewModel.campaign?.title
+        textLabel.text = viewModel.campaign?.content
     }
 }

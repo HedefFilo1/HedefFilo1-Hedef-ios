@@ -11,9 +11,9 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
     
     var item: Campaign? {
         didSet {
-            imageView.loadImageFrom(url: item?.imageUrlTr)
-            titleLabel.text = item?.titleTr
-            textLabel.text = item?.contentTr
+            imageView.loadImageFrom(url: item?.imageFile)
+            titleLabel.text = item?.title
+            textLabel.text = item?.content
             setDateLabel(date: item?.displayExpireDate ?? "")
         }
     }

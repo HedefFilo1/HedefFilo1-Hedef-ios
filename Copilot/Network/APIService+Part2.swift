@@ -70,15 +70,16 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "addUserAction"
-        req.log = true // loggingEnabled 
+        req.log = false // loggingEnabled
         req.completion = { _, error in
         
             #if DEV_DEBUG
-            if let error = error {
-                fatalError("user acction 500 error")
-            }
             if let error = error, error.code.contains("500") {
                 fatalError("user acction 500 error")
+            }
+            
+            if error != nil {
+                req.printLog()
             }
             #endif
         }

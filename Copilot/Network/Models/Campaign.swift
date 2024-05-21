@@ -14,22 +14,34 @@ enum CampaignType: String {
 }
 
 struct Campaign: Decodable {
-    let id: Int
-    let type: String
-    let titleEn: String
-    let titleTr: String
-    let contentEn: String
-    let contentTr: String
-    let imageUrlEn: String
-    let imageUrlTr: String
-    let expiresAt: String
-    let created: String
+    let id: Int?
+    let type: String?
+    let titleEn: String?
+    let titleTr: String?
+    let title: String?
+    let contentEn: String?
+    let contentTr: String?
+    let imageUrlEn: String?
+    let imageUrlTr: String?
+    let expiresAt: String?
+    let created: String?
+    let imageFile: String?
+    
+    var content: String {
+        let language = Persistence.language ?? CodeStrings.turkish
+        if language == CodeStrings.turkish {
+            return contentTr ?? ""
+        }
+        return contentEn ?? ""
+    }
     
     var campaignType: CampaignType {
-        return CampaignType(rawValue: type) ?? .campaign
+        let str = type ?? ""
+        return CampaignType(rawValue: str) ?? .campaign
     }
     
     var displayExpireDate: String {
-        return expiresAt.displayDate()
+        let date = expiresAt ?? ""
+        return date.displayDate()
     }
 }
