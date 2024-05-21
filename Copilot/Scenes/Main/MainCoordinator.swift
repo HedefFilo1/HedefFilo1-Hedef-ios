@@ -163,7 +163,7 @@ extension MainCoordinator: SearchViewModelCoordinatorDelegate {
     
     func goToCallCenter() {
         homeCoordinator.navigationController.select(tab: 3)
-        supportCoordinator.goToSupportGuide()
+        supportCoordinator.goToLiveSupport()
     }
 }
 
