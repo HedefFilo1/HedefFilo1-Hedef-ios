@@ -72,9 +72,9 @@ class ProfileViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.profile.title")
-        phoneTextField.placeholder = App.getString(key: "copilotapp.profile.phone.input")
-        emailTextFiled.placeholder = App.getString(key: "copilotapp.profile.email.input")
+        titleLabel.text = App.getString(key: "copilotapp.profile.title") ?? Strings.profile
+        phoneTextField.placeholder = App.getString(key: "copilotapp.profile.phone.input") ?? Strings.mobilePhone
+        emailTextFiled.placeholder = App.getString(key: "copilotapp.profile.email.input") ?? Strings.email
         nameTextField.placeholder = App.getString(key: "copilotapp.profile.name.input")
         surnameTextField.placeholder = App.getString(key: "copilotapp.profile.surname.input")
         idTextField.placeholder = App.getString(key: "copilotapp.profile.id.tax.number.input")
