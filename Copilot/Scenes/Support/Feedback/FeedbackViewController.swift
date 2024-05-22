@@ -73,6 +73,11 @@ class FeedbackViewController: UIViewController {
     @IBAction func didTapBack() {
         viewModel.getBack()
     }
+    
+    @IBAction func didTapLiveSupport() {
+        APIService.addUserAction(pageName: "Help", actionName: "HELP_WEBCHAT")
+        viewModel.goToLiveSupport()
+    }
 
 }
 

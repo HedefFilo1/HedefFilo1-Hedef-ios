@@ -25,6 +25,7 @@ protocol FeedbackViewModelCoordinatorDelegate: AnyObject {
     func getBack()
     func goToServiceOperations()
     func goToProccessRequests()
+    func goToLiveSupport()
 }
 
 protocol FeedbackViewModelViewDelegate: AnyObject {
@@ -38,6 +39,7 @@ protocol FeedbackViewModelType: AnyObject {
     func getBack()
     func goToServiceOperations()
     func goToProccessRequests()
+    func goToLiveSupport()
 }
 
 class FeedbackViewModel: FeedbackViewModelType {
@@ -58,5 +60,9 @@ class FeedbackViewModel: FeedbackViewModelType {
     
     func goToProccessRequests() {
         coordinatorDelegate?.goToProccessRequests()
+    }
+    
+    func goToLiveSupport() {
+        coordinatorDelegate?.goToLiveSupport()
     }
 }

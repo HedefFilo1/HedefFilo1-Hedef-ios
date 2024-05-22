@@ -551,7 +551,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR4-eg-mkS">
                                                         <rect key="frame" x="16" y="216" width="361" height="345"/>
-                                                        <mutableString key="text">description description description description description description description description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description description</mutableString>
+                                                        <string key="text">description description description description description description description description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description descriptiondescription description description description description description</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -723,6 +723,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="icon_support_floating"/>
+                                        <connections>
+                                            <action selector="didTapLiveSupport" destination="dZc-Sa-Ti8" eventType="touchUpInside" id="k0T-LW-qLa"/>
+                                        </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GHC-az-Igd">
                                         <rect key="frame" x="0.0" y="69" width="393" height="398"/>
