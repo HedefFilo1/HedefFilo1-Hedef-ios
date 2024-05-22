@@ -31,10 +31,6 @@ class BrkdwnFlw1Stp2TowTruckVController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         setBasicViews()
         applyStyle()
