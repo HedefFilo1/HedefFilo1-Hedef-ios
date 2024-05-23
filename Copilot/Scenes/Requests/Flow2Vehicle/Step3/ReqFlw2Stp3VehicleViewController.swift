@@ -277,7 +277,8 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
                              carParkPhone: parkPhoneTextField.number,
                              deliveryPersonName: receiverNameTextField.text ?? "",
                              deliveryPersonPhone: receiverPhoneTextField.number,
-                             city: city,
+                             city: city, 
+                             receiverPersonTC: receiverTCKNTextField.text ?? "",
                              deliveryAddress: "")
     }
     

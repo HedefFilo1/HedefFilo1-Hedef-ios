@@ -148,6 +148,7 @@ extension APIService {
                                   deliveryPersonPhone: String,
                                   city: String,
                                   deliveryAddress: String,
+                                  receiverPersonTC: String,
                                   fileInfo: UploadRequestFile?,
                                   completion: @escaping (Success?, APIResponseError?) -> Void) {
         
@@ -165,7 +166,8 @@ extension APIService {
             "carParkPhone": carParkPhone,
             "deliveryPersonName": deliveryPersonName,
             "deliveryPersonPhone": deliveryPersonPhone,
-            "city": city
+            "city": city,
+            "receiverPersonTC": receiverPersonTC
             //            "deliveryAddress": deliveryAddress
         ] as [String: Any]
         

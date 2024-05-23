@@ -19,6 +19,7 @@ protocol LanguagesViewModelType: AnyObject {
     var coordinatorDelegate: LanguagesVMCrdinatorDelegate? { get set }
     var delegate: LanguagesViewModelDelegate? { get set }
     func getBack()
+    func changeLanguage(language: String)
 }
 
 class LanguagesViewModel: LanguagesViewModelType {
@@ -28,5 +29,9 @@ class LanguagesViewModel: LanguagesViewModelType {
     
     func getBack() {
         coordinatorDelegate?.getBack()
+    }
+    
+    func changeLanguage(language: String) {
+        App.changeLanguage(language: language)
     }
 }

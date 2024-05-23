@@ -89,7 +89,7 @@ extension ReqFlw2Stp2QuestionsViewController: UICollectionViewDataSource, UIColl
             cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
             
         case 2:
-            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button")
+            cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.button")
             
         case 3:
             cell.label.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button")

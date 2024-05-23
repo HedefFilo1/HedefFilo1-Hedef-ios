@@ -44,6 +44,7 @@ protocol ReqFlw2Stp3VehicleViewModelType: AnyObject {
                     deliveryPersonName: String,
                     deliveryPersonPhone: String,
                     city: String,
+                    receiverPersonTC: String,
                     deliveryAddress: String)
 }
 
@@ -111,6 +112,7 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                     deliveryPersonName: String,
                     deliveryPersonPhone: String,
                     city: String,
+                    receiverPersonTC: String,
                     deliveryAddress: String) {
         
         let branchPhone = trafficBranchPhone.components(separatedBy: .whitespaces).joined()
@@ -129,7 +131,8 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
                                      deliveryPersonName: deliveryPersonName,
                                      deliveryPersonPhone: phone,
                                      city: city,
-                                     deliveryAddress: deliveryAddress,
+                                     deliveryAddress: deliveryAddress, 
+                                     receiverPersonTC: receiverPersonTC,
                                      fileInfo: uploadedFileInfo) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }

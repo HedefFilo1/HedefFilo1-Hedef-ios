@@ -31,10 +31,14 @@ class App {
     
     static func changeLanguage(language: String) {
         Persistence.language = language
-//        let controller: MainTabBarController = UIStoryboard(storyboard: .main).instantiateViewController()
-//        App.window.rootViewController = controller
-        appCoordinator?.goToMain()
-        
+        Loading.shared.show(presented: true)
+        APIService.getStrings { model, _ in
+            Loading.shared.hide()
+            if let model = model {
+                App.contentStrings = model
+                appCoordinator?.goToMain()
+            }
+        }
     }
     
 //    static var appLanguage: String {
