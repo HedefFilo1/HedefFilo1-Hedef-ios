@@ -83,6 +83,8 @@ extension App {
 // MARK: String
 extension App {
     static func getString(key: String) -> String? {
-        return contentStrings?.filter({$0.strKey == key && $0.lang == CodeStrings.trKey}).first?.strValue
+        let language = Persistence.language ?? CodeStrings.turkish
+        let strLang = language == CodeStrings.english ? "en": "tr"
+        return contentStrings?.filter({$0.strKey == key && $0.lang == strLang}).first?.strValue
     }
 }

@@ -78,35 +78,35 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch indexPath.item {
         case 0:
             cell.imageView.image = Images.personIcon
-            cell.titleLabel.text = Strings.profile
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.profile")
             
         case 1:
             cell.imageView.image = Images.percentIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.campaign.title")
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.campaign")
             
         case 2:
             cell.imageView.image = Images.documentIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.document.title")
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.documents")
             
         case 3:
             cell.imageView.image = Images.carIcon
-            cell.titleLabel.text = Strings.vehicleInformation
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.vehicle.info")
             
         case 4:
             cell.imageView.image = Images.carIcon
-            cell.titleLabel.text = Strings.vehicleHGSPasses
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.vehicle.hgs.pass")
             
         case 5:
             cell.imageView.image = Images.listIcon
-            cell.titleLabel.text = Strings.myDemands
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.demands")
             
         case 6:
             cell.imageView.image = Images.toolIcon
-            cell.titleLabel.text = Strings.services
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.services")
             
         case 7:
             cell.imageView.image = Images.settingsIcon
-            cell.titleLabel.text = Strings.settings
+            cell.titleLabel.text = App.getString(key: "copilotapp.more.settings")
             
         default:
             break

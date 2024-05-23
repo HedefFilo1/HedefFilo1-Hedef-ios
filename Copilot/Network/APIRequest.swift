@@ -15,8 +15,9 @@ class Network {
 #endif
     
     static func getBasicHeaders() -> [String: String] {
+        let language = Persistence.language ?? CodeStrings.turkish
         return [
-            "accept-language": "tr",
+            "accept-language": language == CodeStrings.english ? "en": "tr",
             "accept": "*/*",
             "Content-Type": "application/json"
         ]
