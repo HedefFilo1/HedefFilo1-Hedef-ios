@@ -11,6 +11,7 @@ protocol BrkdwnFlw2Stp2AnyAlarmVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToBrkdwnFlw2Stp3WarningLights()
     func goToBrkdwnFlw4Stp3NoWarning()
+    func goToWarningGuide()
 }
 
 protocol BrkdwnFlw2Stp2AnyAlarmViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +24,7 @@ protocol BrkdwnFlw2Stp2AnyAlarmViewModelType: AnyObject {
     func getBack()
     func goToBrkdwnFlw2Stp3WarningLights()
     func goToBrkdwnFlw4Stp3NoWarning()
+    func goToWarningGuide()
 }
 
 class BrkdwnFlw2Stp2AnyAlarmViewModel: BrkdwnFlw2Stp2AnyAlarmViewModelType {
@@ -40,5 +42,9 @@ class BrkdwnFlw2Stp2AnyAlarmViewModel: BrkdwnFlw2Stp2AnyAlarmViewModelType {
     
     func goToBrkdwnFlw4Stp3NoWarning() {
         coordinatorDelegate?.goToBrkdwnFlw4Stp3NoWarning()
+    }
+    
+    func goToWarningGuide() {
+        coordinatorDelegate?.goToWarningGuide()
     }
 }

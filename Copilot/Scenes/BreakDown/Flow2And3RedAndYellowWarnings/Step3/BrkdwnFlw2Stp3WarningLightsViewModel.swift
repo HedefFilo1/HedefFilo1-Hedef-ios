@@ -134,6 +134,7 @@ var allWarnings = [
 protocol BrkdwnFlw2Stp3WarningLightsVMCrdntrDlgt: AnyObject {
     func getBack()
     func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning, allWarnings: [MockWarning])
+    func goToWarningGuide()
 }
 
 protocol BrkdwnFlw2Stp3WarningLightsVMDelegate: BaseViewModelDelegate {
@@ -146,6 +147,7 @@ protocol BrkdwnFlw2Stp3WarningLightsViewModelType: AnyObject {
     var warnings: [MockWarning] { get set }
     func getBack()
     func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning)
+    func goToWarningGuide()
 }
 
 class BrkdwnFlw2Stp3WarningLightsViewModel: BrkdwnFlw2Stp3WarningLightsViewModelType {
@@ -160,5 +162,9 @@ class BrkdwnFlw2Stp3WarningLightsViewModel: BrkdwnFlw2Stp3WarningLightsViewModel
     
     func goToBrkdwnFlw2Stp4SelectedWarnings(item: MockWarning) {
         coordinatorDelegate?.goToBrkdwnFlw2Stp4SelectedWarnings(item: item, allWarnings: warnings)
+    }
+    
+    func goToWarningGuide() {
+        coordinatorDelegate?.goToWarningGuide()
     }
 }

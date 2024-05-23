@@ -68,7 +68,7 @@ class BrkdwnFlw4Stp3NoWarningVController: UIViewController {
     }
     
     @IBAction func didTapGuide() {
-        
+        viewModel.goToWarningGuide()
     }
     
     @IBAction func didTapBack() {

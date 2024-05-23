@@ -3463,20 +3463,20 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Feedback Created Successfully</string>
         </dict>
         
-        <key></key>
+        <key>returnToBreakdownPage</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza Sayfasına Dön</string>
             <key>en</key>
-            <string></string>
+            <string>Return to Breakdown Page</string>
         </dict>
         
-        <key></key>
+        <key>breakdownWarningLightGuide</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Arıza İkaz Işığı Rehberi</string>
             <key>en</key>
-            <string></string>
+            <string>Breakdown Warning Light Guide</string>
         </dict>
         
         <key></key>

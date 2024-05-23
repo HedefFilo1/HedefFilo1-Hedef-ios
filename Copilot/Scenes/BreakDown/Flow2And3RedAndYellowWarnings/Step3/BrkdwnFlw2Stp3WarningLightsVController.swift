@@ -169,7 +169,7 @@ extension BrkdwnFlw2Stp3WarningLightsVController: WarningItemsCellDelegate,
     }
     
     func didTapGoToGuide() {
-        
+        viewModel.goToWarningGuide()
     }
 }
 

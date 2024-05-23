@@ -176,3 +176,22 @@ extension BreakDownCoordinator: BrkdwnFlw4Stp3NoWarningVMCrdntrDlgt {
         navigationController.pushViewController(controller, animated: true)
     }
 }
+
+extension BreakDownCoordinator: WarningGuideVMCrdntrDlgt {
+   
+    func goToWarningGuide() {
+        let controller: WarningGuideViewController = storyboard.instantiateViewController()
+        controller.viewModel = WarningGuideViewModel()
+        controller.viewModel.coordinatorDelegate = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func getBackToBreakdown() {
+        for item in navigationController.viewControllers where item.isKind(of: BreakDownViewController.self) {
+                navigationController.popToViewController(item, animated: true)
+                return
+        }
+        
+        navigationController.popToRootViewController(animated: true)
+    }
+}

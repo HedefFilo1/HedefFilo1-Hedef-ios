@@ -624,4 +624,13 @@ extension Strings {
     static var feedbackCreatedSuccessfully: String {
         return localized(string: "feedbackCreatedSuccessfully")
     }
+    
+    static var returnToBreakdownPage: String {
+        return localized(string: "returnToBreakdownPage")
+    }
+    
+    static var breakdownWarningLightGuide: String {
+        return localized(string: "breakdownWarningLightGuide")
+    }
+    
 }

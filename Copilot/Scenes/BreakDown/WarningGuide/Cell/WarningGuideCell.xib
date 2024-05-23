@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WarningGuideCell" customModule="Copilot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="158" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EC0-I1-xaA">
+                        <rect key="frame" x="0.0" y="0.0" width="158" height="230"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batteryCharge" translatesAutoresizingMaskIntoConstraints="NO" id="MQz-BI-WWf">
+                                <rect key="frame" x="6" y="6" width="146" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="e9z-Lr-vZZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4XM-iS-g0E">
+                                <rect key="frame" x="6" y="64" width="146" height="40.666666666666657"/>
+                                <string key="text">Charging
+Light</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4XM-iS-g0E" secondAttribute="trailing" constant="6" id="9tG-ue-Pyc"/>
+                            <constraint firstItem="MQz-BI-WWf" firstAttribute="leading" secondItem="EC0-I1-xaA" secondAttribute="leading" constant="6" id="KJZ-Nk-sce"/>
+                            <constraint firstItem="4XM-iS-g0E" firstAttribute="top" secondItem="MQz-BI-WWf" secondAttribute="bottom" constant="8" id="LJD-Qo-pbK"/>
+                            <constraint firstItem="4XM-iS-g0E" firstAttribute="leading" secondItem="EC0-I1-xaA" secondAttribute="leading" constant="6" id="Yq8-3d-PMd"/>
+                            <constraint firstAttribute="trailing" secondItem="MQz-BI-WWf" secondAttribute="trailing" constant="6" id="fEP-tM-FZc"/>
+                            <constraint firstItem="MQz-BI-WWf" firstAttribute="top" secondItem="EC0-I1-xaA" secondAttribute="top" constant="6" id="mkd-QO-DSo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EC0-I1-xaA" secondAttribute="bottom" id="1eu-4c-tAQ"/>
+                <constraint firstItem="EC0-I1-xaA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BZU-CI-qAO"/>
+                <constraint firstAttribute="trailing" secondItem="EC0-I1-xaA" secondAttribute="trailing" id="QCc-SD-hp4"/>
+                <constraint firstItem="EC0-I1-xaA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gwa-uv-p6s"/>
+            </constraints>
+            <size key="customSize" width="158" height="230"/>
+            <connections>
+                <outlet property="imageView" destination="MQz-BI-WWf" id="N01-zR-p7t"/>
+                <outlet property="titleLabel" destination="4XM-iS-g0E" id="3h4-38-l5t"/>
+            </connections>
+            <point key="canvasLocation" x="-45.801526717557252" y="83.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="batteryCharge" width="49.666667938232422" height="43"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

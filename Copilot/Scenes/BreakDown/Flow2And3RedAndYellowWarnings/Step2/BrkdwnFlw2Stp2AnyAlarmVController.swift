@@ -75,7 +75,7 @@ class BrkdwnFlw2Stp2AnyAlarmVController: UIViewController {
     }
     
     @IBAction func didTapGoToWarnings() {
-        
+        viewModel.goToWarningGuide()
     }
 }
 

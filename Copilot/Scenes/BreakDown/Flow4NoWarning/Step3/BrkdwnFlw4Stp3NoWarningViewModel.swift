@@ -11,6 +11,7 @@ protocol BrkdwnFlw4Stp3NoWarningVMCrdntrDlgt: AnyObject {
     func getBack()
     func goToServices(towTruck: Bool)
     func getBackToHome()
+    func goToWarningGuide()
 }
 
 protocol BrkdwnFlw4Stp3NoWarningVMDelegate: BaseViewModelDelegate {
@@ -24,6 +25,7 @@ protocol BrkdwnFlw4Stp3NoWarningViewModelType: AnyObject {
     func goToServices()
     func getBack()
     func getBackToHome()
+    func goToWarningGuide()
 }
 
 class BrkdwnFlw4Stp3NoWarningViewModel: BrkdwnFlw4Stp3NoWarningViewModelType {
@@ -41,5 +43,9 @@ class BrkdwnFlw4Stp3NoWarningViewModel: BrkdwnFlw4Stp3NoWarningViewModelType {
     
     func getBackToHome() {
         coordinatorDelegate?.getBackToHome()
+    }
+    
+    func goToWarningGuide() {
+        coordinatorDelegate?.goToWarningGuide()
     }
 }
