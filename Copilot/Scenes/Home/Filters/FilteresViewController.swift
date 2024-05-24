@@ -62,7 +62,7 @@ class FiltersViewController: SheetViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.filters
+        titleLabel.text =  App.getString(key: "copilotapp.homepage.near.button")
         applyButton.setTitle(Strings.apply, for: .normal)
         searchTextField.attributedPlaceholder = NSAttributedString(string: Strings.searchFilter, attributes: [
             .foregroundColor: UIColor.textGrey,

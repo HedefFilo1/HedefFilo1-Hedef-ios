@@ -51,7 +51,9 @@ class FeedbackCommentViewController: SheetViewController {
     
     func setTexts() {
         view.backgroundColor = .white
-        titleLabel.text = Strings.pastServiceSatisfactionSurvey
+        
+        titleLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey")
+        
         descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey_question")
         
         answerTextFeild.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.satisfaction_survey_input")

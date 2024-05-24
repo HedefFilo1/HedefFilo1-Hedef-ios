@@ -32,10 +32,6 @@ class LiveSupportViewController: UIViewController {
         APIService.addUserAction(pageName: "Help", actionName: "HELP_WEBCHAT")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()

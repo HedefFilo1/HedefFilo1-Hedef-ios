@@ -60,7 +60,8 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
             FeedbackFilterItem(title: "BAKIM"),
             FeedbackFilterItem(title: "Arıza")
         ]
-        coordinatorDelegate?.presentFitlers(title: Strings.serviceProcess,
+        let text = App.getString(key: "copilotapp.help.feedback.service.operation.dropdown_description") ?? Strings.serviceProcess
+        coordinatorDelegate?.presentFitlers(title: text,
                                             delegate: self, items: filterItems)
     }
     

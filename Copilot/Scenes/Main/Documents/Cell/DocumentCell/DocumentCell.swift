@@ -42,7 +42,7 @@ class DocumentCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        downloadLabel.text = Strings.download
+        downloadLabel.text = App.getString(key: "copilotapp.document.download.button")
     }
     
     @IBAction func didTapDownload() {

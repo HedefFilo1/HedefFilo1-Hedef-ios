@@ -52,7 +52,7 @@ class SupportGuideViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.supportGuidesMenuTitle
+        titleLabel.text = App.getString(key: "copilotapp.help.guide")
     }
     
     @IBAction func didTapBack() {

@@ -144,7 +144,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         }
         
         if indexPath.section == 1 {
-            header.titleLabel.text = Strings.help
+            header.titleLabel.text = App.getString(key: "copilotapp.help")
         }
         if kind == UICollectionView.elementKindSectionHeader {
             return header

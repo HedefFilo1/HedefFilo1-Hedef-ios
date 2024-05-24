@@ -46,8 +46,8 @@ class FeedbackRateViewController: SheetViewController {
     
     func setTexts() {
         view.backgroundColor = .white
-        titleLabel.text = Strings.pastServiceSatisfactionSurvey
-        descriptionLabel.text = Strings.pastServiceSatisfactionSurveyDescription
+        titleLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey")
+        descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey_description")
     }
     
     func setButtonActivation() {
