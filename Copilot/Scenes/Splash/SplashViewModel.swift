@@ -12,7 +12,7 @@ protocol SplashViewModelCoordinatorDelegate: AnyObject {
     func goToNextScene()
 }
 
-protocol SplashViewModelDelegate: AnyObject {
+protocol SplashViewModelDelegate: BaseViewModelDelegate {
     
 }
 
@@ -61,14 +61,19 @@ class SplashViewModel: SplashViewModelType {
     }
     
     func loadStrings() {
-        APIService.getStrings { [weak self] model, _ in
+        APIService.getStrings { [weak self] model, error in
             
             guard let self = self else { return }
             
+            if let error {
+                self.delegate?.showError(title: Strings.errorTitle, message: error.message)
+            }
+            
             if let model = model {
                 App.contentStrings = model
+                self.getSessionId()
             }
-            self.getSessionId()
+            
         }
     }
     
