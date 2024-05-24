@@ -44,6 +44,8 @@ struct CodeStrings {
     static let bullet = "\u{2022}"
     static let turkish = "Turkish"
     static let english = "English"
+    
+    static let samplePdfUrl = "https://www.oyakgrupsigorta.com/Content/files/kaza-tespit-tutanak.pdf"
 }
 
 // MAKR: Network

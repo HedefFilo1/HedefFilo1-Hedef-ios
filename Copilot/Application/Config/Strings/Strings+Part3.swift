@@ -633,4 +633,7 @@ extension Strings {
         return localized(string: "breakdownWarningLightGuide")
     }
     
+    static var minuteSample: String {
+        return localized(string: "minuteSample")
+    }
 }

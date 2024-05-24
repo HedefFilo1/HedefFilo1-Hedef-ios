@@ -3479,12 +3479,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Breakdown Warning Light Guide</string>
         </dict>
         
-        <key></key>
+        <key>minuteSample</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Tutanak Örneği</string>
             <key>en</key>
-            <string></string>
+            <string>Minute Sample</string>
         </dict>
         
         <key></key>
