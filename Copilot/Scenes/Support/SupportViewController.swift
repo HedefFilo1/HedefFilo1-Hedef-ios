@@ -55,6 +55,7 @@ class SupportViewController: UIViewController {
         setupCollectionView()
         setBasicViews()
         applyStyles()
+        configure()
     }
     
     private func setupCollectionView() {

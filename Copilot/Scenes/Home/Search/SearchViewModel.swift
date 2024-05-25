@@ -56,15 +56,15 @@ class SearchViewModel: SearchViewModelType {
     }
     
     var searchItems: [SearchModel] = [
-        SearchModel(id: 0, title: "Daha Fazla"),
-        SearchModel(id: 1, title: "Yardım"),
-        SearchModel(id: 2, title: "Servis"),
-        SearchModel(id: 3, title: "Kaza/Hasar"),
-        SearchModel(id: 4, title: "Ayarlar"),
-        SearchModel(id: 5, title: "Kılavuzlar"),
-        SearchModel(id: 6, title: "Geri bildirim"),
-        SearchModel(id: 7, title: "Sık Sorulan Sorular"),
-        SearchModel(id: 8, title: "Çözüm Merkezi")
+        SearchModel(id: 0, title: App.getString(key: "copilotapp.more") ?? ""),
+        SearchModel(id: 1, title: App.getString(key: "copilotapp.help") ?? ""),
+        SearchModel(id: 2, title: App.getString(key: "copilotapp.service") ?? ""),
+        SearchModel(id: 3, title: App.getString(key: "copilotapp.kaza") ?? ""),
+        SearchModel(id: 4, title: App.getString(key: "copilotapp.more.settings") ?? ""),
+        SearchModel(id: 5, title: App.getString(key: "copilotapp.help.guide") ?? ""),
+        SearchModel(id: 6, title: App.getString(key: "copilotapp.help.feedback") ?? ""),
+        SearchModel(id: 7, title: App.getString(key: "copilotapp.help.faq") ?? ""),
+        SearchModel(id: 8, title: App.getString(key: "copilotapp.help.button") ?? "")
     ]
     
     func getBack() {
