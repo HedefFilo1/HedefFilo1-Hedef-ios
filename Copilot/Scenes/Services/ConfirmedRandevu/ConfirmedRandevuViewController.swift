@@ -45,11 +45,6 @@ class ConfirmedRandevuViewController: UIViewController {
         circleView.layer.cornerRadius = circleView.bounds.height/2
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
@@ -72,7 +67,8 @@ class ConfirmedRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.randevuRequestSuccessMessage
+//        titleLabel.text = Strings.randevuRequestSuccessMessage
+        titleLabel.text = App.getString(key: "copilotapp.success.tire.damage")
         desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.success.description")
         editButton.setTitle(App.getString(key: "copilotapp.servicetire.appointment.confirmation.edit.appointment.button"), for: .normal)
         homeButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.winter.tire.request.received.back.homepage.button"), for: .normal)
