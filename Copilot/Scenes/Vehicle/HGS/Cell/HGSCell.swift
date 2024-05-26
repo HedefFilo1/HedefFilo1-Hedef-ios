@@ -48,6 +48,7 @@ class HGSCell: UICollectionViewCell, Reusable {
         dateLabel.apply(.greyS14R400)
         amountLabel.apply(.themeS12B700)
         detailLabel.apply(.themeS12B700)
+        detailLabel.text = App.getString(key: "copilotapp.hgstransition.detail.information.button")
     }
     
     func setEntranceLabel(text: String) {
