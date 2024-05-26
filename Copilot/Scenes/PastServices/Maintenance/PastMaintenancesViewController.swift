@@ -55,10 +55,18 @@ class PastMaintenancesViewController: UIViewController {
     func applyStyle() {
         titleLabel.apply(.blackS18B700)
         maintenanceButton.apply(.blackS18R400)
+        maintenanceButton.titleLabel?.numberOfLines = 2
+        maintenanceButton.titleLabel?.textAlignment = .center
         maintenanceButton.setTitleColor(.theme, for: .normal)
         breakdownButton.apply(.blackS18R400)
+        breakdownButton.titleLabel?.numberOfLines = 2
+        breakdownButton.titleLabel?.textAlignment = .center
         tireButton.apply(.blackS18R400)
+        tireButton.titleLabel?.numberOfLines = 2
+        tireButton.titleLabel?.textAlignment = .center
         accidentButton.apply(.blackS18R400)
+        accidentButton.titleLabel?.numberOfLines = 2
+        accidentButton.titleLabel?.textAlignment = .center
         
         for view in borderViews {
             view.backgroundColor = .disabled
