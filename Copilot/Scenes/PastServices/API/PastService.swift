@@ -62,7 +62,7 @@ struct PastService: Decodable {
             str = "Tamir"
         case .tireChange:
 //            str = App.getString(key: CodeStrings.tireChangeKey)
-            str = "Değişim"
+            str = "Lastik Değişim"
         case .none:
             return "None"
         }
