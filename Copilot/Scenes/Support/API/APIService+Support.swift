@@ -39,7 +39,8 @@ extension APIService {
     
     static func getProccessRequests(completion: @escaping ([ProccessRequest]?, APIResponseError?) -> Void) {
 //        let route = "case?isTask=true&status=SOLVED"
-        let route = "case"
+        let route = "case?isTask=true"
+//        let route = "case"
         let req = APIRequest<[ProccessRequest]>(route: route, method: .get, hasToken: true)
         req.identifier = "GetProccessRequests"
         req.log = loggingEnabled || true

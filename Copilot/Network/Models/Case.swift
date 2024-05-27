@@ -90,7 +90,12 @@ struct Case: Decodable {
         
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE HH:mm"
-            formmater.locale = Locale(identifier: "tr_TR")
+            var identifier = "tr_TR"
+            let language = Persistence.language ?? CodeStrings.turkish
+            if language == CodeStrings.english {
+                identifier = "UTC"
+            }
+            formmater.locale = Locale(identifier: identifier)
             return formmater.string(from: date)
         }
         return ""

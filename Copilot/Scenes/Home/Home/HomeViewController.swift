@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 #if DEV_DEBUG
-        return
+//        return
         #endif
         viewModel.getVehicle(shoudGetCase: true)
     }

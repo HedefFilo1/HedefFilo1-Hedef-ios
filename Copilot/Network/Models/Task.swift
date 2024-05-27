@@ -40,7 +40,7 @@ struct Task: Decodable {
     let id: String?
     let subject: String
     let additionalInfo: String
-    let description: String
+    let description: String?
     let statusText: String
     let status: TaskStatus
 }
