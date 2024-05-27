@@ -16,6 +16,8 @@ class PastServiceDetailCell: UICollectionViewCell, Reusable {
             serviceLabel.text = item?.serviceName
             addressLabel.text = item?.address
             phoneLabel.text = item?.supplierPhone
+            let kmc = item?.km ?? 0
+            kmLabel.text = "\(kmc)"
         }
     }
     

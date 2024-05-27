@@ -79,7 +79,6 @@ extension PastServiceDetailViewController: UICollectionViewDataSource, UICollect
             let cell: PastServiceDetailCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.item = viewModel.service
             return cell
-    
             
         default:
             return UICollectionViewCell()

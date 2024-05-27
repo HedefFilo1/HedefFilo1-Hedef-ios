@@ -37,6 +37,7 @@ struct PastService: Decodable {
     
     let address: String?
     let supplierPhone: String?
+    let km: Int?
     
     let lon: String?
     let lat: String?
