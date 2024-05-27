@@ -68,7 +68,8 @@ class SearchViewController: PopupViewController {
     }
     
     func setTexts() {
-        searchTextField.placeholder = Strings.searchService
+        searchTextField.placeholder = App.getString(key: "copilotapp.homepage.searchbox")
+        cancelButton.setTitle(App.getString(key: "copilotapp.homepage.searchbox.cancel.button"), for: .normal)
     }
     
     @objc func editingDidBegin() {

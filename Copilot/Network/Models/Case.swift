@@ -55,23 +55,20 @@ struct Case: Decodable {
     }
       
     var title: String {
-        var str: String?
+        
         switch recordType {
         case .maintenance: // Bakim
-            //            str = App.getString(key: CodeStrings.maintenaceKey)
-            return "Bakım"
+            return App.getString(key: CodeStrings.maintenaceKey) ?? "Bakım"
+            
         case .mechanicalFailure: // Arıza
-            str = "Arıza" // App.getString(key: CodeStrings.mechanicalFailurKey)
+             return App.getString(key: CodeStrings.mechanicalFailurKey) ?? "Arıza"
         case .damage:
-//            str = App.getString(key: CodeStrings.damageKey)
-            str = "Tamir"
+            return App.getString(key: CodeStrings.damageKey) ?? "Tamir"
         case .tireChange:
-//            str = App.getString(key: CodeStrings.tireChangeKey)
-            str = "Değişim"
+            return App.getString(key: CodeStrings.tireChangeKey) ?? "Değişim"
         case .none:
             return "None"
         }
-        return str ?? ""
     }
     
     var date: Date? {
