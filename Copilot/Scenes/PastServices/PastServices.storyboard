@@ -52,7 +52,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdC-IW-eAf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="38"/>
+                                                        <rect key="frame" x="4" y="0.0" width="78.333333333333329" height="38"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Bakım">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,8 +68,8 @@
                                                     <constraint firstItem="sdC-IW-eAf" firstAttribute="top" secondItem="6ve-1N-am9" secondAttribute="top" id="CFo-Kx-IZS"/>
                                                     <constraint firstAttribute="bottom" secondItem="xAy-57-2y4" secondAttribute="bottom" id="Hbk-xd-3Am"/>
                                                     <constraint firstAttribute="bottom" secondItem="sdC-IW-eAf" secondAttribute="bottom" constant="6" id="IUF-Cv-itf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="sdC-IW-eAf" secondAttribute="trailing" id="YCF-Gi-r3T"/>
-                                                    <constraint firstItem="sdC-IW-eAf" firstAttribute="leading" secondItem="6ve-1N-am9" secondAttribute="leading" id="tOE-QH-bdQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sdC-IW-eAf" secondAttribute="trailing" constant="4" id="YCF-Gi-r3T"/>
+                                                    <constraint firstItem="sdC-IW-eAf" firstAttribute="leading" secondItem="6ve-1N-am9" secondAttribute="leading" constant="4" id="tOE-QH-bdQ"/>
                                                     <constraint firstItem="xAy-57-2y4" firstAttribute="leading" secondItem="6ve-1N-am9" secondAttribute="leading" id="xV9-85-kRu"/>
                                                 </constraints>
                                             </view>
@@ -84,7 +84,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKu-01-jAg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="38"/>
+                                                        <rect key="frame" x="4" y="0.0" width="78.333333333333329" height="38"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Arıza">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,13 +96,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="bKu-01-jAg" secondAttribute="trailing" id="GIA-yP-E8G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bKu-01-jAg" secondAttribute="trailing" constant="4" id="GIA-yP-E8G"/>
                                                     <constraint firstAttribute="bottom" secondItem="nHN-MA-YIe" secondAttribute="bottom" id="JnP-Nj-bge"/>
                                                     <constraint firstAttribute="trailing" secondItem="nHN-MA-YIe" secondAttribute="trailing" id="KVN-71-O7Y"/>
                                                     <constraint firstItem="nHN-MA-YIe" firstAttribute="leading" secondItem="YhE-gt-xbn" secondAttribute="leading" id="SS6-Bg-kf2"/>
                                                     <constraint firstItem="bKu-01-jAg" firstAttribute="top" secondItem="YhE-gt-xbn" secondAttribute="top" id="Y5s-by-OPM"/>
                                                     <constraint firstAttribute="bottom" secondItem="bKu-01-jAg" secondAttribute="bottom" constant="6" id="e0W-Uz-lfJ"/>
-                                                    <constraint firstItem="bKu-01-jAg" firstAttribute="leading" secondItem="YhE-gt-xbn" secondAttribute="leading" id="klY-hc-tlc"/>
+                                                    <constraint firstItem="bKu-01-jAg" firstAttribute="leading" secondItem="YhE-gt-xbn" secondAttribute="leading" constant="4" id="klY-hc-tlc"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZO-tJ-RrW">

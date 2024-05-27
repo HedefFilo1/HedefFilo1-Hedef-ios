@@ -68,7 +68,7 @@ class SearchViewController: PopupViewController {
     }
     
     func setTexts() {
-        searchTextField.placeholder = App.getString(key: "copilotapp.homepage.searchbox")
+        searchTextField.placeholder = App.getString(key: "copilotapp.homepage.searchbox.description")
         cancelButton.setTitle(App.getString(key: "copilotapp.homepage.searchbox.cancel.button"), for: .normal)
     }
     
