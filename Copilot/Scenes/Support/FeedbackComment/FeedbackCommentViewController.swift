@@ -89,7 +89,8 @@ extension FeedbackCommentViewController: FeedbackCommentViewModelDelegate,
     }
     
     func didFinishSendFeedBack() {
-        showSuccess(title: "", message: Strings.feedbackCreatedSuccessfully, delegate: self)
+        let text = App.getString(key: "copilot.help.feedback.success.message") ?? ""
+        showSuccess(title: "", message: text, delegate: self)
         
     }
 }

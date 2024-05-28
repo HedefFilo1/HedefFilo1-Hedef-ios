@@ -32,10 +32,6 @@ class ContractAgreementViewController: UIViewController {
         textView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         applyStyle()
         setTexts()
