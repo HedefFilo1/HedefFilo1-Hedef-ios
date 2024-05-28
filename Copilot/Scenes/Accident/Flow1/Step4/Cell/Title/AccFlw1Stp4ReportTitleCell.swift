@@ -22,7 +22,7 @@ class AccFlw1Stp4ReportTitleCell: UICollectionViewCell, Reusable {
         super.awakeFromNib()
         label.apply(.blackS14B700)
         buttonLabel.apply(.custom(.theme, .medium, 12))
-        buttonLabel.text = Strings.minuteSample
+        buttonLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.sample.minute")
     }
 
     @IBAction func didTapButton() {

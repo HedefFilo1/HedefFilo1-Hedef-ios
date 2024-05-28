@@ -62,7 +62,7 @@ class VehicleServicesSearchCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        let text = App.getString(key: "copilotapp.service.search.description") ?? Strings.searchFilter
+        let text = App.getString(key: "copilotapp.service.search.description") ?? ""
         searchTextField.title = text
         searchTextField.setPlaceholder(title: text)
         filterLabel.text = App.getString(key: "copilotapp.service.filter.button")

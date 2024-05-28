@@ -50,7 +50,7 @@ class Flow1Step4ResultViewController: UIViewController {
     
     func setTexts() {
         let winter = App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.winter.tire.request.received.title") ?? ""
-        let summer = App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.summer.tire.request.received.title") ?? Strings.summerTireRequestReceived
+        let summer = App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.summer.tire.request.received.title") ?? ""
         titleLabel.text = viewModel.tireType == .winter ? winter: summer
         descriptionLabel.text = App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.winter.tire.request.received.description")
         requestsButton.setTitle(Strings.goToPastServices, for: .normal)

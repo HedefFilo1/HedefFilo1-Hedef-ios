@@ -117,7 +117,8 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
                                          message: error.message)
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_PLATE_PROCESS")
-                coordinatorDelegate?.goToSuccess(title: Strings.lostLicensePlateTransactions)
+                let text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.title") ?? ""
+                coordinatorDelegate?.goToSuccess(title: text)
             }
         }
     }

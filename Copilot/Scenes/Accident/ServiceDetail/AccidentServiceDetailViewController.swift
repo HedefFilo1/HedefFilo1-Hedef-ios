@@ -135,28 +135,6 @@ class AccidentServiceDetailVController: UIViewController {
         viewModel.createRandevu(with: date, hour: hour, minute: minute)
     }
     
-//    func setAppointment() {
-//        guard let item = viewModel.appointment else { return }
-//        titleLabel.text = item.supplierName ?? Strings.service
-//        nameLabel.text = item.supplierName
-//        addressLabel.text = item.address
-//        phoneLabel.text = item.supplierPhone
-//        let type = item.appointmentStatus
-//        if type == .appointmentApproved {
-//            statusView.backgroundColor = .textSuccess
-//            statusLabel.text = Strings.approved
-//            desciptionLabel.text = Strings.tireRepairappointmentCreated
-//        } else {
-//            statusView.backgroundColor = .appYellow
-//            statusLabel.text = Strings.waitingToApprove
-//            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
-//        }
-//
-//        dateChooseView.setDate(strDate: item.appointmentDate ?? "")
-//        timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
-//        setButtonActivation()
-//    }
-    
     func setService() {
         guard let item = viewModel.service else { return }
         titleLabel.text = item.name

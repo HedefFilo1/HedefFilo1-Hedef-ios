@@ -39,7 +39,7 @@ class AccFlw4SelectPhotoCell: UICollectionViewCell, Reusable {
     func setTexts() {
         let title = App.getString(key: "copilotapp.accidentdamage.accident.process.zabit.upload.photo.description") ?? ""
         titleLabel.text = "\(CodeStrings.bullet) \(title)"
-        uploadLabel.text = Strings.uploadMorePhotos
+        uploadLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button") ?? ""
         continueButton.setTitle(Strings.devamEt, for: .normal)
     }
     

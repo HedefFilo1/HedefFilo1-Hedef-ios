@@ -35,7 +35,7 @@ class AccFlw5Stp3ButtonsCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        uploadLabel.text = Strings.uploadMorePhotos
+        uploadLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button")
         continueButton.setTitle(Strings.devamEt, for: .normal)
     }
     

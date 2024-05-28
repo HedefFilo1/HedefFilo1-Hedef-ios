@@ -45,7 +45,8 @@ class AccFlw5Stp3ContentCell: UICollectionViewCell, Reusable {
     }
     
     func setDescriptionLabel() {
-        let part1 = AttributedText(text: "\(Strings.callPoliceDescription) ", type: .themeS12R400)
+        let text = App.getString(key: "copilotapp.accidentdamage.accident.process.declaration.notification.warning.description") ?? ""
+        let part1 = AttributedText(text: "\(text) ", type: .themeS12R400)
         let part2 = AttributedText(text: Strings.KeepAReportUppercased, type: .themeS14B700)
         descriptionLabel.attributedText = AttributedText.createString(texts: [part1, part2])
     }

@@ -64,7 +64,7 @@ class ServiceRandevuViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.title")
-        desciptionLabel.text = Strings.pleaseConfirmRandevu
+        desciptionLabel.text = App.getString(key: "copilotapp.servicetire.appointment.confirmation.description")
         confirmationLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.detail")
         
         editButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.edit.button"), for: .normal)

@@ -124,7 +124,7 @@ class LoginViewController: UIViewController {
         rememberLabel.text = App.getString(key: "copilotapp.sign.in.remember.button")
         forgotPasswordButton.setAttributedTitle(App.getString(key: "copilotapp.sign.in.forgot.password.button")?.underLined, for: .normal)
         loginButton.setTitle(App.getString(key: "copilotapp.sign.up.bottom.button"), for: .normal)
-        notMemberLabel.text = Strings.ifNotMember
+        notMemberLabel.text = App.getString(key: "copilotapp.onboarding.four.bottom.description")
         becomeMemberButton.setAttributedTitle(Strings.becomeMember.underLined, for: .normal)
     }
     

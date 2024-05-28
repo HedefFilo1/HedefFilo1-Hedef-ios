@@ -53,7 +53,8 @@ class ProfileViewModel: ProfileViewModelType {
     }
     
     func submit(name: String, phone: String, email: String, id: String, licence: String) {
-        delegate?.showSuccess(title: "", message: Strings.profileUpdatedSuccessfully)
+        let text = App.getString(key: "copilotapp.profile.success.update") ?? ""
+        delegate?.showSuccess(title: "", message: text)
     }
     
     func goToResetPassword() {
