@@ -872,10 +872,10 @@
             </objects>
             <point key="canvasLocation" x="4618" y="3724"/>
         </scene>
-        <!--Services View Controller-->
+        <!--LiveSupportViewController-->
         <scene sceneID="k4w-rs-FY2">
             <objects>
-                <viewController storyboardIdentifier="LiveSupportViewController" id="6Pa-DG-qdw" userLabel="Services View Controller" customClass="LiveSupportViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LiveSupportViewController" id="6Pa-DG-qdw" userLabel="LiveSupportViewController" customClass="LiveSupportViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fiZ-hk-LQJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

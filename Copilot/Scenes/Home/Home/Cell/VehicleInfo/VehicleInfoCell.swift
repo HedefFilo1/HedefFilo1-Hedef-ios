@@ -22,11 +22,13 @@ class VehicleInfoCell: UICollectionViewCell, Reusable {
             let model = vehicle?.model ?? ""
             nameLabel.text = "\(brand) \(model)"
             let rent = vehicle?.leaseDuration ?? "0"
-            rentValueLabel.text = rent + " " + Strings.months
+            let monthText = App.getString(key: "copilotapp.home.month") ?? ""
+            rentValueLabel.text = rent + " " + monthText
+            let kmText = App.getString(key: "copilotapp.home.km") ?? ""
             let distance = vehicle?.leaseDistanceLimit.formatNumberToThousand() ?? "0"
-            limitValueLabel.text = distance + " " + Strings.ckm
+            limitValueLabel.text = distance + " " + kmText
             let last = vehicle?.lastKnownDistance.formatNumberToThousand() ?? "0"
-            usedValueLabel.text = last + " " + Strings.ckm
+            usedValueLabel.text = last + " " + kmText
             
             if let name = Persistence.avatarName {
                 imageView.image = UIImage(named: name)

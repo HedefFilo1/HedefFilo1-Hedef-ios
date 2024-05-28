@@ -43,7 +43,7 @@ class LiveSupportViewController: UIViewController {
     }
     
     func setTexts() {
-//        titleLabel.text =
+        titleLabel.text = App.getString(key: "copilot.help.live.chat")
     }
     
     @IBAction func didTapBack() {

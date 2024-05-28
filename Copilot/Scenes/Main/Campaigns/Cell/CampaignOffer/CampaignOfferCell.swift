@@ -47,7 +47,8 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
     }
     
     func setDateLabel(date: String) {
-        let text = Strings.campaignValidityDate + ": " + date
+        let dateText = App.getString(key: "copilotapp.campaign.validity.date") ?? ""
+        let text = dateText + ": " + date
         dateLabel.attributedText = AttributedText.createMultiplePartString(
             mainText: AttributedText(text: text, type: .blackS12R400),
             texts: [AttributedText(text: date, type: .blackS12B700)]

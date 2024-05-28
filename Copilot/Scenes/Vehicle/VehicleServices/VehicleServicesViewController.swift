@@ -178,12 +178,12 @@ extension VehicleServicesViewController: CLLocationManagerDelegate, VehicleServi
     
     func showActionSheet(lat: Double, lon: Double) {
         let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let firstAction: UIAlertAction = UIAlertAction(title: Strings.map, style: .default) { [weak self] _ in
+        let mapStr =  App.getString(key: "copilotapp.home.map") ?? ""
+        let firstAction: UIAlertAction = UIAlertAction(title: mapStr, style: .default) { [weak self] _ in
             self?.viewModel.openAppleMap(latitude: lat, longitude: lon)
         }
-        
-        let secondAction: UIAlertAction = UIAlertAction(title: Strings.googleMap, style: .default) { [weak self] _ in
+        let googleStr = App.getString(key: "copilotapp.home.google.map") ?? ""
+        let secondAction: UIAlertAction = UIAlertAction(title: googleStr, style: .default) { [weak self] _ in
             self?.viewModel.openGoogleMap(latitude: lat, longitude: lon)
         }
         
