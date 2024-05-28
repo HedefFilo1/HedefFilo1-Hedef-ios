@@ -36,10 +36,6 @@ class SettingsViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         setBasicViews()
         applyStyle()
@@ -67,10 +63,10 @@ class SettingsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.settings
+        titleLabel.text = App.getString(key: "settings.settings")
         notifiationsLabel.text = App.getString(key: "copilotapp.notification.title")
-        darkModeLabel.text = Strings.darkMode
-        agreementLabel.text = Strings.seePrivacyAgreement
+        darkModeLabel.text = App.getString(key: "setting.nightmode")
+        agreementLabel.text = App.getString(key: "settings.see.privacy.policy")
     }
     
     @IBAction func didTapNotification() {

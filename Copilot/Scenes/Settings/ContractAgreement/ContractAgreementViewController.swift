@@ -44,8 +44,7 @@ class ContractAgreementViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.confidentialityAgreement
-        
+        titleLabel.text = App.getString(key: "settings.privacy.policy")
     }
     
     @IBAction func didTapBack() {

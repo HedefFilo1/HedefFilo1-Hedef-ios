@@ -55,10 +55,10 @@ class LanguagesViewController: SheetViewController {
     }
     
     func setTexts() {
-        titleLabel.text = Strings.languageWord
+        titleLabel.text = App.getString(key: "settings.language")
         turkeyLabel.text = Strings.turkish
         englishLabel.text = Strings.english
-        applyButton.setTitle(Strings.apply, for: .normal)
+        applyButton.setTitle(App.getString(key: "settings.language.apply"), for: .normal)
     }
     
     @IBAction func didTapDismiss() {

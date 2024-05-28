@@ -70,14 +70,14 @@ class NotificationSettingsViewController: UIViewController {
     }
     
     func setTexts() {
-        titleLabel.text = App.getString(key: "copilotapp.notification.title")
+        titleLabel.text = App.getString(key: "setting.notifications")
         descriptionLabel.text = Strings.notificationSettingsDescription
-        weatherLabel.text = Strings.weatherSettings
-        campaignsLabel.text = Strings.campaigns
-        randevueDateLabel.text = Strings.appointmentDate
-        contractLabel.text = Strings.contractDuration
-        cancelButton.setTitle(Strings.cancel, for: .normal)
-        saveButton.setTitle(Strings.save, for: .normal)
+        weatherLabel.text = App.getString(key: "settings.notification.weather")
+        campaignsLabel.text = App.getString(key: "settings.notification.campaigns")
+        randevueDateLabel.text = App.getString(key: "settings.notification.appointment.date")
+        contractLabel.text = App.getString(key: "settings.notification.contract.period")
+        cancelButton.setTitle(App.getString(key: "settings.notification.cancel"), for: .normal)
+        saveButton.setTitle(App.getString(key: "settings.notification.save"), for: .normal)
     }
     
     @IBAction func didTapWeatherSwitch() {
