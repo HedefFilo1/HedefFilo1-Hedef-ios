@@ -37,16 +37,16 @@ struct ServiceOperation: Decodable {
         var str: String?
         switch recordType {
         case .maintenance: // Bakim
-            //            str = App.getString(key: CodeStrings.maintenaceKey)
-            return "Bakım"
+            str = App.getString(key: CodeStrings.maintenaceKey)
+//            return "Bakım"
         case .mechanicalFailure: // Ariza
-            str = "Arıza" // App.getString(key: CodeStrings.mechanicalFailurKey)
+            str = App.getString(key: CodeStrings.mechanicalFailurKey)
         case .damage:
-//            str = App.getString(key: CodeStrings.damageKey)
-            str = "Tamir"
+            str = App.getString(key: CodeStrings.damageKey)
+//            str = "Tamir"
         case .tireChange:
-//            str = App.getString(key: CodeStrings.tireChangeKey)
-            str = "Değişim"
+            str = App.getString(key: CodeStrings.tireChangeKey)
+//            str = "Değişim"
         case .none:
             return "None"
         }
