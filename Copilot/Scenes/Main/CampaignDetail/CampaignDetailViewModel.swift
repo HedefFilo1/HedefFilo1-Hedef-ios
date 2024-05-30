@@ -13,6 +13,7 @@ protocol CampaignDetailVMCoordinatorDelegate: AnyObject {
 
 protocol CampaignDetailViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
+    func showSuccessMessage()
     func setCampaign()
 }
 
@@ -33,7 +34,7 @@ class CampaignDetailViewModel: CampaignDetailViewModelType {
     func selectCampaign() {
         guard let id = campaign?.id else { return }
         Loading.shared.show()
-        APIService.getCampaignDetail(id: id) { [weak self] _, error in
+        APIService.selectCampaign(id: id) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
             if let error = error {
@@ -41,7 +42,8 @@ class CampaignDetailViewModel: CampaignDetailViewModelType {
                                          message: error.message)
                 return
             }
-            self.getBack()
+            self.delegate?.showSuccessMessage()
+            
         }
     }
     

@@ -251,7 +251,7 @@ class APIService {
         req.start()
     }
     
-    static func getCampaignDetail(id: Int, completion: @escaping (Success?, APIResponseError?) -> Void) {
+    static func selectCampaign(id: Int, completion: @escaping (Success?, APIResponseError?) -> Void) {
         let route = "campaign/\(id)/select"
         let req = APIRequest<Success>(route: route, method: .post, hasToken: true)
         req.identifier = "Get Campaign Detail"

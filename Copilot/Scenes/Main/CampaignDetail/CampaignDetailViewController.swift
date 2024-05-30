@@ -65,4 +65,16 @@ extension CampaignDetailViewController: CampaignDetailViewModelDelegate {
         nameLabel.text = viewModel.campaign?.title
         textLabel.text = viewModel.campaign?.content
     }
+    
+    func showSuccessMessage() {
+        let message = App.getString(key: "copilotapp.campaign.success") ?? ""
+        let title = App.getString(key: "copilotapp.campaign.success.okey.button") ?? ""
+        showSuccess(successTitle: "", message: message, buttonTitle: title, delegate: self)
+    }
+}
+
+extension CampaignDetailViewController: MessagePopupViewControllerDelegate {
+    func didDismiss(_: SuccessPopupViewController?) {
+        viewModel.getBack()
+    }
 }
