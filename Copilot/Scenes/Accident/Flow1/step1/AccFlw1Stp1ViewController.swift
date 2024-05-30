@@ -58,6 +58,7 @@ class AccFlw1Stp1VController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.accidentdamage.title")
+        questonLabel.text = App.getString(key: "copilotapp.accidentdamage.emergency.help.question") 
         descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.emergency.help.question")
         callLabel.text = App.getString(key: "copilotapp.accidentdamage.call.emergency.button")
         continueButton.setTitle(App.getString(key: "copilotapp.accidentdamage.fine.go.accident.page.button"), for: .normal)
