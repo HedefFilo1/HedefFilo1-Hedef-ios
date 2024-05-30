@@ -74,7 +74,8 @@ class SupportViewController: UIViewController {
 
     private func configure() {
         titleLabel.text = App.getString(key: "copilotapp.help")
-        descriptionLabel.text = App.getString(key: "copilot.help.support.description")
+//        descriptionLabel.text = App.getString(key: "copilot.help.support.description")
+        descriptionLabel.text = ""
         callHelpCenterButton.setTitle(App.getString(key: "copilotapp.help.button"), for: .normal)
     }
 
