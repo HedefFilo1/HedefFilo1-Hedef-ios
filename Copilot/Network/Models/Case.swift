@@ -111,6 +111,12 @@ struct Case: Decodable {
             formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
 //            formmater.timeZone = TimeZone(identifier: "UTC")
 //            formmater.locale = Locale(identifier: "tr_TR")
+            var identifier = "tr_TR"
+            let language = Persistence.language ?? CodeStrings.turkish
+            if language == CodeStrings.english {
+                identifier = "UTC"
+            }
+            formmater.locale = Locale(identifier: identifier)
             
             return formmater.string(from: date)
         }

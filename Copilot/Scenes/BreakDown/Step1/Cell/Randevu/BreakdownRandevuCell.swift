@@ -70,6 +70,7 @@ class BreakdownRandevuCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         randevuTitleLabel.text = Strings.breakdownAppointmentRequest
+        editLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.edit.button")
     }
     
     @IBAction func didTapEdit() {

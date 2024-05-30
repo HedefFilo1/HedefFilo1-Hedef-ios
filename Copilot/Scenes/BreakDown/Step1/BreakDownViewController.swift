@@ -62,6 +62,7 @@ class BreakDownViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.breakdown.operation.description")
     }
     
     @IBAction func didTapBack() {
