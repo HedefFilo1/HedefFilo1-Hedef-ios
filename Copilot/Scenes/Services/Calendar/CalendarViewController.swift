@@ -52,7 +52,10 @@ class CalendarViewController: SheetViewController {
         
         calendar.scrollDirection = .horizontal
         calendar.placeholderType = .none
-        calendar.locale = Locale(identifier: "tr")
+        let language = Persistence.language ?? CodeStrings.turkish
+        if language == CodeStrings.turkish {
+            calendar.locale = Locale(identifier: "tr")
+        }
         
         calendar.appearance.headerTitleFont = FontStyle.bold.asUIFont(size: 16)
         calendar.appearance.headerTitleColor = .theme
