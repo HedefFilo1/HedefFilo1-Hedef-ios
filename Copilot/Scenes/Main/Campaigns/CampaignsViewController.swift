@@ -84,13 +84,16 @@ class CampaignsViewController: UIViewController {
         APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_TAB_CLICK")
         if tag == 0 {
             APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_BENEFIT_CAMPAIGN")
+            viewModel.getCampaign()
         }
         if tag == 1 {
             APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_NEWS_TAB_CLICK")
+            viewModel.getCampaign(type: "NEWS")
         }
         
         if tag == 2 {
             APIService.addUserAction(pageName: "Campaigns", actionName: "CAMPAIGN_SPONSORSHIP_TAB_CLICK")
+            viewModel.getCampaign(type: "SPONSORSHIP")
         }
         
         borderViews[currentTab].backgroundColor = .disabled

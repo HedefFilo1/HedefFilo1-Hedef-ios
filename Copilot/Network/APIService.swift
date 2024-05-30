@@ -251,6 +251,15 @@ class APIService {
         req.start()
     }
     
+    static func getCampaigns(type: String, completion: @escaping ([Campaign]?, APIResponseError?) -> Void) {
+        let route = "campaign/active?type=\(type)"
+        let req = APIRequest<[Campaign]>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Campaign type"
+        req.log = loggingEnabled || true
+        req.completion = completion
+        req.start()
+    }
+    
     static func selectCampaign(id: Int, completion: @escaping (Success?, APIResponseError?) -> Void) {
         let route = "campaign/\(id)/select"
         let req = APIRequest<Success>(route: route, method: .post, hasToken: true)

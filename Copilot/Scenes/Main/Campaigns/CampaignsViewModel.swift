@@ -22,6 +22,7 @@ protocol CampaignsViewModelType: AnyObject {
     var allCampgins: [Campaign]? { get set }
     func getCampaign()
     func goToCampaignDetail(campaign: Campaign)
+    func getCampaign(type: String)
 }
 
 class CampaignsViewModel: CampaignsViewModelType {
@@ -45,6 +46,22 @@ class CampaignsViewModel: CampaignsViewModelType {
     func getCampaign() {
         Loading.shared.show()
         APIService.getCampaigns { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let model = model {
+                self.allCampgins = model
+                self.delegate?.reloadData()
+            } else if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            }
+        }
+    }
+    
+    func getCampaign(type: String) {
+        Loading.shared.show()
+        APIService.getCampaigns(type: type) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
