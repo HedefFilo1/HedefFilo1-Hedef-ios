@@ -41,6 +41,7 @@ struct PastService: Decodable {
     
     let lon: String?
     let lat: String?
+    let accidentTypeId: String?
     
     var longitude: Double? {
         return Double(lon ?? "")
@@ -62,12 +63,33 @@ struct PastService: Decodable {
             str = App.getString(key: CodeStrings.damageKey)
 //            str = "Tamir"
         case .tireChange:
-            str = App.getString(key: CodeStrings.tireChangeKey)
+//            str = App.getString(key: CodeStrings.tireChangeKey)
 //            str = "Lastik Değişim"
+            return tireTypeTitle
         case .none:
             return "None"
         }
         return str ?? ""
+    }
+    
+    var tireTypeTitle: String {
+        guard let accidentTypeId else {
+            return App.getString(key: CodeStrings.tireChangeKey) ?? ""
+        }
+        let language = Persistence.language ?? CodeStrings.turkish
+        let isTurkish = language == CodeStrings.turkish
+        switch accidentTypeId {
+        case "55":
+            return isTurkish ? "Hasar": "Damage"
+            
+        case "82":
+            return isTurkish ? "Yaz Lastiği Değişim": "Summer Tire Change"
+            
+        case "40":
+            return isTurkish ? "Kış Lastiği Değişimi": "Winter Tire Change"
+        default:
+            return ""
+        }
     }
     
     var date: Date? {
