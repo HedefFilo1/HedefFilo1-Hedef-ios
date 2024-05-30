@@ -1704,10 +1704,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtb-HX-5Ad">
-                                        <rect key="frame" x="16" y="266" width="361" height="242.66666666666663"/>
+                                        <rect key="frame" x="16" y="266" width="361" height="234.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-BO-lyk">
-                                                <rect key="frame" x="16" y="16" width="329" height="210.66666666666666"/>
+                                                <rect key="frame" x="16" y="16" width="329" height="202.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cX3-yR-Iyx">
                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
@@ -1722,19 +1722,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0212) 012 34 56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="f9i-O4-g7l">
-                                                        <rect key="frame" x="0.0" y="85.666666666666686" width="329" height="20.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="77.666666666666686" width="329" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Mart 2023 Cumartesi 10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E4f-0j-FnC">
-                                                        <rect key="frame" x="0.0" y="122" width="329" height="21"/>
+                                                        <rect key="frame" x="0.0" y="114" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen kazaya ilişkin tutanak tuttuğunuzdan emin olunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZf-jM-SV3">
-                                                        <rect key="frame" x="0.0" y="154" width="329" height="40.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="146" width="329" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1748,7 +1748,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="E4f-0j-FnC" secondAttribute="trailing" id="8o8-4A-4B9"/>
                                                     <constraint firstItem="tLC-IP-b88" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="G6S-Lb-bhA"/>
                                                     <constraint firstItem="E4f-0j-FnC" firstAttribute="top" secondItem="f9i-O4-g7l" secondAttribute="bottom" constant="16" id="JF4-Ix-YI4"/>
-                                                    <constraint firstItem="f9i-O4-g7l" firstAttribute="top" secondItem="tLC-IP-b88" secondAttribute="bottom" constant="16" id="K4P-g2-E6G"/>
+                                                    <constraint firstItem="f9i-O4-g7l" firstAttribute="top" secondItem="tLC-IP-b88" secondAttribute="bottom" constant="8" id="K4P-g2-E6G"/>
                                                     <constraint firstAttribute="trailing" secondItem="RZf-jM-SV3" secondAttribute="trailing" id="P8R-Bw-Bzc"/>
                                                     <constraint firstItem="E4f-0j-FnC" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="W5j-gC-pWg"/>
                                                     <constraint firstAttribute="trailing" secondItem="f9i-O4-g7l" secondAttribute="trailing" id="aXp-74-BBr"/>
@@ -1767,7 +1767,7 @@
                                             <constraint firstItem="qt9-BO-lyk" firstAttribute="top" secondItem="wtb-HX-5Ad" secondAttribute="top" constant="16" id="BDQ-8d-mzh"/>
                                             <constraint firstAttribute="bottom" secondItem="qt9-BO-lyk" secondAttribute="bottom" constant="16" id="F9V-QC-HAn"/>
                                             <constraint firstItem="qt9-BO-lyk" firstAttribute="leading" secondItem="wtb-HX-5Ad" secondAttribute="leading" constant="16" id="Yl3-9R-J3X"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="140" constant="165" id="cKp-gQ-PX9"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="140" constant="175" id="cKp-gQ-PX9"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdh-fL-2nX" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
