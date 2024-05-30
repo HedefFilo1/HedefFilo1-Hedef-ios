@@ -107,6 +107,13 @@ struct PastService: Decodable {
         formmater.locale = Locale(identifier: "tr_TR")
         if let appointement = appointmentDate, let date = formmater.date(from: appointement) {
             formmater.dateFormat = "d MMMM EEEE"
+           
+            var identifier = "tr_TR"
+            let language = Persistence.language ?? CodeStrings.turkish
+            if language == CodeStrings.english {
+                identifier = "UTC"
+            }
+            formmater.locale = Locale(identifier: identifier)
             return formmater.string(from: date)
         }
         return ""
