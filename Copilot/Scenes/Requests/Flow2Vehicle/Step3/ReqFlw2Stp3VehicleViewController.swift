@@ -139,7 +139,7 @@ class ReqFlw2Stp3VehicleViewController: UIViewController {
         emailLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.email")
         emailTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.email.enter")
         
-        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.")
+        phoneLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.phone.number")
         phoneTextField.placeholder = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.phone")
         
         plateLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.plate")

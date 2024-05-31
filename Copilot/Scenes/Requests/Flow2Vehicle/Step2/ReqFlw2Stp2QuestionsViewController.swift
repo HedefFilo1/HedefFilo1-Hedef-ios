@@ -34,10 +34,6 @@ class ReqFlw2Stp2QuestionsViewController: UIViewController {
 #endif
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
