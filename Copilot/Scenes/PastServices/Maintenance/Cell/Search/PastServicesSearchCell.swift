@@ -48,9 +48,9 @@ class PastServicesSearchCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        searchTextField.placeholder = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.service.search.button")
-        filterLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.button")
-        sortLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.button")
+        searchTextField.placeholder = App.getString(key: "copilotapp.pastservice.past.maintenance.operation.service.search.button")
+        filterLabel.text = App.getString(key: "copilotapp.pastservice.operation.filter.button")
+        sortLabel.text = App.getString(key: "copilotapp.pastservice.operation.sort.button")
     }
     
     @objc func editingChanged() {

@@ -25,7 +25,7 @@ class PastMaintenancesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var headTitle = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.past.maintenance.operation.title") ?? Strings.pastMaintenanceOperations
-    private var message =  App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.description") ?? Strings.pastMaintenanceDescription
+    private var message = App.getString(key: "copilotapp.pastservice.description") ?? ""
     private var foundMessage = Strings.pastMaintenanceFound
     var currentTab = 0
     
@@ -97,7 +97,7 @@ class PastMaintenancesViewController: UIViewController {
     
     func setTitleTexts(tab: Int) {
         let title =  Strings.pastMaintenanceOperations
-        let message = Strings.pastMaintenanceDescription
+        let message = App.getString(key: "copilotapp.pastservice.description") ?? ""
         let foundMessage = Strings.pastMaintenanceFound
         var replaceTitle = Strings.care
         switch tab {
@@ -117,7 +117,7 @@ class PastMaintenancesViewController: UIViewController {
             break
         }
         headTitle = title.replacingOccurrences(of: Strings.care, with: replaceTitle)
-        self.message = message.replacingOccurrences(of: Strings.care.lowercaseFirstLetter(), with: replaceTitle.lowercaseFirstLetter())
+        self.message = message.replacingOccurrences(of: "{category}", with: replaceTitle.lowercaseFirstLetter())
         self.foundMessage = foundMessage.replacingOccurrences(of: Strings.care, with: replaceTitle)
         
     }
