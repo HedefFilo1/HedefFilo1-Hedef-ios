@@ -48,7 +48,6 @@ class VehicleServicesItemCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
-        
         dateLabel.text = (App.getString(key: "copilotapp.servicemaintenance.service.work.hour") ?? "") + Strings.serviceWorkingHours
     }
     
