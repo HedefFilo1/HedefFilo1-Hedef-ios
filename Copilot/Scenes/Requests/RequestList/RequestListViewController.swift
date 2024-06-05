@@ -54,7 +54,9 @@ class RequestListViewController: UIViewController {
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24R400)
         serviceRequestsLabel.apply(.blackS18R400)
+        serviceRequestsLabel.numberOfLines = 2
         proccessRequestsLabel.apply(.blackS18R400)
+        proccessRequestsLabel.numberOfLines = 2
         for view in borderViews {
             view.backgroundColor = .disabled
         }
@@ -64,7 +66,7 @@ class RequestListViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.demandlist.title")
-        serviceRequestsLabel.text = App.getString(key: "copilotapp.demandlist.product.service.request.tab")
+        serviceRequestsLabel.text = App.getString(key: "copilotapp.demandlist.product.process.request.product.tab")
         proccessRequestsLabel.text = App.getString(key: "copilotapp.demandlist.product.process.request.tab")
     }
     

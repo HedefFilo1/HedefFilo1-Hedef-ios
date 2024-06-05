@@ -3265,26 +3265,26 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hep-mk-FsN">
-                                        <rect key="frame" x="24" y="68.666666666666657" width="345" height="28"/>
+                                        <rect key="frame" x="24" y="68.666666666666657" width="345" height="48"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boR-Kp-453">
-                                                <rect key="frame" x="0.0" y="0.0" width="173" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Ürün / Hizmet Talepleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-mB-ZJ7">
-                                                        <rect key="frame" x="0.0" y="3.6666666666666856" width="173" height="21"/>
+                                                        <rect key="frame" x="0.0" y="13.666666666666686" width="172.66666666666666" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O95-WI-bsM">
-                                                        <rect key="frame" x="0.0" y="26" width="173" height="2"/>
+                                                        <rect key="frame" x="0.0" y="46.000000000000028" width="172.66666666666666" height="2"/>
                                                         <color key="backgroundColor" name="disabled"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="egA-BF-nka"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-2M-W4N">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="48"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
                                                             <action selector="didTab:" destination="NLC-jV-kNh" eventType="touchUpInside" id="5iO-lX-V0M"/>
@@ -3303,29 +3303,28 @@
                                                     <constraint firstItem="qaq-mB-ZJ7" firstAttribute="centerY" secondItem="boR-Kp-453" secondAttribute="centerY" id="afO-h8-OLm"/>
                                                     <constraint firstAttribute="trailing" secondItem="qaq-mB-ZJ7" secondAttribute="trailing" id="cdU-1I-220"/>
                                                     <constraint firstItem="qaq-mB-ZJ7" firstAttribute="leading" secondItem="boR-Kp-453" secondAttribute="leading" id="hQu-8J-XJo"/>
-                                                    <constraint firstAttribute="bottom" secondItem="O95-WI-bsM" secondAttribute="bottom" id="kpV-w1-pEK"/>
                                                     <constraint firstItem="VeD-2M-W4N" firstAttribute="leading" secondItem="boR-Kp-453" secondAttribute="leading" id="mnD-Zd-nre"/>
                                                     <constraint firstAttribute="bottom" secondItem="VeD-2M-W4N" secondAttribute="bottom" id="uwc-0n-Hbs"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQp-dr-cYV">
-                                                <rect key="frame" x="173" y="0.0" width="172" height="28"/>
+                                                <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Süreç Talepleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Oeo-gh-1RG">
-                                                        <rect key="frame" x="0.0" y="3.6666666666666856" width="172" height="21"/>
+                                                        <rect key="frame" x="0.0" y="13.666666666666686" width="172.33333333333334" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFm-qk-9Lg">
-                                                        <rect key="frame" x="0.0" y="26" width="172" height="2"/>
+                                                        <rect key="frame" x="0.0" y="46.000000000000028" width="172.33333333333334" height="2"/>
                                                         <color key="backgroundColor" name="disabled"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="te6-XO-s9B"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-tz-eW5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="172" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="48"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
                                                             <action selector="didTab:" destination="NLC-jV-kNh" eventType="touchUpInside" id="a5E-zg-F1L"/>
@@ -3356,14 +3355,15 @@
                                             <constraint firstItem="boR-Kp-453" firstAttribute="leading" secondItem="hep-mk-FsN" secondAttribute="leading" id="Buo-Sz-G6V"/>
                                             <constraint firstItem="boR-Kp-453" firstAttribute="top" secondItem="hep-mk-FsN" secondAttribute="top" id="FSo-wn-nnw"/>
                                             <constraint firstAttribute="trailing" secondItem="iQp-dr-cYV" secondAttribute="trailing" id="FUq-KN-aF2"/>
-                                            <constraint firstItem="iQp-dr-cYV" firstAttribute="leading" secondItem="boR-Kp-453" secondAttribute="trailing" id="Lsg-0o-EbY"/>
                                             <constraint firstAttribute="bottom" secondItem="boR-Kp-453" secondAttribute="bottom" id="Xxe-vv-fiV"/>
                                             <constraint firstAttribute="bottom" secondItem="iQp-dr-cYV" secondAttribute="bottom" id="ZK4-7v-8O2"/>
-                                            <constraint firstAttribute="height" constant="28" id="rVM-CE-5TF"/>
+                                            <constraint firstItem="boR-Kp-453" firstAttribute="width" secondItem="hep-mk-FsN" secondAttribute="width" multiplier="0.5" id="jPw-cI-q3g"/>
+                                            <constraint firstAttribute="height" constant="48" id="rVM-CE-5TF"/>
+                                            <constraint firstItem="iQp-dr-cYV" firstAttribute="width" secondItem="hep-mk-FsN" secondAttribute="width" multiplier="0.5" id="rvs-vE-Rhh"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-BD-D9w">
-                                        <rect key="frame" x="0.0" y="96.666666666666686" width="393" height="612.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="116.66666666666669" width="393" height="592.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NOw-8R-Cwd">
                                             <size key="itemSize" width="128" height="128"/>
