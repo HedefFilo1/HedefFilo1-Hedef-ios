@@ -55,11 +55,11 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
     var uploadedFileInfo: UploadRequestFile?
     
     var reasons: [ImpoundCarReason] = [
-        ImpoundCarReason(field: "USE_OF_ALCOHOL", title: Strings.drinkingAndDriving),
-        ImpoundCarReason(field: "MISSING_DOCUMENT", title: Strings.missingDocument),
-        ImpoundCarReason(field: "FAULTY_PARKING", title: Strings.incorrectParking),
-        ImpoundCarReason(field: "INJURY", title: Strings.injuryFatalAccident),
-        ImpoundCarReason(field: "OTHER", title: Strings.other)
+        ImpoundCarReason(field: "USE_OF_ALCOHOL", title: App.getString(key: "copilotapp.drinking.driving") ?? ""),
+        ImpoundCarReason(field: "MISSING_DOCUMENT", title: App.getString(key: "copilotapp.missing.document") ?? ""),
+        ImpoundCarReason(field: "FAULTY_PARKING", title: App.getString(key: "copilotapp.incorrect.parking") ?? ""),
+        ImpoundCarReason(field: "INJURY", title: App.getString(key: "copilotapp.injury.fatal.accident") ?? ""),
+        ImpoundCarReason(field: "OTHER", title: App.getString(key: "copilotapp.other") ?? "")
     ]
     
     var cities: [TurkeyCity] = turkeyCitiesList
