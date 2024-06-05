@@ -102,22 +102,26 @@ class PastMaintenancesViewController: UIViewController {
         var replaceTitle = Strings.care
         switch tab {
         case 0:
+            self.message = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.description") ?? ""
             replaceTitle = Strings.care
             
         case 1:
+            self.message = App.getString(key: "copilotapp.pastservicebreakdown.past.breakdown.operation.description") ?? ""
             replaceTitle = Strings.fault
             
         case 2:
+            self.message = App.getString(key: "copilotapp.pastservicetire.past.tire.operation.description") ?? ""
             replaceTitle = Strings.lastik
             
         case 3:
+            self.message = App.getString(key: "copilotapp.pastserviceaccidentdamage.past.accident.damage.operation.description") ?? ""
             replaceTitle = Strings.accidentTab
             
         default:
             break
         }
         headTitle = title.replacingOccurrences(of: Strings.care, with: replaceTitle)
-        self.message = message.replacingOccurrences(of: "{category}", with: replaceTitle.lowercaseFirstLetter())
+//        self.message = message.replacingOccurrences(of: "{category}", with: replaceTitle.lowercaseFirstLetter())
         self.foundMessage = foundMessage.replacingOccurrences(of: Strings.care, with: replaceTitle)
         
     }
