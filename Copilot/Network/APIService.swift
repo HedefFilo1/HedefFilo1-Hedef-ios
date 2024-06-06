@@ -288,7 +288,8 @@ class APIService {
     }
     
     static func getLastMaintenance(completion: @escaping (MaintenanceLast?, APIResponseError?) -> Void) {
-        let route = "copilot/maintenance/last"
+//        let route = "copilot/maintenance/last"
+        let route = "copilot/maintenance/last?status=Solved"
         let req = APIRequest<MaintenanceLast>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Maintenance Last"
         req.log = loggingEnabled
