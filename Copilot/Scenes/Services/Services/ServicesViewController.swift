@@ -74,7 +74,7 @@ class ServicesViewController: UIViewController {
         if viewModel.tireSupportType == .damage {
             descriptionLabel.text = App.getString(key: "copilotapp.servicetire.service.description")
         } else {
-            descriptionLabel.text = Strings.servicesChangeTireDescription
+            descriptionLabel.text = App.getString(key: "copilotapp.tire.change.date.time")
         }
     }
     
