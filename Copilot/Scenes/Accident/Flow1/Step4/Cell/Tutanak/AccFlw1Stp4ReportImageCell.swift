@@ -23,7 +23,6 @@ class AccFlw1Stp4ReportImageCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
-        
     }
     
     func setup() {
