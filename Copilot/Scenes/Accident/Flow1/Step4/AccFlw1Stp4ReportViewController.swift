@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PDFKit
 
 class AccFlw1Stp4ReportViewController: UIViewController {
     
@@ -288,9 +289,19 @@ extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate,
 
 extension AccFlw1Stp4ReportViewController: AccFlw1Stp4ReportTitleCellDelegate {
     func didTabSampleButton() {
-        if let urlDestination = URL(string: CodeStrings.samplePdfUrl) {
-            UIApplication.shared.open(urlDestination)
-        }
+        //        if let urlDestination = URL(string: CodeStrings.samplePdfUrl) {
+        //            UIApplication.shared.open(urlDestination)
+        //        }
+        
+        viewModel.showReportPdf()
+//        if let urlDestination = URL(string: CodeStrings.samplePdfUrl) {
+//            let viewController = pdf()
+//            
+//            // the url can be a web url or a file url
+//            viewController.pdfURL = urlDestination
+//            
+//            self.navigationController?.pushViewController(viewController, animated: true)
+//        }
     }
 }
 

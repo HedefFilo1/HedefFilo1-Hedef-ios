@@ -160,6 +160,7 @@
 		8935AC562AFA6749002F1C68 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */; };
 		8936593F2B7BACBD00A657B0 /* TireOperationTireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */; };
 		893659412B7BACC600A657B0 /* TireOperationTireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893659402B7BACC600A657B0 /* TireOperationTireCell.xib */; };
+		8936B72D2C118ED1003A4683 /* samplePdfFile.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8936B72C2C118ED1003A4683 /* samplePdfFile.pdf */; };
 		893AC48E2BAAFA45003FB9E6 /* APIService+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */; };
 		893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */; };
 		893AC4922BAAFFB0003FB9E6 /* FAQQeustionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */; };
@@ -731,6 +732,7 @@
 		8935AC552AFA6749002F1C68 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
 		8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TireOperationTireCell.swift; sourceTree = "<group>"; };
 		893659402B7BACC600A657B0 /* TireOperationTireCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TireOperationTireCell.xib; sourceTree = "<group>"; };
+		8936B72C2C118ED1003A4683 /* samplePdfFile.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = samplePdfFile.pdf; sourceTree = "<group>"; };
 		893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Support.swift"; sourceTree = "<group>"; };
 		893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestion.swift; sourceTree = "<group>"; };
 		893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQeustionViewController.swift; sourceTree = "<group>"; };
@@ -3434,6 +3436,7 @@
 		89C55DF32AC4A89900C3066A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8936B72C2C118ED1003A4683 /* samplePdfFile.pdf */,
 				892A8D102AC4EAE00020C1C4 /* Fonts */,
 				8989DDA72AC493C00035CD99 /* Assets.xcassets */,
 				89C55DF42AC4A91500C3066A /* Color.xcassets */,
@@ -4080,6 +4083,7 @@
 				8914E5512B7D39E9000E26DB /* BreakDownCell.xib in Resources */,
 				89E0459C2B04FAD200745E73 /* YourDocumentsTabCell.xib in Resources */,
 				89DF07192AF0F4FE00892B1D /* StandingItemCell.xib in Resources */,
+				8936B72D2C118ED1003A4683 /* samplePdfFile.pdf in Resources */,
 				893EDF752AFA5A97004E643E /* NewsTabCell.xib in Resources */,
 				89A908BE2B31A75400BC7727 /* HeaderCell.xib in Resources */,
 				894C45322B2789FF004356C8 /* HGSEmptyCell.xib in Resources */,

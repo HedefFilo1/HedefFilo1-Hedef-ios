@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PDFKit
 
 protocol AccidentCoordinatorDelegate: AnyObject {
     func didFinish(from coordinator: Coordinator)
@@ -50,7 +51,17 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccFlw1Stp5LeaksVMCrdinatorDlgt,
                                AccFlw1Stp6ConfirmVMCrdinatorDlgt,
                                AccFlw1Stp7SelectServiceVMCrdinatorDlgt,
-                               AccidentGuideVMCoordinatorDelegate {
+                               AccidentGuideVMCoordinatorDelegate,
+                               PdfViewerViewModelCoordinatorDelegate {
+    
+    func showReportPdf(doc: PDFDocument) {
+        let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+        viewController.viewModel = PdfViewerViewModel()
+        viewController.viewModel.pdfDoc = doc
+        viewController.viewModel.coordinatorDelegate = self
+        viewController.viewModel.title = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.sample.minute")
+        navigationController.pushViewController(viewController, animated: true)
+    }
     
     func getBack() {
         navigationController.popViewController(animated: true)

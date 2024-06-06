@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import PDFKit
 
 protocol AccFlw1Stp4ReportVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlw1Stp5Leaks()
     func goToGuide()
+    func showReportPdf(doc: PDFDocument)
 }
 
 protocol AccFlw1Stp4ReportViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +25,7 @@ protocol AccFlw1Stp4ReportViewModelType: AnyObject {
     func getBack()
     func goToAccFlw1Stp5Leaks()
     func goToGuide()
+    func showReportPdf()
 }
 
 class AccFlw1Stp4ReportViewModel: AccFlw1Stp4ReportViewModelType {
@@ -40,6 +43,14 @@ class AccFlw1Stp4ReportViewModel: AccFlw1Stp4ReportViewModelType {
     
     func goToGuide() {
         coordinatorDelegate?.goToGuide()
+    }
+    
+    func showReportPdf() {
+        if let urlDestination = Bundle.main.url(forResource: "samplePdfFile", withExtension: "pdf") {
+            guard let pdf = PDFDocument(url: urlDestination) else { return }
+            coordinatorDelegate?.showReportPdf(doc: pdf)
+        }
+        
     }
     
 }

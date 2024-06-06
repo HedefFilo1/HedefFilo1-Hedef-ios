@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PDFKit
 
 protocol PdfViewerViewModelCoordinatorDelegate: AnyObject {
     func getBack()
@@ -21,6 +22,8 @@ protocol PdfViewerViewModelType: AnyObject {
     var delegate: PdfViewerViewModelDelegate? { get set }
     var document: Document? { get set }
     var conetent: DocumentContent? { get set }
+    var pdfDoc: PDFDocument? { get set }
+    var title: String? { get set }
     func getBack()
     func getDocument()
     func downloadDoc()
@@ -32,6 +35,8 @@ class PdfViewerViewModel: PdfViewerViewModelType {
     weak var delegate: PdfViewerViewModelDelegate?
     var document: Document?
     var conetent: DocumentContent?
+    var pdfDoc: PDFDocument?
+    var title: String?
     
     func getBack() {
         coordinatorDelegate?.getBack()

@@ -31,6 +31,10 @@ class PdfViewerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        if viewModel.pdfDoc != nil {
+            setPdfDoc()
+            return
+        }
         if viewModel.document != nil {
             loadingLabel.isHidden = true
             viewModel.getDocument()
@@ -65,7 +69,11 @@ class PdfViewerViewController: UIViewController {
         if let title = viewModel.document?.name {
             titleLabel.text = title
         }
-
+        
+        if let title = viewModel.title {
+            titleLabel.text = title
+        }
+        
         downloadLabel.text = App.getString(key: "copilotapp.vehicleinfo.download.button")
     }
     
@@ -89,7 +97,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
-
+    
     func loadDocument() {
         let string = CodeStrings.vehicleGuidPdfUrl
         print(string)
@@ -100,7 +108,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         container.addSubview(webView)
         webView.frame = container.bounds
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        webView.backgroundColor = .gray
+        //        webView.backgroundColor = .gray
         webView.clipsToBounds = true
         webView.load(URLRequest(url: url))
         
@@ -108,7 +116,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
     
     func setDocument() {
         guard let content = viewModel.conetent,
-        let data = Data(base64Encoded: content.content) else {
+              let data = Data(base64Encoded: content.content) else {
             loadingLabel.isHidden = false
             loadingLabel.text = "No Data for document."
             return
@@ -117,7 +125,7 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         container.addSubview(pdfView)
         pdfView.frame = container.bounds
         pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        pdfView.backgroundColor = .gray
+        //        pdfView.backgroundColor = .gray
         pdfView.clipsToBounds = true
         pdfView.autoScales = true
         pdfView.displayDirection = .vertical
@@ -125,4 +133,19 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
         let document = PDFDocument(data: data)
         pdfView.document = document
     }
+    
+    func setPdfDoc() {
+        if let pdfDoc = viewModel.pdfDoc {
+            let pdfView = PDFView()
+            container.addSubview(pdfView)
+            pdfView.frame = container.bounds
+            pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            pdfView.clipsToBounds = true
+            pdfView.autoScales = true
+            pdfView.displayDirection = .vertical
+            pdfView.document = pdfDoc
+            downloadView.isHidden = true
+        }
+    }
+    
 }
