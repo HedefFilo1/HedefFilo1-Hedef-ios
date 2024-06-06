@@ -57,14 +57,72 @@ class SupportGuideDetailViewController: UIViewController {
             print(url.absoluteString)
             showShareView(url: url)
         }
+        //        downloadFile(with: "")
     }
     
+    //    func downloadFile(with url: String) {
+    //        let stringURL = viewModel.item?.documentFile ?? ""
+    //        guard let url = URL(string: stringURL) else { return }
+    //
+    //        let downloadSession = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
+    //
+    //        let downloadTask = downloadSession.downloadTask(with: url)
+    //        Loading.shared.show()
+    //        downloadTask.resume()
+    //
+    //    }
+    
+    //    func downloadData(url: URL) async -> Data? {
+    //        do {
+    //            let (data, _) = try await URLSession.shared.data(from: url)
+    //            return data
+    //        } catch let error {
+    //            print(error)
+    //        }
+    //        return nil
+    //    }
+    
+    //    func showShareView(urli: URL) {
+    //        let activityViewController = UIActivityViewController(activityItems: [urli], applicationActivities: nil)
+    //        present(activityViewController, animated: true, completion: nil)
+    //    }
+    
     func showShareView(url: URL) {
-        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-        present(activityViewController, animated: true, completion: nil)
+        Loading.shared.show()
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                Loading.shared.hide()
+                let activityViewController = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+                self.present(activityViewController, animated: true, completion: nil)
+            }
+        }
     }
 }
 
 extension SupportGuideDetailViewController: SupportGuideDetailViewModelDelegate {
-   
+    
 }
+// extension SupportGuideDetailViewController: URLSessionDownloadDelegate {
+//    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+//
+//        // create destination URL with the original pdf name
+//        guard let url = downloadTask.originalRequest?.url else { return }
+//        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//        let destinationURL = documentsPath.appendingPathComponent(url.lastPathComponent)
+//        // delete original copy
+//        try? FileManager.default.removeItem(at: destinationURL)
+//        // copy from temp to Document
+//        do {
+//            try FileManager.default.copyItem(at: location, to: destinationURL)
+//            //             destinationURL
+//            DispatchQueue.main.async {
+//                Loading.shared.hide()
+//                self.showShareView(url: location)
+//            }
+//
+//        } catch let error {
+//            print("Copy Error: \(error.localizedDescription)")
+//        }
+//    }
+// }
