@@ -75,10 +75,18 @@ class KMUsedViewController: SheetViewController {
     }
 }
 
-extension KMUsedViewController: KMUsedViewModelDelegate {
-    func setDistance() {
+extension KMUsedViewController: KMUsedViewModelDelegate,
+                                MessagePopupViewControllerDelegate {
+    
+    func didDismiss(_: SuccessPopupViewController?) {
         dismiss(animated: true) { [weak self] in
             self?.delegate?.reloadDistance()
         }
+    }
+    
+    func setDistance() {
+        let title = App.getString(key: "copilotapp.homepage.success.km.ok.button") ?? ""
+        let message = App.getString(key: "copilotapp.homepage.success.km") ?? ""
+        showSuccess(successTitle: "", message: message, buttonTitle: title, delegate: self)
     }
 }
