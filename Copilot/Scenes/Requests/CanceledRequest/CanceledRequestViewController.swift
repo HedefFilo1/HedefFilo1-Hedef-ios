@@ -31,10 +31,6 @@ class CanceledRequestViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     func setupUI() {
         
         applyStyle()

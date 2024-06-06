@@ -43,7 +43,7 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
     var items: [ProccessRequest] = []
     
     var filteredServices: [ProccessRequest] {
-        var notNulls = items //.filter({ $0.displayTitle != nil })
+        var notNulls = items // .filter({ $0.displayTitle != nil })
         if searchText.isEmpty {
             return notNulls
         }

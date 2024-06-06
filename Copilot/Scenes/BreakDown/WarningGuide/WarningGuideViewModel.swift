@@ -74,7 +74,7 @@ class WarningGuideViewModel: WarningGuideViewModelType {
         MockWarningGuide(id: 0, title: "Charging Light", image: "batteryCharge"),
         MockWarningGuide(id: 1, title: "Brake System", image: "brakeSystemGuid"),
         MockWarningGuide(id: 2, title: "Catalytic Coverter", image: "CatalyticCoverter"),
-        MockWarningGuide(id: 3, title: "Distance Waening", image: "DistanceWaening"),
+        MockWarningGuide(id: 3, title: "Distance Waening", image: "DistanceWaening")
     ]
     
     func getBack() {

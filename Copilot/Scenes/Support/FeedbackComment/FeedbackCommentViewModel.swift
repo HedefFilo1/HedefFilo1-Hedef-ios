@@ -39,7 +39,7 @@ class FeedbackCommentViewModel: FeedbackCommentViewModelType {
         Loading.shared.show(presented: true)
         APIService.sendFeedBack(caseId: caseId,
                                 rate: rate,
-                                comment: comment) 
+                                comment: comment)
         { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }

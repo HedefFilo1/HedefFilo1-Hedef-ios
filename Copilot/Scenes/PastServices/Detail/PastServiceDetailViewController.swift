@@ -110,7 +110,6 @@ extension PastServiceDetailViewController: UICollectionViewDataSource, UICollect
     }
 }
 
-
 extension PastServiceDetailViewController: PastServiceDetailViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()

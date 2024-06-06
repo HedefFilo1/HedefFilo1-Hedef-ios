@@ -49,11 +49,6 @@ class CPTimeNumberChooseView: UIView, UITableViewDelegate, UITableViewDataSource
         setup()
     }
     
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        //        setDropDownView()
-    }
-    
     func setup() {
         backgroundColor = .white
         layer.cornerRadius = 10

@@ -41,7 +41,6 @@ class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
     var cities: [TurkeyCity] = turkeyCitiesList
     var profile: GetProfile?
     
-    
     func getProfile() {
         Loading.shared.show()
         APIService.getProfile { [weak self] model, error in
