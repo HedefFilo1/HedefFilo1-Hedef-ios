@@ -27,6 +27,7 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
     func setup() {
         searchTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         applyStyles()
+        setTexts()
     }
     
     func applyStyles() {
