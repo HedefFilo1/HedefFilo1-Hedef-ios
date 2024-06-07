@@ -36,14 +36,29 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     weak var delegate: ReqFlw1Stp2ViewModelDelegate?
     
     var items: [MockRequestFlow1Item] = [
-        MockRequestFlow1Item(title: "Konfor Paket"),
-        MockRequestFlow1Item(title: "Yakıt Yönetim Sistemi"),
-        MockRequestFlow1Item(title: "Hedmobil"),
-        MockRequestFlow1Item(title: "Lastik"),
-        MockRequestFlow1Item(title: "Bakım Valesi"),
-        MockRequestFlow1Item(title: "Lastik Valesi"),
-        MockRequestFlow1Item(title: "Muayene Valesi"),
-        MockRequestFlow1Item(title: "İade Valesi")
+//        MockRequestFlow1Item(title: "Konfor Paket"),
+//        MockRequestFlow1Item(title: "Yakıt Yönetim Sistemi"),
+//        MockRequestFlow1Item(title: "Hedmobil"),
+//        MockRequestFlow1Item(title: "Lastik"),
+//        MockRequestFlow1Item(title: "Bakım Valesi"),
+//        MockRequestFlow1Item(title: "Lastik Valesi"),
+//        MockRequestFlow1Item(title: "Muayene Valesi"),
+//        MockRequestFlow1Item(title: "İade Valesi")
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.comfort.package") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.fuel.management") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.hedmobil") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.tire") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.maintenance.valet") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.tire.valet") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.examination.valet") ?? ""),
+        
+        MockRequestFlow1Item(title: App.getString(key: "copilotapp.demandlist.return.valet") ?? "")
     ]
     
     func createTask() {
