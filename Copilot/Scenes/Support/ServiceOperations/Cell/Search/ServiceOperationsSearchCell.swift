@@ -42,6 +42,7 @@ class ServiceOperationsSearchCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         searchTextField.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.button_search")
+        filterLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.button_filter")
     }
     
     @objc func editingChanged() {
