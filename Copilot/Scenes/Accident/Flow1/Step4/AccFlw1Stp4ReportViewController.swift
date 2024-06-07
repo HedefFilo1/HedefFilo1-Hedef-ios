@@ -25,6 +25,8 @@ class AccFlw1Stp4ReportViewController: UIViewController {
         nil, nil, nil, nil, nil
     ]
     
+    private var selectedCarImages: [UIImage?] = []
+    
     private var currentIndex = 1
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -85,10 +87,13 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 5 {
+            return selectedCarImages.count + 2
+        }
+        
         if section != 0 {
             return 2
         }
-        
         return 1
     }
     
@@ -114,6 +119,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 cell.imageView.image = image
                 cell.delegate = self
                 cell.index = 0
+                cell.section = 1
                 return cell
             } else {
                 let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -133,6 +139,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 cell.imageView.image = image
                 cell.delegate = self
                 cell.index = 1
+                cell.section = 2
                 return cell
             } else {
                 let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -152,6 +159,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 cell.imageView.image = image
                 cell.delegate = self
                 cell.index = 2
+                cell.section = 3
                 return cell
             } else {
                 let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -171,6 +179,7 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 cell.imageView.image = image
                 cell.delegate = self
                 cell.index = 3
+                cell.section = 4
                 return cell
             } else {
                 let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -185,16 +194,24 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
                 return cell
             }
             
-            if let image = selectedFiles[4] {
-                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.imageView.image = image
-                cell.delegate = self
-                cell.index = 4
-                return cell
-            } else {
+            let count = selectedCarImages.count
+            
+            if indexPath.item == count + 1 {
                 let cell: UploadPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
                 return cell
             }
+            
+            if count > (indexPath.item - 1),
+                let image = selectedCarImages[indexPath.item-1] {
+                let cell: AccFlw1Stp4ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.imageView.image = image
+                cell.delegate = self
+                cell.index = indexPath.item - 1
+                cell.section = 5
+                return cell
+            }
+            
+            return UICollectionViewCell()
             
         default:
             return UICollectionViewCell()
@@ -213,6 +230,14 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
             return CGSize(width: collectionView.frame.width-32, height: 27)
         }
         
+        if indexPath.section == 5, indexPath.item > 0 {
+            let count = selectedCarImages.count
+            if indexPath.item == count + 1 {
+                return CGSize(width: collectionView.frame.width-32, height: 37)
+            }
+            return CGSize(width: collectionView.frame.width-32, height: 120)
+        }
+        
         if selectedFiles[indexPath.section - 1] != nil {
             height = 120
         } else {
@@ -223,11 +248,11 @@ extension AccFlw1Stp4ReportViewController: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -249,8 +274,12 @@ extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate,
                                            UIImagePickerControllerDelegate,
                                            AccFlw1Stp4ReportImageCellDelegate {
     
-    func didTapDelete(index: Int) {
-        selectedFiles[index] = nil
+    func didTapDelete(index: Int, section: Int) {
+        if section == 5 {
+            selectedCarImages.remove(at: index)
+        } else {
+            selectedFiles[index] = nil
+        }
         collectionView.reloadData()
     }
     
@@ -268,7 +297,11 @@ extension AccFlw1Stp4ReportViewController: UINavigationControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        selectedFiles[currentIndex] = tempImage
+        if currentIndex == 4 {
+            selectedCarImages.append(tempImage)
+        } else {
+            selectedFiles[currentIndex] = tempImage
+        }
         collectionView.reloadData()
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
             //            fileNameLabel.text = url.lastPathComponent

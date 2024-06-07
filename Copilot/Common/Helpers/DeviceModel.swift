@@ -18,7 +18,7 @@ extension UIDevice {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
-
+        // swiftlint:disable switch_case_alignment
         switch identifier {
             // MARK: - iPhone
             case "i386", "x86_64", "arm64": return "iPhone Simulator"
@@ -221,5 +221,6 @@ extension UIDevice {
             // MARK: - Unrecognized
             default: return identifier
         }
+        // swiftlint:enable switch_case_alignment
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 struct VoidResponse<T: Decodable> {
-    init() {}
+//    init() {}
 }
 
 extension Foundation.Notification.Name {

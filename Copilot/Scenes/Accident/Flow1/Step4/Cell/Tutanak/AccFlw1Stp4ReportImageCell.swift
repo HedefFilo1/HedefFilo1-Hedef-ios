@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AccFlw1Stp4ReportImageCellDelegate: AnyObject {
-    func didTapDelete(index: Int)
+    func didTapDelete(index: Int, section: Int)
 }
 
 class AccFlw1Stp4ReportImageCell: UICollectionViewCell, Reusable {
@@ -19,6 +19,7 @@ class AccFlw1Stp4ReportImageCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var deleteView: UIView!
     
     var index = 0
+    var section = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,6 @@ class AccFlw1Stp4ReportImageCell: UICollectionViewCell, Reusable {
     }
 
     @IBAction func didTapDelete() {
-        delegate?.didTapDelete(index: index)
+        delegate?.didTapDelete(index: index, section: section)
     }
 }

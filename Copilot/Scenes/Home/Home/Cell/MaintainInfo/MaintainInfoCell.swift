@@ -12,7 +12,7 @@ class MaintainInfoCell: UICollectionViewCell, Reusable {
     var last: MaintenanceLast? {
         didSet {
             serviceLabel.text = last?.serviceName
-            partLabel.text = last?.part
+            partLabel.text = last?.address
             dateLabel.text = last?.displayDate
         }
     }

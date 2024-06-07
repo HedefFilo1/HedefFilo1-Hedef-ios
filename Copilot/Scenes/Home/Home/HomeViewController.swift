@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
 #if DEV_DEBUG
 
 //        viewModel.coordinatorDelegate?.goToStandings()
-        viewModel.goToSearch()
+//        viewModel.goToSearch()
         return
 //        return
 #endif
