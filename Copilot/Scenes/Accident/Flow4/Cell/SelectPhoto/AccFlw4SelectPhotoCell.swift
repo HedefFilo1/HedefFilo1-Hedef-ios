@@ -40,7 +40,7 @@ class AccFlw4SelectPhotoCell: UICollectionViewCell, Reusable {
         let title = App.getString(key: "copilotapp.accidentdamage.accident.process.zabit.upload.photo.description") ?? ""
         titleLabel.text = "\(CodeStrings.bullet) \(title)"
         uploadLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button") ?? ""
-        continueButton.setTitle(Strings.devamEt, for: .normal)
+        continueButton.setTitle(App.getString(key:"copilotapp.accidentdamage.accident.process.proceed.service.continue.button"), for: .normal)
     }
     
     @IBAction func didTapUpload() {
@@ -49,5 +49,15 @@ class AccFlw4SelectPhotoCell: UICollectionViewCell, Reusable {
     
     @IBAction func didTapContinue() {
         delegate?.didTapContinue()
+    }
+    
+    func setCountForButton(count: Int) {
+        var str = App.getString(key:"copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.continue.button") ?? ""
+        str = str.replacingOccurrences(of: "{number}", with: "\(count)")
+        
+        let continueStr = App.getString(key:"copilotapp.accidentdamage.accident.process.proceed.service.continue.button") ?? ""
+        
+        let title = count > 0 ? str: continueStr
+        continueButton.setTitle(title, for: .normal)
     }
 }

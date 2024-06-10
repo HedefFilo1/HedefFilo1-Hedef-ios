@@ -99,10 +99,11 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
             
             let cell: AccFlw4SelectPhotoCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
-            
+
             let more = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button") ?? ""
             let justUpload = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button") ?? ""
             cell.uploadLabel.text = selectedFiles.count > 0 ? more: justUpload
+            cell.setCountForButton(count: selectedFiles.count)
             return cell
         
         default:
