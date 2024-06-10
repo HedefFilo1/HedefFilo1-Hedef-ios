@@ -70,7 +70,7 @@ class ReqFlw3Stp3HGSViewController: UIViewController {
         viewModel.getProfile()
         
 #if DEV_DEBUG
-                viewModel.coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations)
+                viewModel.coordinatorDelegate?.goToSuccess(title: Strings.hgsOperations, message: "somdfd")
 #endif
     }
     

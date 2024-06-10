@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw4Stp3PlateVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String)
+    func goToSuccess(title: String, message: String)
 }
 
 protocol ReqFlw4Stp3PlateViewModelDelegate: BaseViewModelDelegate {
@@ -123,7 +123,8 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_PLATE_PROCESS")
                 let text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.title") ?? ""
-                coordinatorDelegate?.goToSuccess(title: text)
+                let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.success.title") ?? ""
+                coordinatorDelegate?.goToSuccess(title: text, message: message)
             }
         }
     }

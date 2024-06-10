@@ -14,7 +14,7 @@ struct ImpoundCarReason {
 
 protocol ReqFlw2Stp3VehicleVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String)
+    func goToSuccess(title: String, message: String)
 }
 
 protocol ReqFlw2Stp3VehicleViewModelDelegate: BaseViewModelDelegate {
@@ -143,7 +143,8 @@ class ReqFlw2Stp3VehicleViewModel: ReqFlw2Stp3VehicleViewModelType {
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_CONNECTED_VEHICLE_OPERATION")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.button") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title)
+                let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.towed.vehicle.operation.success.title") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message)
             }
         }
     }

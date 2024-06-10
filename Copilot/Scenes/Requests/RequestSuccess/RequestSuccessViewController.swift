@@ -52,7 +52,12 @@ class RequestSuccessViewController: UIViewController {
     
     func setTexts() {
         headLabel.text = viewModel.title
+        if viewModel.message.count > 0 {
+            titleLabel.text = viewModel.message
+        }
+            
         descriptionLabel.text = App.getString(key: "copilotapp.demandproductservice.success.description")
+        
         requestsButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.request.page.button"), for: .normal)
         homeButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.homepage.button"), for: .normal)
     }

@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw6Stp3InspectionVMCrdntrDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String)
+    func goToSuccess(title: String, message: String)
 }
 
 protocol ReqFlw6Stp3InspectionViewModelDelegate: BaseViewModelDelegate {
@@ -105,7 +105,8 @@ class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_EXAMINATION_PROCESS")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title)
+                let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.success.title") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message)
             }
         }
         

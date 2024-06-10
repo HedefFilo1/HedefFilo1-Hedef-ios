@@ -21,6 +21,7 @@ protocol RequestSuccessViewModelType: AnyObject {
     var coordinatorDelegate: RequestSuccessVMCoordinatorDelegate? { get set }
     var delegate: RequestSuccessViewModelDelegate? { get set }
     var title: String { get set }
+    var message: String { get set }
     func getBack()
     func getBackToHome()
     func goToRequests()
@@ -32,6 +33,7 @@ class RequestSuccessViewModel: RequestSuccessViewModelType {
     weak var delegate: RequestSuccessViewModelDelegate?
     
     var title: String = ""
+    var message: String = ""
     
     func getBack() {
         coordinatorDelegate?.getBack()

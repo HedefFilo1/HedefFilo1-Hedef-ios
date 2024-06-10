@@ -14,7 +14,7 @@ struct OgsHgsType {
 
 protocol ReqFlw3Stp3HGSVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String)
+    func goToSuccess(title: String, message: String)
 }
 
 protocol ReqFlw3Stp3HGSViewModelDelegate: BaseViewModelDelegate {
@@ -123,7 +123,8 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
             } else if model != nil {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_HGS_PROCESS")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title)
+                let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.success.title") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message)
             }
         }
     }

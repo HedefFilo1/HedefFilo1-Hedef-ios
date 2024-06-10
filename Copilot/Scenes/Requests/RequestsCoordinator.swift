@@ -71,11 +71,12 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToSuccess(title: String) {
+    func goToSuccess(title: String, message: String) {
         let controller: RequestSuccessViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestSuccessViewModel()
         controller.viewModel.coordinatorDelegate = self
         controller.viewModel.title = title
+        controller.viewModel.message = message
         navigationController.pushViewController(controller, animated: true)
     }
     
