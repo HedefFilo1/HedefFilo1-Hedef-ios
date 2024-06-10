@@ -17,7 +17,7 @@ protocol ProccessRequestsVMCoordinatorDelegate: AnyObject {
     func presentFitlers(title: String,
                         delegate: FeedbackFilterViewControllerDelegate,
                         items: [FeedbackFilterItem])
-    func presentFeedbackRate(caseId: String)
+    func presentFeedbackRate(caseId: String, date: String)
 }
 
 protocol ProccessRequestsViewModelDelegate: BaseViewModelDelegate {
@@ -32,7 +32,7 @@ protocol ProccessRequestsViewModelType: AnyObject {
     var searchText: String { get set }
     func getBack()
     func presentFitlers()
-    func presentFeedbackRate(caseId: String)
+    func presentFeedbackRate(caseId: String, date: String)
     func getRequests()
 }
 
@@ -67,8 +67,8 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
         coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
     }
     
-    func presentFeedbackRate(caseId: String) {
-        coordinatorDelegate?.presentFeedbackRate(caseId: caseId)
+    func presentFeedbackRate(caseId: String, date: String) {
+        coordinatorDelegate?.presentFeedbackRate(caseId: caseId, date: date)
     }
     
     func getRequests() {

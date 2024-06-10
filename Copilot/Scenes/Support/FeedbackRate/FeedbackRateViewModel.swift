@@ -20,6 +20,7 @@ protocol FeedbackRateViewModelType: AnyObject {
     var delegate: FeedbackRateViewModelDelegate? { get set }
     var rate: Int { get set }
     var caseId: String { get set }
+    var date: String { get set }
     func goToFeedbackComment()
 }
 
@@ -29,6 +30,7 @@ class FeedbackRateViewModel: FeedbackRateViewModelType {
     weak var delegate: FeedbackRateViewModelDelegate?
     var rate: Int = 0
     var caseId = ""
+    var date = ""
     
     func goToFeedbackComment() {
         coordinatorDelegate?.goToFeedbackComment(caseId: caseId, rate: rate)
