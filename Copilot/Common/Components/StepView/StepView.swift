@@ -30,10 +30,10 @@ class StepView: UIImageView {
     @IBOutlet weak var step2SubLabel: UILabel!
     
     private var nibName: String {
-        return String(describing: type(of: self))
+        return "StepView" // String(describing: type(of: self))
     }
     
-    private func setupUI() {
+    func setupUI() {
         Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -59,4 +59,15 @@ class StepView: UIImageView {
         step2SubLabel.text = App.getString(key: "copilotapp.accidentdamage.vehicle.status.description")
     }
     
+}
+
+class StepView2: StepView {
+    override func setupUI() {
+        super.setupUI()
+        step1ImageView.image = Images.stepImageRedWhite
+        step2ImageView.image = Images.stepRedImage
+        #if DEV_DEBUG
+        step2SubLabel.textColor = .appRed
+        #endif
+    }
 }

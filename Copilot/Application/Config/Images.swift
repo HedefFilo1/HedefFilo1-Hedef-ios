@@ -197,4 +197,12 @@ struct Images {
     static var servisRandevuIcon: UIImage {
         return UIImage(named: "servisRandevuIcon") ?? UIImage()
     }
+    
+    static var stepRedImage: UIImage {
+        return UIImage(named: "stepRedImage") ?? UIImage()
+    }
+    
+    static var stepImageRedWhite: UIImage {
+        return UIImage(named: "stepImageRedWhite") ?? UIImage()
+    }
 }
