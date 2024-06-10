@@ -43,7 +43,12 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
     weak var coordinatorDelegate: ReqFlw4Stp3PlateVMCoordinatorDelegate?
     weak var delegate: ReqFlw4Stp3PlateViewModelDelegate?
     var uploadedFileInfo: UploadRequestFile?
-    var causeOfLosts = ["Kayıp", "Değişim"]
+    
+    var causeOfLosts = [
+        App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.cause.loss.missing") ?? "",
+        
+        App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.cause.loss.change") ?? ""
+    ]
     var numberOfLostPlates = [1, 2]
     
     var cities: [TurkeyCity] = turkeyCitiesList
