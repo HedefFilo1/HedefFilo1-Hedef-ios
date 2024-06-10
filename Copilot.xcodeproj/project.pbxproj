@@ -281,6 +281,8 @@
 		8970D15D2BFF7E2A00A65EDD /* WarningGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970D15C2BFF7E2A00A65EDD /* WarningGuideViewController.swift */; };
 		8970D1622BFF7F0D00A65EDD /* WarningGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970D1602BFF7F0D00A65EDD /* WarningGuideCell.swift */; };
 		8970D1632BFF7F0D00A65EDD /* WarningGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8970D1612BFF7F0D00A65EDD /* WarningGuideCell.xib */; };
+		8972AF972C16CCFB00B8FE0B /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8972AF962C16CCFB00B8FE0B /* StepView.xib */; };
+		8972AF992C16D3A400B8FE0B /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972AF982C16D3A400B8FE0B /* StepView.swift */; };
 		8976B01B2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B01A2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift */; };
 		8976B01D2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B01C2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift */; };
 		8976B0212B73BAD800E7C58F /* BrkdwnFlw2Stp2AnyAlarmVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B0202B73BAD800E7C58F /* BrkdwnFlw2Stp2AnyAlarmVController.swift */; };
@@ -854,6 +856,8 @@
 		8970D15C2BFF7E2A00A65EDD /* WarningGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningGuideViewController.swift; sourceTree = "<group>"; };
 		8970D1602BFF7F0D00A65EDD /* WarningGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningGuideCell.swift; sourceTree = "<group>"; };
 		8970D1612BFF7F0D00A65EDD /* WarningGuideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarningGuideCell.xib; sourceTree = "<group>"; };
+		8972AF962C16CCFB00B8FE0B /* StepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
+		8972AF982C16D3A400B8FE0B /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		8976B01A2B73ACA000E7C58F /* BreakDownSuccessRandevuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownSuccessRandevuViewController.swift; sourceTree = "<group>"; };
 		8976B01C2B73ACC000E7C58F /* BreakDownSuccessRandevuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDownSuccessRandevuViewModel.swift; sourceTree = "<group>"; };
 		8976B0202B73BAD800E7C58F /* BrkdwnFlw2Stp2AnyAlarmVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw2Stp2AnyAlarmVController.swift; sourceTree = "<group>"; };
@@ -2423,6 +2427,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8972AF912C16CCC000B8FE0B /* StepView */ = {
+			isa = PBXGroup;
+			children = (
+				8972AF962C16CCFB00B8FE0B /* StepView.xib */,
+				8972AF982C16D3A400B8FE0B /* StepView.swift */,
+			);
+			path = StepView;
+			sourceTree = "<group>";
+		};
 		8976B0192B73AC6D00E7C58F /* SuccessRandevu */ = {
 			isa = PBXGroup;
 			children = (
@@ -3344,6 +3357,7 @@
 				8917F5482B39F91A00681AD3 /* CPPointButton.swift */,
 				8917F54A2B39FB9B00681AD3 /* LastikPointsView */,
 				89DF071A2AF0F87E00892B1D /* PointsView */,
+				8972AF912C16CCC000B8FE0B /* StepView */,
 				892A8D0A2AC4E6600020C1C4 /* ScrollTouchHandler.swift */,
 				891D1C942ACAB1A500457C17 /* CPButton.swift */,
 				892A8D0C2AC4E6FF0020C1C4 /* CPLightButton.swift */,
@@ -4138,6 +4152,7 @@
 				896CB3602AD718F50048025A /* RandevuCell.xib in Resources */,
 				896CB35B2AD715CE0048025A /* HomeContentCell.xib in Resources */,
 				8907EEFC2B696807004869BE /* MaintenanceCell.xib in Resources */,
+				8972AF972C16CCFB00B8FE0B /* StepView.xib in Resources */,
 				893EDF662AF92B95004E643E /* CampaignsOfferTabCell.xib in Resources */,
 				899FF41B2B76433900447118 /* JustYellowWarningCell.xib in Resources */,
 				896CB34F2AD5BED40048025A /* SearchCell.xib in Resources */,
@@ -4408,6 +4423,7 @@
 				89F65E022BB08F6000A1FAF2 /* ProccessRequestsItemsCell.swift in Sources */,
 				8950B73F2BBFC4DA00F269AF /* PastServiceDetailCell.swift in Sources */,
 				8934890D2B9E3E9E009A3FBB /* SettingsCoordinator.swift in Sources */,
+				8972AF992C16D3A400B8FE0B /* StepView.swift in Sources */,
 				8986FCB52AFBCC82006057EA /* KeychainWrapper.swift in Sources */,
 				893259982B9A721F001E4262 /* ReqFlw4Stp3PlateViewModel.swift in Sources */,
 				8917F5532B39FEAE00681AD3 /* LastikRandevuViewController.swift in Sources */,

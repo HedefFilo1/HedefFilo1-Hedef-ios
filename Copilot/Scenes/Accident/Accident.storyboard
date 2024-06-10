@@ -257,14 +257,14 @@
                                 <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sBV-bl-gqH">
-                                        <rect key="frame" x="24" y="30.666666666666657" width="24" height="24"/>
+                                        <rect key="frame" x="24" y="27" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Oqq-Ap-mWr"/>
                                             <constraint firstAttribute="height" constant="24" id="xeY-OX-2rr"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9F-OB-xfi">
-                                        <rect key="frame" x="16" y="22.666666666666657" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="19" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="2Rq-9z-ZEy"/>
                                             <constraint firstAttribute="height" constant="40" id="r6l-Ua-8Fa"/>
@@ -274,17 +274,17 @@
                                             <action selector="didTapBack" destination="rB4-Q9-c9K" eventType="touchUpInside" id="t10-Ki-eA7"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kazaPoints" translatesAutoresizingMaskIntoConstraints="NO" id="My9-xn-f9c">
-                                        <rect key="frame" x="80" y="10" width="289" height="65"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kazaPoints" translatesAutoresizingMaskIntoConstraints="NO" id="My9-xn-f9c" customClass="StepView" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="56" y="24" width="293" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="1o3-oI-tA0"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bj-Zc-OIX">
-                                        <rect key="frame" x="0.0" y="153" width="393" height="522"/>
+                                        <rect key="frame" x="0.0" y="137" width="393" height="538"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP3-v5-bG2">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="522"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="538"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0k-We-F4o">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
@@ -427,16 +427,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="4Bj-Zc-OIX" firstAttribute="top" secondItem="My9-xn-f9c" secondAttribute="bottom" constant="78" id="54z-LN-njW"/>
+                                    <constraint firstItem="4Bj-Zc-OIX" firstAttribute="top" secondItem="My9-xn-f9c" secondAttribute="bottom" constant="48" id="54z-LN-njW"/>
+                                    <constraint firstItem="sBV-bl-gqH" firstAttribute="top" secondItem="yQI-xE-Ln1" secondAttribute="top" constant="27" id="57X-nr-hFk"/>
                                     <constraint firstItem="i9F-OB-xfi" firstAttribute="centerX" secondItem="sBV-bl-gqH" secondAttribute="centerX" id="6VF-25-Flv"/>
-                                    <constraint firstItem="My9-xn-f9c" firstAttribute="top" secondItem="yQI-xE-Ln1" secondAttribute="top" constant="10" id="Fst-uA-VWq"/>
+                                    <constraint firstItem="My9-xn-f9c" firstAttribute="top" secondItem="yQI-xE-Ln1" secondAttribute="top" constant="24" id="Fst-uA-VWq"/>
                                     <constraint firstItem="i9F-OB-xfi" firstAttribute="centerY" secondItem="sBV-bl-gqH" secondAttribute="centerY" id="H69-xm-mHe"/>
                                     <constraint firstItem="sBV-bl-gqH" firstAttribute="leading" secondItem="yQI-xE-Ln1" secondAttribute="leading" constant="24" id="LiQ-y7-lKY"/>
                                     <constraint firstAttribute="bottom" secondItem="4Bj-Zc-OIX" secondAttribute="bottom" id="WB1-Y0-ufa"/>
                                     <constraint firstAttribute="trailing" secondItem="4Bj-Zc-OIX" secondAttribute="trailing" id="cnp-wd-vfu"/>
-                                    <constraint firstItem="sBV-bl-gqH" firstAttribute="centerY" secondItem="My9-xn-f9c" secondAttribute="centerY" id="iOH-iG-htl"/>
-                                    <constraint firstItem="My9-xn-f9c" firstAttribute="leading" secondItem="i9F-OB-xfi" secondAttribute="trailing" constant="24" id="j3a-Qg-t7B"/>
-                                    <constraint firstAttribute="trailing" secondItem="My9-xn-f9c" secondAttribute="trailing" constant="24" id="lXh-mp-2Pg"/>
+                                    <constraint firstItem="My9-xn-f9c" firstAttribute="leading" secondItem="i9F-OB-xfi" secondAttribute="trailing" id="j3a-Qg-t7B"/>
+                                    <constraint firstAttribute="trailing" secondItem="My9-xn-f9c" secondAttribute="trailing" constant="44" id="lXh-mp-2Pg"/>
                                     <constraint firstItem="4Bj-Zc-OIX" firstAttribute="leading" secondItem="yQI-xE-Ln1" secondAttribute="leading" id="yyi-20-box"/>
                                 </constraints>
                             </view>
@@ -2291,7 +2291,7 @@
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
