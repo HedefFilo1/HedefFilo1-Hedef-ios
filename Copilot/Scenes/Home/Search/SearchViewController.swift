@@ -96,7 +96,8 @@ class SearchViewController: PopupViewController {
     
     @IBAction func didTapCancel() {
         searchTextField.endEditing(true)
-        viewModel.getBack()
+//        viewModel.getBack()
+        navigationController?.popViewController(animated: true)
     }
 }
 

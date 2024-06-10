@@ -25,6 +25,7 @@ enum WebCategoryEnum: String, Decodable {
     case trafficPolicy = "TRAFFIC_POLICY"
     case vehicleReturn = "VEHICLE_RETURN"
     case occupiedVehicle = "OCCUPIED_VEHICLE"
+    case other = "OTHER"
     
     var title: String {
         switch self {
@@ -63,6 +64,9 @@ enum WebCategoryEnum: String, Decodable {
             return App.getString(key: "copilotapp.demandlist.product.process.request.towed.vehicle.operation") ?? "Bağlanan Araç İşlemleri"
         case .inspection:
             return "INSPECTION"
+            
+        case .other:
+            return "OTHER"
         }
     }
 }

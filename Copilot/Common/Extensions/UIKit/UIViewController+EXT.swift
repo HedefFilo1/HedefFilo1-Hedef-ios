@@ -61,6 +61,10 @@ extension UIViewController {
         let imageView = UIImageView()
         imageView.image = Images.search
         header.addSubview(imageView)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToSearch))
+        tap.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(tap)
+        imageView.isUserInteractionEnabled = true
         imageView.align(trailing: 48, widthAndHeight: 24, centerY: 0)
     }
     
@@ -86,6 +90,18 @@ extension UIViewController {
         let controller: NotificationsViewController = UIStoryboard(storyboard: .notification).instantiateViewController()
         controller.viewModel = NotificationsViewModel()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func goToSearch() {
+//        let controller: NotificationsViewController = UIStoryboard(storyboard: .notification).instantiateViewController()
+//        controller.viewModel = NotificationsViewModel()
+//        navigationController?.pushViewController(controller, animated: true)
+        
+        let viewController: SearchViewController = UIStoryboard(storyboard: .home).instantiateViewController()
+        let viewModel = SearchViewModel()
+        viewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = App.mainCoordinator
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

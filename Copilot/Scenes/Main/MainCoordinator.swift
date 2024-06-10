@@ -87,6 +87,7 @@ class MainCoordinator: Coordinator {
         ]
         addChildCoordinator(homeCoordinator)
         homeCoordinator.mainCoordinator = self
+        App.mainCoordinator = self
 #if DEV_DEBUG
         // just for test
         tabBarController.selectedIndex = 3
