@@ -61,7 +61,9 @@ class ReqFlw1Stp2ViewController: UIViewController {
     func setTexts() {
         //        titleLabel.text = Strings.ReqFlw1Stp2
         //        descriptionLabel.text = Strings.ReqFlw1Stp2Description
+        titleLabel.text = App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.title")
         descriptionLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.description")
+        createButton.setTitle(App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.create.product.request.button"), for: .normal)
     }
     
     @IBAction func didTapBack() {
