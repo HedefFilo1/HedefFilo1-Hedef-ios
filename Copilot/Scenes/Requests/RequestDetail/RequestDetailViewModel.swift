@@ -35,7 +35,7 @@ class RequestDetailViewModel: RequestDetailViewModelType {
     }
     
     func goToCanceledRequest() {
-        let title = item?.subject ?? ""
+        let title = item?.subjectResult ?? ""
         coordinatorDelegate?.goToCanceledRequest(title: title)
     }
     

@@ -11,7 +11,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
     
     var item: Task? {
         didSet {
-            titleLabel.text = item?.subject
+            titleLabel.text = item?.subjectResult
             statusLabel.text = item?.status.text
             statusView.backgroundColor = item?.status.color
         }
