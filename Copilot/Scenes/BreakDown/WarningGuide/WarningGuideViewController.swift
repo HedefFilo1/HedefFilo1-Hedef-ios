@@ -78,13 +78,14 @@ extension WarningGuideViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: WarningGuideCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.titleLabel.text = viewModel.guides[indexPath.item].title
+        let title = App.getString(key: viewModel.guides[indexPath.item].title)
+        cell.titleLabel.text = title
         cell.imageView.image = UIImage(named: viewModel.guides[indexPath.item].image)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 110)
+        return CGSize(width: 70, height: 170)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

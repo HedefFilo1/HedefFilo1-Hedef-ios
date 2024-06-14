@@ -158,7 +158,11 @@ extension AccFlw5Stp3DeclareVController: AccFlw5Stp3HeaderCellDelegate,
    
     func didTapGuilde() {
         APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_GO_ACCIDENT_GUIDE")
-        viewModel.goToGuide()
+        
+        if let url = URL.init(string: "https://copilotweb.hedeffilotest.com/file-server/0cc1d38d-9e54-4ba1-908b-14bd8b59413f.pdf") {
+            UIApplication.shared.open(url)
+        }
+        //        viewModel.goToGuide()
     }
     
     func didTapUpload() {
