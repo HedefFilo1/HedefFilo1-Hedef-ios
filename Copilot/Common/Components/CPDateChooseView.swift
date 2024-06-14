@@ -31,7 +31,12 @@ class CPDateChooseView: UIView {
             guard let date = date else { return }
             let formmater = DateFormatter()
             formmater.dateFormat = dateFormat
-            formmater.locale = Locale(identifier: "tr_TR")
+            var identifier = "tr_TR"
+            let language = Persistence.language ?? CodeStrings.turkish
+            if language == CodeStrings.english {
+                identifier = "UTC"
+            }
+            formmater.locale = Locale(identifier: identifier)
             label.text = formmater.string(from: date)
         }
     }

@@ -44,7 +44,12 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
         guard let date = date else { return nil }
         let formmater = DateFormatter()
         formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
-        formmater.locale = Locale(identifier: "tr_TR")
+        var identifier = "tr_TR"
+        let language = Persistence.language ?? CodeStrings.turkish
+        if language == CodeStrings.english {
+            identifier = "UTC"
+        }
+        formmater.locale = Locale(identifier: identifier)
         return formmater.string(from: date)
     }
     
