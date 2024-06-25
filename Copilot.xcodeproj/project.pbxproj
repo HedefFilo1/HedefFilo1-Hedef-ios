@@ -1116,6 +1116,8 @@
 		89E29B582B3AE4B300CCABAD /* ServicesItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesItemsCell.xib; sourceTree = "<group>"; };
 		89E29B5B2B3AE52900CCABAD /* VehicleServicesItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesItemCell.swift; sourceTree = "<group>"; };
 		89E29B5D2B3AE53000CCABAD /* VehicleServicesItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleServicesItemCell.xib; sourceTree = "<group>"; };
+		89EB93942C2AAC22005183B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89EB93992C2AAF18005183B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -2582,6 +2584,7 @@
 		8989DD9D2AC493BF0035CD99 /* Copilot */ = {
 			isa = PBXGroup;
 			children = (
+				89EB93962C2AAEF9005183B5 /* Firebase */,
 				894E20DA2AC6A51900F69C27 /* Copilot.entitlements */,
 				899CF5662AE18CAE006D85E4 /* Network */,
 				89C55DC92AC4A4E000C3066A /* Application */,
@@ -3835,6 +3838,31 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
+		89EB93962C2AAEF9005183B5 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				89EB93972C2AAF04005183B5 /* Prod */,
+				89EB93982C2AAF09005183B5 /* Dev */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		89EB93972C2AAF04005183B5 /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				89EB93992C2AAF18005183B5 /* GoogleService-Info.plist */,
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
+		89EB93982C2AAF09005183B5 /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				89EB93942C2AAC22005183B5 /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
 		89F23BBC2B299FC60081DD85 /* PdfViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -4029,6 +4057,8 @@
 				766A77620FFA6C9D82F1FF96 /* [CP] Embed Pods Frameworks */,
 				89F6ADE82AC4ABB000994F18 /* SwiftLint Run Script */,
 				16BC4544DF2AA93E4F5E22F2 /* [CP] Copy Pods Resources */,
+				89EB939C2C2AAFC6005183B5 /* Firebase plist files */,
+				89EB939D2C2AAFFE005183B5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4241,6 +4271,42 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copilot/Pods-Copilot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		89EB939C2C2AAFC6005183B5 /* Firebase plist files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase plist files";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Debug\" ] || [ \"${CONFIGURATION}\" == \"Release\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n\n";
+		};
+		89EB939D2C2AAFFE005183B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
 		};
 		89F6ADE82AC4ABB000994F18 /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4872,6 +4938,7 @@
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 169;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -5000,6 +5067,7 @@
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 169;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

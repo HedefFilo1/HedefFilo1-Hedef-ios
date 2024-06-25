@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import netfox
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NFX.sharedInstance().start()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.resignOnTouchOutside = true
+        FirebaseApp.configure()
         return true
     }
 

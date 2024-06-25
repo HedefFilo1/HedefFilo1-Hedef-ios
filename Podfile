@@ -13,7 +13,8 @@ target 'Copilot' do
   pod 'GoogleMaps', '8.3.1'
   pod 'SDWebImage'
   pod 'FSCalendar'
-
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
