@@ -135,6 +135,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Firebase/Analytics
+  - Firebase/Core
   - Firebase/Crashlytics
   - FSCalendar
   - GoogleMaps (= 8.3.1)
@@ -192,6 +193,6 @@ SPEC CHECKSUMS:
   SDWebImage: 40b0b4053e36c660a764958bff99eed16610acbb
   SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: 59ba04368a6cb1f21fc66438ebc3c7f760ac73af
+PODFILE CHECKSUM: f839a3156ce7c220ed43c45cb3f942d42cb355f7
 
 COCOAPODS: 1.15.2

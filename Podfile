@@ -13,6 +13,7 @@ target 'Copilot' do
   pod 'GoogleMaps', '8.3.1'
   pod 'SDWebImage'
   pod 'FSCalendar'
+  pod 'Firebase/Core'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
 
