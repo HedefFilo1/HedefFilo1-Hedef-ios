@@ -14,6 +14,7 @@ class UploadPhotoCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         label.apply(.themeS12B700)
+        label.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button")
     }
 
 }
