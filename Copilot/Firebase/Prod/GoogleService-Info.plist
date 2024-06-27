@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.solidict.copilot.dev</string>
+	<string>com.hedeffilo.copilotv2</string>
 	<key>PROJECT_ID</key>
 	<string>copilot-5e646</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:329377265494:ios:b6547b17c0349edfd848f7</string>
+	<string>1:329377265494:ios:03404fb981936314d848f7</string>
 </dict>
 </plist>

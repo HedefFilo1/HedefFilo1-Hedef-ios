@@ -27,7 +27,7 @@ class SplashViewController: UIViewController {
             view.addSubview(button)
         
         navigationController?.navigationBar.isHidden = true
-        viewModel.verifyToken()
+//        viewModel.verifyToken()
     }
     
     @IBAction func crashButtonTapped(_ sender: AnyObject) {

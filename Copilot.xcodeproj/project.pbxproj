@@ -589,6 +589,8 @@
 		48A10C982B9AE988004A2AE8 /* Strings+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Support.swift"; sourceTree = "<group>"; };
 		48A10C9C2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		48A10C9D2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportMenuItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		890249A72C2D50C400D79555 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		890249A82C2D526200D79555 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3HeaderCell.xib; sourceTree = "<group>"; };
 		8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3ContentCell.swift; sourceTree = "<group>"; };
 		8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw5Stp3ContentCell.xib; sourceTree = "<group>"; };
@@ -1116,8 +1118,6 @@
 		89E29B582B3AE4B300CCABAD /* ServicesItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesItemsCell.xib; sourceTree = "<group>"; };
 		89E29B5B2B3AE52900CCABAD /* VehicleServicesItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServicesItemCell.swift; sourceTree = "<group>"; };
 		89E29B5D2B3AE53000CCABAD /* VehicleServicesItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleServicesItemCell.xib; sourceTree = "<group>"; };
-		89EB93942C2AAC22005183B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		89EB93992C2AAF18005183B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89F23BBD2B299FDF0081DD85 /* PdfViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewController.swift; sourceTree = "<group>"; };
 		89F23BBF2B299FE60081DD85 /* PdfViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewerViewModel.swift; sourceTree = "<group>"; };
 		89F23BC12B29A1D10081DD85 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -3850,7 +3850,7 @@
 		89EB93972C2AAF04005183B5 /* Prod */ = {
 			isa = PBXGroup;
 			children = (
-				89EB93992C2AAF18005183B5 /* GoogleService-Info.plist */,
+				890249A82C2D526200D79555 /* GoogleService-Info.plist */,
 			);
 			path = Prod;
 			sourceTree = "<group>";
@@ -3858,7 +3858,7 @@
 		89EB93982C2AAF09005183B5 /* Dev */ = {
 			isa = PBXGroup;
 			children = (
-				89EB93942C2AAC22005183B5 /* GoogleService-Info.plist */,
+				890249A72C2D50C400D79555 /* GoogleService-Info.plist */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -4937,12 +4937,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 169;
+				CURRENT_PROJECT_VERSION = 170;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -4972,11 +4973,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 169;
+				CURRENT_PROJECT_VERSION = 170;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -5066,12 +5068,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 169;
+				CURRENT_PROJECT_VERSION = 170;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 88MUA8FE52;
+				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -5084,7 +5087,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidict.copilot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hedeffilo.copilotv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD_DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -5155,11 +5158,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 169;
-				DEVELOPMENT_TEAM = 88MUA8FE52;
+				CURRENT_PROJECT_VERSION = 170;
+				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -5172,7 +5176,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidict.copilot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hedeffilo.copilotv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
