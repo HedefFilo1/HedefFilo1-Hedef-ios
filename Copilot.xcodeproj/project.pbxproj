@@ -5163,7 +5163,7 @@
 				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
