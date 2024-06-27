@@ -589,8 +589,6 @@
 		48A10C982B9AE988004A2AE8 /* Strings+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Support.swift"; sourceTree = "<group>"; };
 		48A10C9C2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		48A10C9D2B9B00DB004A2AE8 /* SupportMenuItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportMenuItemCollectionViewCell.xib; sourceTree = "<group>"; };
-		890249A72C2D50C400D79555 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		890249A82C2D526200D79555 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8906390B2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccFlw5Stp3HeaderCell.xib; sourceTree = "<group>"; };
 		8906390E2B88CA24000A0819 /* AccFlw5Stp3ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccFlw5Stp3ContentCell.swift; sourceTree = "<group>"; };
 		8906390F2B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccFlw5Stp3ContentCell.xib; sourceTree = "<group>"; };
@@ -1046,6 +1044,8 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
+		89C7889D2C2D5BC800688A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Dev/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89C7889E2C2D5D9100688A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Prod/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89CC82CD2BA7366300263332 /* RequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewModel.swift; sourceTree = "<group>"; };
 		89CC82CF2BA7366900263332 /* RequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewController.swift; sourceTree = "<group>"; };
 		89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageCell.swift; sourceTree = "<group>"; };
@@ -3850,7 +3850,7 @@
 		89EB93972C2AAF04005183B5 /* Prod */ = {
 			isa = PBXGroup;
 			children = (
-				890249A82C2D526200D79555 /* GoogleService-Info.plist */,
+				89C7889D2C2D5BC800688A6E /* GoogleService-Info.plist */,
 			);
 			path = Prod;
 			sourceTree = "<group>";
@@ -3858,7 +3858,7 @@
 		89EB93982C2AAF09005183B5 /* Dev */ = {
 			isa = PBXGroup;
 			children = (
-				890249A72C2D50C400D79555 /* GoogleService-Info.plist */,
+				89C7889E2C2D5D9100688A6E /* GoogleService-Info.plist */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -4057,7 +4057,7 @@
 				766A77620FFA6C9D82F1FF96 /* [CP] Embed Pods Frameworks */,
 				89F6ADE82AC4ABB000994F18 /* SwiftLint Run Script */,
 				16BC4544DF2AA93E4F5E22F2 /* [CP] Copy Pods Resources */,
-				89EB939C2C2AAFC6005183B5 /* Firebase plist files */,
+				89EB939C2C2AAFC6005183B5 /* Setup Firebase Environment GoogleService-Info.plist */,
 				89EB939D2C2AAFFE005183B5 /* ShellScript */,
 			);
 			buildRules = (
@@ -4272,7 +4272,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copilot/Pods-Copilot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89EB939C2C2AAFC6005183B5 /* Firebase plist files */ = {
+		89EB939C2C2AAFC6005183B5 /* Setup Firebase Environment GoogleService-Info.plist */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4281,7 +4281,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Firebase plist files";
+			name = "Setup Firebase Environment GoogleService-Info.plist";
 			outputFileListPaths = (
 			);
 			outputPaths = (
