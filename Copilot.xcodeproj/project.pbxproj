@@ -582,6 +582,8 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		489D52AD2C2D678500B3D8C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		489D52AE2C2D678D00B3D8C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewModel.swift; sourceTree = "<group>"; };
 		48A10C902B9AE314004A2AE8 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		48A10C922B9AE36D004A2AE8 /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
@@ -1044,8 +1046,6 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
-		89C7889D2C2D5BC800688A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Dev/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		89C7889E2C2D5D9100688A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Prod/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89CC82CD2BA7366300263332 /* RequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewModel.swift; sourceTree = "<group>"; };
 		89CC82CF2BA7366900263332 /* RequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewController.swift; sourceTree = "<group>"; };
 		89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageCell.swift; sourceTree = "<group>"; };
@@ -3850,7 +3850,7 @@
 		89EB93972C2AAF04005183B5 /* Prod */ = {
 			isa = PBXGroup;
 			children = (
-				89C7889D2C2D5BC800688A6E /* GoogleService-Info.plist */,
+				489D52AE2C2D678D00B3D8C4 /* GoogleService-Info.plist */,
 			);
 			path = Prod;
 			sourceTree = "<group>";
@@ -3858,7 +3858,7 @@
 		89EB93982C2AAF09005183B5 /* Dev */ = {
 			isa = PBXGroup;
 			children = (
-				89C7889E2C2D5D9100688A6E /* GoogleService-Info.plist */,
+				489D52AD2C2D678500B3D8C4 /* GoogleService-Info.plist */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -4274,6 +4274,7 @@
 		};
 		89EB939C2C2AAFC6005183B5 /* Setup Firebase Environment GoogleService-Info.plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -4942,7 +4943,7 @@
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot Dev";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -4977,7 +4978,7 @@
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_CFBundleDisplayName = "Copilot Dev";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

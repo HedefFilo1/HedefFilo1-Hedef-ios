@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDL1AmnUnAOJbWRkrgWZeEJaSZRMJd_x0M</string>
+	<string>AIzaSyDGax6tyJ8DOdvHanPLQCWxWLQaYQeJK_Q</string>
 	<key>GCM_SENDER_ID</key>
-	<string>329377265494</string>
+	<string>849463520856</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.hedeffilo.copilotv2</string>
+	<string>com.solidict.copilot.dev</string>
 	<key>PROJECT_ID</key>
-	<string>copilot-5e646</string>
+	<string>copilot-5aa2a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>copilot-5e646.appspot.com</string>
+	<string>copilot-5aa2a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:329377265494:ios:03404fb981936314d848f7</string>
+	<string>1:849463520856:ios:1d3cb92d0f57df11b9242d</string>
 </dict>
 </plist>
