@@ -31,6 +31,7 @@ class NewsCell: UICollectionViewCell, Reusable {
     
     private func setupUI() {
         applyStyles()
+        setTexts()
     }
     
     private func applyStyles() {
@@ -42,6 +43,10 @@ class NewsCell: UICollectionViewCell, Reusable {
         titleLabel.apply(.blackS16B700)
         textLabel.apply(.greyS12R400)
         continueLabel.apply(.themeS12B700)
+    }
+    
+    func setTexts() {
+        continueLabel.text = App.getString(key: "copilotapp.campaign.read.more.button")
     }
     
     @IBAction func didTapContiune() {

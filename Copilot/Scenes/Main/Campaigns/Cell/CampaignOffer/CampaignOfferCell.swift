@@ -32,6 +32,7 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
     
     private func setupUI() {
         applyStyles()
+        setTexts()
     }
     
     private func applyStyles() {
@@ -44,6 +45,10 @@ class CampaignOfferCell: UICollectionViewCell, Reusable {
         textLabel.apply(.greyS12R400)
         setDateLabel(date: "31.12.2022")
         continueLabel.apply(.themeS12B700)
+    }
+    
+    func setTexts() {
+        continueLabel.text = App.getString(key: "copilotapp.campaign.read.more.button")
     }
     
     func setDateLabel(date: String) {
