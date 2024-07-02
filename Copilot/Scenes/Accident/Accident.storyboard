@@ -1277,8 +1277,8 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A9-MI-qkc">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servisler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fC-0H-dRx">
-                                        <rect key="frame" x="16" y="25" width="361" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servisler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9fC-0H-dRx">
+                                        <rect key="frame" x="60" y="25" width="317" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1324,7 +1324,7 @@
                                     <constraint firstItem="lng-b3-Guf" firstAttribute="leading" secondItem="3A9-MI-qkc" secondAttribute="leading" id="A15-Xc-x7T"/>
                                     <constraint firstAttribute="trailing" secondItem="lng-b3-Guf" secondAttribute="trailing" id="E4y-yj-RDL"/>
                                     <constraint firstItem="WZ9-zb-wm4" firstAttribute="leading" secondItem="3A9-MI-qkc" secondAttribute="leading" constant="16" id="Ka6-It-NiB"/>
-                                    <constraint firstItem="9fC-0H-dRx" firstAttribute="leading" secondItem="3A9-MI-qkc" secondAttribute="leading" constant="16" id="Rnm-Rb-fnN"/>
+                                    <constraint firstItem="9fC-0H-dRx" firstAttribute="leading" secondItem="3A9-MI-qkc" secondAttribute="leading" constant="60" id="Rnm-Rb-fnN"/>
                                     <constraint firstAttribute="trailing" secondItem="9fC-0H-dRx" secondAttribute="trailing" constant="16" id="TxW-NE-Pek"/>
                                     <constraint firstItem="WZ9-zb-wm4" firstAttribute="top" secondItem="9fC-0H-dRx" secondAttribute="bottom" constant="24" id="WAz-uO-T5f"/>
                                     <constraint firstItem="lng-b3-Guf" firstAttribute="top" secondItem="WZ9-zb-wm4" secondAttribute="bottom" constant="12" id="gOm-JS-ady"/>
