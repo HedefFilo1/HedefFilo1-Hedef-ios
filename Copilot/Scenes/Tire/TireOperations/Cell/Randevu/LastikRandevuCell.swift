@@ -47,6 +47,7 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyStyles()
+        setTexts()
     }
 
     func applyStyles() {
@@ -65,6 +66,11 @@ class LastikRandevuCell: UICollectionViewCell, Reusable {
         statusLabel.apply(.whiteS12B700)
         editLabel.apply(.whiteS12B700)
         editLabel.textColor = .theme
+    }
+    
+    func setTexts() {
+        randevuTitleLabel.text = App.getString(key: "copilotapp.servicemaintenance.tire.appointment.request")
+        editLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.edit.button")
     }
     
     @IBAction func didTapEdit() {

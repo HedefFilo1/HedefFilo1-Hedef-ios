@@ -13,13 +13,16 @@ protocol PastServicesItemsCellDelegate: AnyObject {
 
 class PastServicesItemsCell: UICollectionViewCell, Reusable {
     
-    var foundMessage = ""
+//    var foundMessage = ""
+    var category = ""
     var items: [PastService]? {
         didSet {
             let count = items?.count ?? 0
-            let text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.found")?.replacingOccurrences(of: "{number}", with: "") ?? ""
+            var text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.found") ?? ""
+            text = text.replacingOccurrences(of: "{number}", with: "")
+            text = text.replacingOccurrences(of: "{category}", with: category)
             titleLabel.text = "\(count) \(text)"
-            foundMessage = "\(count) \(text)"
+//            foundMessage = "\(count) \(text)"
             collectionView.reloadData()
         }
     }

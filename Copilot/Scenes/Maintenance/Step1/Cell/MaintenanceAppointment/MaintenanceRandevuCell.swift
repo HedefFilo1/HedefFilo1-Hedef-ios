@@ -51,9 +51,7 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyStyles()
-        
-        createRandevuLabel?.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
-        randevuButton.setTitle(Strings.createMaintenanceAppointment, for: .normal)
+        setTexts()
     }
 
     func applyStyles() {
@@ -73,6 +71,13 @@ class MaintenanceRandevuCell: UICollectionViewCell, Reusable {
         editLabel.apply(.whiteS12B700)
         editLabel.textColor = .theme
         createRandevuLabel?.apply(.blackS14R400)
+    }
+    
+    func setTexts() {
+        randevuTitleLabel.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.appointment.request")
+        createRandevuLabel?.text = App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.suggestion")
+        randevuButton.setTitle(Strings.createMaintenanceAppointment, for: .normal)
+        editLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.edit.button")
     }
     
     @IBAction func didTapEdit() {

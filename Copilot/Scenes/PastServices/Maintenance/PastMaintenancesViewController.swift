@@ -99,30 +99,24 @@ class PastMaintenancesViewController: UIViewController {
         let title =  Strings.pastMaintenanceOperations
         let message = App.getString(key: "copilotapp.pastservice.description") ?? ""
         let foundMessage = Strings.pastMaintenanceFound
-        var replaceTitle = Strings.care
+        
         switch tab {
         case 0:
             self.message = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.description") ?? ""
-            replaceTitle = Strings.care
             
         case 1:
             self.message = App.getString(key: "copilotapp.pastservicebreakdown.past.breakdown.operation.description") ?? ""
-            replaceTitle = Strings.fault
             
         case 2:
             self.message = App.getString(key: "copilotapp.pastservicetire.past.tire.operation.description") ?? ""
-            replaceTitle = Strings.lastik
             
         case 3:
             self.message = App.getString(key: "copilotapp.pastserviceaccidentdamage.past.accident.damage.operation.description") ?? ""
-            replaceTitle = Strings.accidentTab
             
         default:
             break
         }
-        headTitle = title.replacingOccurrences(of: Strings.care, with: replaceTitle)
-//        self.message = message.replacingOccurrences(of: "{category}", with: replaceTitle.lowercaseFirstLetter())
-        self.foundMessage = foundMessage.replacingOccurrences(of: Strings.care, with: replaceTitle)
+        headTitle = title.replacingOccurrences(of: Strings.care, with: getCategory(tab: currentTab))
         
     }
     
@@ -206,15 +200,35 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
             
         case 2:
             let cell: PastServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.foundMessage = foundMessage
+            cell.category = getCategory(tab: currentTab)
             cell.delegate = self
             cell.items = viewModel.items
-            
             return cell
             
         default:
             return UICollectionViewCell()
         }
+    }
+    
+    func getCategory(tab: Int) -> String {
+        var category = ""
+        switch tab {
+        case 0:
+            category = maintenanceButton.title(for: .normal) ?? ""
+            
+        case 1:
+            category = breakdownButton.title(for: .normal) ?? ""
+            
+        case 2:
+            category = tireButton.title(for: .normal) ?? ""
+            
+        case 3:
+            category = accidentButton.title(for: .normal) ?? ""
+       
+        default:
+            break
+        }
+        return category
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
