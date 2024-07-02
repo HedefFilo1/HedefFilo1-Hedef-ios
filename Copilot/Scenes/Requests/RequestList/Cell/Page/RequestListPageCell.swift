@@ -79,9 +79,10 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
             let task = Task(id: item.id ?? "",
                             subjectResult: item.recordType ?? "",
                             additionalInfo: item.webCategoryEnum ?? "",
-                            description: "",
+                            description: item.supplierName ?? "",
                             statusText: item.status,
-                            status: status)
+                            status: status, 
+                            statusTextResult: item.statusTextResult)
             delegate?.didSelect(item: task)
         }
     }

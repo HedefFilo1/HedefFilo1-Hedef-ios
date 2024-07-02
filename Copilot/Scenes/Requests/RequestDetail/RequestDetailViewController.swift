@@ -70,7 +70,7 @@ class RequestDetailViewController: UIViewController {
         guard let item = viewModel.item else { return }
         titleLabel.text = item.subjectResult
         statusView.backgroundColor = item.status.color
-        statusValueLabel.text = item.status.text
+        statusValueLabel.text = item.statusTextResult
         descriptionTextLabel.text = item.description
         addationalTextLabel.text = item.additionalInfo
     }

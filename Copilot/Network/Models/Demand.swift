@@ -38,4 +38,6 @@ struct Demand: Decodable {
     let statusEnum: DemandStatusType
     let webCategoryEnum: String?
     let recordType: String?
+    let statusTextResult: String?
+    let supplierName: String?
 }

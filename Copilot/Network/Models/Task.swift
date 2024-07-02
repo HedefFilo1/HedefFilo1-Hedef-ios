@@ -44,4 +44,5 @@ struct Task: Decodable {
     let description: String?
     let statusText: String
     let status: TaskStatus
+    let statusTextResult: String?
 }
