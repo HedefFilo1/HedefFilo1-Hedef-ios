@@ -54,7 +54,7 @@ class FiltersViewModel: FiltersViewModelType {
 //        Filter(tilte: "İtfaiye", subFilters: nil),
 //        Filter(tilte: "Trafik Bilgisi", subFilters: nil),
 //        Filter(tilte: "Bankalar", subFilters: nil),
-        Filter(id: 111, tilte: "Servisler", subFilters: nil)
+        Filter(id: 111, tilte: App.getString(key: "copilotapp.more.services") ?? "", subFilters: nil)
     ]
     
     func dismiss() {

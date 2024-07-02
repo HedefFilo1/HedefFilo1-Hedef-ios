@@ -170,5 +170,7 @@ extension NearMeViewController: GMSMapViewDelegate {
 }
 
 extension NearMeViewController: NearMeViewModelDelegate {
-    
+    func clearMap() {
+        mapView.clear()
+    }
 }

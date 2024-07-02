@@ -50,7 +50,7 @@ class FiltersViewController: SheetViewController {
         collectionView.register(cellType: SubFiltersCell.self)
         applyStyle()
         setTexts()
-        applyButton.isEnabled = false
+        applyButton.isEnabled = true
     }
     
     func applyStyle() {
@@ -101,7 +101,7 @@ class FiltersViewController: SheetViewController {
                 }
             }
         }
-        applyButton.isEnabled = false
+        applyButton.isEnabled = true
     }
 }
 

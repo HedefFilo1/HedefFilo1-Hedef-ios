@@ -75,18 +75,19 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         let cell: StandingItemCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.item {
         case 0:
-            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_process_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_process_request") ?? ""
             cell.point = 500
         case 1:
-            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.complete_satisfaction_survey")?.replacingOccurrences(of: "({point} Puan)", with: "")
+            cell.title = App.getString(key: "copilotapp.gamification.standings.complete_satisfaction_survey") ?? ""
             cell.point = 50
             
         case 2:
-            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_service_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
+
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_service_request") ?? ""
             cell.point = 100
             
         case 3:
-            cell.titleLabel.text = App.getString(key: "copilotapp.gamification.standings.create_product_request")?.replacingOccurrences(of: "({point} Puan)", with: "")
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_product_request") ?? ""
             cell.point = 200
             
         default:

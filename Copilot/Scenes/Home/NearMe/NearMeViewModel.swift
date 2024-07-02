@@ -16,6 +16,7 @@ protocol NearMeViewModelCoordinatorDelegate: AnyObject {
 protocol NearMeViewModelDelegate: AnyObject {
     func showError(title: String, message: String)
     func showSuppliersOnMap()
+    func clearMap()
 }
 
 protocol NearMeViewModelType: AnyObject {
@@ -61,24 +62,24 @@ class NearMeViewModel: NearMeViewModelType {
     }
     
     func getPlaces() {
-//        let searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
-//        let searchedTypes = ["bakery"]
-//        Loading.shared.show()
-//        APIService.getPlaces(lat: userLocation.coordinate.latitude,
-//                             lon: userLocation.coordinate.latitude,
-//                             types: searchedTypes) { [weak self] model, error in
-//            Loading.shared.hide()
-//            guard let self = self else { return }
-//            
-//            if let model = model {
-//                print(model)
-//            } else
-//            
-//            if let error = error {
-//                self.delegate?.showError(title: "can't load google",
-//                                         message: error.message)
-//            }
-//        }
+        //        let searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+        //        let searchedTypes = ["bakery"]
+        //        Loading.shared.show()
+        //        APIService.getPlaces(lat: userLocation.coordinate.latitude,
+        //                             lon: userLocation.coordinate.latitude,
+        //                             types: searchedTypes) { [weak self] model, error in
+        //            Loading.shared.hide()
+        //            guard let self = self else { return }
+        //            
+        //            if let model = model {
+        //                print(model)
+        //            } else
+        //            
+        //            if let error = error {
+        //                self.delegate?.showError(title: "can't load google",
+        //                                         message: error.message)
+        //            }
+        //        }
     }
     
     func openGoogleMap(latitude: Double, longitude: Double) {
@@ -104,9 +105,10 @@ class NearMeViewModel: NearMeViewModelType {
 
 extension NearMeViewModel: FiltersViewControllerDelegate {
     func didApply(filters: [Filter]) {
-        guard filters.count > 0 else { return }
-        if filters.filter({ $0.id == 111 }).count == 1 {
-            getSuppliers()
-        }
+        //        guard filters.count > 0 else { return }
+        //        if filters.filter({ $0.id == 111 }).count == 1 {
+        delegate?.clearMap()
+        getSuppliers()
+        //        }
     }
 }

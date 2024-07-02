@@ -9,14 +9,22 @@ import UIKit
 
 class StandingItemCell: UICollectionViewCell, Reusable {
     
+    var title: String = ""
     var point: Int = 0 {
         didSet {
-            let first = titleLabel.text ?? ""
-            let text = App.getString(key: "copilotapp.gamification.point")?.replacingOccurrences(of: "{point}", with: "") ?? ""
-            let second = "(\(point) \(text))"
-            let main = AttributedText(text: "\(first) \(second)", type: .blackS14M500)
-            let point = AttributedText(text: "\(second)", type: .blackS14R400)
-            titleLabel.attributedText = AttributedText.createMultiplePartString(mainText: main, texts: [point])
+            
+            let strArray = title.components(separatedBy: "(")
+            let firstText = strArray.first ?? ""
+           
+            var secondText = ""
+            if strArray.count == 2 {
+                secondText = strArray[1].replacingOccurrences(of: "{point}", with: "\(point)")
+            }
+            
+            let first = AttributedText(text: "\(firstText)", type: .blackS14M500)
+            let second = AttributedText(text: " (\(secondText)", type: .blackS14R400)
+            
+            titleLabel.attributedText = AttributedText.createString(texts: [first, second])
         }
     }
     @IBOutlet weak var titleLabel: UILabel!
