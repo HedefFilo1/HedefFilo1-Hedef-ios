@@ -169,11 +169,11 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-RI-AUL">
-                                <rect key="frame" x="0.0" y="227" width="393" height="395"/>
+                                <rect key="frame" x="0.0" y="227" width="393" height="445"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eh-Fs-CUI" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                <rect key="frame" x="16" y="694" width="361" height="48"/>
+                                <rect key="frame" x="16" y="744" width="361" height="48"/>
                                 <color key="backgroundColor" name="theme"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="erQ-MT-1Pb"/>
@@ -185,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-RZ-7Ln" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
-                                <rect key="frame" x="16" y="638" width="361" height="48"/>
+                                <rect key="frame" x="16" y="688" width="361" height="48"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="yCN-qX-DWD"/>
@@ -225,7 +225,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FXl-dN-SQ1" secondAttribute="trailing" constant="16" id="kQh-R9-3Fz"/>
                             <constraint firstItem="452-FA-ewG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="lSv-ZX-oeG"/>
                             <constraint firstItem="FXl-dN-SQ1" firstAttribute="top" secondItem="bjZ-N6-tyr" secondAttribute="bottom" constant="24" id="lb4-c1-mo5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9Eh-Fs-CUI" secondAttribute="bottom" constant="76" id="mqu-o3-4UV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9Eh-Fs-CUI" secondAttribute="bottom" constant="26" id="mqu-o3-4UV"/>
                             <constraint firstItem="bb8-RI-AUL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oRg-gb-HJS"/>
                             <constraint firstItem="t7d-mT-cpA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="sFF-97-hdD"/>
                             <constraint firstItem="zNl-IZ-nVb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="tch-jQ-a8t"/>

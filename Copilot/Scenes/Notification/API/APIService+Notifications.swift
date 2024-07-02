@@ -29,7 +29,11 @@ extension APIService {
     
     static func deleteNotifications(ids: [Int], completion: @escaping (Success?, APIResponseError?) -> Void) {
         let route = "user/notification"
-        let req = APIRequest<Success>(route: route, method: .delete, hasToken: true)
+        var params = [
+            "ids": ids
+        ]
+        
+        let req = APIRequest<Success>(route: route, method: .delete, parameters: params, hasToken: true)
         req.identifier = "deleteNotifications"
         req.log = loggingEnabled || true
         req.completion = completion

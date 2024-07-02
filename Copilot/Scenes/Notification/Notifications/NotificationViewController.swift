@@ -205,8 +205,8 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
                 }
             }
         } else {
-            if let id = viewModel.visibleItems?[indexPath.item].id {
-                viewModel.readNotification(id: id)
+            if let item = viewModel.visibleItems?[indexPath.item], !item.isRead {
+                viewModel.readNotification(id: item.id)
             }
         }
     }
