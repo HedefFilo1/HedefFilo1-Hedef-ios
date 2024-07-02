@@ -61,6 +61,7 @@ class ServiceFilterViewController: SheetViewController {
         districtList.title = Strings.district
         citiesList.valueLabel.text = Strings.choose
         districtList.valueLabel.text = Strings.choose
+        applyButton.setTitle(App.getString(key: "settings.language.apply"), for: .normal) 
     }
     
     func setButtonActivation() {

@@ -57,6 +57,7 @@ class FeedbackFilterViewController: SheetViewController {
         view.backgroundColor = .white
         titleLabel.text = App.getString(key: "copilotapp.help.feedback.process.demand_filter")
         filterList.title = viewModel.title
+        applyButton.setTitle(App.getString(key: "settings.language.apply"), for: .normal) 
     }
     
     func setButtonActivation() {

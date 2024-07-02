@@ -65,6 +65,7 @@ class PastServicesFilterViewController: SheetViewController {
         citiesList.valueLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select")
         districtList.valueLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select")
         dateChooseView.title = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.select.date") ?? ""
+        applyButton.setTitle(App.getString(key: "settings.language.apply"), for: .normal) 
     }
     
     func setButtonActivation() {
