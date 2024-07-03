@@ -70,11 +70,11 @@ class NearMeViewModel: NearMeViewModelType {
         //                             types: searchedTypes) { [weak self] model, error in
         //            Loading.shared.hide()
         //            guard let self = self else { return }
-        //            
+        //
         //            if let model = model {
         //                print(model)
         //            } else
-        //            
+        //
         //            if let error = error {
         //                self.delegate?.showError(title: "can't load google",
         //                                         message: error.message)
@@ -107,8 +107,10 @@ extension NearMeViewModel: FiltersViewControllerDelegate {
     func didApply(filters: [Filter]) {
         //        guard filters.count > 0 else { return }
         //        if filters.filter({ $0.id == 111 }).count == 1 {
-        delegate?.clearMap()
-        getSuppliers()
         //        }
+        delegate?.clearMap()
+        if filters.count > 0 {
+            getSuppliers()
+        }
     }
 }
