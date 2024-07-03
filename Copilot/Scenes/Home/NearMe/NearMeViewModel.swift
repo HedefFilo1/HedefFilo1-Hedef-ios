@@ -40,6 +40,7 @@ class NearMeViewModel: NearMeViewModelType {
     var mark: String = ""
     var suppliers: [Supplier]?
     var userLocation: CLLocation = CLLocation()
+    var didFilter = false
     
     func getSuppliers() {
         Loading.shared.show()
@@ -104,12 +105,19 @@ class NearMeViewModel: NearMeViewModelType {
 }
 
 extension NearMeViewModel: FiltersViewControllerDelegate {
+    
+    func didFiltered() -> Bool {
+        return didFilter
+    }
+    
     func didApply(filters: [Filter]) {
         //        guard filters.count > 0 else { return }
         //        if filters.filter({ $0.id == 111 }).count == 1 {
         //        }
+        didFilter = false
         delegate?.clearMap()
         if filters.count > 0 {
+            didFilter = true
             getSuppliers()
         }
     }

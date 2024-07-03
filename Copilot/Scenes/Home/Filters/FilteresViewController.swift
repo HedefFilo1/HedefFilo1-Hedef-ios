@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol FiltersViewControllerDelegate: AnyObject {
+    func didFiltered()-> Bool
     func didApply(filters: [Filter])
 }
 
@@ -37,6 +38,12 @@ class FiltersViewController: SheetViewController {
         super.viewDidLoad()
         setupUI()
         APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_NEAR_FILTER")
+        if let delegate, delegate.didFiltered() {
+            for (index, item) in viewModel.filters.enumerated() {
+                viewModel.filters[index].selected = true
+            }
+            collectionView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -40,7 +40,7 @@ class FiltersViewModel: FiltersViewModelType {
     // MARK: - Delegates
     weak var coordinatorDelegate: FiltersViewModelCoordinatorDelegate?
     weak var delegate: FiltersViewModelDelegate?
-    
+    var hasFiltered = false
     var filters: [Filter] = [
 //        Filter(tilte: "İspark", subFilters: nil),
 //        Filter(tilte: "Özel Otoparklar", subFilters: nil),
