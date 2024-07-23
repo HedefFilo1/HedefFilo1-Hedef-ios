@@ -12,7 +12,7 @@ class Network {
     static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
 #else
 //    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
-    static let baseUrl: String = "http://172.16.213.53:8080/"
+    static let baseUrl: String = "https://copilotappdeneme.hedeffilo.com/"
 #endif
     
     static func getBasicHeaders() -> [String: String] {
