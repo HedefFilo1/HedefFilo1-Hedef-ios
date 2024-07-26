@@ -82,6 +82,10 @@ class PdfViewerViewController: UIViewController {
     }
     
     @IBAction func didTapDowndload(_ sender: UIButton) {
+        if let url = viewModel.pdfDoc?.documentURL {
+            showShareView(url: url)
+            return
+        }
         if viewModel.document == nil, let url = URL(string: CodeStrings.vehicleGuidPdfUrl) {
             print(url.absoluteString)
             showShareView(url: url)
@@ -144,7 +148,6 @@ extension PdfViewerViewController: PdfViewerViewModelDelegate {
             pdfView.autoScales = true
             pdfView.displayDirection = .vertical
             pdfView.document = pdfDoc
-            downloadView.isHidden = true
         }
     }
     
