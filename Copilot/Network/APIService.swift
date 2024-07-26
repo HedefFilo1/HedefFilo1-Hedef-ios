@@ -263,7 +263,7 @@ class APIService {
     static func selectCampaign(id: Int, completion: @escaping (Success?, APIResponseError?) -> Void) {
         let route = "campaign/\(id)/select"
         let req = APIRequest<Success>(route: route, method: .post, hasToken: true)
-        req.identifier = "Get Campaign Detail"
+        req.identifier = "Join Campaign"
         req.log = loggingEnabled
         req.completion = completion
         req.start()
