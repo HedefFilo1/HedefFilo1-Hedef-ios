@@ -64,7 +64,7 @@ extension CampaignDetailViewController: CampaignDetailViewModelDelegate {
         titleLabel.text = viewModel.campaign?.title
         nameLabel.text = viewModel.campaign?.title
         textLabel.text = viewModel.campaign?.content
-        benefitButton.isHidden = viewModel.campaign?.campaignType == .news
+        benefitButton.isHidden = viewModel.campaign?.campaignType != .campaign
     }
     
     func showSuccessMessage() {
