@@ -43,6 +43,7 @@ class KMUsedViewController: SheetViewController {
     func setupUI() {
         kmTextField.keyboardType = .numberPad
         kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        kmTextField.delegate = self
         applyStyle()
         setTexts()
         saveButton.isEnabled = false
@@ -72,6 +73,16 @@ class KMUsedViewController: SheetViewController {
             Loading.shared.show(presentingView: loadingContainer)
             viewModel.setDistance(distance: distance)
         }
+    }
+}
+
+extension KMUsedViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard CharacterSet(charactersIn: "123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+            return false
+        }
+        return true
     }
 }
 

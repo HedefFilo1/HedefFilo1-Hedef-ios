@@ -71,8 +71,8 @@ class RequestDetailViewController: UIViewController {
         titleLabel.text = item.subjectResult
         statusView.backgroundColor = item.status.color
         statusValueLabel.text = item.statusTextResult
-        descriptionTextLabel.text = item.description
-        addationalTextLabel.text = item.additionalInfo
+        descriptionTextLabel.text = item.additionalInfo
+        addationalTextLabel.text = item.description
     }
     
     @IBAction func didTapBack() {

@@ -43,6 +43,7 @@ class MaintenanceStep2KMViewController: UIViewController {
         kmTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         kmTextField.addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)
         kmTextField.addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
+        kmTextField.delegate = self
     }
     
     func applyStyle() {
@@ -92,6 +93,16 @@ class MaintenanceStep2KMViewController: UIViewController {
         if let kmeter = Int(text) {
             viewModel.checkEligible(kmeter: kmeter)
         }
+    }
+}
+
+extension MaintenanceStep2KMViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard CharacterSet(charactersIn: "123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+            return false
+        }
+        return true
     }
 }
 
