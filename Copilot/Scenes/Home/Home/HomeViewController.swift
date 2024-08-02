@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
 #if DEV_DEBUG
 //        viewModel.goToStandings()
-        return
+//        return
         
         #endif
         viewModel.getVehicle(shoudGetCase: true)

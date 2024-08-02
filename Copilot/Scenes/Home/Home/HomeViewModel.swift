@@ -136,8 +136,8 @@ class HomeViewModel: HomeViewModelType {
             if let model = model {
                 self.last = model
                 self.delegate?.setLastMaintenance()
-                self.getTotalPoints()
             }
+            self.getTotalPoints()
         }
     }
     
