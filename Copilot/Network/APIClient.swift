@@ -40,11 +40,11 @@ final class APIClient {
                                      error: Error?) {
         
         defer {
-#if DEV_DEBUG || DEBUG
+// #if DEV_DEBUG || DEBUG
             if request.log {
                 request.printLog()
             }
-#endif
+// #endif
         }
         
         guard error == nil else {
@@ -66,9 +66,9 @@ final class APIClient {
             return
         }
         
-#if DEV_DEBUG || DEBUG
+// #if DEV_DEBUG || DEBUG
         request.jsonResponse = data?.prettyPrintedJSONString
-#endif
+// #endif
         
         request.statusCode = response.statusCode
         

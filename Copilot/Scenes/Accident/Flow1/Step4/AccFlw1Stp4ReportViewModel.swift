@@ -12,7 +12,7 @@ protocol AccFlw1Stp4ReportVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlw1Stp5Leaks()
     func goToGuide()
-    func showReportPdf(doc: PDFDocument)
+    func showReportPdf(doc: PDFDocument, title: String)
 }
 
 protocol AccFlw1Stp4ReportViewModelDelegate: BaseViewModelDelegate {
@@ -48,7 +48,8 @@ class AccFlw1Stp4ReportViewModel: AccFlw1Stp4ReportViewModelType {
     func showReportPdf() {
         if let urlDestination = Bundle.main.url(forResource: "samplePdfFile", withExtension: "pdf") {
             guard let pdf = PDFDocument(url: urlDestination) else { return }
-            coordinatorDelegate?.showReportPdf(doc: pdf)
+            let title = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.sample.minute") ?? ""
+            coordinatorDelegate?.showReportPdf(doc: pdf, title: title)
         }
         
     }

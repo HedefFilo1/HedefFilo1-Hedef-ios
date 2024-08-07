@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import PDFKit
 
 protocol AccFlw5Stp3DeclareVMCrdinatorDlgt: AnyObject {
     func getBack()
     func goToAccFlow5Step4()
     func goToGuide()
+    func showReportPdf(doc: PDFDocument, title: String)
 }
 
 protocol AccFlw5Stp3DeclareViewModelDelegate: BaseViewModelDelegate {
@@ -23,6 +25,7 @@ protocol AccFlw5Stp3DeclareViewModelType: AnyObject {
     func getBack()
     func goToAccFlow5Step4()
     func goToGuide()
+    func showExamplePdf()
 }
 
 class AccFlw5Stp3DeclareViewModel: AccFlw5Stp3DeclareViewModelType {
@@ -40,5 +43,14 @@ class AccFlw5Stp3DeclareViewModel: AccFlw5Stp3DeclareViewModelType {
     
     func goToGuide() {
         coordinatorDelegate?.goToGuide()
+    }
+    
+    func showExamplePdf() {
+        if let urlDestination = Bundle.main.url(forResource: "reportExample", withExtension: "pdf") {
+            guard let pdf = PDFDocument(url: urlDestination) else { return }
+            let title = App.getString(key: "copilotapp.accidentdamage.declaration.form.example.button") ?? ""
+            coordinatorDelegate?.showReportPdf(doc: pdf, title: title)
+        }
+        
     }
 }

@@ -54,12 +54,12 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
                                AccidentGuideVMCoordinatorDelegate,
                                PdfViewerViewModelCoordinatorDelegate {
     
-    func showReportPdf(doc: PDFDocument) {
+    func showReportPdf(doc: PDFDocument, title: String) {
         let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()
         viewController.viewModel.pdfDoc = doc
         viewController.viewModel.coordinatorDelegate = self
-        viewController.viewModel.title = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.sample.minute")
+        viewController.viewModel.title = title
         navigationController.pushViewController(viewController, animated: true)
     }
     
