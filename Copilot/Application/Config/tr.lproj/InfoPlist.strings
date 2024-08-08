@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  Copilot
+
+  Created by Jamal on 8/8/24.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Please allow to see Nearby Locations in your current Location.";
+
+"NSPhotoLibraryUsageDescription" = "Geting permission from user with reason";
+
+"NSPhotoLibraryAddUsageDescription" = ""
