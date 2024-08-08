@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F1F3022F204D116674B43A9 /* Pods_Copilot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */; };
+		481686AB2C64EACE00E5A5F0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481686AA2C64EACE00E5A5F0 /* Configuration.swift */; };
+		481686AD2C64EAF200E5A5F0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481686AC2C64EAF200E5A5F0 /* Environment.swift */; };
+		481686B02C64EB3800E5A5F0 /* Bundle+EnvironmentVariableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481686AF2C64EB3800E5A5F0 /* Bundle+EnvironmentVariableKey.swift */; };
 		48A10C8F2B9AE2AE004A2AE8 /* SupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */; };
 		48A10C912B9AE315004A2AE8 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A10C902B9AE314004A2AE8 /* SupportViewController.swift */; };
 		48A10C932B9AE36D004A2AE8 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A10C922B9AE36D004A2AE8 /* Support.storyboard */; };
@@ -583,6 +586,11 @@
 		0C642FD017458DDF2F8A4D5C /* Pods_Copilot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copilot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.release production.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.release production.xcconfig"; sourceTree = "<group>"; };
 		43C3A38552BFE21CD6BE7363 /* Pods-Copilot.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copilot.debug development.xcconfig"; path = "Target Support Files/Pods-Copilot/Pods-Copilot.debug development.xcconfig"; sourceTree = "<group>"; };
+		481686A62C64E77500E5A5F0 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		481686A72C64E77E00E5A5F0 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		481686AA2C64EACE00E5A5F0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		481686AC2C64EAF200E5A5F0 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		481686AF2C64EB3800E5A5F0 /* Bundle+EnvironmentVariableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+EnvironmentVariableKey.swift"; sourceTree = "<group>"; };
 		489D52AD2C2D678500B3D8C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		489D52AE2C2D678D00B3D8C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48A10C8E2B9AE2AE004A2AE8 /* SupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewModel.swift; sourceTree = "<group>"; };
@@ -1190,6 +1198,15 @@
 				31B62A1858380F53F7CF8065 /* Pods-Copilot.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		481686AE2C64EB1100E5A5F0 /* Xcode Configs */ = {
+			isa = PBXGroup;
+			children = (
+				481686A62C64E77500E5A5F0 /* Development.xcconfig */,
+				481686A72C64E77E00E5A5F0 /* Production.xcconfig */,
+			);
+			path = "Xcode Configs";
 			sourceTree = "<group>";
 		};
 		48A10C8D2B9AE296004A2AE8 /* Support */ = {
@@ -2586,11 +2603,10 @@
 		8989DD9D2AC493BF0035CD99 /* Copilot */ = {
 			isa = PBXGroup;
 			children = (
-				89EB93962C2AAEF9005183B5 /* Firebase */,
 				894E20DA2AC6A51900F69C27 /* Copilot.entitlements */,
-				899CF5662AE18CAE006D85E4 /* Network */,
 				89C55DC92AC4A4E000C3066A /* Application */,
 				89C55DCB2AC4A52000C3066A /* Scenes */,
+				899CF5662AE18CAE006D85E4 /* Network */,
 				89C55DCD2AC4A54200C3066A /* Common */,
 				89C55DF32AC4A89900C3066A /* Supporting Files */,
 			);
@@ -3319,10 +3335,11 @@
 		89C55DCA2AC4A4FB00C3066A /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				892A8D1C2AC6052F0020C1C4 /* Images.swift */,
-				89DAB8092AC73BD50098BA67 /* CodeStrings.swift */,
-				892A8D172AC4ED870020C1C4 /* Strings */,
 				8989DDAC2AC493C00035CD99 /* Info.plist */,
+				481686AE2C64EB1100E5A5F0 /* Xcode Configs */,
+				89EB93962C2AAEF9005183B5 /* Firebase */,
+				481686AA2C64EACE00E5A5F0 /* Configuration.swift */,
+				481686AC2C64EAF200E5A5F0 /* Environment.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -3421,6 +3438,7 @@
 			children = (
 				89C55DEB2AC4A66300C3066A /* Collection+Safe.swift */,
 				89C55DEA2AC4A66300C3066A /* String+Ext.swift */,
+				481686AF2C64EB3800E5A5F0 /* Bundle+EnvironmentVariableKey.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -3456,6 +3474,9 @@
 		89C55DF32AC4A89900C3066A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				892A8D1C2AC6052F0020C1C4 /* Images.swift */,
+				89DAB8092AC73BD50098BA67 /* CodeStrings.swift */,
+				892A8D172AC4ED870020C1C4 /* Strings */,
 				8936B72C2C118ED1003A4683 /* samplePdfFile.pdf */,
 				892A8D102AC4EAE00020C1C4 /* Fonts */,
 				8989DDA72AC493C00035CD99 /* Assets.xcassets */,
@@ -4293,7 +4314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Debug Production\" ] || [ \"${CONFIGURATION}\" == \"Release Production\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n\n";
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Application/Config/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Application/Config/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Debug Production\" ] || [ \"${CONFIGURATION}\" == \"Release Production\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n\n";
 		};
 		89EB939D2C2AAFFE005183B5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4445,6 +4466,7 @@
 				89950AED2B812D65004537D2 /* AccidentServiceDetailViewController.swift in Sources */,
 				89431DAB2B972A6900A6F6B8 /* ReqFlw2Stp3VehicleViewModel.swift in Sources */,
 				8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */,
+				481686B02C64EB3800E5A5F0 /* Bundle+EnvironmentVariableKey.swift in Sources */,
 				8970D1622BFF7F0D00A65EDD /* WarningGuideCell.swift in Sources */,
 				893AC4922BAAFFB0003FB9E6 /* FAQQeustionViewController.swift in Sources */,
 				89B07A4E2AD8817A00D3BE80 /* RightToLeftPresentation.swift in Sources */,
@@ -4559,6 +4581,7 @@
 				8916C25C2BB5EE560006B2E9 /* PastMaintenancesViewController.swift in Sources */,
 				893259A62B9B1B15001E4262 /* ReqFlw6Stp3InspectionViewController.swift in Sources */,
 				89B07A422AD85EC900D3BE80 /* TabBarView.swift in Sources */,
+				481686AD2C64EAF200E5A5F0 /* Environment.swift in Sources */,
 				89F23BC22B29A1D10081DD85 /* BaseViewModelDelegate.swift in Sources */,
 				896CB3472AD5BDA50048025A /* HomeViewModel.swift in Sources */,
 				8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */,
@@ -4750,6 +4773,7 @@
 				893AC4A92BAB476B003FB9E6 /* SupportGuideCell.swift in Sources */,
 				8917F55A2B3A04EB00681AD3 /* Flow3Step3ConfirmViewController.swift in Sources */,
 				891BFB752B34C563009BD793 /* TireOperationsViewModel.swift in Sources */,
+				481686AB2C64EACE00E5A5F0 /* Configuration.swift in Sources */,
 				893AC4B12BAB4C25003FB9E6 /* SupportGuideDetailViewModel.swift in Sources */,
 				892A8D082AC4E5820020C1C4 /* OnboardingCell.swift in Sources */,
 				89B191022B87AE0D00AC1171 /* AccFlw4SelectPhotoCell.swift in Sources */,
@@ -4822,6 +4846,7 @@
 /* Begin XCBuildConfiguration section */
 		8989DDAD2AC493C00035CD99 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481686A62C64E77500E5A5F0 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -4882,6 +4907,7 @@
 		};
 		8989DDAE2AC493C00035CD99 /* Release Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481686A62C64E77500E5A5F0 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -4947,7 +4973,7 @@
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -4984,7 +5010,7 @@
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -5011,6 +5037,7 @@
 		};
 		89C55DC52AC496ED00C3066A /* Debug Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481686A72C64E77E00E5A5F0 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -5082,7 +5109,7 @@
 				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Copilot prod";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -5109,6 +5136,7 @@
 		};
 		89C55DC72AC496FF00C3066A /* Release Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481686A72C64E77E00E5A5F0 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -5173,7 +5201,7 @@
 				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Copilot;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see Nearby Locations in your current Location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

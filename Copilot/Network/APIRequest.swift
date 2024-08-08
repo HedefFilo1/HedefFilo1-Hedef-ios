@@ -8,12 +8,7 @@ import Foundation
 import SystemConfiguration
 
 class Network {
-#if DEV_DEBUG || DEV_RELEASE
-    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
-#else
-//    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
-    static let baseUrl: String = "https://copilotappdeneme.hedeffilo.com/"
-#endif
+    static let baseUrl: String = "https://\(Configuration.shared.baseURL)"
     
     static func getBasicHeaders() -> [String: String] {
         let language = Persistence.language ?? CodeStrings.turkish

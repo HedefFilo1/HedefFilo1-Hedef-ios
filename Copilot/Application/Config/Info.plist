@@ -33,5 +33,13 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please allow to see Nearby Locations in your current Location.</string>
+    <key>CONFIGURATION</key>
+    <string>$(CONFIGURATION)</string>
+    <key>APP_NAME</key>
+    <string>$(APP_NAME)</string>
+    <key>BASE_URL</key>
+    <string>$(BASE_URL)</string>
+    <key>CFBundleDisplayName</key>
+    <string>$(APP_NAME)</string>
 </dict>
 </plist>

@@ -1,0 +1,12 @@
+//
+//  Production.xcconfig
+//  Copilot
+//
+//  Created by Fikri Can Cankurtaran on 8.08.2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = Copilot
+BASE_URL = copilotappdeneme.hedeffilo.com/
