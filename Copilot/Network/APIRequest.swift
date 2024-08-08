@@ -8,7 +8,7 @@ import Foundation
 import SystemConfiguration
 
 class Network {
-#if DEV_DEBUG
+#if DEV_DEBUG || DEV_RELEASE
     static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
 #else
 //    static let baseUrl: String = "https://copilotapp.hedeffilotest.com/"
