@@ -115,6 +115,7 @@
                         <outlet property="callHelpCenterButton" destination="Uej-DA-t4p" id="gqR-JZ-4dt"/>
                         <outlet property="contentView" destination="QYa-tS-QvC" id="uRp-NW-GFq"/>
                         <outlet property="descriptionLabel" destination="De9-1f-MQr" id="CID-r4-Rhl"/>
+                        <outlet property="liveSupportButton" destination="mer-Rp-x7C" id="cm9-2p-cp6"/>
                         <outlet property="menuListCollectionView" destination="qlv-Df-gOx" id="uty-aQ-kD3"/>
                         <outlet property="titleLabel" destination="0YL-VV-M8u" id="LS2-J7-g2j"/>
                     </connections>
@@ -773,6 +774,7 @@
                         <outlet property="callHelpCenterButton" destination="Qxs-3S-BUp" id="nXp-5u-Bir"/>
                         <outlet property="collectionView" destination="GHC-az-Igd" id="xQt-ue-SAx"/>
                         <outlet property="contentView" destination="a8l-gr-SyR" id="a0f-X3-BcO"/>
+                        <outlet property="liveSupportButton" destination="fj7-dO-lnS" id="WVh-md-eui"/>
                         <outlet property="titleLabel" destination="EsW-n7-qpF" id="k5l-z8-zRy"/>
                     </connections>
                 </viewController>

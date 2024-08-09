@@ -17,7 +17,7 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     // MARK: - UIButtons
     @IBOutlet weak var callHelpCenterButton: UIButton!
-    
+    @IBOutlet weak var liveSupportButton: UIButton!
     // MARK: - UICollectionView
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -43,6 +43,10 @@ class FeedbackViewController: UIViewController {
         setBasicViews()
         applyStyles()
         setTexts()
+        
+        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
+            liveSupportButton.isHidden = true
+        }
     }
     
     private func setupCollectionView() {

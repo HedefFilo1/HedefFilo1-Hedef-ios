@@ -17,6 +17,7 @@ class SupportViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     // MARK: - UIButtons
     @IBOutlet weak var callHelpCenterButton: UIButton!
+    @IBOutlet weak var liveSupportButton: UIButton!
     
     // MARK: - UICollectionView
     @IBOutlet weak var menuListCollectionView: UICollectionView!
@@ -56,6 +57,9 @@ class SupportViewController: UIViewController {
         setBasicViews()
         applyStyles()
         configure()
+        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
+            liveSupportButton.isHidden = true
+        }
     }
     
     private func setupCollectionView() {
