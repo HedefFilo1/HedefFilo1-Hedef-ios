@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class App {
     
@@ -91,5 +92,38 @@ extension App {
         let language = Persistence.language ?? CodeStrings.turkish
         let strLang = language == CodeStrings.english ? "en": "tr"
         return contentStrings?.filter({$0.strKey == key && $0.lang == strLang}).first?.strValue
+    }
+}
+
+// MARK: Photo Library Permission
+extension App {
+    static func checkPhotoLibraryPermission(completion: @escaping() -> Void) {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            if status != .authorized {
+                let alertController: UIAlertController = {
+                    
+                    let controller = UIAlertController(
+                        title: Strings.warning,
+                        message: Strings.noCameraAccessMessage,
+                        preferredStyle: .alert)
+                    
+                    let action = UIAlertAction(title: Strings.settings, style: .default) { _ in
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                    }
+                    
+                    controller.addAction(action)
+                    return controller
+                }()
+                DispatchQueue.main.async {
+                    App.window.rootViewController?.present(alertController, animated: true)
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+        
     }
 }

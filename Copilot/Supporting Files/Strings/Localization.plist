@@ -3487,6 +3487,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Minute Sample</string>
         </dict>
         
+        <key>noCameraAccessMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Kamera erişim yetkiniz yok</string>
+            <key>en</key>
+            <string>You don't have camera access</string>
+        </dict>
+        
         <key></key>
         <dict>
             <key>tr</key>

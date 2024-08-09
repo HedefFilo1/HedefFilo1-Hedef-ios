@@ -166,6 +166,7 @@
 		8936B72D2C118ED1003A4683 /* samplePdfFile.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8936B72C2C118ED1003A4683 /* samplePdfFile.pdf */; };
 		8936CC742C63BA2700894B7F /* reportExample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8936CC732C63BA2700894B7F /* reportExample.pdf */; };
 		8936CC8E2C65118000894B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8936CC902C65118000894B7F /* InfoPlist.strings */; };
+		8936CC932C660C4100894B7F /* Strings+Part4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936CC922C660C4100894B7F /* Strings+Part4.swift */; };
 		893AC48E2BAAFA45003FB9E6 /* APIService+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */; };
 		893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */; };
 		893AC4922BAAFFB0003FB9E6 /* FAQQeustionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */; };
@@ -751,6 +752,7 @@
 		8936CC8B2C65112600894B7F /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8936CC8F2C65118000894B7F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8936CC912C65118300894B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8936CC922C660C4100894B7F /* Strings+Part4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Part4.swift"; sourceTree = "<group>"; };
 		893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Support.swift"; sourceTree = "<group>"; };
 		893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestion.swift; sourceTree = "<group>"; };
 		893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQeustionViewController.swift; sourceTree = "<group>"; };
@@ -1606,6 +1608,7 @@
 				8986FCBC2AFCC802006057EA /* Strings+Part1.swift */,
 				897835DC2B455FB300C63AA7 /* Strings+Part2.swift */,
 				89950AE52B8116C7004537D2 /* Strings+Part3.swift */,
+				8936CC922C660C4100894B7F /* Strings+Part4.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -4386,6 +4389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8936CC932C660C4100894B7F /* Strings+Part4.swift in Sources */,
 				899BF5B62B20C1640058123C /* Transition.swift in Sources */,
 				48A10C952B9AE37E004A2AE8 /* SupportCoordinator.swift in Sources */,
 				89DF05372BACCC4700C8B37E /* FeedbackCell.swift in Sources */,

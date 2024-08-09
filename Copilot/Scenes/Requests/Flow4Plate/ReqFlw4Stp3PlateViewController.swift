@@ -221,11 +221,13 @@ class ReqFlw4Stp3PlateViewController: UIViewController {
         //        documentPicker.delegate = self
         //        present(documentPicker, animated: true, completion: nil)
         
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.allowsEditing = false
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+        App.checkPhotoLibraryPermission { [weak self] in
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.allowsEditing = false
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.delegate = self
+            self?.present(imagePickerController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func didTapCloseFile() {
