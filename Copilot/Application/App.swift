@@ -104,14 +104,17 @@ extension App {
                     
                     let controller = UIAlertController(
                         title: Strings.warning,
-                        message: Strings.noCameraAccessMessage,
+                        message: Strings.noPhotoLibraryAccessMessage,
                         preferredStyle: .alert)
                     
                     let action = UIAlertAction(title: Strings.settings, style: .default) { _ in
                         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
                     }
                     
+                    let action2 = UIAlertAction(title: Strings.okay, style: .default)
+                    
                     controller.addAction(action)
+                    controller.addAction(action2)
                     return controller
                 }()
                 DispatchQueue.main.async {

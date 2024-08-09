@@ -260,6 +260,10 @@ extension Strings {
         return localized(string: "noCameraAccessMessage")
     }
     
+    static var noPhotoLibraryAccessMessage: String {
+        return localized(string: "noPhotoLibraryAccessMessage")
+    }
+    
     static var deleteMyAccount: String {
         return localized(string: "deleteMyAccount")
     }

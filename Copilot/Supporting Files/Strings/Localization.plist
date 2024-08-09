@@ -3495,6 +3495,14 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>You don't have camera access</string>
         </dict>
         
+        <key>noPhotoLibraryAccessMessage</key>
+        <dict>
+            <key>tr</key>
+            <string>Fotoğraf Kitaplığı erişiminiz yok</string>
+            <key>en</key>
+            <string>You don't have Photo Library access</string>
+        </dict>
+        
         <key>deleteMyAccount</key>
         <dict>
             <key>tr</key>
