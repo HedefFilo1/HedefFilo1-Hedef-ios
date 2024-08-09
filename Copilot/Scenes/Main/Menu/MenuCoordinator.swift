@@ -102,6 +102,13 @@ extension MenuCoordinator: MenuViewModelCoordinatorDelegate {
         coordinator.start()
     }
     
+    func presentDeleteAccount() {
+        let controller: DeleteAccountViewController = UIStoryboard(storyboard: .profile).instantiateViewController()
+        let viewModel = DeleteAccountViewModel()
+        viewModel.coordinatorDelegate = self
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
+    }
 }
 
 extension MenuCoordinator: CampaignsViewModelCoordinatorDelegate {
@@ -121,7 +128,8 @@ extension MenuCoordinator: CampaignDetailVMCoordinatorDelegate {
 }
 
 extension MenuCoordinator: DocumentsViewModelCoordinatorDelegate,
-                           DocumentViewModelCoordinatorDelegate {
+                           DocumentViewModelCoordinatorDelegate,
+                           DeleteAccountVMCoordinatorDelegate {
     func goToDocument(document: Document) {
         let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
         viewController.viewModel = PdfViewerViewModel()

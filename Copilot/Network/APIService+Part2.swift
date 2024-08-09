@@ -151,4 +151,16 @@ extension APIService {
         req.completion = completion
         req.start()
     }
+    
+    static func deleteMyAccount(completion: @escaping (Success?, APIResponseError?) -> Void) {
+        let route = "copilot/delete"
+        let req = APIRequest<Success>(route: route,
+                                      method: .delete,
+                                      hasToken: true)
+        
+        req.identifier = "Delete My Account"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
 }

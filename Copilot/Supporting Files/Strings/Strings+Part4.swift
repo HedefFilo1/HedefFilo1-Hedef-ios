@@ -259,4 +259,12 @@ extension Strings {
     static var noCameraAccessMessage: String {
         return localized(string: "noCameraAccessMessage")
     }
+    
+    static var deleteMyAccount: String {
+        return localized(string: "deleteMyAccount")
+    }
+    
+    static var deleteAccountDescription: String {
+        return localized(string: "deleteAccountDescription")
+    }
 }

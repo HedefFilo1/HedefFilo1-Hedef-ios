@@ -167,6 +167,8 @@
 		8936CC742C63BA2700894B7F /* reportExample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8936CC732C63BA2700894B7F /* reportExample.pdf */; };
 		8936CC8E2C65118000894B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8936CC902C65118000894B7F /* InfoPlist.strings */; };
 		8936CC932C660C4100894B7F /* Strings+Part4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936CC922C660C4100894B7F /* Strings+Part4.swift */; };
+		8936CC962C66153500894B7F /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936CC952C66153500894B7F /* DeleteAccountViewController.swift */; };
+		8936CC982C66155900894B7F /* DeleteAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936CC972C66155900894B7F /* DeleteAccountViewModel.swift */; };
 		893AC48E2BAAFA45003FB9E6 /* APIService+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */; };
 		893AC4902BAAFB91003FB9E6 /* FAQQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */; };
 		893AC4922BAAFFB0003FB9E6 /* FAQQeustionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */; };
@@ -753,6 +755,8 @@
 		8936CC8F2C65118000894B7F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8936CC912C65118300894B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8936CC922C660C4100894B7F /* Strings+Part4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Part4.swift"; sourceTree = "<group>"; };
+		8936CC952C66153500894B7F /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		8936CC972C66155900894B7F /* DeleteAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewModel.swift; sourceTree = "<group>"; };
 		893AC48D2BAAFA45003FB9E6 /* APIService+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Support.swift"; sourceTree = "<group>"; };
 		893AC48F2BAAFB91003FB9E6 /* FAQQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQuestion.swift; sourceTree = "<group>"; };
 		893AC4912BAAFFB0003FB9E6 /* FAQQeustionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQQeustionViewController.swift; sourceTree = "<group>"; };
@@ -1861,6 +1865,15 @@
 				8936593E2B7BACBD00A657B0 /* TireOperationTireCell.swift */,
 			);
 			path = Tire;
+			sourceTree = "<group>";
+		};
+		8936CC942C6614E000894B7F /* DeleteAccount */ = {
+			isa = PBXGroup;
+			children = (
+				8936CC972C66155900894B7F /* DeleteAccountViewModel.swift */,
+				8936CC952C66153500894B7F /* DeleteAccountViewController.swift */,
+			);
+			path = DeleteAccount;
 			sourceTree = "<group>";
 		};
 		893AC4932BAAFFB6003FB9E6 /* FAQQeustion */ = {
@@ -3116,6 +3129,7 @@
 				89B07A542AD9362900D3BE80 /* ProfileViewModel.swift */,
 				89B07A562AD9363100D3BE80 /* ProfileViewController.swift */,
 				89941D572AEEF0BA00CEFD0E /* PasswordReset */,
+				8936CC942C6614E000894B7F /* DeleteAccount */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -4685,6 +4699,7 @@
 				8976B03E2B73CF2600E7C58F /* BrkdwnFlw2Stp3WarningLightsViewModel.swift in Sources */,
 				899D34B32BAF908B0090DA7B /* FeedbackCommentViewModel.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
+				8936CC982C66155900894B7F /* DeleteAccountViewModel.swift in Sources */,
 				89950ACE2B7FBAA2004537D2 /* UploadPhotoCell.swift in Sources */,
 				8932599A2B9A7229001E4262 /* ReqFlw4Stp3PlateViewController.swift in Sources */,
 				89F67DA72B7D39920040DF15 /* BreakdownRandevuCell.swift in Sources */,
@@ -4726,6 +4741,7 @@
 				89E0458F2B04F51500745E73 /* DocmentViewModel.swift in Sources */,
 				89B903552BB3A89800E7301C /* NotificationsViewModel.swift in Sources */,
 				89C5CA8D2BA3033E0099836B /* CitiesList.swift in Sources */,
+				8936CC962C66153500894B7F /* DeleteAccountViewController.swift in Sources */,
 				89950AB52B7FA026004537D2 /* AccFlw1Stp3AgreementViewController.swift in Sources */,
 				89C55DE02AC4A5FF00C3066A /* UILabel+EXT.swift in Sources */,
 				893259952B9A6887001E4262 /* ReqFlw3Stp3HGSViewController.swift in Sources */,

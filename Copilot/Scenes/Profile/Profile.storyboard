@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -404,15 +404,141 @@
             </objects>
             <point key="canvasLocation" x="614.50381679389307" y="3.5211267605633805"/>
         </scene>
+        <!--Delete Account View Controller-->
+        <scene sceneID="4Jg-TB-48L">
+            <objects>
+                <viewController storyboardIdentifier="DeleteAccountViewController" id="Cxf-gy-cwN" customClass="DeleteAccountViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wz9-fr-wRo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xD-X6-16j">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ro-Lc-EG1">
+                                        <rect key="frame" x="166" y="24" width="61" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to delete your account?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbO-Es-eXp">
+                                        <rect key="frame" x="16" y="68.333333333333329" width="361" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MnA-Rw-lmT">
+                                        <rect key="frame" x="345" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="1N5-BC-J60"/>
+                                            <constraint firstAttribute="height" constant="24" id="S6B-wu-Qmx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvn-rW-VQP">
+                                        <rect key="frame" x="337" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="6Rg-aA-SAB"/>
+                                            <constraint firstAttribute="height" constant="40" id="cRv-Ha-ko9"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapClose" destination="Cxf-gy-cwN" eventType="touchUpInside" id="C0e-9M-Hi8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPG-mw-t3A" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="112.66666666666666" width="361" height="56"/>
+                                        <color key="backgroundColor" name="exactGrey"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="VER-ag-wyZ"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" name="fieldDescription"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapConfirm" destination="Cxf-gy-cwN" eventType="touchUpInside" id="E6z-aG-QNZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01L-CE-z8D" customClass="CPLightButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="184.66666666666666" width="361" height="56"/>
+                                        <color key="backgroundColor" name="exactGrey"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="YX6-7z-DGC"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" name="fieldDescription"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapClose" destination="Cxf-gy-cwN" eventType="touchUpInside" id="QVt-Au-pGh"/>
+                                        </connections>
+                                    </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPi-Ey-15c">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="255"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="255" id="bBr-mI-HoT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QPi-Ey-15c" firstAttribute="leading" secondItem="3xD-X6-16j" secondAttribute="leading" id="0W1-Qp-Jpq"/>
+                                    <constraint firstItem="01L-CE-z8D" firstAttribute="leading" secondItem="3xD-X6-16j" secondAttribute="leading" constant="16" id="1nR-mI-PNb"/>
+                                    <constraint firstAttribute="trailing" secondItem="QPi-Ey-15c" secondAttribute="trailing" id="1qF-VM-nTC"/>
+                                    <constraint firstItem="01L-CE-z8D" firstAttribute="top" secondItem="jPG-mw-t3A" secondAttribute="bottom" constant="16" id="5hl-i3-Km8"/>
+                                    <constraint firstAttribute="trailing" secondItem="MnA-Rw-lmT" secondAttribute="trailing" constant="24" id="BLx-RU-3lh"/>
+                                    <constraint firstItem="jPG-mw-t3A" firstAttribute="leading" secondItem="3xD-X6-16j" secondAttribute="leading" constant="16" id="LfQ-vH-ixG"/>
+                                    <constraint firstItem="LbO-Es-eXp" firstAttribute="leading" secondItem="3xD-X6-16j" secondAttribute="leading" constant="16" id="Qf7-vr-0KD"/>
+                                    <constraint firstItem="jvn-rW-VQP" firstAttribute="centerX" secondItem="MnA-Rw-lmT" secondAttribute="centerX" id="aC9-96-C9h"/>
+                                    <constraint firstAttribute="trailing" secondItem="LbO-Es-eXp" secondAttribute="trailing" constant="16" id="c3y-0l-BzX"/>
+                                    <constraint firstItem="jvn-rW-VQP" firstAttribute="centerY" secondItem="MnA-Rw-lmT" secondAttribute="centerY" id="cRc-YK-L2H"/>
+                                    <constraint firstAttribute="trailing" secondItem="jPG-mw-t3A" secondAttribute="trailing" constant="16" id="exc-f7-8xa"/>
+                                    <constraint firstItem="MnA-Rw-lmT" firstAttribute="top" secondItem="3xD-X6-16j" secondAttribute="top" constant="24" id="gbw-Do-mmO"/>
+                                    <constraint firstItem="2ro-Lc-EG1" firstAttribute="top" secondItem="3xD-X6-16j" secondAttribute="top" constant="24" id="jTl-9d-7vd"/>
+                                    <constraint firstItem="QPi-Ey-15c" firstAttribute="top" secondItem="3xD-X6-16j" secondAttribute="top" id="jdB-b3-r4Z"/>
+                                    <constraint firstItem="jPG-mw-t3A" firstAttribute="top" secondItem="LbO-Es-eXp" secondAttribute="bottom" constant="24" id="l3x-Xg-sZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="01L-CE-z8D" secondAttribute="trailing" constant="16" id="mtg-oR-cEE"/>
+                                    <constraint firstItem="2ro-Lc-EG1" firstAttribute="top" secondItem="jvn-rW-VQP" secondAttribute="bottom" constant="-32" id="s0S-M9-i6c"/>
+                                    <constraint firstItem="LbO-Es-eXp" firstAttribute="top" secondItem="2ro-Lc-EG1" secondAttribute="bottom" constant="24" id="tqj-u4-efd"/>
+                                    <constraint firstItem="2ro-Lc-EG1" firstAttribute="centerX" secondItem="3xD-X6-16j" secondAttribute="centerX" id="yKN-Ke-CO8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dty-ad-sS1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3xD-X6-16j" secondAttribute="bottom" id="2cg-KJ-Pzs"/>
+                            <constraint firstAttribute="trailing" secondItem="3xD-X6-16j" secondAttribute="trailing" id="CqR-IK-hXq"/>
+                            <constraint firstItem="3xD-X6-16j" firstAttribute="top" secondItem="Dty-ad-sS1" secondAttribute="top" id="PpF-yX-8i6"/>
+                            <constraint firstItem="3xD-X6-16j" firstAttribute="leading" secondItem="Wz9-fr-wRo" secondAttribute="leading" id="xH8-7b-bbw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="01L-CE-z8D" id="KM7-O4-HPx"/>
+                        <outlet property="confirmButton" destination="jPG-mw-t3A" id="EcR-gH-VaQ"/>
+                        <outlet property="descriptionLabel" destination="LbO-Es-eXp" id="v6h-MP-YUz"/>
+                        <outlet property="loadingContainer" destination="QPi-Ey-15c" id="Uub-ka-8z5"/>
+                        <outlet property="titleLabel" destination="2ro-Lc-EG1" id="gqn-eH-Bo2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FI-LX-cVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>
         <image name="chevronRight" width="24" height="24"/>
+        <image name="closeIcon" width="24" height="24"/>
         <namedColor name="disabled">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="exactGrey">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="fieldDescription">
+            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightBorder">
             <color red="0.92549019607843142" green="0.92941176470588238" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -18,6 +18,7 @@ protocol MenuViewModelCoordinatorDelegate: AnyObject {
     func showRequests()
     func showServices()
     func showSettings()
+    func presentDeleteAccount()
 }
 
 protocol MenuViewModelDelegate: AnyObject {
@@ -37,6 +38,7 @@ protocol MenuViewModelType: AnyObject {
     func showRequests()
     func showServices()
     func showSettings()
+    func presentDeleteAccount()
 }
 
 class MenuViewModel: MenuViewModelType {
@@ -77,5 +79,9 @@ class MenuViewModel: MenuViewModelType {
     
     func showSettings() {
         coordinatorDelegate?.showSettings()
+    }
+    
+    func presentDeleteAccount() {
+        coordinatorDelegate?.presentDeleteAccount()
     }
 }

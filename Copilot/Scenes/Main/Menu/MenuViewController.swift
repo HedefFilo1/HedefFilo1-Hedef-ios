@@ -68,7 +68,7 @@ class MenuViewController: PopupViewController {
 extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+        9
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -107,6 +107,10 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 7:
             cell.imageView.image = Images.settingsIcon
             cell.titleLabel.text = App.getString(key: "copilotapp.more.settings")
+            
+        case 8:
+            cell.imageView.image = Images.settingsIcon
+            cell.titleLabel.text = Strings.deleteMyAccount
             
         default:
             break
@@ -147,6 +151,9 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         case 7:
             viewModel.showSettings()
+            
+        case 8:
+            viewModel.presentDeleteAccount()
             
         default:
             break
