@@ -5,4 +5,8 @@
   Created by Jamal on 8/8/24.
   
 */
-"NSLocationWhenInUseUsageDescription" = "Please allow to see Nearby Locations in your current Location.";
+"NSLocationWhenInUseUsageDescription" = "Copilot needs your location permission to display the closest services to you and to provide roadside assistance.";
+
+"NSPhotoLibraryUsageDescription" = "Copilot needs your camera permission for accident/damage scene photographs and necessary documents.";
+
+"NSPhotoLibraryAddUsageDescription" = "Copilot needs your camera permission for accident/damage scene photographs and necessary documents.";

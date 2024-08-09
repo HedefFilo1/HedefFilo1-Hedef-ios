@@ -5,8 +5,8 @@
   Created by Jamal on 8/8/24.
   
 */
-"NSLocationWhenInUseUsageDescription" = "Please allow to see Nearby Locations in your current Location.";
+"NSLocationWhenInUseUsageDescription" = "Copilot’un, size en yakın servislerin görüntülenebilmesi ve yol yardım yönlendirmeleri için lokasyon izninize ihtiyacı bulunmakta.";
 
-"NSPhotoLibraryUsageDescription" = "Geting permission from user with reason";
+"NSPhotoLibraryUsageDescription" = "Copilot’un, kaza/hasarda olay yeri fotoğrafları ve gerekli dokümanlar için kamera izninize ihtiyacı bulunmakta.";
 
-"NSPhotoLibraryAddUsageDescription" = ""
+"NSPhotoLibraryAddUsageDescription" = "Copilot’un, kaza/hasarda olay yeri fotoğrafları ve gerekli dokümanlar için kamera izninize ihtiyacı bulunmakta.";
