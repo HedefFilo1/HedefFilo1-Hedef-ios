@@ -89,6 +89,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         let cell: ServicesOperationItemsCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.items = viewModel.filteredServices
         cell.delegate = self
+        cell.layer.borderWidth = 1
         return cell
     }
     
@@ -99,7 +100,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         } else {
             
             let count = viewModel.filteredServices.count + 2
-            let height = CGFloat(count * 102 + (count * 8)) - 8 + 44
+            let height = CGFloat((count * 77) + (count * 12)) - 12 + 24
             return CGSize(width: collectionView.frame.width, height: height)
         }
     }

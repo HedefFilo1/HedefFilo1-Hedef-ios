@@ -100,6 +100,8 @@ class ServiceTabViewController: UIViewController {
         careButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.button"), for: .normal)
         faultButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.breakdown.button"), for: .normal)
         lastikButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.tire.button"), for: .normal)
+        
+        //MARK: contentString: we need to add texts from web api
         tireRandevuLabel.text = Strings.appointmentRequestReceived
         breakdownRandevuLabel.text = Strings.appointmentRequestReceived
         maintenanceRandevuLabel.text = Strings.appointmentRequestReceived
@@ -132,7 +134,7 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         let type = viewModel.tireAppointment?.appointmentStatus ?? .none
         if type == .appointmentApproved {
             tireRandevuView.backgroundColor = .textSuccess
-            tireRandevuLabel.text = Strings.randevuApproved
+            tireRandevuLabel.text = App.getString(key: "copilotapp.system.appointment.confirmed")
         } else {
             tireRandevuView.backgroundColor = .theme
             tireRandevuLabel.text = Strings.appointmentRequestReceived
@@ -152,7 +154,7 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         let type = viewModel.maintenanceAppointment?.appointmentStatus ?? .none
         if type == .appointmentApproved {
             maintenanceRandevuView.backgroundColor = .textSuccess
-            maintenanceRandevuLabel.text = Strings.randevuApproved
+            maintenanceRandevuLabel.text = App.getString(key: "copilotapp.system.appointment.confirmed")
         } else {
             maintenanceRandevuView.backgroundColor = .theme
             maintenanceRandevuLabel.text = Strings.appointmentRequestReceived
@@ -172,7 +174,8 @@ extension ServiceTabViewController: ServiceTabViewModelDelegate {
         let type = viewModel.breakdownAppointment?.appointmentStatus ?? .none
         if type == .appointmentApproved {
             breakdownRandevuView.backgroundColor = .textSuccess
-            breakdownRandevuLabel.text = Strings.randevuApproved
+            breakdownRandevuLabel.text = App.getString(key: "copilotapp.system.appointment.confirmed")
+            
         } else {
             breakdownRandevuView.backgroundColor = .theme
             breakdownRandevuLabel.text = Strings.appointmentRequestReceived

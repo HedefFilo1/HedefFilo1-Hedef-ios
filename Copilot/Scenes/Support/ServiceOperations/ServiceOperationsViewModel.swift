@@ -17,7 +17,7 @@ protocol ServiceOperationsVMCoordinatorDelegate: AnyObject {
     func presentFitlers(title: String,
                         delegate: FeedbackFilterViewControllerDelegate,
                         items: [FeedbackFilterItem])
-    func presentFeedbackRate(caseId: String, date: String)
+    func presentFeedbackRate(caseId: String, date: String, description: String)
 }
 
 protocol ServiceOperationsViewModelDelegate: BaseViewModelDelegate {
@@ -66,7 +66,8 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     }
     
     func presentFeedbackRate(caseId: String, date: String) {
-        coordinatorDelegate?.presentFeedbackRate(caseId: caseId, date: date)
+        let string = App.getString(key: "copilotapp.system.past.service.operation")?.replacingOccurrences(of: "{date}", with: "\(date)") ?? ""
+        coordinatorDelegate?.presentFeedbackRate(caseId: caseId, date: date, description: string)
     }
     
     func getServices() {

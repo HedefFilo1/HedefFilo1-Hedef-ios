@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-#if DEV_DEBUG
+#if DEV_DEBUG || DEV_PROD
         // just for test
 //        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
         

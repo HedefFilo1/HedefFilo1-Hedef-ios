@@ -32,6 +32,11 @@ class LiveSupportViewController: UIViewController {
         APIService.addUserAction(pageName: "Help", actionName: "HELP_WEBCHAT")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showTabbarView()
+    }
+    
     func setupUI() {
         applyStyle()
         setTexts()

@@ -20,7 +20,8 @@ struct ServiceOperation: Decodable {
     let supplierName: String?
     let serviceName: String?
     let appointmentDate: String?
-    let recordType: ServiceOperationType
+    let recordType: String?
+//    let recordType_: ServiceOperationType?
     
     var dispayTitle: String {
         if let supplierName {
@@ -35,20 +36,23 @@ struct ServiceOperation: Decodable {
     
     var type: String {
         var str: String?
-        switch recordType {
-        case .maintenance: // Bakim
-            str = App.getString(key: CodeStrings.maintenaceKey)
-//            return "Bakım"
-        case .mechanicalFailure: // Ariza
-            str = App.getString(key: CodeStrings.mechanicalFailurKey)
-        case .damage:
-            str = App.getString(key: CodeStrings.damageKey)
-//            str = "Tamir"
-        case .tireChange:
-            str = App.getString(key: CodeStrings.tireChangeKey)
-//            str = "Değişim"
-        case .none:
-            return "None"
+        
+        if let recordType, let type = ServiceOperationType(rawValue: recordType) {
+            switch type {
+            case .maintenance: // Bakim
+                str = App.getString(key: CodeStrings.maintenaceKey)
+                //            return "Bakım"
+            case .mechanicalFailure: // Ariza
+                str = App.getString(key: CodeStrings.mechanicalFailurKey)
+            case .damage:
+                str = App.getString(key: CodeStrings.damageKey)
+                //            str = "Tamir"
+            case .tireChange:
+                str = App.getString(key: CodeStrings.tireChangeKey)
+                //            str = "Değişim"
+            case .none:
+                return "None"
+            }
         }
         return str ?? ""
     }

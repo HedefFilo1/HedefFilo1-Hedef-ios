@@ -48,8 +48,9 @@ class FeedbackRateViewController: SheetViewController {
         view.backgroundColor = .white
         titleLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey")
 //        descriptionLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey_description")
-        let string = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey_description")?.replacingOccurrences(of: "{date}", with: "\(viewModel.date)") ?? ""
-        descriptionLabel.text = string
+//        let string = App.getString(key: "copilotapp.help.feedback.service.operation.satisfaction_survey_description")?.replacingOccurrences(of: "{date}", with: "\(viewModel.date)") ?? ""
+//        let string = App.getString(key: "copilotapp.system.past.service.operation")?.replacingOccurrences(of: "{date}", with: "\(viewModel.date)")
+        descriptionLabel.text = viewModel.description
         evaluateButton.setTitle(App.getString(key: "copilotapp.help.feedback.service.operation.button_evaluate"), for: .normal)
     }
     

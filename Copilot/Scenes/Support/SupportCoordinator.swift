@@ -153,12 +153,13 @@ extension SupportCoordinator: UIViewControllerTransitioningDelegate,
         navigationController.present(controller, animated: true)
     }
     
-    func presentFeedbackRate(caseId: String, date: String) {
+    func presentFeedbackRate(caseId: String, date: String, description: String) {
         let controller: FeedbackRateViewController = storyboard.instantiateViewController()
         let viewModel = FeedbackRateViewModel()
         controller.viewModel = viewModel
         viewModel.caseId = caseId
         viewModel.date = date
+        viewModel.description = description
         viewModel.coordinatorDelegate = self
         //        navigationController.present(controller, animated: true)
         
