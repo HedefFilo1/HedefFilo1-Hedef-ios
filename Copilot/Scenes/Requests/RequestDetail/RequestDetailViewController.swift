@@ -69,8 +69,13 @@ class RequestDetailViewController: UIViewController {
     func setTask() {
         guard let item = viewModel.item else { return }
         titleLabel.text = item.subjectResult
-        statusView.backgroundColor = item.status.color
-        statusValueLabel.text = item.statusTextResult
+        if let text = item.statusTextResult {
+            statusView.backgroundColor = item.status.color
+            statusValueLabel.text = text
+        } else {
+            statusView.backgroundColor = .clear
+            statusValueLabel.text = ""
+        }
         descriptionTextLabel.text = item.additionalInfo
         addationalTextLabel.text = item.description
     }
