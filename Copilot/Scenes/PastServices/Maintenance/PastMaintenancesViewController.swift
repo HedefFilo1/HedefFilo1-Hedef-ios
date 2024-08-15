@@ -76,7 +76,6 @@ class PastMaintenancesViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.service.operation.button")
-        
         maintenanceButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.maintenance"), for: .normal)
         breakdownButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.breakdown"), for: .normal)
         tireButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.tab.tire"), for: .normal)
@@ -97,8 +96,8 @@ class PastMaintenancesViewController: UIViewController {
     
     func setTitleTexts(tab: Int) {
         let title =  Strings.pastMaintenanceOperations
-        let message = App.getString(key: "copilotapp.pastservice.description") ?? ""
-        let foundMessage = Strings.pastMaintenanceFound
+//        let message = App.getString(key: "copilotapp.pastservice.description") ?? ""
+//        _ = Strings.pastMaintenanceFound
         
         switch tab {
         case 0:
@@ -202,7 +201,7 @@ extension PastMaintenancesViewController: UICollectionViewDataSource, UICollecti
             let cell: PastServicesItemsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.category = getCategory(tab: currentTab)
             cell.delegate = self
-            cell.items = viewModel.items
+            cell.items = viewModel.filteredServices
             return cell
             
         default:
@@ -294,7 +293,8 @@ extension PastMaintenancesViewController: PastServicesSearchCellDelegate, PastSe
     }
     
     func didChangeSearch(text: String) {
-        
+        viewModel.searchText = text
+        reloadData()
     }
 }
 

@@ -34,7 +34,8 @@ struct PastService: Decodable {
     let recordType: PastServiceRecordType
 //    let statusEnum: PastServiceStatusType?
     let appointmentStatusEnum: AppointmentStatus
-    
+    let city: String?
+    let district: String?
     let address: String?
     let supplierPhone: String?
     let km: Int?

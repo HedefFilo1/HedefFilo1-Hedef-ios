@@ -39,6 +39,36 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
     var items: [PastService]?
     var type: PastServiceRecordType = .maintenance
     
+    var filterCity: String?
+    var filterDistrict: String?
+    var filterDate: Date?
+    var searchText: String = ""
+    
+    var filteredServices: [PastService]? {
+        var result = items
+        if let city = filterCity {
+            result = result?.filter({ $0.city == city })
+        }
+        
+        if let district = filterDistrict {
+            result = result?.filter({ $0.district == district })
+        }
+        
+        if let date = filterDate {
+            result = result?.filter({ $0.date == date })
+        }
+        
+        if searchText.count == 0 {
+            return result
+        }
+        
+        let result2 = result?.filter {
+            $0.serviceName?.lowercased().contains(searchText.lowercased()) ?? false
+        }
+        
+        return result2
+    }
+    
     var tab: Int {
         switch type {
         case .maintenance:
@@ -73,6 +103,10 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
         case .none:
             value = ""
         }
+        filterCity = nil
+        filterDistrict = nil
+        filterDate = nil
+        searchText = ""
         APIService.getPastServices(type: value) { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else { return }
@@ -116,8 +150,9 @@ extension PastMaintenancesViewModel: PastServicesFilterViewControllerDelegate,
     }
     
     func didTapApply(city: String?, district: String?, date: Date?) {
-//        filterCity = city
-//        filterDistrict = district
+        filterCity = city
+        filterDistrict = district
+        filterDate = date
         delegate?.reloadData()
     }
 }
