@@ -12,16 +12,27 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
     var item: Task? {
         didSet {
             titleLabel.text = item?.subjectResult
-            statusLabel.text = item?.statusTextResult
-            statusView.backgroundColor = item?.status.color
+            if let text =  item?.statusTextResult {
+                statusLabel.text = item?.statusTextResult
+                statusView.backgroundColor = item?.status.color
+            } else {
+                statusLabel.text = ""
+                statusView.backgroundColor = .clear
+            }
+            
         }
     }
     
     var request: Demand? {
         didSet {
             titleLabel.text = request?.recordType
-            statusLabel.text = request?.statusTextResult
-            statusView.backgroundColor = request?.statusEnum.color
+            if let text =  request?.statusTextResult {
+                statusLabel.text = text
+                statusView.backgroundColor = request?.statusEnum.color
+            } else {
+                statusLabel.text = ""
+                statusView.backgroundColor = .clear
+            }
         }
     }
 

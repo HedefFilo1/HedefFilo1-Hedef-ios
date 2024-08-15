@@ -89,7 +89,6 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         let cell: ServicesOperationItemsCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.items = viewModel.filteredServices
         cell.delegate = self
-        cell.layer.borderWidth = 1
         return cell
     }
     
