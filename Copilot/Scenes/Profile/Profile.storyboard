@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="709"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-8i-GyB">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="828"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="916"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gRY-Ht-F56">
                                                         <rect key="frame" x="16" y="24" width="361" height="20.333333333333329"/>
@@ -34,7 +34,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9FR-7d-3Dq">
-                                                        <rect key="frame" x="24" y="68.333333333333371" width="345" height="584"/>
+                                                        <rect key="frame" x="24" y="68.333333333333371" width="345" height="672"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-W6-68a" customClass="CPPhoneTextField" customModule="Copilot" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="56"/>
@@ -122,13 +122,70 @@
                                                                     <constraint firstItem="hMV-KM-zfi" firstAttribute="leading" secondItem="9NA-9l-jJ0" secondAttribute="trailing" id="z3T-2o-zhX"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rya-qS-poj">
+                                                                <rect key="frame" x="0.0" y="616" width="345" height="56"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYl-CJ-ViJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="321" height="1"/>
+                                                                        <color key="backgroundColor" name="exactGrey"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="YH6-gj-EsQ"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvL-ab-XwW">
+                                                                        <rect key="frame" x="0.0" y="18" width="116.66666666666667" height="20.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevronRight" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-tH-Pr2">
+                                                                        <rect key="frame" x="321" y="16" width="24" height="24"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="24" id="DmS-Ee-rtP"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="eV0-Ae-fbM"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-SY-fLM">
+                                                                        <rect key="frame" x="0.0" y="55" width="345" height="1"/>
+                                                                        <color key="backgroundColor" name="exactGrey"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="7d2-gk-4I5"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtS-qc-N0r">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="56"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <connections>
+                                                                            <action selector="didTapDeleteAccount:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1ly-rc-bo5"/>
+                                                                            <action selector="didTapResetPassword:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bgF-wX-rDM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="OtS-qc-N0r" firstAttribute="leading" secondItem="rya-qS-poj" secondAttribute="leading" id="92I-zG-P26"/>
+                                                                    <constraint firstItem="vgJ-tH-Pr2" firstAttribute="leading" secondItem="NYl-CJ-ViJ" secondAttribute="trailing" id="9oF-j9-Iik"/>
+                                                                    <constraint firstItem="MvL-ab-XwW" firstAttribute="leading" secondItem="rya-qS-poj" secondAttribute="leading" id="Bfe-BA-Yjw"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="vgJ-tH-Pr2" secondAttribute="trailing" id="CgE-Dy-dNo"/>
+                                                                    <constraint firstItem="NYl-CJ-ViJ" firstAttribute="leading" secondItem="rya-qS-poj" secondAttribute="leading" id="IbQ-js-htK"/>
+                                                                    <constraint firstItem="2hd-SY-fLM" firstAttribute="leading" secondItem="rya-qS-poj" secondAttribute="leading" id="VXN-29-eN6"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="2hd-SY-fLM" secondAttribute="trailing" id="d0A-NN-MaL"/>
+                                                                    <constraint firstItem="NYl-CJ-ViJ" firstAttribute="top" secondItem="rya-qS-poj" secondAttribute="top" id="ee8-uN-YIb"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="2hd-SY-fLM" secondAttribute="bottom" id="jY5-ae-jnx"/>
+                                                                    <constraint firstItem="MvL-ab-XwW" firstAttribute="centerY" secondItem="rya-qS-poj" secondAttribute="centerY" id="oh2-dI-tRJ"/>
+                                                                    <constraint firstItem="OtS-qc-N0r" firstAttribute="top" secondItem="rya-qS-poj" secondAttribute="top" id="oou-36-KdP"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="OtS-qc-N0r" secondAttribute="bottom" id="orv-MC-Z2U"/>
+                                                                    <constraint firstItem="vgJ-tH-Pr2" firstAttribute="centerY" secondItem="rya-qS-poj" secondAttribute="centerY" id="ozH-Mt-DnG"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="OtS-qc-N0r" secondAttribute="trailing" id="zU3-fc-AAr"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="584" id="V4f-Fd-BhA"/>
+                                                            <constraint firstAttribute="height" constant="672" id="V4f-Fd-BhA"/>
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG1-jk-rv2" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="676.33333333333337" width="345" height="56"/>
+                                                        <rect key="frame" x="24" y="764.33333333333337" width="345" height="56"/>
                                                         <color key="backgroundColor" name="disabled"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="DMP-Tb-6uD"/>
@@ -150,7 +207,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="9FR-7d-3Dq" secondAttribute="trailing" constant="24" id="EzU-pE-K2u"/>
                                                     <constraint firstAttribute="trailing" secondItem="zG1-jk-rv2" secondAttribute="trailing" constant="24" id="H6a-eE-AUG"/>
                                                     <constraint firstItem="gRY-Ht-F56" firstAttribute="top" secondItem="i5A-8i-GyB" secondAttribute="top" constant="24" id="Khw-0R-x9l"/>
-                                                    <constraint firstAttribute="height" constant="828" id="QJN-TC-MyK"/>
+                                                    <constraint firstAttribute="height" constant="916" id="QJN-TC-MyK"/>
                                                     <constraint firstItem="zG1-jk-rv2" firstAttribute="leading" secondItem="i5A-8i-GyB" secondAttribute="leading" constant="24" id="XK1-HN-ej3"/>
                                                     <constraint firstItem="9FR-7d-3Dq" firstAttribute="leading" secondItem="i5A-8i-GyB" secondAttribute="leading" constant="24" id="YJj-fz-5ZX"/>
                                                     <constraint firstItem="zG1-jk-rv2" firstAttribute="top" secondItem="9FR-7d-3Dq" secondAttribute="bottom" constant="24" id="ffN-fq-XnK"/>
@@ -186,6 +243,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="T2N-O1-EXc" id="E49-t2-Qnt"/>
+                        <outlet property="deleteAccountLabel" destination="MvL-ab-XwW" id="mZ8-WZ-ha4"/>
                         <outlet property="emailTextFiled" destination="mAq-Go-j9n" id="c1Z-TT-IiH"/>
                         <outlet property="idTextField" destination="uKy-lY-wbe" id="XgP-td-try"/>
                         <outlet property="licenseTextField" destination="5mS-7g-2cV" id="v5K-Dg-N8w"/>

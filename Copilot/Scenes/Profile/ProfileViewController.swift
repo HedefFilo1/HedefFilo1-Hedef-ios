@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var idTextField: CPTextField!
     @IBOutlet weak var licenseTextField: CPTextField!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var deleteAccountLabel: UILabel!
     @IBOutlet weak var submitButton: CPButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -69,6 +70,7 @@ class ProfileViewController: UIViewController {
         contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         titleLabel.apply(.blackS24B700)
         passwordLabel.apply(.blackS14M500)
+        deleteAccountLabel.apply(.blackS14M500)
     }
     
     func setTexts() {
@@ -81,6 +83,7 @@ class ProfileViewController: UIViewController {
         licenseTextField.placeholder = App.getString(key: "copilotapp.profile.vehicle.license.number")
         passwordLabel.text = App.getString(key: "copilotapp.profile.password.renewal")
         submitButton.setTitle(App.getString(key: "copilotapp.profile.button"), for: .normal)
+        deleteAccountLabel.text = Strings.deleteMyAccount
     }
     
     func setButtonActivation() {
@@ -96,6 +99,10 @@ class ProfileViewController: UIViewController {
     @IBAction func didTapResetPassword(_ sender: UIButton) {
         APIService.addUserAction(pageName: "PROFILE", actionName: "PROFILE_PASSWORD_CHANGE_CLICK")
         viewModel.goToResetPassword()
+    }
+    
+    @IBAction func didTapDeleteAccount(_ sender: UIButton) {
+        viewModel.presentDeleteAccount()
     }
     
     @IBAction func didTapSubmit(_ sender: Any) {

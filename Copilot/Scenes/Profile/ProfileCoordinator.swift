@@ -51,12 +51,24 @@ extension ProfileCoordinator: ProfileViewModelCoordinatorDelegate {
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func presentDeleteAccount() {
+        let controller: DeleteAccountViewController = UIStoryboard(storyboard: .profile).instantiateViewController()
+        let viewModel = DeleteAccountViewModel()
+        viewModel.coordinatorDelegate = self
+        controller.viewModel = viewModel
+        navigationController.present(controller, animated: true)
+    }
 }
 
 extension ProfileCoordinator: PasswordResetVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
     }
+}
+
+extension ProfileCoordinator: DeleteAccountVMCoordinatorDelegate {
+    
 }
 
 extension ProfileCoordinator {

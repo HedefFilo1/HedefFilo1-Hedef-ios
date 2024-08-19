@@ -9,6 +9,7 @@ import Foundation
 
 protocol ProfileViewModelCoordinatorDelegate: AnyObject {
     func goToResetPassword()
+    func presentDeleteAccount()
 }
 
 protocol ProfileViewModelDelegate: AnyObject {
@@ -24,6 +25,7 @@ protocol ProfileViewModelType: AnyObject {
     func getProfile()
     func goToResetPassword()
     func submit(name: String, phone: String, email: String, id: String, licence: String)
+    func presentDeleteAccount()
 }
 
 class ProfileViewModel: ProfileViewModelType {
@@ -59,5 +61,9 @@ class ProfileViewModel: ProfileViewModelType {
     
     func goToResetPassword() {
         coordinatorDelegate?.goToResetPassword()
+    }
+    
+    func presentDeleteAccount() {
+        coordinatorDelegate?.presentDeleteAccount()
     }
 }
