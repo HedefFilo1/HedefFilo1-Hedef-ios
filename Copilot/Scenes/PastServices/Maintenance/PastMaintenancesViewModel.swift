@@ -117,7 +117,8 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
             }
             if let model {
                 self.items = model
-                self.delegate?.reloadData()
+                self.didTapApply(ascending: false)
+//                self.delegate?.reloadData()
             }
         }
     }

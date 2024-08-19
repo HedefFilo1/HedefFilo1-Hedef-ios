@@ -300,6 +300,6 @@ extension PastMaintenancesViewController: PastServicesSearchCellDelegate, PastSe
 
 extension PastMaintenancesViewController: PastMaintenancesViewModelDelegate {
     func reloadData() {
-        collectionView.reloadData()
+        collectionView.reloadSections(IndexSet(integer: 2))
     }
 }

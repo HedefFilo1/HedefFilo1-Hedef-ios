@@ -289,18 +289,22 @@ class APIService {
     
     static func getLastMaintenance(completion: @escaping (MaintenanceLast?, APIResponseError?) -> Void) {
 //        let route = "copilot/maintenance/last"
-        //supplier name
-        //address
-        //date
-        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date()) ?? Date()
-        let startDate = date.getServerDate() // ?? ""
-        let route = "case?recordType=MAINTENANCE&status=SOLVED&appointmentStatus=APPOINTMENT_APPROVED&startDate=\(startDate)"
+        // supplier name
+        // address
+        // date
+//        let date = Calendar.current.date( byAdding: .month, value: -6, to: Date()) ?? Date()
+        let date = Date()
+        let serverDate = date.getServerDate()
+//        let startDate = date.getServerDate() // ?? ""
+//        let route = "case?recordType=MAINTENANCE&status=SOLVED&appointmentStatus=APPOINTMENT_APPROVED&startDate=\(startDate)"
+        
+        let route = "case?recordType=MAINTENANCE&status=SOLVED&endDate=\(serverDate)&appointmentStatus=APPOINTMENT_APPROVED"
     
         let req = APIRequest<[MaintenanceLast]>(route: route, method: .get, hasToken: true)
         req.identifier = "Get Maintenance Last"
         req.log = loggingEnabled
         req.completion = { model, error in
-            completion(model?.first, error)
+            completion(model?.last, error)
         }
         req.start()
     }
