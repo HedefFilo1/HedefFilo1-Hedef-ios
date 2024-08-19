@@ -43,7 +43,8 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
             guard let self = self else { return }
             
             if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle, message: error.message)
+                let message = App.getString(key: "copilotapp.forgot.password.error.message") ?? ""
+                self.delegate?.showError(title: Strings.errorTitle, message: message)
                 return
             }
             APIService.addUserAction(pageName: "LOGIN", actionName: "LOGIN_PAGE_LOAD_FORGOT_PASSWORD")
