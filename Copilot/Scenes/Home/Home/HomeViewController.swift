@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
 
 //        viewModel.coordinatorDelegate?.goToStandings()
 //        viewModel.goToSearch()
+        viewModel.goToStandings()
         return
 //        return
 #endif

@@ -36,6 +36,7 @@ class StandingsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(cellType: StandingCell.self)
         collectionView.register(cellType: StandingItemCell.self)
+        collectionView.contentInset.bottom = 70
         applyStyle()
         setTexts()
     }
@@ -60,7 +61,7 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1: 4
+        return section == 0 ? 1: 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,6 +90,18 @@ extension StandingsViewController: UICollectionViewDataSource, UICollectionViewD
         case 3:
             cell.title = App.getString(key: "copilotapp.gamification.standings.create_product_request") ?? ""
             cell.point = 200
+            
+        case 4:
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_campaign_participation") ?? ""
+            cell.point = 5
+            
+        case 5:
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_customer_services") ?? ""
+            cell.point = 5
+            
+        case 6:
+            cell.title = App.getString(key: "copilotapp.gamification.standings.create_service_feedback") ?? ""
+            cell.point = 5
             
         default:
             break
