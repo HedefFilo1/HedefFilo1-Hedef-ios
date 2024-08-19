@@ -101,7 +101,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.titleLabel.text = App.getString(key: "copilotapp.more.demands")
             
         case 6:
-            cell.imageView.image = Images.toolIcon
+            cell.imageView.image = Images.toolIcon.withRenderingMode(.alwaysTemplate)
             cell.titleLabel.text = App.getString(key: "copilotapp.more.services")
             
         case 7:
@@ -109,12 +109,13 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.titleLabel.text = App.getString(key: "copilotapp.more.settings")
             
         case 8:
-            cell.imageView.image = Images.settingsIcon
+            cell.imageView.image = Images.userDeleteIcon.withRenderingMode(.alwaysTemplate)
             cell.titleLabel.text = Strings.deleteMyAccount
             
         default:
             break
         }
+        cell.imageView.tintColor = .black
         return cell
     }
     

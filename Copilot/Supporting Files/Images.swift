@@ -205,4 +205,8 @@ struct Images {
     static var stepImageRedWhite: UIImage {
         return UIImage(named: "stepImageRedWhite") ?? UIImage()
     }
+    
+    static var userDeleteIcon: UIImage {
+        return UIImage(named: "userDeleteIcon") ?? UIImage()
+    }
 }
