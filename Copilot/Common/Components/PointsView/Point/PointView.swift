@@ -43,8 +43,11 @@ class PointView: UIView {
         circleView.layer.borderWidth = 1
         circleView.layer.borderColor = UIColor.pink.cgColor
         circleView.backgroundColor = .white
-        titleLabel.apply(.blackS12B700)
-        valueLabel.apply(.blackS12R400)
+//        titleLabel.apply(.blackS12B700)
+//        valueLabel.apply(.blackS12R400)
+        titleLabel.apply(.custom(.black, .medium, 10))
+//        valueLabel.apply(.blackS12R400)
+        valueLabel.apply(.custom(.black, .regular, 10))
     }
     
     func setTexts() {
