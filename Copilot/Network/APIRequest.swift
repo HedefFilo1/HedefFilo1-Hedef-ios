@@ -11,7 +11,7 @@ class Network {
     static let baseUrl: String = "https://\(Configuration.shared.baseURL)"
     
     static func getBasicHeaders() -> [String: String] {
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         return [
             "accept-language": language == CodeStrings.english ? "en": "tr",
             "accept": "*/*",

@@ -50,6 +50,18 @@ class App {
 //        return lan
 //    }
     
+    static var languageCode: String {
+           guard let appLanguage = Bundle.main.preferredLocalizations.first else { return "en" }
+           return appLanguage
+       }
+    
+    static var language: String {
+        if languageCode.lowercased().contains("tr") {
+            return CodeStrings.turkish
+        }
+        return CodeStrings.english
+    }
+    
 //    static func initialzeAppLanguage() -> String {
 //        let lang = Locale.preferredLanguages.first ?? ""
 //        let selected = lang.contains(CodeStrings.ttr) ? CodeStrings.trTr: CodeStrings.enUS
@@ -89,7 +101,7 @@ extension App {
 // MARK: String
 extension App {
     static func getString(key: String) -> String? {
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         let strLang = language == CodeStrings.english ? "en": "tr"
         return contentStrings?.filter({$0.strKey == key && $0.lang == strLang}).first?.strValue
     }

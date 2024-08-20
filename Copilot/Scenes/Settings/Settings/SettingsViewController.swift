@@ -41,7 +41,7 @@ class SettingsViewController: UIViewController {
         applyStyle()
         setTexts()
         //        pointsView.imageView.image = Images.lastikPoints
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         langaugeLabel.text = language == CodeStrings.turkish ? Strings.turkish : Strings.english
         flagImageView.image = language == CodeStrings.turkish ? Images.circleTurkeyFlag: Images.circleEnglishFlag
     }

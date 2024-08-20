@@ -40,7 +40,7 @@ class ConfirmedRandevuViewModel: ConfirmedRandevuViewModelType {
         let formmater = DateFormatter()
         formmater.dateFormat = "d MMMM YYYY EEEE HH:mm"
         var identifier = "tr_TR"
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         if language == CodeStrings.english {
             identifier = "UTC"
         }

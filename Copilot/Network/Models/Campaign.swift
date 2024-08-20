@@ -28,7 +28,7 @@ struct Campaign: Decodable {
     let imageFile: String?
     
     var content: String {
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         if language == CodeStrings.turkish {
             return contentTr ?? ""
         }

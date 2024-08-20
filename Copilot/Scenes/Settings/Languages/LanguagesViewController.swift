@@ -41,7 +41,7 @@ class LanguagesViewController: SheetViewController {
         applyStyle()
         setTexts()
         applyButton.isEnabled = true
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         turkeyRadio.isSelected = language == CodeStrings.turkish
         englishRadio.isSelected = language == CodeStrings.english
     }

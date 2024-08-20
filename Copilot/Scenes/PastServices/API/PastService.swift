@@ -77,7 +77,7 @@ struct PastService: Decodable {
         guard let accidentTypeId else {
             return App.getString(key: CodeStrings.tireChangeKey) ?? ""
         }
-        let language = Persistence.language ?? CodeStrings.turkish
+        let language = App.language
         let isTurkish = language == CodeStrings.turkish
         switch accidentTypeId {
         case "55":
@@ -110,7 +110,7 @@ struct PastService: Decodable {
             formmater.dateFormat = "d MMMM EEEE"
            
             var identifier = "tr_TR"
-            let language = Persistence.language ?? CodeStrings.turkish
+            let language = App.language
             if language == CodeStrings.english {
                 identifier = "UTC"
             }
