@@ -23,6 +23,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var darkModeSwitch: UISwitch!
     @IBOutlet weak var agreementLabel: UILabel!
     
+    @IBOutlet weak var langaugeSettingsLabel: UILabel!
+    
     @IBOutlet weak var langaugesView: UIView!
     @IBOutlet weak var langaugeLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
@@ -55,6 +57,8 @@ class SettingsViewController: UIViewController {
         darkModeLabel.apply(.blackS14M500)
         agreementLabel.apply(.blackS14M500)
         
+        langaugeSettingsLabel.apply(.blackS14M500)
+        
         langaugesView.layer.cornerRadius = 4
         langaugesView.layer.borderWidth = 1
         langaugesView.layer.borderColor = UIColor.textGrey.cgColor
@@ -67,6 +71,7 @@ class SettingsViewController: UIViewController {
         notifiationsLabel.text = App.getString(key: "copilotapp.notification.title")
         darkModeLabel.text = App.getString(key: "setting.nightmode")
         agreementLabel.text = App.getString(key: "settings.see.privacy.policy")
+        langaugeSettingsLabel.text = Strings.languageSettings
     }
     
     @IBAction func didTapNotification() {
@@ -89,6 +94,12 @@ class SettingsViewController: UIViewController {
     
     @IBAction func didTapLanguages() {
         viewModel.presentLangauges()
+    }
+    
+    @IBAction func didTapLanguageSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString),
+              UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 

@@ -271,4 +271,8 @@ extension Strings {
     static var deleteAccountDescription: String {
         return localized(string: "deleteAccountDescription")
     }
+    
+    static var languageSettings: String {
+        return localized(string: "languageSettings")
+    }
 }
