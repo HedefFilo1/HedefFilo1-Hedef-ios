@@ -36,6 +36,7 @@ protocol SearchViewModelType: AnyObject {
     var searchText: String { get set }
     var filteredItems: [SearchModel] { get }
     var searchItems: [SearchModel] { get set}
+    func setupItems()
     func didSelect(item: SearchModel)
     func getBack()
 }
@@ -55,17 +56,26 @@ class SearchViewModel: SearchViewModelType {
         return searchItems.filter({ $0.title.lowercased().contains(searchText.lowercased())})
     }
     
-    var searchItems: [SearchModel] = [
-        SearchModel(id: 0, title: App.getString(key: "copilotapp.more") ?? ""),
-        SearchModel(id: 1, title: App.getString(key: "copilotapp.help") ?? ""),
-        SearchModel(id: 2, title: App.getString(key: "copilotapp.service") ?? ""),
-        SearchModel(id: 3, title: App.getString(key: "copilotapp.kaza") ?? ""),
-        SearchModel(id: 4, title: App.getString(key: "copilotapp.more.settings") ?? ""),
-        SearchModel(id: 5, title: App.getString(key: "copilotapp.help.guide") ?? ""),
-        SearchModel(id: 6, title: App.getString(key: "copilotapp.help.feedback") ?? ""),
-        SearchModel(id: 7, title: App.getString(key: "copilotapp.help.faq") ?? ""),
-        SearchModel(id: 8, title: App.getString(key: "copilotapp.help.button") ?? "")
-    ]
+    var searchItems: [SearchModel] = []
+    
+    func setupItems() {
+        var items = [
+            SearchModel(id: 4, title: App.getString(key: "copilotapp.more.settings") ?? ""),
+            SearchModel(id: 8, title: App.getString(key: "copilotapp.help.button") ?? ""),
+            SearchModel(id: 6, title: App.getString(key: "copilotapp.help.feedback") ?? ""),
+            SearchModel(id: 3, title: App.getString(key: "copilotapp.kaza") ?? ""),
+            SearchModel(id: 5, title: App.getString(key: "copilotapp.help.guide") ?? ""),
+            SearchModel(id: 2, title: App.getString(key: "copilotapp.service") ?? ""),
+            SearchModel(id: 7, title: App.getString(key: "copilotapp.help.faq") ?? ""),
+            SearchModel(id: 1, title: App.getString(key: "copilotapp.help") ?? ""),
+        ]
+        
+        items = items.sorted {
+            $0.title.compare($1.title, locale: NSLocale.current) == .orderedAscending
+        }
+        items.append(SearchModel(id: 0, title: App.getString(key: "copilotapp.more") ?? ""))
+        searchItems = items
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -108,6 +118,6 @@ class SearchViewModel: SearchViewModelType {
         default:
             break
         }
-    
+        
     }
 }

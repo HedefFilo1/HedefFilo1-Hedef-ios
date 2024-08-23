@@ -30,6 +30,8 @@ class SearchViewController: PopupViewController {
         super.viewDidLoad()
         setupUI()
         APIService.addUserAction(pageName: "HOMEPAGE", actionName: "HOMEPAGE_PAST_SEARCH")
+        viewModel.setupItems()
+        collectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +70,7 @@ class SearchViewController: PopupViewController {
     }
     
     func setTexts() {
-        searchTextField.placeholder = App.getString(key: "copilotapp.homepage.searchbox.description")
+        searchTextField.placeholder = App.getString(key: "copilotapp.homepage.searchbox.content")
         cancelButton.setTitle(App.getString(key: "copilotapp.homepage.searchbox.cancel.button"), for: .normal)
     }
     

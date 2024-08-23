@@ -27,11 +27,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-#if DEV_DEBUG
+#if DEV_DEBUG || PROD_DEBUG
 
 //        viewModel.coordinatorDelegate?.goToStandings()
 //        viewModel.goToSearch()
-        viewModel.goToStandings()
+//        viewModel.goToStandings()
         return
 //        return
 #endif
