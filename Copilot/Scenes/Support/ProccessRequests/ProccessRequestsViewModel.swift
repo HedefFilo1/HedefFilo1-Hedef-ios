@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct ProccessRequestsItem {
-    let title: String
+struct ProccessRequestsFilterItem {
+    let type: WebCategoryEnum
 }
 
 protocol ProccessRequestsVMCoordinatorDelegate: AnyObject {
@@ -41,9 +41,14 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
     weak var delegate: ProccessRequestsViewModelDelegate?
     var searchText: String = ""
     var items: [ProccessRequest] = []
+    var filterItem: FeedbackFilterItem?
     
     var filteredServices: [ProccessRequest] {
         var notNulls = items // .filter({ $0.displayTitle != nil })
+        if let filterItem {
+            let type = WebCategoryEnum(rawValue: filterItem.title)
+            notNulls = notNulls.filter({$0.webCategoryEnum == type})
+        }
         if searchText.isEmpty {
             return notNulls
         }
@@ -59,10 +64,18 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
     }
     
     func presentFitlers() {
-        let filterItems = [
-            FeedbackFilterItem(title: "Bağlanan Araç İşlemi"),
-            FeedbackFilterItem(title: "Bağlanan Araç İşlemi")
-        ]
+//        let filterItems = [
+//            FeedbackFilterItem(title: "Bağlanan Araç İşlemi"),
+//            FeedbackFilterItem(title: "Bağlanan Araç İşlemi")
+//        ]
+        var filterStrings = Set<String>()
+        for item in items {
+            let value = item.webCategoryEnum?.rawValue ?? ""
+            filterStrings.insert(value)
+        }
+        
+        let filterItems = filterStrings.map({ FeedbackFilterItem(title: $0)})
+        
         let text = App.getString(key: "copilotapp.help.feedback.process.demand.button_search") ?? ""
         coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
     }
@@ -92,6 +105,7 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
 
 extension ProccessRequestsViewModel: FeedbackFilterViewControllerDelegate {
     func didTapApply(selectedItem: FeedbackFilterItem) {
+        filterItem = selectedItem
         delegate?.reloadData()
     }
 }
