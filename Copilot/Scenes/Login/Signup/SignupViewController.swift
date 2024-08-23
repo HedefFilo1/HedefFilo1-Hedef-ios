@@ -52,6 +52,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var lowercaseLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var specialLabel: UILabel!
+    @IBOutlet weak var warningLabel: UILabel!
     
     private var clarfication: Bool = false
     
@@ -147,6 +148,7 @@ class SignupViewController: UIViewController {
         lowercaseLabel.apply(.greyS12R400)
         numberLabel.apply(.greyS12R400)
         specialLabel.apply(.greyS12R400)
+        warningLabel.apply(.custom(.theme, .medium, 12))
     }
     
     func setTexts() {
@@ -182,6 +184,7 @@ class SignupViewController: UIViewController {
         numberLabel.text = "*\(number)"
         let special = App.getString(key: "copilotapp.sign.up.password.warning.five") ?? ""
         specialLabel.text = "*\(special)"
+        warningLabel.text = App.getString(key: "copilotapp.login.information.message")
     }
     
     func setClarificationText(color: UIColor = .textGrey) {
