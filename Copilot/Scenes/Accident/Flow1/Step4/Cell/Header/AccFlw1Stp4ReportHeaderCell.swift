@@ -33,8 +33,8 @@ class AccFlw1Stp4ReportHeaderCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.title")
-        descriptionLabel.text = "\(Strings.fillReportDocuments)/n\(Strings.clickHelpReport)"
-        guideLabel.text = Strings.recordKeepingGuide
+        descriptionLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.description")
+        guideLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.tutanak.guide.button")
     }
     
     @IBAction func didTapGuide() {

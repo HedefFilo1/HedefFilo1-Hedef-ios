@@ -82,10 +82,11 @@ class AccidentSuccessRandevuViewController: UIViewController {
             messageLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.process.success.minute.warning")
             
         } else if viewModel.accidentReportType == .zabit {
-            messageLabel.text = Strings.keepPoliceReport
+//            messageLabel.text = Strings.keepPoliceReport
+            messageLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.zabıt.success.minute.warning")
             
         } else if viewModel.accidentReportType == .beyan {
-            messageLabel.text = Strings.keepStatementOfAccident
+            messageLabel.text = App.getString(key: "copilotapp.accidentdamage.accident.beyan.success.minute.warning")
         }
         homeButton.setTitle(App.getString(key: "copilotapp.servicemaintenance.maintenance.operation.schedule.maintenance.appointment.negative.result.button"), for: .normal)
     }

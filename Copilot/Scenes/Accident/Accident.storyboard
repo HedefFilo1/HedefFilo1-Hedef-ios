@@ -1704,10 +1704,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtb-HX-5Ad">
-                                        <rect key="frame" x="16" y="266" width="361" height="234.66666666666663"/>
+                                        <rect key="frame" x="16" y="266" width="361" height="218.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-BO-lyk">
-                                                <rect key="frame" x="16" y="16" width="329" height="202.66666666666666"/>
+                                                <rect key="frame" x="16" y="16" width="329" height="186.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosch Servis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cX3-yR-Iyx">
                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="21"/>
@@ -1728,13 +1728,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Mart 2023 Cumartesi 10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E4f-0j-FnC">
-                                                        <rect key="frame" x="0.0" y="114" width="329" height="21"/>
+                                                        <rect key="frame" x="0.0" y="110" width="329" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen kazaya ilişkin tutanak tuttuğunuzdan emin olunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZf-jM-SV3">
-                                                        <rect key="frame" x="0.0" y="146" width="329" height="40.666666666666657"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen kazaya ilişkin tutanak tuttuğunuzdan emin olunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZf-jM-SV3">
+                                                        <rect key="frame" x="0.0" y="142" width="329" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1744,10 +1744,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="cX3-yR-Iyx" secondAttribute="trailing" id="102-Qh-Gxn"/>
                                                     <constraint firstItem="f9i-O4-g7l" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="3L3-cj-brf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="RZf-jM-SV3" secondAttribute="bottom" constant="16" id="6OT-db-VDH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="RZf-jM-SV3" secondAttribute="bottom" constant="4" id="6OT-db-VDH"/>
                                                     <constraint firstAttribute="trailing" secondItem="E4f-0j-FnC" secondAttribute="trailing" id="8o8-4A-4B9"/>
                                                     <constraint firstItem="tLC-IP-b88" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="G6S-Lb-bhA"/>
-                                                    <constraint firstItem="E4f-0j-FnC" firstAttribute="top" secondItem="f9i-O4-g7l" secondAttribute="bottom" constant="16" id="JF4-Ix-YI4"/>
+                                                    <constraint firstItem="E4f-0j-FnC" firstAttribute="top" secondItem="f9i-O4-g7l" secondAttribute="bottom" constant="12" id="JF4-Ix-YI4"/>
                                                     <constraint firstItem="f9i-O4-g7l" firstAttribute="top" secondItem="tLC-IP-b88" secondAttribute="bottom" constant="8" id="K4P-g2-E6G"/>
                                                     <constraint firstAttribute="trailing" secondItem="RZf-jM-SV3" secondAttribute="trailing" id="P8R-Bw-Bzc"/>
                                                     <constraint firstItem="E4f-0j-FnC" firstAttribute="leading" secondItem="qt9-BO-lyk" secondAttribute="leading" id="W5j-gC-pWg"/>
@@ -2291,7 +2291,7 @@
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
