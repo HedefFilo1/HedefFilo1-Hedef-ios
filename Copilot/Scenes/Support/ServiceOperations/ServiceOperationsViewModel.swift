@@ -41,11 +41,19 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     weak var delegate: ServiceOperationsViewModelDelegate?
     var searchText: String = ""
     var items: [ServiceOperation] = []
+    var filterItem: FeedbackFilterItem?
+    
     var filteredServices: [ServiceOperation] {
-        if searchText.isEmpty {
-            return items
+        var notNulls = items
+        if let filterItem {
+            notNulls = notNulls.filter({$0.type == filterItem.title})
         }
-        let arr = items.filter {
+        
+        if searchText.isEmpty {
+            return notNulls
+        }
+        
+        let arr = notNulls.filter {
             $0.dispayTitle.lowercased().contains(searchText.lowercased())
         }
         return arr
@@ -56,10 +64,20 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     }
     
     func presentFitlers() {
-        let filterItems = [
-            FeedbackFilterItem(title: "BAKIM"),
-            FeedbackFilterItem(title: "Arıza")
-        ]
+        //        let filterItems = [
+        //            FeedbackFilterItem(title: "BAKIM"),
+        //            FeedbackFilterItem(title: "Arıza")
+        //        ]
+        
+        
+        var filterStrings = Set<String>()
+        for item in items {
+            let value = item.type
+            filterStrings.insert(value)
+        }
+        
+        let filterItems = filterStrings.map({ FeedbackFilterItem(title: $0)})
+        
         let text = App.getString(key: "copilotapp.help.feedback.service.operation.dropdown_description") ?? Strings.serviceProcess
         coordinatorDelegate?.presentFitlers(title: text,
                                             delegate: self, items: filterItems)
@@ -90,6 +108,7 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
 
 extension ServiceOperationsViewModel: FeedbackFilterViewControllerDelegate {
     func didTapApply(selectedItem: FeedbackFilterItem) {
+        filterItem = selectedItem
         delegate?.reloadData()
     }
 }
