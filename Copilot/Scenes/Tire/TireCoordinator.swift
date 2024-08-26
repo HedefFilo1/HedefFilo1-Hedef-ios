@@ -211,13 +211,14 @@ extension TireCoordinator: ServiceDetailVMCoordinatorDelegate {
 
 extension TireCoordinator: ServiceRandevuVMCoordinatorDelegate,
                            ConfirmedRandevuVMCoordinatorDelegate {
-    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?) {
+    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?, tireSupportType: TireSupportType?) {
         let controller: ConfirmedRandevuViewController = UIStoryboard(storyboard: .services).instantiateViewController()
         let viewModel = ConfirmedRandevuViewModel()
         viewModel.service = service
         viewModel.date = date
         viewModel.appointment = appointment
         controller.viewModel = viewModel
+        viewModel.tireSupportType = tireSupportType
         viewModel.coordinatorDelegate = self
         navigationController.pushViewController(controller, animated: true)
     }

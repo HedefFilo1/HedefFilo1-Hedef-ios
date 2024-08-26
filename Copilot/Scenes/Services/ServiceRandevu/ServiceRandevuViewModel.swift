@@ -9,7 +9,7 @@ import Foundation
 
 protocol ServiceRandevuVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?)
+    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?, tireSupportType: TireSupportType?)
 }
 
 protocol ServiceRandevuViewModelDelegate: BaseViewModelDelegate {
@@ -59,11 +59,14 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     
     func goToConfirmedRandevu() {
         if let service {
-            coordinatorDelegate?.goToConfirmedRandevu(service: service, date: date, appointment: nil)
+            coordinatorDelegate?.goToConfirmedRandevu(service: service, date: date, appointment: nil, tireSupportType: tireSupportType)
         }
     }
     
     func createRandevu() {
+        #if DEV_DEBUG
+        self.goToConfirmedRandevu()
+        #endif
         guard let service else { return }
         Loading.shared.show()
         APIService.createCase(supplierId: service.id,
@@ -101,6 +104,10 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
     func updateRandevu() {
         guard let appointment, let date else { return }
         
+        #if DEV_DEBUG
+        self.coordinatorDelegate?.goToConfirmedRandevu(service: nil, date: date, appointment: appointment, tireSupportType: tireSupportType)
+        #endif
+        
         Loading.shared.show()
         APIService.updateCase(caseId: appointment.id ?? "",
                               appointmentDate: date) { [weak self] _, error in
@@ -123,7 +130,7 @@ class ServiceRandevuViewModel: ServiceRandevuViewModelType {
                     APIService.addUserAction(pageName: "Services", actionName: "SERVICE_TIRE_MAKE_TIRE_REPLACEMENT_APPOINTMENT")
                 }
                 
-                self.coordinatorDelegate?.goToConfirmedRandevu(service: nil, date: date, appointment: appointment)
+                self.coordinatorDelegate?.goToConfirmedRandevu(service: nil, date: date, appointment: appointment, tireSupportType: tireSupportType)
             }
         }
     }

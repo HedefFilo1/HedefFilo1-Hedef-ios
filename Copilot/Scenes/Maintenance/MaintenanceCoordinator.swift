@@ -128,7 +128,7 @@ extension MaintenanceCoordinator: ServiceRandevuVMCoordinatorDelegate,
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?) {
+    func goToConfirmedRandevu(service: Supplier?, date: Date?, appointment: Case?, tireSupportType: TireSupportType?) {
         let controller: MaintenanceConfirmViewController = storyboard.instantiateViewController()
         let viewModel = ConfirmedRandevuViewModel()
         viewModel.service = service
