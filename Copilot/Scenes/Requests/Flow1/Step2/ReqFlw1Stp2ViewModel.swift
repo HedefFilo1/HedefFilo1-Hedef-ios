@@ -89,7 +89,7 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     func goToSuccess() {
         let title = App.getString(key: "copilotapp.demandproductservice.product.service.button") ?? ""
         let message = App.getString(key: "copilotapp.demandproductservice.success.title") ?? ""
-        let description = App.getString(key: "copilotapp.demanproductservice.request.fleet.manager.description.comfort.package") ?? ""
+        let description = App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.description") ?? ""
         coordinatorDelegate?.goToSuccess(title: title, message: message, description: description)
     }
 }

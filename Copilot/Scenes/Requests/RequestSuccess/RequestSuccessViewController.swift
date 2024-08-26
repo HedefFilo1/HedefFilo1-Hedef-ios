@@ -58,7 +58,7 @@ class RequestSuccessViewController: UIViewController {
             
         descriptionLabel.text = App.getString(key: "copilotapp.demandproductservice.success.description")
         if viewModel.description.count > 0 {
-            descriptionLabel.text = description
+            descriptionLabel.text = viewModel.description
         }
         
         requestsButton.setTitle(App.getString(key: "copilotapp.demandproductservice.success.back.request.page.button"), for: .normal)
