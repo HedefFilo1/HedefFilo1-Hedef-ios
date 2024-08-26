@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw4Stp3PlateVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String, message: String)
+    func goToSuccess(title: String, message: String, description: String)
 }
 
 protocol ReqFlw4Stp3PlateViewModelDelegate: BaseViewModelDelegate {
@@ -124,7 +124,8 @@ class ReqFlw4Stp3PlateViewModel: ReqFlw4Stp3PlateViewModelType {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_PLATE_PROCESS")
                 let text = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.title") ?? ""
                 let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.success.title") ?? ""
-                coordinatorDelegate?.goToSuccess(title: text, message: message)
+                let description = App.getString(key: "copilotapp.demanoperationalservice.request.fleet.manager.description.missing.plate") ?? ""
+                coordinatorDelegate?.goToSuccess(title: text, message: message, description: description)
             }
         }
     }

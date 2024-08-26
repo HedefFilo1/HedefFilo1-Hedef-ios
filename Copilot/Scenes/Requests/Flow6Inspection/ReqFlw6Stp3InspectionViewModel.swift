@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw6Stp3InspectionVMCrdntrDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String, message: String)
+    func goToSuccess(title: String, message: String, description: String)
 }
 
 protocol ReqFlw6Stp3InspectionViewModelDelegate: BaseViewModelDelegate {
@@ -106,7 +106,8 @@ class ReqFlw6Stp3InspectionViewModel: ReqFlw6Stp3InspectionViewModelType {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_EXAMINATION_PROCESS")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button") ?? ""
                 let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.success.title") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title, message: message)
+                let description = App.getString(key: "copilotapp.demanoperationalservice.request.fleet.manager.description.examination") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message, description: description)
             }
         }
         

@@ -14,7 +14,7 @@ struct MockRequestFlow1Item {
 
 protocol ReqFlw1Stp2ViewModelCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String, message: String)
+    func goToSuccess(title: String, message: String, description: String)
 }
 
 protocol ReqFlw1Stp2ViewModelDelegate: BaseViewModelDelegate {
@@ -89,6 +89,7 @@ class ReqFlw1Stp2ViewModel: ReqFlw1Stp2ViewModelType {
     func goToSuccess() {
         let title = App.getString(key: "copilotapp.demandproductservice.product.service.button") ?? ""
         let message = App.getString(key: "copilotapp.demandproductservice.success.title") ?? ""
-        coordinatorDelegate?.goToSuccess(title: title, message: message)
+        let description = App.getString(key: "copilotapp.demanproductservice.request.fleet.manager.description.comfort.package") ?? ""
+        coordinatorDelegate?.goToSuccess(title: title, message: message, description: description)
     }
 }

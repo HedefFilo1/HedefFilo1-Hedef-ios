@@ -14,7 +14,7 @@ struct OgsHgsType {
 
 protocol ReqFlw3Stp3HGSVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String, message: String)
+    func goToSuccess(title: String, message: String, description: String)
 }
 
 protocol ReqFlw3Stp3HGSViewModelDelegate: BaseViewModelDelegate {
@@ -124,7 +124,8 @@ class ReqFlw3Stp3HGSViewModel: ReqFlw3Stp3HGSViewModelType {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_HGS_PROCESS")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button") ?? ""
                 let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.success.title") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title, message: message)
+                let description = App.getString(key: "copilotapp.demanoperationalservice.request.fleet.manager.description.hgs") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message, description: description)
             }
         }
     }

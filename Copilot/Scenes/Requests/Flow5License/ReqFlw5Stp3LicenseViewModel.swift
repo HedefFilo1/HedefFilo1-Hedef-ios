@@ -9,7 +9,7 @@ import Foundation
 
 protocol ReqFlw5Stp3LicenseVMCoordinatorDelegate: AnyObject {
     func getBack()
-    func goToSuccess(title: String, message: String)
+    func goToSuccess(title: String, message: String, description: String)
 }
 
 protocol ReqFlw5Stp3LicenseViewModelDelegate: BaseViewModelDelegate {
@@ -112,7 +112,8 @@ class ReqFlw5Stp3LicenseViewModel: ReqFlw5Stp3LicenseViewModelType {
                 APIService.addUserAction(pageName: "Demands", actionName: "DEMAND_PROCESS_REQUESTS_MISSING_LICENSE_PROCESS")
                 let title = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button") ?? ""
                 let message = App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.success.title") ?? ""
-                coordinatorDelegate?.goToSuccess(title: title, message: message)
+                let description = App.getString(key: "copilotapp.demanoperationalservice.request.fleet.manager.description.missing.document") ?? ""
+                coordinatorDelegate?.goToSuccess(title: title, message: message, description: description)
             }
         }
     }
