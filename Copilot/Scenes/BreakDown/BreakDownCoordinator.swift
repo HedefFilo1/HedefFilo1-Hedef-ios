@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PDFKit
 
 protocol BreakDownCoordinatorDelegate: AnyObject {
     func didFinish(from coordinator: Coordinator)
@@ -180,10 +181,24 @@ extension BreakDownCoordinator: BrkdwnFlw4Stp3NoWarningVMCrdntrDlgt {
 extension BreakDownCoordinator: WarningGuideVMCrdntrDlgt {
    
     func goToWarningGuide() {
-        let controller: WarningGuideViewController = storyboard.instantiateViewController()
-        controller.viewModel = WarningGuideViewModel()
-        controller.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(controller, animated: true)
+//        let controller: WarningGuideViewController = storyboard.instantiateViewController()
+//        controller.viewModel = WarningGuideViewModel()
+//        controller.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(controller, animated: true)
+        
+        if let urlDestination = Bundle.main.url(forResource: "warningLightGuide", withExtension: "pdf") {
+            guard let pdf = PDFDocument(url: urlDestination) else { return }
+//            let title = App.getString(key: "copilotapp.accidentdamage.declaration.form.example.button") ?? ""
+            let title = Strings.breakdownWarningLightGuide
+        
+            let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+            viewController.viewModel = PdfViewerViewModel()
+            viewController.viewModel.pdfDoc = pdf
+            viewController.viewModel.coordinatorDelegate = self
+            viewController.viewModel.title = title
+            navigationController.pushViewController(viewController, animated: true)
+            
+        }
     }
     
     func getBackToBreakdown() {
@@ -194,4 +209,8 @@ extension BreakDownCoordinator: WarningGuideVMCrdntrDlgt {
         
         navigationController.popToRootViewController(animated: true)
     }
+}
+
+extension BreakDownCoordinator: PdfViewerViewModelCoordinatorDelegate {
+    
 }

@@ -324,6 +324,7 @@
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
+		898B132F2C7C91900098F6D7 /* warningLightGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 898B132E2C7C91900098F6D7 /* warningLightGuide.pdf */; };
 		89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */; };
 		89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */; };
 		89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */; };
@@ -914,6 +915,7 @@
 		8989DDA22AC493BF0035CD99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8989DDA72AC493C00035CD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898B132E2C7C91900098F6D7 /* warningLightGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = warningLightGuide.pdf; sourceTree = "<group>"; };
 		89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModel.swift; sourceTree = "<group>"; };
 		89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
@@ -4058,6 +4060,7 @@
 			children = (
 				89FC518D2B6A965900AD37D4 /* BreakDown.storyboard */,
 				89FC518F2B6A966100AD37D4 /* BreakDownCoordinator.swift */,
+				898B132E2C7C91900098F6D7 /* warningLightGuide.pdf */,
 				8976B0192B73AC6D00E7C58F /* SuccessRandevu */,
 				8944AB892B74F7DA00967CE2 /* WarningLights */,
 				89FC51912B6A96D300AD37D4 /* Step1 */,
@@ -4241,6 +4244,7 @@
 				892A8CF22AC4C6860020C1C4 /* Splash.storyboard in Resources */,
 				89F65E072BB08F9100A1FAF2 /* ProccessRequestsItemCell.xib in Resources */,
 				89DF071C2AF0F8A100892B1D /* PointsView.xib in Resources */,
+				898B132F2C7C91900098F6D7 /* warningLightGuide.pdf in Resources */,
 				890639112B88CA24000A0819 /* AccFlw5Stp3ContentCell.xib in Resources */,
 				891B60CD2AF1107300D6F09C /* PointsCell.xib in Resources */,
 				896CB36A2AD722590048025A /* TireInfoCell.xib in Resources */,
