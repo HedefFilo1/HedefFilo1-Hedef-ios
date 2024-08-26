@@ -21,6 +21,7 @@ protocol FeedbackRateViewModelType: AnyObject {
     var rate: Int { get set }
     var caseId: String { get set }
     var date: String { get set }
+    var title: String { get set }
     var description: String { get set }
     func goToFeedbackComment()
 }
@@ -32,6 +33,7 @@ class FeedbackRateViewModel: FeedbackRateViewModelType {
     var rate: Int = 0
     var caseId = ""
     var date = ""
+    var title = ""
     var description = ""
     
     func goToFeedbackComment() {
