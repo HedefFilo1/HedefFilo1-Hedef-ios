@@ -44,9 +44,9 @@ class FeedbackViewController: UIViewController {
         applyStyles()
         setTexts()
         
-        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
-            liveSupportButton.isHidden = true
-        }
+//        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
+//            liveSupportButton.isHidden = true
+//        }
     }
     
     private func setupCollectionView() {

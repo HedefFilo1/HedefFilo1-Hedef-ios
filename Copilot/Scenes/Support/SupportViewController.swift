@@ -57,9 +57,9 @@ class SupportViewController: UIViewController {
         setBasicViews()
         applyStyles()
         configure()
-        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
-            liveSupportButton.isHidden = true
-        }
+//        if Configuration.shared.environment == .debugProduction || Configuration.shared.environment == .releaseProduction {
+//            liveSupportButton.isHidden = true
+//        }
     }
     
     private func setupCollectionView() {
