@@ -221,7 +221,7 @@ class APIService {
             route += "lat=\(lat)&lon=\(lon)&"
         }
         if let type {
-            route += "type=\(type.rawValue)"
+//            route += "type=\(type.rawValue)"
         } else {
             route.removeLast()
         }

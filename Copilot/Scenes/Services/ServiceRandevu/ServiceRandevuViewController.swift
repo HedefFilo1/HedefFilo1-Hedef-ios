@@ -66,7 +66,12 @@ class ServiceRandevuViewController: UIViewController {
         titleLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.title")
         desciptionLabel.text = App.getString(key: "copilotapp.servicetire.appointment.confirmation.description")
         if viewModel.tireSupportType == .change {
-            desciptionLabel.text = App.getString(key: "copilotapp.servicetirechange.appointment.confirmation.description")
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetirechange.appointment.confirmation.description.before.confirmation")
+        }
+        
+        if viewModel.tireSupportType == .damage {
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetiredamage.appointment.confirmation.description.before.confirmation")
+            
         }
         confirmationLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.appointment.confirmation.detail")
         

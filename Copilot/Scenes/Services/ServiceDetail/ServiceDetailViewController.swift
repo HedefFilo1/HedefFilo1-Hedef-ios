@@ -91,6 +91,15 @@ class ServiceDetailViewController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.service?.name
         desciptionLabel.text = Strings.selectTimeToRepair
+        
+        if viewModel.tireSupportType == .damage {
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetiredamage.appointment.confirmation.description.before.confirmation.time.selection")
+        }
+        
+        if viewModel.tireSupportType == .change {
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetirechange.appointment.confirmation.description.before.confirmation.time.selection")
+        }
+        
         mapButtonLabel.text = App.getString(key: "copilotapp.servicetire.service.open.map.button")
         selectRandevuLabel.text = App.getString(key: "copilotapp.servicetire.select.appointment.day.title")
         randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
@@ -165,12 +174,20 @@ class ServiceDetailViewController: UIViewController {
         addressLabel.text = item.address
         statusView.isHidden = true
         
+//        if viewModel.tireSupportType == .damage {
+//            desciptionLabel.text = Strings.selectTimeToRepair
+//        }
+//        
+//        if viewModel.tireSupportType == .change {
+//            desciptionLabel.text = Strings.selectTimeToChange
+//        }
+        
         if viewModel.tireSupportType == .damage {
-            desciptionLabel.text = Strings.selectTimeToRepair
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetiredamage.appointment.confirmation.description.before.confirmation.time.selection")
         }
         
         if viewModel.tireSupportType == .change {
-            desciptionLabel.text = Strings.selectTimeToChange
+            desciptionLabel.text = App.getString(key: "copilotapp.servicetirechange.appointment.confirmation.description.before.confirmation.time.selection")
         }
     }
     

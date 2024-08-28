@@ -90,7 +90,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.service?.name
 //        desciptionLabel.text = Strings.breakdownServicesDescription
-        desciptionLabel.text = ""
+        desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.hour")
         mapButtonLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.open.map.button")
         selectRandevuLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.day.title")
         randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
@@ -158,7 +158,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
             statusLabel.text = Strings.waitingToApprove
 //            desciptionLabel.text = Strings.tireRepairAwaitingConfirmation
         }
-        desciptionLabel.text = Strings.breakdownEditAppointment
+//        desciptionLabel.text = Strings.breakdownEditAppointment
         dateChooseView.setDate(strDate: item.appointmentDate ?? "")
         timeChooseView.set(hourNumber: item.hourOfDate, minuteNumber: item.minetusOfDate)
         setButtonActivation()
