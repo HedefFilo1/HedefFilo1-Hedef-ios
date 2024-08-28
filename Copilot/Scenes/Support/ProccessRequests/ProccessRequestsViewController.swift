@@ -78,6 +78,7 @@ extension ProccessRequestsViewController: UICollectionViewDataSource, UICollecti
         if indexPath.section == 0 {
             let cell: ProccessRequestsSearchCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.setFilter(item: viewModel.filterItem?.title)
             return cell
         }
         
@@ -89,7 +90,8 @@ extension ProccessRequestsViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            let height: CGFloat = 74
+            let hasFilter = viewModel.filterItem != nil
+            let height: CGFloat = hasFilter ? 110: 74
             return CGSize(width: collectionView.frame.width, height: height)
         } else {
             
@@ -112,6 +114,11 @@ extension ProccessRequestsViewController: UICollectionViewDataSource, UICollecti
 }
 
 extension ProccessRequestsViewController: ProccessRequestsSearchCellDelegate {
+    func didTapRemoveFilter() {
+        viewModel.filterItem = nil
+        collectionView.reloadData()
+    }
+    
     
     func didChangeSearch(text: String) {
         searchText = text

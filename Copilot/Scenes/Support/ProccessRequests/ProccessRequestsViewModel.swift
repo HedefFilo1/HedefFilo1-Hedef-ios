@@ -30,6 +30,7 @@ protocol ProccessRequestsViewModelType: AnyObject {
     var items: [ProccessRequest] { get set }
     var filteredServices: [ProccessRequest] { get}
     var searchText: String { get set }
+    var filterItem: FeedbackFilterItem? { get set }
     func getBack()
     func presentFitlers()
     func presentFeedbackRate(caseId: String, date: String)

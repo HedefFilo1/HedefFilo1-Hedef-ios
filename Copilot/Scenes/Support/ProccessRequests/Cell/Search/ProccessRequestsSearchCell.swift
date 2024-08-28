@@ -10,6 +10,7 @@ import UIKit
 protocol ProccessRequestsSearchCellDelegate: AnyObject {
     func didTapFilter()
     func didChangeSearch(text: String)
+    func didTapRemoveFilter()
 }
 
 class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
@@ -17,6 +18,8 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
     weak var delegate: ProccessRequestsSearchCellDelegate?
     @IBOutlet weak var filterLabel: UILabel!
     @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var filterItemLabel: UILabel!
+    @IBOutlet weak var filterItemView: UIView!
     @IBOutlet weak var searchTextField: CPSearchTextField!
     
     override func awakeFromNib() {
@@ -28,6 +31,7 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
         searchTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         applyStyles()
         setTexts()
+        filterItemView.isHidden = true
     }
     
     func applyStyles() {
@@ -39,11 +43,24 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
         filterLabel.apply(.blackS14B700)
         searchTextField.setTint(color: .fieldsTitle)
         searchTextField.apply(.blackS14R400)
+        filterItemLabel.apply(.blackS12B700)
+        filterItemView.layer.borderWidth = 1
+        filterItemView.layer.borderColor = UIColor.greyTextLight.cgColor
+        filterItemView.layer.cornerRadius = 10
     }
     
     func setTexts() {
         searchTextField.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.button_search")
         filterLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.button_filter")
+    }
+    
+    func setFilter(item: String?) {
+        if let item {
+            filterItemLabel.text = item
+            filterItemView.isHidden = false
+        } else {
+            filterItemView.isHidden = true
+        }
     }
     
     @objc func editingChanged() {
@@ -53,5 +70,10 @@ class ProccessRequestsSearchCell: UICollectionViewCell, Reusable {
     
     @IBAction func didTapFilter() {
         delegate?.didTapFilter()
+    }
+    
+    @IBAction func didTapRemoveFilter() {
+        setFilter(item: nil)
+        delegate?.didTapRemoveFilter()
     }
 }
