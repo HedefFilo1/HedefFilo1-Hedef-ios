@@ -83,6 +83,7 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
         if indexPath.section == 0 {
             let cell: ServiceOperationsSearchCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.setFilter(item: viewModel.filterItem?.title)
             return cell
         }
         
@@ -94,7 +95,8 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            let height: CGFloat = 74
+            let hasFilter = viewModel.filterItem != nil
+            let height: CGFloat = hasFilter ? 110: 74
             return CGSize(width: collectionView.frame.width, height: height)
         } else {
             
@@ -117,6 +119,11 @@ extension ServiceOperationsViewController: UICollectionViewDataSource, UICollect
 }
 
 extension ServiceOperationsViewController: ServiceOperationsSearchCellDelegate {
+    
+    func didTapRemoveFilter() {
+        viewModel.filterItem = nil
+        collectionView.reloadData()
+    }
     
     func didChangeSearch(text: String) {
         searchText = text

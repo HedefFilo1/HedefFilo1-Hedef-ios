@@ -53,6 +53,46 @@
                             <constraint firstAttribute="height" constant="50" id="B1w-Sk-bLY"/>
                         </constraints>
                     </view>
+                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-Kk-Od9">
+                        <rect key="frame" x="16" y="70" width="106.33333333333331" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İstanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVc-yZ-XLq">
+                                <rect key="frame" x="34" y="5.6666666666666714" width="60.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boldCloseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-4C-miw">
+                                <rect key="frame" x="12" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="iTR-ty-4ej"/>
+                                    <constraint firstAttribute="width" constant="16" id="s5H-GO-cZW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHL-bw-y6x">
+                                <rect key="frame" x="0.0" y="1" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0ce-1T-SrZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="tAS-mP-C5q"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapRemoveFilter" destination="gTV-IL-0wX" eventType="touchUpInside" id="n8N-Nx-z0g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mVc-yZ-XLq" firstAttribute="leading" secondItem="xK0-4C-miw" secondAttribute="trailing" constant="6" id="2tM-7N-8vW"/>
+                            <constraint firstItem="xK0-4C-miw" firstAttribute="leading" secondItem="8fH-Kk-Od9" secondAttribute="leading" constant="12" id="DPs-Sx-lo5"/>
+                            <constraint firstItem="wHL-bw-y6x" firstAttribute="centerX" secondItem="xK0-4C-miw" secondAttribute="centerX" id="PXs-rv-W6H"/>
+                            <constraint firstAttribute="trailing" secondItem="mVc-yZ-XLq" secondAttribute="trailing" constant="12" id="RPv-01-y1N"/>
+                            <constraint firstItem="xK0-4C-miw" firstAttribute="centerY" secondItem="8fH-Kk-Od9" secondAttribute="centerY" id="ZgY-SM-BNK"/>
+                            <constraint firstItem="wHL-bw-y6x" firstAttribute="centerY" secondItem="xK0-4C-miw" secondAttribute="centerY" id="b2w-gR-xYK"/>
+                            <constraint firstItem="mVc-yZ-XLq" firstAttribute="centerY" secondItem="8fH-Kk-Od9" secondAttribute="centerY" id="wN3-SY-UUl"/>
+                            <constraint firstAttribute="height" constant="32" id="wY6-Dl-Kda"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -60,12 +100,16 @@
                 <constraint firstItem="h8P-PU-RHX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="5B6-Z0-DOD"/>
                 <constraint firstAttribute="trailing" secondItem="5On-dJ-yrI" secondAttribute="trailing" constant="16" id="Gg3-nv-dXy"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="top" secondItem="h8P-PU-RHX" secondAttribute="top" id="Mug-5D-K4f"/>
+                <constraint firstItem="8fH-Kk-Od9" firstAttribute="top" secondItem="h8P-PU-RHX" secondAttribute="bottom" constant="12" id="NIM-Pa-zBT"/>
                 <constraint firstItem="h8P-PU-RHX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="aY0-r8-zJ7"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="leading" secondItem="h8P-PU-RHX" secondAttribute="trailing" constant="8" id="sdf-lG-44E"/>
+                <constraint firstItem="8fH-Kk-Od9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="vju-89-H8Y"/>
                 <constraint firstItem="5On-dJ-yrI" firstAttribute="bottom" secondItem="h8P-PU-RHX" secondAttribute="bottom" id="zaI-ym-jDH"/>
             </constraints>
             <size key="customSize" width="442" height="133"/>
             <connections>
+                <outlet property="filterItemLabel" destination="mVc-yZ-XLq" id="TYr-aI-zK0"/>
+                <outlet property="filterItemView" destination="8fH-Kk-Od9" id="nZK-1Q-NZY"/>
                 <outlet property="filterLabel" destination="djG-RF-urn" id="tuU-GX-iEY"/>
                 <outlet property="filterView" destination="5On-dJ-yrI" id="faL-4O-dGw"/>
                 <outlet property="searchTextField" destination="h8P-PU-RHX" id="Xw8-Ws-Caz"/>
@@ -74,6 +118,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="boldCloseIcon" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

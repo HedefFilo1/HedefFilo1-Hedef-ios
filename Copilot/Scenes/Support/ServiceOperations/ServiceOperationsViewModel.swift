@@ -30,6 +30,7 @@ protocol ServiceOperationsViewModelType: AnyObject {
     var items: [ServiceOperation] { get set }
     var filteredServices: [ServiceOperation] { get}
     var searchText: String { get set }
+    var filterItem: FeedbackFilterItem? { get set }
     func getBack()
     func presentFitlers()
     func presentFeedbackRate(caseId: String, date: String)
