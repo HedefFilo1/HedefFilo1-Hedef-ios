@@ -24,6 +24,7 @@ protocol ServiceRandevuViewModelType: AnyObject {
     var towTruck: Bool { get set }
     var date: Date? { get set }
     var displayDate: String? { get }
+    var tireSupportType: TireSupportType? { get set }
     func getBack()
     func goToConfirmedRandevu()
     func createRandevu()

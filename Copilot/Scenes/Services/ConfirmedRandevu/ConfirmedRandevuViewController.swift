@@ -67,16 +67,17 @@ class ConfirmedRandevuViewController: UIViewController {
     }
     
     func setTexts() {
-//        titleLabel.text = Strings.randevuRequestSuccessMessage
         titleLabel.text = App.getString(key: "copilotapp.success.tire.damage")
+        desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.success.description")
         if let tireSupportType = viewModel.tireSupportType {
             if tireSupportType == .damage {
                 titleLabel.text = App.getString(key: "copilotapp.success.tire.damage")
+                desciptionLabel.text = App.getString(key: "copilotapp.servicedamage.service.success.description")
             } else {
                 titleLabel.text = App.getString(key: "copilotapp.servicetire.appointment.confirmation.confirm.success.title")
+                desciptionLabel.text = App.getString(key: "copilotapp.servicetirechange.appointment.confirmation.description")
             }
         }
-        desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.success.description")
         editButton.setTitle(App.getString(key: "copilotapp.servicetire.appointment.confirmation.edit.appointment.button"), for: .normal)
         homeButton.setTitle(App.getString(key: "copilotapp.servicetire.tire.operation.winter.tire.new.winter.tire.request.received.back.homepage.button"), for: .normal)
     }
