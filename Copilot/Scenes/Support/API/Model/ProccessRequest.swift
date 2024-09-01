@@ -81,8 +81,12 @@ struct ProccessRequest: Decodable {
     let recordType: String?
     let invoiceNumber: String?
     let webCategoryEnum: WebCategoryEnum?
+    let recordTypeResult: String?
     
     var displayTitle: String {
+        if let recordTypeResult {
+            return recordTypeResult
+        }
         if let webCategoryEnum {
             return webCategoryEnum.title
         }

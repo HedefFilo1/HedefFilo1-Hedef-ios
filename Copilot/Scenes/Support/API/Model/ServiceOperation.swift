@@ -22,8 +22,12 @@ struct ServiceOperation: Decodable {
     let appointmentDate: String?
     let recordType: String?
 //    let recordType_: ServiceOperationType?
+    let recordTypeResult: String?
     
     var dispayTitle: String {
+//        if let recordTypeResult {
+//            return recordTypeResult
+//        }
         if let supplierName {
             return supplierName
         }

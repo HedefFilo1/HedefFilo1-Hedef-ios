@@ -47,7 +47,7 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
     var filteredServices: [ServiceOperation] {
         var notNulls = items
         if let filterItem {
-            notNulls = notNulls.filter({$0.type == filterItem.title})
+            notNulls = notNulls.filter({$0.recordTypeResult == filterItem.title})
         }
         
         if searchText.isEmpty {
@@ -70,10 +70,9 @@ class ServiceOperationsViewModel: ServiceOperationsViewModelType {
         //            FeedbackFilterItem(title: "Arıza")
         //        ]
         
-        
         var filterStrings = Set<String>()
         for item in items {
-            let value = item.type
+            let value = item.recordTypeResult ?? ""
             filterStrings.insert(value)
         }
         

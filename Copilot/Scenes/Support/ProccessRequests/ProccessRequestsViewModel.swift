@@ -47,8 +47,8 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
     var filteredServices: [ProccessRequest] {
         var notNulls = items // .filter({ $0.displayTitle != nil })
         if let filterItem {
-            let type = WebCategoryEnum(rawValue: filterItem.title)
-            notNulls = notNulls.filter({$0.webCategoryEnum == type})
+            let type = filterItem.title
+            notNulls = notNulls.filter({$0.recordTypeResult == type})
         }
         if searchText.isEmpty {
             return notNulls
@@ -71,7 +71,7 @@ class ProccessRequestsViewModel: ProccessRequestsViewModelType {
 //        ]
         var filterStrings = Set<String>()
         for item in items {
-            let value = item.webCategoryEnum?.rawValue ?? ""
+            let value = item.recordTypeResult ?? ""
             filterStrings.insert(value)
         }
         
