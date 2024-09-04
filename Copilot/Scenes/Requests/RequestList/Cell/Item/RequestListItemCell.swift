@@ -25,7 +25,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
     
     var request: Demand? {
         didSet {
-            titleLabel.text = request?.recordType
+            titleLabel.text = request?.recordTypeResult
             if let text =  request?.statusTextResult {
                 statusLabel.text = text
                 statusView.backgroundColor = request?.statusEnum.color

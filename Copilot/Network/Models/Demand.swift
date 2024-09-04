@@ -40,4 +40,5 @@ struct Demand: Decodable {
     let recordType: String?
     let statusTextResult: String?
     let supplierName: String?
+    let recordTypeResult: String?
 }

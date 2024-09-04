@@ -26,35 +26,35 @@ enum WebCategoryEnum: String, Decodable {
     case vehicleReturn = "VEHICLE_RETURN"
     case occupiedVehicle = "OCCUPIED_VEHICLE"
     case other = "OTHER"
-    
+
     var title: String {
         switch self {
         case .failur:
-            return "Arıza"
+            return App.getString(key: "copilotapp.serviceoperation.breakdown") ?? ""
         case .damage:
-            return "Hasar"
+            return App.getString(key: "hedefnet.demand.invoice.transaction.dropdown.damage") ?? "Hasar"
         case .tire:
-            return "Tamir"
+            return App.getString(key: "copilotapp.serviceoperation.repair") ?? "Tamir"
         case .maintenance:
-            return "Bakım"
+            return App.getString(key: "copilotapp.serviceoperation.maintenance") ?? "Bakım"
         case .invoiceObjection:
             return "INVOICE_OBJECTION"
         case .logo:
             return "Logo"
         case .ogsHgs:
-            return "OGS_HGS"
+            return App.getString(key: "copilotapp.demandprocessual.processual.demand.hgs.operation.button") ?? "OGS_HGS"
         case .missingPlate:
-            return "MISSING_PLATE"
+            return App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.plate.operation.button") ?? "MISSING_PLATE"
         case .missingLicense:
-            return "MISSING_LICENSE"
+            return App.getString(key: "copilotapp.demandprocessual.processual.demand.lost.license.operation.button") ?? "MISSING_LICENSE"
         case .foreignExit:
             return "FOREIGN_EXIT"
         case .penaltyInvoice:
             return "PENALTY_INVOICE"
         case .vehicleOccupation:
-            return "VEHICLE_OCCUPATION"
+            return App.getString(key: "copilotapp.demandlist.product.process.request.towed.vehicle.operation") ?? "VEHICLE_OCCUPATION"
         case .vehicleInspection:
-            return "VEHICLE_INSPECTION"
+            return App.getString(key: "copilotapp.demandprocessual.processual.demand.inspection.operation.button") ?? "VEHICLE_INSPECTION"
         case .trafficPolicy:
             return "TRAFFIC_POLICY"
         case .vehicleReturn:
@@ -66,7 +66,7 @@ enum WebCategoryEnum: String, Decodable {
             return "INSPECTION"
             
         case .other:
-            return "OTHER"
+            return App.getString(key: "copilotapp.other") ?? "OTHER"
         }
     }
 }
