@@ -62,7 +62,7 @@ class ReqFlw1Stp2ViewController: UIViewController {
         //        titleLabel.text = Strings.ReqFlw1Stp2
         //        descriptionLabel.text = Strings.ReqFlw1Stp2Description
         titleLabel.text = App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.title")
-        descriptionLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.description")
+        descriptionLabel.text = App.getString(key: "copilotapp.demandproductservice.description")
         createButton.setTitle(App.getString(key: "copilotapp.demandproductservice.request.fleet.manager.create.product.request.button"), for: .normal)
     }
     
