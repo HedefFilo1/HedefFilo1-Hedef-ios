@@ -177,6 +177,28 @@ extension HomeViewController: HomeContentCellDelegate {
     func didSelectNearMe() {
         viewModel.goToNearMe()
     }
+    
+    func didTapOnLocation(lat: Double, lon: Double) {
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let mapStr =  App.getString(key: "copilotapp.home.map") ?? ""
+        let firstAction: UIAlertAction = UIAlertAction(title: mapStr, style: .default) { [weak self] _ in
+            self?.viewModel.openAppleMap(latitude: lat, longitude: lon)
+        }
+        let googleStr = App.getString(key: "copilotapp.home.google.map") ?? ""
+        let secondAction: UIAlertAction = UIAlertAction(title: googleStr, style: .default) { [weak self] _ in
+            self?.viewModel.openGoogleMap(latitude: lat, longitude: lon)
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel)
+        
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        
+        present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
+    }
 }
 
 extension HomeViewController: KMUsedViewControllerDelegate {

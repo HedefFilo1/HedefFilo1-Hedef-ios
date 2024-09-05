@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol RandevuCellDelegate: AnyObject {
+    func didTapOnLocation(lat: Double, lon: Double)
+    
+}
+
 class RandevuCell: UICollectionViewCell, Reusable {
     
     var appointment: Case? {
@@ -17,6 +22,7 @@ class RandevuCell: UICollectionViewCell, Reusable {
             dateLabel.text = appointment?.displayDate
         }
     }
+    weak var delegate: RandevuCellDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageContainer: UIView!
@@ -45,5 +51,11 @@ class RandevuCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.homepage.upcoming.appointment.title")
+    }
+    
+    @IBAction func didTapLocation() {
+        if let appointment {
+            delegate?.didTapOnLocation(lat: appointment.latitude ?? 0, lon: appointment.longitude ?? 0)
+        }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 protocol HomeViewModelCoordinatorDelegate: AnyObject {
     func goToNearMe(mark: String)
@@ -40,6 +41,8 @@ protocol HomeViewModelType: AnyObject {
     func presentKMUsed(delegate: KMUsedViewControllerDelegate)
     func goToSearch()
     func getAppointment()
+    func openGoogleMap(latitude: Double, longitude: Double)
+    func openAppleMap(latitude: Double, longitude: Double)
 }
 
 class HomeViewModel: HomeViewModelType {
@@ -211,5 +214,20 @@ class HomeViewModel: HomeViewModelType {
     
     func goToSearch() {
         coordinatorDelegate?.goToSearch()
+    }
+}
+
+// open map
+extension HomeViewModel {
+    func openGoogleMap(latitude: Double, longitude: Double) {
+        if let urlDestination = URL.init(string: "https://maps.google.com/?q=@\(latitude),\(longitude)") {
+            UIApplication.shared.open(urlDestination)
+        }
+    }
+    
+    func openAppleMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }

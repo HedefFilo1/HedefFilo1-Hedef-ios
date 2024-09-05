@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -66,13 +66,26 @@
                                     <constraint firstAttribute="height" constant="24" id="upw-hc-lp5"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL8-iF-eed">
+                                <rect key="frame" x="290" y="27" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="04h-lV-8oO"/>
+                                    <constraint firstAttribute="width" constant="40" id="fuh-Fl-CdZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="didTapLocation" destination="gTV-IL-0wX" eventType="touchUpInside" id="yq6-nV-IBp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xib-og-mqg" firstAttribute="centerY" secondItem="bGc-CI-pfd" secondAttribute="centerY" id="2QK-dc-e5q"/>
                             <constraint firstAttribute="trailing" secondItem="AKL-kE-qYl" secondAttribute="trailing" constant="26" id="FZI-go-AYb"/>
                             <constraint firstItem="B95-vH-gGf" firstAttribute="top" secondItem="k7a-b5-4mx" secondAttribute="bottom" constant="4" id="S1f-Ql-UDf"/>
+                            <constraint firstItem="xL8-iF-eed" firstAttribute="centerY" secondItem="AKL-kE-qYl" secondAttribute="centerY" id="UCn-cX-IH1"/>
                             <constraint firstItem="AKL-kE-qYl" firstAttribute="leading" secondItem="k7a-b5-4mx" secondAttribute="trailing" constant="4" id="drW-2V-c7a"/>
+                            <constraint firstItem="xL8-iF-eed" firstAttribute="centerX" secondItem="AKL-kE-qYl" secondAttribute="centerX" id="erq-7A-8Uk"/>
                             <constraint firstItem="xib-og-mqg" firstAttribute="leading" secondItem="bGc-CI-pfd" secondAttribute="leading" constant="16" id="gAc-Yr-ES4"/>
                             <constraint firstItem="k7a-b5-4mx" firstAttribute="top" secondItem="bGc-CI-pfd" secondAttribute="top" constant="19" id="ilL-uv-Quq"/>
                             <constraint firstItem="AKL-kE-qYl" firstAttribute="leading" secondItem="B95-vH-gGf" secondAttribute="trailing" constant="4" id="j3a-uA-yIU"/>

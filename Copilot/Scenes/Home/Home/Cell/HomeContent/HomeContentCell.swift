@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol HomeContentCellDelegate: PointsCellDelegate {
+protocol HomeContentCellDelegate: PointsCellDelegate, RandevuCellDelegate {
     func didSelectNearMe()
 }
 
@@ -100,6 +100,7 @@ extension HomeContentCell: UICollectionViewDataSource, UICollectionViewDelegateF
         case 0:
             let cell: RandevuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.appointment = appointment
+            cell.delegate = delegate
             return cell
             
         case 1:
