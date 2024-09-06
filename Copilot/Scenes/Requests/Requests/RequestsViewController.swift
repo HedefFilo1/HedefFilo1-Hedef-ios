@@ -55,7 +55,7 @@ class RequestsViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "copilotapp.demandproductservice.title")
-        descriptionLabel.text = App.getString(key: "copilotapp.demandprocessual.processual.demand.description")
+        descriptionLabel.text = App.getString(key: "copilotapp.more.demands.description")
     }
     
     @IBAction func didTapBack() {

@@ -44,6 +44,7 @@ class StandingCell: UICollectionViewCell, Reusable {
     }
     
     func setTexts() {
+        titleLabel.text = App.getString(key: "copilotapp.gamification.standings.description")
         howLabel.text = App.getString(key: "copilotapp.gamification.standings.how_to_earn_points")
     }
     

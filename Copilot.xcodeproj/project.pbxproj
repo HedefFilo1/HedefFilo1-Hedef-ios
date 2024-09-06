@@ -504,6 +504,7 @@
 		89DBD9E02B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift */; };
 		89DBD9E32B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9E22B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift */; };
 		89DBD9E52B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBD9E42B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift */; };
+		89DC24DC2C8B14B60077936F /* accGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 89DC24DB2C8B14B60077936F /* accGuide.pdf */; };
 		89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC31272B3E812D00791C3B /* CPDropDownList.swift */; };
 		89DC312B2B3E853500791C3B /* ServiceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */; };
 		89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */; };
@@ -1095,6 +1096,7 @@
 		89DBD9DF2B72CACF007B416A /* BrkdwnFlw1Stp4ServicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp4ServicesViewModel.swift; sourceTree = "<group>"; };
 		89DBD9E22B72CFE4007B416A /* BrkdwnFlw1Stp5ServiceDetailVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp5ServiceDetailVController.swift; sourceTree = "<group>"; };
 		89DBD9E42B72CFF7007B416A /* BrkdwnFlw1Stp5ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrkdwnFlw1Stp5ServiceDetailViewModel.swift; sourceTree = "<group>"; };
+		89DC24DB2C8B14B60077936F /* accGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = accGuide.pdf; sourceTree = "<group>"; };
 		89DC31272B3E812D00791C3B /* CPDropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDropDownList.swift; sourceTree = "<group>"; };
 		89DC312A2B3E853500791C3B /* ServiceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewController.swift; sourceTree = "<group>"; };
 		89DC312C2B3E854A00791C3B /* ServiceFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFilterViewModel.swift; sourceTree = "<group>"; };
@@ -2257,6 +2259,7 @@
 		89513E5F2B91C15200B05199 /* AccidentGuide */ = {
 			isa = PBXGroup;
 			children = (
+				89DC24DB2C8B14B60077936F /* accGuide.pdf */,
 				89513E602B91C19400B05199 /* AccidentGuideViewModel.swift */,
 				89513E622B91C19A00B05199 /* AccidentGuideViewController.swift */,
 				89513E642B91C1C300B05199 /* Cell */,
@@ -4260,6 +4263,7 @@
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
 				899FF4162B76405500447118 /* SelectedWarningsButtonsCell.xib in Resources */,
 				89B07A4B2AD86D3A00D3BE80 /* MenuCell.xib in Resources */,
+				89DC24DC2C8B14B60077936F /* accGuide.pdf in Resources */,
 				89DF05482BACD18B00C8B37E /* ServiceOperationsSearchCell.xib in Resources */,
 				89B190FE2B87A7E700AC1171 /* AccFlw4Stp4HeaderCell.xib in Resources */,
 				89E045962B04FA3F00745E73 /* DocumentPageTitleCell.xib in Resources */,

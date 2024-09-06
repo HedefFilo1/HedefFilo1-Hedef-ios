@@ -71,7 +71,7 @@ class NotificationSettingsViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = App.getString(key: "setting.notifications")
-        descriptionLabel.text = Strings.notificationSettingsDescription
+        descriptionLabel.text = App.getString(key: "settings.notification.description") ??  Strings.notificationSettingsDescription
         weatherLabel.text = App.getString(key: "settings.notification.weather")
         campaignsLabel.text = App.getString(key: "settings.notification.campaigns")
         randevueDateLabel.text = App.getString(key: "settings.notification.appointment.date")

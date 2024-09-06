@@ -80,10 +80,23 @@ extension AccidentCoordinator: AccFlw1Stp1VMCrdinatorDlgt,
     }
     
     func goToGuide() {
-        let viewController: AccidentGuideViewController = storyboard.instantiateViewController()
-        viewController.viewModel = AccidentGuideViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+//        let viewController: AccidentGuideViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = AccidentGuideViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
+        if let urlDestination = Bundle.main.url(forResource: "accGuide", withExtension: "pdf") {
+            guard let pdf = PDFDocument(url: urlDestination) else { return }
+//            let title = App.getString(key: "copilotapp.accidentdamage.declaration.form.example.button") ?? ""
+            let title = App.getString(key: "copilotapp.accidentdamage.accident.process.go.accident.guide.title") ?? ""
+        
+            let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+            viewController.viewModel = PdfViewerViewModel()
+            viewController.viewModel.pdfDoc = pdf
+            viewController.viewModel.coordinatorDelegate = self
+            viewController.viewModel.title = title
+            navigationController.pushViewController(viewController, animated: true)
+            
+        }
     }
     
     func goToAccFlw1Stp3Agreement() {
