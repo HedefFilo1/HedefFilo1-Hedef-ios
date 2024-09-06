@@ -45,6 +45,7 @@ class SupportGuideDetailViewController: UIViewController {
     
     func setTexts() {
         titleLabel.text = viewModel.item?.title
+        downloadLabel.text = App.getString(key: "copilotapp.document.download.button")
     }
     
     @IBAction func didTapBack() {

@@ -90,7 +90,7 @@ class BrkdwnFlw1Stp5ServiceDetailVController: UIViewController {
     func setTexts() {
         titleLabel.text = viewModel.service?.name
 //        desciptionLabel.text = Strings.breakdownServicesDescription
-        desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.hour")
+        desciptionLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.hour.detail")
         mapButtonLabel.text = App.getString(key: "copilotapp.servicebreakdown.service.open.map.button")
         selectRandevuLabel.text = App.getString(key: "copilotapp.servicebreakdown.select.appointment.day.title")
         randevuDescriptionLabel.text = App.getString(key: "copilotapp.servicemaintenance.service.detail.select.appointment.day.description")
