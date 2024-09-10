@@ -27,6 +27,10 @@ class App {
         }
     }
     
+    static var imageUploadMaxSize: Int {
+        return 5 * 1024 * 1024
+    }
+    
     static func netIsReachable(_ reachable: Bool) {
 //        
     }

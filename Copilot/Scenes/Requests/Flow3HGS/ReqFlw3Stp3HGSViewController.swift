@@ -276,7 +276,8 @@ extension ReqFlw3Stp3HGSViewController: UINavigationControllerDelegate, UIImageP
             showFileNameView()
         }
         picker.dismiss(animated: true)
-        guard let data = tempImage.pngData() else { return }
+//        guard let data = tempImage.pngData() else { return }
+        let data = tempImage.compressedData(maxSizeInByte: App.imageUploadMaxSize)
         Loading.shared.show(presentingView: self.view)
         viewModel.sendFile(data: data)
         

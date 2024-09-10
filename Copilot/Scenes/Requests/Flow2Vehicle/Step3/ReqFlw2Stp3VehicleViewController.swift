@@ -317,7 +317,8 @@ extension ReqFlw2Stp3VehicleViewController: UINavigationControllerDelegate, UIIm
             //                fileType = url.pathExtension
         }
         picker.dismiss(animated: true)
-        guard let data = tempImage.pngData() else { return }
+//        guard let data = tempImage.pngData() else { return }
+        let data = tempImage.compressedData(maxSizeInByte: App.imageUploadMaxSize)
         Loading.shared.show(presentingView: self.view)
         viewModel.sendFile(data: data)
     }

@@ -291,7 +291,8 @@ extension ReqFlw4Stp3PlateViewController: UINavigationControllerDelegate, UIImag
             showFileNameView()
         }
         picker.dismiss(animated: true)
-        guard let data = tempImage.pngData() else { return }
+//        guard let data = tempImage.pngData() else { return }
+        let data = tempImage.compressedData(maxSizeInByte: App.imageUploadMaxSize)
         Loading.shared.show(presentingView: self.view)
         viewModel.sendFile(data: data)
         
