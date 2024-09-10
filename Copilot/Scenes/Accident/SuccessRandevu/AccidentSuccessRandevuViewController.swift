@@ -110,7 +110,6 @@ class AccidentSuccessRandevuViewController: UIViewController {
             addressLabel.text = service.address
             phoneLabel.text = service.phone
             phone = service.phone ?? ""
-            
         }
        
         if let date = viewModel.displayDate {
