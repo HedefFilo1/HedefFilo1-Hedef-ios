@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-#if DEV_DEBUG || DEV_PROD
+#if DEV_DEBUG || PROD_DEBUG
         // just for test
 //        viewModel.goToNextScene(email: "jamal.zare@solidict.com")
         
@@ -81,9 +81,13 @@ class LoginViewController: UIViewController {
 //                        password: "asd",
 //                        rememberMe: rememberCheckBox.isSelected)
         
-        viewModel.login(email: "okanukic@hotmail.com",
+//        viewModel.login(email: "okanukic@hotmail.com",
+//                        password: "asd",
+//                        rememberMe: rememberCheckBox.isSelected)
+        viewModel.login(email: "faruk.tuncay@solidict.com",
                         password: "asd",
                         rememberMe: rememberCheckBox.isSelected)
+        
     }
    
     @objc func ozlemLogin() {

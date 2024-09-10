@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PDFKit
 
 protocol VehicleCoordinatorDelegate: AnyObject {
     func didFinish(from coordinator: Coordinator)
@@ -61,10 +62,23 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate,
     }
     
     func goToVehicleGuide() {
-        let viewController: PdfViewerViewController = storyboard.instantiateViewController()
-        viewController.viewModel = PdfViewerViewModel()
-        viewController.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
+//        let viewController: PdfViewerViewController = storyboard.instantiateViewController()
+//        viewController.viewModel = PdfViewerViewModel()
+//        viewController.viewModel.coordinatorDelegate = self
+//        navigationController.pushViewController(viewController, animated: true)
+        if let urlDestination = Bundle.main.url(forResource: "vehicleGuide", withExtension: "pdf") {
+            guard let pdf = PDFDocument(url: urlDestination) else { return }
+//            let title = App.getString(key: "copilotapp.accidentdamage.declaration.form.example.button") ?? ""
+            let title = Strings.breakdownWarningLightGuide
+        
+            let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
+            viewController.viewModel = PdfViewerViewModel()
+            viewController.viewModel.pdfDoc = pdf
+            viewController.viewModel.coordinatorDelegate = self
+            viewController.viewModel.title = title
+            navigationController.pushViewController(viewController, animated: true)
+            
+        }
     }
     
     func goToRequests() {

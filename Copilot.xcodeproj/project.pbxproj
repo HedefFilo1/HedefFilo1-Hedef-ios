@@ -453,6 +453,7 @@
 		89B903642BB3AB7800E7301C /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B903622BB3AB7800E7301C /* NotificationCell.xib */; };
 		89BDB3822AD955F5003D5717 /* CPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB3812AD955F5003D5717 /* CPErrorView.swift */; };
 		89BED9762AFE3C810068E087 /* VerifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BED9752AFE3C810068E087 /* VerifyToken.swift */; };
+		89C54A1E2C9057D80071ABA0 /* vehicleGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 89C54A1D2C9057D80071ABA0 /* vehicleGuide.pdf */; };
 		89C55DD02AC4A57900C3066A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DCF2AC4A57900C3066A /* Reusable.swift */; };
 		89C55DD22AC4A5B200C3066A /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */; };
 		89C55DDE2AC4A5FF00C3066A /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */; };
@@ -1045,6 +1046,7 @@
 		89B903622BB3AB7800E7301C /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		89BDB3812AD955F5003D5717 /* CPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPErrorView.swift; sourceTree = "<group>"; };
 		89BED9752AFE3C810068E087 /* VerifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyToken.swift; sourceTree = "<group>"; };
+		89C54A1D2C9057D80071ABA0 /* vehicleGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vehicleGuide.pdf; sourceTree = "<group>"; };
 		89C55DCF2AC4A57900C3066A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		89C55DD12AC4A5B200C3066A /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		89C55DD42AC4A5FE00C3066A /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
@@ -1734,6 +1736,7 @@
 		8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */ = {
 			isa = PBXGroup;
 			children = (
+				89C54A1D2C9057D80071ABA0 /* vehicleGuide.pdf */,
 				8934D4E92B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift */,
 				8934D4EB2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift */,
 				8934D4ED2B0F9FCA00CD0CA7 /* Cell */,
@@ -4228,6 +4231,7 @@
 				893AC4AB2BAB4779003FB9E6 /* SupportGuideCell.xib in Resources */,
 				896CB36F2AD7273C0048025A /* MaintainInfoCell.xib in Resources */,
 				892A8D022AC4D1780020C1C4 /* Onboarding.storyboard in Resources */,
+				89C54A1E2C9057D80071ABA0 /* vehicleGuide.pdf in Resources */,
 				8934D50C2B0FFF6100CD0CA7 /* VehicleDescriptionCell.xib in Resources */,
 				89E29B5E2B3AE53000CCABAD /* VehicleServicesItemCell.xib in Resources */,
 				8976B03A2B73CD3C00E7C58F /* WarningLightsFooterCell.xib in Resources */,
