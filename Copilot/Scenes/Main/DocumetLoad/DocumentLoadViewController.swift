@@ -74,16 +74,6 @@ class DocumentLoadViewController: UIViewController {
     
     @IBAction func didTapDowndload(_ sender: UIButton) {
         viewModel.downloadDoc()
-        //        if let url = viewModel.pdfDoc?.documentURL {
-        //            showShareView(url: url)
-        //            return
-        //        }
-        //        if viewModel.document == nil, let url = URL(string: CodeStrings.vehicleGuidPdfUrl) {
-        //            print(url.absoluteString)
-        //            showShareView(url: url)
-        //        } else {
-        //            viewModel.downloadDoc()
-        //        }
     }
 }
 

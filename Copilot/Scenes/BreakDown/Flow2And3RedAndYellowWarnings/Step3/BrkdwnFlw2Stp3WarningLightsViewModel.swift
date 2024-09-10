@@ -41,7 +41,7 @@ class MockWarning {
     var message: String {
         switch type {
         case .engin:
-            return Strings.enginWarningMessage
+            return App.getString(key: "copilotapp.stop.engine") ?? ""
             
         case .service:
             return Strings.serviceWarningMessage
