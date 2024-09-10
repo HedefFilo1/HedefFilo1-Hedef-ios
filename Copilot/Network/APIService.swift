@@ -278,6 +278,15 @@ class APIService {
         req.start()
     }
     
+    static func getDocumentPolicy(completion: @escaping (DocumentContent?, APIResponseError?) -> Void) {
+        let route = "document/policy?plateNumber=34FJN830"
+        let req = APIRequest<DocumentContent>(route: route, method: .get, hasToken: true)
+        req.identifier = "Get Documents"
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
     static func getDocument(id: String, completion: @escaping (DocumentContent?, APIResponseError?) -> Void) {
         let route = "document/\(id)"
         let req = APIRequest<DocumentContent>(route: route, method: .get, hasToken: true)

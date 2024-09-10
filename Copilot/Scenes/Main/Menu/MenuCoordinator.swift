@@ -60,10 +60,10 @@ extension MenuCoordinator: MenuViewModelCoordinatorDelegate {
     }
     
     func showDocuments() {
-        let viewController: DocumentsViewController = storyboard.instantiateViewController()
-        viewController.viewModel = DocumentsViewModel()
+        let viewController: DocumentLoadViewController = storyboard.instantiateViewController()
+        viewController.viewModel = DocumentLoadViewModel()
         viewController.viewModel.coordinatorDelegate = self
-        documentsViewModel = viewController.viewModel
+//        documentsViewModel = viewController.viewModel
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -174,5 +174,9 @@ extension MenuCoordinator: ProfileCoordinatorDelegate,
     func didFinish(from coordinator: Coordinator) {
         removeChildCoordinator(coordinator)
     }
+    
+}
+
+extension MenuCoordinator: DocumentLoadViewModelCoordinatorDelegate {
     
 }

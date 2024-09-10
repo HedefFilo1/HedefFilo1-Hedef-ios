@@ -34,6 +34,8 @@
 		8907EF0B2B698B24004869BE /* MaintenanceStep2KMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF0A2B698B24004869BE /* MaintenanceStep2KMViewModel.swift */; };
 		8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF0D2B699699004869BE /* NotMaintenancePeriodViewModel.swift */; };
 		8907EF102B6996A2004869BE /* NotMaintenancePeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF0F2B6996A2004869BE /* NotMaintenancePeriodViewController.swift */; };
+		89089EBA2C9080AC004D9C6C /* DocumentLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89089EB92C9080AC004D9C6C /* DocumentLoadViewModel.swift */; };
+		89089EBC2C9080B5004D9C6C /* DocumentLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89089EBB2C9080B5004D9C6C /* DocumentLoadViewController.swift */; };
 		890BE4CB2BBF357C00C554EC /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BE4CA2BBF357C00C554EC /* ServiceOperation.swift */; };
 		890BE4CD2BBF475600C554EC /* ProccessRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BE4CC2BBF475600C554EC /* ProccessRequest.swift */; };
 		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
@@ -623,6 +625,8 @@
 		8907EF0A2B698B24004869BE /* MaintenanceStep2KMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStep2KMViewModel.swift; sourceTree = "<group>"; };
 		8907EF0D2B699699004869BE /* NotMaintenancePeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotMaintenancePeriodViewModel.swift; sourceTree = "<group>"; };
 		8907EF0F2B6996A2004869BE /* NotMaintenancePeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotMaintenancePeriodViewController.swift; sourceTree = "<group>"; };
+		89089EB92C9080AC004D9C6C /* DocumentLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentLoadViewModel.swift; sourceTree = "<group>"; };
+		89089EBB2C9080B5004D9C6C /* DocumentLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentLoadViewController.swift; sourceTree = "<group>"; };
 		890BE4CA2BBF357C00C554EC /* ServiceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		890BE4CC2BBF475600C554EC /* ProccessRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProccessRequest.swift; sourceTree = "<group>"; };
 		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
@@ -1353,6 +1357,15 @@
 				8907EF0F2B6996A2004869BE /* NotMaintenancePeriodViewController.swift */,
 			);
 			path = NotMaintenancePeriod;
+			sourceTree = "<group>";
+		};
+		89089EB82C90808B004D9C6C /* DocumetLoad */ = {
+			isa = PBXGroup;
+			children = (
+				89089EB92C9080AC004D9C6C /* DocumentLoadViewModel.swift */,
+				89089EBB2C9080B5004D9C6C /* DocumentLoadViewController.swift */,
+			);
+			path = DocumetLoad;
 			sourceTree = "<group>";
 		};
 		890D7CCF2ACE997800F053DA /* Signup */ = {
@@ -3153,6 +3166,7 @@
 				89B07A432AD86CE100D3BE80 /* Menu */,
 				893EDF5C2AF924A7004E643E /* Campaigns */,
 				8935AC522AFA6733002F1C68 /* CampaignDetail */,
+				89089EB82C90808B004D9C6C /* DocumetLoad */,
 				89E045832B04D2C800745E73 /* Documents */,
 				89E0458D2B04F50100745E73 /* Docment */,
 				8934D4DE2B0F913500CD0CA7 /* DocumentPopup */,
@@ -4778,6 +4792,7 @@
 				89950ADA2B8110BB004537D2 /* AccFlw1Stp6ConfirmViewModel.swift in Sources */,
 				8934D4FB2B0FAE5900CD0CA7 /* VehicleInfoButtonsCell.swift in Sources */,
 				89941D5E2AF010D300CEFD0E /* FiltersViewModel.swift in Sources */,
+				89089EBC2C9080B5004D9C6C /* DocumentLoadViewController.swift in Sources */,
 				891B60D02AF1205D00D6F09C /* KMUsedViewModel.swift in Sources */,
 				899CF5712AE18EF5006D85E4 /* Signup.swift in Sources */,
 				89B03B732BB09E8A007B4A72 /* RequestsTextField.swift in Sources */,
@@ -4851,6 +4866,7 @@
 				89A908B82B31A70200BC7727 /* VehicleServicesViewController.swift in Sources */,
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
+				89089EBA2C9080AC004D9C6C /* DocumentLoadViewModel.swift in Sources */,
 				89431DB32B98FF8900A6F6B8 /* CPDescriptionTextField.swift in Sources */,
 				890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
