@@ -78,7 +78,7 @@ extension APIService {
                                      fileName: "OriginalFileName.png",
                                      mimeType: "image/png")
             
-        }, to: "https://copilotweb.hedeffilotest.com/api/file",
+        }, to: "https://hedefnet.hedeffilo.com/api/file",
                   method: .post,
                   headers: httpHeader).responseDecodable(of: UploadRequestFile.self) { response in
             debugPrint(response)

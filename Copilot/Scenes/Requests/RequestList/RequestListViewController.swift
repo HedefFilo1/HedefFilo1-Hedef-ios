@@ -108,6 +108,7 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
             let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             cell.items = viewModel.tasks
+            cell.label.text = App.getString(key: "copilotapp.demandlist.operation.tab.description")
             return cell
             
         case 1:
@@ -115,6 +116,7 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
             cell.delegate = self
             cell.items = nil
             cell.requestItems = viewModel.requests
+            cell.label.text = App.getString(key: "copilotapp.demandlist.product.tab.description")
             return cell
             
         default:

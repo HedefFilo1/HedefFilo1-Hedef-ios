@@ -22,7 +22,7 @@ class RequestListPageCell: UICollectionViewCell, Reusable {
     var requestItems: [Demand]? {
         didSet {
             collectionView.reloadData()
-            label.text = App.getString(key: "copilotapp.demandlist.operation.tab.description")
+            
         }
     }
     

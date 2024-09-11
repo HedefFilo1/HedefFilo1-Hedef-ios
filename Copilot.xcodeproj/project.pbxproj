@@ -36,6 +36,7 @@
 		8907EF102B6996A2004869BE /* NotMaintenancePeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907EF0F2B6996A2004869BE /* NotMaintenancePeriodViewController.swift */; };
 		89089EBA2C9080AC004D9C6C /* DocumentLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89089EB92C9080AC004D9C6C /* DocumentLoadViewModel.swift */; };
 		89089EBC2C9080B5004D9C6C /* DocumentLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89089EBB2C9080B5004D9C6C /* DocumentLoadViewController.swift */; };
+		89089EBE2C917329004D9C6C /* vehicleGuideTr.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 89089EBD2C917329004D9C6C /* vehicleGuideTr.pdf */; };
 		890BE4CB2BBF357C00C554EC /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BE4CA2BBF357C00C554EC /* ServiceOperation.swift */; };
 		890BE4CD2BBF475600C554EC /* ProccessRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BE4CC2BBF475600C554EC /* ProccessRequest.swift */; };
 		890D7CD12ACE99B500F053DA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D7CD02ACE99B500F053DA /* SignupViewModel.swift */; };
@@ -627,6 +628,7 @@
 		8907EF0F2B6996A2004869BE /* NotMaintenancePeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotMaintenancePeriodViewController.swift; sourceTree = "<group>"; };
 		89089EB92C9080AC004D9C6C /* DocumentLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentLoadViewModel.swift; sourceTree = "<group>"; };
 		89089EBB2C9080B5004D9C6C /* DocumentLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentLoadViewController.swift; sourceTree = "<group>"; };
+		89089EBD2C917329004D9C6C /* vehicleGuideTr.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vehicleGuideTr.pdf; sourceTree = "<group>"; };
 		890BE4CA2BBF357C00C554EC /* ServiceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		890BE4CC2BBF475600C554EC /* ProccessRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProccessRequest.swift; sourceTree = "<group>"; };
 		890D7CD02ACE99B500F053DA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
@@ -1749,6 +1751,7 @@
 		8934D4E82B0F9F8400CD0CA7 /* VehicleInfo */ = {
 			isa = PBXGroup;
 			children = (
+				89089EBD2C917329004D9C6C /* vehicleGuideTr.pdf */,
 				89C54A1D2C9057D80071ABA0 /* vehicleGuide.pdf */,
 				8934D4E92B0F9F9900CD0CA7 /* VehicleInfoViewModel.swift */,
 				8934D4EB2B0F9FA300CD0CA7 /* VehicleInfoViewController.swift */,
@@ -4221,6 +4224,7 @@
 				89A908B32B31A6DB00BC7727 /* Services.storyboard in Resources */,
 				89F6ADEC2AC4AD7700994F18 /* .swiftlint.yml in Resources */,
 				89950AC02B7FA9EF004537D2 /* AccFlw1Stp4ReportHeaderCell.xib in Resources */,
+				89089EBE2C917329004D9C6C /* vehicleGuideTr.pdf in Resources */,
 				89A908C32B31A92B00BC7727 /* ContentCell.xib in Resources */,
 				8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */,
 				893B959A2B59C3C900B1F0F4 /* ServicesSearchCell.xib in Resources */,
