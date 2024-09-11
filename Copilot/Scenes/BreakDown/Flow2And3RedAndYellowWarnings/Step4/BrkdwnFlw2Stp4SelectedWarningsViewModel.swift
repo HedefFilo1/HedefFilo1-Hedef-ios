@@ -52,10 +52,15 @@ class BrkdwnFlw2Stp4SelectedWarningsViewModel: BrkdwnFlw2Stp4SelectedWarningsVMT
     // FLow 3 here
     var message: String {
         guard let warnings, warnings.count > 0 else { return "" }
-        for item in warnings where item.type == .engin {
-            return item.message
+        for item in warnings where item.severity == .stopEngin {
+            return item.severiytMessage
         }
-        return warnings[0].message
+        
+        for item in warnings where item.severity == .service {
+            return item.severiytMessage
+        }
+        
+        return warnings[0].severiytMessage
     }
     
     func getBack() {

@@ -3527,12 +3527,12 @@ Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
             <string>Are you sure you want to delete your account?</string>
         </dict>
         
-        <key></key>
+        <key>pleaseTakeToService</key>
         <dict>
             <key>tr</key>
-            <string></string>
+            <string>Lüften aracı servise götürünüz</string>
             <key>en</key>
-            <string></string>
+            <string>Please take the vehicle to service.</string>
         </dict>
         
         <key></key>

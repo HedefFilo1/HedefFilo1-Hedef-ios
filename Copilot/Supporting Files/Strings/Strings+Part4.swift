@@ -275,4 +275,8 @@ extension Strings {
     static var languageSettings: String {
         return localized(string: "languageSettings")
     }
+    
+    static var pleaseTakeToService: String {
+        return localized(string: "pleaseTakeToService")
+    }
 }
