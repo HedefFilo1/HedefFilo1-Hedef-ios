@@ -73,7 +73,7 @@ extension VehicleCoordinator: VehicleInfoViewModelCoordinatorDelegate,
         if let urlDestination = Bundle.main.url(forResource: file, withExtension: "pdf") {
             guard let pdf = PDFDocument(url: urlDestination) else { return }
 //            let title = App.getString(key: "copilotapp.accidentdamage.declaration.form.example.button") ?? ""
-            let title = Strings.breakdownWarningLightGuide
+            let title = App.getString(key: "copilotapp.vehicle.guide") ?? ""
         
             let viewController: PdfViewerViewController = UIStoryboard(storyboard: .vehicle).instantiateViewController()
             viewController.viewModel = PdfViewerViewModel()
