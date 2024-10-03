@@ -40,6 +40,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setupUI()
+        setIndexContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
