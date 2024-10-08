@@ -40,7 +40,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setupUI()
-        setIndexContent()
+//        setIndexContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,6 +104,8 @@ class OnboardingViewController: UIViewController {
         notMemberLabel.text = App.getString(key: "copilotapp.onboarding.four.bottom.description")
         
         becomeMemberButton.setAttributedTitle(App.getString(key: "copilotapp.onboarding.four.bottom.button")?.underLined, for: .normal)
+        titleLabel.text = App.getString(key: "copilotapp.onboarding.one.title")
+        descriptionLabel.text = App.getString(key: "copilotapp.onboarding.one.description")
     }
     
     @IBAction func didTapNextButton() {
