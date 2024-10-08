@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SignupViewModelCoordinatorDelegate: AnyObject {
     func goToLogin()
@@ -25,6 +26,7 @@ protocol SignupViewModelType: AnyObject {
     var specialRule: Bool { get set }
     var allRules: Bool { get }
     func check(password: String)
+    func openClarification()
     func goToLogin()
     func signup(name: String,
                 surname: String,
@@ -66,6 +68,12 @@ class SignupViewModel: SignupViewModelType {
         lowercaseRule = password.rangeOfCharacter(from: .lowercaseLetters) != nil
         numberRule = password.rangeOfCharacter(from: .decimalDigits) != nil
         specialRule = password.rangeOfCharacter(from: .punctuationCharacters) != nil
+    }
+    
+    func openClarification() {
+        if let url = URL.init(string: "https://www.hedeffilo.com/gizlilik-politikasi") {
+            UIApplication.shared.open(url)
+        }
     }
     
     func signup(name: String,

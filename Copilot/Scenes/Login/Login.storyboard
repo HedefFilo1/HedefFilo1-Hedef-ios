@@ -495,7 +495,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-8c-MB2">
-                                                        <rect key="frame" x="0.0" y="1220" width="328" height="22"/>
+                                                        <rect key="frame" x="0.0" y="1220" width="26" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="xqO-4P-BpG"/>
                                                         </constraints>
@@ -660,8 +660,8 @@
                                                     <constraint firstItem="Lyz-mE-eUu" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="xGI-Vu-Kjz"/>
                                                     <constraint firstItem="ZAe-hJ-SEc" firstAttribute="leading" secondItem="dT3-tR-amd" secondAttribute="leading" id="xrk-I8-Uza"/>
                                                     <constraint firstItem="PMl-IP-yaX" firstAttribute="leading" secondItem="W5L-eP-IH2" secondAttribute="leading" id="y0A-oE-xQK"/>
-                                                    <constraint firstItem="GF9-8c-MB2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jJp-yj-8W3" secondAttribute="trailing" constant="1" id="yGp-Pn-VZA"/>
                                                     <constraint firstItem="GF9-8c-MB2" firstAttribute="leading" secondItem="N67-rw-Uub" secondAttribute="leading" id="yxs-vm-3nx"/>
+                                                    <constraint firstItem="jJp-yj-8W3" firstAttribute="leading" secondItem="GF9-8c-MB2" secondAttribute="trailing" constant="2" id="zNS-oo-2PJ"/>
                                                     <constraint firstItem="dT3-tR-amd" firstAttribute="top" secondItem="N67-rw-Uub" secondAttribute="bottom" constant="25" id="zcx-Vq-hAn"/>
                                                 </constraints>
                                             </view>
@@ -733,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4a-Nf-Vqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="872.79999999999995" y="187.68472906403943"/>
+            <point key="canvasLocation" x="872.51908396946567" y="187.32394366197184"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="h1W-Ib-BPD">

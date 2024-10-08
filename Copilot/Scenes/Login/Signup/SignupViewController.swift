@@ -190,10 +190,28 @@ class SignupViewController: UIViewController {
     func setClarificationText(color: UIColor = .textGrey) {
         let text1 = App.getString(key: "copilotapp.sign.up.checkbox.one.button") ?? ""
         let text2 = App.getString(key: "copilotapp.sign.up.checkbox.one.description") ?? ""
-        let text3 = text1+text2
+        let text3 = text1 + " " + text2
         let calrification = AttributedText(text: text3, fontSize: 12, style: .regular, textColor: color)
         let calrificationUnderlined = AttributedText(text: text1, fontSize: 12, style: .bold, textColor: color)
         clarificationLabel.attributedText = AttributedText.createUnderlinedString(mainText: calrification, underlinedText: calrificationUnderlined)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapClarificationLabel(tap:)))
+        self.clarificationLabel.addGestureRecognizer(tap)
+        self.clarificationLabel.isUserInteractionEnabled = true
+    }
+    
+    @objc func tapClarificationLabel(tap: UITapGestureRecognizer) {
+        
+        let text = clarificationLabel.text
+        let findText = App.getString(key: "copilotapp.sign.up.checkbox.one.button") ?? ""
+        if let range = (text as? NSString)?.range(of: findText) {
+            if tap.didTapAttributedTextInLabel(label: self.clarificationLabel, inRange: range) {
+                if !clarificationCheckBox.isSelected {
+                    viewModel.openClarification()
+                }
+            }
+        }
+        didTapClarificationCheckBox(UIButton())
     }
     
     func setTextFieldWarnings() {
