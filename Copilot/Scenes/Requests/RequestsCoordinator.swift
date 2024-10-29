@@ -17,6 +17,7 @@ class RequestsCoordinator: Coordinator {
     let navigationController: UINavigationController
     let storyboard = UIStoryboard(storyboard: .requests)
     weak var delegate: RequestsCoordinatorDelegate?
+    var requstListPage: RequestListPageController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -127,7 +128,22 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         let controller: RequestListViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestListViewModel()
         controller.viewModel.coordinatorDelegate = self
-        navigationController.pushViewController(controller, animated: true)
+        let pages = RequestListPageController()
+        requstListPage = pages
+        requstListPage?.pages = [controller]
+        navigationController.pushViewController(pages, animated: true)
+    }
+    
+    func presentFitlers(title: String,
+                        delegate: RequestListFilterViewControllerDelegate,
+                        items: [RequestListFilterItem]) {
+        let controller: RequestListFilterViewController = storyboard.instantiateViewController()
+        let viewModel = RequestListFilterViewModel()
+        controller.viewModel = viewModel
+        viewModel.items = items
+        controller.delegate = delegate
+        viewModel.title = title
+        navigationController.present(controller, animated: true)
     }
     
     func goToRequestDetail(item: Task) {

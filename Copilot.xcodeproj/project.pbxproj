@@ -322,6 +322,11 @@
 		8986FCB92AFBCC82006057EA /* PersistPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */; };
 		8986FCBB2AFCBAAF006057EA /* CPValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */; };
 		8986FCBD2AFCC802006057EA /* Strings+Part1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986FCBC2AFCC802006057EA /* Strings+Part1.swift */; };
+		898889CB2CCFB9F0004DCB23 /* RequestListSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889CA2CCFB9F0004DCB23 /* RequestListSearchCell.swift */; };
+		898889CD2CCFC24D004DCB23 /* RequestListPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889CC2CCFC24D004DCB23 /* RequestListPageController.swift */; };
+		898889D02CD0CB26004DCB23 /* RequestListFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889CF2CD0CB26004DCB23 /* RequestListFilterViewModel.swift */; };
+		898889D22CD0CB32004DCB23 /* RequestListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889D12CD0CB32004DCB23 /* RequestListFilterViewController.swift */; };
+		898889D42CD0D512004DCB23 /* RequestListSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898889D32CD0D512004DCB23 /* RequestListSearchCell.xib */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -917,6 +922,11 @@
 		8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistPropertyWrapper.swift; sourceTree = "<group>"; };
 		8986FCBA2AFCBAAF006057EA /* CPValidatableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPValidatableTextField.swift; sourceTree = "<group>"; };
 		8986FCBC2AFCC802006057EA /* Strings+Part1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Part1.swift"; sourceTree = "<group>"; };
+		898889CA2CCFB9F0004DCB23 /* RequestListSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListSearchCell.swift; sourceTree = "<group>"; };
+		898889CC2CCFC24D004DCB23 /* RequestListPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageController.swift; sourceTree = "<group>"; };
+		898889CF2CD0CB26004DCB23 /* RequestListFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListFilterViewModel.swift; sourceTree = "<group>"; };
+		898889D12CD0CB32004DCB23 /* RequestListFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListFilterViewController.swift; sourceTree = "<group>"; };
+		898889D32CD0D512004DCB23 /* RequestListSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestListSearchCell.xib; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -2307,6 +2317,7 @@
 				893259962B9A71ED001E4262 /* Flow4Plate */,
 				8932599B2B9B0E16001E4262 /* Flow5License */,
 				893259A42B9B1A94001E4262 /* Flow6Inspection */,
+				898889CE2CD0CAFD004DCB23 /* RequestListFilter */,
 				89CC82CC2BA7362B00263332 /* RequestList */,
 				896BAE002BA835DD006D809E /* RequestDetail */,
 				896BAE052BA83C27006D809E /* CanceledRequest */,
@@ -2622,6 +2633,24 @@
 				8986FCB42AFBCC82006057EA /* PersistPropertyWrapper.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		898889C72CCFB9C6004DCB23 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				898889D32CD0D512004DCB23 /* RequestListSearchCell.xib */,
+				898889CA2CCFB9F0004DCB23 /* RequestListSearchCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		898889CE2CD0CAFD004DCB23 /* RequestListFilter */ = {
+			isa = PBXGroup;
+			children = (
+				898889CF2CD0CB26004DCB23 /* RequestListFilterViewModel.swift */,
+				898889D12CD0CB32004DCB23 /* RequestListFilterViewController.swift */,
+			);
+			path = RequestListFilter;
 			sourceTree = "<group>";
 		};
 		8989DD922AC493BF0035CD99 = {
@@ -3555,6 +3584,7 @@
 			children = (
 				89CC82CD2BA7366300263332 /* RequestListViewModel.swift */,
 				89CC82CF2BA7366900263332 /* RequestListViewController.swift */,
+				898889CC2CCFC24D004DCB23 /* RequestListPageController.swift */,
 				89CC82D12BA7CCA300263332 /* Cell */,
 			);
 			path = RequestList;
@@ -3563,6 +3593,7 @@
 		89CC82D12BA7CCA300263332 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				898889C72CCFB9C6004DCB23 /* Search */,
 				89CC82D62BA7CD5600263332 /* Page */,
 				89CC82D72BA7CD6300263332 /* Item */,
 			);
@@ -4280,6 +4311,7 @@
 				89513E692B9519FA00B05199 /* Requests.storyboard in Resources */,
 				8906390C2B88C04E000A0819 /* AccFlw5Stp3HeaderCell.xib in Resources */,
 				8944AB842B74D43100967CE2 /* SelectedWarningsContentCell.xib in Resources */,
+				898889D42CD0D512004DCB23 /* RequestListSearchCell.xib in Resources */,
 				89B07A512AD9352600D3BE80 /* Profile.storyboard in Resources */,
 				8976B0302B73CA2100E7C58F /* WarningItemsCell.xib in Resources */,
 				890D7CD82ACEC52700F053DA /* Popup.storyboard in Resources */,
@@ -4574,6 +4606,7 @@
 				893259982B9A721F001E4262 /* ReqFlw4Stp3PlateViewModel.swift in Sources */,
 				8917F5532B39FEAE00681AD3 /* LastikRandevuViewController.swift in Sources */,
 				89C55DE12AC4A5FF00C3066A /* UIView+EXT.swift in Sources */,
+				898889CD2CCFC24D004DCB23 /* RequestListPageController.swift in Sources */,
 				897835DB2B455D9C00C63AA7 /* ConfirmedRandevuViewModel.swift in Sources */,
 				89C686902B025C1E00011897 /* AvatarViewModel.swift in Sources */,
 				89F7AAB62B15DF5E00858D2E /* HGSDetailViewController.swift in Sources */,
@@ -4616,6 +4649,7 @@
 				8907EEF52B69662A004869BE /* MaintenanceViewController.swift in Sources */,
 				892A8CED2AC4C3720020C1C4 /* AppCoordinator.swift in Sources */,
 				89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */,
+				898889D02CD0CB26004DCB23 /* RequestListFilterViewModel.swift in Sources */,
 				890BE4CD2BBF475600C554EC /* ProccessRequest.swift in Sources */,
 				89DF054A2BACD19200C8B37E /* ServiceOperationsSearchCell.swift in Sources */,
 				89950AF62B826E7E004537D2 /* AccFlw2Stp6MovableViewController.swift in Sources */,
@@ -4726,6 +4760,7 @@
 				89FC51872B6A6C9100AD37D4 /* MaintenanceRandevuViewModel.swift in Sources */,
 				8944AB7B2B74D3E100967CE2 /* BrkdwnFlw2Stp4SelectedWarningsViewModel.swift in Sources */,
 				899BF5B82B20E3A80058123C /* Places.swift in Sources */,
+				898889CB2CCFB9F0004DCB23 /* RequestListSearchCell.swift in Sources */,
 				8976B03E2B73CF2600E7C58F /* BrkdwnFlw2Stp3WarningLightsViewModel.swift in Sources */,
 				899D34B32BAF908B0090DA7B /* FeedbackCommentViewModel.swift in Sources */,
 				894C45312B2789FF004356C8 /* HGSEmptyCell.swift in Sources */,
@@ -4875,6 +4910,7 @@
 				890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */,
+				898889D22CD0CB32004DCB23 /* RequestListFilterViewController.swift in Sources */,
 				891BFB702B34966F009BD793 /* ServiceTabViewModel.swift in Sources */,
 				892A8CEF2AC4C3920020C1C4 /* Coordinator.swift in Sources */,
 				893EDF782AFA5B0B004E643E /* NewsCell.swift in Sources */,

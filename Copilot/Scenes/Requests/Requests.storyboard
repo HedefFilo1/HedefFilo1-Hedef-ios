@@ -3362,10 +3362,10 @@
                                             <constraint firstItem="iQp-dr-cYV" firstAttribute="width" secondItem="hep-mk-FsN" secondAttribute="width" multiplier="0.5" id="rvs-vE-Rhh"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-BD-D9w">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-BD-D9w">
                                         <rect key="frame" x="0.0" y="116.66666666666669" width="393" height="592.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NOw-8R-Cwd">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NOw-8R-Cwd">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -3772,6 +3772,101 @@ Dolar Sit Amet</string>
             </objects>
             <point key="canvasLocation" x="6350.3816793893129" y="8706.3380281690152"/>
         </scene>
+        <!--Request List Filter View Controller-->
+        <scene sceneID="VFx-3O-pUM">
+            <objects>
+                <viewController storyboardIdentifier="RequestListFilterViewController" id="Y86-CC-fq8" customClass="RequestListFilterViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdG-RF-23S">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kD8-n2-K77">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqr-kT-pJK">
+                                        <rect key="frame" x="16" y="24" width="361" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nkR-Rl-udV">
+                                        <rect key="frame" x="345" y="22.333333333333329" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Hu9-A0-Uqh"/>
+                                            <constraint firstAttribute="height" constant="24" id="YRT-Nh-cQC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-0x-sXY">
+                                        <rect key="frame" x="337" y="14.333333333333336" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7dx-In-iKS"/>
+                                            <constraint firstAttribute="width" constant="40" id="fpG-QD-EqI"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="didTapClose" destination="Y86-CC-fq8" eventType="touchUpInside" id="OJo-so-tEM"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vx-bX-JRy" customClass="CPDropDownList" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="68.333333333333329" width="361" height="56"/>
+                                        <color key="backgroundColor" name="exactGrey"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="N2e-rQ-Run"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cU-xv-Agp" customClass="CPButton" customModule="Copilot" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="140.33333333333334" width="361" height="56"/>
+                                        <color key="backgroundColor" name="disabled"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="9rr-Fx-3Zd"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Uygula">
+                                            <color key="titleColor" name="textGrey"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapApply" destination="Y86-CC-fq8" eventType="touchUpInside" id="KsN-LU-4k5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9cU-xv-Agp" secondAttribute="trailing" constant="16" id="1Ms-Dd-XGL"/>
+                                    <constraint firstItem="Vqr-kT-pJK" firstAttribute="leading" secondItem="kD8-n2-K77" secondAttribute="leading" constant="16" id="ARn-Wu-f0H"/>
+                                    <constraint firstItem="4Vx-bX-JRy" firstAttribute="top" secondItem="Vqr-kT-pJK" secondAttribute="bottom" constant="24" id="BI4-1M-kDu"/>
+                                    <constraint firstItem="9cU-xv-Agp" firstAttribute="leading" secondItem="kD8-n2-K77" secondAttribute="leading" constant="16" id="Ndf-B6-HDK"/>
+                                    <constraint firstItem="9cU-xv-Agp" firstAttribute="top" secondItem="4Vx-bX-JRy" secondAttribute="bottom" constant="16" id="Soq-2U-POi"/>
+                                    <constraint firstItem="4Vx-bX-JRy" firstAttribute="leading" secondItem="kD8-n2-K77" secondAttribute="leading" constant="16" id="X7K-cp-8Xs"/>
+                                    <constraint firstAttribute="trailing" secondItem="nkR-Rl-udV" secondAttribute="trailing" constant="24" id="XHL-MN-Xz4"/>
+                                    <constraint firstItem="VHT-0x-sXY" firstAttribute="centerX" secondItem="nkR-Rl-udV" secondAttribute="centerX" id="a0L-6D-RGx"/>
+                                    <constraint firstItem="VHT-0x-sXY" firstAttribute="centerY" secondItem="nkR-Rl-udV" secondAttribute="centerY" id="a4L-3U-whs"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Vx-bX-JRy" secondAttribute="trailing" constant="16" id="aHQ-aL-sHK"/>
+                                    <constraint firstItem="Vqr-kT-pJK" firstAttribute="top" secondItem="kD8-n2-K77" secondAttribute="top" constant="24" id="nt0-JT-y1Z"/>
+                                    <constraint firstItem="nkR-Rl-udV" firstAttribute="centerY" secondItem="Vqr-kT-pJK" secondAttribute="centerY" id="o8V-sO-M3y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vqr-kT-pJK" secondAttribute="trailing" constant="16" id="zn8-AO-tI2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A1O-NH-VPF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kD8-n2-K77" firstAttribute="top" secondItem="vdG-RF-23S" secondAttribute="top" id="JrV-wX-wmk"/>
+                            <constraint firstItem="kD8-n2-K77" firstAttribute="leading" secondItem="vdG-RF-23S" secondAttribute="leading" id="XN1-Is-eBg"/>
+                            <constraint firstItem="A1O-NH-VPF" firstAttribute="trailing" secondItem="kD8-n2-K77" secondAttribute="trailing" id="sth-Bt-O4t"/>
+                            <constraint firstAttribute="bottom" secondItem="kD8-n2-K77" secondAttribute="bottom" id="y2d-5Y-onu"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="applyButton" destination="9cU-xv-Agp" id="7YF-0o-O5E"/>
+                        <outlet property="filterList" destination="4Vx-bX-JRy" id="VTx-BT-s6r"/>
+                        <outlet property="titleLabel" destination="Vqr-kT-pJK" id="Ejh-yL-WQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngi-19-2LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4761" y="9407"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="24" height="24"/>
@@ -3796,6 +3891,9 @@ Dolar Sit Amet</string>
         </namedColor>
         <namedColor name="lightGreyBackground">
             <color red="0.96470588235294119" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textGrey">
+            <color red="0.34509803921568627" green="0.34901960784313724" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="theme">
             <color red="0.9137254901960784" green="0.12941176470588237" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

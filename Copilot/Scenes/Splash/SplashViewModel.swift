@@ -74,7 +74,7 @@ class SplashViewModel: SplashViewModelType {
                 self.getSessionId()
             }
             
-            #if DEV_DEBUG
+            #if DEV_DEBUG || PROD_DEBUG
             self.goToNextScene()
             #endif
         }

@@ -7,9 +7,16 @@
 
 import Foundation
 
+struct RequestListFilterItem {
+    let title: String
+}
+
 protocol RequestListVMCrdntrDelegate: AnyObject {
     func getBack()
     func goToRequestDetail(item: Task)
+    func presentFitlers(title: String,
+                        delegate: RequestListFilterViewControllerDelegate,
+                        items: [RequestListFilterItem])
 }
 
 protocol RequestListViewModelDelegate: BaseViewModelDelegate {
@@ -20,7 +27,11 @@ protocol RequestListViewModelType: AnyObject {
     var coordinatorDelegate: RequestListVMCrdntrDelegate? { get set }
     var delegate: RequestListViewModelDelegate? { get set }
     var tasks: [Task]? { get set }
+    var filteredTasks: [Task] { get }
+    var searchText: String { get set }
+    var filterItem: RequestListFilterItem? { get set }
     var requests: [Demand]? { get set }
+    func presentFitlers()
     func getBack()
     func goToRequestDetail(item: Task)
     func getTasks()
@@ -29,10 +40,42 @@ protocol RequestListViewModelType: AnyObject {
 
 class RequestListViewModel: RequestListViewModelType {
     
+    
     weak var coordinatorDelegate: RequestListVMCrdntrDelegate?
     weak var delegate: RequestListViewModelDelegate?
     var tasks: [Task]?
     var requests: [Demand]?
+    var searchText: String = ""
+    var filterItem: RequestListFilterItem?
+    
+    var filteredTasks: [Task] {
+        var notNulls = tasks?.filter({ $0.statusTextResult != nil })
+        if let filterItem {
+            let type = filterItem.title
+            notNulls = notNulls?.filter({$0.statusTextResult == type})
+        }
+        if searchText.isEmpty {
+            return notNulls ?? []
+        }
+        let arr = notNulls?.filter {
+            return ($0.statusTextResult ?? "").lowercased().contains(searchText.lowercased())
+        }
+        return arr ?? []
+    }
+    
+    func presentFitlers() {
+        let arr = tasks ?? []
+        var filterStrings = Set<String>()
+        for item in arr {
+            let value = item.statusTextResult ?? ""
+            filterStrings.insert(value)
+        }
+        
+        let filterItems = filterStrings.map({ RequestListFilterItem(title: $0)})
+        
+        let text = App.getString(key: "copilotapp.help.feedback.process.demand.button_search") ?? ""
+        coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
+    }
     
     func getBack() {
         coordinatorDelegate?.getBack()
@@ -78,5 +121,12 @@ class RequestListViewModel: RequestListViewModelType {
                 return
             }
         }
+    }
+}
+
+extension RequestListViewModel: RequestListFilterViewControllerDelegate {
+    func didTapApply(selectedItem: RequestListFilterItem) {
+        filterItem = selectedItem
+        delegate?.reloadData()
     }
 }
