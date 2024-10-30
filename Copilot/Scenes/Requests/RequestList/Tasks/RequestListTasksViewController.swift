@@ -117,6 +117,7 @@ extension RequestListTasksViewController: UICollectionViewDataSource, UICollecti
         case 0:
             let cell: RequestListSearchCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            cell.filterLabel.text = App.getString(key: "copilotapp.service.service.list.productservice.filter")
             cell.descriptionLabel.text = App.getString(key: "copilotapp.demandlist.operation.tab.description")
             return cell
             
