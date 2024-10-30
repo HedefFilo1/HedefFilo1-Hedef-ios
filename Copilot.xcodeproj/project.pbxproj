@@ -327,6 +327,10 @@
 		898889D02CD0CB26004DCB23 /* RequestListFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889CF2CD0CB26004DCB23 /* RequestListFilterViewModel.swift */; };
 		898889D22CD0CB32004DCB23 /* RequestListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889D12CD0CB32004DCB23 /* RequestListFilterViewController.swift */; };
 		898889D42CD0D512004DCB23 /* RequestListSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898889D32CD0D512004DCB23 /* RequestListSearchCell.xib */; };
+		898889D62CD23C25004DCB23 /* RequestListRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889D52CD23C25004DCB23 /* RequestListRequestsViewModel.swift */; };
+		898889D82CD23C31004DCB23 /* RequestListRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889D72CD23C31004DCB23 /* RequestListRequestsViewController.swift */; };
+		898889DE2CD25367004DCB23 /* RequestListCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898889DC2CD25367004DCB23 /* RequestListCountCell.swift */; };
+		898889DF2CD25367004DCB23 /* RequestListCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898889DD2CD25367004DCB23 /* RequestListCountCell.xib */; };
 		8989DD9F2AC493BF0035CD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */; };
 		8989DDA12AC493BF0035CD99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */; };
 		8989DDA32AC493BF0035CD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989DDA22AC493BF0035CD99 /* ViewController.swift */; };
@@ -485,8 +489,8 @@
 		89C686942B0260C900011897 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686922B0260C900011897 /* AvatarCell.swift */; };
 		89C686952B0260C900011897 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C686932B0260C900011897 /* AvatarCell.xib */; };
 		89C686972B02616D00011897 /* CPRadioBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C686962B02616D00011897 /* CPRadioBox.swift */; };
-		89CC82CE2BA7366300263332 /* RequestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CD2BA7366300263332 /* RequestListViewModel.swift */; };
-		89CC82D02BA7366900263332 /* RequestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CF2BA7366900263332 /* RequestListViewController.swift */; };
+		89CC82CE2BA7366300263332 /* RequestListTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CD2BA7366300263332 /* RequestListTasksViewModel.swift */; };
+		89CC82D02BA7366900263332 /* RequestListTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82CF2BA7366900263332 /* RequestListTasksViewController.swift */; };
 		89CC82D42BA7CCFD00263332 /* RequestListPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */; };
 		89CC82D52BA7CCFD00263332 /* RequestListPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CC82D32BA7CCFD00263332 /* RequestListPageCell.xib */; };
 		89CC82DA2BA7CD7900263332 /* RequestListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC82D82BA7CD7900263332 /* RequestListItemCell.swift */; };
@@ -927,6 +931,10 @@
 		898889CF2CD0CB26004DCB23 /* RequestListFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListFilterViewModel.swift; sourceTree = "<group>"; };
 		898889D12CD0CB32004DCB23 /* RequestListFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListFilterViewController.swift; sourceTree = "<group>"; };
 		898889D32CD0D512004DCB23 /* RequestListSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestListSearchCell.xib; sourceTree = "<group>"; };
+		898889D52CD23C25004DCB23 /* RequestListRequestsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListRequestsViewModel.swift; sourceTree = "<group>"; };
+		898889D72CD23C31004DCB23 /* RequestListRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestListRequestsViewController.swift; sourceTree = "<group>"; };
+		898889DC2CD25367004DCB23 /* RequestListCountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListCountCell.swift; sourceTree = "<group>"; };
+		898889DD2CD25367004DCB23 /* RequestListCountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestListCountCell.xib; sourceTree = "<group>"; };
 		8989DD9B2AC493BF0035CD99 /* Copilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989DD9E2AC493BF0035CD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8989DDA02AC493BF0035CD99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1086,8 +1094,8 @@
 		89C686922B0260C900011897 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		89C686932B0260C900011897 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		89C686962B02616D00011897 /* CPRadioBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRadioBox.swift; sourceTree = "<group>"; };
-		89CC82CD2BA7366300263332 /* RequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewModel.swift; sourceTree = "<group>"; };
-		89CC82CF2BA7366900263332 /* RequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListViewController.swift; sourceTree = "<group>"; };
+		89CC82CD2BA7366300263332 /* RequestListTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListTasksViewModel.swift; sourceTree = "<group>"; };
+		89CC82CF2BA7366900263332 /* RequestListTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListTasksViewController.swift; sourceTree = "<group>"; };
 		89CC82D22BA7CCFD00263332 /* RequestListPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageCell.swift; sourceTree = "<group>"; };
 		89CC82D32BA7CCFD00263332 /* RequestListPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestListPageCell.xib; sourceTree = "<group>"; };
 		89CC82D82BA7CD7900263332 /* RequestListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListItemCell.swift; sourceTree = "<group>"; };
@@ -2653,6 +2661,33 @@
 			path = RequestListFilter;
 			sourceTree = "<group>";
 		};
+		898889D92CD23C3E004DCB23 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				89CC82CD2BA7366300263332 /* RequestListTasksViewModel.swift */,
+				89CC82CF2BA7366900263332 /* RequestListTasksViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		898889DA2CD23C48004DCB23 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				898889D52CD23C25004DCB23 /* RequestListRequestsViewModel.swift */,
+				898889D72CD23C31004DCB23 /* RequestListRequestsViewController.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		898889DB2CD25353004DCB23 /* Count */ = {
+			isa = PBXGroup;
+			children = (
+				898889DC2CD25367004DCB23 /* RequestListCountCell.swift */,
+				898889DD2CD25367004DCB23 /* RequestListCountCell.xib */,
+			);
+			path = Count;
+			sourceTree = "<group>";
+		};
 		8989DD922AC493BF0035CD99 = {
 			isa = PBXGroup;
 			children = (
@@ -3582,9 +3617,9 @@
 		89CC82CC2BA7362B00263332 /* RequestList */ = {
 			isa = PBXGroup;
 			children = (
-				89CC82CD2BA7366300263332 /* RequestListViewModel.swift */,
-				89CC82CF2BA7366900263332 /* RequestListViewController.swift */,
 				898889CC2CCFC24D004DCB23 /* RequestListPageController.swift */,
+				898889DA2CD23C48004DCB23 /* Requests */,
+				898889D92CD23C3E004DCB23 /* Tasks */,
 				89CC82D12BA7CCA300263332 /* Cell */,
 			);
 			path = RequestList;
@@ -3593,6 +3628,7 @@
 		89CC82D12BA7CCA300263332 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				898889DB2CD25353004DCB23 /* Count */,
 				898889C72CCFB9C6004DCB23 /* Search */,
 				89CC82D62BA7CD5600263332 /* Page */,
 				89CC82D72BA7CD6300263332 /* Item */,
@@ -4209,6 +4245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898889DF2CD25367004DCB23 /* RequestListCountCell.xib in Resources */,
 				8934D5162B10FE0900CD0CA7 /* HGSCell.xib in Resources */,
 				89FC518E2B6A965900AD37D4 /* BreakDown.storyboard in Resources */,
 				89B07A402AD85A6100D3BE80 /* TabBarView.xib in Resources */,
@@ -4786,7 +4823,7 @@
 				896BAE072BA83C47006D809E /* CanceledRequestViewModel.swift in Sources */,
 				8907EF0E2B699699004869BE /* NotMaintenancePeriodViewModel.swift in Sources */,
 				899FF41A2B76433900447118 /* JustYellowWarningCell.swift in Sources */,
-				89CC82D02BA7366900263332 /* RequestListViewController.swift in Sources */,
+				89CC82D02BA7366900263332 /* RequestListTasksViewController.swift in Sources */,
 				89513E612B91C19400B05199 /* AccidentGuideViewModel.swift in Sources */,
 				8934D4E22B0F918000CD0CA7 /* DocumentPopupViewController.swift in Sources */,
 				890D7CDC2ACEC80400F053DA /* PopupViewController.swift in Sources */,
@@ -4795,7 +4832,7 @@
 				891BFB6E2B349667009BD793 /* ServiceTabViewController.swift in Sources */,
 				89C55DE22AC4A5FF00C3066A /* UIImage+EXT.swift in Sources */,
 				89DC312D2B3E854A00791C3B /* ServiceFilterViewModel.swift in Sources */,
-				89CC82CE2BA7366300263332 /* RequestListViewModel.swift in Sources */,
+				89CC82CE2BA7366300263332 /* RequestListTasksViewModel.swift in Sources */,
 				899D34AE2BAF85B20090DA7B /* FeedbackRateViewModel.swift in Sources */,
 				893AC4972BAB04D2003FB9E6 /* FAQQuestionDetail.swift in Sources */,
 				8976B0292B73C8D300E7C58F /* WarningLightsHeaderCell.swift in Sources */,
@@ -4814,6 +4851,7 @@
 				8934D4E02B0F917300CD0CA7 /* DocumentPopupViewModel.swift in Sources */,
 				89DF05352BACCAA600C8B37E /* FeedbackViewController.swift in Sources */,
 				892A8CFE2AC4D15A0020C1C4 /* OnboardingViewModel.swift in Sources */,
+				898889DE2CD25367004DCB23 /* RequestListCountCell.swift in Sources */,
 				893489212BA0375A009A3FBB /* LanguagesViewController.swift in Sources */,
 				893AC4952BAAFFC9003FB9E6 /* FAQQeustionViewModel.swift in Sources */,
 				89DC31282B3E812D00791C3B /* CPDropDownList.swift in Sources */,
@@ -4906,7 +4944,9 @@
 				89B07A4A2AD86D3A00D3BE80 /* MenuCell.swift in Sources */,
 				891D78312B4440BE008FC722 /* CPDateChooseView.swift in Sources */,
 				89089EBA2C9080AC004D9C6C /* DocumentLoadViewModel.swift in Sources */,
+				898889D82CD23C31004DCB23 /* RequestListRequestsViewController.swift in Sources */,
 				89431DB32B98FF8900A6F6B8 /* CPDescriptionTextField.swift in Sources */,
+				898889D62CD23C25004DCB23 /* RequestListRequestsViewModel.swift in Sources */,
 				890639172B88D1E7000A0819 /* AccFlw5Stp3ButtonsCell.swift in Sources */,
 				89C686972B02616D00011897 /* CPRadioBox.swift in Sources */,
 				8944AB8B2B74F80000967CE2 /* WarningLightsViewController.swift in Sources */,
@@ -5072,7 +5112,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 210;
+				CURRENT_PROJECT_VERSION = 211;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -5110,7 +5150,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 210;
+				CURRENT_PROJECT_VERSION = 211;
 				DEVELOPMENT_TEAM = 88MUA8FE52;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;
@@ -5209,7 +5249,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 210;
+				CURRENT_PROJECT_VERSION = 211;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -5303,7 +5343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Copilot/Copilot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 210;
+				CURRENT_PROJECT_VERSION = 211;
 				DEVELOPMENT_TEAM = Y84ML4GC8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Copilot/Application/Config/Info.plist;

@@ -13,7 +13,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
         didSet {
             titleLabel.text = item?.subjectResult
             if let text =  item?.statusTextResult {
-                statusLabel.text = item?.statusTextResult
+                statusLabel.text = text
                 statusView.backgroundColor = item?.status.color
             } else {
                 statusLabel.text = ""

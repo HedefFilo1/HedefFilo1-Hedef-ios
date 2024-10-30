@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class RequestListViewController: UIViewController {
+class RequestListTasksViewController: UIViewController {
     
-    var viewModel: RequestListViewModel! {
+    var viewModel: RequestListTasksViewModel! {
         didSet {
             viewModel.delegate = self
         }
@@ -34,7 +34,6 @@ class RequestListViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.getTasks()
-        //        viewModel.getRequests()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +48,7 @@ class RequestListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(cellType: RequestListSearchCell.self)
         //        collectionView.register(cellType: RequestListPageCell.self)
+        collectionView.register(cellType: RequestListCountCell.self)
         collectionView.register(cellType: RequestListItemCell.self)
         collectionView.contentInset.top = 16
         collectionView.contentInset.bottom = 70
@@ -77,6 +77,7 @@ class RequestListViewController: UIViewController {
     }
     
     @IBAction func didTab(_ sender: UIView) {
+        viewModel.showRequestsList()
         //        let tag = sender.tag
         //        if tag == currentTab {
         //            return
@@ -97,14 +98,17 @@ class RequestListViewController: UIViewController {
     }
 }
 
-extension RequestListViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension RequestListTasksViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if section == 0 || section == 1 {
+            return 1
+        }
+        return viewModel.tasks?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -117,6 +121,14 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
             return cell
             
         case 1:
+            let cell: RequestListCountCell = collectionView.dequeueReusableCell(for: indexPath)
+            var text = App.getString(key: "copilotapp.service.service.list.productservice.description") ?? ""
+            text = text.replacingOccurrences(of: "{number}", with: "")
+            let count = viewModel.tasks?.count ?? 0
+            cell.itemsCount = "\(count) \(text)"
+            return cell
+            
+        case 2:
             let cell: RequestListItemCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.item = viewModel.tasks?[indexPath.item]
             return cell
@@ -147,7 +159,10 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
             let hasFilter = viewModel.filterItem != nil
             let height: CGFloat = hasFilter ? 146: 100
             return CGSize(width: width, height: height)
-        } else {
+        } else if indexPath.section == 1 {
+            return CGSize(width: width, height: 24)
+        }
+        else {
             return CGSize(width: width, height: 48)
         }
     }
@@ -164,7 +179,7 @@ extension RequestListViewController: UICollectionViewDataSource, UICollectionVie
     }
 }
 
-extension RequestListViewController: RequestListSearchCellDelegate {
+extension RequestListTasksViewController: RequestListSearchCellDelegate {
     
     func didTapRemoveFilter() {
         viewModel.filterItem = nil
@@ -180,7 +195,7 @@ extension RequestListViewController: RequestListSearchCellDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) {
             self.viewModel.searchText = self.searchText
-            self.collectionView.reloadSections(IndexSet(integer: 1))
+            self.collectionView.reloadSections(IndexSet(integer: 2))
             self.filtering = false
         }
         
@@ -192,13 +207,13 @@ extension RequestListViewController: RequestListSearchCellDelegate {
     
 }
 
-extension RequestListViewController: RequestListPageCellDelegate {
+extension RequestListTasksViewController: RequestListPageCellDelegate {
     func didSelect(item: Task) {
         viewModel.goToRequestDetail(item: item)
     }
 }
 
-extension RequestListViewController: RequestListViewModelDelegate {
+extension RequestListTasksViewController: RequestListTasksViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
     }

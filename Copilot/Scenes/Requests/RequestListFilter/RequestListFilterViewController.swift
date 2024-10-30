@@ -67,12 +67,12 @@ class RequestListFilterViewController: SheetViewController {
     }
     
     @IBAction func didTapClose() {
-        dismiss(animated: true)
+        dismiss(animated: false)
     }
     
     @IBAction func didTapApply() {
         let item = viewModel.selectedItem
-        dismiss(animated: true) { [weak self] in
+        dismiss(animated: false) { [weak self] in
             guard let self, let item = item  else { return }
             self.delegate?.didTapApply(selectedItem: item)
         }
@@ -82,8 +82,8 @@ class RequestListFilterViewController: SheetViewController {
 extension RequestListFilterViewController: CPDropDownListDelegate {
     
     func superViewForDropDown(in dropDownList: CPDropDownList) -> UIView? {
-                return self.presentationController?.containerView ?? self.view
-//        return view
+        return self.presentationController?.containerView ?? self.view
+        //        return view
     }
     
     func numberOfItems(in dropDownList: CPDropDownList) -> Int {

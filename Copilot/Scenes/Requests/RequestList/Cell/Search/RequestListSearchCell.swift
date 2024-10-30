@@ -14,6 +14,8 @@ protocol RequestListSearchCellDelegate: AnyObject {
 }
 
 class RequestListSearchCell: UICollectionViewCell, Reusable {
+   
+    
     
     weak var delegate: RequestListSearchCellDelegate?
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -22,6 +24,7 @@ class RequestListSearchCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var filterItemLabel: UILabel!
     @IBOutlet weak var filterItemView: UIView!
     @IBOutlet weak var searchTextField: CPSearchTextField!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,7 +55,7 @@ class RequestListSearchCell: UICollectionViewCell, Reusable {
     
     func setTexts() {
         searchTextField.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.button_search")
-        filterLabel.text = App.getString(key: "copilotapp.help.feedback.service.operation.button_filter")
+        filterLabel.text = App.getString(key: "copilotapp.service.service.service.list.productservice.filter")
     }
     
     func setFilter(item: String?) {

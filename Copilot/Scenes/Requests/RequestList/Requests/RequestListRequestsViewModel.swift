@@ -7,49 +7,44 @@
 
 import Foundation
 
-struct RequestListFilterItem {
-    let title: String
-}
-
-protocol RequestListVMCrdntrDelegate: AnyObject {
+protocol RequestListRequestsVMCrdntrDelegate: AnyObject {
     func getBack()
     func goToRequestDetail(item: Task)
     func presentFitlers(title: String,
                         delegate: RequestListFilterViewControllerDelegate,
                         items: [RequestListFilterItem])
+    func showTasksList()
 }
 
-protocol RequestListViewModelDelegate: BaseViewModelDelegate {
+protocol RequestListRequestsViewModelDelegate: BaseViewModelDelegate {
     func reloadData()
 }
 
-protocol RequestListViewModelType: AnyObject {
-    var coordinatorDelegate: RequestListVMCrdntrDelegate? { get set }
-    var delegate: RequestListViewModelDelegate? { get set }
-    var tasks: [Task]? { get set }
-    var filteredTasks: [Task] { get }
+protocol RequestListRequestsViewModelType: AnyObject {
+    var coordinatorDelegate: RequestListRequestsVMCrdntrDelegate? { get set }
+    var delegate: RequestListRequestsViewModelDelegate? { get set }
+    
+    var filteredRequests: [Demand] { get }
     var searchText: String { get set }
     var filterItem: RequestListFilterItem? { get set }
     var requests: [Demand]? { get set }
     func presentFitlers()
     func getBack()
     func goToRequestDetail(item: Task)
-    func getTasks()
     func getRequests()
+    func showTasksList()
 }
 
-class RequestListViewModel: RequestListViewModelType {
+class RequestListRequestsViewModel: RequestListRequestsViewModelType {
     
-    
-    weak var coordinatorDelegate: RequestListVMCrdntrDelegate?
-    weak var delegate: RequestListViewModelDelegate?
-    var tasks: [Task]?
+    weak var coordinatorDelegate: RequestListRequestsVMCrdntrDelegate?
+    weak var delegate: RequestListRequestsViewModelDelegate?
     var requests: [Demand]?
     var searchText: String = ""
     var filterItem: RequestListFilterItem?
     
-    var filteredTasks: [Task] {
-        var notNulls = tasks?.filter({ $0.statusTextResult != nil })
+    var filteredRequests: [Demand] {
+        var notNulls = requests?.filter({ $0.statusTextResult != nil })
         if let filterItem {
             let type = filterItem.title
             notNulls = notNulls?.filter({$0.statusTextResult == type})
@@ -64,7 +59,7 @@ class RequestListViewModel: RequestListViewModelType {
     }
     
     func presentFitlers() {
-        let arr = tasks ?? []
+        let arr = requests ?? []
         var filterStrings = Set<String>()
         for item in arr {
             let value = item.statusTextResult ?? ""
@@ -77,6 +72,10 @@ class RequestListViewModel: RequestListViewModelType {
         coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
     }
     
+    func showTasksList() {
+        coordinatorDelegate?.showTasksList()
+    }
+    
     func getBack() {
         coordinatorDelegate?.getBack()
     }
@@ -85,27 +84,8 @@ class RequestListViewModel: RequestListViewModelType {
         coordinatorDelegate?.goToRequestDetail(item: item)
     }
     
-    func getTasks() {
-        Loading.shared.show()
-        APIService.getTasks { [weak self] model, error in
-            Loading.shared.hide()
-            guard let self = self else {return}
-            
-            if let model = model {
-                self.tasks = model
-                self.delegate?.reloadData()
-            } else
-            
-            if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
-                return
-            }
-        }
-    }
-    
     func getRequests() {
-        Loading.shared.show()
+        Loading.shared.show(presented: true)
         APIService.getRequests { [weak self] model, error in
             Loading.shared.hide()
             guard let self = self else {return}
@@ -124,7 +104,7 @@ class RequestListViewModel: RequestListViewModelType {
     }
 }
 
-extension RequestListViewModel: RequestListFilterViewControllerDelegate {
+extension RequestListRequestsViewModel: RequestListFilterViewControllerDelegate {
     func didTapApply(selectedItem: RequestListFilterItem) {
         filterItem = selectedItem
         delegate?.reloadData()

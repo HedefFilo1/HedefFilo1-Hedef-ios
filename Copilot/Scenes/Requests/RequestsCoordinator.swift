@@ -40,9 +40,10 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
                                ReqFlw4Stp3PlateVMCoordinatorDelegate,
                                ReqFlw5Stp3LicenseVMCoordinatorDelegate,
                                ReqFlw6Stp3InspectionVMCrdntrDelegate,
-                               RequestListVMCrdntrDelegate,
+                               RequestListTasksVMCrdntrDelegate,
                                RequestDetailVMCrdntrDelegate,
-                               CanceledRequestVMCoordinatorDelegate {
+                               CanceledRequestVMCoordinatorDelegate,
+                               RequestListRequestsVMCrdntrDelegate {
     func goToSuccess() {
         
     }
@@ -125,13 +126,26 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     }
     
     func goToRequestList() {
-        let controller: RequestListViewController = storyboard.instantiateViewController()
-        controller.viewModel = RequestListViewModel()
-        controller.viewModel.coordinatorDelegate = self
+        let page1: RequestListTasksViewController = storyboard.instantiateViewController()
+        page1.viewModel = RequestListTasksViewModel()
+        page1.viewModel.coordinatorDelegate = self
+        
+        let page2: RequestListRequestsViewController = storyboard.instantiateViewController()
+        page2.viewModel = RequestListRequestsViewModel()
+        page2.viewModel.coordinatorDelegate = self
+        
         let pages = RequestListPageController()
         requstListPage = pages
-        requstListPage?.pages = [controller]
+        requstListPage?.pages = [page1, page2]
         navigationController.pushViewController(pages, animated: true)
+    }
+    
+    func showRequestsList() {
+        requstListPage?.showPage2()
+    }
+    
+    func showTasksList() {
+        requstListPage?.showPage1()
     }
     
     func presentFitlers(title: String,
