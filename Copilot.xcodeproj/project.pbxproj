@@ -3618,8 +3618,8 @@
 			isa = PBXGroup;
 			children = (
 				898889CC2CCFC24D004DCB23 /* RequestListPageController.swift */,
-				898889DA2CD23C48004DCB23 /* Requests */,
 				898889D92CD23C3E004DCB23 /* Tasks */,
+				898889DA2CD23C48004DCB23 /* Requests */,
 				89CC82D12BA7CCA300263332 /* Cell */,
 			);
 			path = RequestList;
