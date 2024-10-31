@@ -51,7 +51,7 @@ class PastServicesCoordinator: Coordinator {
 
 extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
                                    PastServicesFilterVMCoordinatorDelegate,
-                                   PastServicesSortVMCoordinatorDelegate,
+                                   SortVMCoordinatorDelegate,
                                    PastServiceDetailVMCoordinatorDelegate {
     func getBack() {
         navigationController.popViewController(animated: true)
@@ -77,9 +77,9 @@ extension PastServicesCoordinator: PastMaintenancesVMCrdinatorDelegate,
         filterViewController?.present(controller, animated: true)
     }
     
-    func presentSort(delegate: PastServicesSortViewControllerDelegate) {
-        let controller: PastServicesSortViewController = storyboard.instantiateViewController()
-        let viewModel = PastServicesSortViewModel()
+    func presentSort(delegate: SortViewControllerDelegate) {
+        let controller: SortViewController = storyboard.instantiateViewController()
+        let viewModel = SortViewModel()
         
         controller.viewModel = viewModel
         controller.delegate = delegate

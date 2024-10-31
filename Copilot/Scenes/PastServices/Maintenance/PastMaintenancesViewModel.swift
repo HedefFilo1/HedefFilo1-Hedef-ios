@@ -9,7 +9,7 @@ import Foundation
 
 protocol PastMaintenancesVMCrdinatorDelegate: AnyObject {
     func getBack()
-    func presentSort(delegate: PastServicesSortViewControllerDelegate)
+    func presentSort(delegate: SortViewControllerDelegate)
     func presentFilters(services: [PastService], delegate: PastServicesFilterViewControllerDelegate)
     func goToPastServiceDetail(service: PastService, title: String)
 }
@@ -137,7 +137,7 @@ class PastMaintenancesViewModel: PastMaintenancesViewModelType {
 }
 
 extension PastMaintenancesViewModel: PastServicesFilterViewControllerDelegate,
-                                     PastServicesSortViewControllerDelegate {
+                                     SortViewControllerDelegate {
     func didTapApply(ascending: Bool) {
         if ascending {
             let sorted = items?.sorted { $0.date ?? Date() < $1.date ?? Date() }

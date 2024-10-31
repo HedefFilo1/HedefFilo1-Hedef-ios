@@ -41,4 +41,32 @@ struct Demand: Decodable {
     let statusTextResult: String?
     let supplierName: String?
     let recordTypeResult: String?
+    let creationDate: String?
+    
+    var date: Date? {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        if let stringDate = creationDate, let date = formmater.date(from: stringDate) {
+            return date
+        }
+        return nil
+    }
+    
+    var displayDate: String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        formmater.locale = Locale(identifier: "tr_TR")
+        if let stringDate = creationDate, let date = formmater.date(from: stringDate) {
+            formmater.dateFormat = "d MMMM EEEE"
+            
+            var identifier = "tr_TR"
+            let language = App.language
+            if language == CodeStrings.english {
+                identifier = "UTC"
+            }
+            formmater.locale = Locale(identifier: identifier)
+            return formmater.string(from: date)
+        }
+        return ""
+    }
 }

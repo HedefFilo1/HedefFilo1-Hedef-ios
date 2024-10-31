@@ -356,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="5189" y="3042"/>
         </scene>
-        <!--Past Services Sort View Controller-->
+        <!--Sort View Controller-->
         <scene sceneID="4OL-MM-Uaz">
             <objects>
-                <viewController storyboardIdentifier="PastServicesSortViewController" id="jAl-ia-A5M" customClass="PastServicesSortViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SortViewController" id="jAl-ia-A5M" customClass="SortViewController" customModule="Copilot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szc-pR-vTM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

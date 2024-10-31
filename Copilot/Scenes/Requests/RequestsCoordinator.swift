@@ -160,6 +160,16 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         navigationController.present(controller, animated: true)
     }
     
+    func presentSort(delegate: SortViewControllerDelegate) {
+        let controller: SortViewController = UIStoryboard(storyboard: .pastServices).instantiateViewController()
+        let viewModel = SortViewModel()
+        
+        controller.viewModel = viewModel
+        controller.delegate = delegate
+        viewModel.coordinatorDelegate = self
+        navigationController.present(controller, animated: true)
+    }
+    
     func goToRequestDetail(item: Task) {
         let controller: RequestDetailViewController = storyboard.instantiateViewController()
         controller.viewModel = RequestDetailViewModel()
@@ -175,4 +185,8 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         controller.viewModel.title = title
         navigationController.pushViewController(controller, animated: true)
     }
+}
+
+extension RequestsCoordinator: SortVMCoordinatorDelegate {
+    
 }

@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol PastServicesSortViewControllerDelegate: AnyObject {
+protocol SortViewControllerDelegate: AnyObject {
     func didTapApply(ascending: Bool)
 }
 
-class PastServicesSortViewController: SheetViewController {
+class SortViewController: SheetViewController {
     
-    var viewModel: PastServicesSortViewModelType! {
+    var viewModel: SortViewModelType! {
         didSet {
             viewModel.delegate = self
         }
@@ -23,7 +23,7 @@ class PastServicesSortViewController: SheetViewController {
     override var presentationHeight: CGFloat {
         return 222
     }
-    weak var delegate: PastServicesSortViewControllerDelegate?
+    weak var delegate: SortViewControllerDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ascendingRadio: CPRadioBox!
@@ -91,6 +91,6 @@ class PastServicesSortViewController: SheetViewController {
     }
 }
 
-extension PastServicesSortViewController: PastServicesSortViewModelDelegate {
+extension SortViewController: SortViewModelDelegate {
     
 }

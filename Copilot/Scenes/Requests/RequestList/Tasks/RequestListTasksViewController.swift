@@ -108,7 +108,7 @@ extension RequestListTasksViewController: UICollectionViewDataSource, UICollecti
         if section == 0 || section == 1 {
             return 1
         }
-        return viewModel.tasks?.count ?? 0
+        return viewModel.filteredTasks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -119,19 +119,20 @@ extension RequestListTasksViewController: UICollectionViewDataSource, UICollecti
             cell.delegate = self
             cell.filterLabel.text = App.getString(key: "copilotapp.service.service.list.productservice.filter")
             cell.descriptionLabel.text = App.getString(key: "copilotapp.demandlist.operation.tab.description")
+            cell.setFilter(item: viewModel.filterItem?.title)
             return cell
             
         case 1:
             let cell: RequestListCountCell = collectionView.dequeueReusableCell(for: indexPath)
             var text = App.getString(key: "copilotapp.service.service.list.productservice.description") ?? ""
             text = text.replacingOccurrences(of: "{number}", with: "")
-            let count = viewModel.tasks?.count ?? 0
+            let count = viewModel.filteredTasks.count
             cell.itemsCount = "\(count) \(text)"
             return cell
             
         case 2:
             let cell: RequestListItemCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.item = viewModel.tasks?[indexPath.item]
+            cell.item = viewModel.filteredTasks[indexPath.item]
             return cell
             //        case 0:
             //            let cell: RequestListPageCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -162,8 +163,7 @@ extension RequestListTasksViewController: UICollectionViewDataSource, UICollecti
             return CGSize(width: width, height: height)
         } else if indexPath.section == 1 {
             return CGSize(width: width, height: 24)
-        }
-        else {
+        } else {
             return CGSize(width: width, height: 48)
         }
     }
@@ -197,6 +197,7 @@ extension RequestListTasksViewController: RequestListSearchCellDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) {
             self.viewModel.searchText = self.searchText
             self.collectionView.reloadSections(IndexSet(integer: 2))
+            self.collectionView.reloadSections(IndexSet(integer: 1))
             self.filtering = false
         }
         
@@ -204,6 +205,10 @@ extension RequestListTasksViewController: RequestListSearchCellDelegate {
     
     func didTapFilter() {
         viewModel.presentFitlers()
+    }
+    
+    func didTapSort() {
+        viewModel.presentSort()
     }
     
 }

@@ -14,6 +14,7 @@ struct RequestListFilterItem {
 protocol RequestListTasksVMCrdntrDelegate: AnyObject {
     func getBack()
     func goToRequestDetail(item: Task)
+    func presentSort(delegate: SortViewControllerDelegate)
     func presentFitlers(title: String,
                         delegate: RequestListFilterViewControllerDelegate,
                         items: [RequestListFilterItem])
@@ -32,6 +33,7 @@ protocol RequestListTasksViewModelType: AnyObject {
     var searchText: String { get set }
     var filterItem: RequestListFilterItem? { get set }
     func presentFitlers()
+    func presentSort()
     func getBack()
     func goToRequestDetail(item: Task)
     func getTasks()
@@ -47,16 +49,16 @@ class RequestListTasksViewModel: RequestListTasksViewModelType {
     var filterItem: RequestListFilterItem?
     
     var filteredTasks: [Task] {
-        var notNulls = tasks?.filter({ $0.statusTextResult != nil })
+        var notNulls = tasks?.filter({ $0.subjectResult != nil })
         if let filterItem {
             let type = filterItem.title
-            notNulls = notNulls?.filter({$0.statusTextResult == type})
+            notNulls = notNulls?.filter({$0.subjectResult == type})
         }
         if searchText.isEmpty {
             return notNulls ?? []
         }
         let arr = notNulls?.filter {
-            return ($0.statusTextResult ?? "").lowercased().contains(searchText.lowercased())
+            return ($0.subjectResult ?? "").lowercased().contains(searchText.lowercased())
         }
         return arr ?? []
     }
@@ -77,6 +79,10 @@ class RequestListTasksViewModel: RequestListTasksViewModelType {
     
     func showRequestsList() {
         coordinatorDelegate?.showRequestsList()
+    }
+    
+    func presentSort() {
+        coordinatorDelegate?.presentSort(delegate: self)
     }
     
     func getBack() {
@@ -108,7 +114,22 @@ class RequestListTasksViewModel: RequestListTasksViewModelType {
     
 }
 
-extension RequestListTasksViewModel: RequestListFilterViewControllerDelegate {
+extension RequestListTasksViewModel:
+    RequestListFilterViewControllerDelegate,
+    SortViewControllerDelegate {
+    
+    func didTapApply(ascending: Bool) {
+        if ascending {
+            let sorted = tasks?.sorted { $0.date ?? Date() < $1.date ?? Date() }
+            tasks = sorted
+        } else {
+            let sorted = tasks?.sorted { $0.date ?? Date() > $1.date ?? Date() }
+            tasks = sorted
+        }
+        
+        delegate?.reloadData()
+    }
+    
     func didTapApply(selectedItem: RequestListFilterItem) {
         filterItem = selectedItem
         delegate?.reloadData()

@@ -83,7 +83,8 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
                             description: item.webCategoryEnum ?? "",
                             statusText: item.status,
                             status: status, 
-                            statusTextResult: item.statusTextResult)
+                            statusTextResult: item.statusTextResult,
+                            activityDate: item.creationDate)
             delegate?.didSelect(item: task)
         }
     }
