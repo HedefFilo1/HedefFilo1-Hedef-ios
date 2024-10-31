@@ -149,6 +149,8 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
     }
     
     func presentFitlers(title: String,
+                        placeholder: String,
+                        buttonText: String,
                         delegate: RequestListFilterViewControllerDelegate,
                         items: [RequestListFilterItem]) {
         let controller: RequestListFilterViewController = storyboard.instantiateViewController()
@@ -157,6 +159,8 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         viewModel.items = items
         controller.delegate = delegate
         viewModel.title = title
+        viewModel.placeholder = placeholder
+        viewModel.buttonText = buttonText
         navigationController.present(controller, animated: true)
     }
     

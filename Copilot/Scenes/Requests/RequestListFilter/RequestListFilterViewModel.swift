@@ -21,6 +21,8 @@ protocol RequestListFilterViewModelType: AnyObject {
     var items: [RequestListFilterItem] { get set }
     var selectedItem: RequestListFilterItem? { get set }
     var title: String { get set }
+    var placeholder: String { get set }
+    var buttonText: String { get set }
 }
 
 class RequestListFilterViewModel: RequestListFilterViewModelType {
@@ -31,5 +33,7 @@ class RequestListFilterViewModel: RequestListFilterViewModelType {
     var items: [RequestListFilterItem] = []
     var selectedItem: RequestListFilterItem?
     var title: String = ""
+    var placeholder: String = ""
+    var buttonText: String = ""
 
 }

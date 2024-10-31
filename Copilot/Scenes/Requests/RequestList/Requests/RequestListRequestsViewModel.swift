@@ -12,6 +12,8 @@ protocol RequestListRequestsVMCrdntrDelegate: AnyObject {
     func goToRequestDetail(item: Task)
     func presentSort(delegate: SortViewControllerDelegate)
     func presentFitlers(title: String,
+                        placeholder: String,
+                        buttonText: String,
                         delegate: RequestListFilterViewControllerDelegate,
                         items: [RequestListFilterItem])
     func showTasksList()
@@ -70,8 +72,14 @@ class RequestListRequestsViewModel: RequestListRequestsViewModelType {
         
         let filterItems = filterStrings.map({ RequestListFilterItem(title: $0)})
         
-        let text = App.getString(key: "copilotapp.help.feedback.process.demand.button_search") ?? ""
-        coordinatorDelegate?.presentFitlers(title: text, delegate: self, items: filterItems)
+        let title = App.getString(key: "copilotapp.service.service.list.processrequest.filter.title") ?? ""
+        let placeholder = App.getString(key: "copilotapp.service.service.list.processrequest.filter.search.request") ?? ""
+        let buttonText = App.getString(key: "copilotapp.service.service.list.processrequest.filter.apply") ?? ""
+        coordinatorDelegate?.presentFitlers(title: title,
+                                            placeholder: placeholder,
+                                            buttonText: buttonText,
+                                            delegate: self,
+                                            items: filterItems)
     }
     
     func showTasksList() {
