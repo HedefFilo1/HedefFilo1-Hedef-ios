@@ -66,6 +66,19 @@ class SortViewController: SheetViewController {
         ascendingLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.new.old")
         descendingLabel.text = App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.sort.old.new")
         applyButton.setTitle(App.getString(key: "copilotapp.pastservicemaintenance.past.maintenance.operation.filter.apply.button"), for: .normal)
+        
+        if let text = viewModel.newToOldText {
+            ascendingLabel.text = text
+        }
+        
+        if let text = viewModel.oldToNewText {
+            descendingLabel.text = text
+        }
+        
+        if let text = viewModel.applyText {
+            applyButton.setTitle(text, for: .normal)
+
+        }
     }
 
     @IBAction func didTapClose() {

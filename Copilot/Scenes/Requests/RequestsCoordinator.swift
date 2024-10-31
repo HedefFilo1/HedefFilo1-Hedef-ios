@@ -164,10 +164,15 @@ extension RequestsCoordinator: RequestsViewModelCoordinatorDelegate,
         navigationController.present(controller, animated: true)
     }
     
-    func presentSort(delegate: SortViewControllerDelegate) {
+    func presentSort(newToOldText: String,
+                     oldToNewText: String,
+                     applyText: String,
+                     delegate: SortViewControllerDelegate) {
         let controller: SortViewController = UIStoryboard(storyboard: .pastServices).instantiateViewController()
         let viewModel = SortViewModel()
-        
+        viewModel.newToOldText = newToOldText
+        viewModel.oldToNewText = oldToNewText
+        viewModel.applyText = applyText
         controller.viewModel = viewModel
         controller.delegate = delegate
         viewModel.coordinatorDelegate = self

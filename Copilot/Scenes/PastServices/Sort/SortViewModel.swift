@@ -17,11 +17,17 @@ protocol SortViewModelDelegate: AnyObject {
 protocol SortViewModelType: AnyObject {
     var coordinatorDelegate: SortVMCoordinatorDelegate? { get set }
     var delegate: SortViewModelDelegate? { get set }
+    var newToOldText: String? { get set }
+    var oldToNewText: String? { get set }
+    var applyText: String? { get set }
 }
 
 class SortViewModel: SortViewModelType {
     
     weak var coordinatorDelegate: SortVMCoordinatorDelegate?
     weak var delegate: SortViewModelDelegate?
+    var newToOldText: String?
+    var oldToNewText: String?
+    var applyText: String?
    
 }

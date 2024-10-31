@@ -10,7 +10,10 @@ import Foundation
 protocol RequestListRequestsVMCrdntrDelegate: AnyObject {
     func getBack()
     func goToRequestDetail(item: Task)
-    func presentSort(delegate: SortViewControllerDelegate)
+    func presentSort(newToOldText: String,
+                     oldToNewText: String,
+                     applyText: String,
+                     delegate: SortViewControllerDelegate)
     func presentFitlers(title: String,
                         placeholder: String,
                         buttonText: String,
@@ -95,7 +98,14 @@ class RequestListRequestsViewModel: RequestListRequestsViewModelType {
     }
     
     func presentSort() {
-        coordinatorDelegate?.presentSort(delegate: self)
+        let newToOld = App.getString(key: "copilotapp.service.service.list.processrequest.sort.new.old") ?? ""
+        let oldToNew = App.getString(key: "copilotapp.service.service.list.processrequest.sort.old.new") ?? ""
+        
+        let applyText = App.getString(key: "copilotapp.service.service.list.processrequest.sort.apply") ?? ""
+        coordinatorDelegate?.presentSort(newToOldText: newToOld,
+                                         oldToNewText: oldToNew,
+                                         applyText: applyText,
+                                         delegate: self)
     }
     
     func getRequests() {

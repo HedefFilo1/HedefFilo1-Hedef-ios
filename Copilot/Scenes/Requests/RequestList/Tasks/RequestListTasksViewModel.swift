@@ -14,7 +14,10 @@ struct RequestListFilterItem {
 protocol RequestListTasksVMCrdntrDelegate: AnyObject {
     func getBack()
     func goToRequestDetail(item: Task)
-    func presentSort(delegate: SortViewControllerDelegate)
+    func presentSort(newToOldText: String,
+                     oldToNewText: String,
+                     applyText: String,
+                     delegate: SortViewControllerDelegate)
     func presentFitlers(title: String,
                         placeholder: String,
                         buttonText: String,
@@ -90,7 +93,14 @@ class RequestListTasksViewModel: RequestListTasksViewModelType {
     }
     
     func presentSort() {
-        coordinatorDelegate?.presentSort(delegate: self)
+        let newToOld = App.getString(key: "copilotapp.service.service.list.productservice.sort.new.old") ?? ""
+        let oldToNew = App.getString(key: "copilotapp.service.service.list.productservice.sort.old.new") ?? ""
+        
+        let applyText = App.getString(key: "copilotapp.service.service.list.productservice.sort.apply") ?? ""
+        coordinatorDelegate?.presentSort(newToOldText: newToOld,
+                                         oldToNewText: oldToNew,
+                                         applyText: applyText,
+                                         delegate: self)
     }
     
     func getBack() {
