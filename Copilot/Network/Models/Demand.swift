@@ -41,12 +41,12 @@ struct Demand: Decodable {
     let statusTextResult: String?
     let supplierName: String?
     let recordTypeResult: String?
-    let creationDate: String?
+    let createdDate: String?
     
     var date: Date? {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
-        if let stringDate = creationDate, let date = formmater.date(from: stringDate) {
+        if let stringDate = createdDate, let date = formmater.date(from: stringDate) {
             return date
         }
         return nil
@@ -56,8 +56,8 @@ struct Demand: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         formmater.locale = Locale(identifier: "tr_TR")
-        if let stringDate = creationDate, let date = formmater.date(from: stringDate) {
-            formmater.dateFormat = "d MMMM EEEE"
+        if let stringDate = createdDate, let date = formmater.date(from: stringDate) {
+            formmater.dateFormat = "yyyy-MM-dd HH:mm"
             
             var identifier = "tr_TR"
             let language = App.language

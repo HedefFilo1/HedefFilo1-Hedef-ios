@@ -33,7 +33,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
                 statusLabel.text = ""
                 statusView.backgroundColor = .clear
             }
-            dateLabel.text = ""
+            dateLabel.text = request?.displayDate
         }
     }
 

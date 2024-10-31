@@ -84,7 +84,7 @@ extension RequestListPageCell: UICollectionViewDataSource, UICollectionViewDeleg
                             statusText: item.status,
                             status: status, 
                             statusTextResult: item.statusTextResult,
-                            activityDate: item.creationDate)
+                            activityDate: item.createdDate)
             delegate?.didSelect(item: task)
         }
     }
