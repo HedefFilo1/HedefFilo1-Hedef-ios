@@ -62,7 +62,7 @@ class RequestListSearchCell: UICollectionViewCell, Reusable {
     func setTexts() {
         searchTextField.placeholder = App.getString(key: "copilotapp.help.feedback.process.demand.button_search")
         filterLabel.text = App.getString(key: "copilotapp.service.service.list.productservice.filter")
-        sortLabel.text = App.getString(key: "copilotapp.pastservice.operation.sort.button")
+        sortLabel.text = App.getString(key: "copilotapp.service.service.list.productservice.sort")
     }
     
     func setFilter(item: String?) {
