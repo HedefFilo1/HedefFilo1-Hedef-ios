@@ -19,7 +19,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
                 statusLabel.text = ""
                 statusView.backgroundColor = .clear
             }
-            
+            dateLabel.text = item?.displayDate
         }
     }
     
@@ -33,12 +33,14 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
                 statusLabel.text = ""
                 statusView.backgroundColor = .clear
             }
+            dateLabel.text = ""
         }
     }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,6 +54,7 @@ class RequestListItemCell: UICollectionViewCell, Reusable {
         titleLabel.apply(.blackS16R400)
         statusView.layer.cornerRadius = 10
         statusLabel.apply(.custom(.white, .regular, 12))
+        dateLabel.apply(.blackS14R400)
     }
 
 }

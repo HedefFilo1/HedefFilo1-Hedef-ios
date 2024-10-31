@@ -12,20 +12,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RequestListItemCell" customModule="Copilot" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+            <rect key="frame" x="0.0" y="0.0" width="408" height="73"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                <rect key="frame" x="0.0" y="0.0" width="408" height="73"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Konfor Paket Konfor Paket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39v-YL-qrh">
-                        <rect key="frame" x="16" y="26" width="151.33333333333334" height="21"/>
+                        <rect key="frame" x="16" y="26" width="198.33333333333334" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-Cg-c5R">
-                        <rect key="frame" x="189.33333333333334" y="24.666666666666671" width="120.66666666666666" height="24"/>
+                        <rect key="frame" x="222.33333333333334" y="24.666666666666671" width="120.66666666666666" height="24"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onaylanmış" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-eY-0mb">
                                 <rect key="frame" x="16" y="1.3333333333333321" width="88.666666666666671" height="21"/>
@@ -42,23 +42,32 @@
                             <constraint firstItem="G4i-eY-0mb" firstAttribute="centerY" secondItem="u7E-Cg-c5R" secondAttribute="centerY" id="pa2-5D-iY1"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uG-Qp-6RC">
+                        <rect key="frame" x="351" y="26" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="39v-YL-qrh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="5Vc-P7-N0H"/>
                 <constraint firstItem="39v-YL-qrh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6Yy-RW-Tkz"/>
+                <constraint firstItem="6uG-Qp-6RC" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="9ce-VK-08A"/>
                 <constraint firstItem="u7E-Cg-c5R" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DqH-qT-PYi"/>
-                <constraint firstItem="u7E-Cg-c5R" firstAttribute="leading" secondItem="39v-YL-qrh" secondAttribute="trailing" constant="22" id="K13-Fe-WpN"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7E-Cg-c5R" secondAttribute="trailing" constant="4" id="uaA-aR-LVE"/>
+                <constraint firstItem="u7E-Cg-c5R" firstAttribute="leading" secondItem="39v-YL-qrh" secondAttribute="trailing" constant="8" id="K13-Fe-WpN"/>
+                <constraint firstAttribute="trailing" secondItem="6uG-Qp-6RC" secondAttribute="trailing" constant="8" id="ptD-lM-Xi6"/>
+                <constraint firstItem="6uG-Qp-6RC" firstAttribute="leading" secondItem="u7E-Cg-c5R" secondAttribute="trailing" constant="8" id="rYF-m1-btw"/>
             </constraints>
-            <size key="customSize" width="314" height="73"/>
+            <size key="customSize" width="408" height="73"/>
             <connections>
+                <outlet property="dateLabel" destination="6uG-Qp-6RC" id="LLb-Rb-kit"/>
                 <outlet property="statusLabel" destination="G4i-eY-0mb" id="ikw-Dh-4Zp"/>
                 <outlet property="statusView" destination="u7E-Cg-c5R" id="atF-Eq-CEN"/>
                 <outlet property="titleLabel" destination="39v-YL-qrh" id="2wT-pM-hM8"/>
             </connections>
-            <point key="canvasLocation" x="180.15267175572518" y="27.816901408450704"/>
+            <point key="canvasLocation" x="251.90839694656486" y="27.816901408450704"/>
         </collectionViewCell>
     </objects>
     <resources>
