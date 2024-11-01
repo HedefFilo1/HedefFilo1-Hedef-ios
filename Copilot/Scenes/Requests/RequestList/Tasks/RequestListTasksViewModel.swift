@@ -57,7 +57,7 @@ class RequestListTasksViewModel: RequestListTasksViewModelType {
         var notNulls = tasks?.filter({ $0.subjectResult != nil })
         if let filterItem {
             let type = filterItem.title
-            notNulls = notNulls?.filter({$0.subjectResult == type})
+            notNulls = notNulls?.filter({$0.statusTextResult == type})
         }
         if searchText.isEmpty {
             return notNulls ?? []
