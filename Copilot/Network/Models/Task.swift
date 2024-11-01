@@ -60,15 +60,27 @@ struct Task: Decodable {
         let formmater = DateFormatter()
         formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
         formmater.locale = Locale(identifier: "tr_TR")
-        if let stringDate = activityDate, let date = formmater.date(from: stringDate) {
-            formmater.dateFormat = "yyyy-MM-dd HH:mm"
-            
+        if let stringDate = activityDate,
+           let date = formmater.date(from: stringDate) {
+            formmater.dateFormat = "d MMMM EEEE"
+           
             var identifier = "tr_TR"
             let language = App.language
             if language == CodeStrings.english {
                 identifier = "UTC"
             }
             formmater.locale = Locale(identifier: identifier)
+            return formmater.string(from: date)
+        }
+        return ""
+    }
+    
+    var time: String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        
+        if let stringDate = activityDate, let date = formmater.date(from: stringDate) {
+            formmater.dateFormat = "HH:mm"
             return formmater.string(from: date)
         }
         return ""

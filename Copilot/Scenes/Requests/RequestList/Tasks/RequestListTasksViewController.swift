@@ -166,12 +166,12 @@ extension RequestListTasksViewController: UICollectionViewDataSource, UICollecti
         } else if indexPath.section == 1 {
             return CGSize(width: width, height: 24)
         } else {
-            return CGSize(width: width, height: 48)
+            return CGSize(width: width, height: 140)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 16
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

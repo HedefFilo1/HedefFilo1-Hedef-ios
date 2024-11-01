@@ -3359,7 +3359,7 @@
                                             <constraint firstItem="iQp-dr-cYV" firstAttribute="width" secondItem="hep-mk-FsN" secondAttribute="width" multiplier="0.5" id="rvs-vE-Rhh"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-BD-D9w">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-BD-D9w">
                                         <rect key="frame" x="0.0" y="116.66666666666669" width="393" height="592.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NOw-8R-Cwd">
@@ -3994,7 +3994,7 @@ Dolar Sit Amet</string>
                                             <constraint firstAttribute="bottom" secondItem="0ls-zQ-7Hu" secondAttribute="bottom" id="xTe-9K-Rcp"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-vY-66Y">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-vY-66Y">
                                         <rect key="frame" x="0.0" y="116.66666666666669" width="393" height="592.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VhM-sc-Hrr">

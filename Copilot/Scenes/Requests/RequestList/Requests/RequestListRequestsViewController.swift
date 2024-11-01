@@ -140,7 +140,7 @@ extension RequestListRequestsViewController: UICollectionViewDataSource, UIColle
         } else if indexPath.section == 1 {
             return CGSize(width: width, height: 24)
         } else {
-            return CGSize(width: width, height: 48)
+            return CGSize(width: width, height: 140)
         }
     }
     
