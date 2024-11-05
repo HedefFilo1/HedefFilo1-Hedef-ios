@@ -337,6 +337,7 @@
 		8989DDA82AC493C00035CD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA72AC493C00035CD99 /* Assets.xcassets */; };
 		8989DDAB2AC493C00035CD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8989DDA92AC493C00035CD99 /* LaunchScreen.storyboard */; };
 		898B132F2C7C91900098F6D7 /* warningLightGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 898B132E2C7C91900098F6D7 /* warningLightGuide.pdf */; };
+		899067332CDA31D600C5083F /* CreatedCaseId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899067322CDA31D600C5083F /* CreatedCaseId.swift */; };
 		89941D532AEECFC500CEFD0E /* NearMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */; };
 		89941D552AEECFCC00CEFD0E /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */; };
 		89941D592AEEF0F100CEFD0E /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */; };
@@ -942,6 +943,7 @@
 		8989DDA72AC493C00035CD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989DDAC2AC493C00035CD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898B132E2C7C91900098F6D7 /* warningLightGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = warningLightGuide.pdf; sourceTree = "<group>"; };
+		899067322CDA31D600C5083F /* CreatedCaseId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedCaseId.swift; sourceTree = "<group>"; };
 		89941D522AEECFC500CEFD0E /* NearMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModel.swift; sourceTree = "<group>"; };
 		89941D542AEECFCC00CEFD0E /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		89941D582AEEF0F100CEFD0E /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
@@ -3001,6 +3003,7 @@
 				893489242BA0B048009A3FBB /* NotificationPreference.swift */,
 				893489262BA0F076009A3FBB /* UploadRequestFile.swift */,
 				896BAE0A2BA87418006D809E /* Task.swift */,
+				899067322CDA31D600C5083F /* CreatedCaseId.swift */,
 				896BAE0C2BA8847A006D809E /* Demand.swift */,
 				8916C24F2BB4F9670006B2E9 /* TotalPoints.swift */,
 			);
@@ -4695,6 +4698,7 @@
 				894CEC932B0B707900D369E9 /* GetProfile.swift in Sources */,
 				899CF5752AE18F7B006D85E4 /* ForgotPassword.swift in Sources */,
 				89CE08092B3AE40100C76433 /* VehicleServicesItemsCell.swift in Sources */,
+				899067332CDA31D600C5083F /* CreatedCaseId.swift in Sources */,
 				89108A9B2B39C66D00C8F400 /* MenuCoordinator.swift in Sources */,
 				89431DA32B96F3B800A6F6B8 /* ReqFlw2Stp2QuestionsViewController.swift in Sources */,
 				89DBD9D52B72C321007B416A /* BrkdwnFlw1Stp2TowTruckViewModel.swift in Sources */,

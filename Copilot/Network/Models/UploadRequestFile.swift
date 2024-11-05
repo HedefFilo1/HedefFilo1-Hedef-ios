@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UploadRequestFile: Decodable {
+struct UploadRequestFile: Codable {
     let originalFilename: String
     let filename: String
 }

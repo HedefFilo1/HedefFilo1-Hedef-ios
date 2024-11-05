@@ -44,7 +44,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createCase"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -76,7 +76,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createMaintenanceCase"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -112,7 +112,7 @@ extension APIService {
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createBreakDownCase"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }
@@ -126,7 +126,7 @@ extension APIService {
                                    district: String,
                                    towTruck: Bool,
                                    appointmentDate: Date?,
-                                   completion: @escaping (Success?, APIResponseError?) -> Void) {
+                                   completion: @escaping (CreatedCaseId?, APIResponseError?) -> Void) {
         
         let route = "case/appointment"
         var params = [
@@ -146,12 +146,40 @@ extension APIService {
             params["appointmentDate"] = serverdate
         }
         
-        let req = APIRequest<Success>(route: route,
+        let req = APIRequest<CreatedCaseId>(route: route,
                                       method: .post,
                                       parameters: params,
                                       hasToken: true)
         req.identifier = "createBreakDownCase"
-        req.log = loggingEnabled 
+        req.log = loggingEnabled
+        req.completion = completion
+        req.start()
+    }
+    
+    static func sendAccFileInfo(caseId: String,
+//                                fileInfo: [UploadRequestFile],
+                                completion: @escaping (Success?, APIResponseError?) -> Void) {
+        
+        let route = "case/appointment/\(caseId)/document/upload"
+        var list: [[String: String]] = []
+        for item in accFiles {
+            let object = [
+                "originalFilename": item.originalFilename,
+                "filename": item.filename
+            ]
+            list.append(object)
+        }
+        
+        let params = [
+            "files": list
+        ]
+        
+        let req = APIRequest<Success>(route: route,
+                                      method: .post,
+                                      parameters: params,
+                                      hasToken: true)
+        req.identifier = "sendAccFileInfo"
+        req.log = loggingEnabled
         req.completion = completion
         req.start()
     }

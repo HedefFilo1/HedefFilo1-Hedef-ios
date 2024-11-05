@@ -20,7 +20,7 @@ extension UIImage {
         case byte, kilobyte, megabyte, gigabyte
     }
     
-    func getSizeIn(_ type: DataUnits)-> Double {
+    func getSizeIn(_ type: DataUnits) -> Double {
         
         guard let data = self.pngData() else {
             return 0

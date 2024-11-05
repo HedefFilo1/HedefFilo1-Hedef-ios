@@ -73,26 +73,27 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
         // #endif
         guard let service else { return }
         Loading.shared.show()
-        APIService.createAccidentCase(accidentType: accidentType.rawValue,
-                                      reportType: accidentReportType,
-                                      supplierId: service.id,
-                                      supplierName: service.name,
-                                      supplierPhone: service.phone ?? "",
-                                      city: service.city ?? "",
-                                      district: service.district ?? "",
-                                      towTruck: true,
-                                      appointmentDate: nil) { [weak self] _, error in
-            Loading.shared.hide()
-            guard let self = self else { return }
-            
-            if let error = error {
-                self.delegate?.showError(title: Strings.errorTitle,
-                                         message: error.message)
-            } else {
-                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
-                self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: nil, accidentType: accidentType)
+        APIService.createAccidentCase(
+            accidentType: accidentType.rawValue,
+            reportType: accidentReportType,
+            supplierId: service.id,
+            supplierName: service.name,
+            supplierPhone: service.phone ?? "",
+            city: service.city ?? "",
+            district: service.district ?? "",
+            towTruck: true,
+            appointmentDate: nil) {[weak self] model, error in
+                Loading.shared.hide()
+                guard let self = self else { return }
+                
+                if let error = error {
+                    self.delegate?.showError(title: Strings.errorTitle,
+                                             message: error.message)
+                } else if let model {
+                    APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
+                    self.sendFileInfo(caseId: model.caseId, service: service, date: nil, accidentType: accidentType)
+                }
             }
-        }
     }
     
     func createRandevu(with date: Date, hour: String, minute: String) {
@@ -112,7 +113,29 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                                       city: service.city ?? "",
                                       district: service.district ?? "",
                                       towTruck: false,
-                                      appointmentDate: date) { [weak self] _, error in
+                                      appointmentDate: date) { [weak self] model, error in
+            Loading.shared.hide()
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.showError(title: Strings.errorTitle,
+                                         message: error.message)
+            } else if let model {
+                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
+                
+                APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_MAKE_SERVICE_APPOINTMENT")
+                self.sendFileInfo(caseId: model.caseId, service: service, date: date, accidentType: accidentType)
+            }
+        }
+    }
+    
+    func sendFileInfo(caseId: String,
+                      service: Supplier,
+                      date: Date?,
+                      accidentType: AccidentType) {
+        
+        Loading.shared.show(presented: true)
+        APIService.sendAccFileInfo(caseId: caseId) { [weak self] _, error in
             Loading.shared.hide()
             guard let self = self else { return }
             
@@ -120,9 +143,6 @@ class AccidentServiceDetailViewModel: AccidentServiceDetailViewModelType {
                 self.delegate?.showError(title: Strings.errorTitle,
                                          message: error.message)
             } else {
-                APIService.addUserAction(pageName: "CASE", actionName: "CASE_UPSERT")
-                
-                APIService.addUserAction(pageName: "Damage", actionName: "DAMAGE_MAKE_SERVICE_APPOINTMENT")
                 self.coordinatorDelegate?.goToAccidentSuccessRandevu(service: service, date: date, accidentType: accidentType)
             }
         }

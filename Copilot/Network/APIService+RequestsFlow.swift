@@ -64,18 +64,25 @@ extension APIService {
         req.start()
     }
     
-    static func sendFile(data: Data, completion: @escaping (UploadRequestFile?, APIResponseError?) -> Void) {
+    static func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map { _ in letters.randomElement()! })
+    }
+    
+    static func sendFile(data: Data,
+                         name: String = randomString(length: 16),
+                         completion: @escaping (UploadRequestFile?, APIResponseError?) -> Void) {
         
         let req = APIRequest<UploadRequestFile>(route: "",
                                                 method: .post,
                                                 hasToken: true)
         
         guard let httpHeader = req.urlRequest?.headers else { return }
-        
+        print(name)
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(data,
                                      withName: "file",
-                                     fileName: "OriginalFileName.png",
+                                     fileName: "\(name).png",
                                      mimeType: "image/png")
             
         }, to: "https://hedefnet.hedeffilo.com/api/file",
