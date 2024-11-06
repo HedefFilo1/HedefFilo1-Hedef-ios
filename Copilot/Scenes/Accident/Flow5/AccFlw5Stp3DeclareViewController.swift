@@ -18,7 +18,6 @@ class AccFlw5Stp3DeclareVController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var selectedFiles = [UIImage]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -75,7 +74,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 2 {
-            return selectedFiles.count
+            return viewModel.selectedFiles.count
         }
         
         return 1
@@ -95,7 +94,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
             
         case 2:
             let cell: ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.imageView.image = selectedFiles[indexPath.item]
+            cell.imageView.image = viewModel.selectedFiles[indexPath.item].image
             cell.index = indexPath.item
             cell.delegate = self
           return cell
@@ -104,7 +103,7 @@ extension AccFlw5Stp3DeclareVController: UICollectionViewDataSource, UICollectio
             let cell: AccFlw5Stp3ButtonsCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
             let moreText =  App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button") ?? ""
-            cell.uploadLabel.text = selectedFiles.count > 0 ? moreText: App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button")
+            cell.uploadLabel.text = viewModel.selectedFiles.count > 0 ? moreText: App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button")
             return cell
         
         default:
@@ -180,7 +179,7 @@ extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate,
                                          ReportImageCellDelegate {
     
     func didTapDelete(at index: Int) {
-        selectedFiles.remove(at: index)
+        viewModel.selectedFiles.remove(at: index)
         collectionView.reloadData()
     }
     func didTapSendFile() {
@@ -200,14 +199,15 @@ extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        selectedFiles.append(tempImage)
-        collectionView.reloadData()
+//        viewModel.selectedFiles.append(tempImage)
+        viewModel.sendFile(image: tempImage)
+//        collectionView.reloadData()
         
-        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+//        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
 //            fileNameLabel.text = url.lastPathComponent
 //            showFileNameView()
             //                fileType = url.pathExtension
-        }
+//        }
         picker.dismiss(animated: true)
 //        guard let data = tempImage.pngData() else { return }
 
@@ -222,4 +222,7 @@ extension AccFlw5Stp3DeclareVController: UINavigationControllerDelegate,
 
 extension AccFlw5Stp3DeclareVController: AccFlw5Stp3DeclareViewModelDelegate {
     
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }

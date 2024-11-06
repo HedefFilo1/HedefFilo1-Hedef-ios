@@ -19,8 +19,6 @@ class AccFlw4Stp4NoAgreementReportVController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var selectedFiles = [UIImage]()
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -75,7 +73,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return selectedFiles.count
+            return viewModel.selectedFiles.count
         }
         
         return 1
@@ -90,7 +88,7 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
             
         case 1:
             let cell: ReportImageCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.imageView.image = selectedFiles[indexPath.item]
+            cell.imageView.image = viewModel.selectedFiles[indexPath.item].image
             cell.index = indexPath.item
             cell.delegate = self
           return cell
@@ -102,8 +100,8 @@ extension AccFlw4Stp4NoAgreementReportVController: UICollectionViewDataSource, U
 
             let more = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.more.photo.button") ?? ""
             let justUpload = App.getString(key: "copilotapp.accidentdamage.accident.process.record.keeping.upload.photo.button") ?? ""
-            cell.uploadLabel.text = selectedFiles.count > 0 ? more: justUpload
-            cell.setCountForButton(count: selectedFiles.count)
+            cell.uploadLabel.text = viewModel.selectedFiles.count > 0 ? more: justUpload
+            cell.setCountForButton(count: viewModel.selectedFiles.count)
             return cell
         
         default:
@@ -166,7 +164,7 @@ extension AccFlw4Stp4NoAgreementReportVController:
     ReportImageCellDelegate {
     
     func didTapDelete(at index: Int) {
-        selectedFiles.remove(at: index)
+        viewModel.selectedFiles.remove(at: index)
         collectionView.reloadData()
     }
     
@@ -187,14 +185,13 @@ extension AccFlw4Stp4NoAgreementReportVController:
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        selectedFiles.append(tempImage)
-        collectionView.reloadData()
+        viewModel.sendFile(image: tempImage)
         
-        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+//        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
 //            fileNameLabel.text = url.lastPathComponent
 //            showFileNameView()
             //                fileType = url.pathExtension
-        }
+//        }
         picker.dismiss(animated: true)
 //        guard let data = tempImage.pngData() else { return }
 
