@@ -28,7 +28,7 @@ class MenuViewController: PopupViewController {
         navigationController?.navigationBar.isHidden = true
         
 #if DEV_DEBUG
-//        viewModel.showDocuments()
+        //        viewModel.showDocuments()
         // viewModel.showRequests()
 #endif
     }
@@ -68,53 +68,15 @@ class MenuViewController: PopupViewController {
 extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        9
+        return viewModel.visibleItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: MenuCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.chevronImageView.isHidden = indexPath.item != 0
-        switch indexPath.item {
-        case 0:
-            cell.imageView.image = Images.personIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.profile")
-            
-        case 1:
-            cell.imageView.image = Images.percentIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.campaign")
-            
-        case 2:
-            cell.imageView.image = Images.documentIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.documents")
-            
-        case 3:
-            cell.imageView.image = Images.carIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.vehicle.info")
-            
-        case 4:
-            cell.imageView.image = Images.carIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.vehicle.hgs.pass")
-            
-        case 5:
-            cell.imageView.image = Images.listIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.demands")
-            
-        case 6:
-            cell.imageView.image = Images.toolIcon.withRenderingMode(.alwaysTemplate)
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.services")
-            
-        case 7:
-            cell.imageView.image = Images.settingsIcon
-            cell.titleLabel.text = App.getString(key: "copilotapp.more.settings")
-            
-        case 8:
-            cell.imageView.image = Images.userDeleteIcon.withRenderingMode(.alwaysTemplate)
-            cell.titleLabel.text = Strings.deleteMyAccount
-            
-        default:
-            break
-        }
+        cell.imageView.image = viewModel.visibleItems[indexPath.item].image
+        cell.titleLabel.text = viewModel.visibleItems[indexPath.item].title
         cell.imageView.tintColor = .black
         return cell
     }
@@ -128,7 +90,8 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item {
+        let order = viewModel.visibleItems[indexPath.item].id
+        switch order {
         case 0:
             viewModel.showProfile()
             
@@ -159,7 +122,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         default:
             break
         }
-//        viewModel.hideMenu()
+        //        viewModel.hideMenu()
     }
 }
 
